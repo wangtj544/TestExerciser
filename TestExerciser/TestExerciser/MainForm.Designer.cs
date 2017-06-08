@@ -193,12 +193,12 @@
             this.tabOutPut = new System.Windows.Forms.TabPage();
             this.richOutPut = new System.Windows.Forms.RichTextBox();
             this.tabConsole = new System.Windows.Forms.TabPage();
+            this.myCmd = new TestExerciser.Tools.Cmd();
             this.tabPython = new System.Windows.Forms.TabPage();
+            this.myPython = new TestExerciser.Tools.Python();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.logView = new System.Windows.Forms.WebBrowser();
-            this.myCmd = new TestExerciser.Tools.Cmd();
-            this.myPython = new TestExerciser.Tools.Python();
             this.menu_ProjectManage.SuspendLayout();
             this.rightClickOnProManager.SuspendLayout();
             this.rightClickOnOutPutWindow.SuspendLayout();
@@ -233,6 +233,7 @@
             // 
             // menu_ProjectManage
             // 
+            this.menu_ProjectManage.BackColor = System.Drawing.Color.White;
             this.menu_ProjectManage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.文件ToolStripMenuItem,
             this.编辑ToolStripMenuItem,
@@ -257,15 +258,18 @@
             this.保存SToolStripMenuItem,
             this.另存为AToolStripMenuItem,
             this.退出QToolStripMenuItem});
+            this.文件ToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
             this.文件ToolStripMenuItem.Size = new System.Drawing.Size(58, 21);
             this.文件ToolStripMenuItem.Text = "文件(&F)";
             // 
             // 新建NToolStripMenuItem
             // 
+            this.新建NToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.新建NToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.新建NToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("新建NToolStripMenuItem.Image")));
             this.新建NToolStripMenuItem.Name = "新建NToolStripMenuItem";
-            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.新建NToolStripMenuItem.Text = "新建(&N)";
             this.新建NToolStripMenuItem.Click += new System.EventHandler(this.新建NToolStripMenuItem_Click);
             // 
@@ -273,7 +277,7 @@
             // 
             this.打开ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("打开ToolStripMenuItem.Image")));
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.打开ToolStripMenuItem.Text = "打开(&O)";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
@@ -282,7 +286,7 @@
             this.保存SToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.保存SToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("保存SToolStripMenuItem.Image")));
             this.保存SToolStripMenuItem.Name = "保存SToolStripMenuItem";
-            this.保存SToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.保存SToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.保存SToolStripMenuItem.Text = "保存(&S)";
             this.保存SToolStripMenuItem.Click += new System.EventHandler(this.保存SToolStripMenuItem_Click);
             // 
@@ -290,7 +294,7 @@
             // 
             this.另存为AToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("另存为AToolStripMenuItem.Image")));
             this.另存为AToolStripMenuItem.Name = "另存为AToolStripMenuItem";
-            this.另存为AToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.另存为AToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.另存为AToolStripMenuItem.Text = "另存为...(&A)";
             this.另存为AToolStripMenuItem.Click += new System.EventHandler(this.另存为AToolStripMenuItem_Click);
             // 
@@ -298,7 +302,7 @@
             // 
             this.退出QToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("退出QToolStripMenuItem.Image")));
             this.退出QToolStripMenuItem.Name = "退出QToolStripMenuItem";
-            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.退出QToolStripMenuItem.Text = "退出(&Q)";
             this.退出QToolStripMenuItem.Click += new System.EventHandler(this.退出QToolStripMenuItem_Click);
             // 
@@ -1486,6 +1490,7 @@
             // 
             // tree_Solution
             // 
+            this.tree_Solution.BackColor = System.Drawing.Color.White;
             this.tree_Solution.ContextMenuStrip = this.rightClickOnProManager;
             this.tree_Solution.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tree_Solution.HotTracking = true;
@@ -1656,20 +1661,40 @@
             this.tabConsole.Location = new System.Drawing.Point(4, 22);
             this.tabConsole.Name = "tabConsole";
             this.tabConsole.Padding = new System.Windows.Forms.Padding(3);
-            this.tabConsole.Size = new System.Drawing.Size(460, 206);
+            this.tabConsole.Size = new System.Drawing.Size(510, 206);
             this.tabConsole.TabIndex = 1;
             this.tabConsole.Text = "Terminal";
             this.tabConsole.UseVisualStyleBackColor = true;
+            // 
+            // myCmd
+            // 
+            this.myCmd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.myCmd.ExeName = "cmd.exe";
+            this.myCmd.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.myCmd.Location = new System.Drawing.Point(3, 3);
+            this.myCmd.Name = "myCmd";
+            this.myCmd.Size = new System.Drawing.Size(504, 200);
+            this.myCmd.TabIndex = 0;
             // 
             // tabPython
             // 
             this.tabPython.Controls.Add(this.myPython);
             this.tabPython.Location = new System.Drawing.Point(4, 22);
             this.tabPython.Name = "tabPython";
-            this.tabPython.Size = new System.Drawing.Size(460, 206);
+            this.tabPython.Size = new System.Drawing.Size(510, 206);
             this.tabPython.TabIndex = 2;
             this.tabPython.Text = "Python";
             this.tabPython.UseVisualStyleBackColor = true;
+            // 
+            // myPython
+            // 
+            this.myPython.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.myPython.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.myPython.ExeName = "python.exe";
+            this.myPython.Location = new System.Drawing.Point(0, 0);
+            this.myPython.Name = "myPython";
+            this.myPython.Size = new System.Drawing.Size(510, 206);
+            this.myPython.TabIndex = 0;
             // 
             // tabControl3
             // 
@@ -1701,30 +1726,11 @@
             this.logView.Size = new System.Drawing.Size(1186, 200);
             this.logView.TabIndex = 0;
             // 
-            // myCmd
-            // 
-            this.myCmd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.myCmd.ExeName = "cmd.exe";
-            this.myCmd.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.myCmd.Location = new System.Drawing.Point(3, 3);
-            this.myCmd.Name = "myCmd";
-            this.myCmd.Size = new System.Drawing.Size(454, 200);
-            this.myCmd.TabIndex = 0;
-            // 
-            // myPython
-            // 
-            this.myPython.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.myPython.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.myPython.ExeName = "python.exe";
-            this.myPython.Location = new System.Drawing.Point(0, 0);
-            this.myPython.Name = "myPython";
-            this.myPython.Size = new System.Drawing.Size(460, 206);
-            this.myPython.TabIndex = 0;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
             this.ClientSize = new System.Drawing.Size(1730, 825);
             this.Controls.Add(this.splitContainer1);
