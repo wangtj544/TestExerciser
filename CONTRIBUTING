@@ -5,7 +5,7 @@
 Check the Troubleshooting Page for common
 issues with installing & launching Brackets, using Live Preview, etc.
 
-**For bugs** be sure to search existing issues first. Include steps to consistently reproduce the
+*For bugs be sure to search existing issues first. Include steps to consistently reproduce the
 problem, actual vs. expected results, and your OS and Brackets version number.
 Disable all extensions to verify the issue is a core Brackets bug.
 [Read more guidelines for filing good bugs...](https://github.com/adobe/brackets/wiki/How-to-Report-an-Issue)
