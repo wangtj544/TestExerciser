@@ -84,6 +84,7 @@
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auto3帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.版本更新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.登录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.用户信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -150,6 +151,10 @@
             this.tmUpdateInterface = new System.Windows.Forms.Timer(this.components);
             this.ilAutocomplete = new System.Windows.Forms.ImageList(this.components);
             this.ssMain = new System.Windows.Forms.StatusStrip();
+            this.toolStripDropDownButton_window = new System.Windows.Forms.ToolStripDropDownButton();
+            this.pythonToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.PythonIDLEtoolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.terminalToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.lbWordUnderMouse = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tsMain = new System.Windows.Forms.ToolStrip();
@@ -195,10 +200,10 @@
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.logView = new System.Windows.Forms.WebBrowser();
-            this.toolStripDropDownButton_window = new System.Windows.Forms.ToolStripDropDownButton();
-            this.terminalToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.pythonToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.PythonIDLEtoolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.启动调试CtrlF5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.终止调试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.缺陷管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.缺陷管理工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_ProjectManage.SuspendLayout();
             this.rightClickOnProManager.SuspendLayout();
             this.rightClickOnOutPutWindow.SuspendLayout();
@@ -237,6 +242,7 @@
             this.编辑ToolStripMenuItem,
             this.项目ToolStripMenuItem,
             this.生成ToolStripMenuItem,
+            this.缺陷管理ToolStripMenuItem,
             this.调试ToolStripMenuItem,
             this.团队ToolStripMenuItem,
             this.工具ToolStripMenuItem,
@@ -267,7 +273,7 @@
             this.新建NToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.新建NToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("新建NToolStripMenuItem.Image")));
             this.新建NToolStripMenuItem.Name = "新建NToolStripMenuItem";
-            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.新建NToolStripMenuItem.Text = "新建(&N)";
             this.新建NToolStripMenuItem.Click += new System.EventHandler(this.新建NToolStripMenuItem_Click);
             // 
@@ -300,7 +306,7 @@
             // 
             this.退出QToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("退出QToolStripMenuItem.Image")));
             this.退出QToolStripMenuItem.Name = "退出QToolStripMenuItem";
-            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.退出QToolStripMenuItem.Text = "退出(&Q)";
             this.退出QToolStripMenuItem.Click += new System.EventHandler(this.退出QToolStripMenuItem_Click);
             // 
@@ -431,10 +437,12 @@
             this.编译系统CToolStripMenuItem,
             this.断点F9ToolStripMenuItem,
             this.单步调试F10ToolStripMenuItem,
-            this.逐过程调试F11ToolStripMenuItem});
+            this.逐过程调试F11ToolStripMenuItem,
+            this.启动调试CtrlF5ToolStripMenuItem,
+            this.终止调试ToolStripMenuItem});
             this.生成ToolStripMenuItem.Name = "生成ToolStripMenuItem";
             this.生成ToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
-            this.生成ToolStripMenuItem.Text = "执行(&G)";
+            this.生成ToolStripMenuItem.Text = "调试(&G)";
             // 
             // 编译系统CToolStripMenuItem
             // 
@@ -655,13 +663,15 @@
             // 
             this.帮助ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.关于ToolStripMenuItem,
-            this.auto3帮助ToolStripMenuItem});
+            this.auto3帮助ToolStripMenuItem,
+            this.版本更新ToolStripMenuItem});
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
             this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
             this.帮助ToolStripMenuItem.Text = "帮助(&H)";
             // 
             // 关于ToolStripMenuItem
             // 
+            this.关于ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("关于ToolStripMenuItem.Image")));
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
             this.关于ToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.关于ToolStripMenuItem.Text = "关于TestExerciser(&A)";
@@ -675,6 +685,15 @@
             this.auto3帮助ToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.auto3帮助ToolStripMenuItem.Text = "Auto3帮助(&B)";
             this.auto3帮助ToolStripMenuItem.Click += new System.EventHandler(this.auto3帮助ToolStripMenuItem_Click);
+            // 
+            // 版本更新ToolStripMenuItem
+            // 
+            this.版本更新ToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
+            this.版本更新ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("版本更新ToolStripMenuItem.Image")));
+            this.版本更新ToolStripMenuItem.Name = "版本更新ToolStripMenuItem";
+            this.版本更新ToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.版本更新ToolStripMenuItem.Text = "版本更新(&C)";
+            this.版本更新ToolStripMenuItem.Click += new System.EventHandler(this.版本更新ToolStripMenuItem_Click);
             // 
             // 登录ToolStripMenuItem
             // 
@@ -1164,6 +1183,43 @@
             this.ssMain.Size = new System.Drawing.Size(1722, 22);
             this.ssMain.TabIndex = 5;
             this.ssMain.Text = "statusStrip1";
+            // 
+            // toolStripDropDownButton_window
+            // 
+            this.toolStripDropDownButton_window.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton_window.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pythonToolStrip,
+            this.PythonIDLEtoolStrip,
+            this.terminalToolStrip});
+            this.toolStripDropDownButton_window.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton_window.Image")));
+            this.toolStripDropDownButton_window.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton_window.Name = "toolStripDropDownButton_window";
+            this.toolStripDropDownButton_window.Size = new System.Drawing.Size(29, 20);
+            this.toolStripDropDownButton_window.Text = "toolStripDropDownButton1";
+            // 
+            // pythonToolStrip
+            // 
+            this.pythonToolStrip.Image = ((System.Drawing.Image)(resources.GetObject("pythonToolStrip.Image")));
+            this.pythonToolStrip.Name = "pythonToolStrip";
+            this.pythonToolStrip.Size = new System.Drawing.Size(126, 22);
+            this.pythonToolStrip.Text = "Python";
+            this.pythonToolStrip.Click += new System.EventHandler(this.pythonToolStrip_Click);
+            // 
+            // PythonIDLEtoolStrip
+            // 
+            this.PythonIDLEtoolStrip.Image = ((System.Drawing.Image)(resources.GetObject("PythonIDLEtoolStrip.Image")));
+            this.PythonIDLEtoolStrip.Name = "PythonIDLEtoolStrip";
+            this.PythonIDLEtoolStrip.Size = new System.Drawing.Size(126, 22);
+            this.PythonIDLEtoolStrip.Text = "IDLE";
+            this.PythonIDLEtoolStrip.Click += new System.EventHandler(this.PythonIDLEtoolStrip_Click);
+            // 
+            // terminalToolStrip
+            // 
+            this.terminalToolStrip.Image = ((System.Drawing.Image)(resources.GetObject("terminalToolStrip.Image")));
+            this.terminalToolStrip.Name = "terminalToolStrip";
+            this.terminalToolStrip.Size = new System.Drawing.Size(126, 22);
+            this.terminalToolStrip.Text = "Terminal";
+            this.terminalToolStrip.Click += new System.EventHandler(this.terminalToolStrip_Click);
             // 
             // lbWordUnderMouse
             // 
@@ -1681,42 +1737,32 @@
             this.logView.Size = new System.Drawing.Size(1186, 200);
             this.logView.TabIndex = 0;
             // 
-            // toolStripDropDownButton_window
+            // 启动调试CtrlF5ToolStripMenuItem
             // 
-            this.toolStripDropDownButton_window.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton_window.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pythonToolStrip,
-            this.PythonIDLEtoolStrip,
-            this.terminalToolStrip});
-            this.toolStripDropDownButton_window.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton_window.Image")));
-            this.toolStripDropDownButton_window.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton_window.Name = "toolStripDropDownButton_window";
-            this.toolStripDropDownButton_window.Size = new System.Drawing.Size(29, 20);
-            this.toolStripDropDownButton_window.Text = "toolStripDropDownButton1";
+            this.启动调试CtrlF5ToolStripMenuItem.Name = "启动调试CtrlF5ToolStripMenuItem";
+            this.启动调试CtrlF5ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.启动调试CtrlF5ToolStripMenuItem.Text = "启动调试(&Ctrl + F5)";
             // 
-            // terminalToolStrip
+            // 终止调试ToolStripMenuItem
             // 
-            this.terminalToolStrip.Image = ((System.Drawing.Image)(resources.GetObject("terminalToolStrip.Image")));
-            this.terminalToolStrip.Name = "terminalToolStrip";
-            this.terminalToolStrip.Size = new System.Drawing.Size(152, 22);
-            this.terminalToolStrip.Text = "Terminal";
-            this.terminalToolStrip.Click += new System.EventHandler(this.terminalToolStrip_Click);
+            this.终止调试ToolStripMenuItem.Name = "终止调试ToolStripMenuItem";
+            this.终止调试ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.终止调试ToolStripMenuItem.Text = "终止调试";
             // 
-            // pythonToolStrip
+            // 缺陷管理ToolStripMenuItem
             // 
-            this.pythonToolStrip.Image = ((System.Drawing.Image)(resources.GetObject("pythonToolStrip.Image")));
-            this.pythonToolStrip.Name = "pythonToolStrip";
-            this.pythonToolStrip.Size = new System.Drawing.Size(152, 22);
-            this.pythonToolStrip.Text = "Python";
-            this.pythonToolStrip.Click += new System.EventHandler(this.pythonToolStrip_Click);
+            this.缺陷管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.缺陷管理工具ToolStripMenuItem});
+            this.缺陷管理ToolStripMenuItem.Name = "缺陷管理ToolStripMenuItem";
+            this.缺陷管理ToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
+            this.缺陷管理ToolStripMenuItem.Text = "缺陷(B)";
             // 
-            // PythonIDLEtoolStrip
+            // 缺陷管理工具ToolStripMenuItem
             // 
-            this.PythonIDLEtoolStrip.Image = ((System.Drawing.Image)(resources.GetObject("PythonIDLEtoolStrip.Image")));
-            this.PythonIDLEtoolStrip.Name = "PythonIDLEtoolStrip";
-            this.PythonIDLEtoolStrip.Size = new System.Drawing.Size(152, 22);
-            this.PythonIDLEtoolStrip.Text = "IDLE";
-            this.PythonIDLEtoolStrip.Click += new System.EventHandler(this.PythonIDLEtoolStrip_Click);
+            this.缺陷管理工具ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("缺陷管理工具ToolStripMenuItem.Image")));
+            this.缺陷管理工具ToolStripMenuItem.Name = "缺陷管理工具ToolStripMenuItem";
+            this.缺陷管理工具ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.缺陷管理工具ToolStripMenuItem.Text = "缺陷管理(&B)";
             // 
             // MainForm
             // 
@@ -1733,7 +1779,7 @@
             this.KeyPreview = true;
             this.MainMenuStrip = this.menu_ProjectManage;
             this.Name = "MainForm";
-            this.Text = "TestExerciser";
+            this.Text = "自动化管理工具";
             this.TitleCenter = false;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -1947,6 +1993,11 @@
         private System.Windows.Forms.ToolStripMenuItem pythonToolStrip;
         private System.Windows.Forms.ToolStripMenuItem PythonIDLEtoolStrip;
         private System.Windows.Forms.ToolStripMenuItem terminalToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem 版本更新ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 启动调试CtrlF5ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 终止调试ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 缺陷管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 缺陷管理工具ToolStripMenuItem;
     }
 }
 

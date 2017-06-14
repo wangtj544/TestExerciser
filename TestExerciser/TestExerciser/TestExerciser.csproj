@@ -155,6 +155,12 @@
     <Compile Include="MainPackageManager.Designer.cs">
       <DependentUpon>MainPackageManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainUpdateHis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUpdateHis.Designer.cs">
+      <DependentUpon>MainUpdateHis.cs</DependentUpon>
+    </Compile>
     <Compile Include="PackageManagerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -260,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainPackageManager.resx">
       <DependentUpon>MainPackageManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUpdateHis.resx">
+      <DependentUpon>MainUpdateHis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeamMembers.resx">
       <DependentUpon>TeamMembers.cs</DependentUpon>

@@ -32,6 +32,7 @@ namespace TestExerciser
         Color currentLineColor = Color.FromArgb(100, 210, 210, 255);
         Color changedLineColor = Color.FromArgb(255, 230, 230, 255);
 
+
         public MainForm()
         {
             InitializeComponent();                    
@@ -1067,8 +1068,8 @@ namespace TestExerciser
                 tsFiles.AddTab(tab);
                 tsFiles.SelectedItem = tab;
                 tb.Focus();
-                tb.DelayedTextChangedInterval = 1000;
-                tb.DelayedEventsInterval = 1000;
+                tb.DelayedTextChangedInterval = 100;
+                tb.DelayedEventsInterval = 100;
                 tb.TextChangedDelayed += new EventHandler<TextChangedEventArgs>(tb_TextChangedDelayed);
                 tb.SelectionChangedDelayed += new EventHandler(tb_SelectionChangedDelayed);
                 tb.KeyDown += new KeyEventHandler(tb_KeyDown);
@@ -1097,7 +1098,6 @@ namespace TestExerciser
                     CreateTab(fileName);
             }
         }
-
 
         void tb_MouseMove(object sender, MouseEventArgs e)
         {
@@ -2475,6 +2475,12 @@ namespace TestExerciser
             p.StartInfo.FileName = @"cmd.EXE";
             p.Start();
             p.Close();
+        }
+
+        private void 版本更新ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainUpdateHis myMainUpdateHis = new MainUpdateHis();
+            myMainUpdateHis.Show();
         }
     }
 }

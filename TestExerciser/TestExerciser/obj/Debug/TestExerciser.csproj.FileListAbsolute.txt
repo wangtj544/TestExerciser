@@ -295,3 +295,4 @@ E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\zh-Hans\TestExerciser.res
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.TrustInfo.xml
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.exe.manifest
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.application
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainUpdateHis.resources
