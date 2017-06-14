@@ -1,2 +1,1 @@
-# TestExerciser
-Automation
+* Welcome to TestExerciser!
