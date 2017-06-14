@@ -20,8 +20,12 @@ namespace TestExerciser.Logic
         OleDbConnection mycon = null;
         OleDbDataReader myReader = null;
         
-        //string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + @"..\..\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
-        public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
+      
+        //配置为本地数据库
+        //public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
+
+        //配置为远程服务器上的数据库
+        public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + @"\\172.20.32.147\data\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
 
         public bool checkUserNameDuplicate(string userName)
         {

@@ -276,8 +276,6 @@ E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.CaseReview.
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainAbout.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainPackageManager.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.TeamMembers.resources
-E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.Cmd.resources
-E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.Python.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.SVN.ToolSVN.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.SVN.ToolSVNCheckOut.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.User.UserAuthentication.resources

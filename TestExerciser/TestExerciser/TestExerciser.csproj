@@ -166,18 +166,6 @@
     <Compile Include="TeamMembers.Designer.cs">
       <DependentUpon>TeamMembers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\Cmd.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Tools\Cmd.Designer.cs">
-      <DependentUpon>Cmd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Tools\Python.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Tools\Python.Designer.cs">
-      <DependentUpon>Python.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tools\SVN\SVNManager.cs" />
     <Compile Include="Tools\SVN\ToolSVN.cs">
       <SubType>Form</SubType>
@@ -275,12 +263,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeamMembers.resx">
       <DependentUpon>TeamMembers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tools\Cmd.resx">
-      <DependentUpon>Cmd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tools\Python.resx">
-      <DependentUpon>Python.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\SVN\ToolSVN.resx">
       <DependentUpon>ToolSVN.cs</DependentUpon>
