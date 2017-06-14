@@ -192,13 +192,13 @@
             this.tabInfo = new System.Windows.Forms.TabControl();
             this.tabOutPut = new System.Windows.Forms.TabPage();
             this.richOutPut = new System.Windows.Forms.RichTextBox();
-            this.tabConsole = new System.Windows.Forms.TabPage();
-            this.myCmd = new TestExerciser.Tools.Cmd();
-            this.tabPython = new System.Windows.Forms.TabPage();
-            this.myPython = new TestExerciser.Tools.Python();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.logView = new System.Windows.Forms.WebBrowser();
+            this.toolStripDropDownButton_window = new System.Windows.Forms.ToolStripDropDownButton();
+            this.terminalToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.pythonToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.PythonIDLEtoolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_ProjectManage.SuspendLayout();
             this.rightClickOnProManager.SuspendLayout();
             this.rightClickOnOutPutWindow.SuspendLayout();
@@ -225,8 +225,6 @@
             this.splitContainer3.SuspendLayout();
             this.tabInfo.SuspendLayout();
             this.tabOutPut.SuspendLayout();
-            this.tabConsole.SuspendLayout();
-            this.tabPython.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.SuspendLayout();
@@ -269,7 +267,7 @@
             this.新建NToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.新建NToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("新建NToolStripMenuItem.Image")));
             this.新建NToolStripMenuItem.Name = "新建NToolStripMenuItem";
-            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.新建NToolStripMenuItem.Text = "新建(&N)";
             this.新建NToolStripMenuItem.Click += new System.EventHandler(this.新建NToolStripMenuItem_Click);
             // 
@@ -277,7 +275,7 @@
             // 
             this.打开ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("打开ToolStripMenuItem.Image")));
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.打开ToolStripMenuItem.Text = "打开(&O)";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
@@ -286,7 +284,7 @@
             this.保存SToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.保存SToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("保存SToolStripMenuItem.Image")));
             this.保存SToolStripMenuItem.Name = "保存SToolStripMenuItem";
-            this.保存SToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.保存SToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.保存SToolStripMenuItem.Text = "保存(&S)";
             this.保存SToolStripMenuItem.Click += new System.EventHandler(this.保存SToolStripMenuItem_Click);
             // 
@@ -294,7 +292,7 @@
             // 
             this.另存为AToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("另存为AToolStripMenuItem.Image")));
             this.另存为AToolStripMenuItem.Name = "另存为AToolStripMenuItem";
-            this.另存为AToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.另存为AToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.另存为AToolStripMenuItem.Text = "另存为...(&A)";
             this.另存为AToolStripMenuItem.Click += new System.EventHandler(this.另存为AToolStripMenuItem_Click);
             // 
@@ -302,7 +300,7 @@
             // 
             this.退出QToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("退出QToolStripMenuItem.Image")));
             this.退出QToolStripMenuItem.Name = "退出QToolStripMenuItem";
-            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.退出QToolStripMenuItem.Text = "退出(&Q)";
             this.退出QToolStripMenuItem.Click += new System.EventHandler(this.退出QToolStripMenuItem_Click);
             // 
@@ -690,7 +688,6 @@
             this.登录ToolStripMenuItem.Image = global::TestExerciser.Properties.Resources.smile_16x16;
             this.登录ToolStripMenuItem.Name = "登录ToolStripMenuItem";
             this.登录ToolStripMenuItem.Size = new System.Drawing.Size(28, 21);
-            this.登录ToolStripMenuItem.Click += new System.EventHandler(this.登录ToolStripMenuItem_Click);
             // 
             // 用户信息ToolStripMenuItem
             // 
@@ -1160,6 +1157,7 @@
             // ssMain
             // 
             this.ssMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton_window,
             this.lbWordUnderMouse});
             this.ssMain.Location = new System.Drawing.Point(4, 799);
             this.ssMain.Name = "ssMain";
@@ -1625,8 +1623,6 @@
             // tabInfo
             // 
             this.tabInfo.Controls.Add(this.tabOutPut);
-            this.tabInfo.Controls.Add(this.tabConsole);
-            this.tabInfo.Controls.Add(this.tabPython);
             this.tabInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabInfo.Location = new System.Drawing.Point(0, 0);
             this.tabInfo.Name = "tabInfo";
@@ -1654,47 +1650,6 @@
             this.richOutPut.Size = new System.Drawing.Size(504, 200);
             this.richOutPut.TabIndex = 0;
             this.richOutPut.Text = "";
-            // 
-            // tabConsole
-            // 
-            this.tabConsole.Controls.Add(this.myCmd);
-            this.tabConsole.Location = new System.Drawing.Point(4, 22);
-            this.tabConsole.Name = "tabConsole";
-            this.tabConsole.Padding = new System.Windows.Forms.Padding(3);
-            this.tabConsole.Size = new System.Drawing.Size(510, 206);
-            this.tabConsole.TabIndex = 1;
-            this.tabConsole.Text = "Terminal";
-            this.tabConsole.UseVisualStyleBackColor = true;
-            // 
-            // myCmd
-            // 
-            this.myCmd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.myCmd.ExeName = "cmd.exe";
-            this.myCmd.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.myCmd.Location = new System.Drawing.Point(3, 3);
-            this.myCmd.Name = "myCmd";
-            this.myCmd.Size = new System.Drawing.Size(504, 200);
-            this.myCmd.TabIndex = 0;
-            // 
-            // tabPython
-            // 
-            this.tabPython.Controls.Add(this.myPython);
-            this.tabPython.Location = new System.Drawing.Point(4, 22);
-            this.tabPython.Name = "tabPython";
-            this.tabPython.Size = new System.Drawing.Size(510, 206);
-            this.tabPython.TabIndex = 2;
-            this.tabPython.Text = "Python";
-            this.tabPython.UseVisualStyleBackColor = true;
-            // 
-            // myPython
-            // 
-            this.myPython.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.myPython.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.myPython.ExeName = "python.exe";
-            this.myPython.Location = new System.Drawing.Point(0, 0);
-            this.myPython.Name = "myPython";
-            this.myPython.Size = new System.Drawing.Size(510, 206);
-            this.myPython.TabIndex = 0;
             // 
             // tabControl3
             // 
@@ -1725,6 +1680,43 @@
             this.logView.Name = "logView";
             this.logView.Size = new System.Drawing.Size(1186, 200);
             this.logView.TabIndex = 0;
+            // 
+            // toolStripDropDownButton_window
+            // 
+            this.toolStripDropDownButton_window.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton_window.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pythonToolStrip,
+            this.PythonIDLEtoolStrip,
+            this.terminalToolStrip});
+            this.toolStripDropDownButton_window.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton_window.Image")));
+            this.toolStripDropDownButton_window.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton_window.Name = "toolStripDropDownButton_window";
+            this.toolStripDropDownButton_window.Size = new System.Drawing.Size(29, 20);
+            this.toolStripDropDownButton_window.Text = "toolStripDropDownButton1";
+            // 
+            // terminalToolStrip
+            // 
+            this.terminalToolStrip.Image = ((System.Drawing.Image)(resources.GetObject("terminalToolStrip.Image")));
+            this.terminalToolStrip.Name = "terminalToolStrip";
+            this.terminalToolStrip.Size = new System.Drawing.Size(152, 22);
+            this.terminalToolStrip.Text = "Terminal";
+            this.terminalToolStrip.Click += new System.EventHandler(this.terminalToolStrip_Click);
+            // 
+            // pythonToolStrip
+            // 
+            this.pythonToolStrip.Image = ((System.Drawing.Image)(resources.GetObject("pythonToolStrip.Image")));
+            this.pythonToolStrip.Name = "pythonToolStrip";
+            this.pythonToolStrip.Size = new System.Drawing.Size(152, 22);
+            this.pythonToolStrip.Text = "Python";
+            this.pythonToolStrip.Click += new System.EventHandler(this.pythonToolStrip_Click);
+            // 
+            // PythonIDLEtoolStrip
+            // 
+            this.PythonIDLEtoolStrip.Image = ((System.Drawing.Image)(resources.GetObject("PythonIDLEtoolStrip.Image")));
+            this.PythonIDLEtoolStrip.Name = "PythonIDLEtoolStrip";
+            this.PythonIDLEtoolStrip.Size = new System.Drawing.Size(152, 22);
+            this.PythonIDLEtoolStrip.Text = "IDLE";
+            this.PythonIDLEtoolStrip.Click += new System.EventHandler(this.PythonIDLEtoolStrip_Click);
             // 
             // MainForm
             // 
@@ -1777,8 +1769,6 @@
             this.splitContainer3.ResumeLayout(false);
             this.tabInfo.ResumeLayout(false);
             this.tabOutPut.ResumeLayout(false);
-            this.tabConsole.ResumeLayout(false);
-            this.tabPython.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1894,7 +1884,6 @@
         private System.Windows.Forms.TabControl tabInfo;
         private System.Windows.Forms.TabPage tabOutPut;
         private System.Windows.Forms.RichTextBox richOutPut;
-        private System.Windows.Forms.TabPage tabConsole;
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.WebBrowser logView;
@@ -1954,9 +1943,10 @@
         private System.Windows.Forms.ToolStripMenuItem x64ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem x86ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem auto3帮助ToolStripMenuItem;
-        private Tools.Cmd myCmd;
-        private System.Windows.Forms.TabPage tabPython;
-        private Tools.Python myPython;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton_window;
+        private System.Windows.Forms.ToolStripMenuItem pythonToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem PythonIDLEtoolStrip;
+        private System.Windows.Forms.ToolStripMenuItem terminalToolStrip;
     }
 }
 

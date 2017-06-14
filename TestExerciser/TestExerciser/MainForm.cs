@@ -1081,12 +1081,15 @@ namespace TestExerciser
                 tb.ShowFoldingLines = btShowFoldingLines.Checked;
                 tb.HighlightingRangeType = HighlightingRangeType.VisibleRange;
                 //Create AutocompleteMenu
-                AutocompleteMenu popupMenu = new AutocompleteMenu(tb);
-                popupMenu.Items.ImageList = ilAutocomplete;
-                popupMenu.Opening += new EventHandler<CancelEventArgs>(popupMenu_Opening);                
-                AutoComplete myAutoComplete = new AutoComplete();
-                myAutoComplete.buildAutoCompleteMenu(popupMenu);
-                (tb.Tag as TbInfo).popupMenu = popupMenu;
+                if (this.pythonToolStripMenuItem.Checked == true)
+                {
+                    AutocompleteMenu popupMenu = new AutocompleteMenu(tb);
+                    popupMenu.Items.ImageList = ilAutocomplete;
+                    popupMenu.Opening += new EventHandler<CancelEventArgs>(popupMenu_Opening);
+                    AutoComplete myAutoComplete = new AutoComplete();
+                    myAutoComplete.buildAutoCompleteMenu(popupMenu);
+                    (tb.Tag as TbInfo).popupMenu = popupMenu;
+                }                
             }
             catch (Exception ex)
             {
@@ -2186,11 +2189,6 @@ namespace TestExerciser
             }
         }
 
-        private void 登录ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void pythonToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.pythonToolStripMenuItem.Checked = true;
@@ -2451,6 +2449,30 @@ namespace TestExerciser
         {
             Process p = new Process();
             p.StartInfo.FileName = @"..\..\Tools\AutoIt3Help.EXE";
+            p.Start();
+            p.Close();
+        }
+
+        private void pythonToolStrip_Click(object sender, EventArgs e)
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = pythonEnv + @"python.EXE";
+            p.Start();
+            p.Close();
+        }
+
+        private void PythonIDLEtoolStrip_Click(object sender, EventArgs e)
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = getPythonPath() + @"\idlelib\idle.bat";
+            p.Start();
+            p.Close();
+        }
+
+        private void terminalToolStrip_Click(object sender, EventArgs e)
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = @"cmd.EXE";
             p.Start();
             p.Close();
         }
