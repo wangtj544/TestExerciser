@@ -345,7 +345,6 @@ namespace TestExerciser
         /// <param name="e"></param>
         private void 执行工程ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            clearnLogAndReport();
             try
             {
                 string rootFolder = selectProjectFolder.SelectedPath;
@@ -366,14 +365,6 @@ namespace TestExerciser
             {
                 MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void clearnLogAndReport()
-        {
-            this.richOutPut.Clear();
-            this.logView.Stop();
-            this.logView.Dispose();
-            
         }
 
         /// <summary>
