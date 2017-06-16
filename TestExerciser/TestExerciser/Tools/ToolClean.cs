@@ -63,9 +63,17 @@ namespace TestExerciser.Tools
                 if (Directory.Exists(this.tbLocalPath.Text))
                 {
                     getProgressMaxNum(this.tbLocalPath.Text);
-                    this.progClean.Maximum = maxProgressNum;
+                    if (maxProgressNum != 0)
+                    {
+                        this.progClean.Maximum = maxProgressNum;
+                    }
+                    else
+                    {
+                        this.progClean.Value = 100;
+                    }
                     deleteFiles(this.tbLocalPath.Text);
                     txtCleanDetail.AppendText("(*--All useless files have been deleted successfully！--*)" + "\n");
+                    
                 }
                 else
                 {

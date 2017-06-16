@@ -42,13 +42,13 @@
             this.lblProgress = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtCleanDetail = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txtComments = new System.Windows.Forms.TextBox();
             this.txtVersion = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtComments = new System.Windows.Forms.TextBox();
             this.selectLocalPath = new System.Windows.Forms.FolderBrowserDialog();
             this.myTimer = new System.Windows.Forms.Timer(this.components);
-            this.txtCleanDetail = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -56,8 +56,8 @@
             this.splitContainer1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -179,7 +179,7 @@
             this.progClean.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.progClean.Size = new System.Drawing.Size(359, 23);
             this.progClean.TabIndex = 19;
-            this.progClean.TrackFore = System.Drawing.Color.DarkOrange;
+            this.progClean.TrackFore = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             // 
             // btnOK
             // 
@@ -245,16 +245,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "清理过程";
             // 
-            // groupBox4
+            // txtCleanDetail
             // 
-            this.groupBox4.Controls.Add(this.txtComments);
-            this.groupBox4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox4.Location = new System.Drawing.Point(12, 18);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(224, 264);
-            this.groupBox4.TabIndex = 0;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "文件清理工具描述：";
+            this.txtCleanDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCleanDetail.Location = new System.Drawing.Point(3, 17);
+            this.txtCleanDetail.Multiline = true;
+            this.txtCleanDetail.Name = "txtCleanDetail";
+            this.txtCleanDetail.ReadOnly = true;
+            this.txtCleanDetail.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtCleanDetail.Size = new System.Drawing.Size(440, 206);
+            this.txtCleanDetail.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -265,6 +265,28 @@
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "版本信息：";
+            // 
+            // txtVersion
+            // 
+            this.txtVersion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtVersion.Location = new System.Drawing.Point(3, 17);
+            this.txtVersion.Multiline = true;
+            this.txtVersion.Name = "txtVersion";
+            this.txtVersion.ReadOnly = true;
+            this.txtVersion.Size = new System.Drawing.Size(218, 203);
+            this.txtVersion.TabIndex = 0;
+            this.txtVersion.Text = "Version：v1.0.1";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.txtComments);
+            this.groupBox4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox4.Location = new System.Drawing.Point(12, 18);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(224, 264);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "文件清理工具描述：";
             // 
             // txtComments
             // 
@@ -278,31 +300,9 @@
             this.txtComments.TabIndex = 0;
             this.txtComments.Text = "    文件清理是用来清理和测试脚本无关项的简易工具。";
             // 
-            // txtVersion
-            // 
-            this.txtVersion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtVersion.Location = new System.Drawing.Point(3, 17);
-            this.txtVersion.Multiline = true;
-            this.txtVersion.Name = "txtVersion";
-            this.txtVersion.ReadOnly = true;
-            this.txtVersion.Size = new System.Drawing.Size(218, 203);
-            this.txtVersion.TabIndex = 0;
-            this.txtVersion.Text = "Version：v1.0.1";
-            // 
             // myTimer
             // 
             this.myTimer.Tick += new System.EventHandler(this.myTimer_Tick);
-            // 
-            // txtCleanDetail
-            // 
-            this.txtCleanDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCleanDetail.Location = new System.Drawing.Point(3, 17);
-            this.txtCleanDetail.Multiline = true;
-            this.txtCleanDetail.Name = "txtCleanDetail";
-            this.txtCleanDetail.ReadOnly = true;
-            this.txtCleanDetail.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtCleanDetail.Size = new System.Drawing.Size(440, 206);
-            this.txtCleanDetail.TabIndex = 0;
             // 
             // ToolClean
             // 
@@ -325,10 +325,10 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }

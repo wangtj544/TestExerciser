@@ -256,7 +256,9 @@ E:\代码\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.Cmd.resource
 E:\代码\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.Python.resources
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorControl.dll
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorControl.pdb
+E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorControl.xml
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\SharpPlink-Win32.svnExe
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.csprojResolveAssemblyReference.cache
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainBugManager.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainCaseReview.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainAbout.resources
@@ -295,5 +297,3 @@ E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.application
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.exe
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.pdb
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\zh-Hans\TestExerciser.resources.dll
-E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorControl.xml
-E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.csprojResolveAssemblyReference.cache
