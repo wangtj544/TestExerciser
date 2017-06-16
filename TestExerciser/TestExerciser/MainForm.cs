@@ -2410,7 +2410,7 @@ namespace TestExerciser
 
         private void 团队成员ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TeamMembers myTeamMembers = new TeamMembers();
+            MainTeamMembers myTeamMembers = new MainTeamMembers();
             myTeamMembers.Show();
         }
 
