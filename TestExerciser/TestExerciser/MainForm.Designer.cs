@@ -65,6 +65,10 @@
             this.断点F9ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.单步调试F10ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.逐过程调试F11ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.启动调试CtrlF5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.终止调试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.缺陷管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.缺陷管理工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.调试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.执行工程ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.执行测试套ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -200,10 +204,7 @@
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.logView = new System.Windows.Forms.WebBrowser();
-            this.启动调试CtrlF5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.终止调试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.缺陷管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.缺陷管理工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menu_ProjectManage.SuspendLayout();
             this.rightClickOnProManager.SuspendLayout();
             this.rightClickOnOutPutWindow.SuspendLayout();
@@ -273,7 +274,7 @@
             this.新建NToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.新建NToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("新建NToolStripMenuItem.Image")));
             this.新建NToolStripMenuItem.Name = "新建NToolStripMenuItem";
-            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.新建NToolStripMenuItem.Text = "新建(&N)";
             this.新建NToolStripMenuItem.Click += new System.EventHandler(this.新建NToolStripMenuItem_Click);
             // 
@@ -306,7 +307,7 @@
             // 
             this.退出QToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("退出QToolStripMenuItem.Image")));
             this.退出QToolStripMenuItem.Name = "退出QToolStripMenuItem";
-            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.退出QToolStripMenuItem.Text = "退出(&Q)";
             this.退出QToolStripMenuItem.Click += new System.EventHandler(this.退出QToolStripMenuItem_Click);
             // 
@@ -456,7 +457,7 @@
             this.pHPPToolStripMenuItem,
             this.luaLToolStripMenuItem});
             this.编译系统CToolStripMenuItem.Name = "编译系统CToolStripMenuItem";
-            this.编译系统CToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.编译系统CToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.编译系统CToolStripMenuItem.Text = "编译系统(&C)";
             // 
             // pythonPToolStripMenuItem1
@@ -510,20 +511,47 @@
             // 断点F9ToolStripMenuItem
             // 
             this.断点F9ToolStripMenuItem.Name = "断点F9ToolStripMenuItem";
-            this.断点F9ToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.断点F9ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.断点F9ToolStripMenuItem.Text = "断点(&F9)";
             // 
             // 单步调试F10ToolStripMenuItem
             // 
             this.单步调试F10ToolStripMenuItem.Name = "单步调试F10ToolStripMenuItem";
-            this.单步调试F10ToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.单步调试F10ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.单步调试F10ToolStripMenuItem.Text = "逐语句调试(&F10)";
             // 
             // 逐过程调试F11ToolStripMenuItem
             // 
             this.逐过程调试F11ToolStripMenuItem.Name = "逐过程调试F11ToolStripMenuItem";
-            this.逐过程调试F11ToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.逐过程调试F11ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.逐过程调试F11ToolStripMenuItem.Text = "逐过程调试(&F11)";
+            // 
+            // 启动调试CtrlF5ToolStripMenuItem
+            // 
+            this.启动调试CtrlF5ToolStripMenuItem.Name = "启动调试CtrlF5ToolStripMenuItem";
+            this.启动调试CtrlF5ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.启动调试CtrlF5ToolStripMenuItem.Text = "启动调试(&Ctrl + F5)";
+            // 
+            // 终止调试ToolStripMenuItem
+            // 
+            this.终止调试ToolStripMenuItem.Name = "终止调试ToolStripMenuItem";
+            this.终止调试ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.终止调试ToolStripMenuItem.Text = "终止调试";
+            // 
+            // 缺陷管理ToolStripMenuItem
+            // 
+            this.缺陷管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.缺陷管理工具ToolStripMenuItem});
+            this.缺陷管理ToolStripMenuItem.Name = "缺陷管理ToolStripMenuItem";
+            this.缺陷管理ToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
+            this.缺陷管理ToolStripMenuItem.Text = "缺陷(B)";
+            // 
+            // 缺陷管理工具ToolStripMenuItem
+            // 
+            this.缺陷管理工具ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("缺陷管理工具ToolStripMenuItem.Image")));
+            this.缺陷管理工具ToolStripMenuItem.Name = "缺陷管理工具ToolStripMenuItem";
+            this.缺陷管理工具ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.缺陷管理工具ToolStripMenuItem.Text = "缺陷管理(&B)";
             // 
             // 调试ToolStripMenuItem
             // 
@@ -1263,7 +1291,8 @@
             this.toolStripSeparator6,
             this.bookmarkPlusButton,
             this.bookmarkMinusButton,
-            this.gotoButton});
+            this.gotoButton,
+            this.toolStripSeparator1});
             this.tsMain.Location = new System.Drawing.Point(0, 0);
             this.tsMain.Name = "tsMain";
             this.tsMain.Size = new System.Drawing.Size(1722, 25);
@@ -1671,7 +1700,6 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.tabControl3);
-            this.splitContainer3.Panel2MinSize = 1200;
             this.splitContainer3.Size = new System.Drawing.Size(1722, 232);
             this.splitContainer3.SplitterDistance = 518;
             this.splitContainer3.TabIndex = 0;
@@ -1737,32 +1765,10 @@
             this.logView.Size = new System.Drawing.Size(1186, 200);
             this.logView.TabIndex = 0;
             // 
-            // 启动调试CtrlF5ToolStripMenuItem
+            // toolStripSeparator1
             // 
-            this.启动调试CtrlF5ToolStripMenuItem.Name = "启动调试CtrlF5ToolStripMenuItem";
-            this.启动调试CtrlF5ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.启动调试CtrlF5ToolStripMenuItem.Text = "启动调试(&Ctrl + F5)";
-            // 
-            // 终止调试ToolStripMenuItem
-            // 
-            this.终止调试ToolStripMenuItem.Name = "终止调试ToolStripMenuItem";
-            this.终止调试ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.终止调试ToolStripMenuItem.Text = "终止调试";
-            // 
-            // 缺陷管理ToolStripMenuItem
-            // 
-            this.缺陷管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.缺陷管理工具ToolStripMenuItem});
-            this.缺陷管理ToolStripMenuItem.Name = "缺陷管理ToolStripMenuItem";
-            this.缺陷管理ToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
-            this.缺陷管理ToolStripMenuItem.Text = "缺陷(B)";
-            // 
-            // 缺陷管理工具ToolStripMenuItem
-            // 
-            this.缺陷管理工具ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("缺陷管理工具ToolStripMenuItem.Image")));
-            this.缺陷管理工具ToolStripMenuItem.Name = "缺陷管理工具ToolStripMenuItem";
-            this.缺陷管理工具ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.缺陷管理工具ToolStripMenuItem.Text = "缺陷管理(&B)";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // MainForm
             // 
@@ -1998,6 +2004,7 @@
         private System.Windows.Forms.ToolStripMenuItem 终止调试ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 缺陷管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 缺陷管理工具ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 

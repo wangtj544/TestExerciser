@@ -203,5 +203,32 @@ namespace TestExerciser.Logic
             }
             return falg;
         }
+
+        public bool showTeamMembers()
+        {
+            bool falg = false;
+            string mySQL = "select fullName from 用户信息";
+            try
+            {
+                mycon = new OleDbConnection(strcon);
+                mycon.Open();
+                OleDbCommand mycom = new OleDbCommand(mySQL, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
+                    falg = true;
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+            }
+            return falg;
+        }
     }
 }

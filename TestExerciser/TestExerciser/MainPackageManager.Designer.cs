@@ -52,7 +52,7 @@
             this.修改说明DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.修改时间DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.方法封装BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.packageManagerDataSet = new TestExerciser.PackageManagerDataSet();
+            this.packageManagerDataSet = new TestExerciser.DataSetPackageManager();
             this.方法封装TableAdapter = new TestExerciser.PackageManagerDataSetTableAdapters.方法封装TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackageManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.方法封装BindingSource)).BeginInit();
@@ -260,7 +260,7 @@
         #endregion
 
         private CCWin.SkinControl.SkinDataGridView dgvPackageManager;
-        private PackageManagerDataSet packageManagerDataSet;
+        private DataSetPackageManager packageManagerDataSet;
         private System.Windows.Forms.BindingSource 方法封装BindingSource;
         private PackageManagerDataSetTableAdapters.方法封装TableAdapter 方法封装TableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;

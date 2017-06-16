@@ -18,7 +18,7 @@ namespace TestExerciser
     {
 
         int readColumnNo = 200;//读取Excel行数
-        ExcelDataSet ds = new ExcelDataSet();
+        DataSetExcelReader ds = new DataSetExcelReader();
         public bool addToProj = false;
         string excelFileName = null;
 

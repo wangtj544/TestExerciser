@@ -162,10 +162,10 @@
     <Compile Include="MainUpdateHis.Designer.cs">
       <DependentUpon>MainUpdateHis.cs</DependentUpon>
     </Compile>
-    <Compile Include="PackageManagerDataSet.Designer.cs">
+    <Compile Include="DataSetPackageManager.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PackageManagerDataSet.xsd</DependentUpon>
+      <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
     </Compile>
     <Compile Include="TeamMembers.cs">
       <SubType>Form</SubType>
@@ -199,10 +199,10 @@
     <Compile Include="User\UserChangePSD.Designer.cs">
       <DependentUpon>UserChangePSD.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcelDataSet.Designer.cs">
+    <Compile Include="DataSetExcelReader.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ExcelDataSet.xsd</DependentUpon>
+      <DependentUpon>DataSetExcelReader.xsd</DependentUpon>
     </Compile>
     <Compile Include="User\UserChangeUserEmail.cs">
       <SubType>Form</SubType>
@@ -315,27 +315,27 @@
     <EmbeddedResource Include="User\UserResetPwd.resx">
       <DependentUpon>UserResetPwd.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ExcelDataSet.xsc">
-      <DependentUpon>ExcelDataSet.xsd</DependentUpon>
+    <None Include="DataSetExcelReader.xsc">
+      <DependentUpon>DataSetExcelReader.xsd</DependentUpon>
     </None>
-    <None Include="ExcelDataSet.xsd">
+    <None Include="DataSetExcelReader.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ExcelDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetExcelReader.Designer.cs</LastGenOutput>
     </None>
-    <None Include="ExcelDataSet.xss">
-      <DependentUpon>ExcelDataSet.xsd</DependentUpon>
+    <None Include="DataSetExcelReader.xss">
+      <DependentUpon>DataSetExcelReader.xsd</DependentUpon>
     </None>
-    <None Include="PackageManagerDataSet.xsc">
-      <DependentUpon>PackageManagerDataSet.xsd</DependentUpon>
+    <None Include="DataSetPackageManager.xsc">
+      <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
     </None>
-    <None Include="PackageManagerDataSet.xsd">
+    <None Include="DataSetPackageManager.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PackageManagerDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetPackageManager.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="PackageManagerDataSet.xss">
-      <DependentUpon>PackageManagerDataSet.xsd</DependentUpon>
+    <None Include="DataSetPackageManager.xss">
+      <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
     </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
