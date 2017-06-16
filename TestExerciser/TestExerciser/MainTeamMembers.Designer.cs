@@ -1,6 +1,6 @@
 ﻿namespace TestExerciser
 {
-    partial class TeamMembers
+    partial class MainTeamMembers
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeamMembers));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainTeamMembers));
             this.treeTeamMembers = new CCWin.SkinControl.SkinTreeView();
             this.SuspendLayout();
             // 
             // treeTeamMembers
             // 
-            this.treeTeamMembers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeTeamMembers.Location = new System.Drawing.Point(4, 32);
+            this.treeTeamMembers.Location = new System.Drawing.Point(4, 376);
             this.treeTeamMembers.Name = "treeTeamMembers";
-            this.treeTeamMembers.Size = new System.Drawing.Size(276, 551);
+            this.treeTeamMembers.Size = new System.Drawing.Size(276, 207);
             this.treeTeamMembers.TabIndex = 0;
             // 
             // TeamMembers

@@ -12,11 +12,12 @@ using CCWin;
 
 namespace TestExerciser
 {
-    public partial class TeamMembers : Skin_Mac
+    public partial class MainTeamMembers : Skin_Mac
     {
-        public TeamMembers()
+        public MainTeamMembers()
         {
             InitializeComponent();
+
         }
     }
 }
