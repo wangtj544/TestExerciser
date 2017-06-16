@@ -29,7 +29,7 @@
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -332,7 +332,6 @@
     <EmbeddedResource Include="Tools\SVN\ToolSVNCheckOut.resx">
       <DependentUpon>ToolSVNCheckOut.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tools\SVN\ToolSVNRepositoryBrowser.resx" />
     <EmbeddedResource Include="Tools\ToolClean.resx">
       <DependentUpon>ToolClean.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,6 +370,7 @@
     <EmbeddedResource Include="User\UserResetPwd.resx">
       <DependentUpon>UserResetPwd.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\SharpPlink-Win32.svnExe" />
     <None Include="DataSetExcelReader.xsc">
       <DependentUpon>DataSetExcelReader.xsd</DependentUpon>
     </None>
@@ -550,9 +550,7 @@
       <Name>EditorControl</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Debug\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

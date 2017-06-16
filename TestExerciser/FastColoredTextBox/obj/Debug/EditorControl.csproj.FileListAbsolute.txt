@@ -23,3 +23,17 @@ C:\Users\lenovo\Desktop\TestExerciser\FastColoredTextBox\obj\Debug\FastColoredTe
 C:\Users\lenovo\Desktop\TestExerciser\FastColoredTextBox\obj\Debug\EditorControl.csproj.GenerateResource.Cache
 C:\Users\lenovo\Desktop\TestExerciser\FastColoredTextBox\obj\Debug\EditorControl.dll
 C:\Users\lenovo\Desktop\TestExerciser\FastColoredTextBox\obj\Debug\EditorControl.pdb
+E:\TestExerciser\TestExerciser\FastColoredTextBox\bin\Debug\EditorControl.xml
+E:\TestExerciser\TestExerciser\FastColoredTextBox\bin\Debug\EditorControl.dll
+E:\TestExerciser\TestExerciser\FastColoredTextBox\bin\Debug\EditorControl.pdb
+E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\EditorControl.csprojResolveAssemblyReference.cache
+E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS.AutocompleteMenu.resources
+E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS.FastColoredTextBox.resources
+E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS.FindForm.resources
+E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS.GoToForm.resources
+E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS.HotkeysEditorForm.resources
+E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\EditorControl.Properties.Resources.resources
+E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS.ReplaceForm.resources
+E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\EditorControl.csproj.GenerateResource.Cache
+E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\EditorControl.dll
+E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\EditorControl.pdb
