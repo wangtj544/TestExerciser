@@ -20,7 +20,7 @@ namespace TestExerciser {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("PackageManagerDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSetPackageManager")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSetPackageManager : global::System.Data.DataSet {
         
@@ -199,9 +199,9 @@ namespace TestExerciser {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "PackageManagerDataSet";
+            this.DataSetName = "DataSetPackageManager";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/PackageManagerDataSet.xsd";
+            this.Namespace = "http://tempuri.org/DataSetPackageManager.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.table方法封装 = new 方法封装DataTable();
@@ -281,35 +281,35 @@ namespace TestExerciser {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn column方法ID;
+            private global::System.Data.DataColumn columnpackProductName;
             
-            private global::System.Data.DataColumn column模块名称;
+            private global::System.Data.DataColumn columnpackClassName;
             
-            private global::System.Data.DataColumn column类名称;
+            private global::System.Data.DataColumn columnpackClassDescribe;
             
-            private global::System.Data.DataColumn column类描述;
+            private global::System.Data.DataColumn columnpackMethodID;
             
-            private global::System.Data.DataColumn column方法名称;
+            private global::System.Data.DataColumn columnpackMethodName;
             
-            private global::System.Data.DataColumn column方法参数;
+            private global::System.Data.DataColumn columnpackMethodPara;
             
-            private global::System.Data.DataColumn column方法返回值;
+            private global::System.Data.DataColumn columnpackMethodReturn;
             
-            private global::System.Data.DataColumn column正则匹配结果;
+            private global::System.Data.DataColumn columnpackRegular;
             
-            private global::System.Data.DataColumn column方法描述;
+            private global::System.Data.DataColumn columnpackMethodDescribe;
             
-            private global::System.Data.DataColumn column方法使用示例;
+            private global::System.Data.DataColumn columnpackMethodExample;
             
-            private global::System.Data.DataColumn column作者;
+            private global::System.Data.DataColumn columnpackAuthor;
             
-            private global::System.Data.DataColumn column编写时间;
+            private global::System.Data.DataColumn columnpackTime;
             
-            private global::System.Data.DataColumn column修改人;
+            private global::System.Data.DataColumn columnpackModifier;
             
-            private global::System.Data.DataColumn column修改说明;
+            private global::System.Data.DataColumn columnpackModifyState;
             
-            private global::System.Data.DataColumn column修改时间;
+            private global::System.Data.DataColumn columnpackModifyTime;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -354,121 +354,121 @@ namespace TestExerciser {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 方法IDColumn {
+            public global::System.Data.DataColumn packProductNameColumn {
                 get {
-                    return this.column方法ID;
+                    return this.columnpackProductName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 模块名称Column {
+            public global::System.Data.DataColumn packClassNameColumn {
                 get {
-                    return this.column模块名称;
+                    return this.columnpackClassName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 类名称Column {
+            public global::System.Data.DataColumn packClassDescribeColumn {
                 get {
-                    return this.column类名称;
+                    return this.columnpackClassDescribe;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 类描述Column {
+            public global::System.Data.DataColumn packMethodIDColumn {
                 get {
-                    return this.column类描述;
+                    return this.columnpackMethodID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 方法名称Column {
+            public global::System.Data.DataColumn packMethodNameColumn {
                 get {
-                    return this.column方法名称;
+                    return this.columnpackMethodName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 方法参数Column {
+            public global::System.Data.DataColumn packMethodParaColumn {
                 get {
-                    return this.column方法参数;
+                    return this.columnpackMethodPara;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 方法返回值Column {
+            public global::System.Data.DataColumn packMethodReturnColumn {
                 get {
-                    return this.column方法返回值;
+                    return this.columnpackMethodReturn;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 正则匹配结果Column {
+            public global::System.Data.DataColumn packRegularColumn {
                 get {
-                    return this.column正则匹配结果;
+                    return this.columnpackRegular;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 方法描述Column {
+            public global::System.Data.DataColumn packMethodDescribeColumn {
                 get {
-                    return this.column方法描述;
+                    return this.columnpackMethodDescribe;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 方法使用示例Column {
+            public global::System.Data.DataColumn packMethodExampleColumn {
                 get {
-                    return this.column方法使用示例;
+                    return this.columnpackMethodExample;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 作者Column {
+            public global::System.Data.DataColumn packAuthorColumn {
                 get {
-                    return this.column作者;
+                    return this.columnpackAuthor;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 编写时间Column {
+            public global::System.Data.DataColumn packTimeColumn {
                 get {
-                    return this.column编写时间;
+                    return this.columnpackTime;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 修改人Column {
+            public global::System.Data.DataColumn packModifierColumn {
                 get {
-                    return this.column修改人;
+                    return this.columnpackModifier;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 修改说明Column {
+            public global::System.Data.DataColumn packModifyStateColumn {
                 get {
-                    return this.column修改说明;
+                    return this.columnpackModifyState;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 修改时间Column {
+            public global::System.Data.DataColumn packModifyTimeColumn {
                 get {
-                    return this.column修改时间;
+                    return this.columnpackModifyTime;
                 }
             }
             
@@ -509,25 +509,25 @@ namespace TestExerciser {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public 方法封装Row Add方法封装Row(string 方法ID, string 模块名称, string 类名称, string 类描述, string 方法名称, string 方法参数, string 方法返回值, string 正则匹配结果, string 方法描述, string 方法使用示例, string 作者, System.DateTime 编写时间, string 修改人, string 修改说明, System.DateTime 修改时间) {
+            public 方法封装Row Add方法封装Row(string packProductName, string packClassName, string packClassDescribe, string packMethodID, string packMethodName, string packMethodPara, string packMethodReturn, string packRegular, string packMethodDescribe, string packMethodExample, string packAuthor, System.DateTime packTime, string packModifier, string packModifyState, System.DateTime packModifyTime) {
                 方法封装Row row方法封装Row = ((方法封装Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        方法ID,
-                        模块名称,
-                        类名称,
-                        类描述,
-                        方法名称,
-                        方法参数,
-                        方法返回值,
-                        正则匹配结果,
-                        方法描述,
-                        方法使用示例,
-                        作者,
-                        编写时间,
-                        修改人,
-                        修改说明,
-                        修改时间};
+                        packProductName,
+                        packClassName,
+                        packClassDescribe,
+                        packMethodID,
+                        packMethodName,
+                        packMethodPara,
+                        packMethodReturn,
+                        packRegular,
+                        packMethodDescribe,
+                        packMethodExample,
+                        packAuthor,
+                        packTime,
+                        packModifier,
+                        packModifyState,
+                        packModifyTime};
                 row方法封装Row.ItemArray = columnValuesArray;
                 this.Rows.Add(row方法封装Row);
                 return row方法封装Row;
@@ -558,21 +558,21 @@ namespace TestExerciser {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.column方法ID = base.Columns["方法ID"];
-                this.column模块名称 = base.Columns["模块名称"];
-                this.column类名称 = base.Columns["类名称"];
-                this.column类描述 = base.Columns["类描述"];
-                this.column方法名称 = base.Columns["方法名称"];
-                this.column方法参数 = base.Columns["方法参数"];
-                this.column方法返回值 = base.Columns["方法返回值"];
-                this.column正则匹配结果 = base.Columns["正则匹配结果"];
-                this.column方法描述 = base.Columns["方法描述"];
-                this.column方法使用示例 = base.Columns["方法使用示例"];
-                this.column作者 = base.Columns["作者"];
-                this.column编写时间 = base.Columns["编写时间"];
-                this.column修改人 = base.Columns["修改人"];
-                this.column修改说明 = base.Columns["修改说明"];
-                this.column修改时间 = base.Columns["修改时间"];
+                this.columnpackProductName = base.Columns["packProductName"];
+                this.columnpackClassName = base.Columns["packClassName"];
+                this.columnpackClassDescribe = base.Columns["packClassDescribe"];
+                this.columnpackMethodID = base.Columns["packMethodID"];
+                this.columnpackMethodName = base.Columns["packMethodName"];
+                this.columnpackMethodPara = base.Columns["packMethodPara"];
+                this.columnpackMethodReturn = base.Columns["packMethodReturn"];
+                this.columnpackRegular = base.Columns["packRegular"];
+                this.columnpackMethodDescribe = base.Columns["packMethodDescribe"];
+                this.columnpackMethodExample = base.Columns["packMethodExample"];
+                this.columnpackAuthor = base.Columns["packAuthor"];
+                this.columnpackTime = base.Columns["packTime"];
+                this.columnpackModifier = base.Columns["packModifier"];
+                this.columnpackModifyState = base.Columns["packModifyState"];
+                this.columnpackModifyTime = base.Columns["packModifyTime"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -580,36 +580,36 @@ namespace TestExerciser {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.column方法ID = new global::System.Data.DataColumn("方法ID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column方法ID);
-                this.column模块名称 = new global::System.Data.DataColumn("模块名称", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column模块名称);
-                this.column类名称 = new global::System.Data.DataColumn("类名称", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column类名称);
-                this.column类描述 = new global::System.Data.DataColumn("类描述", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column类描述);
-                this.column方法名称 = new global::System.Data.DataColumn("方法名称", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column方法名称);
-                this.column方法参数 = new global::System.Data.DataColumn("方法参数", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column方法参数);
-                this.column方法返回值 = new global::System.Data.DataColumn("方法返回值", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column方法返回值);
-                this.column正则匹配结果 = new global::System.Data.DataColumn("正则匹配结果", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column正则匹配结果);
-                this.column方法描述 = new global::System.Data.DataColumn("方法描述", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column方法描述);
-                this.column方法使用示例 = new global::System.Data.DataColumn("方法使用示例", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column方法使用示例);
-                this.column作者 = new global::System.Data.DataColumn("作者", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column作者);
-                this.column编写时间 = new global::System.Data.DataColumn("编写时间", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column编写时间);
-                this.column修改人 = new global::System.Data.DataColumn("修改人", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column修改人);
-                this.column修改说明 = new global::System.Data.DataColumn("修改说明", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column修改说明);
-                this.column修改时间 = new global::System.Data.DataColumn("修改时间", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column修改时间);
+                this.columnpackProductName = new global::System.Data.DataColumn("packProductName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackProductName);
+                this.columnpackClassName = new global::System.Data.DataColumn("packClassName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackClassName);
+                this.columnpackClassDescribe = new global::System.Data.DataColumn("packClassDescribe", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackClassDescribe);
+                this.columnpackMethodID = new global::System.Data.DataColumn("packMethodID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackMethodID);
+                this.columnpackMethodName = new global::System.Data.DataColumn("packMethodName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackMethodName);
+                this.columnpackMethodPara = new global::System.Data.DataColumn("packMethodPara", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackMethodPara);
+                this.columnpackMethodReturn = new global::System.Data.DataColumn("packMethodReturn", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackMethodReturn);
+                this.columnpackRegular = new global::System.Data.DataColumn("packRegular", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackRegular);
+                this.columnpackMethodDescribe = new global::System.Data.DataColumn("packMethodDescribe", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackMethodDescribe);
+                this.columnpackMethodExample = new global::System.Data.DataColumn("packMethodExample", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackMethodExample);
+                this.columnpackAuthor = new global::System.Data.DataColumn("packAuthor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackAuthor);
+                this.columnpackTime = new global::System.Data.DataColumn("packTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackTime);
+                this.columnpackModifier = new global::System.Data.DataColumn("packModifier", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackModifier);
+                this.columnpackModifyState = new global::System.Data.DataColumn("packModifyState", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackModifyState);
+                this.columnpackModifyTime = new global::System.Data.DataColumn("packModifyTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpackModifyTime);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -617,19 +617,19 @@ namespace TestExerciser {
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
-                this.column方法ID.MaxLength = 255;
-                this.column模块名称.MaxLength = 255;
-                this.column类名称.MaxLength = 255;
-                this.column类描述.MaxLength = 255;
-                this.column方法名称.MaxLength = 255;
-                this.column方法参数.MaxLength = 255;
-                this.column方法返回值.MaxLength = 255;
-                this.column正则匹配结果.MaxLength = 255;
-                this.column方法描述.MaxLength = 255;
-                this.column方法使用示例.MaxLength = 255;
-                this.column作者.MaxLength = 255;
-                this.column修改人.MaxLength = 255;
-                this.column修改说明.MaxLength = 255;
+                this.columnpackProductName.MaxLength = 255;
+                this.columnpackClassName.MaxLength = 255;
+                this.columnpackClassDescribe.MaxLength = 255;
+                this.columnpackMethodID.MaxLength = 255;
+                this.columnpackMethodName.MaxLength = 255;
+                this.columnpackMethodPara.MaxLength = 255;
+                this.columnpackMethodReturn.MaxLength = 255;
+                this.columnpackRegular.MaxLength = 255;
+                this.columnpackMethodDescribe.MaxLength = 255;
+                this.columnpackMethodExample.MaxLength = 255;
+                this.columnpackAuthor.MaxLength = 255;
+                this.columnpackModifier.MaxLength = 255;
+                this.columnpackModifyState.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -783,422 +783,422 @@ namespace TestExerciser {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 方法ID {
+            public string packProductName {
                 get {
                     try {
-                        return ((string)(this[this.table方法封装.方法IDColumn]));
+                        return ((string)(this[this.table方法封装.packProductNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“方法ID”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packProductName”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.方法IDColumn] = value;
+                    this[this.table方法封装.packProductNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 模块名称 {
+            public string packClassName {
                 get {
                     try {
-                        return ((string)(this[this.table方法封装.模块名称Column]));
+                        return ((string)(this[this.table方法封装.packClassNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“模块名称”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packClassName”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.模块名称Column] = value;
+                    this[this.table方法封装.packClassNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 类名称 {
+            public string packClassDescribe {
                 get {
                     try {
-                        return ((string)(this[this.table方法封装.类名称Column]));
+                        return ((string)(this[this.table方法封装.packClassDescribeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“类名称”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packClassDescribe”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.类名称Column] = value;
+                    this[this.table方法封装.packClassDescribeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 类描述 {
+            public string packMethodID {
                 get {
                     try {
-                        return ((string)(this[this.table方法封装.类描述Column]));
+                        return ((string)(this[this.table方法封装.packMethodIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“类描述”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packMethodID”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.类描述Column] = value;
+                    this[this.table方法封装.packMethodIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 方法名称 {
+            public string packMethodName {
                 get {
                     try {
-                        return ((string)(this[this.table方法封装.方法名称Column]));
+                        return ((string)(this[this.table方法封装.packMethodNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“方法名称”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packMethodName”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.方法名称Column] = value;
+                    this[this.table方法封装.packMethodNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 方法参数 {
+            public string packMethodPara {
                 get {
                     try {
-                        return ((string)(this[this.table方法封装.方法参数Column]));
+                        return ((string)(this[this.table方法封装.packMethodParaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“方法参数”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packMethodPara”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.方法参数Column] = value;
+                    this[this.table方法封装.packMethodParaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 方法返回值 {
+            public string packMethodReturn {
                 get {
                     try {
-                        return ((string)(this[this.table方法封装.方法返回值Column]));
+                        return ((string)(this[this.table方法封装.packMethodReturnColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“方法返回值”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packMethodReturn”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.方法返回值Column] = value;
+                    this[this.table方法封装.packMethodReturnColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 正则匹配结果 {
+            public string packRegular {
                 get {
                     try {
-                        return ((string)(this[this.table方法封装.正则匹配结果Column]));
+                        return ((string)(this[this.table方法封装.packRegularColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“正则匹配结果”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packRegular”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.正则匹配结果Column] = value;
+                    this[this.table方法封装.packRegularColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 方法描述 {
+            public string packMethodDescribe {
                 get {
                     try {
-                        return ((string)(this[this.table方法封装.方法描述Column]));
+                        return ((string)(this[this.table方法封装.packMethodDescribeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“方法描述”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packMethodDescribe”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.方法描述Column] = value;
+                    this[this.table方法封装.packMethodDescribeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 方法使用示例 {
+            public string packMethodExample {
                 get {
                     try {
-                        return ((string)(this[this.table方法封装.方法使用示例Column]));
+                        return ((string)(this[this.table方法封装.packMethodExampleColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“方法使用示例”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packMethodExample”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.方法使用示例Column] = value;
+                    this[this.table方法封装.packMethodExampleColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 作者 {
+            public string packAuthor {
                 get {
                     try {
-                        return ((string)(this[this.table方法封装.作者Column]));
+                        return ((string)(this[this.table方法封装.packAuthorColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“作者”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packAuthor”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.作者Column] = value;
+                    this[this.table方法封装.packAuthorColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime 编写时间 {
+            public System.DateTime packTime {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.table方法封装.编写时间Column]));
+                        return ((global::System.DateTime)(this[this.table方法封装.packTimeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“编写时间”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packTime”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.编写时间Column] = value;
+                    this[this.table方法封装.packTimeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 修改人 {
+            public string packModifier {
                 get {
                     try {
-                        return ((string)(this[this.table方法封装.修改人Column]));
+                        return ((string)(this[this.table方法封装.packModifierColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“修改人”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packModifier”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.修改人Column] = value;
+                    this[this.table方法封装.packModifierColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 修改说明 {
+            public string packModifyState {
                 get {
                     try {
-                        return ((string)(this[this.table方法封装.修改说明Column]));
+                        return ((string)(this[this.table方法封装.packModifyStateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“修改说明”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packModifyState”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.修改说明Column] = value;
+                    this[this.table方法封装.packModifyStateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime 修改时间 {
+            public System.DateTime packModifyTime {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.table方法封装.修改时间Column]));
+                        return ((global::System.DateTime)(this[this.table方法封装.packModifyTimeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“修改时间”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“方法封装”中列“packModifyTime”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.table方法封装.修改时间Column] = value;
+                    this[this.table方法封装.packModifyTimeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is方法IDNull() {
-                return this.IsNull(this.table方法封装.方法IDColumn);
+            public bool IspackProductNameNull() {
+                return this.IsNull(this.table方法封装.packProductNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set方法IDNull() {
-                this[this.table方法封装.方法IDColumn] = global::System.Convert.DBNull;
+            public void SetpackProductNameNull() {
+                this[this.table方法封装.packProductNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is模块名称Null() {
-                return this.IsNull(this.table方法封装.模块名称Column);
+            public bool IspackClassNameNull() {
+                return this.IsNull(this.table方法封装.packClassNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set模块名称Null() {
-                this[this.table方法封装.模块名称Column] = global::System.Convert.DBNull;
+            public void SetpackClassNameNull() {
+                this[this.table方法封装.packClassNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is类名称Null() {
-                return this.IsNull(this.table方法封装.类名称Column);
+            public bool IspackClassDescribeNull() {
+                return this.IsNull(this.table方法封装.packClassDescribeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set类名称Null() {
-                this[this.table方法封装.类名称Column] = global::System.Convert.DBNull;
+            public void SetpackClassDescribeNull() {
+                this[this.table方法封装.packClassDescribeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is类描述Null() {
-                return this.IsNull(this.table方法封装.类描述Column);
+            public bool IspackMethodIDNull() {
+                return this.IsNull(this.table方法封装.packMethodIDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set类描述Null() {
-                this[this.table方法封装.类描述Column] = global::System.Convert.DBNull;
+            public void SetpackMethodIDNull() {
+                this[this.table方法封装.packMethodIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is方法名称Null() {
-                return this.IsNull(this.table方法封装.方法名称Column);
+            public bool IspackMethodNameNull() {
+                return this.IsNull(this.table方法封装.packMethodNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set方法名称Null() {
-                this[this.table方法封装.方法名称Column] = global::System.Convert.DBNull;
+            public void SetpackMethodNameNull() {
+                this[this.table方法封装.packMethodNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is方法参数Null() {
-                return this.IsNull(this.table方法封装.方法参数Column);
+            public bool IspackMethodParaNull() {
+                return this.IsNull(this.table方法封装.packMethodParaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set方法参数Null() {
-                this[this.table方法封装.方法参数Column] = global::System.Convert.DBNull;
+            public void SetpackMethodParaNull() {
+                this[this.table方法封装.packMethodParaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is方法返回值Null() {
-                return this.IsNull(this.table方法封装.方法返回值Column);
+            public bool IspackMethodReturnNull() {
+                return this.IsNull(this.table方法封装.packMethodReturnColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set方法返回值Null() {
-                this[this.table方法封装.方法返回值Column] = global::System.Convert.DBNull;
+            public void SetpackMethodReturnNull() {
+                this[this.table方法封装.packMethodReturnColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is正则匹配结果Null() {
-                return this.IsNull(this.table方法封装.正则匹配结果Column);
+            public bool IspackRegularNull() {
+                return this.IsNull(this.table方法封装.packRegularColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set正则匹配结果Null() {
-                this[this.table方法封装.正则匹配结果Column] = global::System.Convert.DBNull;
+            public void SetpackRegularNull() {
+                this[this.table方法封装.packRegularColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is方法描述Null() {
-                return this.IsNull(this.table方法封装.方法描述Column);
+            public bool IspackMethodDescribeNull() {
+                return this.IsNull(this.table方法封装.packMethodDescribeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set方法描述Null() {
-                this[this.table方法封装.方法描述Column] = global::System.Convert.DBNull;
+            public void SetpackMethodDescribeNull() {
+                this[this.table方法封装.packMethodDescribeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is方法使用示例Null() {
-                return this.IsNull(this.table方法封装.方法使用示例Column);
+            public bool IspackMethodExampleNull() {
+                return this.IsNull(this.table方法封装.packMethodExampleColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set方法使用示例Null() {
-                this[this.table方法封装.方法使用示例Column] = global::System.Convert.DBNull;
+            public void SetpackMethodExampleNull() {
+                this[this.table方法封装.packMethodExampleColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is作者Null() {
-                return this.IsNull(this.table方法封装.作者Column);
+            public bool IspackAuthorNull() {
+                return this.IsNull(this.table方法封装.packAuthorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set作者Null() {
-                this[this.table方法封装.作者Column] = global::System.Convert.DBNull;
+            public void SetpackAuthorNull() {
+                this[this.table方法封装.packAuthorColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is编写时间Null() {
-                return this.IsNull(this.table方法封装.编写时间Column);
+            public bool IspackTimeNull() {
+                return this.IsNull(this.table方法封装.packTimeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set编写时间Null() {
-                this[this.table方法封装.编写时间Column] = global::System.Convert.DBNull;
+            public void SetpackTimeNull() {
+                this[this.table方法封装.packTimeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is修改人Null() {
-                return this.IsNull(this.table方法封装.修改人Column);
+            public bool IspackModifierNull() {
+                return this.IsNull(this.table方法封装.packModifierColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set修改人Null() {
-                this[this.table方法封装.修改人Column] = global::System.Convert.DBNull;
+            public void SetpackModifierNull() {
+                this[this.table方法封装.packModifierColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is修改说明Null() {
-                return this.IsNull(this.table方法封装.修改说明Column);
+            public bool IspackModifyStateNull() {
+                return this.IsNull(this.table方法封装.packModifyStateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set修改说明Null() {
-                this[this.table方法封装.修改说明Column] = global::System.Convert.DBNull;
+            public void SetpackModifyStateNull() {
+                this[this.table方法封装.packModifyStateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is修改时间Null() {
-                return this.IsNull(this.table方法封装.修改时间Column);
+            public bool IspackModifyTimeNull() {
+                return this.IsNull(this.table方法封装.packModifyTimeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set修改时间Null() {
-                this[this.table方法封装.修改时间Column] = global::System.Convert.DBNull;
+            public void SetpackModifyTimeNull() {
+                this[this.table方法封装.packModifyTimeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1237,21 +1237,18 @@ namespace TestExerciser {
         }
     }
 }
-namespace TestExerciser.PackageManagerDataSetTableAdapters {
+namespace TestExerciser.DataSetPackageManagerTableAdapters {
     
     
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
     ///</summary>
-    ///import ManageDB
-    using TestExerciser.Logic;
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.ComponentModel.DataObjectAttribute(true)]
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]   
-
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class 方法封装TableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.OleDb.OleDbDataAdapter _adapter;
@@ -1365,52 +1362,48 @@ namespace TestExerciser.PackageManagerDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "方法封装";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("方法ID", "方法ID");
-            tableMapping.ColumnMappings.Add("模块名称", "模块名称");
-            tableMapping.ColumnMappings.Add("类名称", "类名称");
-            tableMapping.ColumnMappings.Add("类描述", "类描述");
-            tableMapping.ColumnMappings.Add("方法名称", "方法名称");
-            tableMapping.ColumnMappings.Add("方法参数", "方法参数");
-            tableMapping.ColumnMappings.Add("方法返回值", "方法返回值");
-            tableMapping.ColumnMappings.Add("正则匹配结果", "正则匹配结果");
-            tableMapping.ColumnMappings.Add("方法描述", "方法描述");
-            tableMapping.ColumnMappings.Add("方法使用示例", "方法使用示例");
-            tableMapping.ColumnMappings.Add("作者", "作者");
-            tableMapping.ColumnMappings.Add("编写时间", "编写时间");
-            tableMapping.ColumnMappings.Add("修改人", "修改人");
-            tableMapping.ColumnMappings.Add("修改说明", "修改说明");
-            tableMapping.ColumnMappings.Add("修改时间", "修改时间");
+            tableMapping.ColumnMappings.Add("packProductName", "packProductName");
+            tableMapping.ColumnMappings.Add("packClassName", "packClassName");
+            tableMapping.ColumnMappings.Add("packClassDescribe", "packClassDescribe");
+            tableMapping.ColumnMappings.Add("packMethodID", "packMethodID");
+            tableMapping.ColumnMappings.Add("packMethodName", "packMethodName");
+            tableMapping.ColumnMappings.Add("packMethodPara", "packMethodPara");
+            tableMapping.ColumnMappings.Add("packMethodReturn", "packMethodReturn");
+            tableMapping.ColumnMappings.Add("packRegular", "packRegular");
+            tableMapping.ColumnMappings.Add("packMethodDescribe", "packMethodDescribe");
+            tableMapping.ColumnMappings.Add("packMethodExample", "packMethodExample");
+            tableMapping.ColumnMappings.Add("packAuthor", "packAuthor");
+            tableMapping.ColumnMappings.Add("packTime", "packTime");
+            tableMapping.ColumnMappings.Add("packModifier", "packModifier");
+            tableMapping.ColumnMappings.Add("packModifyState", "packModifyState");
+            tableMapping.ColumnMappings.Add("packModifyTime", "packModifyTime");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `方法封装` (`方法ID`, `模块名称`, `类名称`, `类描述`, `方法名称`, `方法参数`, `方法返回值`, `正则匹配结" +
-                "果`, `方法描述`, `方法使用示例`, `作者`, `编写时间`, `修改人`, `修改说明`, `修改时间`) VALUES (?, ?, ?, ?, ?" +
-                ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `方法封装` (`packProductName`, `packClassName`, `packClassDescribe`, `packMethodID`, `packMethodName`, `packMethodPara`, `packMethodReturn`, `packRegular`, `packMethodDescribe`, `packMethodExample`, `packAuthor`, `packTime`, `packModifier`, `packModifyState`, `packModifyTime`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("方法ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "方法ID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("模块名称", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "模块名称", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("类名称", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "类名称", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("类描述", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "类描述", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("方法名称", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "方法名称", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("方法参数", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "方法参数", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("方法返回值", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "方法返回值", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("正则匹配结果", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "正则匹配结果", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("方法描述", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "方法描述", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("方法使用示例", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "方法使用示例", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("作者", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "作者", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("编写时间", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "编写时间", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("修改人", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "修改人", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("修改说明", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "修改说明", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("修改时间", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "修改时间", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packProductName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packProductName", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packClassName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packClassName", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packClassDescribe", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packClassDescribe", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packMethodID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packMethodID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packMethodName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packMethodName", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packMethodPara", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packMethodPara", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packMethodReturn", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packMethodReturn", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packRegular", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packRegular", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packMethodDescribe", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packMethodDescribe", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packMethodExample", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packMethodExample", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packAuthor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packAuthor", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packTime", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packTime", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packModifier", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packModifier", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packModifyState", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packModifyState", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("packModifyTime", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "packModifyTime", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            //this._connection.ConnectionString = global::TestExerciser.Properties.Settings.Default.myConnectionString;
-            //use the common string to connect DB
-            this._connection.ConnectionString = ManageDB.strcon;
+            this._connection.ConnectionString = global::TestExerciser.Properties.Settings.Default.TestExerciserConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1419,8 +1412,10 @@ namespace TestExerciser.PackageManagerDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, 方法ID, 模块名称, 类名称, 类描述, 方法名称, 方法参数, 方法返回值, 正则匹配结果, 方法描述, 方法使用示例, 作者, 编写时" +
-                "间, 修改人, 修改说明, 修改时间 FROM 方法封装";
+            this._commandCollection[0].CommandText = "SELECT ID, packProductName, packClassName, packClassDescribe, packMethodID, packM" +
+                "ethodName, packMethodPara, packMethodReturn, packRegular, packMethodDescribe, pa" +
+                "ckMethodExample, packAuthor, packTime, packModifier, packModifyState, packModify" +
+                "Time FROM 方法封装";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1481,93 +1476,93 @@ namespace TestExerciser.PackageManagerDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string 方法ID, string 模块名称, string 类名称, string 类描述, string 方法名称, string 方法参数, string 方法返回值, string 正则匹配结果, string 方法描述, string 方法使用示例, string 作者, global::System.Nullable<global::System.DateTime> 编写时间, string 修改人, string 修改说明, global::System.Nullable<global::System.DateTime> 修改时间) {
-            if ((方法ID == null)) {
+        public virtual int Insert(string packProductName, string packClassName, string packClassDescribe, string packMethodID, string packMethodName, string packMethodPara, string packMethodReturn, string packRegular, string packMethodDescribe, string packMethodExample, string packAuthor, global::System.Nullable<global::System.DateTime> packTime, string packModifier, string packModifyState, global::System.Nullable<global::System.DateTime> packModifyTime) {
+            if ((packProductName == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(方法ID));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(packProductName));
             }
-            if ((模块名称 == null)) {
+            if ((packClassName == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(模块名称));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(packClassName));
             }
-            if ((类名称 == null)) {
+            if ((packClassDescribe == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(类名称));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(packClassDescribe));
             }
-            if ((类描述 == null)) {
+            if ((packMethodID == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(类描述));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(packMethodID));
             }
-            if ((方法名称 == null)) {
+            if ((packMethodName == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(方法名称));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(packMethodName));
             }
-            if ((方法参数 == null)) {
+            if ((packMethodPara == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(方法参数));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(packMethodPara));
             }
-            if ((方法返回值 == null)) {
+            if ((packMethodReturn == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(方法返回值));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(packMethodReturn));
             }
-            if ((正则匹配结果 == null)) {
+            if ((packRegular == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(正则匹配结果));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(packRegular));
             }
-            if ((方法描述 == null)) {
+            if ((packMethodDescribe == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(方法描述));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(packMethodDescribe));
             }
-            if ((方法使用示例 == null)) {
+            if ((packMethodExample == null)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(方法使用示例));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(packMethodExample));
             }
-            if ((作者 == null)) {
+            if ((packAuthor == null)) {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(作者));
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(packAuthor));
             }
-            if ((编写时间.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(编写时间.Value));
+            if ((packTime.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(packTime.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((修改人 == null)) {
+            if ((packModifier == null)) {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(修改人));
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(packModifier));
             }
-            if ((修改说明 == null)) {
+            if ((packModifyState == null)) {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(修改说明));
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(packModifyState));
             }
-            if ((修改时间.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((System.DateTime)(修改时间.Value));
+            if ((packModifyTime.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((System.DateTime)(packModifyTime.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;

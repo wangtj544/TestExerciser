@@ -36,27 +36,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPackageManager));
             this.dgvPackageManager = new CCWin.SkinControl.SkinDataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.方法IDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.模块名称DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.类名称DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.类描述DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.方法名称DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.方法参数DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.方法返回值DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.正则匹配结果DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.方法描述DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.方法使用示例DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.作者DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.编写时间DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.修改人DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.修改说明DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.修改时间DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packProductNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packClassNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packClassDescribeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packMethodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packMethodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packMethodParaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packMethodReturnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packRegularDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packMethodDescribeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packMethodExampleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packAuthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packModifierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packModifyStateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packModifyTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.方法封装BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.packageManagerDataSet = new TestExerciser.DataSetPackageManager();
-            this.方法封装TableAdapter = new TestExerciser.PackageManagerDataSetTableAdapters.方法封装TableAdapter();
+            this.dataSetPackageManager = new TestExerciser.DataSetPackageManager();
+            this.方法封装TableAdapter = new TestExerciser.DataSetPackageManagerTableAdapters.方法封装TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackageManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.方法封装BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.packageManagerDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetPackageManager)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPackageManager
@@ -80,21 +80,21 @@
             this.dgvPackageManager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPackageManager.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
-            this.方法IDDataGridViewTextBoxColumn,
-            this.模块名称DataGridViewTextBoxColumn,
-            this.类名称DataGridViewTextBoxColumn,
-            this.类描述DataGridViewTextBoxColumn,
-            this.方法名称DataGridViewTextBoxColumn,
-            this.方法参数DataGridViewTextBoxColumn,
-            this.方法返回值DataGridViewTextBoxColumn,
-            this.正则匹配结果DataGridViewTextBoxColumn,
-            this.方法描述DataGridViewTextBoxColumn,
-            this.方法使用示例DataGridViewTextBoxColumn,
-            this.作者DataGridViewTextBoxColumn,
-            this.编写时间DataGridViewTextBoxColumn,
-            this.修改人DataGridViewTextBoxColumn,
-            this.修改说明DataGridViewTextBoxColumn,
-            this.修改时间DataGridViewTextBoxColumn});
+            this.packProductNameDataGridViewTextBoxColumn,
+            this.packClassNameDataGridViewTextBoxColumn,
+            this.packClassDescribeDataGridViewTextBoxColumn,
+            this.packMethodIDDataGridViewTextBoxColumn,
+            this.packMethodNameDataGridViewTextBoxColumn,
+            this.packMethodParaDataGridViewTextBoxColumn,
+            this.packMethodReturnDataGridViewTextBoxColumn,
+            this.packRegularDataGridViewTextBoxColumn,
+            this.packMethodDescribeDataGridViewTextBoxColumn,
+            this.packMethodExampleDataGridViewTextBoxColumn,
+            this.packAuthorDataGridViewTextBoxColumn,
+            this.packTimeDataGridViewTextBoxColumn,
+            this.packModifierDataGridViewTextBoxColumn,
+            this.packModifyStateDataGridViewTextBoxColumn,
+            this.packModifyTimeDataGridViewTextBoxColumn});
             this.dgvPackageManager.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
             this.dgvPackageManager.DataSource = this.方法封装BindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -125,8 +125,6 @@
             this.dgvPackageManager.TitleBack = null;
             this.dgvPackageManager.TitleBackColorBegin = System.Drawing.Color.White;
             this.dgvPackageManager.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
-            this.dgvPackageManager.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvPackageManager_CellBeginEdit);
-            this.dgvPackageManager.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPackageManager_CellEndEdit);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -134,105 +132,105 @@
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             // 
-            // 方法IDDataGridViewTextBoxColumn
+            // packProductNameDataGridViewTextBoxColumn
             // 
-            this.方法IDDataGridViewTextBoxColumn.DataPropertyName = "方法ID";
-            this.方法IDDataGridViewTextBoxColumn.HeaderText = "方法ID";
-            this.方法IDDataGridViewTextBoxColumn.Name = "方法IDDataGridViewTextBoxColumn";
+            this.packProductNameDataGridViewTextBoxColumn.DataPropertyName = "packProductName";
+            this.packProductNameDataGridViewTextBoxColumn.HeaderText = "模块名称";
+            this.packProductNameDataGridViewTextBoxColumn.Name = "packProductNameDataGridViewTextBoxColumn";
             // 
-            // 模块名称DataGridViewTextBoxColumn
+            // packClassNameDataGridViewTextBoxColumn
             // 
-            this.模块名称DataGridViewTextBoxColumn.DataPropertyName = "模块名称";
-            this.模块名称DataGridViewTextBoxColumn.HeaderText = "模块名称";
-            this.模块名称DataGridViewTextBoxColumn.Name = "模块名称DataGridViewTextBoxColumn";
+            this.packClassNameDataGridViewTextBoxColumn.DataPropertyName = "packClassName";
+            this.packClassNameDataGridViewTextBoxColumn.HeaderText = "类名称";
+            this.packClassNameDataGridViewTextBoxColumn.Name = "packClassNameDataGridViewTextBoxColumn";
             // 
-            // 类名称DataGridViewTextBoxColumn
+            // packClassDescribeDataGridViewTextBoxColumn
             // 
-            this.类名称DataGridViewTextBoxColumn.DataPropertyName = "类名称";
-            this.类名称DataGridViewTextBoxColumn.HeaderText = "类名称";
-            this.类名称DataGridViewTextBoxColumn.Name = "类名称DataGridViewTextBoxColumn";
+            this.packClassDescribeDataGridViewTextBoxColumn.DataPropertyName = "packClassDescribe";
+            this.packClassDescribeDataGridViewTextBoxColumn.HeaderText = "类描述";
+            this.packClassDescribeDataGridViewTextBoxColumn.Name = "packClassDescribeDataGridViewTextBoxColumn";
             // 
-            // 类描述DataGridViewTextBoxColumn
+            // packMethodIDDataGridViewTextBoxColumn
             // 
-            this.类描述DataGridViewTextBoxColumn.DataPropertyName = "类描述";
-            this.类描述DataGridViewTextBoxColumn.HeaderText = "类描述";
-            this.类描述DataGridViewTextBoxColumn.Name = "类描述DataGridViewTextBoxColumn";
+            this.packMethodIDDataGridViewTextBoxColumn.DataPropertyName = "packMethodID";
+            this.packMethodIDDataGridViewTextBoxColumn.HeaderText = "方法ID";
+            this.packMethodIDDataGridViewTextBoxColumn.Name = "packMethodIDDataGridViewTextBoxColumn";
             // 
-            // 方法名称DataGridViewTextBoxColumn
+            // packMethodNameDataGridViewTextBoxColumn
             // 
-            this.方法名称DataGridViewTextBoxColumn.DataPropertyName = "方法名称";
-            this.方法名称DataGridViewTextBoxColumn.HeaderText = "方法名称";
-            this.方法名称DataGridViewTextBoxColumn.Name = "方法名称DataGridViewTextBoxColumn";
+            this.packMethodNameDataGridViewTextBoxColumn.DataPropertyName = "packMethodName";
+            this.packMethodNameDataGridViewTextBoxColumn.HeaderText = "方法名称";
+            this.packMethodNameDataGridViewTextBoxColumn.Name = "packMethodNameDataGridViewTextBoxColumn";
             // 
-            // 方法参数DataGridViewTextBoxColumn
+            // packMethodParaDataGridViewTextBoxColumn
             // 
-            this.方法参数DataGridViewTextBoxColumn.DataPropertyName = "方法参数";
-            this.方法参数DataGridViewTextBoxColumn.HeaderText = "方法参数";
-            this.方法参数DataGridViewTextBoxColumn.Name = "方法参数DataGridViewTextBoxColumn";
+            this.packMethodParaDataGridViewTextBoxColumn.DataPropertyName = "packMethodPara";
+            this.packMethodParaDataGridViewTextBoxColumn.HeaderText = "方法参数";
+            this.packMethodParaDataGridViewTextBoxColumn.Name = "packMethodParaDataGridViewTextBoxColumn";
             // 
-            // 方法返回值DataGridViewTextBoxColumn
+            // packMethodReturnDataGridViewTextBoxColumn
             // 
-            this.方法返回值DataGridViewTextBoxColumn.DataPropertyName = "方法返回值";
-            this.方法返回值DataGridViewTextBoxColumn.HeaderText = "方法返回值";
-            this.方法返回值DataGridViewTextBoxColumn.Name = "方法返回值DataGridViewTextBoxColumn";
+            this.packMethodReturnDataGridViewTextBoxColumn.DataPropertyName = "packMethodReturn";
+            this.packMethodReturnDataGridViewTextBoxColumn.HeaderText = "方法返回值";
+            this.packMethodReturnDataGridViewTextBoxColumn.Name = "packMethodReturnDataGridViewTextBoxColumn";
             // 
-            // 正则匹配结果DataGridViewTextBoxColumn
+            // packRegularDataGridViewTextBoxColumn
             // 
-            this.正则匹配结果DataGridViewTextBoxColumn.DataPropertyName = "正则匹配结果";
-            this.正则匹配结果DataGridViewTextBoxColumn.HeaderText = "正则匹配结果";
-            this.正则匹配结果DataGridViewTextBoxColumn.Name = "正则匹配结果DataGridViewTextBoxColumn";
+            this.packRegularDataGridViewTextBoxColumn.DataPropertyName = "packRegular";
+            this.packRegularDataGridViewTextBoxColumn.HeaderText = "正则匹配结果";
+            this.packRegularDataGridViewTextBoxColumn.Name = "packRegularDataGridViewTextBoxColumn";
             // 
-            // 方法描述DataGridViewTextBoxColumn
+            // packMethodDescribeDataGridViewTextBoxColumn
             // 
-            this.方法描述DataGridViewTextBoxColumn.DataPropertyName = "方法描述";
-            this.方法描述DataGridViewTextBoxColumn.HeaderText = "方法描述";
-            this.方法描述DataGridViewTextBoxColumn.Name = "方法描述DataGridViewTextBoxColumn";
+            this.packMethodDescribeDataGridViewTextBoxColumn.DataPropertyName = "packMethodDescribe";
+            this.packMethodDescribeDataGridViewTextBoxColumn.HeaderText = "方法描述";
+            this.packMethodDescribeDataGridViewTextBoxColumn.Name = "packMethodDescribeDataGridViewTextBoxColumn";
             // 
-            // 方法使用示例DataGridViewTextBoxColumn
+            // packMethodExampleDataGridViewTextBoxColumn
             // 
-            this.方法使用示例DataGridViewTextBoxColumn.DataPropertyName = "方法使用示例";
-            this.方法使用示例DataGridViewTextBoxColumn.HeaderText = "方法使用示例";
-            this.方法使用示例DataGridViewTextBoxColumn.Name = "方法使用示例DataGridViewTextBoxColumn";
+            this.packMethodExampleDataGridViewTextBoxColumn.DataPropertyName = "packMethodExample";
+            this.packMethodExampleDataGridViewTextBoxColumn.HeaderText = "方法使用示例";
+            this.packMethodExampleDataGridViewTextBoxColumn.Name = "packMethodExampleDataGridViewTextBoxColumn";
             // 
-            // 作者DataGridViewTextBoxColumn
+            // packAuthorDataGridViewTextBoxColumn
             // 
-            this.作者DataGridViewTextBoxColumn.DataPropertyName = "作者";
-            this.作者DataGridViewTextBoxColumn.HeaderText = "作者";
-            this.作者DataGridViewTextBoxColumn.Name = "作者DataGridViewTextBoxColumn";
+            this.packAuthorDataGridViewTextBoxColumn.DataPropertyName = "packAuthor";
+            this.packAuthorDataGridViewTextBoxColumn.HeaderText = "作者";
+            this.packAuthorDataGridViewTextBoxColumn.Name = "packAuthorDataGridViewTextBoxColumn";
             // 
-            // 编写时间DataGridViewTextBoxColumn
+            // packTimeDataGridViewTextBoxColumn
             // 
-            this.编写时间DataGridViewTextBoxColumn.DataPropertyName = "编写时间";
-            this.编写时间DataGridViewTextBoxColumn.HeaderText = "编写时间";
-            this.编写时间DataGridViewTextBoxColumn.Name = "编写时间DataGridViewTextBoxColumn";
+            this.packTimeDataGridViewTextBoxColumn.DataPropertyName = "packTime";
+            this.packTimeDataGridViewTextBoxColumn.HeaderText = "编写时间";
+            this.packTimeDataGridViewTextBoxColumn.Name = "packTimeDataGridViewTextBoxColumn";
             // 
-            // 修改人DataGridViewTextBoxColumn
+            // packModifierDataGridViewTextBoxColumn
             // 
-            this.修改人DataGridViewTextBoxColumn.DataPropertyName = "修改人";
-            this.修改人DataGridViewTextBoxColumn.HeaderText = "修改人";
-            this.修改人DataGridViewTextBoxColumn.Name = "修改人DataGridViewTextBoxColumn";
+            this.packModifierDataGridViewTextBoxColumn.DataPropertyName = "packModifier";
+            this.packModifierDataGridViewTextBoxColumn.HeaderText = "修改人";
+            this.packModifierDataGridViewTextBoxColumn.Name = "packModifierDataGridViewTextBoxColumn";
             // 
-            // 修改说明DataGridViewTextBoxColumn
+            // packModifyStateDataGridViewTextBoxColumn
             // 
-            this.修改说明DataGridViewTextBoxColumn.DataPropertyName = "修改说明";
-            this.修改说明DataGridViewTextBoxColumn.HeaderText = "修改说明";
-            this.修改说明DataGridViewTextBoxColumn.Name = "修改说明DataGridViewTextBoxColumn";
+            this.packModifyStateDataGridViewTextBoxColumn.DataPropertyName = "packModifyState";
+            this.packModifyStateDataGridViewTextBoxColumn.HeaderText = "修改说明";
+            this.packModifyStateDataGridViewTextBoxColumn.Name = "packModifyStateDataGridViewTextBoxColumn";
             // 
-            // 修改时间DataGridViewTextBoxColumn
+            // packModifyTimeDataGridViewTextBoxColumn
             // 
-            this.修改时间DataGridViewTextBoxColumn.DataPropertyName = "修改时间";
-            this.修改时间DataGridViewTextBoxColumn.HeaderText = "修改时间";
-            this.修改时间DataGridViewTextBoxColumn.Name = "修改时间DataGridViewTextBoxColumn";
+            this.packModifyTimeDataGridViewTextBoxColumn.DataPropertyName = "packModifyTime";
+            this.packModifyTimeDataGridViewTextBoxColumn.HeaderText = "修改时间";
+            this.packModifyTimeDataGridViewTextBoxColumn.Name = "packModifyTimeDataGridViewTextBoxColumn";
             // 
             // 方法封装BindingSource
             // 
             this.方法封装BindingSource.DataMember = "方法封装";
-            this.方法封装BindingSource.DataSource = this.packageManagerDataSet;
+            this.方法封装BindingSource.DataSource = this.dataSetPackageManager;
             // 
-            // packageManagerDataSet
+            // dataSetPackageManager
             // 
-            this.packageManagerDataSet.DataSetName = "PackageManagerDataSet";
-            this.packageManagerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataSetPackageManager.DataSetName = "DataSetPackageManager";
+            this.dataSetPackageManager.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // 方法封装TableAdapter
             // 
@@ -241,45 +239,39 @@
             // MainPackageManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
             this.ClientSize = new System.Drawing.Size(1730, 825);
             this.Controls.Add(this.dgvPackageManager);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainPackageManager";
             this.Text = "封装管理工具";
-            this.TitleCenter = false;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainPackageManager_FormClosing);
             this.Load += new System.EventHandler(this.MainPackageManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackageManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.方法封装BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.packageManagerDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetPackageManager)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
         private CCWin.SkinControl.SkinDataGridView dgvPackageManager;
-        private DataSetPackageManager packageManagerDataSet;
+        private DataSetPackageManager dataSetPackageManager;
         private System.Windows.Forms.BindingSource 方法封装BindingSource;
-        private PackageManagerDataSetTableAdapters.方法封装TableAdapter 方法封装TableAdapter;
+        private DataSetPackageManagerTableAdapters.方法封装TableAdapter 方法封装TableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 方法IDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 模块名称DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 类名称DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 类描述DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 方法名称DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 方法参数DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 方法返回值DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 正则匹配结果DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 方法描述DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 方法使用示例DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 作者DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 编写时间DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 修改人DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 修改说明DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 修改时间DataGridViewTextBoxColumn;
-
-
+        private System.Windows.Forms.DataGridViewTextBoxColumn packProductNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packClassNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packClassDescribeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packMethodIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packMethodNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packMethodParaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packMethodReturnDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packRegularDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packMethodDescribeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packMethodExampleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packAuthorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packModifierDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packModifyStateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packModifyTimeDataGridViewTextBoxColumn;
     }
 }

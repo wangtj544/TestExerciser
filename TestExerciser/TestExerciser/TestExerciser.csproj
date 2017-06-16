@@ -136,6 +136,16 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetPackageManager.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTeamMembers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainCaseReview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,11 +172,6 @@
     </Compile>
     <Compile Include="MainUpdateHis.Designer.cs">
       <DependentUpon>MainUpdateHis.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataSetPackageManager.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
     </Compile>
     <Compile Include="MainTeamMembers.cs">
       <SubType>Form</SubType>
@@ -331,12 +336,23 @@
       <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
     </None>
     <None Include="DataSetPackageManager.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSetPackageManager.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="DataSetPackageManager.xss">
       <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTeamMembers.xsc">
+      <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTeamMembers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTeamMembers.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTeamMembers.xss">
+      <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
     </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

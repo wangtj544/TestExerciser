@@ -129,14 +129,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="954880">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="957952">
       <assemblyIdentity name="TestExerciser" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SSHsDFrHnzpDN51pcRdx3tc++Gh7GICleNJPfO6AhYY=</dsig:DigestValue>
+        <dsig:DigestValue>Mtd+n21/icGxSS50RGQiFUiqq6JpNo9er87NlthFcXQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -148,7 +148,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>t5QHyHKr2ME6+wZ6e2ex18RhRtNJovHtL8HSCGn1kHg=</dsig:DigestValue>
+        <dsig:DigestValue>gCYQnyuB7LtqQ7jzyWGcpMkbFp+12Yj6moUQG7nXqfA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -671,16 +671,16 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7zsFkGhMYfzhIDutpv9bI/x/VJ7OvT6UEnq0dfTkU94=</dsig:DigestValue>
+      <dsig:DigestValue>n3fAgWn/bKusRTisptqtubKh5ccLjo19a+JrnFbMm3I=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TestExerciser.exe.config" size="1029">
+  <file name="TestExerciser.exe.config" size="1321">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>80+KSVYThdLWv6mm6RIgwTCMvJwf7EGcYZdYqnJBf+Y=</dsig:DigestValue>
+      <dsig:DigestValue>wrF4ziYQ38PFeTnd9RVlr4HIynXp/A7x9SeMnp/QoDI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Tools\AutoIt.exe" size="208192">

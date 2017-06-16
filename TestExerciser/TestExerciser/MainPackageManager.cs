@@ -29,9 +29,8 @@ namespace TestExerciser
 
         private void MainPackageManager_Load(object sender, EventArgs e)
         {
-            // TODO:  这行代码将数据加载到表“packageManagerDataSet.方法封装”中。您可以根据需要移动或删除它。
-            this.方法封装TableAdapter.Fill(this.packageManagerDataSet.方法封装);
-
+            // TODO:  这行代码将数据加载到表“dataSetPackageManager.方法封装”中。您可以根据需要移动或删除它。
+            this.方法封装TableAdapter.Fill(this.dataSetPackageManager.方法封装);
         }
 
         private void dgvPackageManager_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
@@ -67,7 +66,7 @@ namespace TestExerciser
                     {
                         mycon = new OleDbConnection(ManageDB.strcon);
                         mycon.Open();
-                        DataTable myDataTable = this.packageManagerDataSet.方法封装;
+                        DataTable myDataTable = this.dataSetPackageManager.方法封装;
                         OleDbDataAdapter myDataAdapter = this.方法封装TableAdapter.Adapter;
                         OleDbCommandBuilder myOleDbCommandBuilder = new OleDbCommandBuilder(myDataAdapter);
                         myDataAdapter.Update(myDataTable);
@@ -88,6 +87,5 @@ namespace TestExerciser
                 }
             }
         }
-
     }
 }
