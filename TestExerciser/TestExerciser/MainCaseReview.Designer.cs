@@ -1,6 +1,6 @@
 ﻿namespace TestExerciser
 {
-    partial class CaseReview
+    partial class MainCaseReview
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CaseReview));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainCaseReview));
             this.tabControlCaseReview = new System.Windows.Forms.TabControl();
             this.tabPageFlow = new System.Windows.Forms.TabPage();
             this.tabPageReview = new System.Windows.Forms.TabPage();

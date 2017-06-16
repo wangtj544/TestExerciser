@@ -12,9 +12,9 @@ using CCWin;
 
 namespace TestExerciser
 {
-    public partial class CaseReview : Skin_Mac
+    public partial class MainCaseReview : Skin_Mac
     {
-        public CaseReview()
+        public MainCaseReview()
         {
             InitializeComponent();
         }
