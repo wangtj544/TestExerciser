@@ -296,3 +296,7 @@ E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainUpdateH
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainCaseReview.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainTeamMembers.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainExcelReader.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainBugManager.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainWorkFlow.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainWorkingNotes.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainWorkProgress.resources

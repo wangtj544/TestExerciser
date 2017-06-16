@@ -2479,5 +2479,29 @@ namespace TestExerciser
             MainCaseReview myMainCaseReview = new MainCaseReview();
             myMainCaseReview.Show();
         }
+
+        private void 缺陷管理BToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainBugManager myMainBugManager = new MainBugManager();
+            myMainBugManager.Show();
+        }
+
+        private void 工作笔记ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainWorkingNotes myMainWorkingNotes = new MainWorkingNotes();
+            myMainWorkingNotes.Show();
+        }
+
+        private void 工作进展ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainWorkProgress myMainWorkProgress = new MainWorkProgress();
+            myMainWorkProgress.Show();
+        }
+
+        private void 流程发起ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainWorkFlow myMainWorkFlow = new MainWorkFlow();
+            myMainWorkFlow.Show();
+        }
     }
 }

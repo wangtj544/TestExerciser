@@ -150,6 +150,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MainBugManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainBugManager.Designer.cs">
+      <DependentUpon>MainBugManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainCaseReview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,24 @@
     </Compile>
     <Compile Include="MainTeamMembers.Designer.cs">
       <DependentUpon>MainTeamMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWorkFlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWorkFlow.Designer.cs">
+      <DependentUpon>MainWorkFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWorkingNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWorkingNotes.Designer.cs">
+      <DependentUpon>MainWorkingNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWorkProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWorkProgress.Designer.cs">
+      <DependentUpon>MainWorkProgress.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\SVN\SVNManager.cs" />
     <Compile Include="Tools\SVN\ToolSVN.cs">
@@ -266,6 +290,9 @@
     <Compile Include="User\UserResetPwd.Designer.cs">
       <DependentUpon>UserResetPwd.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MainBugManager.resx">
+      <DependentUpon>MainBugManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainCaseReview.resx">
       <DependentUpon>MainCaseReview.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,6 +310,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainTeamMembers.resx">
       <DependentUpon>MainTeamMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWorkFlow.resx">
+      <DependentUpon>MainWorkFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWorkingNotes.resx">
+      <DependentUpon>MainWorkingNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWorkProgress.resx">
+      <DependentUpon>MainWorkProgress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\SVN\ToolSVN.resx">
       <DependentUpon>ToolSVN.cs</DependentUpon>

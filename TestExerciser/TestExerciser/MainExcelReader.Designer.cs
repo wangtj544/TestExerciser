@@ -237,7 +237,7 @@
             this.openExcelFileDialog.Filter = "Excel(*.xlsx)|*.xlsx|Excel(*.xls)|*.xls";
             this.openExcelFileDialog.InitialDirectory = "Environment.GetFolderPath(Environment.SpecialFolder.Desktop";
             // 
-            // MainReadDB
+            // MainExcelReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -246,8 +246,8 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "MainReadDB";
-            this.Text = "脚本智能生成工具";
+            this.Name = "MainExcelReader";
+            this.Text = "脚本智能生成";
             this.TitleCenter = false;
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

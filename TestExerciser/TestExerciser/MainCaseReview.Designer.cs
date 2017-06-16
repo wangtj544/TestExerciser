@@ -74,7 +74,7 @@
             this.tabPageReview.Location = new System.Drawing.Point(4, 22);
             this.tabPageReview.Name = "tabPageReview";
             this.tabPageReview.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageReview.Size = new System.Drawing.Size(1139, 508);
+            this.tabPageReview.Size = new System.Drawing.Size(1714, 763);
             this.tabPageReview.TabIndex = 1;
             this.tabPageReview.Text = "发起评审";
             this.tabPageReview.UseVisualStyleBackColor = true;
@@ -88,6 +88,7 @@
             this.Controls.Add(this.tabControlCaseReview);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainCaseReview";
+            this.ShadowColor = System.Drawing.Color.Blue;
             this.Text = "用例评审";
             this.TitleCenter = false;
             this.tabControlCaseReview.ResumeLayout(false);

@@ -244,7 +244,7 @@
             this.Controls.Add(this.dgvPackageManager);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainPackageManager";
-            this.Text = "封装管理工具";
+            this.Text = "封装管理";
             this.TitleCenter = false;
             this.Load += new System.EventHandler(this.MainPackageManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackageManager)).EndInit();
