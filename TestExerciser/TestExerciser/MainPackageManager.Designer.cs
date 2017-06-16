@@ -239,11 +239,13 @@
             // MainPackageManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
             this.ClientSize = new System.Drawing.Size(1730, 825);
             this.Controls.Add(this.dgvPackageManager);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainPackageManager";
             this.Text = "封装管理工具";
+            this.TitleCenter = false;
             this.Load += new System.EventHandler(this.MainPackageManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackageManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.方法封装BindingSource)).EndInit();

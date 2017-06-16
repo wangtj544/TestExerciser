@@ -141,6 +141,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetTeamMembers.cs">
+      <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataSetTeamMembers.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
