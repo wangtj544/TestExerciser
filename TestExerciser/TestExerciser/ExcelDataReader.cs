@@ -25,7 +25,7 @@ namespace TestExerciser
 
             try
             {
-                using (ExcelDataSet ds = new ExcelDataSet())
+                using (DataSetExcelReader ds = new DataSetExcelReader())
                 {
                     string strCon = string.Format("Provider=Microsoft.ACE.OLEDB.{0}.0;" +
                                     "Extended Properties=\"Excel {1}.0;HDR={2};IMEX=1;\";" +
