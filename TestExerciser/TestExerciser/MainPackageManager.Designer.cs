@@ -125,6 +125,8 @@
             this.dgvPackageManager.TitleBack = null;
             this.dgvPackageManager.TitleBackColorBegin = System.Drawing.Color.White;
             this.dgvPackageManager.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.dgvPackageManager.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvPackageManager_CellBeginEdit);
+            this.dgvPackageManager.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPackageManager_CellEndEdit);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -246,6 +248,7 @@
             this.Name = "MainPackageManager";
             this.Text = "封装管理";
             this.TitleCenter = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainPackageManager_FormClosing);
             this.Load += new System.EventHandler(this.MainPackageManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackageManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.方法封装BindingSource)).EndInit();

@@ -292,7 +292,7 @@
             this.groupBox1.Controls.Add(this.btnSelectFolder);
             this.groupBox1.Controls.Add(this.lblRevision);
             this.groupBox1.Controls.Add(this.lblLocalPath);
-            this.groupBox1.Location = new System.Drawing.Point(16, 47);
+            this.groupBox1.Location = new System.Drawing.Point(16, 52);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(448, 197);
             this.groupBox1.TabIndex = 25;

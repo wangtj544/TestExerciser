@@ -2503,5 +2503,11 @@ namespace TestExerciser
             MainWorkFlow myMainWorkFlow = new MainWorkFlow();
             myMainWorkFlow.Show();
         }
+
+        private void 文件清理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolClean myToolClean = new ToolClean();
+            myToolClean.Show();
+        }
     }
 }

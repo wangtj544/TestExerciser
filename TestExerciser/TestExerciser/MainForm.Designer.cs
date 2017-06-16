@@ -77,6 +77,7 @@
             this.用例评审AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.缺陷管理BToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.文件清理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.远程连接ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sVNSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pUTTYPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -594,7 +595,7 @@
             // 
             this.团队协作TToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("团队协作TToolStripMenuItem.Image")));
             this.团队协作TToolStripMenuItem.Name = "团队协作TToolStripMenuItem";
-            this.团队协作TToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.团队协作TToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.团队协作TToolStripMenuItem.Text = "封装管理(&M)";
             this.团队协作TToolStripMenuItem.Click += new System.EventHandler(this.团队协作TToolStripMenuItem_Click);
             // 
@@ -602,7 +603,7 @@
             // 
             this.用例评审AToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("用例评审AToolStripMenuItem.Image")));
             this.用例评审AToolStripMenuItem.Name = "用例评审AToolStripMenuItem";
-            this.用例评审AToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.用例评审AToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.用例评审AToolStripMenuItem.Text = "用例评审(&A)";
             this.用例评审AToolStripMenuItem.Click += new System.EventHandler(this.用例评审AToolStripMenuItem_Click);
             // 
@@ -610,13 +611,14 @@
             // 
             this.缺陷管理BToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("缺陷管理BToolStripMenuItem.Image")));
             this.缺陷管理BToolStripMenuItem.Name = "缺陷管理BToolStripMenuItem";
-            this.缺陷管理BToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.缺陷管理BToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.缺陷管理BToolStripMenuItem.Text = "缺陷管理(&B)";
             this.缺陷管理BToolStripMenuItem.Click += new System.EventHandler(this.缺陷管理BToolStripMenuItem_Click);
             // 
             // 工具ToolStripMenuItem
             // 
             this.工具ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.文件清理ToolStripMenuItem,
             this.远程连接ToolStripMenuItem,
             this.sVNSToolStripMenuItem,
             this.pUTTYPToolStripMenuItem,
@@ -626,6 +628,14 @@
             this.工具ToolStripMenuItem.Name = "工具ToolStripMenuItem";
             this.工具ToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
             this.工具ToolStripMenuItem.Text = "工具(&T)";
+            // 
+            // 文件清理ToolStripMenuItem
+            // 
+            this.文件清理ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("文件清理ToolStripMenuItem.Image")));
+            this.文件清理ToolStripMenuItem.Name = "文件清理ToolStripMenuItem";
+            this.文件清理ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.文件清理ToolStripMenuItem.Text = "文件清理(&F)";
+            this.文件清理ToolStripMenuItem.Click += new System.EventHandler(this.文件清理ToolStripMenuItem_Click);
             // 
             // 远程连接ToolStripMenuItem
             // 
@@ -743,42 +753,42 @@
             // 用户信息ToolStripMenuItem
             // 
             this.用户信息ToolStripMenuItem.Name = "用户信息ToolStripMenuItem";
-            this.用户信息ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.用户信息ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.用户信息ToolStripMenuItem.Text = "个人信息";
             this.用户信息ToolStripMenuItem.Click += new System.EventHandler(this.用户信息ToolStripMenuItem_Click);
             // 
             // 修改密码ToolStripMenuItem
             // 
             this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
-            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.修改密码ToolStripMenuItem.Text = "修改密码";
             this.修改密码ToolStripMenuItem.Click += new System.EventHandler(this.修改密码ToolStripMenuItem_Click);
             // 
             // 工作笔记ToolStripMenuItem
             // 
             this.工作笔记ToolStripMenuItem.Name = "工作笔记ToolStripMenuItem";
-            this.工作笔记ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.工作笔记ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.工作笔记ToolStripMenuItem.Text = "工作笔记";
             this.工作笔记ToolStripMenuItem.Click += new System.EventHandler(this.工作笔记ToolStripMenuItem_Click);
             // 
             // 工作进展ToolStripMenuItem
             // 
             this.工作进展ToolStripMenuItem.Name = "工作进展ToolStripMenuItem";
-            this.工作进展ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.工作进展ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.工作进展ToolStripMenuItem.Text = "工作进展";
             this.工作进展ToolStripMenuItem.Click += new System.EventHandler(this.工作进展ToolStripMenuItem_Click);
             // 
             // 流程发起ToolStripMenuItem
             // 
             this.流程发起ToolStripMenuItem.Name = "流程发起ToolStripMenuItem";
-            this.流程发起ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.流程发起ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.流程发起ToolStripMenuItem.Text = "流程发起";
             this.流程发起ToolStripMenuItem.Click += new System.EventHandler(this.流程发起ToolStripMenuItem_Click);
             // 
             // 团队成员ToolStripMenuItem
             // 
             this.团队成员ToolStripMenuItem.Name = "团队成员ToolStripMenuItem";
-            this.团队成员ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.团队成员ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.团队成员ToolStripMenuItem.Text = "团队成员";
             this.团队成员ToolStripMenuItem.Click += new System.EventHandler(this.团队成员ToolStripMenuItem_Click);
             // 
@@ -2019,6 +2029,7 @@
         private System.Windows.Forms.ToolStripMenuItem 缺陷管理BToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 选项ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 工作笔记ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 文件清理ToolStripMenuItem;
     }
 }
 

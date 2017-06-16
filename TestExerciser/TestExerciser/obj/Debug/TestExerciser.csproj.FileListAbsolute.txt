@@ -300,3 +300,5 @@ E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainBugMana
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainWorkFlow.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainWorkingNotes.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainWorkProgress.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.SVN.ToolSVNRepositoryBrowser.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ToolClean.resources

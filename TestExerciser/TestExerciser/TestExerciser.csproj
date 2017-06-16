@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>E:\AutoTest\测试工具\</PublishUrl>
+    <PublishUrl>E:\AutoTest\测试用例\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -29,7 +29,7 @@
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -221,6 +221,12 @@
       <DependentUpon>ToolSVNCheckOut.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\LoginInfo.cs" />
+    <Compile Include="Tools\ToolClean.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolClean.Designer.cs">
+      <DependentUpon>ToolClean.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\UserAuthentication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,6 +331,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\SVN\ToolSVNCheckOut.resx">
       <DependentUpon>ToolSVNCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\SVN\ToolSVNRepositoryBrowser.resx" />
+    <EmbeddedResource Include="Tools\ToolClean.resx">
+      <DependentUpon>ToolClean.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\UserAuthentication.resx">
       <DependentUpon>UserAuthentication.cs</DependentUpon>
