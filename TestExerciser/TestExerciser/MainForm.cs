@@ -2163,7 +2163,7 @@ namespace TestExerciser
 
         private void 生成脚本ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MainReadDB rdb = new MainReadDB();
+            MainExcelReader rdb = new MainExcelReader();
             rdb.ShowDialog();
             if (rdb.addToProj == true)
             {
@@ -2472,6 +2472,12 @@ namespace TestExerciser
         {
             MainUpdateHis myMainUpdateHis = new MainUpdateHis();
             myMainUpdateHis.Show();
+        }
+
+        private void 用例评审AToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainCaseReview myMainCaseReview = new MainCaseReview();
+            myMainCaseReview.Show();
         }
     }
 }

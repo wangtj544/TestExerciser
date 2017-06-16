@@ -232,11 +232,11 @@
     <Compile Include="User\UserLogin.Designer.cs">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainReadDB.cs">
+    <Compile Include="MainExcelReader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainReadDB.Designer.cs">
-      <DependentUpon>MainReadDB.cs</DependentUpon>
+    <Compile Include="MainExcelReader.Designer.cs">
+      <DependentUpon>MainExcelReader.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -305,8 +305,8 @@
     <EmbeddedResource Include="User\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainReadDB.resx">
-      <DependentUpon>MainReadDB.cs</DependentUpon>
+    <EmbeddedResource Include="MainExcelReader.resx">
+      <DependentUpon>MainExcelReader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -412,6 +412,8 @@
   <ItemGroup>
     <Content Include="Resources\0.png" />
     <Content Include="Resources\au3.ico" />
+    <Content Include="Resources\auto3help.PNG" />
+    <Content Include="Resources\putty.PNG" />
     <Content Include="Resources\rightArrow.png" />
     <Content Include="Resources\1.png" />
     <Content Include="Resources\2.png" />
@@ -450,11 +452,12 @@
     <Content Include="Resources\right.png" />
     <Content Include="Resources\ruby.png" />
     <Content Include="Resources\run.png" />
+    <Content Include="Resources\save.PNG" />
     <Content Include="Resources\selected.png" />
     <Content Include="Resources\solutionIcon.png" />
-    <Content Include="Resources\symbol_minus%4024%402x.png" />
     <Content Include="Resources\table_add.png" />
     <Content Include="Resources\text.png" />
+    <Content Include="Resources\tortoiseSVN.PNG" />
     <Content Include="Resources\tstbAddToProj.png" />
     <Content Include="Resources\tstbCreateDB.png" />
     <Content Include="Resources\tstbCreateScript.png" />

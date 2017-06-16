@@ -129,14 +129,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="973824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="971776">
       <assemblyIdentity name="TestExerciser" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GdbjwmuuHHbGzhQwD8m/HU6Rp4fqHN2KakjxmXQPnKo=</dsig:DigestValue>
+        <dsig:DigestValue>v8KlLIfLpDwNHE5GWk0iRW8MH3hAueEVlvPHLJrP3dM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -148,7 +148,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lnkzlWMNdkofUVnAP6Zw6/LuUfd/0rKdZ+peQ1qtDX8=</dsig:DigestValue>
+        <dsig:DigestValue>4KRz9fCg7SevBuKA+Wf8GHBEQQ9IbtXY9WLpdny8u/w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -249,6 +249,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>qyWRjz+SliabiGFCk/mjxZH+oI9FGKelBQodk7aOe2M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\auto3help.PNG" size="711">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>IoV1cLSQ8nTynND7xOjJb47jonbM6R9GMxL8N9cNK/E=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\cSharp.png" size="1767">
@@ -431,6 +440,15 @@
       <dsig:DigestValue>huNYHLtL2CeXWyvCqzhnQXkZYY5v7ca/a3g0km0dbEA=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Resources\putty.PNG" size="269">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5avE6oDpHjeMjR9KfVPMxr68fhey9Hf0XhaMOJhmRDk=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Resources\python.png" size="1020">
     <hash>
       <dsig:Transforms>
@@ -539,6 +557,15 @@
       <dsig:DigestValue>4b93c4RuYDQOJqz9BIN3aWyNsqTHoCSJm9svQ7DiU+U=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Resources\save.PNG" size="630">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wvx0Gd8KxvAdzCX8DQSmL5UcpzS0U5G10XmowWQ9l4g=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Resources\selected.png" size="1414">
     <hash>
       <dsig:Transforms>
@@ -555,15 +582,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>Q1KnSpdMM/spoR9x0a/Qm++8Ny9J3uL8JKddYLCG7/8=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\symbol_minus@24@2x.png" size="2078">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Xmumv+2QAq5tqUc7VtwAKd6QivdSNaTVvP0hPPSr45E=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\table_add.png" size="652">
@@ -600,6 +618,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>gH4s9K3YXx+70yoCrEtPpVAUSmalbjdumL+uh6zhagU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\tortoiseSVN.PNG" size="696">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ZDTky1VPDXMEOTnpV+hUUzTyPjLlSKGWlOFZkSvNr/0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\ts.ico" size="1078">
@@ -671,7 +698,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>n3fAgWn/bKusRTisptqtubKh5ccLjo19a+JrnFbMm3I=</dsig:DigestValue>
+      <dsig:DigestValue>OD1OS89hcEvYfcFFmZ2HLBrdkTTuHW5R6ouElIHtFWw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="TestExerciser.exe.config" size="1321">

@@ -281,7 +281,6 @@ E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.User.UserCh
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.User.UserChangeUserEmail.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.User.UserChangeUserFullName.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.User.UserLogin.resources
-E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainReadDB.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainForm.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Properties.Resources.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.User.UserRegister.resources
@@ -296,3 +295,4 @@ E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.application
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainUpdateHis.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainCaseReview.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainTeamMembers.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainExcelReader.resources

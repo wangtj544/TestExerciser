@@ -67,8 +67,6 @@
             this.逐过程调试F11ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.启动调试CtrlF5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.终止调试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.缺陷管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.缺陷管理工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.调试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.执行工程ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.执行测试套ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -185,6 +183,7 @@
             this.bookmarkPlusButton = new System.Windows.Forms.ToolStripButton();
             this.bookmarkMinusButton = new System.Windows.Forms.ToolStripButton();
             this.gotoButton = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.mainTabControl = new System.Windows.Forms.TabControl();
@@ -204,7 +203,9 @@
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.logView = new System.Windows.Forms.WebBrowser();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.缺陷管理BToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.选项ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.工作笔记ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_ProjectManage.SuspendLayout();
             this.rightClickOnProManager.SuspendLayout();
             this.rightClickOnOutPutWindow.SuspendLayout();
@@ -243,7 +244,6 @@
             this.编辑ToolStripMenuItem,
             this.项目ToolStripMenuItem,
             this.生成ToolStripMenuItem,
-            this.缺陷管理ToolStripMenuItem,
             this.调试ToolStripMenuItem,
             this.团队ToolStripMenuItem,
             this.工具ToolStripMenuItem,
@@ -274,7 +274,7 @@
             this.新建NToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.新建NToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("新建NToolStripMenuItem.Image")));
             this.新建NToolStripMenuItem.Name = "新建NToolStripMenuItem";
-            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.新建NToolStripMenuItem.Text = "新建(&N)";
             this.新建NToolStripMenuItem.Click += new System.EventHandler(this.新建NToolStripMenuItem_Click);
             // 
@@ -334,7 +334,7 @@
             this.luaToolStripMenuItem});
             this.语言ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("语言ToolStripMenuItem.Image")));
             this.语言ToolStripMenuItem.Name = "语言ToolStripMenuItem";
-            this.语言ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.语言ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.语言ToolStripMenuItem.Text = "语言";
             // 
             // pythonToolStripMenuItem
@@ -538,21 +538,6 @@
             this.终止调试ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.终止调试ToolStripMenuItem.Text = "终止调试";
             // 
-            // 缺陷管理ToolStripMenuItem
-            // 
-            this.缺陷管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.缺陷管理工具ToolStripMenuItem});
-            this.缺陷管理ToolStripMenuItem.Name = "缺陷管理ToolStripMenuItem";
-            this.缺陷管理ToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
-            this.缺陷管理ToolStripMenuItem.Text = "缺陷(B)";
-            // 
-            // 缺陷管理工具ToolStripMenuItem
-            // 
-            this.缺陷管理工具ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("缺陷管理工具ToolStripMenuItem.Image")));
-            this.缺陷管理工具ToolStripMenuItem.Name = "缺陷管理工具ToolStripMenuItem";
-            this.缺陷管理工具ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.缺陷管理工具ToolStripMenuItem.Text = "缺陷管理(&B)";
-            // 
             // 调试ToolStripMenuItem
             // 
             this.调试ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -599,7 +584,8 @@
             // 
             this.团队ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.团队协作TToolStripMenuItem,
-            this.用例评审AToolStripMenuItem});
+            this.用例评审AToolStripMenuItem,
+            this.缺陷管理BToolStripMenuItem});
             this.团队ToolStripMenuItem.Name = "团队ToolStripMenuItem";
             this.团队ToolStripMenuItem.Size = new System.Drawing.Size(64, 21);
             this.团队ToolStripMenuItem.Text = "团队(&M)";
@@ -608,7 +594,7 @@
             // 
             this.团队协作TToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("团队协作TToolStripMenuItem.Image")));
             this.团队协作TToolStripMenuItem.Name = "团队协作TToolStripMenuItem";
-            this.团队协作TToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.团队协作TToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.团队协作TToolStripMenuItem.Text = "封装管理(&M)";
             this.团队协作TToolStripMenuItem.Click += new System.EventHandler(this.团队协作TToolStripMenuItem_Click);
             // 
@@ -616,8 +602,9 @@
             // 
             this.用例评审AToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("用例评审AToolStripMenuItem.Image")));
             this.用例评审AToolStripMenuItem.Name = "用例评审AToolStripMenuItem";
-            this.用例评审AToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.用例评审AToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.用例评审AToolStripMenuItem.Text = "用例评审(&A)";
+            this.用例评审AToolStripMenuItem.Click += new System.EventHandler(this.用例评审AToolStripMenuItem_Click);
             // 
             // 工具ToolStripMenuItem
             // 
@@ -626,7 +613,8 @@
             this.sVNSToolStripMenuItem,
             this.pUTTYPToolStripMenuItem,
             this.AutoItToolStripMenuItem,
-            this.inspectToolStripMenuItem});
+            this.inspectToolStripMenuItem,
+            this.选项ToolStripMenuItem});
             this.工具ToolStripMenuItem.Name = "工具ToolStripMenuItem";
             this.工具ToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
             this.工具ToolStripMenuItem.Text = "工具(&T)";
@@ -670,7 +658,7 @@
             this.x86ToolStripMenuItem});
             this.inspectToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("inspectToolStripMenuItem.Image")));
             this.inspectToolStripMenuItem.Name = "inspectToolStripMenuItem";
-            this.inspectToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.inspectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.inspectToolStripMenuItem.Text = "Inspect(&I)";
             // 
             // x64ToolStripMenuItem
@@ -729,9 +717,10 @@
             this.登录ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.用户信息ToolStripMenuItem,
             this.修改密码ToolStripMenuItem,
-            this.团队成员ToolStripMenuItem,
+            this.工作笔记ToolStripMenuItem,
             this.工作进展ToolStripMenuItem,
-            this.流程发起ToolStripMenuItem});
+            this.流程发起ToolStripMenuItem,
+            this.团队成员ToolStripMenuItem});
             this.登录ToolStripMenuItem.Image = global::TestExerciser.Properties.Resources.smile_16x16;
             this.登录ToolStripMenuItem.Name = "登录ToolStripMenuItem";
             this.登录ToolStripMenuItem.Size = new System.Drawing.Size(28, 21);
@@ -1513,6 +1502,11 @@
             this.gotoButton.Text = "Goto...";
             this.gotoButton.DropDownOpening += new System.EventHandler(this.gotoButton_DropDownOpening);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1765,10 +1759,25 @@
             this.logView.Size = new System.Drawing.Size(1186, 200);
             this.logView.TabIndex = 0;
             // 
-            // toolStripSeparator1
+            // 缺陷管理BToolStripMenuItem
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.缺陷管理BToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("缺陷管理BToolStripMenuItem.Image")));
+            this.缺陷管理BToolStripMenuItem.Name = "缺陷管理BToolStripMenuItem";
+            this.缺陷管理BToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.缺陷管理BToolStripMenuItem.Text = "缺陷管理(&B)";
+            // 
+            // 选项ToolStripMenuItem
+            // 
+            this.选项ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("选项ToolStripMenuItem.Image")));
+            this.选项ToolStripMenuItem.Name = "选项ToolStripMenuItem";
+            this.选项ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.选项ToolStripMenuItem.Text = "选项";
+            // 
+            // 工作笔记ToolStripMenuItem
+            // 
+            this.工作笔记ToolStripMenuItem.Name = "工作笔记ToolStripMenuItem";
+            this.工作笔记ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.工作笔记ToolStripMenuItem.Text = "个人笔记";
             // 
             // MainForm
             // 
@@ -2002,9 +2011,10 @@
         private System.Windows.Forms.ToolStripMenuItem 版本更新ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 启动调试CtrlF5ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 终止调试ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 缺陷管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 缺陷管理工具ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem 缺陷管理BToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 选项ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 工作笔记ToolStripMenuItem;
     }
 }
 
