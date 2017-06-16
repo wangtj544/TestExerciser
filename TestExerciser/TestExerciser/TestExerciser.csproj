@@ -142,6 +142,7 @@
     <Compile Include="CaseReview.Designer.cs">
       <DependentUpon>CaseReview.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExcelDataReader.cs" />
     <Compile Include="Logic\AutoComplete.cs" />
     <Compile Include="Logic\TimeDelay.cs" />
     <Compile Include="MainAbout.cs">
