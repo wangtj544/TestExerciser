@@ -272,10 +272,8 @@ E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\SharpSvn.UI.pdb
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\SharpSvn.UI.xml
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\SharpPlink-Win32.svnExe
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.csprojResolveAssemblyReference.cache
-E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.CaseReview.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainAbout.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainPackageManager.resources
-E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.TeamMembers.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.SVN.ToolSVN.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.SVN.ToolSVNCheckOut.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.User.UserAuthentication.resources
@@ -296,3 +294,5 @@ E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.TrustInfo.x
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.exe.manifest
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.application
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainUpdateHis.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainCaseReview.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainTeamMembers.resources
