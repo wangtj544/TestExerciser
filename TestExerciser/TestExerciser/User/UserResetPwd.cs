@@ -25,6 +25,7 @@ namespace TestExerciser.User
             ManageDB myManageDB = new ManageDB();
             this.txtStatus.ForeColor = Color.Blue;
             this.txtStatus.Text = "重置信息：重置中...";
+            Application.DoEvents();
 
             if (this.txtUserName.Text != "" && this.txtUserEmail.Text != "")
             {

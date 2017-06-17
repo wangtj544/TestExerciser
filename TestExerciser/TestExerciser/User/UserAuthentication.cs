@@ -33,6 +33,7 @@ namespace TestExerciser.User
             {
                 this.txtStatus.ForeColor = Color.Green;
                 this.txtStatus.Text = "验证信息：验证成功！";
+                Application.DoEvents();
                 addDataToDB();
                 TimeDelay myTimeDelay = new TimeDelay();
                 this.btnOK.Enabled = false;

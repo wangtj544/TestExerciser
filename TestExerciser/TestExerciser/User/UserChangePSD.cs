@@ -29,6 +29,7 @@ namespace TestExerciser.User
         {
             this.txtStatus.ForeColor = Color.Blue;
             this.txtStatus.Text = "修改信息：正在修改...";
+            Application.DoEvents();
             LoginInfo myLoginInfo = new LoginInfo();
             if (this.txtPasswd.Text != "" && this.txtChangeTo.Text != "")
             {

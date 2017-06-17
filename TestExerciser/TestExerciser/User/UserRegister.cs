@@ -55,7 +55,8 @@ namespace TestExerciser.User
             ManageDB myManageDB = new ManageDB();
             LoginInfo myLoginInfo = new LoginInfo();
             this.txtStatus.ForeColor = Color.Blue;
-            this.txtStatus.Text = "注册信息：注册中...";          
+            this.txtStatus.Text = "注册信息：注册中...";
+            Application.DoEvents();         
 
             if (this.txtUserName.Text != "" && this.txtPasswd.Text != ""&& this.txtConfirmPassWD.Text!=""&txtEmailAddress.Text!=""&&this.txtUserFullName.Text!="")
             {
