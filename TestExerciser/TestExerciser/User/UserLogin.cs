@@ -29,7 +29,7 @@ namespace TestExerciser.User
         }
 
         private void btnOK_Click(object sender, EventArgs e)
-        {
+        {            
             myLoginFunc();
         }
 
@@ -53,10 +53,10 @@ namespace TestExerciser.User
 
         private void myLoginFunc()
         {
-            ManageDB myManageDB = new ManageDB();
             this.txtStatus.ForeColor = Color.Blue;
             this.txtStatus.Text = "登录信息：登录中...";
-
+            Application.DoEvents();
+            ManageDB myManageDB = new ManageDB();
             if (this.txtUserName.Text != "" && this.txtPasswd.Text != "")
             {
                 if (myManageDB.checkUserName(this.txtUserName.Text))
@@ -67,6 +67,7 @@ namespace TestExerciser.User
                         pubPasswd = this.txtPasswd.Text;
                         this.txtStatus.ForeColor = Color.Green;
                         this.txtStatus.Text = "登录信息：成功！";
+                        Application.DoEvents();
                         this.Visible = false;                       
                         MainForm myMainForm = new MainForm();
                         myMainForm.Show();
