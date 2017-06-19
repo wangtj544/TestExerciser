@@ -75,8 +75,8 @@
             this.团队ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.团队协作TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.用例评审AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.缺陷管理BToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.用例设计BToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.文件清理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.远程连接ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sVNSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -585,8 +585,7 @@
             // 
             this.团队ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.团队协作TToolStripMenuItem,
-            this.用例评审AToolStripMenuItem,
-            this.缺陷管理BToolStripMenuItem});
+            this.用例评审AToolStripMenuItem});
             this.团队ToolStripMenuItem.Name = "团队ToolStripMenuItem";
             this.团队ToolStripMenuItem.Size = new System.Drawing.Size(64, 21);
             this.团队ToolStripMenuItem.Text = "团队(&M)";
@@ -607,17 +606,10 @@
             this.用例评审AToolStripMenuItem.Text = "用例评审(&A)";
             this.用例评审AToolStripMenuItem.Click += new System.EventHandler(this.用例评审AToolStripMenuItem_Click);
             // 
-            // 缺陷管理BToolStripMenuItem
-            // 
-            this.缺陷管理BToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("缺陷管理BToolStripMenuItem.Image")));
-            this.缺陷管理BToolStripMenuItem.Name = "缺陷管理BToolStripMenuItem";
-            this.缺陷管理BToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.缺陷管理BToolStripMenuItem.Text = "缺陷管理(&B)";
-            this.缺陷管理BToolStripMenuItem.Click += new System.EventHandler(this.缺陷管理BToolStripMenuItem_Click);
-            // 
             // 工具ToolStripMenuItem
             // 
             this.工具ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.用例设计BToolStripMenuItem,
             this.文件清理ToolStripMenuItem,
             this.远程连接ToolStripMenuItem,
             this.sVNSToolStripMenuItem,
@@ -628,6 +620,14 @@
             this.工具ToolStripMenuItem.Name = "工具ToolStripMenuItem";
             this.工具ToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
             this.工具ToolStripMenuItem.Text = "工具(&T)";
+            // 
+            // 用例设计BToolStripMenuItem
+            // 
+            this.用例设计BToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("用例设计BToolStripMenuItem.Image")));
+            this.用例设计BToolStripMenuItem.Name = "用例设计BToolStripMenuItem";
+            this.用例设计BToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.用例设计BToolStripMenuItem.Text = "用例设计(&B)";
+            this.用例设计BToolStripMenuItem.Click += new System.EventHandler(this.用例设计BToolStripMenuItem_Click);
             // 
             // 文件清理ToolStripMenuItem
             // 
@@ -2026,10 +2026,10 @@
         private System.Windows.Forms.ToolStripMenuItem 启动调试CtrlF5ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 终止调试ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem 缺陷管理BToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 选项ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 工作笔记ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 文件清理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 用例设计BToolStripMenuItem;
     }
 }
 

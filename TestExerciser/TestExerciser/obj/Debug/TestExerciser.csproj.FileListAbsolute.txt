@@ -259,7 +259,6 @@ E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorControl.pdb
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorControl.xml
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\SharpPlink-Win32.svnExe
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.csprojResolveAssemblyReference.cache
-E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainBugManager.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainCaseReview.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainAbout.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainPackageManager.resources
@@ -340,3 +339,4 @@ F:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\zh-Hans\TestExerciser.res
 F:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.TrustInfo.xml
 F:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.exe.manifest
 F:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.application
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainCaseDesign.resources

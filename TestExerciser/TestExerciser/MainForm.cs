@@ -2480,12 +2480,6 @@ namespace TestExerciser
             myMainCaseReview.Show();
         }
 
-        private void 缺陷管理BToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MainBugManager myMainBugManager = new MainBugManager();
-            myMainBugManager.Show();
-        }
-
         private void 工作笔记ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MainWorkingNotes myMainWorkingNotes = new MainWorkingNotes();
@@ -2508,6 +2502,12 @@ namespace TestExerciser
         {
             ToolClean myToolClean = new ToolClean();
             myToolClean.Show();
+        }
+
+        private void 用例设计BToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainCaseDesign myMainBugManager = new MainCaseDesign();
+            myMainBugManager.Show();
         }
     }
 }
