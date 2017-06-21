@@ -220,6 +220,12 @@
       <DependentUpon>ToolSVNCheckOut.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\LoginInfo.cs" />
+    <Compile Include="Tools\ToolBugCommit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolBugCommit.Designer.cs">
+      <DependentUpon>ToolBugCommit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\ToolClean.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -330,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\SVN\ToolSVNCheckOut.resx">
       <DependentUpon>ToolSVNCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolBugCommit.resx">
+      <DependentUpon>ToolBugCommit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolClean.resx">
       <DependentUpon>ToolClean.cs</DependentUpon>

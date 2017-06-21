@@ -9,15 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CCWin;
 
-namespace TestExerciser
+namespace TestExerciser.Tools
 {
-    public partial class MainCaseDesign : Skin_Mac
+    public partial class ToolBugCommit : Skin_Mac
     {
-        public MainCaseDesign()
+        public ToolBugCommit()
         {
             InitializeComponent();
         }
-
-       
     }
 }

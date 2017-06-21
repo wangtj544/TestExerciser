@@ -340,3 +340,4 @@ F:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.TrustInfo.x
 F:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.exe.manifest
 F:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.application
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainCaseDesign.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ToolBugCommit.resources
