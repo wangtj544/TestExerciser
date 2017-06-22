@@ -2504,9 +2504,9 @@ namespace TestExerciser
             myToolClean.Show();
         }
 
-        private void 用例设计BToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 缺陷管理BToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MainCaseDesign myMainBugManager = new MainCaseDesign();
+            MainBugManager myMainBugManager = new MainBugManager();
             myMainBugManager.Show();
         }
     }

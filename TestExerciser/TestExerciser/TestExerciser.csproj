@@ -104,6 +104,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\lenovo\Desktop\CSkin+16.1.14.2\CSkin 16.1.14.2\CSkin 4.0\CSkin.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="SharpSvn">
@@ -149,11 +150,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
     </Compile>
-    <Compile Include="MainCaseDesign.cs">
+    <Compile Include="Logic\MySqlDB.cs" />
+    <Compile Include="MainBugManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainCaseDesign.Designer.cs">
-      <DependentUpon>MainCaseDesign.cs</DependentUpon>
+    <Compile Include="MainBugManager.Designer.cs">
+      <DependentUpon>MainBugManager.cs</DependentUpon>
     </Compile>
     <Compile Include="MainCaseReview.cs">
       <SubType>Form</SubType>
@@ -220,11 +222,17 @@
       <DependentUpon>ToolSVNCheckOut.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\LoginInfo.cs" />
-    <Compile Include="Tools\ToolBugCommit.cs">
+    <Compile Include="Tools\BugManagement\ToolBugCommit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tools\ToolBugCommit.Designer.cs">
+    <Compile Include="Tools\BugManagement\ToolBugCommit.Designer.cs">
       <DependentUpon>ToolBugCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\BugManagement\ToolBugQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\BugManagement\ToolBugQuery.Designer.cs">
+      <DependentUpon>ToolBugQuery.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\ToolClean.cs">
       <SubType>Form</SubType>
@@ -301,8 +309,8 @@
     <Compile Include="User\UserResetPwd.Designer.cs">
       <DependentUpon>UserResetPwd.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="MainCaseDesign.resx">
-      <DependentUpon>MainCaseDesign.cs</DependentUpon>
+    <EmbeddedResource Include="MainBugManager.resx">
+      <DependentUpon>MainBugManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainCaseReview.resx">
       <DependentUpon>MainCaseReview.cs</DependentUpon>
@@ -337,8 +345,11 @@
     <EmbeddedResource Include="Tools\SVN\ToolSVNCheckOut.resx">
       <DependentUpon>ToolSVNCheckOut.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tools\ToolBugCommit.resx">
+    <EmbeddedResource Include="Tools\BugManagement\ToolBugCommit.resx">
       <DependentUpon>ToolBugCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\BugManagement\ToolBugQuery.resx">
+      <DependentUpon>ToolBugQuery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolClean.resx">
       <DependentUpon>ToolClean.cs</DependentUpon>

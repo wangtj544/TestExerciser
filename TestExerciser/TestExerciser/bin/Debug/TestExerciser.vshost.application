@@ -14,14 +14,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="TestExerciser.exe.manifest" size="35564">
+    <dependentAssembly dependencyType="install" codebase="TestExerciser.exe.manifest" size="35851">
       <assemblyIdentity name="TestExerciser.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sDXHFME3jn1MZRcl2KjVggG6Trbw4DFsQ4ygGVu30To=</dsig:DigestValue>
+        <dsig:DigestValue>cXoEt/ZMEKMvaGKY+oNdWq8SAAbP0SHGk5ouSv99D8k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
