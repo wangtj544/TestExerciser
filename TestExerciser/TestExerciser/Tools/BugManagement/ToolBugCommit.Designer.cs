@@ -33,9 +33,9 @@
             this.tlpMainManager = new System.Windows.Forms.TableLayoutPanel();
             this.tlpMainEditor = new System.Windows.Forms.TableLayoutPanel();
             this.tlpReviewer = new System.Windows.Forms.TableLayoutPanel();
-            this.labReviewers = new CCWin.SkinControl.SkinLabel();
-            this.btnReviewers = new System.Windows.Forms.Button();
-            this.txtReviewers = new System.Windows.Forms.TextBox();
+            this.labAuditor = new CCWin.SkinControl.SkinLabel();
+            this.btnAuditor = new System.Windows.Forms.Button();
+            this.txtAuditor = new System.Windows.Forms.TextBox();
             this.tlpAttachment = new System.Windows.Forms.TableLayoutPanel();
             this.labAttachement = new CCWin.SkinControl.SkinLabel();
             this.btnAttachment = new System.Windows.Forms.Button();
@@ -72,13 +72,21 @@
             this.tlpEditor = new System.Windows.Forms.TableLayoutPanel();
             this.labDetails = new CCWin.SkinControl.SkinLabel();
             this.tlpStsEditor = new System.Windows.Forms.TableLayoutPanel();
-            this.rtbDetails = new System.Windows.Forms.RichTextBox();
             this.stsEditor = new CCWin.SkinControl.SkinToolStrip();
             this.剪切UToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.复制CToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.粘贴PToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.tssSeparatorOne = new System.Windows.Forms.ToolStripSeparator();
             this.帮助LToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.tlpDetails = new System.Windows.Forms.TableLayoutPanel();
+            this.gbRealValue = new System.Windows.Forms.GroupBox();
+            this.skinTextBox4 = new CCWin.SkinControl.SkinTextBox();
+            this.gbExpectValue = new System.Windows.Forms.GroupBox();
+            this.skinTextBox3 = new CCWin.SkinControl.SkinTextBox();
+            this.gbSamples = new System.Windows.Forms.GroupBox();
+            this.skinTextBox2 = new CCWin.SkinControl.SkinTextBox();
+            this.gbReproSteps = new System.Windows.Forms.GroupBox();
+            this.skinTextBox1 = new CCWin.SkinControl.SkinTextBox();
             this.stsManager = new CCWin.SkinControl.SkinToolStrip();
             this.tsbSave = new System.Windows.Forms.ToolStripButton();
             this.tsbSaveAndNew = new System.Windows.Forms.ToolStripButton();
@@ -96,6 +104,11 @@
             this.tlpEditor.SuspendLayout();
             this.tlpStsEditor.SuspendLayout();
             this.stsEditor.SuspendLayout();
+            this.tlpDetails.SuspendLayout();
+            this.gbRealValue.SuspendLayout();
+            this.gbExpectValue.SuspendLayout();
+            this.gbSamples.SuspendLayout();
+            this.gbReproSteps.SuspendLayout();
             this.stsManager.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,7 +123,7 @@
             this.tlpMain.RowCount = 1;
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpMain.Size = new System.Drawing.Size(819, 813);
+            this.tlpMain.Size = new System.Drawing.Size(1722, 789);
             this.tlpMain.TabIndex = 1;
             // 
             // tlpMainManager
@@ -125,7 +138,7 @@
             this.tlpMainManager.RowCount = 2;
             this.tlpMainManager.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpMainManager.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMainManager.Size = new System.Drawing.Size(813, 807);
+            this.tlpMainManager.Size = new System.Drawing.Size(1716, 783);
             this.tlpMainManager.TabIndex = 1;
             // 
             // tlpMainEditor
@@ -148,7 +161,7 @@
             this.tlpMainEditor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMainEditor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tlpMainEditor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tlpMainEditor.Size = new System.Drawing.Size(807, 771);
+            this.tlpMainEditor.Size = new System.Drawing.Size(1710, 747);
             this.tlpMainEditor.TabIndex = 2;
             // 
             // tlpReviewer
@@ -157,48 +170,49 @@
             this.tlpReviewer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tlpReviewer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpReviewer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpReviewer.Controls.Add(this.labReviewers, 0, 0);
-            this.tlpReviewer.Controls.Add(this.btnReviewers, 2, 0);
-            this.tlpReviewer.Controls.Add(this.txtReviewers, 1, 0);
+            this.tlpReviewer.Controls.Add(this.labAuditor, 0, 0);
+            this.tlpReviewer.Controls.Add(this.btnAuditor, 2, 0);
+            this.tlpReviewer.Controls.Add(this.txtAuditor, 1, 0);
             this.tlpReviewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpReviewer.Location = new System.Drawing.Point(3, 742);
+            this.tlpReviewer.Location = new System.Drawing.Point(3, 718);
             this.tlpReviewer.Name = "tlpReviewer";
             this.tlpReviewer.RowCount = 1;
             this.tlpReviewer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpReviewer.Size = new System.Drawing.Size(801, 26);
+            this.tlpReviewer.Size = new System.Drawing.Size(1704, 26);
             this.tlpReviewer.TabIndex = 11;
             // 
-            // labReviewers
+            // labAuditor
             // 
-            this.labReviewers.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labReviewers.AutoSize = true;
-            this.labReviewers.BackColor = System.Drawing.Color.Transparent;
-            this.labReviewers.BorderColor = System.Drawing.Color.White;
-            this.labReviewers.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labReviewers.Location = new System.Drawing.Point(3, 4);
-            this.labReviewers.Name = "labReviewers";
-            this.labReviewers.Size = new System.Drawing.Size(49, 17);
-            this.labReviewers.TabIndex = 1;
-            this.labReviewers.Text = "审核人*";
+            this.labAuditor.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labAuditor.AutoSize = true;
+            this.labAuditor.BackColor = System.Drawing.Color.Transparent;
+            this.labAuditor.BorderColor = System.Drawing.Color.White;
+            this.labAuditor.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labAuditor.Location = new System.Drawing.Point(3, 4);
+            this.labAuditor.Name = "labAuditor";
+            this.labAuditor.Size = new System.Drawing.Size(49, 17);
+            this.labAuditor.TabIndex = 1;
+            this.labAuditor.Text = "审核人*";
             // 
-            // btnReviewers
+            // btnAuditor
             // 
-            this.btnReviewers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
-            this.btnReviewers.Image = ((System.Drawing.Image)(resources.GetObject("btnReviewers.Image")));
-            this.btnReviewers.Location = new System.Drawing.Point(774, 3);
-            this.btnReviewers.Name = "btnReviewers";
-            this.btnReviewers.Size = new System.Drawing.Size(24, 18);
-            this.btnReviewers.TabIndex = 3;
-            this.btnReviewers.UseVisualStyleBackColor = false;
+            this.btnAuditor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
+            this.btnAuditor.Image = ((System.Drawing.Image)(resources.GetObject("btnAuditor.Image")));
+            this.btnAuditor.Location = new System.Drawing.Point(1677, 3);
+            this.btnAuditor.Name = "btnAuditor";
+            this.btnAuditor.Size = new System.Drawing.Size(24, 18);
+            this.btnAuditor.TabIndex = 3;
+            this.btnAuditor.UseVisualStyleBackColor = false;
             // 
-            // txtReviewers
+            // txtAuditor
             // 
-            this.txtReviewers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(179)))));
-            this.txtReviewers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtReviewers.Location = new System.Drawing.Point(83, 3);
-            this.txtReviewers.Name = "txtReviewers";
-            this.txtReviewers.Size = new System.Drawing.Size(685, 21);
-            this.txtReviewers.TabIndex = 2;
+            this.txtAuditor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(179)))));
+            this.txtAuditor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAuditor.Location = new System.Drawing.Point(83, 3);
+            this.txtAuditor.Name = "txtAuditor";
+            this.txtAuditor.ReadOnly = true;
+            this.txtAuditor.Size = new System.Drawing.Size(1588, 21);
+            this.txtAuditor.TabIndex = 2;
             // 
             // tlpAttachment
             // 
@@ -210,11 +224,11 @@
             this.tlpAttachment.Controls.Add(this.btnAttachment, 2, 0);
             this.tlpAttachment.Controls.Add(this.txtAttachment, 1, 0);
             this.tlpAttachment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpAttachment.Location = new System.Drawing.Point(3, 710);
+            this.tlpAttachment.Location = new System.Drawing.Point(3, 686);
             this.tlpAttachment.Name = "tlpAttachment";
             this.tlpAttachment.RowCount = 1;
             this.tlpAttachment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpAttachment.Size = new System.Drawing.Size(801, 26);
+            this.tlpAttachment.Size = new System.Drawing.Size(1704, 26);
             this.tlpAttachment.TabIndex = 10;
             // 
             // labAttachement
@@ -234,7 +248,7 @@
             // 
             this.btnAttachment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
             this.btnAttachment.Image = ((System.Drawing.Image)(resources.GetObject("btnAttachment.Image")));
-            this.btnAttachment.Location = new System.Drawing.Point(774, 3);
+            this.btnAttachment.Location = new System.Drawing.Point(1677, 3);
             this.btnAttachment.Name = "btnAttachment";
             this.btnAttachment.Size = new System.Drawing.Size(24, 18);
             this.btnAttachment.TabIndex = 3;
@@ -246,7 +260,8 @@
             this.txtAttachment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtAttachment.Location = new System.Drawing.Point(83, 3);
             this.txtAttachment.Name = "txtAttachment";
-            this.txtAttachment.Size = new System.Drawing.Size(685, 21);
+            this.txtAttachment.ReadOnly = true;
+            this.txtAttachment.Size = new System.Drawing.Size(1588, 21);
             this.txtAttachment.TabIndex = 2;
             // 
             // tlpTitle
@@ -261,7 +276,7 @@
             this.tlpTitle.Name = "tlpTitle";
             this.tlpTitle.RowCount = 1;
             this.tlpTitle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpTitle.Size = new System.Drawing.Size(801, 26);
+            this.tlpTitle.Size = new System.Drawing.Size(1704, 26);
             this.tlpTitle.TabIndex = 4;
             // 
             // txtTitle
@@ -270,7 +285,7 @@
             this.txtTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTitle.Location = new System.Drawing.Point(83, 3);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(715, 21);
+            this.txtTitle.Size = new System.Drawing.Size(1618, 21);
             this.txtTitle.TabIndex = 3;
             // 
             // labTitle
@@ -324,7 +339,7 @@
             this.tlpSort.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpSort.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpSort.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpSort.Size = new System.Drawing.Size(801, 139);
+            this.tlpSort.Size = new System.Drawing.Size(1704, 139);
             this.tlpSort.TabIndex = 2;
             // 
             // dtpExceptDate
@@ -336,9 +351,9 @@
             this.dtpExceptDate.DropDownWidth = 120;
             this.dtpExceptDate.font = new System.Drawing.Font("微软雅黑", 9F);
             this.dtpExceptDate.Items = null;
-            this.dtpExceptDate.Location = new System.Drawing.Point(498, 84);
+            this.dtpExceptDate.Location = new System.Drawing.Point(950, 84);
             this.dtpExceptDate.Name = "dtpExceptDate";
-            this.dtpExceptDate.Size = new System.Drawing.Size(300, 21);
+            this.dtpExceptDate.Size = new System.Drawing.Size(751, 21);
             this.dtpExceptDate.TabIndex = 9;
             this.dtpExceptDate.text = "";
             // 
@@ -382,7 +397,7 @@
             "其他"});
             this.cbOccurrence.Location = new System.Drawing.Point(83, 30);
             this.cbOccurrence.Name = "cbOccurrence";
-            this.cbOccurrence.Size = new System.Drawing.Size(299, 22);
+            this.cbOccurrence.Size = new System.Drawing.Size(751, 22);
             this.cbOccurrence.TabIndex = 9;
             this.cbOccurrence.WaterText = "";
             // 
@@ -413,7 +428,7 @@
             "其他"});
             this.cbPriority.Location = new System.Drawing.Point(83, 57);
             this.cbPriority.Name = "cbPriority";
-            this.cbPriority.Size = new System.Drawing.Size(299, 22);
+            this.cbPriority.Size = new System.Drawing.Size(751, 22);
             this.cbPriority.TabIndex = 11;
             this.cbPriority.WaterText = "";
             // 
@@ -424,7 +439,7 @@
             this.labHowFound.BackColor = System.Drawing.Color.White;
             this.labHowFound.BorderColor = System.Drawing.Color.White;
             this.labHowFound.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labHowFound.Location = new System.Drawing.Point(418, 5);
+            this.labHowFound.Location = new System.Drawing.Point(870, 5);
             this.labHowFound.Name = "labHowFound";
             this.labHowFound.Size = new System.Drawing.Size(56, 17);
             this.labHowFound.TabIndex = 14;
@@ -437,7 +452,7 @@
             this.labGravity.BackColor = System.Drawing.Color.White;
             this.labGravity.BorderColor = System.Drawing.Color.White;
             this.labGravity.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labGravity.Location = new System.Drawing.Point(418, 32);
+            this.labGravity.Location = new System.Drawing.Point(870, 32);
             this.labGravity.Name = "labGravity";
             this.labGravity.Size = new System.Drawing.Size(49, 17);
             this.labGravity.TabIndex = 15;
@@ -450,7 +465,7 @@
             this.labFoundVersion.BackColor = System.Drawing.Color.White;
             this.labFoundVersion.BorderColor = System.Drawing.Color.White;
             this.labFoundVersion.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labFoundVersion.Location = new System.Drawing.Point(418, 59);
+            this.labFoundVersion.Location = new System.Drawing.Point(870, 59);
             this.labFoundVersion.Name = "labFoundVersion";
             this.labFoundVersion.Size = new System.Drawing.Size(56, 17);
             this.labFoundVersion.TabIndex = 16;
@@ -463,7 +478,7 @@
             this.labExceptDate.BackColor = System.Drawing.Color.White;
             this.labExceptDate.BorderColor = System.Drawing.Color.White;
             this.labExceptDate.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labExceptDate.Location = new System.Drawing.Point(418, 86);
+            this.labExceptDate.Location = new System.Drawing.Point(870, 86);
             this.labExceptDate.Name = "labExceptDate";
             this.labExceptDate.Size = new System.Drawing.Size(56, 17);
             this.labExceptDate.TabIndex = 17;
@@ -476,7 +491,7 @@
             this.labFillDate.BackColor = System.Drawing.Color.White;
             this.labFillDate.BorderColor = System.Drawing.Color.White;
             this.labFillDate.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labFillDate.Location = new System.Drawing.Point(418, 115);
+            this.labFillDate.Location = new System.Drawing.Point(870, 115);
             this.labFillDate.Name = "labFillDate";
             this.labFillDate.Size = new System.Drawing.Size(56, 17);
             this.labFillDate.TabIndex = 18;
@@ -496,7 +511,7 @@
             "其他"});
             this.cbProductVersion.Location = new System.Drawing.Point(83, 84);
             this.cbProductVersion.Name = "cbProductVersion";
-            this.cbProductVersion.Size = new System.Drawing.Size(299, 22);
+            this.cbProductVersion.Size = new System.Drawing.Size(751, 22);
             this.cbProductVersion.TabIndex = 19;
             this.cbProductVersion.WaterText = "";
             // 
@@ -514,7 +529,7 @@
             "其他"});
             this.cbCategory.Location = new System.Drawing.Point(83, 3);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(299, 22);
+            this.cbCategory.Size = new System.Drawing.Size(751, 22);
             this.cbCategory.TabIndex = 8;
             this.cbCategory.WaterText = "";
             // 
@@ -530,9 +545,9 @@
             "数据类",
             "UI类",
             "其他"});
-            this.cbHowFound.Location = new System.Drawing.Point(498, 3);
+            this.cbHowFound.Location = new System.Drawing.Point(950, 3);
             this.cbHowFound.Name = "cbHowFound";
-            this.cbHowFound.Size = new System.Drawing.Size(300, 22);
+            this.cbHowFound.Size = new System.Drawing.Size(751, 22);
             this.cbHowFound.TabIndex = 20;
             this.cbHowFound.WaterText = "";
             // 
@@ -548,9 +563,9 @@
             "数据类",
             "UI类",
             "其他"});
-            this.cbGravity.Location = new System.Drawing.Point(498, 30);
+            this.cbGravity.Location = new System.Drawing.Point(950, 30);
             this.cbGravity.Name = "cbGravity";
-            this.cbGravity.Size = new System.Drawing.Size(300, 22);
+            this.cbGravity.Size = new System.Drawing.Size(751, 22);
             this.cbGravity.TabIndex = 21;
             this.cbGravity.WaterText = "";
             // 
@@ -566,9 +581,9 @@
             "数据类",
             "UI类",
             "其他"});
-            this.cbFoundVersion.Location = new System.Drawing.Point(498, 57);
+            this.cbFoundVersion.Location = new System.Drawing.Point(950, 57);
             this.cbFoundVersion.Name = "cbFoundVersion";
-            this.cbFoundVersion.Size = new System.Drawing.Size(300, 22);
+            this.cbFoundVersion.Size = new System.Drawing.Size(751, 22);
             this.cbFoundVersion.TabIndex = 22;
             this.cbFoundVersion.WaterText = "";
             // 
@@ -581,9 +596,9 @@
             this.dtpFillDate.DropDownWidth = 120;
             this.dtpFillDate.font = new System.Drawing.Font("微软雅黑", 9F);
             this.dtpFillDate.Items = null;
-            this.dtpFillDate.Location = new System.Drawing.Point(498, 111);
+            this.dtpFillDate.Location = new System.Drawing.Point(950, 111);
             this.dtpFillDate.Name = "dtpFillDate";
-            this.dtpFillDate.Size = new System.Drawing.Size(300, 25);
+            this.dtpFillDate.Size = new System.Drawing.Size(751, 25);
             this.dtpFillDate.TabIndex = 26;
             this.dtpFillDate.text = "";
             // 
@@ -592,14 +607,15 @@
             this.txtAuthor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtAuthor.Location = new System.Drawing.Point(83, 111);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(299, 21);
+            this.txtAuthor.ReadOnly = true;
+            this.txtAuthor.Size = new System.Drawing.Size(751, 21);
             this.txtAuthor.TabIndex = 27;
             // 
             // btnAuthor
             // 
             this.btnAuthor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
             this.btnAuthor.Image = ((System.Drawing.Image)(resources.GetObject("btnAuthor.Image")));
-            this.btnAuthor.Location = new System.Drawing.Point(388, 111);
+            this.btnAuthor.Location = new System.Drawing.Point(840, 111);
             this.btnAuthor.Name = "btnAuthor";
             this.btnAuthor.Size = new System.Drawing.Size(24, 23);
             this.btnAuthor.TabIndex = 28;
@@ -645,7 +661,7 @@
             this.tlpProject.Name = "tlpProject";
             this.tlpProject.RowCount = 1;
             this.tlpProject.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpProject.Size = new System.Drawing.Size(801, 26);
+            this.tlpProject.Size = new System.Drawing.Size(1704, 26);
             this.tlpProject.TabIndex = 3;
             // 
             // labAttribution
@@ -668,14 +684,14 @@
             this.txtAttribution.Location = new System.Drawing.Point(83, 3);
             this.txtAttribution.Name = "txtAttribution";
             this.txtAttribution.ReadOnly = true;
-            this.txtAttribution.Size = new System.Drawing.Size(685, 21);
+            this.txtAttribution.Size = new System.Drawing.Size(1588, 21);
             this.txtAttribution.TabIndex = 2;
             // 
             // btnProject
             // 
             this.btnProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
             this.btnProject.Image = ((System.Drawing.Image)(resources.GetObject("btnProject.Image")));
-            this.btnProject.Location = new System.Drawing.Point(774, 3);
+            this.btnProject.Location = new System.Drawing.Point(1677, 3);
             this.btnProject.Name = "btnProject";
             this.btnProject.Size = new System.Drawing.Size(24, 20);
             this.btnProject.TabIndex = 3;
@@ -693,7 +709,7 @@
             this.tlpEditor.Name = "tlpEditor";
             this.tlpEditor.RowCount = 1;
             this.tlpEditor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpEditor.Size = new System.Drawing.Size(801, 492);
+            this.tlpEditor.Size = new System.Drawing.Size(1704, 468);
             this.tlpEditor.TabIndex = 5;
             // 
             // labDetails
@@ -713,25 +729,16 @@
             this.tlpStsEditor.ColumnCount = 1;
             this.tlpStsEditor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpStsEditor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpStsEditor.Controls.Add(this.rtbDetails, 0, 1);
             this.tlpStsEditor.Controls.Add(this.stsEditor, 0, 0);
+            this.tlpStsEditor.Controls.Add(this.tlpDetails, 0, 1);
             this.tlpStsEditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpStsEditor.Location = new System.Drawing.Point(83, 3);
             this.tlpStsEditor.Name = "tlpStsEditor";
             this.tlpStsEditor.RowCount = 2;
             this.tlpStsEditor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpStsEditor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpStsEditor.Size = new System.Drawing.Size(715, 486);
+            this.tlpStsEditor.Size = new System.Drawing.Size(1618, 462);
             this.tlpStsEditor.TabIndex = 15;
-            // 
-            // rtbDetails
-            // 
-            this.rtbDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtbDetails.Location = new System.Drawing.Point(3, 33);
-            this.rtbDetails.Name = "rtbDetails";
-            this.rtbDetails.Size = new System.Drawing.Size(709, 450);
-            this.rtbDetails.TabIndex = 1;
-            this.rtbDetails.Text = "";
             // 
             // stsEditor
             // 
@@ -778,7 +785,7 @@
             this.stsEditor.Location = new System.Drawing.Point(0, 0);
             this.stsEditor.Name = "stsEditor";
             this.stsEditor.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.stsEditor.Size = new System.Drawing.Size(715, 25);
+            this.stsEditor.Size = new System.Drawing.Size(1618, 25);
             this.stsEditor.SkinAllColor = true;
             this.stsEditor.TabIndex = 2;
             this.stsEditor.Text = "skinToolStrip2";
@@ -828,6 +835,248 @@
             this.帮助LToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.帮助LToolStripButton.Text = "帮助(&L)";
             // 
+            // tlpDetails
+            // 
+            this.tlpDetails.ColumnCount = 2;
+            this.tlpDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDetails.Controls.Add(this.gbRealValue, 1, 1);
+            this.tlpDetails.Controls.Add(this.gbExpectValue, 0, 1);
+            this.tlpDetails.Controls.Add(this.gbSamples, 1, 0);
+            this.tlpDetails.Controls.Add(this.gbReproSteps, 0, 0);
+            this.tlpDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDetails.Location = new System.Drawing.Point(3, 33);
+            this.tlpDetails.Name = "tlpDetails";
+            this.tlpDetails.RowCount = 2;
+            this.tlpDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpDetails.Size = new System.Drawing.Size(1612, 426);
+            this.tlpDetails.TabIndex = 3;
+            // 
+            // gbRealValue
+            // 
+            this.gbRealValue.Controls.Add(this.skinTextBox4);
+            this.gbRealValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbRealValue.Location = new System.Drawing.Point(809, 216);
+            this.gbRealValue.Name = "gbRealValue";
+            this.gbRealValue.Size = new System.Drawing.Size(800, 207);
+            this.gbRealValue.TabIndex = 3;
+            this.gbRealValue.TabStop = false;
+            this.gbRealValue.Text = "【实际值】";
+            // 
+            // skinTextBox4
+            // 
+            this.skinTextBox4.AutoScroll = true;
+            this.skinTextBox4.BackColor = System.Drawing.Color.Transparent;
+            this.skinTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTextBox4.DownBack = null;
+            this.skinTextBox4.Icon = null;
+            this.skinTextBox4.IconIsButton = false;
+            this.skinTextBox4.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.skinTextBox4.IsPasswordChat = '\0';
+            this.skinTextBox4.IsSystemPasswordChar = false;
+            this.skinTextBox4.Lines = new string[0];
+            this.skinTextBox4.Location = new System.Drawing.Point(3, 17);
+            this.skinTextBox4.Margin = new System.Windows.Forms.Padding(0);
+            this.skinTextBox4.MaxLength = 32767;
+            this.skinTextBox4.MinimumSize = new System.Drawing.Size(28, 28);
+            this.skinTextBox4.MouseBack = null;
+            this.skinTextBox4.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.skinTextBox4.Multiline = true;
+            this.skinTextBox4.Name = "skinTextBox4";
+            this.skinTextBox4.NormlBack = null;
+            this.skinTextBox4.Padding = new System.Windows.Forms.Padding(5);
+            this.skinTextBox4.ReadOnly = false;
+            this.skinTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.skinTextBox4.Size = new System.Drawing.Size(794, 187);
+            // 
+            // 
+            // 
+            this.skinTextBox4.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.skinTextBox4.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTextBox4.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.skinTextBox4.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.skinTextBox4.SkinTxt.Multiline = true;
+            this.skinTextBox4.SkinTxt.Name = "BaseText";
+            this.skinTextBox4.SkinTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.skinTextBox4.SkinTxt.Size = new System.Drawing.Size(784, 177);
+            this.skinTextBox4.SkinTxt.TabIndex = 0;
+            this.skinTextBox4.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.skinTextBox4.SkinTxt.WaterText = "";
+            this.skinTextBox4.TabIndex = 1;
+            this.skinTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.skinTextBox4.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.skinTextBox4.WaterText = "";
+            this.skinTextBox4.WordWrap = true;
+            // 
+            // gbExpectValue
+            // 
+            this.gbExpectValue.Controls.Add(this.skinTextBox3);
+            this.gbExpectValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbExpectValue.Location = new System.Drawing.Point(3, 216);
+            this.gbExpectValue.Name = "gbExpectValue";
+            this.gbExpectValue.Size = new System.Drawing.Size(800, 207);
+            this.gbExpectValue.TabIndex = 2;
+            this.gbExpectValue.TabStop = false;
+            this.gbExpectValue.Text = "【期望值】";
+            // 
+            // skinTextBox3
+            // 
+            this.skinTextBox3.AutoScroll = true;
+            this.skinTextBox3.BackColor = System.Drawing.Color.Transparent;
+            this.skinTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTextBox3.DownBack = null;
+            this.skinTextBox3.Icon = null;
+            this.skinTextBox3.IconIsButton = false;
+            this.skinTextBox3.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.skinTextBox3.IsPasswordChat = '\0';
+            this.skinTextBox3.IsSystemPasswordChar = false;
+            this.skinTextBox3.Lines = new string[0];
+            this.skinTextBox3.Location = new System.Drawing.Point(3, 17);
+            this.skinTextBox3.Margin = new System.Windows.Forms.Padding(0);
+            this.skinTextBox3.MaxLength = 32767;
+            this.skinTextBox3.MinimumSize = new System.Drawing.Size(28, 28);
+            this.skinTextBox3.MouseBack = null;
+            this.skinTextBox3.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.skinTextBox3.Multiline = true;
+            this.skinTextBox3.Name = "skinTextBox3";
+            this.skinTextBox3.NormlBack = null;
+            this.skinTextBox3.Padding = new System.Windows.Forms.Padding(5);
+            this.skinTextBox3.ReadOnly = false;
+            this.skinTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.skinTextBox3.Size = new System.Drawing.Size(794, 187);
+            // 
+            // 
+            // 
+            this.skinTextBox3.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.skinTextBox3.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTextBox3.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.skinTextBox3.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.skinTextBox3.SkinTxt.Multiline = true;
+            this.skinTextBox3.SkinTxt.Name = "BaseText";
+            this.skinTextBox3.SkinTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.skinTextBox3.SkinTxt.Size = new System.Drawing.Size(784, 177);
+            this.skinTextBox3.SkinTxt.TabIndex = 0;
+            this.skinTextBox3.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.skinTextBox3.SkinTxt.WaterText = "";
+            this.skinTextBox3.TabIndex = 1;
+            this.skinTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.skinTextBox3.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.skinTextBox3.WaterText = "";
+            this.skinTextBox3.WordWrap = true;
+            // 
+            // gbSamples
+            // 
+            this.gbSamples.Controls.Add(this.skinTextBox2);
+            this.gbSamples.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbSamples.Location = new System.Drawing.Point(809, 3);
+            this.gbSamples.Name = "gbSamples";
+            this.gbSamples.Size = new System.Drawing.Size(800, 207);
+            this.gbSamples.TabIndex = 1;
+            this.gbSamples.TabStop = false;
+            this.gbSamples.Text = "【样本点】";
+            // 
+            // skinTextBox2
+            // 
+            this.skinTextBox2.AutoScroll = true;
+            this.skinTextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.skinTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTextBox2.DownBack = null;
+            this.skinTextBox2.Icon = null;
+            this.skinTextBox2.IconIsButton = false;
+            this.skinTextBox2.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.skinTextBox2.IsPasswordChat = '\0';
+            this.skinTextBox2.IsSystemPasswordChar = false;
+            this.skinTextBox2.Lines = new string[0];
+            this.skinTextBox2.Location = new System.Drawing.Point(3, 17);
+            this.skinTextBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.skinTextBox2.MaxLength = 32767;
+            this.skinTextBox2.MinimumSize = new System.Drawing.Size(28, 28);
+            this.skinTextBox2.MouseBack = null;
+            this.skinTextBox2.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.skinTextBox2.Multiline = true;
+            this.skinTextBox2.Name = "skinTextBox2";
+            this.skinTextBox2.NormlBack = null;
+            this.skinTextBox2.Padding = new System.Windows.Forms.Padding(5);
+            this.skinTextBox2.ReadOnly = false;
+            this.skinTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.skinTextBox2.Size = new System.Drawing.Size(794, 187);
+            // 
+            // 
+            // 
+            this.skinTextBox2.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.skinTextBox2.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTextBox2.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.skinTextBox2.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.skinTextBox2.SkinTxt.Multiline = true;
+            this.skinTextBox2.SkinTxt.Name = "BaseText";
+            this.skinTextBox2.SkinTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.skinTextBox2.SkinTxt.Size = new System.Drawing.Size(784, 177);
+            this.skinTextBox2.SkinTxt.TabIndex = 0;
+            this.skinTextBox2.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.skinTextBox2.SkinTxt.WaterText = "";
+            this.skinTextBox2.TabIndex = 1;
+            this.skinTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.skinTextBox2.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.skinTextBox2.WaterText = "";
+            this.skinTextBox2.WordWrap = true;
+            // 
+            // gbReproSteps
+            // 
+            this.gbReproSteps.Controls.Add(this.skinTextBox1);
+            this.gbReproSteps.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbReproSteps.Location = new System.Drawing.Point(3, 3);
+            this.gbReproSteps.Name = "gbReproSteps";
+            this.gbReproSteps.Size = new System.Drawing.Size(800, 207);
+            this.gbReproSteps.TabIndex = 0;
+            this.gbReproSteps.TabStop = false;
+            this.gbReproSteps.Text = "【复现步骤】";
+            // 
+            // skinTextBox1
+            // 
+            this.skinTextBox1.AutoScroll = true;
+            this.skinTextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.skinTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTextBox1.DownBack = null;
+            this.skinTextBox1.Icon = null;
+            this.skinTextBox1.IconIsButton = false;
+            this.skinTextBox1.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.skinTextBox1.IsPasswordChat = '\0';
+            this.skinTextBox1.IsSystemPasswordChar = false;
+            this.skinTextBox1.Lines = new string[0];
+            this.skinTextBox1.Location = new System.Drawing.Point(3, 17);
+            this.skinTextBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.skinTextBox1.MaxLength = 32767;
+            this.skinTextBox1.MinimumSize = new System.Drawing.Size(28, 28);
+            this.skinTextBox1.MouseBack = null;
+            this.skinTextBox1.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.skinTextBox1.Multiline = true;
+            this.skinTextBox1.Name = "skinTextBox1";
+            this.skinTextBox1.NormlBack = null;
+            this.skinTextBox1.Padding = new System.Windows.Forms.Padding(5);
+            this.skinTextBox1.ReadOnly = false;
+            this.skinTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.skinTextBox1.Size = new System.Drawing.Size(794, 187);
+            // 
+            // 
+            // 
+            this.skinTextBox1.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.skinTextBox1.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTextBox1.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.skinTextBox1.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.skinTextBox1.SkinTxt.Multiline = true;
+            this.skinTextBox1.SkinTxt.Name = "BaseText";
+            this.skinTextBox1.SkinTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.skinTextBox1.SkinTxt.Size = new System.Drawing.Size(784, 177);
+            this.skinTextBox1.SkinTxt.TabIndex = 0;
+            this.skinTextBox1.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.skinTextBox1.SkinTxt.WaterText = "";
+            this.skinTextBox1.TabIndex = 0;
+            this.skinTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.skinTextBox1.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.skinTextBox1.WaterText = "";
+            this.skinTextBox1.WordWrap = true;
+            // 
             // stsManager
             // 
             this.stsManager.Arrow = System.Drawing.Color.Black;
@@ -873,7 +1122,7 @@
             this.stsManager.Location = new System.Drawing.Point(0, 0);
             this.stsManager.Name = "stsManager";
             this.stsManager.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.stsManager.Size = new System.Drawing.Size(813, 25);
+            this.stsManager.Size = new System.Drawing.Size(1716, 25);
             this.stsManager.SkinAllColor = true;
             this.stsManager.TabIndex = 3;
             this.stsManager.Text = "skinToolStrip1";
@@ -937,7 +1186,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(827, 849);
+            this.ClientSize = new System.Drawing.Size(1730, 825);
             this.Controls.Add(this.tlpMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ToolBugCommit";
@@ -963,6 +1212,11 @@
             this.tlpStsEditor.PerformLayout();
             this.stsEditor.ResumeLayout(false);
             this.stsEditor.PerformLayout();
+            this.tlpDetails.ResumeLayout(false);
+            this.gbRealValue.ResumeLayout(false);
+            this.gbExpectValue.ResumeLayout(false);
+            this.gbSamples.ResumeLayout(false);
+            this.gbReproSteps.ResumeLayout(false);
             this.stsManager.ResumeLayout(false);
             this.stsManager.PerformLayout();
             this.ResumeLayout(false);
@@ -975,9 +1229,9 @@
         private System.Windows.Forms.TableLayoutPanel tlpMainManager;
         private System.Windows.Forms.TableLayoutPanel tlpMainEditor;
         private System.Windows.Forms.TableLayoutPanel tlpReviewer;
-        private CCWin.SkinControl.SkinLabel labReviewers;
-        private System.Windows.Forms.Button btnReviewers;
-        private System.Windows.Forms.TextBox txtReviewers;
+        private CCWin.SkinControl.SkinLabel labAuditor;
+        private System.Windows.Forms.Button btnAuditor;
+        private System.Windows.Forms.TextBox txtAuditor;
         private System.Windows.Forms.TableLayoutPanel tlpAttachment;
         private CCWin.SkinControl.SkinLabel labAttachement;
         private System.Windows.Forms.Button btnAttachment;
@@ -1012,7 +1266,6 @@
         private System.Windows.Forms.TableLayoutPanel tlpEditor;
         private CCWin.SkinControl.SkinLabel labDetails;
         private System.Windows.Forms.TableLayoutPanel tlpStsEditor;
-        private System.Windows.Forms.RichTextBox rtbDetails;
         private CCWin.SkinControl.SkinDateTimePicker dtpExceptDate;
         private CCWin.SkinControl.SkinDateTimePicker dtpFillDate;
         private CCWin.SkinControl.SkinToolStrip stsEditor;
@@ -1027,5 +1280,14 @@
         private System.Windows.Forms.ToolStripButton tsbCommit;
         private System.Windows.Forms.ToolStripButton tsbCommitAndNew;
         private System.Windows.Forms.ToolStripButton tsbQuite;
+        private System.Windows.Forms.TableLayoutPanel tlpDetails;
+        private System.Windows.Forms.GroupBox gbRealValue;
+        private CCWin.SkinControl.SkinTextBox skinTextBox4;
+        private System.Windows.Forms.GroupBox gbExpectValue;
+        private CCWin.SkinControl.SkinTextBox skinTextBox3;
+        private System.Windows.Forms.GroupBox gbSamples;
+        private CCWin.SkinControl.SkinTextBox skinTextBox2;
+        private System.Windows.Forms.GroupBox gbReproSteps;
+        private CCWin.SkinControl.SkinTextBox skinTextBox1;
     }
 }

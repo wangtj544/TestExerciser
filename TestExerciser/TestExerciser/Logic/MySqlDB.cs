@@ -17,7 +17,7 @@ namespace TestExerciser.Logic
         public static string updateDBStatus = null;
 
         //配置为远程服务器上的数据库
-        private string myConnectionStr = "server=172.20.32.147;user id=admin;persistsecurityinfo=True;port=3308;database=testexerciser";
+        private string myConnectionStr = "server=172.20.32.147;user id=admin;persistsecurityinfo=True;port=3308;database=testexerciser;password=admin";
 
         //连接用的字符串  
         public string ConnStr
@@ -25,10 +25,6 @@ namespace TestExerciser.Logic
             get { return this.myConnectionStr; }
             set { this.myConnectionStr = value; }
         }
-
-        MySqlConnection mySqlConn = null;
-        MySqlCommand mySqlComm = null;
-        MySqlDataAdapter mySqlDataAdapter = null;
 
         private MySqlDB() { }
 
@@ -203,27 +199,7 @@ namespace TestExerciser.Logic
                 }
                 return dt;
             }
-        }  
-
-        public void UpdateDB(string sql)
-        {
-            mySqlConn = new MySqlConnection(myConnectionStr);
-            mySqlConn.Open();
-            mySqlComm = new MySqlCommand(sql, mySqlConn);
-            mySqlComm.Connection = mySqlConn;
-            mySqlComm.CommandText = sql;
-            if (mySqlComm.ExecuteNonQuery() > 0)
-            {
-                updateDBStatus = "数据更新成功！";
-            }
-            else
-            {
-                updateDBStatus = "数据更新失败！";
-            }
-            mySqlComm.Dispose();
-            mySqlConn.Close();
-            mySqlConn.Dispose();
         }
-       
+
     }
 }

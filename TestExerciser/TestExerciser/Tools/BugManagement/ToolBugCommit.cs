@@ -21,16 +21,21 @@ namespace TestExerciser.Tools.BugManagement
 
         public ToolBugCommit()
         {
-            InitializeComponent();
-            showBugID();
-            commitForms();
+            InitializeComponent();           
         }
 
         private void tsbSave_Click(object sender, EventArgs e)
         {
-            if (this.txtTitle.Text != "" && this.cbOccurrence.Text != "" && this.cbGravity.Text != "" && this.txtReviewers.Text != "")
+            if (this.txtTitle.Text != "" && this.cbOccurrence.Text != "" && this.cbGravity.Text != "" && this.txtAuditor.Text != "")
             {
-
+                try
+                {
+                    commitForms();
+                }
+                catch (MySqlException exception)
+                {
+                    MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -65,9 +70,10 @@ namespace TestExerciser.Tools.BugManagement
             return myBugId;
         }
 
+
         public void commitForms()
         {
-            string sql = @"INSERT INTO 缺陷管理 ('bugID','bugTitle','bugAttribution','bugCategory','bugHowFound','bugOccurrence','bugGravity','bugPriority','bugFoundVersion','bugProductVersion','bugExceptDate','bugAuthor','bugFillDate','bugReproSteps','bugExpectValue','bugRealValue','bugSamples','bugAttachment','bugAuditor','bugAuditTeam')VALUES("+ this.showBugID() +this.txtTitle.Text +this.txtAttribution.Text +this.cbCategory.Text +this.cbHowFound.Text+this.cbOccurrence.Text+this.cbGravity.Text + this.cbPriority.Text+this.cbFoundVersion.Text+ this.cbProductVersion.Text+this.dtpExceptDate.text+this.txtAuthor.Text+this.dtpFillDate.text +")";
+            string sql = @"INSERT INTO 缺陷管理 ('bugID','bugTitle','bugOccurrence','bugGravity','bugAuthor','bugFillDate','bugAuditor')VALUES("+ this.showBugID() + this.txtTitle.Text + this.cbOccurrence.Text+this.cbGravity.Text + this.txtAuthor.Text + this.dtpFillDate.text + this.txtAuditor.Text + ")";
             List<MySqlParameter> Paramter = new List<MySqlParameter>();
             int a = MySqlDB.Ins.ExecuteNonquery(sql, Paramter.ToArray());
         }
