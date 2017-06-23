@@ -2329,6 +2329,7 @@ namespace TestExerciser
         }
         private void InitializeControl()
         {
+            this.pythonToolStripMenuItem.Checked = true;
             if ((tree_Solution.SelectedNode == null))
             {
                 this.KeyPreview = false;
@@ -2342,8 +2343,6 @@ namespace TestExerciser
                 闭合CToolStripMenuItem.Visible = false;
                 展开EToolStripMenuItem.Visible = false;
                 selectProjectFolder.SelectedPath = null;
-                this.pythonToolStripMenuItem.Checked = true;
-
             }
             else
             {
@@ -2508,6 +2507,26 @@ namespace TestExerciser
         {
             MainBugManager myMainBugManager = new MainBugManager();
             myMainBugManager.Show();
+        }
+
+        private void 脚本录制F4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 用例管理TToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 需求管理QToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 选项ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

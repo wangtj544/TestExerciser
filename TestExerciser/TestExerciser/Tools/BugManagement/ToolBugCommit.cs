@@ -21,7 +21,9 @@ namespace TestExerciser.Tools.BugManagement
 
         public ToolBugCommit()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            this.txtAuthor.Text = ManageDB.userFullName;
+            this.dtpFillDate.text = DateTime.Now.ToShortDateString();
         }
 
         private void tsbSave_Click(object sender, EventArgs e)
