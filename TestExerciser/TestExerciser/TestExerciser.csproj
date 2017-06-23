@@ -29,7 +29,7 @@
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -115,6 +115,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Web.Services" />
@@ -150,6 +151,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Logic.cs" />
     <Compile Include="Logic\MySqlDB.cs" />
     <Compile Include="MainBugManager.cs">
       <SubType>Form</SubType>
@@ -208,6 +210,12 @@
     <Compile Include="MainWorkProgress.Designer.cs">
       <DependentUpon>MainWorkProgress.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\Control\ControlSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\Control\ControlSearch.Designer.cs">
+      <DependentUpon>ControlSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\SVN\SVNManager.cs" />
     <Compile Include="Tools\SVN\ToolSVN.cs">
       <SubType>Form</SubType>
@@ -239,6 +247,12 @@
     </Compile>
     <Compile Include="Tools\ToolClean.Designer.cs">
       <DependentUpon>ToolClean.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ToolManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolManager.Designer.cs">
+      <DependentUpon>ToolManager.cs</DependentUpon>
     </Compile>
     <Compile Include="User\UserAuthentication.cs">
       <SubType>Form</SubType>
@@ -339,6 +353,9 @@
     <EmbeddedResource Include="MainWorkProgress.resx">
       <DependentUpon>MainWorkProgress.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Control\ControlSearch.resx">
+      <DependentUpon>ControlSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tools\SVN\ToolSVN.resx">
       <DependentUpon>ToolSVN.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolClean.resx">
       <DependentUpon>ToolClean.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolManager.resx">
+      <DependentUpon>ToolManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\UserAuthentication.resx">
       <DependentUpon>UserAuthentication.cs</DependentUpon>

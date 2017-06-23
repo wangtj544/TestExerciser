@@ -8,6 +8,7 @@ using System.Data.OleDb;
 using System.Threading;
 using System.Windows.Forms;
 using TestExerciser.User;
+using TestExerciser.Tools;
 
 namespace TestExerciser.Logic
 {
@@ -19,13 +20,11 @@ namespace TestExerciser.Logic
        
         OleDbConnection mycon = null;
         OleDbDataReader myReader = null;
-        
       
-        //配置为本地数据库
-        public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
+        //配置数据库默认位置为本地
+        //public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
 
-        //配置为远程服务器上的数据库
-        //public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + @"\\172.20.32.147\data\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
+        public static string strcon = ToolManager.strcon;
 
         public bool checkUserNameDuplicate(string userName)
         {

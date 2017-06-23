@@ -2526,7 +2526,8 @@ namespace TestExerciser
 
         private void 选项ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ToolManager myToolManager = new ToolManager();
+            myToolManager.Show();
         }
     }
 }
