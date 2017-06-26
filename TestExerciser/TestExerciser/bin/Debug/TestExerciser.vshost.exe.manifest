@@ -44,11 +44,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="MySql.Data" version="6.9.9.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSkin.dll" size="2738176">
       <assemblyIdentity name="CSkin" version="16.1.14.2" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -109,14 +104,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1366528">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1360856">
       <assemblyIdentity name="TestExerciser" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>m/X6Clxh2CnPlUjHBr4/NJEfj5tOaH7XtR8DdvJxOnM=</dsig:DigestValue>
+        <dsig:DigestValue>fHvnw3i9LF/JK1eNi49wiWBCNdxq1cioImat6pr73RU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -128,7 +123,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>chCH82TogE8KIGyx5vw5FnvnD8VgMSAWeJAfRRGrRa4=</dsig:DigestValue>
+        <dsig:DigestValue>2nYqGtuNSL+7X5f/xl0i6AVv/aOJh9kT+UAZ0QF3xPI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -681,13 +676,13 @@
       <dsig:DigestValue>bwX5ZfAdwi0180n9tYJi5oAYB5HJTC7T9NkqQ9kwSWQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TestExerciser.exe.config" size="1029">
+  <file name="TestExerciser.exe.config" size="1690">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>80+KSVYThdLWv6mm6RIgwTCMvJwf7EGcYZdYqnJBf+Y=</dsig:DigestValue>
+      <dsig:DigestValue>znitygUWrcAex28r5g2RkUh6V2Ezkdn44QIiaoSzZ64=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Tools\AutoIt.exe" size="208192">

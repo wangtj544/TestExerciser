@@ -24,7 +24,7 @@ namespace TestExerciser.Logic
         //配置数据库默认位置为本地
         //public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
 
-        public static string strcon = ToolManager.strcon;
+        public static string strcon = "";
 
         public bool checkUserNameDuplicate(string userName)
         {
@@ -32,7 +32,7 @@ namespace TestExerciser.Logic
             string selectFullName = "select ID from 用户信息 where userName=" + "'" + userName + "'";
             try
             {
-                mycon = new OleDbConnection(strcon);
+                mycon = new OleDbConnection(myConnectionStr());
                 mycon.Open();
                 OleDbCommand mycom = new OleDbCommand(selectFullName, mycon);
                 myReader = mycom.ExecuteReader();
@@ -60,7 +60,7 @@ namespace TestExerciser.Logic
             string selectFullName = "select fullName from 用户信息 where userName=" + "'" + userName + "'" + "AND" + "[passWord]=" + "'" + passwd + "'";
             try
             {               
-                mycon = new OleDbConnection(strcon);
+                mycon = new OleDbConnection(myConnectionStr());
                 mycon.Open();
                 OleDbCommand mycom = new OleDbCommand(selectFullName, mycon);
                 myReader = mycom.ExecuteReader();
@@ -92,7 +92,7 @@ namespace TestExerciser.Logic
             string mySQL = "select email from 用户信息 where userName=" + "'" + userName + "'" + "AND" + "[passWord]=" + "'" + passwd + "'";
             try
             {
-                mycon = new OleDbConnection(strcon);
+                mycon = new OleDbConnection(myConnectionStr());
                 mycon.Open();
                 OleDbCommand mycom = new OleDbCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
@@ -120,7 +120,7 @@ namespace TestExerciser.Logic
 
         public void UpdateDB(string sql)
         {
-            mycon = new OleDbConnection(strcon);
+            mycon = new OleDbConnection(myConnectionStr());
             mycon.Open();
             OleDbCommand mycomm = new OleDbCommand(sql, mycon);
             mycomm.Connection = mycon;
@@ -155,7 +155,7 @@ namespace TestExerciser.Logic
    
             try
             {
-                mycon = new OleDbConnection(strcon);
+                mycon = new OleDbConnection(myConnectionStr());
                 mycon.Open();
                 OleDbCommand mycom = new OleDbCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
@@ -164,7 +164,7 @@ namespace TestExerciser.Logic
                     falg = true;
                 }
             }
-            catch (OleDbException exception)
+            catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -185,7 +185,7 @@ namespace TestExerciser.Logic
             string mySQL = "select ID from 用户信息 where userName=" + "'" + userName + "'" + "AND" + "[email]=" + "'" + userEmail + "'";
             try
             {
-                mycon = new OleDbConnection(strcon);
+                mycon = new OleDbConnection(myConnectionStr());
                 mycon.Open();
                 OleDbCommand mycom = new OleDbCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
@@ -206,14 +206,13 @@ namespace TestExerciser.Logic
             }
             return falg;
         }
-
         public bool showTeamMembers()
         {
             bool falg = false;
             string mySQL = "select fullName from 用户信息";
             try
             {
-                mycon = new OleDbConnection(strcon);
+                mycon = new OleDbConnection(myConnectionStr());
                 mycon.Open();
                 OleDbCommand mycom = new OleDbCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
@@ -232,6 +231,19 @@ namespace TestExerciser.Logic
                 mycon.Close();
             }
             return falg;
+        }
+
+        private string myConnectionStr()
+        {
+            if (Properties.Settings.Default.ConnectionString!= "\"\"")
+            {
+                strcon = Properties.Settings.Default.ConnectionString;
+            }
+            else
+            {
+                strcon = ToolManager.strcon;
+            }
+            return strcon;
         }
     }
 }

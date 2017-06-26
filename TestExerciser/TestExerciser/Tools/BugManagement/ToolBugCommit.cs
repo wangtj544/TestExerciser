@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using CCWin;
 
 using TestExerciser.Logic;
-using MySql.Data.MySqlClient;
 
 namespace TestExerciser.Tools.BugManagement
 {
@@ -32,11 +31,11 @@ namespace TestExerciser.Tools.BugManagement
             {
                 try
                 {
-                    commitForms();
+                    
                 }
-                catch (MySqlException exception)
+                catch 
                 {
-                    MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   // MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -72,13 +71,6 @@ namespace TestExerciser.Tools.BugManagement
             return myBugId;
         }
 
-
-        public void commitForms()
-        {
-            string sql = @"INSERT INTO 缺陷管理 ('bugID','bugTitle','bugOccurrence','bugGravity','bugAuthor','bugFillDate','bugAuditor')VALUES("+ this.showBugID() + this.txtTitle.Text + this.cbOccurrence.Text+this.cbGravity.Text + this.txtAuthor.Text + this.dtpFillDate.text + this.txtAuditor.Text + ")";
-            List<MySqlParameter> Paramter = new List<MySqlParameter>();
-            int a = MySqlDB.Ins.ExecuteNonquery(sql, Paramter.ToArray());
-        }
         
     }
 }
