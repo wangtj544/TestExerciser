@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Access数据库");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("数据库", new System.Windows.Forms.TreeNode[] {
-            treeNode4});
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("环境", new System.Windows.Forms.TreeNode[] {
-            treeNode5});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("环境");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Access数据库");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("数据库", new System.Windows.Forms.TreeNode[] {
+            treeNode2});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToolManager));
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.tlpButton = new System.Windows.Forms.TableLayoutPanel();
@@ -42,9 +41,9 @@
             this.btnCancel = new CCWin.SkinControl.SkinButton();
             this.spCMain = new System.Windows.Forms.SplitContainer();
             this.tlpTreeView = new System.Windows.Forms.TableLayoutPanel();
-            this.mySearch = new TestExerciser.Tools.Control.ControlSearch();
             this.tvItems = new System.Windows.Forms.TreeView();
             this.ImageToolManager = new System.Windows.Forms.ImageList(this.components);
+            this.mySearch = new TestExerciser.Tools.Control.ControlSearch();
             this.tlpMain.SuspendLayout();
             this.tlpButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spCMain)).BeginInit();
@@ -162,32 +161,26 @@
             this.tlpTreeView.Size = new System.Drawing.Size(212, 403);
             this.tlpTreeView.TabIndex = 0;
             // 
-            // mySearch
-            // 
-            this.mySearch.Location = new System.Drawing.Point(3, 3);
-            this.mySearch.Name = "mySearch";
-            this.mySearch.Size = new System.Drawing.Size(204, 29);
-            this.mySearch.TabIndex = 0;
-            // 
             // tvItems
             // 
             this.tvItems.BackColor = System.Drawing.Color.White;
             this.tvItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tvItems.ImageIndex = 0;
+            this.tvItems.ImageIndex = 1;
             this.tvItems.ImageList = this.ImageToolManager;
             this.tvItems.Location = new System.Drawing.Point(3, 38);
             this.tvItems.Name = "tvItems";
-            treeNode4.Name = "tnAccess";
-            treeNode4.Text = "Access数据库";
-            treeNode4.ToolTipText = "Access数据库";
-            treeNode5.Name = "tnDB";
-            treeNode5.Text = "数据库";
-            treeNode5.ToolTipText = "数据库";
-            treeNode6.Name = "tnEnv";
-            treeNode6.Text = "环境";
-            treeNode6.ToolTipText = "环境";
+            treeNode1.Name = "tnEnv";
+            treeNode1.Text = "环境";
+            treeNode1.ToolTipText = "环境";
+            treeNode2.Name = "tnAccess";
+            treeNode2.Text = "Access数据库";
+            treeNode2.ToolTipText = "Access数据库";
+            treeNode3.Name = "tnDB";
+            treeNode3.Text = "数据库";
+            treeNode3.ToolTipText = "数据库";
             this.tvItems.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode6});
+            treeNode1,
+            treeNode3});
             this.tvItems.SelectedImageIndex = 0;
             this.tvItems.ShowNodeToolTips = true;
             this.tvItems.Size = new System.Drawing.Size(206, 362);
@@ -199,7 +192,15 @@
             // 
             this.ImageToolManager.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageToolManager.ImageStream")));
             this.ImageToolManager.TransparentColor = System.Drawing.Color.Transparent;
-            this.ImageToolManager.Images.SetKeyName(0, "8.png");
+            this.ImageToolManager.Images.SetKeyName(0, "9.png");
+            this.ImageToolManager.Images.SetKeyName(1, "8.png");
+            // 
+            // mySearch
+            // 
+            this.mySearch.Location = new System.Drawing.Point(3, 3);
+            this.mySearch.Name = "mySearch";
+            this.mySearch.Size = new System.Drawing.Size(204, 29);
+            this.mySearch.TabIndex = 0;
             // 
             // ToolManager
             // 
