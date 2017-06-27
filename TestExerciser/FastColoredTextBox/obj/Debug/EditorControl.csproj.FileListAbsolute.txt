@@ -26,6 +26,7 @@ C:\Users\lenovo\Desktop\TestExerciser\FastColoredTextBox\obj\Debug\EditorControl
 E:\TestExerciser\TestExerciser\FastColoredTextBox\bin\Debug\EditorControl.xml
 E:\TestExerciser\TestExerciser\FastColoredTextBox\bin\Debug\EditorControl.dll
 E:\TestExerciser\TestExerciser\FastColoredTextBox\bin\Debug\EditorControl.pdb
+E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\EditorControl.csprojResolveAssemblyReference.cache
 E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS.AutocompleteMenu.resources
 E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS.FastColoredTextBox.resources
 E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS.FindForm.resources
