@@ -9,6 +9,7 @@ using System.Threading;
 using System.Windows.Forms;
 using TestExerciser.User;
 using TestExerciser.Tools;
+using CCWin;
 
 namespace TestExerciser.Logic
 {
@@ -22,9 +23,10 @@ namespace TestExerciser.Logic
         OleDbDataReader myReader = null;
       
         //配置数据库默认位置为本地
-        //public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
+        public static string strcon =Properties.Settings.Default.ConnectionString;
 
-        public static string strcon = "";
+
+        //public static string strcon = "";
 
         public bool checkUserNameDuplicate(string userName)
         {
@@ -32,7 +34,7 @@ namespace TestExerciser.Logic
             string selectFullName = "select ID from 用户信息 where userName=" + "'" + userName + "'";
             try
             {
-                mycon = new OleDbConnection(myConnectionStr());
+                mycon = new OleDbConnection(strcon);
                 mycon.Open();
                 OleDbCommand mycom = new OleDbCommand(selectFullName, mycon);
                 myReader = mycom.ExecuteReader();
@@ -59,8 +61,8 @@ namespace TestExerciser.Logic
             bool falg = false;
             string selectFullName = "select fullName from 用户信息 where userName=" + "'" + userName + "'" + "AND" + "[passWord]=" + "'" + passwd + "'";
             try
-            {               
-                mycon = new OleDbConnection(myConnectionStr());
+            {
+                mycon = new OleDbConnection(strcon);
                 mycon.Open();
                 OleDbCommand mycom = new OleDbCommand(selectFullName, mycon);
                 myReader = mycom.ExecuteReader();
@@ -92,7 +94,7 @@ namespace TestExerciser.Logic
             string mySQL = "select email from 用户信息 where userName=" + "'" + userName + "'" + "AND" + "[passWord]=" + "'" + passwd + "'";
             try
             {
-                mycon = new OleDbConnection(myConnectionStr());
+                mycon = new OleDbConnection(strcon);
                 mycon.Open();
                 OleDbCommand mycom = new OleDbCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
@@ -120,7 +122,7 @@ namespace TestExerciser.Logic
 
         public void UpdateDB(string sql)
         {
-            mycon = new OleDbConnection(myConnectionStr());
+            mycon = new OleDbConnection(strcon);
             mycon.Open();
             OleDbCommand mycomm = new OleDbCommand(sql, mycon);
             mycomm.Connection = mycon;
@@ -155,7 +157,7 @@ namespace TestExerciser.Logic
    
             try
             {
-                mycon = new OleDbConnection(myConnectionStr());
+                mycon = new OleDbConnection(strcon);
                 mycon.Open();
                 OleDbCommand mycom = new OleDbCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
@@ -165,8 +167,11 @@ namespace TestExerciser.Logic
                 }
             }
             catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {                
+                MessageBox.Show(exception.Message, "连接异常：将恢复为本地数据库，请尝试重新登录！", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                strcon = ToolManager.strcon;
+                Properties.Settings.Default.ConnectionString = strcon;
+                Properties.Settings.Default.Save();
             }
             finally
             {
@@ -185,7 +190,7 @@ namespace TestExerciser.Logic
             string mySQL = "select ID from 用户信息 where userName=" + "'" + userName + "'" + "AND" + "[email]=" + "'" + userEmail + "'";
             try
             {
-                mycon = new OleDbConnection(myConnectionStr());
+                mycon = new OleDbConnection(strcon);
                 mycon.Open();
                 OleDbCommand mycom = new OleDbCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
@@ -212,7 +217,7 @@ namespace TestExerciser.Logic
             string mySQL = "select fullName from 用户信息";
             try
             {
-                mycon = new OleDbConnection(myConnectionStr());
+                mycon = new OleDbConnection(strcon);
                 mycon.Open();
                 OleDbCommand mycom = new OleDbCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
@@ -231,19 +236,6 @@ namespace TestExerciser.Logic
                 mycon.Close();
             }
             return falg;
-        }
-
-        private string myConnectionStr()
-        {
-            if (Properties.Settings.Default.ConnectionString!= "\"\"")
-            {
-                strcon = Properties.Settings.Default.ConnectionString;
-            }
-            else
-            {
-                strcon = ToolManager.strcon;
-            }
-            return strcon;
         }
     }
 }

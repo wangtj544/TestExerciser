@@ -36,7 +36,7 @@ namespace TestExerciser.Tools
             {
                 case null:
                     this.txtStatus.ForeColor = Color.Red;
-                    this.txtStatus.Text = "确认信息：确认失败，请选择正确的节点！";
+                    this.txtStatus.Text = "设置信息：设置失败，请选择正确的节点！";
                     break;
 
                 case "tnAccess":
@@ -45,20 +45,23 @@ namespace TestExerciser.Tools
                         if (this.stbServerDBPath.Text != "")
                         {
                             //配置为远程服务器上的数据库                        
-                            strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=@" + realPath(this.stbServerDBPath) + ";Jet OLEDB:Database Password=admin@123";                           
+                            strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+ this.stbServerDBPath.Text.ToString()+ ";Jet OLEDB:Database Password=admin@123";
+                            Properties.Settings.Default.isLocalAccessDB = false;
                             this.txtStatus.ForeColor = Color.Green;
-                            this.txtStatus.Text = "确认信息：确认成功，更改为远程服务器数据库连接！重启后生效！";
+                            this.txtStatus.Text = "设置信息：设置成功，更改为远程服务器数据库连接！关闭并重启软件后生效！";
+
                         }
                         else
                         {
                             this.txtStatus.ForeColor = Color.Red;
-                            this.txtStatus.Text = "确认信息：确认失败，请填写远程服务器上数据库文件路径！";
+                            this.txtStatus.Text = "设置信息：设置失败，请填写远程服务器上数据库文件路径！";
                         }
                     }
-                    else
-                    {                       
+                    else if(radbLocal.Checked==true)
+                    {
+                        Properties.Settings.Default.isLocalAccessDB = true;
                         this.txtStatus.ForeColor = Color.Green;
-                        this.txtStatus.Text = "确认信息：确认成功，更改为本地数据库连接！重启后生效！";
+                        this.txtStatus.Text = "设置信息：设置成功，更改为本地数据库连接！关闭并重启软件后生效！";
                     }
                     Properties.Settings.Default.ConnectionString = strcon;
                     Properties.Settings.Default.Save();
@@ -102,12 +105,11 @@ namespace TestExerciser.Tools
                     this.labDetails.Name = "labDetails";
                     this.labDetails.Size = new System.Drawing.Size(259, 12);
                     this.labDetails.TabIndex = 18;
-                    this.labDetails.Text = "*提示：选择数据库后，需要重启才能生效！";
+                    this.labDetails.Text = "*提示：选择数据库后，需要关闭并重启软件才能生效！";
                     // 
                     // radbLocal
                     // 
                     this.radbLocal.AutoSize = true;
-                    this.radbLocal.Checked = true;
                     this.radbLocal.Location = new System.Drawing.Point(45, 38);
                     this.radbLocal.Name = "radbLocal";
                     this.radbLocal.Size = new System.Drawing.Size(47, 16);
@@ -196,7 +198,7 @@ namespace TestExerciser.Tools
         /// <returns></returns>
         private string realPath(SkinTextBox stbText)
         {
-            string realstr = "//";
+            string realstr = "\\";
             string str = stbText.Text.ToString();
             string[] mystr = str.Split('\\');
             foreach (string i in mystr)
@@ -205,7 +207,7 @@ namespace TestExerciser.Tools
                 {
                     if (i != mystr[mystr.Length - 1])
                     {
-                        realstr = realstr + i + "/";
+                        realstr = realstr + i + "\\";
                     }
                     else
                     {
@@ -214,6 +216,19 @@ namespace TestExerciser.Tools
                 }
             }
             return realstr;
+        }
+
+        private void ToolManager_Load(object sender, EventArgs e)
+        {
+            this.tvItems.ExpandAll();
+            if (Properties.Settings.Default.isLocalAccessDB == true)
+            {
+                this.radbLocal.Checked = true;
+            }
+            else
+            {
+                this.radbServer.Checked = true;
+            }
         }
     }
 }

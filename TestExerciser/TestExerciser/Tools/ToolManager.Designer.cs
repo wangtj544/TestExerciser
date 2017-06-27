@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Access数据库");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("数据库", new System.Windows.Forms.TreeNode[] {
-            treeNode1});
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("环境", new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Access数据库");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("数据库", new System.Windows.Forms.TreeNode[] {
+            treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("环境", new System.Windows.Forms.TreeNode[] {
+            treeNode5});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToolManager));
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.tlpButton = new System.Windows.Forms.TableLayoutPanel();
@@ -177,18 +177,21 @@
             this.tvItems.ImageList = this.ImageToolManager;
             this.tvItems.Location = new System.Drawing.Point(3, 38);
             this.tvItems.Name = "tvItems";
-            treeNode1.Name = "tnAccess";
-            treeNode1.Text = "Access数据库";
-            treeNode2.Name = "tnDB";
-            treeNode2.Text = "数据库";
-            treeNode2.ToolTipText = "数据库";
-            treeNode3.Name = "tnEnv";
-            treeNode3.Text = "环境";
-            treeNode3.ToolTipText = "环境";
+            treeNode4.Name = "tnAccess";
+            treeNode4.Text = "Access数据库";
+            treeNode4.ToolTipText = "Access数据库";
+            treeNode5.Name = "tnDB";
+            treeNode5.Text = "数据库";
+            treeNode5.ToolTipText = "数据库";
+            treeNode6.Name = "tnEnv";
+            treeNode6.Text = "环境";
+            treeNode6.ToolTipText = "环境";
             this.tvItems.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3});
+            treeNode6});
             this.tvItems.SelectedImageIndex = 0;
+            this.tvItems.ShowNodeToolTips = true;
             this.tvItems.Size = new System.Drawing.Size(206, 362);
+            this.tvItems.StateImageList = this.ImageToolManager;
             this.tvItems.TabIndex = 1;
             this.tvItems.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvItems_AfterSelect);
             // 
@@ -210,6 +213,7 @@
             this.Name = "ToolManager";
             this.Text = "选项";
             this.TitleCenter = false;
+            this.Load += new System.EventHandler(this.ToolManager_Load);
             this.tlpMain.ResumeLayout(false);
             this.tlpButton.ResumeLayout(false);
             this.tlpButton.PerformLayout();

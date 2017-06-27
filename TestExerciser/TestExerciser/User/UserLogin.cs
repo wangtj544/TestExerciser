@@ -27,6 +27,9 @@ namespace TestExerciser.User
         private void MainLogin_Load(object sender, EventArgs e)
         {
             this.txtUserName.Focus();
+            //string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
+            //Properties.Settings.Default.ConnectionString = strcon;
+            //Properties.Settings.Default.Save();
         }
 
         private void btnOK_Click(object sender, EventArgs e)
