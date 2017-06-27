@@ -24,7 +24,7 @@ namespace TestExerciser
 
         private void MainCaseReview_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void btnSelectFile_Click(object sender, EventArgs e)
@@ -42,8 +42,6 @@ namespace TestExerciser
                 this.sbStep1.BaseColor = Color.Lime;
                 this.sbStep1.BorderColor = Color.Lime;
             }
-        }
-
-     
+        } 
     }
 }

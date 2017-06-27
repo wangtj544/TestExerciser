@@ -787,6 +787,7 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
             //this._connection.ConnectionString = global::TestExerciser.Properties.Settings.Default.TestExerciserConnectionString;
+            this._connection.ConnectionString = TestExerciser.Logic.ManageDB.strcon;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
