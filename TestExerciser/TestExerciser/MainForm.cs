@@ -28,6 +28,7 @@ namespace TestExerciser
         string[] root_paths = {};
         string workspacePath = null;
         public static string pythonEnv = null;
+        public static string rootFolder = null;
         Style invisibleCharsStyle = new InvisibleCharsRenderer(Pens.Gray);
         Color currentLineColor = Color.FromArgb(100, 210, 210, 255);
         Color changedLineColor = Color.FromArgb(255, 230, 230, 255);
@@ -347,18 +348,9 @@ namespace TestExerciser
         {
             try
             {
-                string rootFolder = selectProjectFolder.SelectedPath;
+                rootFolder = selectProjectFolder.SelectedPath;
                 writeRunProjectSupportFile(rootFolder);
-                runCmd("python.exe", @".\__runner.py");
-                if (Directory.Exists(rootFolder + @"\.log"))
-                {
-                    string[] logFileName = Directory.GetFiles(rootFolder + @"\.log", "*.html");
-                    logView.Navigate(logFileName[0]);
-                }
-                else
-                {
-                    MessageBox.Show("请确认log文件是否生成！", "消息提示：",MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                runCmd("python.exe", @".\__runner.py");                
 
             }
             catch (Exception exception)
@@ -2528,6 +2520,19 @@ namespace TestExerciser
         {
             ToolManager myToolManager = new ToolManager();
             myToolManager.Show();
+        }
+
+        private void tsbLogView_Click(object sender, EventArgs e)
+        {
+            if (Directory.Exists(MainForm.rootFolder + @"\.log"))
+            {
+                MainLogView myMainLogView = new MainLogView();
+                myMainLogView.Show();
+            }
+            else
+            {
+                MessageBox.Show("请确认log文件是否生成！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }            
         }
     }
 }

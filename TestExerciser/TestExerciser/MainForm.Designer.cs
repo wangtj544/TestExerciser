@@ -195,13 +195,38 @@
             this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tsFiles = new FarsiLibrary.Win.FATabStrip();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.tcManager = new System.Windows.Forms.TabControl();
+            this.tpRun = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.tabInfo = new System.Windows.Forms.TabControl();
-            this.tabOutPut = new System.Windows.Forms.TabPage();
+            this.tlpRunControl = new System.Windows.Forms.TableLayoutPanel();
+            this.stsRunButton = new CCWin.SkinControl.SkinToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.stvStatus = new CCWin.SkinControl.SkinTreeView();
             this.richOutPut = new System.Windows.Forms.RichTextBox();
-            this.tabControl3 = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.logView = new System.Windows.Forms.WebBrowser();
+            this.stsOutPut = new CCWin.SkinControl.SkinToolStrip();
+            this.tsbLogView = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
+            this.tspbRunStatus = new System.Windows.Forms.ToolStripProgressBar();
+            this.tslPassedNO = new System.Windows.Forms.ToolStripLabel();
+            this.tslNO = new System.Windows.Forms.ToolStripLabel();
+            this.tslTimeUse = new System.Windows.Forms.ToolStripLabel();
+            this.tslTime = new System.Windows.Forms.ToolStripLabel();
+            this.tpDebug = new System.Windows.Forms.TabPage();
             this.menu_ProjectManage.SuspendLayout();
             this.rightClickOnProManager.SuspendLayout();
             this.rightClickOnOutPutWindow.SuspendLayout();
@@ -222,14 +247,16 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvObjectExplorer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsFiles)).BeginInit();
+            this.tcManager.SuspendLayout();
+            this.tpRun.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            this.tabInfo.SuspendLayout();
-            this.tabOutPut.SuspendLayout();
-            this.tabControl3.SuspendLayout();
-            this.tabPage5.SuspendLayout();
+            this.tlpRunControl.SuspendLayout();
+            this.stsRunButton.SuspendLayout();
+            this.stsOutPut.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu_ProjectManage
@@ -957,7 +984,7 @@
             this.退出自动滚屏OToolStripMenuItem,
             this.退出EToolStripOutPut});
             this.rightClickOnOutPutWindow.Name = "rightClickOnOutPutWindow";
-            this.rightClickOnOutPutWindow.Size = new System.Drawing.Size(167, 158);
+            this.rightClickOnOutPutWindow.Size = new System.Drawing.Size(167, 136);
             // 
             // 全部清除CToolStripOutPut
             // 
@@ -1526,9 +1553,9 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.splitContainer3);
+            this.splitContainer1.Panel2.Controls.Add(this.tcManager);
             this.splitContainer1.Size = new System.Drawing.Size(1722, 713);
-            this.splitContainer1.SplitterDistance = 477;
+            this.splitContainer1.SplitterDistance = 448;
             this.splitContainer1.TabIndex = 7;
             // 
             // splitContainer2
@@ -1545,7 +1572,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tsFiles);
             this.splitContainer2.Panel2.Controls.Add(this.vScrollBar1);
-            this.splitContainer2.Size = new System.Drawing.Size(1722, 477);
+            this.splitContainer2.Size = new System.Drawing.Size(1722, 448);
             this.splitContainer2.SplitterDistance = 321;
             this.splitContainer2.TabIndex = 1;
             // 
@@ -1557,7 +1584,7 @@
             this.mainTabControl.Location = new System.Drawing.Point(0, 0);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
-            this.mainTabControl.Size = new System.Drawing.Size(321, 477);
+            this.mainTabControl.Size = new System.Drawing.Size(321, 448);
             this.mainTabControl.TabIndex = 0;
             // 
             // tabPage1
@@ -1566,7 +1593,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(313, 451);
+            this.tabPage1.Size = new System.Drawing.Size(313, 422);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "工程";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1584,7 +1611,7 @@
             this.tree_Solution.Name = "tree_Solution";
             this.tree_Solution.SelectedImageIndex = 11;
             this.tree_Solution.ShowNodeToolTips = true;
-            this.tree_Solution.Size = new System.Drawing.Size(307, 445);
+            this.tree_Solution.Size = new System.Drawing.Size(307, 416);
             this.tree_Solution.TabIndex = 0;
             this.tree_Solution.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.tree_Solution_AfterLabelEdit);
             this.tree_Solution.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tree_Solution_AfterSelect);
@@ -1614,7 +1641,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(313, 451);
+            this.tabPage2.Size = new System.Drawing.Size(313, 422);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "类视图";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1645,7 +1672,7 @@
             this.dgvObjectExplorer.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Green;
             this.dgvObjectExplorer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvObjectExplorer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvObjectExplorer.Size = new System.Drawing.Size(307, 445);
+            this.dgvObjectExplorer.Size = new System.Drawing.Size(307, 416);
             this.dgvObjectExplorer.TabIndex = 7;
             this.dgvObjectExplorer.VirtualMode = true;
             this.dgvObjectExplorer.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvObjectExplorer_CellMouseDoubleClick);
@@ -1672,7 +1699,7 @@
             this.tsFiles.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.tsFiles.Location = new System.Drawing.Point(0, 0);
             this.tsFiles.Name = "tsFiles";
-            this.tsFiles.Size = new System.Drawing.Size(1380, 477);
+            this.tsFiles.Size = new System.Drawing.Size(1380, 448);
             this.tsFiles.TabIndex = 2;
             this.tsFiles.Text = "文本编辑器";
             this.tsFiles.TabStripItemClosing += new FarsiLibrary.Win.TabStripItemClosingHandler(this.tsFiles_TabStripItemClosing);
@@ -1684,86 +1711,411 @@
             this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
             this.vScrollBar1.Location = new System.Drawing.Point(1380, 0);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 477);
+            this.vScrollBar1.Size = new System.Drawing.Size(17, 448);
             this.vScrollBar1.TabIndex = 1;
+            // 
+            // tcManager
+            // 
+            this.tcManager.Controls.Add(this.tpRun);
+            this.tcManager.Controls.Add(this.tpDebug);
+            this.tcManager.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcManager.Location = new System.Drawing.Point(0, 0);
+            this.tcManager.Name = "tcManager";
+            this.tcManager.SelectedIndex = 0;
+            this.tcManager.Size = new System.Drawing.Size(1722, 261);
+            this.tcManager.TabIndex = 0;
+            // 
+            // tpRun
+            // 
+            this.tpRun.Controls.Add(this.tableLayoutPanel1);
+            this.tpRun.Location = new System.Drawing.Point(4, 22);
+            this.tpRun.Name = "tpRun";
+            this.tpRun.Padding = new System.Windows.Forms.Padding(3);
+            this.tpRun.Size = new System.Drawing.Size(1714, 235);
+            this.tpRun.TabIndex = 0;
+            this.tpRun.Text = "执行";
+            this.tpRun.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.splitContainer3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.stsOutPut, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1708, 229);
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // splitContainer3
             // 
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Location = new System.Drawing.Point(3, 32);
             this.splitContainer3.Name = "splitContainer3";
             // 
             // splitContainer3.Panel1
             // 
-            this.splitContainer3.Panel1.Controls.Add(this.tabInfo);
+            this.splitContainer3.Panel1.Controls.Add(this.tlpRunControl);
             // 
             // splitContainer3.Panel2
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.tabControl3);
-            this.splitContainer3.Size = new System.Drawing.Size(1722, 232);
-            this.splitContainer3.SplitterDistance = 518;
+            this.splitContainer3.Panel2.Controls.Add(this.richOutPut);
+            this.splitContainer3.Size = new System.Drawing.Size(1702, 194);
+            this.splitContainer3.SplitterDistance = 497;
             this.splitContainer3.TabIndex = 0;
             // 
-            // tabInfo
+            // tlpRunControl
             // 
-            this.tabInfo.Controls.Add(this.tabOutPut);
-            this.tabInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabInfo.Location = new System.Drawing.Point(0, 0);
-            this.tabInfo.Name = "tabInfo";
-            this.tabInfo.SelectedIndex = 0;
-            this.tabInfo.Size = new System.Drawing.Size(518, 232);
-            this.tabInfo.TabIndex = 0;
+            this.tlpRunControl.ColumnCount = 2;
+            this.tlpRunControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlpRunControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpRunControl.Controls.Add(this.stsRunButton, 0, 0);
+            this.tlpRunControl.Controls.Add(this.stvStatus, 1, 0);
+            this.tlpRunControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpRunControl.Location = new System.Drawing.Point(0, 0);
+            this.tlpRunControl.Name = "tlpRunControl";
+            this.tlpRunControl.RowCount = 1;
+            this.tlpRunControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpRunControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.tlpRunControl.Size = new System.Drawing.Size(497, 194);
+            this.tlpRunControl.TabIndex = 0;
             // 
-            // tabOutPut
+            // stsRunButton
             // 
-            this.tabOutPut.Controls.Add(this.richOutPut);
-            this.tabOutPut.Location = new System.Drawing.Point(4, 22);
-            this.tabOutPut.Name = "tabOutPut";
-            this.tabOutPut.Padding = new System.Windows.Forms.Padding(3);
-            this.tabOutPut.Size = new System.Drawing.Size(510, 206);
-            this.tabOutPut.TabIndex = 0;
-            this.tabOutPut.Text = "输出";
-            this.tabOutPut.UseVisualStyleBackColor = true;
+            this.stsRunButton.Arrow = System.Drawing.Color.Black;
+            this.stsRunButton.Back = System.Drawing.Color.White;
+            this.stsRunButton.BackRadius = 4;
+            this.stsRunButton.BackRectangle = new System.Drawing.Rectangle(10, 10, 10, 10);
+            this.stsRunButton.Base = System.Drawing.Color.White;
+            this.stsRunButton.BaseFore = System.Drawing.Color.Black;
+            this.stsRunButton.BaseForeAnamorphosis = false;
+            this.stsRunButton.BaseForeAnamorphosisBorder = 4;
+            this.stsRunButton.BaseForeAnamorphosisColor = System.Drawing.Color.White;
+            this.stsRunButton.BaseForeOffset = new System.Drawing.Point(0, 0);
+            this.stsRunButton.BaseHoverFore = System.Drawing.Color.White;
+            this.stsRunButton.BaseItemAnamorphosis = true;
+            this.stsRunButton.BaseItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsRunButton.BaseItemBorderShow = true;
+            this.stsRunButton.BaseItemDown = ((System.Drawing.Image)(resources.GetObject("stsRunButton.BaseItemDown")));
+            this.stsRunButton.BaseItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsRunButton.BaseItemMouse = ((System.Drawing.Image)(resources.GetObject("stsRunButton.BaseItemMouse")));
+            this.stsRunButton.BaseItemNorml = null;
+            this.stsRunButton.BaseItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsRunButton.BaseItemRadius = 4;
+            this.stsRunButton.BaseItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.stsRunButton.BaseItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsRunButton.BindTabControl = null;
+            this.stsRunButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.stsRunButton.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.stsRunButton.Fore = System.Drawing.Color.Black;
+            this.stsRunButton.GripMargin = new System.Windows.Forms.Padding(2, 2, 4, 2);
+            this.stsRunButton.HoverFore = System.Drawing.Color.White;
+            this.stsRunButton.ItemAnamorphosis = true;
+            this.stsRunButton.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsRunButton.ItemBorderShow = true;
+            this.stsRunButton.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsRunButton.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsRunButton.ItemRadius = 4;
+            this.stsRunButton.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.stsRunButton.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripButton5,
+            this.toolStripButton6,
+            this.toolStripButton7,
+            this.toolStripButton8});
+            this.stsRunButton.Location = new System.Drawing.Point(0, 0);
+            this.stsRunButton.Name = "stsRunButton";
+            this.stsRunButton.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.stsRunButton.Size = new System.Drawing.Size(24, 194);
+            this.stsRunButton.SkinAllColor = true;
+            this.stsRunButton.TabIndex = 1;
+            this.stsRunButton.Text = "skinToolStrip1";
+            this.stsRunButton.TitleAnamorphosis = true;
+            this.stsRunButton.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
+            this.stsRunButton.TitleRadius = 4;
+            this.stsRunButton.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(21, 4);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton3.Text = "toolStripButton3";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton4.Text = "toolStripButton4";
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton5.Text = "toolStripButton5";
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton6.Text = "toolStripButton6";
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton7.Text = "toolStripButton7";
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton8.Text = "toolStripButton8";
+            // 
+            // stvStatus
+            // 
+            this.stvStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stvStatus.Location = new System.Drawing.Point(33, 3);
+            this.stvStatus.Name = "stvStatus";
+            this.stvStatus.Size = new System.Drawing.Size(461, 188);
+            this.stvStatus.TabIndex = 2;
             // 
             // richOutPut
             // 
+            this.richOutPut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richOutPut.ContextMenuStrip = this.rightClickOnOutPutWindow;
             this.richOutPut.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richOutPut.Location = new System.Drawing.Point(3, 3);
+            this.richOutPut.Location = new System.Drawing.Point(0, 0);
             this.richOutPut.Name = "richOutPut";
-            this.richOutPut.Size = new System.Drawing.Size(504, 200);
+            this.richOutPut.Size = new System.Drawing.Size(1201, 194);
             this.richOutPut.TabIndex = 0;
             this.richOutPut.Text = "";
             // 
-            // tabControl3
+            // stsOutPut
             // 
-            this.tabControl3.Controls.Add(this.tabPage5);
-            this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl3.Location = new System.Drawing.Point(0, 0);
-            this.tabControl3.Name = "tabControl3";
-            this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1200, 232);
-            this.tabControl3.TabIndex = 0;
+            this.stsOutPut.Arrow = System.Drawing.Color.Black;
+            this.stsOutPut.Back = System.Drawing.Color.White;
+            this.stsOutPut.BackRadius = 4;
+            this.stsOutPut.BackRectangle = new System.Drawing.Rectangle(10, 10, 10, 10);
+            this.stsOutPut.Base = System.Drawing.Color.White;
+            this.stsOutPut.BaseFore = System.Drawing.Color.Black;
+            this.stsOutPut.BaseForeAnamorphosis = false;
+            this.stsOutPut.BaseForeAnamorphosisBorder = 4;
+            this.stsOutPut.BaseForeAnamorphosisColor = System.Drawing.Color.White;
+            this.stsOutPut.BaseForeOffset = new System.Drawing.Point(0, 0);
+            this.stsOutPut.BaseHoverFore = System.Drawing.Color.White;
+            this.stsOutPut.BaseItemAnamorphosis = true;
+            this.stsOutPut.BaseItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsOutPut.BaseItemBorderShow = true;
+            this.stsOutPut.BaseItemDown = ((System.Drawing.Image)(resources.GetObject("stsOutPut.BaseItemDown")));
+            this.stsOutPut.BaseItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsOutPut.BaseItemMouse = ((System.Drawing.Image)(resources.GetObject("stsOutPut.BaseItemMouse")));
+            this.stsOutPut.BaseItemNorml = null;
+            this.stsOutPut.BaseItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsOutPut.BaseItemRadius = 4;
+            this.stsOutPut.BaseItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.stsOutPut.BaseItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsOutPut.BindTabControl = null;
+            this.stsOutPut.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.stsOutPut.Fore = System.Drawing.Color.Black;
+            this.stsOutPut.GripMargin = new System.Windows.Forms.Padding(2, 2, 4, 2);
+            this.stsOutPut.HoverFore = System.Drawing.Color.White;
+            this.stsOutPut.ItemAnamorphosis = true;
+            this.stsOutPut.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsOutPut.ItemBorderShow = true;
+            this.stsOutPut.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsOutPut.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsOutPut.ItemRadius = 4;
+            this.stsOutPut.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.stsOutPut.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbLogView,
+            this.toolStripButton9,
+            this.toolStripButton10,
+            this.toolStripButton11,
+            this.toolStripButton12,
+            this.toolStripButton13,
+            this.toolStripButton14,
+            this.toolStripButton15,
+            this.toolStripButton16,
+            this.tspbRunStatus,
+            this.tslPassedNO,
+            this.tslNO,
+            this.tslTimeUse,
+            this.tslTime});
+            this.stsOutPut.Location = new System.Drawing.Point(0, 0);
+            this.stsOutPut.Name = "stsOutPut";
+            this.stsOutPut.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.stsOutPut.Size = new System.Drawing.Size(1708, 25);
+            this.stsOutPut.SkinAllColor = true;
+            this.stsOutPut.TabIndex = 1;
+            this.stsOutPut.Text = "skinToolStrip1";
+            this.stsOutPut.TitleAnamorphosis = true;
+            this.stsOutPut.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
+            this.stsOutPut.TitleRadius = 4;
+            this.stsOutPut.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             // 
-            // tabPage5
+            // tsbLogView
             // 
-            this.tabPage5.Controls.Add(this.logView);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1192, 206);
-            this.tabPage5.TabIndex = 0;
-            this.tabPage5.Text = "日志";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.tsbLogView.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tsbLogView.Image = ((System.Drawing.Image)(resources.GetObject("tsbLogView.Image")));
+            this.tsbLogView.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbLogView.Name = "tsbLogView";
+            this.tsbLogView.Size = new System.Drawing.Size(76, 22);
+            this.tsbLogView.Text = "查看日志";
+            this.tsbLogView.Click += new System.EventHandler(this.tsbLogView_Click);
             // 
-            // logView
+            // toolStripButton9
             // 
-            this.logView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logView.Location = new System.Drawing.Point(3, 3);
-            this.logView.MinimumSize = new System.Drawing.Size(20, 20);
-            this.logView.Name = "logView";
-            this.logView.Size = new System.Drawing.Size(1186, 200);
-            this.logView.TabIndex = 0;
+            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton9.Text = "toolStripButton9";
+            // 
+            // toolStripButton10
+            // 
+            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
+            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton10.Text = "toolStripButton10";
+            // 
+            // toolStripButton11
+            // 
+            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
+            this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton11.Text = "toolStripButton11";
+            // 
+            // toolStripButton12
+            // 
+            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
+            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton12.Text = "toolStripButton12";
+            // 
+            // toolStripButton13
+            // 
+            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
+            this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton13.Name = "toolStripButton13";
+            this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton13.Text = "toolStripButton13";
+            // 
+            // toolStripButton14
+            // 
+            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
+            this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton14.Name = "toolStripButton14";
+            this.toolStripButton14.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton14.Text = "toolStripButton14";
+            // 
+            // toolStripButton15
+            // 
+            this.toolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton15.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton15.Image")));
+            this.toolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton15.Name = "toolStripButton15";
+            this.toolStripButton15.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton15.Text = "toolStripButton15";
+            // 
+            // toolStripButton16
+            // 
+            this.toolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton16.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton16.Image")));
+            this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton16.Name = "toolStripButton16";
+            this.toolStripButton16.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton16.Text = "toolStripButton16";
+            // 
+            // tspbRunStatus
+            // 
+            this.tspbRunStatus.Name = "tspbRunStatus";
+            this.tspbRunStatus.Size = new System.Drawing.Size(400, 22);
+            // 
+            // tslPassedNO
+            // 
+            this.tslPassedNO.Name = "tslPassedNO";
+            this.tslPassedNO.Size = new System.Drawing.Size(56, 22);
+            this.tslPassedNO.Text = "通过数：";
+            // 
+            // tslNO
+            // 
+            this.tslNO.Name = "tslNO";
+            this.tslNO.Size = new System.Drawing.Size(15, 22);
+            this.tslNO.Text = "0";
+            // 
+            // tslTimeUse
+            // 
+            this.tslTimeUse.Name = "tslTimeUse";
+            this.tslTimeUse.Size = new System.Drawing.Size(44, 22);
+            this.tslTimeUse.Text = "耗时：";
+            // 
+            // tslTime
+            // 
+            this.tslTime.Name = "tslTime";
+            this.tslTime.Size = new System.Drawing.Size(15, 22);
+            this.tslTime.Text = "0";
+            // 
+            // tpDebug
+            // 
+            this.tpDebug.Location = new System.Drawing.Point(4, 22);
+            this.tpDebug.Name = "tpDebug";
+            this.tpDebug.Padding = new System.Windows.Forms.Padding(3);
+            this.tpDebug.Size = new System.Drawing.Size(1714, 235);
+            this.tpDebug.TabIndex = 1;
+            this.tpDebug.Text = "调试";
+            this.tpDebug.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -1810,14 +2162,20 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvObjectExplorer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsFiles)).EndInit();
+            this.tcManager.ResumeLayout(false);
+            this.tpRun.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            this.tabInfo.ResumeLayout(false);
-            this.tabOutPut.ResumeLayout(false);
-            this.tabControl3.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
+            this.tlpRunControl.ResumeLayout(false);
+            this.tlpRunControl.PerformLayout();
+            this.stsRunButton.ResumeLayout(false);
+            this.stsRunButton.PerformLayout();
+            this.stsOutPut.ResumeLayout(false);
+            this.stsOutPut.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1928,12 +2286,7 @@
         public System.Windows.Forms.TreeView tree_Solution;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.TabControl tabInfo;
-        private System.Windows.Forms.TabPage tabOutPut;
         private System.Windows.Forms.RichTextBox richOutPut;
-        private System.Windows.Forms.TabControl tabControl3;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.WebBrowser logView;
         private FarsiLibrary.Win.FATabStrip tsFiles;
         private System.Windows.Forms.ToolStripMenuItem 新建NToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 保存SToolStripMenuItem;
@@ -1997,6 +2350,36 @@
         private System.Windows.Forms.ToolStripMenuItem sQLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 查找ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 替换ToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private CCWin.SkinControl.SkinToolStrip stsOutPut;
+        private System.Windows.Forms.ToolStripButton tsbLogView;
+        private System.Windows.Forms.TableLayoutPanel tlpRunControl;
+        private CCWin.SkinControl.SkinToolStrip stsRunButton;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton9;
+        private System.Windows.Forms.ToolStripButton toolStripButton10;
+        private System.Windows.Forms.ToolStripButton toolStripButton11;
+        private System.Windows.Forms.ToolStripButton toolStripButton12;
+        private System.Windows.Forms.ToolStripButton toolStripButton13;
+        private System.Windows.Forms.ToolStripButton toolStripButton14;
+        private System.Windows.Forms.ToolStripButton toolStripButton15;
+        private System.Windows.Forms.ToolStripButton toolStripButton16;
+        private System.Windows.Forms.ToolStripProgressBar tspbRunStatus;
+        private System.Windows.Forms.ToolStripLabel tslPassedNO;
+        private System.Windows.Forms.ToolStripLabel tslNO;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.TabControl tcManager;
+        private System.Windows.Forms.TabPage tpRun;
+        private System.Windows.Forms.TabPage tpDebug;
+        private System.Windows.Forms.ToolStripLabel tslTimeUse;
+        private System.Windows.Forms.ToolStripLabel tslTime;
+        private CCWin.SkinControl.SkinTreeView stvStatus;
     }
 }
 
