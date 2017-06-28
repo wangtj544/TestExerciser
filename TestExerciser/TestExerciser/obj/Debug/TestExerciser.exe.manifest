@@ -44,11 +44,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="MySql.Data" version="6.9.9.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSkin.dll" size="2738176">
       <assemblyIdentity name="CSkin" version="16.1.14.2" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -69,6 +64,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>cdwWOs1nl/w+5HBUuEJUNhF45tLkTZ8p1sO0D77XqDo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="424448">
+      <assemblyIdentity name="MySql.Data" version="6.9.9.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>z1JCyodj5/UiC37FF0m11VPrQRt8tszqKfa8jk+yNYc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -109,14 +116,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1452544">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1445848">
       <assemblyIdentity name="TestExerciser" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HD/JGhFb7xkLjo9ddJlisEqG9NWsnDHou4Rcjg+to+k=</dsig:DigestValue>
+        <dsig:DigestValue>7TS/n+Qu5g+p+3L6hTzlxjNphsBKR9rvSydai4XH7PY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -128,7 +135,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>R6/lza2uOgI3yl7fMAOQJUHAEglLD3WO3SD78A2ux0E=</dsig:DigestValue>
+        <dsig:DigestValue>M/Z+JXHjLdjnZDtXNQkb1L3wVl+fWzGRwiMQZawu7kg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -636,13 +643,13 @@
       <dsig:DigestValue>sSAo3TTL6X1hIVIRsKjcSzZ/nz8bPpq+GM0S/yw6+XI=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\tstbCreateScript.png" size="1013">
+  <file name="Resources\tstbCreateScript.png" size="3678">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>mcXDlMZTu2lar/4IKU4yj+zEp0q1LaJUXndtwTii9tM=</dsig:DigestValue>
+      <dsig:DigestValue>fDf88vbro+fGQCw32wYQivJ5eC+ij3vnc5VFDgJiGqE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\vb.png" size="1673">
