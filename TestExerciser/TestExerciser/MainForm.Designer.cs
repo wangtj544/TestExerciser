@@ -210,6 +210,13 @@
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.stvStatus = new CCWin.SkinControl.SkinTreeView();
+            this.tlpOut = new System.Windows.Forms.TableLayoutPanel();
+            this.stsOut = new CCWin.SkinControl.SkinToolStrip();
+            this.toolStripButton18 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton19 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton21 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton22 = new System.Windows.Forms.ToolStripButton();
             this.richOutPut = new System.Windows.Forms.RichTextBox();
             this.stsOutPut = new CCWin.SkinControl.SkinToolStrip();
             this.tsbLogView = new System.Windows.Forms.ToolStripButton();
@@ -228,6 +235,43 @@
             this.tslTimeUse = new System.Windows.Forms.ToolStripLabel();
             this.tslTime = new System.Windows.Forms.ToolStripLabel();
             this.tpDebug = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.skinToolStrip1 = new CCWin.SkinControl.SkinToolStrip();
+            this.toolStripButton23 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton24 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton25 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton27 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton26 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton46 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton28 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton29 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton30 = new System.Windows.Forms.ToolStripButton();
+            this.skinTreeView1 = new CCWin.SkinControl.SkinTreeView();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.skinToolStrip2 = new CCWin.SkinControl.SkinToolStrip();
+            this.toolStripButton31 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton32 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton33 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton34 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton35 = new System.Windows.Forms.ToolStripButton();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.skinToolStrip3 = new CCWin.SkinControl.SkinToolStrip();
+            this.toolStripButton37 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton38 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton39 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton40 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton41 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton42 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton43 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton44 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton45 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
             this.menu_ProjectManage.SuspendLayout();
             this.rightClickOnProManager.SuspendLayout();
             this.rightClickOnOutPutWindow.SuspendLayout();
@@ -257,7 +301,20 @@
             this.splitContainer3.SuspendLayout();
             this.tlpRunControl.SuspendLayout();
             this.stsRunButton.SuspendLayout();
+            this.tlpOut.SuspendLayout();
+            this.stsOut.SuspendLayout();
             this.stsOutPut.SuspendLayout();
+            this.tpDebug.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.skinToolStrip1.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.skinToolStrip2.SuspendLayout();
+            this.skinToolStrip3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu_ProjectManage
@@ -1765,7 +1822,7 @@
             // 
             // splitContainer3.Panel2
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.richOutPut);
+            this.splitContainer3.Panel2.Controls.Add(this.tlpOut);
             this.splitContainer3.Size = new System.Drawing.Size(1412, 194);
             this.splitContainer3.SplitterDistance = 412;
             this.splitContainer3.TabIndex = 0;
@@ -1923,14 +1980,129 @@
             this.stvStatus.Size = new System.Drawing.Size(376, 188);
             this.stvStatus.TabIndex = 2;
             // 
+            // tlpOut
+            // 
+            this.tlpOut.ColumnCount = 2;
+            this.tlpOut.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpOut.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlpOut.Controls.Add(this.stsOut, 1, 0);
+            this.tlpOut.Controls.Add(this.richOutPut, 0, 0);
+            this.tlpOut.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpOut.Location = new System.Drawing.Point(0, 0);
+            this.tlpOut.Name = "tlpOut";
+            this.tlpOut.RowCount = 1;
+            this.tlpOut.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpOut.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.tlpOut.Size = new System.Drawing.Size(996, 194);
+            this.tlpOut.TabIndex = 0;
+            // 
+            // stsOut
+            // 
+            this.stsOut.Arrow = System.Drawing.Color.Black;
+            this.stsOut.Back = System.Drawing.Color.White;
+            this.stsOut.BackRadius = 4;
+            this.stsOut.BackRectangle = new System.Drawing.Rectangle(10, 10, 10, 10);
+            this.stsOut.Base = System.Drawing.Color.White;
+            this.stsOut.BaseFore = System.Drawing.Color.Black;
+            this.stsOut.BaseForeAnamorphosis = false;
+            this.stsOut.BaseForeAnamorphosisBorder = 4;
+            this.stsOut.BaseForeAnamorphosisColor = System.Drawing.Color.White;
+            this.stsOut.BaseForeOffset = new System.Drawing.Point(0, 0);
+            this.stsOut.BaseHoverFore = System.Drawing.Color.White;
+            this.stsOut.BaseItemAnamorphosis = true;
+            this.stsOut.BaseItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsOut.BaseItemBorderShow = true;
+            this.stsOut.BaseItemDown = ((System.Drawing.Image)(resources.GetObject("stsOut.BaseItemDown")));
+            this.stsOut.BaseItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsOut.BaseItemMouse = ((System.Drawing.Image)(resources.GetObject("stsOut.BaseItemMouse")));
+            this.stsOut.BaseItemNorml = null;
+            this.stsOut.BaseItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsOut.BaseItemRadius = 4;
+            this.stsOut.BaseItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.stsOut.BaseItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsOut.BindTabControl = null;
+            this.stsOut.Dock = System.Windows.Forms.DockStyle.Left;
+            this.stsOut.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.stsOut.Fore = System.Drawing.Color.Black;
+            this.stsOut.GripMargin = new System.Windows.Forms.Padding(2, 2, 4, 2);
+            this.stsOut.HoverFore = System.Drawing.Color.White;
+            this.stsOut.ItemAnamorphosis = true;
+            this.stsOut.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsOut.ItemBorderShow = true;
+            this.stsOut.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsOut.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stsOut.ItemRadius = 4;
+            this.stsOut.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.stsOut.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton18,
+            this.toolStripButton19,
+            this.toolStripButton20,
+            this.toolStripButton21,
+            this.toolStripButton22});
+            this.stsOut.Location = new System.Drawing.Point(966, 0);
+            this.stsOut.Name = "stsOut";
+            this.stsOut.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.stsOut.Size = new System.Drawing.Size(24, 194);
+            this.stsOut.SkinAllColor = true;
+            this.stsOut.TabIndex = 2;
+            this.stsOut.Text = "skinToolStrip1";
+            this.stsOut.TitleAnamorphosis = true;
+            this.stsOut.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
+            this.stsOut.TitleRadius = 4;
+            this.stsOut.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // toolStripButton18
+            // 
+            this.toolStripButton18.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton18.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton18.Name = "toolStripButton18";
+            this.toolStripButton18.Size = new System.Drawing.Size(21, 4);
+            this.toolStripButton18.Text = "toolStripButton1";
+            // 
+            // toolStripButton19
+            // 
+            this.toolStripButton19.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton19.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton19.Image")));
+            this.toolStripButton19.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton19.Name = "toolStripButton19";
+            this.toolStripButton19.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton19.Text = "toolStripButton2";
+            // 
+            // toolStripButton20
+            // 
+            this.toolStripButton20.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton20.Image")));
+            this.toolStripButton20.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton20.Name = "toolStripButton20";
+            this.toolStripButton20.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton20.Text = "toolStripButton3";
+            // 
+            // toolStripButton21
+            // 
+            this.toolStripButton21.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton21.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton21.Image")));
+            this.toolStripButton21.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton21.Name = "toolStripButton21";
+            this.toolStripButton21.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton21.Text = "toolStripButton4";
+            // 
+            // toolStripButton22
+            // 
+            this.toolStripButton22.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton22.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton22.Image")));
+            this.toolStripButton22.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton22.Name = "toolStripButton22";
+            this.toolStripButton22.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton22.Text = "toolStripButton5";
+            // 
             // richOutPut
             // 
             this.richOutPut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richOutPut.ContextMenuStrip = this.rightClickOnOutPutWindow;
             this.richOutPut.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richOutPut.Location = new System.Drawing.Point(0, 0);
+            this.richOutPut.Location = new System.Drawing.Point(3, 3);
             this.richOutPut.Name = "richOutPut";
-            this.richOutPut.Size = new System.Drawing.Size(996, 194);
+            this.richOutPut.Size = new System.Drawing.Size(960, 188);
             this.richOutPut.TabIndex = 0;
             this.richOutPut.Text = "";
             // 
@@ -2125,6 +2297,7 @@
             // 
             // tpDebug
             // 
+            this.tpDebug.Controls.Add(this.tableLayoutPanel2);
             this.tpDebug.Location = new System.Drawing.Point(4, 22);
             this.tpDebug.Name = "tpDebug";
             this.tpDebug.Padding = new System.Windows.Forms.Padding(3);
@@ -2132,6 +2305,503 @@
             this.tpDebug.TabIndex = 1;
             this.tpDebug.Text = "调试";
             this.tpDebug.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.splitContainer4, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.skinToolStrip3, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1418, 229);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // splitContainer4
+            // 
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.Location = new System.Drawing.Point(3, 32);
+            this.splitContainer4.Name = "splitContainer4";
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.Controls.Add(this.tableLayoutPanel3);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.Controls.Add(this.tableLayoutPanel4);
+            this.splitContainer4.Size = new System.Drawing.Size(1412, 194);
+            this.splitContainer4.SplitterDistance = 412;
+            this.splitContainer4.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.skinToolStrip1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.skinTreeView1, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(412, 194);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // skinToolStrip1
+            // 
+            this.skinToolStrip1.Arrow = System.Drawing.Color.Black;
+            this.skinToolStrip1.Back = System.Drawing.Color.White;
+            this.skinToolStrip1.BackRadius = 4;
+            this.skinToolStrip1.BackRectangle = new System.Drawing.Rectangle(10, 10, 10, 10);
+            this.skinToolStrip1.Base = System.Drawing.Color.White;
+            this.skinToolStrip1.BaseFore = System.Drawing.Color.Black;
+            this.skinToolStrip1.BaseForeAnamorphosis = false;
+            this.skinToolStrip1.BaseForeAnamorphosisBorder = 4;
+            this.skinToolStrip1.BaseForeAnamorphosisColor = System.Drawing.Color.White;
+            this.skinToolStrip1.BaseForeOffset = new System.Drawing.Point(0, 0);
+            this.skinToolStrip1.BaseHoverFore = System.Drawing.Color.White;
+            this.skinToolStrip1.BaseItemAnamorphosis = true;
+            this.skinToolStrip1.BaseItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip1.BaseItemBorderShow = true;
+            this.skinToolStrip1.BaseItemDown = ((System.Drawing.Image)(resources.GetObject("skinToolStrip1.BaseItemDown")));
+            this.skinToolStrip1.BaseItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip1.BaseItemMouse = ((System.Drawing.Image)(resources.GetObject("skinToolStrip1.BaseItemMouse")));
+            this.skinToolStrip1.BaseItemNorml = null;
+            this.skinToolStrip1.BaseItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip1.BaseItemRadius = 4;
+            this.skinToolStrip1.BaseItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinToolStrip1.BaseItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip1.BindTabControl = null;
+            this.skinToolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.skinToolStrip1.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.skinToolStrip1.Fore = System.Drawing.Color.Black;
+            this.skinToolStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 4, 2);
+            this.skinToolStrip1.HoverFore = System.Drawing.Color.White;
+            this.skinToolStrip1.ItemAnamorphosis = true;
+            this.skinToolStrip1.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip1.ItemBorderShow = true;
+            this.skinToolStrip1.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip1.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip1.ItemRadius = 4;
+            this.skinToolStrip1.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton23,
+            this.toolStripButton24,
+            this.toolStripButton25,
+            this.toolStripButton27,
+            this.toolStripButton26,
+            this.toolStripButton46,
+            this.toolStripButton28,
+            this.toolStripButton29,
+            this.toolStripButton30});
+            this.skinToolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.skinToolStrip1.Name = "skinToolStrip1";
+            this.skinToolStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinToolStrip1.Size = new System.Drawing.Size(24, 194);
+            this.skinToolStrip1.SkinAllColor = true;
+            this.skinToolStrip1.TabIndex = 1;
+            this.skinToolStrip1.Text = "skinToolStrip1";
+            this.skinToolStrip1.TitleAnamorphosis = true;
+            this.skinToolStrip1.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
+            this.skinToolStrip1.TitleRadius = 4;
+            this.skinToolStrip1.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // toolStripButton23
+            // 
+            this.toolStripButton23.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton23.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton23.Name = "toolStripButton23";
+            this.toolStripButton23.Size = new System.Drawing.Size(21, 4);
+            this.toolStripButton23.Text = "toolStripButton1";
+            // 
+            // toolStripButton24
+            // 
+            this.toolStripButton24.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton24.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton24.Image")));
+            this.toolStripButton24.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton24.Name = "toolStripButton24";
+            this.toolStripButton24.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton24.Text = "toolStripButton2";
+            // 
+            // toolStripButton25
+            // 
+            this.toolStripButton25.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton25.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton25.Image")));
+            this.toolStripButton25.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton25.Name = "toolStripButton25";
+            this.toolStripButton25.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton25.Text = "toolStripButton3";
+            // 
+            // toolStripButton27
+            // 
+            this.toolStripButton27.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton27.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton27.Image")));
+            this.toolStripButton27.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton27.Name = "toolStripButton27";
+            this.toolStripButton27.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton27.Text = "toolStripButton5";
+            // 
+            // toolStripButton26
+            // 
+            this.toolStripButton26.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton26.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton26.Image")));
+            this.toolStripButton26.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton26.Name = "toolStripButton26";
+            this.toolStripButton26.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton26.Text = "toolStripButton4";
+            // 
+            // toolStripButton46
+            // 
+            this.toolStripButton46.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton46.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton46.Image")));
+            this.toolStripButton46.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton46.Name = "toolStripButton46";
+            this.toolStripButton46.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton46.Text = "toolStripButton46";
+            // 
+            // toolStripButton28
+            // 
+            this.toolStripButton28.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton28.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton28.Image")));
+            this.toolStripButton28.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton28.Name = "toolStripButton28";
+            this.toolStripButton28.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton28.Text = "toolStripButton6";
+            // 
+            // toolStripButton29
+            // 
+            this.toolStripButton29.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton29.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton29.Image")));
+            this.toolStripButton29.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton29.Name = "toolStripButton29";
+            this.toolStripButton29.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton29.Text = "toolStripButton7";
+            // 
+            // toolStripButton30
+            // 
+            this.toolStripButton30.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton30.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton30.Image")));
+            this.toolStripButton30.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton30.Name = "toolStripButton30";
+            this.toolStripButton30.Size = new System.Drawing.Size(23, 20);
+            this.toolStripButton30.Text = "toolStripButton8";
+            // 
+            // skinTreeView1
+            // 
+            this.skinTreeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTreeView1.Location = new System.Drawing.Point(33, 3);
+            this.skinTreeView1.Name = "skinTreeView1";
+            this.skinTreeView1.Size = new System.Drawing.Size(376, 188);
+            this.skinTreeView1.TabIndex = 2;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel4.Controls.Add(this.skinToolStrip2, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.richTextBox1, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(996, 194);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // skinToolStrip2
+            // 
+            this.skinToolStrip2.Arrow = System.Drawing.Color.Black;
+            this.skinToolStrip2.Back = System.Drawing.Color.White;
+            this.skinToolStrip2.BackRadius = 4;
+            this.skinToolStrip2.BackRectangle = new System.Drawing.Rectangle(10, 10, 10, 10);
+            this.skinToolStrip2.Base = System.Drawing.Color.White;
+            this.skinToolStrip2.BaseFore = System.Drawing.Color.Black;
+            this.skinToolStrip2.BaseForeAnamorphosis = false;
+            this.skinToolStrip2.BaseForeAnamorphosisBorder = 4;
+            this.skinToolStrip2.BaseForeAnamorphosisColor = System.Drawing.Color.White;
+            this.skinToolStrip2.BaseForeOffset = new System.Drawing.Point(0, 0);
+            this.skinToolStrip2.BaseHoverFore = System.Drawing.Color.White;
+            this.skinToolStrip2.BaseItemAnamorphosis = true;
+            this.skinToolStrip2.BaseItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip2.BaseItemBorderShow = true;
+            this.skinToolStrip2.BaseItemDown = ((System.Drawing.Image)(resources.GetObject("skinToolStrip2.BaseItemDown")));
+            this.skinToolStrip2.BaseItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip2.BaseItemMouse = ((System.Drawing.Image)(resources.GetObject("skinToolStrip2.BaseItemMouse")));
+            this.skinToolStrip2.BaseItemNorml = null;
+            this.skinToolStrip2.BaseItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip2.BaseItemRadius = 4;
+            this.skinToolStrip2.BaseItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinToolStrip2.BaseItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip2.BindTabControl = null;
+            this.skinToolStrip2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.skinToolStrip2.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.skinToolStrip2.Fore = System.Drawing.Color.Black;
+            this.skinToolStrip2.GripMargin = new System.Windows.Forms.Padding(2, 2, 4, 2);
+            this.skinToolStrip2.HoverFore = System.Drawing.Color.White;
+            this.skinToolStrip2.ItemAnamorphosis = true;
+            this.skinToolStrip2.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip2.ItemBorderShow = true;
+            this.skinToolStrip2.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip2.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip2.ItemRadius = 4;
+            this.skinToolStrip2.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinToolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton31,
+            this.toolStripButton32,
+            this.toolStripButton33,
+            this.toolStripButton34,
+            this.toolStripButton35});
+            this.skinToolStrip2.Location = new System.Drawing.Point(966, 0);
+            this.skinToolStrip2.Name = "skinToolStrip2";
+            this.skinToolStrip2.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinToolStrip2.Size = new System.Drawing.Size(24, 194);
+            this.skinToolStrip2.SkinAllColor = true;
+            this.skinToolStrip2.TabIndex = 2;
+            this.skinToolStrip2.Text = "skinToolStrip1";
+            this.skinToolStrip2.TitleAnamorphosis = true;
+            this.skinToolStrip2.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
+            this.skinToolStrip2.TitleRadius = 4;
+            this.skinToolStrip2.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // toolStripButton31
+            // 
+            this.toolStripButton31.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton31.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton31.Name = "toolStripButton31";
+            this.toolStripButton31.Size = new System.Drawing.Size(21, 4);
+            this.toolStripButton31.Text = "toolStripButton1";
+            // 
+            // toolStripButton32
+            // 
+            this.toolStripButton32.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton32.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton32.Image")));
+            this.toolStripButton32.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton32.Name = "toolStripButton32";
+            this.toolStripButton32.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton32.Text = "toolStripButton2";
+            // 
+            // toolStripButton33
+            // 
+            this.toolStripButton33.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton33.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton33.Image")));
+            this.toolStripButton33.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton33.Name = "toolStripButton33";
+            this.toolStripButton33.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton33.Text = "toolStripButton3";
+            // 
+            // toolStripButton34
+            // 
+            this.toolStripButton34.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton34.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton34.Image")));
+            this.toolStripButton34.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton34.Name = "toolStripButton34";
+            this.toolStripButton34.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton34.Text = "toolStripButton4";
+            // 
+            // toolStripButton35
+            // 
+            this.toolStripButton35.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton35.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton35.Image")));
+            this.toolStripButton35.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton35.Name = "toolStripButton35";
+            this.toolStripButton35.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton35.Text = "toolStripButton5";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBox1.ContextMenuStrip = this.rightClickOnOutPutWindow;
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Location = new System.Drawing.Point(3, 3);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(960, 188);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
+            // skinToolStrip3
+            // 
+            this.skinToolStrip3.Arrow = System.Drawing.Color.Black;
+            this.skinToolStrip3.Back = System.Drawing.Color.White;
+            this.skinToolStrip3.BackRadius = 4;
+            this.skinToolStrip3.BackRectangle = new System.Drawing.Rectangle(10, 10, 10, 10);
+            this.skinToolStrip3.Base = System.Drawing.Color.White;
+            this.skinToolStrip3.BaseFore = System.Drawing.Color.Black;
+            this.skinToolStrip3.BaseForeAnamorphosis = false;
+            this.skinToolStrip3.BaseForeAnamorphosisBorder = 4;
+            this.skinToolStrip3.BaseForeAnamorphosisColor = System.Drawing.Color.White;
+            this.skinToolStrip3.BaseForeOffset = new System.Drawing.Point(0, 0);
+            this.skinToolStrip3.BaseHoverFore = System.Drawing.Color.White;
+            this.skinToolStrip3.BaseItemAnamorphosis = true;
+            this.skinToolStrip3.BaseItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip3.BaseItemBorderShow = true;
+            this.skinToolStrip3.BaseItemDown = ((System.Drawing.Image)(resources.GetObject("skinToolStrip3.BaseItemDown")));
+            this.skinToolStrip3.BaseItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip3.BaseItemMouse = ((System.Drawing.Image)(resources.GetObject("skinToolStrip3.BaseItemMouse")));
+            this.skinToolStrip3.BaseItemNorml = null;
+            this.skinToolStrip3.BaseItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip3.BaseItemRadius = 4;
+            this.skinToolStrip3.BaseItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinToolStrip3.BaseItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip3.BindTabControl = null;
+            this.skinToolStrip3.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.skinToolStrip3.Fore = System.Drawing.Color.Black;
+            this.skinToolStrip3.GripMargin = new System.Windows.Forms.Padding(2, 2, 4, 2);
+            this.skinToolStrip3.HoverFore = System.Drawing.Color.White;
+            this.skinToolStrip3.ItemAnamorphosis = true;
+            this.skinToolStrip3.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip3.ItemBorderShow = true;
+            this.skinToolStrip3.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip3.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip3.ItemRadius = 4;
+            this.skinToolStrip3.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinToolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton37,
+            this.toolStripButton38,
+            this.toolStripButton39,
+            this.toolStripButton40,
+            this.toolStripButton41,
+            this.toolStripButton42,
+            this.toolStripButton43,
+            this.toolStripButton44,
+            this.toolStripButton45,
+            this.toolStripProgressBar1,
+            this.toolStripLabel2,
+            this.toolStripLabel3,
+            this.toolStripLabel4,
+            this.toolStripLabel5});
+            this.skinToolStrip3.Location = new System.Drawing.Point(0, 0);
+            this.skinToolStrip3.Name = "skinToolStrip3";
+            this.skinToolStrip3.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinToolStrip3.Size = new System.Drawing.Size(1418, 25);
+            this.skinToolStrip3.SkinAllColor = true;
+            this.skinToolStrip3.TabIndex = 1;
+            this.skinToolStrip3.Text = "skinToolStrip1";
+            this.skinToolStrip3.TitleAnamorphosis = true;
+            this.skinToolStrip3.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
+            this.skinToolStrip3.TitleRadius = 4;
+            this.skinToolStrip3.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // toolStripButton37
+            // 
+            this.toolStripButton37.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton37.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton37.Image")));
+            this.toolStripButton37.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton37.Name = "toolStripButton37";
+            this.toolStripButton37.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton37.Text = "toolStripButton9";
+            // 
+            // toolStripButton38
+            // 
+            this.toolStripButton38.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton38.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton38.Image")));
+            this.toolStripButton38.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton38.Name = "toolStripButton38";
+            this.toolStripButton38.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton38.Text = "toolStripButton10";
+            // 
+            // toolStripButton39
+            // 
+            this.toolStripButton39.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton39.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton39.Image")));
+            this.toolStripButton39.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton39.Name = "toolStripButton39";
+            this.toolStripButton39.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton39.Text = "toolStripButton11";
+            // 
+            // toolStripButton40
+            // 
+            this.toolStripButton40.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton40.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton40.Image")));
+            this.toolStripButton40.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton40.Name = "toolStripButton40";
+            this.toolStripButton40.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton40.Text = "toolStripButton12";
+            // 
+            // toolStripButton41
+            // 
+            this.toolStripButton41.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton41.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton41.Image")));
+            this.toolStripButton41.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton41.Name = "toolStripButton41";
+            this.toolStripButton41.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton41.Text = "toolStripButton13";
+            // 
+            // toolStripButton42
+            // 
+            this.toolStripButton42.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton42.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton42.Image")));
+            this.toolStripButton42.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton42.Name = "toolStripButton42";
+            this.toolStripButton42.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton42.Text = "toolStripButton14";
+            // 
+            // toolStripButton43
+            // 
+            this.toolStripButton43.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton43.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton43.Image")));
+            this.toolStripButton43.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton43.Name = "toolStripButton43";
+            this.toolStripButton43.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton43.Text = "toolStripButton15";
+            // 
+            // toolStripButton44
+            // 
+            this.toolStripButton44.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton44.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton44.Image")));
+            this.toolStripButton44.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton44.Name = "toolStripButton44";
+            this.toolStripButton44.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton44.Text = "toolStripButton16";
+            // 
+            // toolStripButton45
+            // 
+            this.toolStripButton45.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton45.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton45.Image")));
+            this.toolStripButton45.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton45.Name = "toolStripButton45";
+            this.toolStripButton45.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton45.Text = "toolStripButton17";
+            // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(400, 22);
+            this.toolStripProgressBar1.Visible = false;
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(56, 22);
+            this.toolStripLabel2.Text = "通过数：";
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(15, 22);
+            this.toolStripLabel3.Text = "0";
+            // 
+            // toolStripLabel4
+            // 
+            this.toolStripLabel4.Name = "toolStripLabel4";
+            this.toolStripLabel4.Size = new System.Drawing.Size(44, 22);
+            this.toolStripLabel4.Text = "耗时：";
+            // 
+            // toolStripLabel5
+            // 
+            this.toolStripLabel5.Name = "toolStripLabel5";
+            this.toolStripLabel5.Size = new System.Drawing.Size(56, 22);
+            this.toolStripLabel5.Text = "00:00:00";
             // 
             // MainForm
             // 
@@ -2190,8 +2860,29 @@
             this.tlpRunControl.PerformLayout();
             this.stsRunButton.ResumeLayout(false);
             this.stsRunButton.PerformLayout();
+            this.tlpOut.ResumeLayout(false);
+            this.tlpOut.PerformLayout();
+            this.stsOut.ResumeLayout(false);
+            this.stsOut.PerformLayout();
             this.stsOutPut.ResumeLayout(false);
             this.stsOutPut.PerformLayout();
+            this.tpDebug.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.skinToolStrip1.ResumeLayout(false);
+            this.skinToolStrip1.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.skinToolStrip2.ResumeLayout(false);
+            this.skinToolStrip2.PerformLayout();
+            this.skinToolStrip3.ResumeLayout(false);
+            this.skinToolStrip3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2397,6 +3088,50 @@
         private System.Windows.Forms.ToolStripLabel tslTime;
         private CCWin.SkinControl.SkinTreeView stvStatus;
         private System.Windows.Forms.ToolStripButton toolStripButton17;
+        private System.Windows.Forms.TableLayoutPanel tlpOut;
+        private CCWin.SkinControl.SkinToolStrip stsOut;
+        private System.Windows.Forms.ToolStripButton toolStripButton18;
+        private System.Windows.Forms.ToolStripButton toolStripButton19;
+        private System.Windows.Forms.ToolStripButton toolStripButton20;
+        private System.Windows.Forms.ToolStripButton toolStripButton21;
+        private System.Windows.Forms.ToolStripButton toolStripButton22;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.SplitContainer splitContainer4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private CCWin.SkinControl.SkinToolStrip skinToolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton23;
+        private System.Windows.Forms.ToolStripButton toolStripButton24;
+        private System.Windows.Forms.ToolStripButton toolStripButton25;
+        private System.Windows.Forms.ToolStripButton toolStripButton27;
+        private System.Windows.Forms.ToolStripButton toolStripButton26;
+        private System.Windows.Forms.ToolStripButton toolStripButton46;
+        private System.Windows.Forms.ToolStripButton toolStripButton28;
+        private System.Windows.Forms.ToolStripButton toolStripButton29;
+        private System.Windows.Forms.ToolStripButton toolStripButton30;
+        private CCWin.SkinControl.SkinTreeView skinTreeView1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private CCWin.SkinControl.SkinToolStrip skinToolStrip2;
+        private System.Windows.Forms.ToolStripButton toolStripButton31;
+        private System.Windows.Forms.ToolStripButton toolStripButton32;
+        private System.Windows.Forms.ToolStripButton toolStripButton33;
+        private System.Windows.Forms.ToolStripButton toolStripButton34;
+        private System.Windows.Forms.ToolStripButton toolStripButton35;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private CCWin.SkinControl.SkinToolStrip skinToolStrip3;
+        private System.Windows.Forms.ToolStripButton toolStripButton37;
+        private System.Windows.Forms.ToolStripButton toolStripButton38;
+        private System.Windows.Forms.ToolStripButton toolStripButton39;
+        private System.Windows.Forms.ToolStripButton toolStripButton40;
+        private System.Windows.Forms.ToolStripButton toolStripButton41;
+        private System.Windows.Forms.ToolStripButton toolStripButton42;
+        private System.Windows.Forms.ToolStripButton toolStripButton43;
+        private System.Windows.Forms.ToolStripButton toolStripButton44;
+        private System.Windows.Forms.ToolStripButton toolStripButton45;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel5;
     }
 }
 
