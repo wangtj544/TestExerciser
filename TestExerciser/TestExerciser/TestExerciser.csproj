@@ -29,7 +29,7 @@
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -340,6 +340,18 @@
     <Compile Include="User\UserResetPwd.Designer.cs">
       <DependentUpon>UserResetPwd.cs</DependentUpon>
     </Compile>
+    <Content Include="Tools\spyxx.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\spyxxhk.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\spyxxhk_amd64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\spyxx_amd64.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="MainBugManager.resx">
       <DependentUpon>MainBugManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -491,7 +503,15 @@
     </Compile>
     <None Include="SharpPlink-Win32.svnExe" />
     <None Include="TestExerciser_TemporaryKey.pfx" />
-    <None Include="Tools\AutoIt.chm" />
+    <Content Include="Tools\AutoIt.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Tools\spyxx.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Tools\spyxx_amd64.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -585,10 +605,18 @@
     <Content Include="TestExerciser.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Tools\AutoIt.exe" />
-    <Content Include="Tools\inspect_x32.exe" />
-    <Content Include="Tools\inspect_x64.exe" />
-    <Content Include="Tools\PUTTY.exe" />
+    <Content Include="Tools\AutoIt.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\inspect_x32.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\inspect_x64.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\PUTTY.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\unsure.gif" />
     <None Include="Resources\undo_16x16.png" />
     <None Include="Resources\backward0_16x16.png" />

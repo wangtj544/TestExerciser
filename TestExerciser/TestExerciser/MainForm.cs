@@ -2591,7 +2591,67 @@ namespace TestExerciser
             else
             {
                 MessageBox.Show("请确认log文件是否生成！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }            
+            }
+        }
+
+        private void spyX86NToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\spyxx.exe";
+                p.Start();
+                p.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }     
+        }
+
+        private void spyX64MToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\spyxx_amd64.exe";
+                p.Start();
+                p.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }     
+        }
+
+        private void spyX64帮助ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\spyxx_amd64.chm";
+                p.Start();
+                p.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }     
+        }
+
+        private void spyX86帮助ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\spyxx.chm";
+                p.Start();
+                p.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }     
         }
     }
 }

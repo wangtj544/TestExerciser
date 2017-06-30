@@ -113,6 +113,8 @@ namespace FastColoredTextBoxNS
 
         protected Regex PythonStringRegex;
         protected Regex PythonKeywordRegex;
+        protected Regex PythonKeywordSelf;
+        protected Regex PythonKeywordPara;
         protected Regex PythonNumberRegex;
         protected Regex PythonFunctionsRegex;
         protected Regex PythonClassNameRegex;
@@ -677,6 +679,8 @@ namespace FastColoredTextBoxNS
                     AttributeStyle = MaroonStyle;
                     ClassNameStyle = BoldStyle;
                     KeywordStyle = BlueBoldStyle;
+                    KeywordStyle2 = MagentaStyle;
+                    KeywordStyle3 = BrownStyle;
                     CommentTagStyle = GrayStyle;
                     break;
                 case Language.Ruby:
@@ -1253,10 +1257,13 @@ namespace FastColoredTextBoxNS
                                           RegexCompiledOption);
             PythonAttributeRegex = new Regex(@"^\s*(?<range>\[.+?\])\s*$", RegexOptions.Multiline | RegexCompiledOption);
             PythonClassNameRegex = new Regex(@"\b(class|def)\s+(?<range>\w+?)\b", RegexCompiledOption);
+
             PythonKeywordRegex = new Regex(
                     @"\b(operate|except|False|None|True|and|as|assert|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|raise|return|try|while|with|yield)\b",
-                    RegexCompiledOption);          
-
+                    RegexCompiledOption);
+            PythonKeywordSelf = new Regex(@"\b(self)\b",
+                    RegexCompiledOption);
+            PythonKeywordPara = new Regex(@"",RegexCompiledOption);
         }
 
         public virtual void PythonSyntaxHighlight(Range range)
@@ -1292,6 +1299,8 @@ namespace FastColoredTextBoxNS
             range.SetStyle(ClassNameStyle, PythonClassNameRegex);
             //keyword highlighting
             range.SetStyle(KeywordStyle, PythonKeywordRegex);
+            range.SetStyle(KeywordStyle2, PythonKeywordSelf);
+            range.SetStyle(KeywordStyle3, PythonKeywordPara);
             
 
             //clear folding markers

@@ -36,3 +36,4 @@ E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\FastColoredTextBoxNS
 E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\EditorControl.csproj.GenerateResource.Cache
 E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\EditorControl.dll
 E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\EditorControl.pdb
+E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\EditorControl.csprojResolveAssemblyReference.cache

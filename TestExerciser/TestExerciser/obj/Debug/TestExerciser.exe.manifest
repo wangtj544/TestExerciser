@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="TestExerciser.exe" version="2.0.0.7" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity name="TestExerciser.exe" version="2.0.0.10" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <description asmv2:iconFile="Resources\TestExecute.ico" asmv2:publisher="张渊" co.v1:suiteName="TestExerciser" asmv2:product="TestExerciser" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -109,14 +109,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1483264">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1485824">
       <assemblyIdentity name="TestExerciser" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ympVpOsxhWHuHpI2XrzO8p3MBo7QDiaTZgX00xSfb0Y=</dsig:DigestValue>
+        <dsig:DigestValue>ZO2mvDFNTBSp7jqNhR3LyLGzClX64d3ESYYfQTv1ZGs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -128,7 +128,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AMN6VWXS8EevXvPeJc3PXCQ+n1f5AM1m7ubjI1s0aBg=</dsig:DigestValue>
+        <dsig:DigestValue>CE1xvsWgTqERedf90/8blaXmfkLRoIIGcqIDPTZb5LU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -690,6 +690,15 @@
       <dsig:DigestValue>8OHMrMbObr6win5BNd5woLbNvq1WRxG6flX5jEm2dkQ=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Tools\AutoIt.chm" size="6791791">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CBscnl+RAhUA4K4A+8Fnl5JXyr1BX6tic/r98DvG/aA=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Tools\AutoIt.exe" size="208192">
     <hash>
       <dsig:Transforms>
@@ -724,6 +733,42 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>n550JB1Z7M/nBAv9y7zqyzdO2jl8xTpBl7WeT284CpE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Tools\spyxx.exe" size="689304">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wTwn+uei4vrJxXkejUCL48acF9jVsdYsW8aJJQhfCX0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Tools\spyxx_amd64.exe" size="966320">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>EnRubSvbh3ESOAqeej6unZ6I9x841Ajfn0nP1Q1Etsw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Tools\spyxxhk.dll" size="167584">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9xVAVrDax4WOGV3iD341uLeBWahxQiRzpab+0f7OrUM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Tools\spyxxhk_amd64.dll" size="185528">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zLK4Ru4f23STeNowpkBM5jXDpWrpvR1bWieX9w9xuHk=</dsig:DigestValue>
     </hash>
   </file>
   <fileAssociation extension=".tc" description="测试用例" progid="tc" defaultIcon="Resources\tc.ico" xmlns="urn:schemas-microsoft-com:clickonce.v1" />

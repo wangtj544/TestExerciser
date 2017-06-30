@@ -397,3 +397,14 @@ G:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\zh-Hans\TestExerciser.res
 G:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.TrustInfo.xml
 G:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.exe.manifest
 G:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.application
+E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\AutoIt.chm
+E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\AutoIt.exe
+E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\inspect_x32.exe
+E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\inspect_x64.exe
+E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\PUTTY.exe
+E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\spyxx.exe
+E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\spyxx_amd64.exe
+E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\spyxx.chm
+E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\spyxx_amd64.chm
+E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\spyxxhk.dll
+E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\spyxxhk_amd64.dll
