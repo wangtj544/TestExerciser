@@ -202,33 +202,33 @@
             this.tlpRunControl = new System.Windows.Forms.TableLayoutPanel();
             this.stsRunButton = new CCWin.SkinControl.SkinToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.tsbStart = new System.Windows.Forms.ToolStripButton();
+            this.tsbReRunFailed = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.tsbStop = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.tsbClose = new System.Windows.Forms.ToolStripButton();
+            this.tsbHelp = new System.Windows.Forms.ToolStripButton();
             this.stvStatus = new CCWin.SkinControl.SkinTreeView();
             this.tlpOut = new System.Windows.Forms.TableLayoutPanel();
             this.stsOut = new CCWin.SkinControl.SkinToolStrip();
             this.toolStripButton18 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton19 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton21 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton22 = new System.Windows.Forms.ToolStripButton();
+            this.tsbUp = new System.Windows.Forms.ToolStripButton();
+            this.stbDown = new System.Windows.Forms.ToolStripButton();
+            this.stbWarp = new System.Windows.Forms.ToolStripButton();
+            this.tsbDelete = new System.Windows.Forms.ToolStripButton();
             this.richOutPut = new System.Windows.Forms.RichTextBox();
             this.stsOutPut = new CCWin.SkinControl.SkinToolStrip();
             this.tsbLogView = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton17 = new System.Windows.Forms.ToolStripButton();
+            this.tsbPassed = new System.Windows.Forms.ToolStripButton();
+            this.tsbIgnored = new System.Windows.Forms.ToolStripButton();
+            this.tsbSortA = new System.Windows.Forms.ToolStripButton();
+            this.tsbSortD = new System.Windows.Forms.ToolStripButton();
+            this.tsbExpandAll = new System.Windows.Forms.ToolStripButton();
+            this.tsbCollapse = new System.Windows.Forms.ToolStripButton();
+            this.tsbExport = new System.Windows.Forms.ToolStripButton();
+            this.tsbImport = new System.Windows.Forms.ToolStripButton();
+            this.tsbSetting = new System.Windows.Forms.ToolStripButton();
             this.tspbRunStatus = new System.Windows.Forms.ToolStripProgressBar();
             this.tslPassedNO = new System.Windows.Forms.ToolStripLabel();
             this.tslNO = new System.Windows.Forms.ToolStripLabel();
@@ -240,38 +240,38 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.skinToolStrip1 = new CCWin.SkinControl.SkinToolStrip();
             this.toolStripButton23 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton24 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton25 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton27 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton26 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton46 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton28 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton29 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton30 = new System.Windows.Forms.ToolStripButton();
-            this.skinTreeView1 = new CCWin.SkinControl.SkinTreeView();
+            this.dtsbDebug = new System.Windows.Forms.ToolStripButton();
+            this.dtsbResume = new System.Windows.Forms.ToolStripButton();
+            this.dtsbStop = new System.Windows.Forms.ToolStripButton();
+            this.dtsbViewBreakPoint = new System.Windows.Forms.ToolStripButton();
+            this.dtsbMuteBreakPoint = new System.Windows.Forms.ToolStripButton();
+            this.dtsbRestoreLayout = new System.Windows.Forms.ToolStripButton();
+            this.dtsbClose = new System.Windows.Forms.ToolStripButton();
+            this.dtsbHelp = new System.Windows.Forms.ToolStripButton();
+            this.stvResultsTree = new CCWin.SkinControl.SkinTreeView();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.skinToolStrip2 = new CCWin.SkinControl.SkinToolStrip();
             this.toolStripButton31 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton32 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton33 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton34 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton35 = new System.Windows.Forms.ToolStripButton();
+            this.dtsbUp = new System.Windows.Forms.ToolStripButton();
+            this.dtsbDown = new System.Windows.Forms.ToolStripButton();
+            this.dtsbWarp = new System.Windows.Forms.ToolStripButton();
+            this.dtsbDelete = new System.Windows.Forms.ToolStripButton();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.skinToolStrip3 = new CCWin.SkinControl.SkinToolStrip();
-            this.toolStripButton37 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton38 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton39 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton40 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton41 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton42 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton43 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton44 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton45 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            this.dtsbPassed = new System.Windows.Forms.ToolStripButton();
+            this.dtsbIgnored = new System.Windows.Forms.ToolStripButton();
+            this.dtsbSortA = new System.Windows.Forms.ToolStripButton();
+            this.dtsbSortD = new System.Windows.Forms.ToolStripButton();
+            this.dtsbExpandAll = new System.Windows.Forms.ToolStripButton();
+            this.dtsbCollapse = new System.Windows.Forms.ToolStripButton();
+            this.dtsbExport = new System.Windows.Forms.ToolStripButton();
+            this.dtsbImport = new System.Windows.Forms.ToolStripButton();
+            this.dtsbSetting = new System.Windows.Forms.ToolStripButton();
+            this.dtspbRunStatus = new System.Windows.Forms.ToolStripProgressBar();
+            this.dtslPassedNO = new System.Windows.Forms.ToolStripLabel();
+            this.dtslNO = new System.Windows.Forms.ToolStripLabel();
+            this.dtslTimeUse = new System.Windows.Forms.ToolStripLabel();
+            this.dtslTime = new System.Windows.Forms.ToolStripLabel();
             this.menu_ProjectManage.SuspendLayout();
             this.rightClickOnProManager.SuspendLayout();
             this.rightClickOnOutPutWindow.SuspendLayout();
@@ -332,7 +332,7 @@
             this.登录ToolStripMenuItem});
             this.menu_ProjectManage.Location = new System.Drawing.Point(4, 32);
             this.menu_ProjectManage.Name = "menu_ProjectManage";
-            this.menu_ProjectManage.Size = new System.Drawing.Size(1432, 25);
+            this.menu_ProjectManage.Size = new System.Drawing.Size(1722, 25);
             this.menu_ProjectManage.TabIndex = 0;
             this.menu_ProjectManage.Text = "menuStrip1";
             // 
@@ -1288,7 +1288,7 @@
             this.lbWordUnderMouse});
             this.ssMain.Location = new System.Drawing.Point(4, 799);
             this.ssMain.Name = "ssMain";
-            this.ssMain.Size = new System.Drawing.Size(1432, 22);
+            this.ssMain.Size = new System.Drawing.Size(1722, 22);
             this.ssMain.TabIndex = 5;
             this.ssMain.Text = "statusStrip1";
             // 
@@ -1343,7 +1343,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(4, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1432, 29);
+            this.panel1.Size = new System.Drawing.Size(1722, 29);
             this.panel1.TabIndex = 6;
             // 
             // tsMain
@@ -1375,7 +1375,7 @@
             this.toolStripSeparator1});
             this.tsMain.Location = new System.Drawing.Point(0, 0);
             this.tsMain.Name = "tsMain";
-            this.tsMain.Size = new System.Drawing.Size(1432, 25);
+            this.tsMain.Size = new System.Drawing.Size(1722, 25);
             this.tsMain.TabIndex = 5;
             this.tsMain.Text = "toolStrip1";
             // 
@@ -1612,7 +1612,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tcManager);
-            this.splitContainer1.Size = new System.Drawing.Size(1432, 713);
+            this.splitContainer1.Size = new System.Drawing.Size(1722, 713);
             this.splitContainer1.SplitterDistance = 448;
             this.splitContainer1.TabIndex = 7;
             // 
@@ -1630,8 +1630,8 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tsFiles);
             this.splitContainer2.Panel2.Controls.Add(this.vScrollBar1);
-            this.splitContainer2.Size = new System.Drawing.Size(1432, 448);
-            this.splitContainer2.SplitterDistance = 266;
+            this.splitContainer2.Size = new System.Drawing.Size(1722, 448);
+            this.splitContainer2.SplitterDistance = 319;
             this.splitContainer2.TabIndex = 1;
             // 
             // mainTabControl
@@ -1642,7 +1642,7 @@
             this.mainTabControl.Location = new System.Drawing.Point(0, 0);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
-            this.mainTabControl.Size = new System.Drawing.Size(266, 448);
+            this.mainTabControl.Size = new System.Drawing.Size(319, 448);
             this.mainTabControl.TabIndex = 0;
             // 
             // tabPage1
@@ -1651,7 +1651,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(258, 422);
+            this.tabPage1.Size = new System.Drawing.Size(311, 422);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "工程";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1669,7 +1669,7 @@
             this.tree_Solution.Name = "tree_Solution";
             this.tree_Solution.SelectedImageIndex = 11;
             this.tree_Solution.ShowNodeToolTips = true;
-            this.tree_Solution.Size = new System.Drawing.Size(252, 416);
+            this.tree_Solution.Size = new System.Drawing.Size(305, 416);
             this.tree_Solution.TabIndex = 0;
             this.tree_Solution.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.tree_Solution_AfterLabelEdit);
             this.tree_Solution.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tree_Solution_AfterSelect);
@@ -1757,7 +1757,7 @@
             this.tsFiles.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.tsFiles.Location = new System.Drawing.Point(0, 0);
             this.tsFiles.Name = "tsFiles";
-            this.tsFiles.Size = new System.Drawing.Size(1145, 448);
+            this.tsFiles.Size = new System.Drawing.Size(1382, 448);
             this.tsFiles.TabIndex = 2;
             this.tsFiles.Text = "文本编辑器";
             this.tsFiles.TabStripItemClosing += new FarsiLibrary.Win.TabStripItemClosingHandler(this.tsFiles_TabStripItemClosing);
@@ -1767,7 +1767,7 @@
             // vScrollBar1
             // 
             this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.vScrollBar1.Location = new System.Drawing.Point(1145, 0);
+            this.vScrollBar1.Location = new System.Drawing.Point(1382, 0);
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(17, 448);
             this.vScrollBar1.TabIndex = 1;
@@ -1780,7 +1780,7 @@
             this.tcManager.Location = new System.Drawing.Point(0, 0);
             this.tcManager.Name = "tcManager";
             this.tcManager.SelectedIndex = 0;
-            this.tcManager.Size = new System.Drawing.Size(1432, 261);
+            this.tcManager.Size = new System.Drawing.Size(1722, 261);
             this.tcManager.TabIndex = 0;
             // 
             // tpRun
@@ -1789,7 +1789,7 @@
             this.tpRun.Location = new System.Drawing.Point(4, 22);
             this.tpRun.Name = "tpRun";
             this.tpRun.Padding = new System.Windows.Forms.Padding(3);
-            this.tpRun.Size = new System.Drawing.Size(1424, 235);
+            this.tpRun.Size = new System.Drawing.Size(1714, 235);
             this.tpRun.TabIndex = 0;
             this.tpRun.Text = "执行";
             this.tpRun.UseVisualStyleBackColor = true;
@@ -1807,7 +1807,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1418, 229);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1708, 229);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // splitContainer3
@@ -1823,8 +1823,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.tlpOut);
-            this.splitContainer3.Size = new System.Drawing.Size(1412, 194);
-            this.splitContainer3.SplitterDistance = 412;
+            this.splitContainer3.Size = new System.Drawing.Size(1702, 194);
+            this.splitContainer3.SplitterDistance = 496;
             this.splitContainer3.TabIndex = 0;
             // 
             // tlpRunControl
@@ -1840,7 +1840,7 @@
             this.tlpRunControl.RowCount = 1;
             this.tlpRunControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpRunControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194F));
-            this.tlpRunControl.Size = new System.Drawing.Size(412, 194);
+            this.tlpRunControl.Size = new System.Drawing.Size(496, 194);
             this.tlpRunControl.TabIndex = 0;
             // 
             // stsRunButton
@@ -1882,13 +1882,13 @@
             this.stsRunButton.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.stsRunButton.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
+            this.tsbStart,
+            this.tsbReRunFailed,
             this.toolStripButton4,
-            this.toolStripButton5,
+            this.tsbStop,
             this.toolStripButton6,
-            this.toolStripButton7,
-            this.toolStripButton8});
+            this.tsbClose,
+            this.tsbHelp});
             this.stsRunButton.Location = new System.Drawing.Point(0, 0);
             this.stsRunButton.Name = "stsRunButton";
             this.stsRunButton.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
@@ -1909,23 +1909,23 @@
             this.toolStripButton1.Size = new System.Drawing.Size(21, 4);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
-            // toolStripButton2
+            // tsbStart
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.tsbStart.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbStart.Image = ((System.Drawing.Image)(resources.GetObject("tsbStart.Image")));
+            this.tsbStart.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbStart.Name = "tsbStart";
+            this.tsbStart.Size = new System.Drawing.Size(21, 20);
+            this.tsbStart.Text = "toolStripButton2";
             // 
-            // toolStripButton3
+            // tsbReRunFailed
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.tsbReRunFailed.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbReRunFailed.Image = ((System.Drawing.Image)(resources.GetObject("tsbReRunFailed.Image")));
+            this.tsbReRunFailed.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbReRunFailed.Name = "tsbReRunFailed";
+            this.tsbReRunFailed.Size = new System.Drawing.Size(21, 20);
+            this.tsbReRunFailed.Text = "toolStripButton3";
             // 
             // toolStripButton4
             // 
@@ -1936,14 +1936,14 @@
             this.toolStripButton4.Size = new System.Drawing.Size(21, 20);
             this.toolStripButton4.Text = "toolStripButton4";
             // 
-            // toolStripButton5
+            // tsbStop
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton5.Text = "toolStripButton5";
+            this.tsbStop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbStop.Image = ((System.Drawing.Image)(resources.GetObject("tsbStop.Image")));
+            this.tsbStop.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbStop.Name = "tsbStop";
+            this.tsbStop.Size = new System.Drawing.Size(21, 20);
+            this.tsbStop.Text = "toolStripButton5";
             // 
             // toolStripButton6
             // 
@@ -1954,30 +1954,30 @@
             this.toolStripButton6.Size = new System.Drawing.Size(21, 20);
             this.toolStripButton6.Text = "toolStripButton6";
             // 
-            // toolStripButton7
+            // tsbClose
             // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton7.Text = "toolStripButton7";
+            this.tsbClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbClose.Image = ((System.Drawing.Image)(resources.GetObject("tsbClose.Image")));
+            this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbClose.Name = "tsbClose";
+            this.tsbClose.Size = new System.Drawing.Size(21, 20);
+            this.tsbClose.Text = "toolStripButton7";
             // 
-            // toolStripButton8
+            // tsbHelp
             // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton8.Text = "toolStripButton8";
+            this.tsbHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbHelp.Image = ((System.Drawing.Image)(resources.GetObject("tsbHelp.Image")));
+            this.tsbHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbHelp.Name = "tsbHelp";
+            this.tsbHelp.Size = new System.Drawing.Size(21, 20);
+            this.tsbHelp.Text = "toolStripButton8";
             // 
             // stvStatus
             // 
             this.stvStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stvStatus.Location = new System.Drawing.Point(33, 3);
             this.stvStatus.Name = "stvStatus";
-            this.stvStatus.Size = new System.Drawing.Size(376, 188);
+            this.stvStatus.Size = new System.Drawing.Size(460, 188);
             this.stvStatus.TabIndex = 2;
             // 
             // tlpOut
@@ -1993,7 +1993,7 @@
             this.tlpOut.RowCount = 1;
             this.tlpOut.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpOut.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194F));
-            this.tlpOut.Size = new System.Drawing.Size(996, 194);
+            this.tlpOut.Size = new System.Drawing.Size(1202, 194);
             this.tlpOut.TabIndex = 0;
             // 
             // stsOut
@@ -2035,11 +2035,11 @@
             this.stsOut.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.stsOut.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton18,
-            this.toolStripButton19,
-            this.toolStripButton20,
-            this.toolStripButton21,
-            this.toolStripButton22});
-            this.stsOut.Location = new System.Drawing.Point(966, 0);
+            this.tsbUp,
+            this.stbDown,
+            this.stbWarp,
+            this.tsbDelete});
+            this.stsOut.Location = new System.Drawing.Point(1172, 0);
             this.stsOut.Name = "stsOut";
             this.stsOut.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.stsOut.Size = new System.Drawing.Size(24, 194);
@@ -2059,41 +2059,41 @@
             this.toolStripButton18.Size = new System.Drawing.Size(21, 4);
             this.toolStripButton18.Text = "toolStripButton1";
             // 
-            // toolStripButton19
+            // tsbUp
             // 
-            this.toolStripButton19.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton19.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton19.Image")));
-            this.toolStripButton19.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton19.Name = "toolStripButton19";
-            this.toolStripButton19.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton19.Text = "toolStripButton2";
+            this.tsbUp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbUp.Image = ((System.Drawing.Image)(resources.GetObject("tsbUp.Image")));
+            this.tsbUp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbUp.Name = "tsbUp";
+            this.tsbUp.Size = new System.Drawing.Size(21, 20);
+            this.tsbUp.Text = "toolStripButton2";
             // 
-            // toolStripButton20
+            // stbDown
             // 
-            this.toolStripButton20.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton20.Image")));
-            this.toolStripButton20.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton20.Name = "toolStripButton20";
-            this.toolStripButton20.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton20.Text = "toolStripButton3";
+            this.stbDown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.stbDown.Image = ((System.Drawing.Image)(resources.GetObject("stbDown.Image")));
+            this.stbDown.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.stbDown.Name = "stbDown";
+            this.stbDown.Size = new System.Drawing.Size(21, 20);
+            this.stbDown.Text = "toolStripButton3";
             // 
-            // toolStripButton21
+            // stbWarp
             // 
-            this.toolStripButton21.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton21.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton21.Image")));
-            this.toolStripButton21.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton21.Name = "toolStripButton21";
-            this.toolStripButton21.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton21.Text = "toolStripButton4";
+            this.stbWarp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.stbWarp.Image = ((System.Drawing.Image)(resources.GetObject("stbWarp.Image")));
+            this.stbWarp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.stbWarp.Name = "stbWarp";
+            this.stbWarp.Size = new System.Drawing.Size(21, 20);
+            this.stbWarp.Text = "toolStripButton4";
             // 
-            // toolStripButton22
+            // tsbDelete
             // 
-            this.toolStripButton22.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton22.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton22.Image")));
-            this.toolStripButton22.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton22.Name = "toolStripButton22";
-            this.toolStripButton22.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton22.Text = "toolStripButton5";
+            this.tsbDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsbDelete.Image")));
+            this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDelete.Name = "tsbDelete";
+            this.tsbDelete.Size = new System.Drawing.Size(21, 20);
+            this.tsbDelete.Text = "toolStripButton5";
             // 
             // richOutPut
             // 
@@ -2102,7 +2102,7 @@
             this.richOutPut.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richOutPut.Location = new System.Drawing.Point(3, 3);
             this.richOutPut.Name = "richOutPut";
-            this.richOutPut.Size = new System.Drawing.Size(960, 188);
+            this.richOutPut.Size = new System.Drawing.Size(1166, 188);
             this.richOutPut.TabIndex = 0;
             this.richOutPut.Text = "";
             // 
@@ -2144,15 +2144,15 @@
             this.stsOutPut.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.stsOutPut.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbLogView,
-            this.toolStripButton9,
-            this.toolStripButton10,
-            this.toolStripButton11,
-            this.toolStripButton12,
-            this.toolStripButton13,
-            this.toolStripButton14,
-            this.toolStripButton15,
-            this.toolStripButton16,
-            this.toolStripButton17,
+            this.tsbPassed,
+            this.tsbIgnored,
+            this.tsbSortA,
+            this.tsbSortD,
+            this.tsbExpandAll,
+            this.tsbCollapse,
+            this.tsbExport,
+            this.tsbImport,
+            this.tsbSetting,
             this.tspbRunStatus,
             this.tslPassedNO,
             this.tslNO,
@@ -2161,7 +2161,7 @@
             this.stsOutPut.Location = new System.Drawing.Point(0, 0);
             this.stsOutPut.Name = "stsOutPut";
             this.stsOutPut.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.stsOutPut.Size = new System.Drawing.Size(1418, 25);
+            this.stsOutPut.Size = new System.Drawing.Size(1708, 25);
             this.stsOutPut.SkinAllColor = true;
             this.stsOutPut.TabIndex = 1;
             this.stsOutPut.Text = "skinToolStrip1";
@@ -2183,86 +2183,86 @@
             this.tsbLogView.Text = "查看日志";
             this.tsbLogView.Click += new System.EventHandler(this.tsbLogView_Click);
             // 
-            // toolStripButton9
+            // tsbPassed
             // 
-            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
-            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton9.Text = "toolStripButton9";
+            this.tsbPassed.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbPassed.Image = ((System.Drawing.Image)(resources.GetObject("tsbPassed.Image")));
+            this.tsbPassed.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbPassed.Name = "tsbPassed";
+            this.tsbPassed.Size = new System.Drawing.Size(23, 22);
+            this.tsbPassed.Text = "toolStripButton9";
             // 
-            // toolStripButton10
+            // tsbIgnored
             // 
-            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
-            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton10.Text = "toolStripButton10";
+            this.tsbIgnored.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbIgnored.Image = ((System.Drawing.Image)(resources.GetObject("tsbIgnored.Image")));
+            this.tsbIgnored.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbIgnored.Name = "tsbIgnored";
+            this.tsbIgnored.Size = new System.Drawing.Size(23, 22);
+            this.tsbIgnored.Text = "toolStripButton10";
             // 
-            // toolStripButton11
+            // tsbSortA
             // 
-            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
-            this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton11.Text = "toolStripButton11";
+            this.tsbSortA.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbSortA.Image = ((System.Drawing.Image)(resources.GetObject("tsbSortA.Image")));
+            this.tsbSortA.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSortA.Name = "tsbSortA";
+            this.tsbSortA.Size = new System.Drawing.Size(23, 22);
+            this.tsbSortA.Text = "toolStripButton11";
             // 
-            // toolStripButton12
+            // tsbSortD
             // 
-            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
-            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton12.Text = "toolStripButton12";
+            this.tsbSortD.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbSortD.Image = ((System.Drawing.Image)(resources.GetObject("tsbSortD.Image")));
+            this.tsbSortD.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSortD.Name = "tsbSortD";
+            this.tsbSortD.Size = new System.Drawing.Size(23, 22);
+            this.tsbSortD.Text = "toolStripButton12";
             // 
-            // toolStripButton13
+            // tsbExpandAll
             // 
-            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
-            this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton13.Text = "toolStripButton13";
+            this.tsbExpandAll.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbExpandAll.Image = ((System.Drawing.Image)(resources.GetObject("tsbExpandAll.Image")));
+            this.tsbExpandAll.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbExpandAll.Name = "tsbExpandAll";
+            this.tsbExpandAll.Size = new System.Drawing.Size(23, 22);
+            this.tsbExpandAll.Text = "toolStripButton13";
             // 
-            // toolStripButton14
+            // tsbCollapse
             // 
-            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
-            this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton14.Text = "toolStripButton14";
+            this.tsbCollapse.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbCollapse.Image = ((System.Drawing.Image)(resources.GetObject("tsbCollapse.Image")));
+            this.tsbCollapse.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCollapse.Name = "tsbCollapse";
+            this.tsbCollapse.Size = new System.Drawing.Size(23, 22);
+            this.tsbCollapse.Text = "toolStripButton14";
             // 
-            // toolStripButton15
+            // tsbExport
             // 
-            this.toolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton15.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton15.Image")));
-            this.toolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton15.Name = "toolStripButton15";
-            this.toolStripButton15.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton15.Text = "toolStripButton15";
+            this.tsbExport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbExport.Image = ((System.Drawing.Image)(resources.GetObject("tsbExport.Image")));
+            this.tsbExport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbExport.Name = "tsbExport";
+            this.tsbExport.Size = new System.Drawing.Size(23, 22);
+            this.tsbExport.Text = "toolStripButton15";
             // 
-            // toolStripButton16
+            // tsbImport
             // 
-            this.toolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton16.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton16.Image")));
-            this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton16.Name = "toolStripButton16";
-            this.toolStripButton16.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton16.Text = "toolStripButton16";
+            this.tsbImport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbImport.Image = ((System.Drawing.Image)(resources.GetObject("tsbImport.Image")));
+            this.tsbImport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbImport.Name = "tsbImport";
+            this.tsbImport.Size = new System.Drawing.Size(23, 22);
+            this.tsbImport.Text = "toolStripButton16";
             // 
-            // toolStripButton17
+            // tsbSetting
             // 
-            this.toolStripButton17.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton17.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton17.Image")));
-            this.toolStripButton17.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton17.Name = "toolStripButton17";
-            this.toolStripButton17.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton17.Text = "toolStripButton17";
+            this.tsbSetting.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbSetting.Image = ((System.Drawing.Image)(resources.GetObject("tsbSetting.Image")));
+            this.tsbSetting.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSetting.Name = "tsbSetting";
+            this.tsbSetting.Size = new System.Drawing.Size(23, 22);
+            this.tsbSetting.Text = "toolStripButton17";
             // 
             // tspbRunStatus
             // 
@@ -2345,7 +2345,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.skinToolStrip1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.skinTreeView1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.stvResultsTree, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -2394,14 +2394,14 @@
             this.skinToolStrip1.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.skinToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton23,
-            this.toolStripButton24,
-            this.toolStripButton25,
-            this.toolStripButton27,
-            this.toolStripButton26,
-            this.toolStripButton46,
-            this.toolStripButton28,
-            this.toolStripButton29,
-            this.toolStripButton30});
+            this.dtsbDebug,
+            this.dtsbResume,
+            this.dtsbStop,
+            this.dtsbViewBreakPoint,
+            this.dtsbMuteBreakPoint,
+            this.dtsbRestoreLayout,
+            this.dtsbClose,
+            this.dtsbHelp});
             this.skinToolStrip1.Location = new System.Drawing.Point(0, 0);
             this.skinToolStrip1.Name = "skinToolStrip1";
             this.skinToolStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
@@ -2422,85 +2422,88 @@
             this.toolStripButton23.Size = new System.Drawing.Size(21, 4);
             this.toolStripButton23.Text = "toolStripButton1";
             // 
-            // toolStripButton24
+            // dtsbDebug
             // 
-            this.toolStripButton24.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton24.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton24.Image")));
-            this.toolStripButton24.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton24.Name = "toolStripButton24";
-            this.toolStripButton24.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton24.Text = "toolStripButton2";
+            this.dtsbDebug.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbDebug.Image = ((System.Drawing.Image)(resources.GetObject("dtsbDebug.Image")));
+            this.dtsbDebug.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbDebug.Name = "dtsbDebug";
+            this.dtsbDebug.Size = new System.Drawing.Size(21, 20);
+            this.dtsbDebug.Text = "启动调试";
             // 
-            // toolStripButton25
+            // dtsbResume
             // 
-            this.toolStripButton25.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton25.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton25.Image")));
-            this.toolStripButton25.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton25.Name = "toolStripButton25";
-            this.toolStripButton25.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton25.Text = "toolStripButton3";
+            this.dtsbResume.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbResume.Image = ((System.Drawing.Image)(resources.GetObject("dtsbResume.Image")));
+            this.dtsbResume.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbResume.Name = "dtsbResume";
+            this.dtsbResume.Size = new System.Drawing.Size(21, 20);
+            this.dtsbResume.Text = "继续";
             // 
-            // toolStripButton27
+            // dtsbStop
             // 
-            this.toolStripButton27.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton27.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton27.Image")));
-            this.toolStripButton27.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton27.Name = "toolStripButton27";
-            this.toolStripButton27.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton27.Text = "toolStripButton5";
+            this.dtsbStop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbStop.Image = ((System.Drawing.Image)(resources.GetObject("dtsbStop.Image")));
+            this.dtsbStop.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbStop.Name = "dtsbStop";
+            this.dtsbStop.Size = new System.Drawing.Size(21, 20);
+            this.dtsbStop.Text = "停止调试";
             // 
-            // toolStripButton26
+            // dtsbViewBreakPoint
             // 
-            this.toolStripButton26.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton26.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton26.Image")));
-            this.toolStripButton26.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton26.Name = "toolStripButton26";
-            this.toolStripButton26.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton26.Text = "toolStripButton4";
+            this.dtsbViewBreakPoint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbViewBreakPoint.Image = ((System.Drawing.Image)(resources.GetObject("dtsbViewBreakPoint.Image")));
+            this.dtsbViewBreakPoint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbViewBreakPoint.Name = "dtsbViewBreakPoint";
+            this.dtsbViewBreakPoint.Size = new System.Drawing.Size(21, 20);
+            this.dtsbViewBreakPoint.Text = "查看断点";
             // 
-            // toolStripButton46
+            // dtsbMuteBreakPoint
             // 
-            this.toolStripButton46.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton46.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton46.Image")));
-            this.toolStripButton46.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton46.Name = "toolStripButton46";
-            this.toolStripButton46.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton46.Text = "toolStripButton46";
+            this.dtsbMuteBreakPoint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbMuteBreakPoint.Image = ((System.Drawing.Image)(resources.GetObject("dtsbMuteBreakPoint.Image")));
+            this.dtsbMuteBreakPoint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbMuteBreakPoint.Name = "dtsbMuteBreakPoint";
+            this.dtsbMuteBreakPoint.Size = new System.Drawing.Size(21, 20);
+            this.dtsbMuteBreakPoint.Text = "跳过断点";
             // 
-            // toolStripButton28
+            // dtsbRestoreLayout
             // 
-            this.toolStripButton28.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton28.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton28.Image")));
-            this.toolStripButton28.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton28.Name = "toolStripButton28";
-            this.toolStripButton28.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton28.Text = "toolStripButton6";
+            this.dtsbRestoreLayout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbRestoreLayout.Image = ((System.Drawing.Image)(resources.GetObject("dtsbRestoreLayout.Image")));
+            this.dtsbRestoreLayout.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbRestoreLayout.Name = "dtsbRestoreLayout";
+            this.dtsbRestoreLayout.Size = new System.Drawing.Size(21, 20);
+            this.dtsbRestoreLayout.Text = "重置窗口";
+            this.dtsbRestoreLayout.ToolTipText = "重置窗口";
             // 
-            // toolStripButton29
+            // dtsbClose
             // 
-            this.toolStripButton29.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton29.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton29.Image")));
-            this.toolStripButton29.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton29.Name = "toolStripButton29";
-            this.toolStripButton29.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton29.Text = "toolStripButton7";
+            this.dtsbClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbClose.Image = ((System.Drawing.Image)(resources.GetObject("dtsbClose.Image")));
+            this.dtsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbClose.Name = "dtsbClose";
+            this.dtsbClose.Size = new System.Drawing.Size(21, 20);
+            this.dtsbClose.Text = "关闭";
+            this.dtsbClose.ToolTipText = "关闭";
             // 
-            // toolStripButton30
+            // dtsbHelp
             // 
-            this.toolStripButton30.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton30.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton30.Image")));
-            this.toolStripButton30.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton30.Name = "toolStripButton30";
-            this.toolStripButton30.Size = new System.Drawing.Size(23, 20);
-            this.toolStripButton30.Text = "toolStripButton8";
+            this.dtsbHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbHelp.Image = ((System.Drawing.Image)(resources.GetObject("dtsbHelp.Image")));
+            this.dtsbHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbHelp.Name = "dtsbHelp";
+            this.dtsbHelp.Size = new System.Drawing.Size(23, 20);
+            this.dtsbHelp.Text = "帮助";
+            this.dtsbHelp.ToolTipText = "帮助";
             // 
-            // skinTreeView1
+            // stvResultsTree
             // 
-            this.skinTreeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTreeView1.Location = new System.Drawing.Point(33, 3);
-            this.skinTreeView1.Name = "skinTreeView1";
-            this.skinTreeView1.Size = new System.Drawing.Size(376, 188);
-            this.skinTreeView1.TabIndex = 2;
+            this.stvResultsTree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stvResultsTree.Location = new System.Drawing.Point(33, 3);
+            this.stvResultsTree.Name = "stvResultsTree";
+            this.stvResultsTree.Size = new System.Drawing.Size(376, 188);
+            this.stvResultsTree.TabIndex = 2;
             // 
             // tableLayoutPanel4
             // 
@@ -2557,10 +2560,10 @@
             this.skinToolStrip2.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.skinToolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton31,
-            this.toolStripButton32,
-            this.toolStripButton33,
-            this.toolStripButton34,
-            this.toolStripButton35});
+            this.dtsbUp,
+            this.dtsbDown,
+            this.dtsbWarp,
+            this.dtsbDelete});
             this.skinToolStrip2.Location = new System.Drawing.Point(966, 0);
             this.skinToolStrip2.Name = "skinToolStrip2";
             this.skinToolStrip2.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
@@ -2581,41 +2584,41 @@
             this.toolStripButton31.Size = new System.Drawing.Size(21, 4);
             this.toolStripButton31.Text = "toolStripButton1";
             // 
-            // toolStripButton32
+            // dtsbUp
             // 
-            this.toolStripButton32.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton32.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton32.Image")));
-            this.toolStripButton32.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton32.Name = "toolStripButton32";
-            this.toolStripButton32.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton32.Text = "toolStripButton2";
+            this.dtsbUp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbUp.Image = ((System.Drawing.Image)(resources.GetObject("dtsbUp.Image")));
+            this.dtsbUp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbUp.Name = "dtsbUp";
+            this.dtsbUp.Size = new System.Drawing.Size(21, 20);
+            this.dtsbUp.Text = "toolStripButton2";
             // 
-            // toolStripButton33
+            // dtsbDown
             // 
-            this.toolStripButton33.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton33.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton33.Image")));
-            this.toolStripButton33.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton33.Name = "toolStripButton33";
-            this.toolStripButton33.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton33.Text = "toolStripButton3";
+            this.dtsbDown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbDown.Image = ((System.Drawing.Image)(resources.GetObject("dtsbDown.Image")));
+            this.dtsbDown.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbDown.Name = "dtsbDown";
+            this.dtsbDown.Size = new System.Drawing.Size(21, 20);
+            this.dtsbDown.Text = "toolStripButton3";
             // 
-            // toolStripButton34
+            // dtsbWarp
             // 
-            this.toolStripButton34.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton34.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton34.Image")));
-            this.toolStripButton34.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton34.Name = "toolStripButton34";
-            this.toolStripButton34.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton34.Text = "toolStripButton4";
+            this.dtsbWarp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbWarp.Image = ((System.Drawing.Image)(resources.GetObject("dtsbWarp.Image")));
+            this.dtsbWarp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbWarp.Name = "dtsbWarp";
+            this.dtsbWarp.Size = new System.Drawing.Size(21, 20);
+            this.dtsbWarp.Text = "toolStripButton4";
             // 
-            // toolStripButton35
+            // dtsbDelete
             // 
-            this.toolStripButton35.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton35.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton35.Image")));
-            this.toolStripButton35.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton35.Name = "toolStripButton35";
-            this.toolStripButton35.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton35.Text = "toolStripButton5";
+            this.dtsbDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbDelete.Image = ((System.Drawing.Image)(resources.GetObject("dtsbDelete.Image")));
+            this.dtsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbDelete.Name = "dtsbDelete";
+            this.dtsbDelete.Size = new System.Drawing.Size(21, 20);
+            this.dtsbDelete.Text = "toolStripButton5";
             // 
             // richTextBox1
             // 
@@ -2665,20 +2668,20 @@
             this.skinToolStrip3.ItemRadius = 4;
             this.skinToolStrip3.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.skinToolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton37,
-            this.toolStripButton38,
-            this.toolStripButton39,
-            this.toolStripButton40,
-            this.toolStripButton41,
-            this.toolStripButton42,
-            this.toolStripButton43,
-            this.toolStripButton44,
-            this.toolStripButton45,
-            this.toolStripProgressBar1,
-            this.toolStripLabel2,
-            this.toolStripLabel3,
-            this.toolStripLabel4,
-            this.toolStripLabel5});
+            this.dtsbPassed,
+            this.dtsbIgnored,
+            this.dtsbSortA,
+            this.dtsbSortD,
+            this.dtsbExpandAll,
+            this.dtsbCollapse,
+            this.dtsbExport,
+            this.dtsbImport,
+            this.dtsbSetting,
+            this.dtspbRunStatus,
+            this.dtslPassedNO,
+            this.dtslNO,
+            this.dtslTimeUse,
+            this.dtslTime});
             this.skinToolStrip3.Location = new System.Drawing.Point(0, 0);
             this.skinToolStrip3.Name = "skinToolStrip3";
             this.skinToolStrip3.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
@@ -2691,117 +2694,117 @@
             this.skinToolStrip3.TitleRadius = 4;
             this.skinToolStrip3.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             // 
-            // toolStripButton37
+            // dtsbPassed
             // 
-            this.toolStripButton37.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton37.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton37.Image")));
-            this.toolStripButton37.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton37.Name = "toolStripButton37";
-            this.toolStripButton37.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton37.Text = "toolStripButton9";
+            this.dtsbPassed.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbPassed.Image = ((System.Drawing.Image)(resources.GetObject("dtsbPassed.Image")));
+            this.dtsbPassed.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbPassed.Name = "dtsbPassed";
+            this.dtsbPassed.Size = new System.Drawing.Size(23, 22);
+            this.dtsbPassed.Text = "toolStripButton9";
             // 
-            // toolStripButton38
+            // dtsbIgnored
             // 
-            this.toolStripButton38.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton38.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton38.Image")));
-            this.toolStripButton38.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton38.Name = "toolStripButton38";
-            this.toolStripButton38.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton38.Text = "toolStripButton10";
+            this.dtsbIgnored.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbIgnored.Image = ((System.Drawing.Image)(resources.GetObject("dtsbIgnored.Image")));
+            this.dtsbIgnored.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbIgnored.Name = "dtsbIgnored";
+            this.dtsbIgnored.Size = new System.Drawing.Size(23, 22);
+            this.dtsbIgnored.Text = "toolStripButton10";
             // 
-            // toolStripButton39
+            // dtsbSortA
             // 
-            this.toolStripButton39.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton39.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton39.Image")));
-            this.toolStripButton39.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton39.Name = "toolStripButton39";
-            this.toolStripButton39.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton39.Text = "toolStripButton11";
+            this.dtsbSortA.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbSortA.Image = ((System.Drawing.Image)(resources.GetObject("dtsbSortA.Image")));
+            this.dtsbSortA.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbSortA.Name = "dtsbSortA";
+            this.dtsbSortA.Size = new System.Drawing.Size(23, 22);
+            this.dtsbSortA.Text = "toolStripButton11";
             // 
-            // toolStripButton40
+            // dtsbSortD
             // 
-            this.toolStripButton40.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton40.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton40.Image")));
-            this.toolStripButton40.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton40.Name = "toolStripButton40";
-            this.toolStripButton40.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton40.Text = "toolStripButton12";
+            this.dtsbSortD.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbSortD.Image = ((System.Drawing.Image)(resources.GetObject("dtsbSortD.Image")));
+            this.dtsbSortD.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbSortD.Name = "dtsbSortD";
+            this.dtsbSortD.Size = new System.Drawing.Size(23, 22);
+            this.dtsbSortD.Text = "toolStripButton12";
             // 
-            // toolStripButton41
+            // dtsbExpandAll
             // 
-            this.toolStripButton41.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton41.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton41.Image")));
-            this.toolStripButton41.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton41.Name = "toolStripButton41";
-            this.toolStripButton41.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton41.Text = "toolStripButton13";
+            this.dtsbExpandAll.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbExpandAll.Image = ((System.Drawing.Image)(resources.GetObject("dtsbExpandAll.Image")));
+            this.dtsbExpandAll.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbExpandAll.Name = "dtsbExpandAll";
+            this.dtsbExpandAll.Size = new System.Drawing.Size(23, 22);
+            this.dtsbExpandAll.Text = "toolStripButton13";
             // 
-            // toolStripButton42
+            // dtsbCollapse
             // 
-            this.toolStripButton42.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton42.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton42.Image")));
-            this.toolStripButton42.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton42.Name = "toolStripButton42";
-            this.toolStripButton42.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton42.Text = "toolStripButton14";
+            this.dtsbCollapse.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbCollapse.Image = ((System.Drawing.Image)(resources.GetObject("dtsbCollapse.Image")));
+            this.dtsbCollapse.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbCollapse.Name = "dtsbCollapse";
+            this.dtsbCollapse.Size = new System.Drawing.Size(23, 22);
+            this.dtsbCollapse.Text = "toolStripButton14";
             // 
-            // toolStripButton43
+            // dtsbExport
             // 
-            this.toolStripButton43.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton43.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton43.Image")));
-            this.toolStripButton43.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton43.Name = "toolStripButton43";
-            this.toolStripButton43.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton43.Text = "toolStripButton15";
+            this.dtsbExport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbExport.Image = ((System.Drawing.Image)(resources.GetObject("dtsbExport.Image")));
+            this.dtsbExport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbExport.Name = "dtsbExport";
+            this.dtsbExport.Size = new System.Drawing.Size(23, 22);
+            this.dtsbExport.Text = "toolStripButton15";
             // 
-            // toolStripButton44
+            // dtsbImport
             // 
-            this.toolStripButton44.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton44.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton44.Image")));
-            this.toolStripButton44.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton44.Name = "toolStripButton44";
-            this.toolStripButton44.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton44.Text = "toolStripButton16";
+            this.dtsbImport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbImport.Image = ((System.Drawing.Image)(resources.GetObject("dtsbImport.Image")));
+            this.dtsbImport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbImport.Name = "dtsbImport";
+            this.dtsbImport.Size = new System.Drawing.Size(23, 22);
+            this.dtsbImport.Text = "toolStripButton16";
             // 
-            // toolStripButton45
+            // dtsbSetting
             // 
-            this.toolStripButton45.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton45.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton45.Image")));
-            this.toolStripButton45.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton45.Name = "toolStripButton45";
-            this.toolStripButton45.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton45.Text = "toolStripButton17";
+            this.dtsbSetting.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dtsbSetting.Image = ((System.Drawing.Image)(resources.GetObject("dtsbSetting.Image")));
+            this.dtsbSetting.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.dtsbSetting.Name = "dtsbSetting";
+            this.dtsbSetting.Size = new System.Drawing.Size(23, 22);
+            this.dtsbSetting.Text = "toolStripButton17";
             // 
-            // toolStripProgressBar1
+            // dtspbRunStatus
             // 
-            this.toolStripProgressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(400, 22);
-            this.toolStripProgressBar1.Visible = false;
+            this.dtspbRunStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtspbRunStatus.Name = "dtspbRunStatus";
+            this.dtspbRunStatus.Size = new System.Drawing.Size(400, 22);
+            this.dtspbRunStatus.Visible = false;
             // 
-            // toolStripLabel2
+            // dtslPassedNO
             // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(56, 22);
-            this.toolStripLabel2.Text = "通过数：";
+            this.dtslPassedNO.Name = "dtslPassedNO";
+            this.dtslPassedNO.Size = new System.Drawing.Size(56, 22);
+            this.dtslPassedNO.Text = "通过数：";
             // 
-            // toolStripLabel3
+            // dtslNO
             // 
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(15, 22);
-            this.toolStripLabel3.Text = "0";
+            this.dtslNO.Name = "dtslNO";
+            this.dtslNO.Size = new System.Drawing.Size(15, 22);
+            this.dtslNO.Text = "0";
             // 
-            // toolStripLabel4
+            // dtslTimeUse
             // 
-            this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(44, 22);
-            this.toolStripLabel4.Text = "耗时：";
+            this.dtslTimeUse.Name = "dtslTimeUse";
+            this.dtslTimeUse.Size = new System.Drawing.Size(44, 22);
+            this.dtslTimeUse.Text = "耗时：";
             // 
-            // toolStripLabel5
+            // dtslTime
             // 
-            this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(56, 22);
-            this.toolStripLabel5.Text = "00:00:00";
+            this.dtslTime.Name = "dtslTime";
+            this.dtslTime.Size = new System.Drawing.Size(56, 22);
+            this.dtslTime.Text = "00:00:00";
             // 
             // MainForm
             // 
@@ -2809,7 +2812,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(1440, 825);
+            this.ClientSize = new System.Drawing.Size(1730, 825);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ssMain);
@@ -3063,75 +3066,75 @@
         private System.Windows.Forms.TableLayoutPanel tlpRunControl;
         private CCWin.SkinControl.SkinToolStrip stsRunButton;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton9;
-        private System.Windows.Forms.ToolStripButton toolStripButton10;
-        private System.Windows.Forms.ToolStripButton toolStripButton11;
-        private System.Windows.Forms.ToolStripButton toolStripButton12;
-        private System.Windows.Forms.ToolStripButton toolStripButton13;
-        private System.Windows.Forms.ToolStripButton toolStripButton14;
-        private System.Windows.Forms.ToolStripButton toolStripButton15;
-        private System.Windows.Forms.ToolStripButton toolStripButton16;
+        private System.Windows.Forms.ToolStripButton tsbStart;
+        private System.Windows.Forms.ToolStripButton tsbPassed;
+        private System.Windows.Forms.ToolStripButton tsbIgnored;
+        private System.Windows.Forms.ToolStripButton tsbSortA;
+        private System.Windows.Forms.ToolStripButton tsbSortD;
+        private System.Windows.Forms.ToolStripButton tsbExpandAll;
+        private System.Windows.Forms.ToolStripButton tsbCollapse;
+        private System.Windows.Forms.ToolStripButton tsbExport;
+        private System.Windows.Forms.ToolStripButton tsbImport;
         private System.Windows.Forms.ToolStripProgressBar tspbRunStatus;
         private System.Windows.Forms.ToolStripLabel tslPassedNO;
         private System.Windows.Forms.ToolStripLabel tslNO;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton tsbReRunFailed;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton tsbStop;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripButton tsbClose;
+        private System.Windows.Forms.ToolStripButton tsbHelp;
         private System.Windows.Forms.TabControl tcManager;
         private System.Windows.Forms.TabPage tpRun;
         private System.Windows.Forms.TabPage tpDebug;
         private System.Windows.Forms.ToolStripLabel tslTimeUse;
         private System.Windows.Forms.ToolStripLabel tslTime;
         private CCWin.SkinControl.SkinTreeView stvStatus;
-        private System.Windows.Forms.ToolStripButton toolStripButton17;
+        private System.Windows.Forms.ToolStripButton tsbSetting;
         private System.Windows.Forms.TableLayoutPanel tlpOut;
         private CCWin.SkinControl.SkinToolStrip stsOut;
         private System.Windows.Forms.ToolStripButton toolStripButton18;
-        private System.Windows.Forms.ToolStripButton toolStripButton19;
-        private System.Windows.Forms.ToolStripButton toolStripButton20;
-        private System.Windows.Forms.ToolStripButton toolStripButton21;
-        private System.Windows.Forms.ToolStripButton toolStripButton22;
+        private System.Windows.Forms.ToolStripButton tsbUp;
+        private System.Windows.Forms.ToolStripButton stbDown;
+        private System.Windows.Forms.ToolStripButton stbWarp;
+        private System.Windows.Forms.ToolStripButton tsbDelete;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private CCWin.SkinControl.SkinToolStrip skinToolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton23;
-        private System.Windows.Forms.ToolStripButton toolStripButton24;
-        private System.Windows.Forms.ToolStripButton toolStripButton25;
-        private System.Windows.Forms.ToolStripButton toolStripButton27;
-        private System.Windows.Forms.ToolStripButton toolStripButton26;
-        private System.Windows.Forms.ToolStripButton toolStripButton46;
-        private System.Windows.Forms.ToolStripButton toolStripButton28;
-        private System.Windows.Forms.ToolStripButton toolStripButton29;
-        private System.Windows.Forms.ToolStripButton toolStripButton30;
-        private CCWin.SkinControl.SkinTreeView skinTreeView1;
+        private System.Windows.Forms.ToolStripButton dtsbDebug;
+        private System.Windows.Forms.ToolStripButton dtsbResume;
+        private System.Windows.Forms.ToolStripButton dtsbStop;
+        private System.Windows.Forms.ToolStripButton dtsbViewBreakPoint;
+        private System.Windows.Forms.ToolStripButton dtsbMuteBreakPoint;
+        private System.Windows.Forms.ToolStripButton dtsbRestoreLayout;
+        private System.Windows.Forms.ToolStripButton dtsbClose;
+        private System.Windows.Forms.ToolStripButton dtsbHelp;
+        private CCWin.SkinControl.SkinTreeView stvResultsTree;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private CCWin.SkinControl.SkinToolStrip skinToolStrip2;
         private System.Windows.Forms.ToolStripButton toolStripButton31;
-        private System.Windows.Forms.ToolStripButton toolStripButton32;
-        private System.Windows.Forms.ToolStripButton toolStripButton33;
-        private System.Windows.Forms.ToolStripButton toolStripButton34;
-        private System.Windows.Forms.ToolStripButton toolStripButton35;
+        private System.Windows.Forms.ToolStripButton dtsbUp;
+        private System.Windows.Forms.ToolStripButton dtsbDown;
+        private System.Windows.Forms.ToolStripButton dtsbWarp;
+        private System.Windows.Forms.ToolStripButton dtsbDelete;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private CCWin.SkinControl.SkinToolStrip skinToolStrip3;
-        private System.Windows.Forms.ToolStripButton toolStripButton37;
-        private System.Windows.Forms.ToolStripButton toolStripButton38;
-        private System.Windows.Forms.ToolStripButton toolStripButton39;
-        private System.Windows.Forms.ToolStripButton toolStripButton40;
-        private System.Windows.Forms.ToolStripButton toolStripButton41;
-        private System.Windows.Forms.ToolStripButton toolStripButton42;
-        private System.Windows.Forms.ToolStripButton toolStripButton43;
-        private System.Windows.Forms.ToolStripButton toolStripButton44;
-        private System.Windows.Forms.ToolStripButton toolStripButton45;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel5;
+        private System.Windows.Forms.ToolStripButton dtsbPassed;
+        private System.Windows.Forms.ToolStripButton dtsbIgnored;
+        private System.Windows.Forms.ToolStripButton dtsbSortA;
+        private System.Windows.Forms.ToolStripButton dtsbSortD;
+        private System.Windows.Forms.ToolStripButton dtsbExpandAll;
+        private System.Windows.Forms.ToolStripButton dtsbCollapse;
+        private System.Windows.Forms.ToolStripButton dtsbExport;
+        private System.Windows.Forms.ToolStripButton dtsbImport;
+        private System.Windows.Forms.ToolStripButton dtsbSetting;
+        private System.Windows.Forms.ToolStripProgressBar dtspbRunStatus;
+        private System.Windows.Forms.ToolStripLabel dtslPassedNO;
+        private System.Windows.Forms.ToolStripLabel dtslNO;
+        private System.Windows.Forms.ToolStripLabel dtslTimeUse;
+        private System.Windows.Forms.ToolStripLabel dtslTime;
     }
 }
 
