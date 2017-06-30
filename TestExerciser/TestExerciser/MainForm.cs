@@ -2355,18 +2355,33 @@ namespace TestExerciser
 
         private void pUTTYPToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process p = new Process();
-            p.StartInfo.FileName = @"..\..\Tools\PUTTY.EXE";
-            p.Start();
-            p.Close();
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\PUTTY.EXE";
+                p.Start();
+                p.Close();
+            }           
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void AutoItToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process p = new Process();
-            p.StartInfo.FileName = @"..\..\Tools\AUTOIT.EXE";
-            p.Start();
-            p.Close();
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\AUTOIT.EXE";
+                p.Start();
+                p.Close();
+            }
+            
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void 用户信息ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2413,50 +2428,94 @@ namespace TestExerciser
 
         private void x64ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process p = new Process();
-            p.StartInfo.FileName = @"..\..\Tools\inspect_x64.EXE";
-            p.Start();
-            p.Close();
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\inspect_x64.EXE";
+                p.Start();
+                p.Close();
+            }            
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void x86ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process p = new Process();
-            p.StartInfo.FileName = @"..\..\Tools\inspect_x32.EXE";
-            p.Start();
-            p.Close();
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\inspect_x32.EXE";
+                p.Start();
+                p.Close();
+            }            
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void auto3帮助ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process p = new Process();
-            p.StartInfo.FileName = @"..\..\Tools\AutoIt3Help.EXE";
-            p.Start();
-            p.Close();
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\AutoIt.chm";
+                p.Start();
+                p.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }          
         }
 
         private void pythonToolStrip_Click(object sender, EventArgs e)
         {
-            Process p = new Process();
-            p.StartInfo.FileName = pythonEnv + @"python.EXE";
-            p.Start();
-            p.Close();
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = pythonEnv + @"python.EXE";
+                p.Start();
+                p.Close();
+            }         
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }   
+
         }
 
         private void PythonIDLEtoolStrip_Click(object sender, EventArgs e)
         {
-            Process p = new Process();
-            p.StartInfo.FileName = getPythonPath() + @"\idlelib\idle.bat";
-            p.Start();
-            p.Close();
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = getPythonPath() + @"\idlelib\idle.bat";
+                p.Start();
+                p.Close();
+            }           
+
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }   
         }
 
         private void terminalToolStrip_Click(object sender, EventArgs e)
         {
-            Process p = new Process();
-            p.StartInfo.FileName = @"cmd.EXE";
-            p.Start();
-            p.Close();
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = @"cmd.EXE";
+                p.Start();
+                p.Close();
+            }            
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }  
         }
 
         private void 版本更新ToolStripMenuItem_Click(object sender, EventArgs e)

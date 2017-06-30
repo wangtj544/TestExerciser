@@ -29,7 +29,7 @@
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -491,6 +491,7 @@
     </Compile>
     <None Include="SharpPlink-Win32.svnExe" />
     <None Include="TestExerciser_TemporaryKey.pfx" />
+    <None Include="Tools\AutoIt.chm" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -585,7 +586,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Tools\AutoIt.exe" />
-    <Content Include="Tools\AutoIt3Help.exe" />
     <Content Include="Tools\inspect_x32.exe" />
     <Content Include="Tools\inspect_x64.exe" />
     <Content Include="Tools\PUTTY.exe" />
