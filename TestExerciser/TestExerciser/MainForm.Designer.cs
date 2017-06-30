@@ -206,7 +206,7 @@
             this.tsbReRunFailed = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.tsbStop = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.tsbReset = new System.Windows.Forms.ToolStripButton();
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.tsbHelp = new System.Windows.Forms.ToolStripButton();
             this.stvStatus = new CCWin.SkinControl.SkinTreeView();
@@ -1387,6 +1387,7 @@
             this.newToolStripButton.Name = "newToolStripButton";
             this.newToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.newToolStripButton.Text = "&New";
+            this.newToolStripButton.ToolTipText = "新建文件";
             this.newToolStripButton.Click += new System.EventHandler(this.newToolStripButton_Click);
             // 
             // openToolStripButton
@@ -1397,6 +1398,7 @@
             this.openToolStripButton.Name = "openToolStripButton";
             this.openToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.openToolStripButton.Text = "&Open";
+            this.openToolStripButton.ToolTipText = "打开文件";
             this.openToolStripButton.Click += new System.EventHandler(this.openToolStripButton_Click);
             // 
             // saveToolStripButton
@@ -1407,6 +1409,7 @@
             this.saveToolStripButton.Name = "saveToolStripButton";
             this.saveToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.saveToolStripButton.Text = "&Save";
+            this.saveToolStripButton.ToolTipText = "保存文件";
             this.saveToolStripButton.Click += new System.EventHandler(this.saveToolStripButton_Click);
             // 
             // printToolStripButton
@@ -1417,6 +1420,7 @@
             this.printToolStripButton.Name = "printToolStripButton";
             this.printToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.printToolStripButton.Text = "&Print";
+            this.printToolStripButton.ToolTipText = "打印文件";
             this.printToolStripButton.Click += new System.EventHandler(this.printToolStripButton_Click);
             // 
             // toolStripSeparator3
@@ -1432,6 +1436,7 @@
             this.cutToolStripButton.Name = "cutToolStripButton";
             this.cutToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.cutToolStripButton.Text = "C&ut";
+            this.cutToolStripButton.ToolTipText = "剪切";
             this.cutToolStripButton.Click += new System.EventHandler(this.cutToolStripButton_Click);
             // 
             // copyToolStripButton
@@ -1442,6 +1447,7 @@
             this.copyToolStripButton.Name = "copyToolStripButton";
             this.copyToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.copyToolStripButton.Text = "&Copy";
+            this.copyToolStripButton.ToolTipText = "复制";
             this.copyToolStripButton.Click += new System.EventHandler(this.copyToolStripButton_Click);
             // 
             // pasteToolStripButton
@@ -1452,6 +1458,7 @@
             this.pasteToolStripButton.Name = "pasteToolStripButton";
             this.pasteToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.pasteToolStripButton.Text = "&Paste";
+            this.pasteToolStripButton.ToolTipText = "粘贴";
             this.pasteToolStripButton.Click += new System.EventHandler(this.pasteToolStripButton_Click);
             // 
             // btInvisibleChars
@@ -1463,7 +1470,7 @@
             this.btInvisibleChars.Name = "btInvisibleChars";
             this.btInvisibleChars.Size = new System.Drawing.Size(23, 22);
             this.btInvisibleChars.Text = "¶";
-            this.btInvisibleChars.ToolTipText = "Show invisible chars";
+            this.btInvisibleChars.ToolTipText = "显示不可见字符";
             this.btInvisibleChars.Click += new System.EventHandler(this.btInvisibleChars_Click);
             // 
             // btHighlightCurrentLine
@@ -1475,7 +1482,7 @@
             this.btHighlightCurrentLine.Name = "btHighlightCurrentLine";
             this.btHighlightCurrentLine.Size = new System.Drawing.Size(23, 22);
             this.btHighlightCurrentLine.Text = "Highlight current line";
-            this.btHighlightCurrentLine.ToolTipText = "Highlight current line";
+            this.btHighlightCurrentLine.ToolTipText = "高亮当前行";
             this.btHighlightCurrentLine.Click += new System.EventHandler(this.btHighlightCurrentLine_Click);
             // 
             // btShowFoldingLines
@@ -1529,6 +1536,7 @@
             this.backStripButton.Name = "backStripButton";
             this.backStripButton.Size = new System.Drawing.Size(23, 22);
             this.backStripButton.Text = "Navigate Backward (Ctrl+ -)";
+            this.backStripButton.ToolTipText = "向后";
             this.backStripButton.Click += new System.EventHandler(this.backStripButton_Click);
             // 
             // forwardStripButton
@@ -1539,6 +1547,7 @@
             this.forwardStripButton.Name = "forwardStripButton";
             this.forwardStripButton.Size = new System.Drawing.Size(23, 22);
             this.forwardStripButton.Text = "Navigate Forward (Ctrl+Shift+ -)";
+            this.forwardStripButton.ToolTipText = "向前";
             this.forwardStripButton.Click += new System.EventHandler(this.forwardStripButton_Click);
             // 
             // tbFind
@@ -1571,6 +1580,7 @@
             this.bookmarkPlusButton.Name = "bookmarkPlusButton";
             this.bookmarkPlusButton.Size = new System.Drawing.Size(23, 22);
             this.bookmarkPlusButton.Text = "Add bookmark";
+            this.bookmarkPlusButton.ToolTipText = "添加标记";
             this.bookmarkPlusButton.Click += new System.EventHandler(this.bookmarkPlusButton_Click);
             // 
             // bookmarkMinusButton
@@ -1581,6 +1591,7 @@
             this.bookmarkMinusButton.Name = "bookmarkMinusButton";
             this.bookmarkMinusButton.Size = new System.Drawing.Size(23, 22);
             this.bookmarkMinusButton.Text = "Remove bookmark";
+            this.bookmarkMinusButton.ToolTipText = "移除标记";
             this.bookmarkMinusButton.Click += new System.EventHandler(this.bookmarkMinusButton_Click);
             // 
             // gotoButton
@@ -1591,6 +1602,7 @@
             this.gotoButton.Name = "gotoButton";
             this.gotoButton.Size = new System.Drawing.Size(59, 22);
             this.gotoButton.Text = "Goto...";
+            this.gotoButton.ToolTipText = "定位到...";
             this.gotoButton.DropDownOpening += new System.EventHandler(this.gotoButton_DropDownOpening);
             // 
             // toolStripSeparator1
@@ -1699,7 +1711,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(258, 422);
+            this.tabPage2.Size = new System.Drawing.Size(311, 422);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "类视图";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1730,7 +1742,7 @@
             this.dgvObjectExplorer.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Green;
             this.dgvObjectExplorer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvObjectExplorer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvObjectExplorer.Size = new System.Drawing.Size(252, 416);
+            this.dgvObjectExplorer.Size = new System.Drawing.Size(305, 416);
             this.dgvObjectExplorer.TabIndex = 7;
             this.dgvObjectExplorer.VirtualMode = true;
             this.dgvObjectExplorer.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvObjectExplorer_CellMouseDoubleClick);
@@ -1886,7 +1898,7 @@
             this.tsbReRunFailed,
             this.toolStripButton4,
             this.tsbStop,
-            this.toolStripButton6,
+            this.tsbReset,
             this.tsbClose,
             this.tsbHelp});
             this.stsRunButton.Location = new System.Drawing.Point(0, 0);
@@ -1916,7 +1928,7 @@
             this.tsbStart.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbStart.Name = "tsbStart";
             this.tsbStart.Size = new System.Drawing.Size(21, 20);
-            this.tsbStart.Text = "toolStripButton2";
+            this.tsbStart.Text = "启动工程";
             // 
             // tsbReRunFailed
             // 
@@ -1925,7 +1937,7 @@
             this.tsbReRunFailed.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbReRunFailed.Name = "tsbReRunFailed";
             this.tsbReRunFailed.Size = new System.Drawing.Size(21, 20);
-            this.tsbReRunFailed.Text = "toolStripButton3";
+            this.tsbReRunFailed.Text = "重新执行失败脚本";
             // 
             // toolStripButton4
             // 
@@ -1934,7 +1946,7 @@
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Text = "触发";
             // 
             // tsbStop
             // 
@@ -1943,16 +1955,16 @@
             this.tsbStop.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbStop.Name = "tsbStop";
             this.tsbStop.Size = new System.Drawing.Size(21, 20);
-            this.tsbStop.Text = "toolStripButton5";
+            this.tsbStop.Text = "停止";
             // 
-            // toolStripButton6
+            // tsbReset
             // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton6.Text = "toolStripButton6";
+            this.tsbReset.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbReset.Image = ((System.Drawing.Image)(resources.GetObject("tsbReset.Image")));
+            this.tsbReset.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbReset.Name = "tsbReset";
+            this.tsbReset.Size = new System.Drawing.Size(21, 20);
+            this.tsbReset.Text = "重置窗口";
             // 
             // tsbClose
             // 
@@ -1961,7 +1973,7 @@
             this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbClose.Name = "tsbClose";
             this.tsbClose.Size = new System.Drawing.Size(21, 20);
-            this.tsbClose.Text = "toolStripButton7";
+            this.tsbClose.Text = "关闭";
             // 
             // tsbHelp
             // 
@@ -1970,7 +1982,7 @@
             this.tsbHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbHelp.Name = "tsbHelp";
             this.tsbHelp.Size = new System.Drawing.Size(21, 20);
-            this.tsbHelp.Text = "toolStripButton8";
+            this.tsbHelp.Text = "帮助";
             // 
             // stvStatus
             // 
@@ -2066,7 +2078,7 @@
             this.tsbUp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbUp.Name = "tsbUp";
             this.tsbUp.Size = new System.Drawing.Size(21, 20);
-            this.tsbUp.Text = "toolStripButton2";
+            this.tsbUp.Text = "向上翻";
             // 
             // stbDown
             // 
@@ -2075,7 +2087,7 @@
             this.stbDown.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.stbDown.Name = "stbDown";
             this.stbDown.Size = new System.Drawing.Size(21, 20);
-            this.stbDown.Text = "toolStripButton3";
+            this.stbDown.Text = "向下翻 ";
             // 
             // stbWarp
             // 
@@ -2084,7 +2096,7 @@
             this.stbWarp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.stbWarp.Name = "stbWarp";
             this.stbWarp.Size = new System.Drawing.Size(21, 20);
-            this.stbWarp.Text = "toolStripButton4";
+            this.stbWarp.Text = "自动换行";
             // 
             // tsbDelete
             // 
@@ -2093,7 +2105,7 @@
             this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDelete.Name = "tsbDelete";
             this.tsbDelete.Size = new System.Drawing.Size(21, 20);
-            this.tsbDelete.Text = "toolStripButton5";
+            this.tsbDelete.Text = "清空结果";
             // 
             // richOutPut
             // 
@@ -2190,7 +2202,7 @@
             this.tsbPassed.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbPassed.Name = "tsbPassed";
             this.tsbPassed.Size = new System.Drawing.Size(23, 22);
-            this.tsbPassed.Text = "toolStripButton9";
+            this.tsbPassed.Text = "通过项";
             // 
             // tsbIgnored
             // 
@@ -2199,7 +2211,7 @@
             this.tsbIgnored.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbIgnored.Name = "tsbIgnored";
             this.tsbIgnored.Size = new System.Drawing.Size(23, 22);
-            this.tsbIgnored.Text = "toolStripButton10";
+            this.tsbIgnored.Text = "查看忽略项";
             // 
             // tsbSortA
             // 
@@ -2208,7 +2220,7 @@
             this.tsbSortA.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSortA.Name = "tsbSortA";
             this.tsbSortA.Size = new System.Drawing.Size(23, 22);
-            this.tsbSortA.Text = "toolStripButton11";
+            this.tsbSortA.Text = "按字母表排序";
             // 
             // tsbSortD
             // 
@@ -2217,7 +2229,7 @@
             this.tsbSortD.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSortD.Name = "tsbSortD";
             this.tsbSortD.Size = new System.Drawing.Size(23, 22);
-            this.tsbSortD.Text = "toolStripButton12";
+            this.tsbSortD.Text = "按使用频率排序";
             // 
             // tsbExpandAll
             // 
@@ -2226,7 +2238,7 @@
             this.tsbExpandAll.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbExpandAll.Name = "tsbExpandAll";
             this.tsbExpandAll.Size = new System.Drawing.Size(23, 22);
-            this.tsbExpandAll.Text = "toolStripButton13";
+            this.tsbExpandAll.Text = "展开";
             // 
             // tsbCollapse
             // 
@@ -2235,7 +2247,7 @@
             this.tsbCollapse.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCollapse.Name = "tsbCollapse";
             this.tsbCollapse.Size = new System.Drawing.Size(23, 22);
-            this.tsbCollapse.Text = "toolStripButton14";
+            this.tsbCollapse.Text = "折叠";
             // 
             // tsbExport
             // 
@@ -2244,7 +2256,7 @@
             this.tsbExport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbExport.Name = "tsbExport";
             this.tsbExport.Size = new System.Drawing.Size(23, 22);
-            this.tsbExport.Text = "toolStripButton15";
+            this.tsbExport.Text = "输出";
             // 
             // tsbImport
             // 
@@ -2253,7 +2265,7 @@
             this.tsbImport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbImport.Name = "tsbImport";
             this.tsbImport.Size = new System.Drawing.Size(23, 22);
-            this.tsbImport.Text = "toolStripButton16";
+            this.tsbImport.Text = "输入";
             // 
             // tsbSetting
             // 
@@ -2262,7 +2274,7 @@
             this.tsbSetting.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSetting.Name = "tsbSetting";
             this.tsbSetting.Size = new System.Drawing.Size(23, 22);
-            this.tsbSetting.Text = "toolStripButton17";
+            this.tsbSetting.Text = "设置";
             // 
             // tspbRunStatus
             // 
@@ -2301,7 +2313,7 @@
             this.tpDebug.Location = new System.Drawing.Point(4, 22);
             this.tpDebug.Name = "tpDebug";
             this.tpDebug.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDebug.Size = new System.Drawing.Size(1424, 235);
+            this.tpDebug.Size = new System.Drawing.Size(1714, 235);
             this.tpDebug.TabIndex = 1;
             this.tpDebug.Text = "调试";
             this.tpDebug.UseVisualStyleBackColor = true;
@@ -2319,7 +2331,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1418, 229);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1708, 229);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // splitContainer4
@@ -2335,8 +2347,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.tableLayoutPanel4);
-            this.splitContainer4.Size = new System.Drawing.Size(1412, 194);
-            this.splitContainer4.SplitterDistance = 412;
+            this.splitContainer4.Size = new System.Drawing.Size(1702, 194);
+            this.splitContainer4.SplitterDistance = 496;
             this.splitContainer4.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -2352,7 +2364,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(412, 194);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(496, 194);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // skinToolStrip1
@@ -2502,7 +2514,7 @@
             this.stvResultsTree.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stvResultsTree.Location = new System.Drawing.Point(33, 3);
             this.stvResultsTree.Name = "stvResultsTree";
-            this.stvResultsTree.Size = new System.Drawing.Size(376, 188);
+            this.stvResultsTree.Size = new System.Drawing.Size(460, 188);
             this.stvResultsTree.TabIndex = 2;
             // 
             // tableLayoutPanel4
@@ -2518,7 +2530,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(996, 194);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1202, 194);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // skinToolStrip2
@@ -2564,7 +2576,7 @@
             this.dtsbDown,
             this.dtsbWarp,
             this.dtsbDelete});
-            this.skinToolStrip2.Location = new System.Drawing.Point(966, 0);
+            this.skinToolStrip2.Location = new System.Drawing.Point(1172, 0);
             this.skinToolStrip2.Name = "skinToolStrip2";
             this.skinToolStrip2.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.skinToolStrip2.Size = new System.Drawing.Size(24, 194);
@@ -2591,7 +2603,7 @@
             this.dtsbUp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dtsbUp.Name = "dtsbUp";
             this.dtsbUp.Size = new System.Drawing.Size(21, 20);
-            this.dtsbUp.Text = "toolStripButton2";
+            this.dtsbUp.Text = "向上翻";
             // 
             // dtsbDown
             // 
@@ -2600,7 +2612,7 @@
             this.dtsbDown.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dtsbDown.Name = "dtsbDown";
             this.dtsbDown.Size = new System.Drawing.Size(21, 20);
-            this.dtsbDown.Text = "toolStripButton3";
+            this.dtsbDown.Text = "向下翻";
             // 
             // dtsbWarp
             // 
@@ -2609,7 +2621,7 @@
             this.dtsbWarp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dtsbWarp.Name = "dtsbWarp";
             this.dtsbWarp.Size = new System.Drawing.Size(21, 20);
-            this.dtsbWarp.Text = "toolStripButton4";
+            this.dtsbWarp.Text = "自动换行";
             // 
             // dtsbDelete
             // 
@@ -2618,7 +2630,7 @@
             this.dtsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dtsbDelete.Name = "dtsbDelete";
             this.dtsbDelete.Size = new System.Drawing.Size(21, 20);
-            this.dtsbDelete.Text = "toolStripButton5";
+            this.dtsbDelete.Text = "清空结果";
             // 
             // richTextBox1
             // 
@@ -2627,7 +2639,7 @@
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Location = new System.Drawing.Point(3, 3);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(960, 188);
+            this.richTextBox1.Size = new System.Drawing.Size(1166, 188);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -2685,7 +2697,7 @@
             this.skinToolStrip3.Location = new System.Drawing.Point(0, 0);
             this.skinToolStrip3.Name = "skinToolStrip3";
             this.skinToolStrip3.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinToolStrip3.Size = new System.Drawing.Size(1418, 25);
+            this.skinToolStrip3.Size = new System.Drawing.Size(1708, 25);
             this.skinToolStrip3.SkinAllColor = true;
             this.skinToolStrip3.TabIndex = 1;
             this.skinToolStrip3.Text = "skinToolStrip1";
@@ -2701,7 +2713,7 @@
             this.dtsbPassed.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dtsbPassed.Name = "dtsbPassed";
             this.dtsbPassed.Size = new System.Drawing.Size(23, 22);
-            this.dtsbPassed.Text = "toolStripButton9";
+            this.dtsbPassed.Text = "通过项";
             // 
             // dtsbIgnored
             // 
@@ -2710,7 +2722,7 @@
             this.dtsbIgnored.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dtsbIgnored.Name = "dtsbIgnored";
             this.dtsbIgnored.Size = new System.Drawing.Size(23, 22);
-            this.dtsbIgnored.Text = "toolStripButton10";
+            this.dtsbIgnored.Text = "查看忽略项";
             // 
             // dtsbSortA
             // 
@@ -2719,7 +2731,7 @@
             this.dtsbSortA.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dtsbSortA.Name = "dtsbSortA";
             this.dtsbSortA.Size = new System.Drawing.Size(23, 22);
-            this.dtsbSortA.Text = "toolStripButton11";
+            this.dtsbSortA.Text = "按字母排序";
             // 
             // dtsbSortD
             // 
@@ -2728,7 +2740,7 @@
             this.dtsbSortD.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dtsbSortD.Name = "dtsbSortD";
             this.dtsbSortD.Size = new System.Drawing.Size(23, 22);
-            this.dtsbSortD.Text = "toolStripButton12";
+            this.dtsbSortD.Text = "按使用频率排序";
             // 
             // dtsbExpandAll
             // 
@@ -2737,7 +2749,7 @@
             this.dtsbExpandAll.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dtsbExpandAll.Name = "dtsbExpandAll";
             this.dtsbExpandAll.Size = new System.Drawing.Size(23, 22);
-            this.dtsbExpandAll.Text = "toolStripButton13";
+            this.dtsbExpandAll.Text = "展开";
             // 
             // dtsbCollapse
             // 
@@ -2746,7 +2758,8 @@
             this.dtsbCollapse.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dtsbCollapse.Name = "dtsbCollapse";
             this.dtsbCollapse.Size = new System.Drawing.Size(23, 22);
-            this.dtsbCollapse.Text = "toolStripButton14";
+            this.dtsbCollapse.Text = "折叠";
+            this.dtsbCollapse.ToolTipText = "折叠";
             // 
             // dtsbExport
             // 
@@ -2755,7 +2768,7 @@
             this.dtsbExport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dtsbExport.Name = "dtsbExport";
             this.dtsbExport.Size = new System.Drawing.Size(23, 22);
-            this.dtsbExport.Text = "toolStripButton15";
+            this.dtsbExport.Text = "输出";
             // 
             // dtsbImport
             // 
@@ -2764,7 +2777,7 @@
             this.dtsbImport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dtsbImport.Name = "dtsbImport";
             this.dtsbImport.Size = new System.Drawing.Size(23, 22);
-            this.dtsbImport.Text = "toolStripButton16";
+            this.dtsbImport.Text = "输入";
             // 
             // dtsbSetting
             // 
@@ -2773,7 +2786,7 @@
             this.dtsbSetting.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dtsbSetting.Name = "dtsbSetting";
             this.dtsbSetting.Size = new System.Drawing.Size(23, 22);
-            this.dtsbSetting.Text = "toolStripButton17";
+            this.dtsbSetting.Text = "设置";
             // 
             // dtspbRunStatus
             // 
@@ -2787,6 +2800,7 @@
             this.dtslPassedNO.Name = "dtslPassedNO";
             this.dtslPassedNO.Size = new System.Drawing.Size(56, 22);
             this.dtslPassedNO.Text = "通过数：";
+            this.dtslPassedNO.ToolTipText = "脚本通过数";
             // 
             // dtslNO
             // 
@@ -2799,6 +2813,7 @@
             this.dtslTimeUse.Name = "dtslTimeUse";
             this.dtslTimeUse.Size = new System.Drawing.Size(44, 22);
             this.dtslTimeUse.Text = "耗时：";
+            this.dtslTimeUse.ToolTipText = "脚本执行耗时";
             // 
             // dtslTime
             // 
@@ -3081,7 +3096,7 @@
         private System.Windows.Forms.ToolStripButton tsbReRunFailed;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton tsbStop;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton tsbReset;
         private System.Windows.Forms.ToolStripButton tsbClose;
         private System.Windows.Forms.ToolStripButton tsbHelp;
         private System.Windows.Forms.TabControl tcManager;

@@ -190,24 +190,24 @@ namespace TestExerciser
       
         private void 打开文件FToolStripMenu_Click(object sender, EventArgs e)
         {
-            if (selectProjectFolder.SelectedPath != null && selectProjectFolder.SelectedPath != "")
+            //if (selectProjectFolder.SelectedPath != null && selectProjectFolder.SelectedPath != "")
+            //{
+            if (this.openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                if (this.openFileDialog.ShowDialog() == DialogResult.OK)
+                string openFile = this.openFileDialog.SafeFileName;
+                string openFilePath = this.openFileDialog.FileName;
+
+                try
                 {
-                    string openFile = this.openFileDialog.SafeFileName;
-                    string openFilePath = this.openFileDialog.FileName;
+                    CreateTab(openFilePath);
 
-                    try
-                    {
-                        CreateTab(openFilePath);
-
-                    }
-                    catch (Exception exception)
-                    {
-                        MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            //}
         }       
 
         private void 新建文件夹PToolStripMenuItem_Click(object sender, EventArgs e)
@@ -631,7 +631,8 @@ namespace TestExerciser
             }
             else
             {
-                this.tree_Solution.SelectedNode.BackColor = Color.White;
+                setSelectedNodeBackColor();  
+                //this.tree_Solution.SelectedNode.BackColor = Color.White;
                 删除ToolStripMenuItem.Visible = true;
                 标识ToolStripMenuItem.Visible = true;
                 打开文件路径ToolStripMenuItem.Visible = true;
@@ -683,8 +684,7 @@ namespace TestExerciser
         /// <param name="sender"></param>
         /// <param name="e"></param>      
         private void tree_Solution_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
-        {
-            setSelectedNodeBackColor();                 
+        {                          
             clickTreeNodeToLoadFile();
             rightClickFuncVisable();
         }

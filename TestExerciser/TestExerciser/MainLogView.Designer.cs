@@ -43,7 +43,7 @@
             this.tabControl3.Location = new System.Drawing.Point(4, 32);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1706, 750);
+            this.tabControl3.Size = new System.Drawing.Size(1722, 789);
             this.tabControl3.TabIndex = 1;
             // 
             // tabPage5
@@ -52,7 +52,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1698, 724);
+            this.tabPage5.Size = new System.Drawing.Size(1714, 763);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "日志";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@
             this.logView.Location = new System.Drawing.Point(3, 3);
             this.logView.MinimumSize = new System.Drawing.Size(20, 20);
             this.logView.Name = "logView";
-            this.logView.Size = new System.Drawing.Size(1692, 718);
+            this.logView.Size = new System.Drawing.Size(1708, 757);
             this.logView.TabIndex = 0;
             // 
             // MainLogView
@@ -71,7 +71,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(1714, 786);
+            this.ClientSize = new System.Drawing.Size(1730, 825);
             this.Controls.Add(this.tabControl3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainLogView";
