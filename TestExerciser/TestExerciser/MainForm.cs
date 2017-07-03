@@ -332,7 +332,13 @@ namespace TestExerciser
 
         private void 自动滚屏RToolStripOutPut_Click(object sender, EventArgs e)
         {
+            richOutPut.SelectionStart = richOutPut.TextLength;
+            richOutPut.ScrollToCaret();
+        }
 
+        private void 退出自动滚屏OToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richOutPut.SelectionStart = 0;
         }
 
         private void 退出EToolStripOutPut_Click(object sender, EventArgs e)
@@ -2743,5 +2749,94 @@ namespace TestExerciser
                 MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }     
         }
+
+        
+
+        private void tsmErrClearnAll_Click(object sender, EventArgs e)
+        {
+            this.richError.Clear();
+        }
+
+        private void tsmErrRed_Click(object sender, EventArgs e)
+        {
+            richOutPut.SelectionBackColor = Color.Red;
+        }
+
+        private void tsmErrPink_Click(object sender, EventArgs e)
+        {
+            richOutPut.SelectionBackColor = Color.Pink;
+        }
+
+        private void tsmErrYellow_Click(object sender, EventArgs e)
+        {
+            richOutPut.SelectionBackColor = Color.Yellow;
+        }
+
+        private void tsmErrGreen_Click(object sender, EventArgs e)
+        {
+            richOutPut.SelectionBackColor = Color.Green;
+        }
+
+        private void tsmErrDefault_Click(object sender, EventArgs e)
+        {
+            richOutPut.SelectionBackColor = Color.Black;
+        }
+
+        private void tsmErrAutoMark_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmErrAutoScroll_Click(object sender, EventArgs e)
+        {
+            richError.SelectionStart = richError.TextLength;
+            richError.ScrollToCaret();
+        }
+
+        private void tsmErrQuitAutoScroll_Click(object sender, EventArgs e)
+        {
+            richError.SelectionStart = 0;
+            richError.ScrollToCaret();
+        }
+
+        private void tsmErrQuit_Click(object sender, EventArgs e)
+        {
+            this.rightClickOnErrorWindow.Close();
+        }
+
+        private void tsbDelete_Click(object sender, EventArgs e)
+        {
+            this.richOutPut.Clear();
+            this.richError.Clear();
+        }
+
+        private void stbWarp_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.stbWarp.Checked)
+            {
+                this.richOutPut.WordWrap = true;
+                this.richError.WordWrap = true;
+            }
+            else
+            {
+                this.richOutPut.WordWrap = false;
+                this.richError.WordWrap = false;
+            }
+        }
+
+        private void tsbUp_Click(object sender, EventArgs e)
+        {
+            richError.SelectionStart = 0;
+            richError.ScrollToCaret();
+        }
+
+        private void stbDown_Click(object sender, EventArgs e)
+        {
+            richError.SelectionStart = richError.TextLength;
+            richError.ScrollToCaret();
+        }
+
+     
+
     }
 }

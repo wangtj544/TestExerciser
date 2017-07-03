@@ -21,7 +21,7 @@ namespace TestExerciser.Tools
         Label labDetails = new Label();
         SkinTextBox stbServerDBPath = new SkinTextBox();
 
-        public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
+        public static string strcon = ToolSelectDB.strcon;
 
         string operate = null;
 

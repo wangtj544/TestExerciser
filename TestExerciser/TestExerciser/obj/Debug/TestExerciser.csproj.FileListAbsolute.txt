@@ -394,7 +394,6 @@ E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\spyxx.exe
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\spyxxhk.dll
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\spyxxhk_amd64.dll
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\spyxx_amd64.exe
-E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\UISpy.exe
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\AutoIt.chm
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.accdb
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\AutoIt.exe
