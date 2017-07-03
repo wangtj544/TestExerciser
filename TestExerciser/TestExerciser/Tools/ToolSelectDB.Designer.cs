@@ -51,7 +51,7 @@
             this.btnOK.NormlBack = null;
             this.btnOK.Size = new System.Drawing.Size(98, 23);
             this.btnOK.TabIndex = 3;
-            this.btnOK.Text = "确定连接";
+            this.btnOK.Text = "重新登录";
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -67,7 +67,7 @@
             this.btnCancel.NormlBack = null;
             this.btnCancel.Size = new System.Drawing.Size(111, 23);
             this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "取消连接";
+            this.btnCancel.Text = "取消登录";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -79,9 +79,9 @@
             this.labSelectDB.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labSelectDB.Location = new System.Drawing.Point(29, 44);
             this.labSelectDB.Name = "labSelectDB";
-            this.labSelectDB.Size = new System.Drawing.Size(140, 17);
+            this.labSelectDB.Size = new System.Drawing.Size(128, 17);
             this.labSelectDB.TabIndex = 7;
-            this.labSelectDB.Text = "选择您要连接的数据库：";
+            this.labSelectDB.Text = "您需要初始化数据库：";
             // 
             // txtStatus
             // 
@@ -98,7 +98,7 @@
             this.srbLocalDB.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.srbLocalDB.DownBack = null;
             this.srbLocalDB.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.srbLocalDB.Location = new System.Drawing.Point(95, 76);
+            this.srbLocalDB.Location = new System.Drawing.Point(121, 76);
             this.srbLocalDB.MouseBack = null;
             this.srbLocalDB.Name = "srbLocalDB";
             this.srbLocalDB.NormlBack = null;
@@ -118,7 +118,7 @@
             this.srbServerDB.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.srbServerDB.DownBack = null;
             this.srbServerDB.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.srbServerDB.Location = new System.Drawing.Point(95, 106);
+            this.srbServerDB.Location = new System.Drawing.Point(121, 106);
             this.srbServerDB.MouseBack = null;
             this.srbServerDB.Name = "srbServerDB";
             this.srbServerDB.NormlBack = null;
@@ -141,7 +141,7 @@
             this.txtServerDBPath.IsPasswordChat = '\0';
             this.txtServerDBPath.IsSystemPasswordChar = false;
             this.txtServerDBPath.Lines = new string[0];
-            this.txtServerDBPath.Location = new System.Drawing.Point(82, 136);
+            this.txtServerDBPath.Location = new System.Drawing.Point(55, 136);
             this.txtServerDBPath.Margin = new System.Windows.Forms.Padding(0);
             this.txtServerDBPath.MaxLength = 32767;
             this.txtServerDBPath.MinimumSize = new System.Drawing.Size(28, 28);
@@ -153,7 +153,7 @@
             this.txtServerDBPath.Padding = new System.Windows.Forms.Padding(5);
             this.txtServerDBPath.ReadOnly = false;
             this.txtServerDBPath.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtServerDBPath.Size = new System.Drawing.Size(209, 28);
+            this.txtServerDBPath.Size = new System.Drawing.Size(236, 28);
             // 
             // 
             // 
@@ -162,7 +162,7 @@
             this.txtServerDBPath.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
             this.txtServerDBPath.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.txtServerDBPath.SkinTxt.Name = "BaseText";
-            this.txtServerDBPath.SkinTxt.Size = new System.Drawing.Size(199, 18);
+            this.txtServerDBPath.SkinTxt.Size = new System.Drawing.Size(226, 18);
             this.txtServerDBPath.SkinTxt.TabIndex = 0;
             this.txtServerDBPath.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtServerDBPath.SkinTxt.WaterText = "请填写数据库路径...";
@@ -191,8 +191,9 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "ToolSelectDB";
-            this.Text = "选择数据库";
+            this.Text = "初始化数据库";
             this.TitleSuitColor = true;
+            this.Load += new System.EventHandler(this.ToolSelectDB_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

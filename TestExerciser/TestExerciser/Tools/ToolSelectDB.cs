@@ -56,6 +56,17 @@ namespace TestExerciser.Tools
         {
             this.Visible = false;
             this.Close();
+            Application.Exit();
+        }
+
+        private void ToolSelectDB_Load(object sender, EventArgs e)
+        {
+            this.txtServerDBPath.Visible=false;
+            if (this.srbServerDB.Checked == true)
+            {
+                this.txtServerDBPath.Visible = true;
+            }
+
         }
     }
 }

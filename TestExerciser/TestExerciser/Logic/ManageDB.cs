@@ -167,11 +167,7 @@ namespace TestExerciser.Logic
                 }
             }
             catch 
-            {                
-                //MessageBox.Show(exception.Message, "连接异常：将恢复为本地数据库，请尝试重新登录！", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //strcon = ToolManager.strcon;
-                //Properties.Settings.Default.ConnectionString = strcon;
-                //Properties.Settings.Default.Save();
+            {               
                 ToolSelectDB myToolSelectDB =new ToolSelectDB();
                 DialogResult myToolSelectDBRS = myToolSelectDB.ShowDialog();
                 if (myToolSelectDBRS == DialogResult.OK)
