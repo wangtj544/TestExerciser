@@ -130,6 +130,7 @@
             this.srbServerDB.TabStop = true;
             this.srbServerDB.Text = "远程数据库";
             this.srbServerDB.UseVisualStyleBackColor = false;
+            this.srbServerDB.CheckedChanged += new System.EventHandler(this.srbServerDB_CheckedChanged);
             // 
             // txtServerDBPath
             // 
@@ -178,7 +179,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
             this.ClientSize = new System.Drawing.Size(345, 254);
-            this.Controls.Add(this.txtServerDBPath);
             this.Controls.Add(this.srbServerDB);
             this.Controls.Add(this.srbLocalDB);
             this.Controls.Add(this.txtStatus);
@@ -193,7 +193,6 @@
             this.Name = "ToolSelectDB";
             this.Text = "初始化数据库";
             this.TitleSuitColor = true;
-            this.Load += new System.EventHandler(this.ToolSelectDB_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

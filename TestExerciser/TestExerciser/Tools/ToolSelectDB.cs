@@ -59,14 +59,17 @@ namespace TestExerciser.Tools
             Application.Exit();
         }
 
-        private void ToolSelectDB_Load(object sender, EventArgs e)
+
+        private void srbServerDB_CheckedChanged(object sender, EventArgs e)
         {
-            this.txtServerDBPath.Visible=false;
             if (this.srbServerDB.Checked == true)
             {
-                this.txtServerDBPath.Visible = true;
+                this.Controls.Add(this.txtServerDBPath);
             }
-
+            else
+            {
+                this.Controls.Remove(this.txtServerDBPath);
+            }
         }
     }
 }
