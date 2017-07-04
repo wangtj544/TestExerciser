@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CCWin;
+using TestExerciser.Tools.CaseManagement;
 
 namespace TestExerciser
 {
@@ -16,6 +17,18 @@ namespace TestExerciser
         public MainCaseManager()
         {
             InitializeComponent();
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            ToolCaseCommit myToolCaseCommit = new ToolCaseCommit();
+            myToolCaseCommit.Show();
+        }
+
+        private void btnQuery_Click(object sender, EventArgs e)
+        {
+            ToolCaseQuery myToolCaseQuery = new ToolCaseQuery();
+            myToolCaseQuery.Show();
         }
     }
 }

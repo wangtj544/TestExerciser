@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CCWin;
 
 namespace TestExerciser.Tools.CaseManagement
 {
-    public partial class ToolCaseCommit : Form
+    public partial class ToolCaseCommit : Skin_Mac
     {
         public ToolCaseCommit()
         {

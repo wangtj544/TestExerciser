@@ -412,3 +412,6 @@ E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ToolS
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainCaseManager.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainRecord.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainRequirement.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.CaseManagement.ToolCaseCommit.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.CaseManagement.ToolCaseQuery.resources
+E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\ToolUISpy.exe

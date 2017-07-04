@@ -109,14 +109,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1629184">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1763840">
       <assemblyIdentity name="TestExerciser" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pIBiOBTKgVS6kOj4wuCSvnGaLg7ma9n1h6oh7OXmhYA=</dsig:DigestValue>
+        <dsig:DigestValue>dT51Y01ZCotOrTtQpln/F/9cXQkaFf0n3FDpgvQzA3o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -128,7 +128,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gk+jpRDzOAv5pxlaMfsHBmiJJ1BNp/Cf6NmKyN4/y4E=</dsig:DigestValue>
+        <dsig:DigestValue>ys5xEJqhLdCi1pKWMHJIiLUXWd+18ozhytr4UXZ2qd0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -771,7 +771,7 @@
       <dsig:DigestValue>zLK4Ru4f23STeNowpkBM5jXDpWrpvR1bWieX9w9xuHk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Tools\UISpy.exe" size="431104">
+  <file name="Tools\ToolUISpy.exe" size="431104">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />

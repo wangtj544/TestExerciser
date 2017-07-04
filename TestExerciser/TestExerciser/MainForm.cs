@@ -2743,7 +2743,7 @@ namespace TestExerciser
             try
             {
                 Process p = new Process();
-                p.StartInfo.FileName = Application.StartupPath + @"\Tools\UISpy.exe";
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\ToolUISpy.exe";
                 p.Start();
                 p.Close();
             }

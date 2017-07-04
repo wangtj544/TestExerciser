@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CCWin;
+
 
 namespace TestExerciser.Tools.CaseManagement
 {
-    public partial class ToolCaseQuery : Form
+    public partial class ToolCaseQuery : Skin_Mac
     {
         public ToolCaseQuery()
         {

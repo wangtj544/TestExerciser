@@ -389,12 +389,8 @@
             this.cbOccurrence.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbOccurrence.FormattingEnabled = true;
             this.cbOccurrence.Items.AddRange(new object[] {
-            "功能类",
-            "接口类",
-            "逻辑类",
-            "数据类",
-            "UI类",
-            "其他"});
+            "稳定复现",
+            "概率复现"});
             this.cbOccurrence.Location = new System.Drawing.Point(83, 30);
             this.cbOccurrence.Name = "cbOccurrence";
             this.cbOccurrence.Size = new System.Drawing.Size(751, 22);
@@ -420,12 +416,9 @@
             this.cbPriority.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbPriority.FormattingEnabled = true;
             this.cbPriority.Items.AddRange(new object[] {
-            "功能类",
-            "接口类",
-            "逻辑类",
-            "数据类",
-            "UI类",
-            "其他"});
+            "高",
+            "中",
+            "低"});
             this.cbPriority.Location = new System.Drawing.Point(83, 57);
             this.cbPriority.Name = "cbPriority";
             this.cbPriority.Size = new System.Drawing.Size(751, 22);
@@ -539,12 +532,15 @@
             this.cbHowFound.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbHowFound.FormattingEnabled = true;
             this.cbHowFound.Items.AddRange(new object[] {
-            "功能类",
-            "接口类",
-            "逻辑类",
-            "数据类",
-            "UI类",
-            "其他"});
+            "技术评审",
+            "功能测试",
+            "性能测试",
+            "验收测试",
+            "可靠性测试",
+            "单元测试",
+            "集成测试",
+            "代码检查",
+            "客户反馈"});
             this.cbHowFound.Location = new System.Drawing.Point(950, 3);
             this.cbHowFound.Name = "cbHowFound";
             this.cbHowFound.Size = new System.Drawing.Size(751, 22);
@@ -557,12 +553,10 @@
             this.cbGravity.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbGravity.FormattingEnabled = true;
             this.cbGravity.Items.AddRange(new object[] {
-            "功能类",
-            "接口类",
-            "逻辑类",
-            "数据类",
-            "UI类",
-            "其他"});
+            "致命",
+            "严重",
+            "一般",
+            "提示"});
             this.cbGravity.Location = new System.Drawing.Point(950, 30);
             this.cbGravity.Name = "cbGravity";
             this.cbGravity.Size = new System.Drawing.Size(751, 22);
@@ -574,13 +568,6 @@
             this.cbFoundVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbFoundVersion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbFoundVersion.FormattingEnabled = true;
-            this.cbFoundVersion.Items.AddRange(new object[] {
-            "功能类",
-            "接口类",
-            "逻辑类",
-            "数据类",
-            "UI类",
-            "其他"});
             this.cbFoundVersion.Location = new System.Drawing.Point(950, 57);
             this.cbFoundVersion.Name = "cbFoundVersion";
             this.cbFoundVersion.Size = new System.Drawing.Size(751, 22);
