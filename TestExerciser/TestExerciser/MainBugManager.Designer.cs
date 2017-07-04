@@ -34,113 +34,113 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainBugManager));
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpButton = new System.Windows.Forms.TableLayoutPanel();
             this.btnOut = new CCWin.SkinControl.SkinButton();
             this.btnInto = new CCWin.SkinControl.SkinButton();
             this.btnInfo = new CCWin.SkinControl.SkinButton();
             this.btnQuery = new CCWin.SkinControl.SkinButton();
             this.btnNew = new CCWin.SkinControl.SkinButton();
-            this.skinDataGridView1 = new CCWin.SkinControl.SkinDataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSwitch = new CCWin.SkinControl.SkinButton();
+            this.dgvBugManager = new CCWin.SkinControl.SkinDataGridView();
+            this.tlpBugDetails = new System.Windows.Forms.TableLayoutPanel();
             this.slabTitle = new CCWin.SkinControl.SkinLabel();
             this.tbcCaseDesign = new CCWin.SkinControl.SkinTabControl();
-            this.skinTabPage1 = new CCWin.SkinControl.SkinTabPage();
+            this.stpBaseInfo = new CCWin.SkinControl.SkinTabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.skinLabel16 = new CCWin.SkinControl.SkinLabel();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.skinLabel15 = new CCWin.SkinControl.SkinLabel();
+            this.tlpAddComment = new System.Windows.Forms.TableLayoutPanel();
+            this.rtbAddComment = new System.Windows.Forms.RichTextBox();
+            this.labAddComment = new CCWin.SkinControl.SkinLabel();
+            this.tlpHistoryComment = new System.Windows.Forms.TableLayoutPanel();
+            this.rtbHistoryComment = new System.Windows.Forms.RichTextBox();
+            this.labHistoryComment = new CCWin.SkinControl.SkinLabel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.skinLabel7 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel3 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel5 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel8 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel9 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel10 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel11 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel12 = new CCWin.SkinControl.SkinLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.skinLabel4 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel6 = new CCWin.SkinControl.SkinLabel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.labTitle = new CCWin.SkinControl.SkinLabel();
+            this.tlpItems = new System.Windows.Forms.TableLayoutPanel();
+            this.labIntroducer = new CCWin.SkinControl.SkinLabel();
+            this.labCategory = new CCWin.SkinControl.SkinLabel();
+            this.labPriority = new CCWin.SkinControl.SkinLabel();
+            this.labHowFound = new CCWin.SkinControl.SkinLabel();
+            this.labGravity = new CCWin.SkinControl.SkinLabel();
+            this.labFoundBuild = new CCWin.SkinControl.SkinLabel();
+            this.labResolveTime = new CCWin.SkinControl.SkinLabel();
+            this.labCommitTime = new CCWin.SkinControl.SkinLabel();
+            this.txtIntroducer = new System.Windows.Forms.TextBox();
+            this.labProbability = new CCWin.SkinControl.SkinLabel();
+            this.labProductBuild = new CCWin.SkinControl.SkinLabel();
+            this.txtProductBuild = new System.Windows.Forms.TextBox();
+            this.txtPriority = new System.Windows.Forms.TextBox();
+            this.txtProbability = new System.Windows.Forms.TextBox();
+            this.txtCateGory = new System.Windows.Forms.TextBox();
+            this.txtHowFound = new System.Windows.Forms.TextBox();
+            this.txtGravity = new System.Windows.Forms.TextBox();
+            this.txtFoundBuild = new System.Windows.Forms.TextBox();
+            this.txtResolveTime = new System.Windows.Forms.TextBox();
+            this.txtCommitTime = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.skinLabel13 = new CCWin.SkinControl.SkinLabel();
+            this.labProject = new CCWin.SkinControl.SkinLabel();
+            this.txtProject = new System.Windows.Forms.TextBox();
+            this.tlpDescription = new System.Windows.Forms.TableLayoutPanel();
+            this.rtbDescription = new System.Windows.Forms.RichTextBox();
+            this.labDescription = new CCWin.SkinControl.SkinLabel();
             this.stStrip = new CCWin.SkinControl.SkinToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.skinTabPage2 = new CCWin.SkinControl.SkinTabPage();
-            this.skinTabPage3 = new CCWin.SkinControl.SkinTabPage();
-            this.skinTabPage4 = new CCWin.SkinControl.SkinTabPage();
-            this.skinTabPage5 = new CCWin.SkinControl.SkinTabPage();
-            this.skinTabPage6 = new CCWin.SkinControl.SkinTabPage();
-            this.btnSwitch = new CCWin.SkinControl.SkinButton();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            this.tsbExport = new System.Windows.Forms.ToolStripButton();
+            this.tsbInform = new System.Windows.Forms.ToolStripButton();
+            this.tsbTransmit = new System.Windows.Forms.ToolStripButton();
+            this.tsbMark = new System.Windows.Forms.ToolStripButton();
+            this.tsbReStart = new System.Windows.Forms.ToolStripButton();
+            this.stpHighInfo = new CCWin.SkinControl.SkinTabPage();
+            this.stpOperate = new CCWin.SkinControl.SkinTabPage();
+            this.stpAttachment = new CCWin.SkinControl.SkinTabPage();
+            this.stpChart = new CCWin.SkinControl.SkinTabPage();
+            this.stpRelevance = new CCWin.SkinControl.SkinTabPage();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
+            this.splitContainerMain.Panel1.SuspendLayout();
+            this.splitContainerMain.Panel2.SuspendLayout();
+            this.splitContainerMain.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            this.tableLayoutPanel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpButton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBugManager)).BeginInit();
+            this.tlpBugDetails.SuspendLayout();
             this.tbcCaseDesign.SuspendLayout();
-            this.skinTabPage1.SuspendLayout();
+            this.stpBaseInfo.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel10.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
+            this.tlpAddComment.SuspendLayout();
+            this.tlpHistoryComment.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
+            this.tlpItems.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
+            this.tlpDescription.SuspendLayout();
             this.stStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // splitContainer1
+            // splitContainerMain
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(4, 32);
-            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainerMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerMain.Location = new System.Drawing.Point(4, 32);
+            this.splitContainerMain.Name = "splitContainerMain";
             // 
-            // splitContainer1.Panel1
+            // splitContainerMain.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel8);
+            this.splitContainerMain.Panel1.Controls.Add(this.tableLayoutPanel8);
             // 
-            // splitContainer1.Panel2
+            // splitContainerMain.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1722, 789);
-            this.splitContainer1.SplitterDistance = 1087;
-            this.splitContainer1.TabIndex = 0;
+            this.splitContainerMain.Panel2.Controls.Add(this.tlpBugDetails);
+            this.splitContainerMain.Size = new System.Drawing.Size(1722, 789);
+            this.splitContainerMain.SplitterDistance = 1087;
+            this.splitContainerMain.TabIndex = 0;
             // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 1;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel11, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.skinDataGridView1, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.tlpButton, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.dgvBugManager, 0, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -154,29 +154,29 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(1087, 789);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
-            // tableLayoutPanel11
+            // tlpButton
             // 
-            this.tableLayoutPanel11.ColumnCount = 7;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Controls.Add(this.btnOut, 4, 0);
-            this.tableLayoutPanel11.Controls.Add(this.btnInto, 3, 0);
-            this.tableLayoutPanel11.Controls.Add(this.btnInfo, 2, 0);
-            this.tableLayoutPanel11.Controls.Add(this.btnQuery, 1, 0);
-            this.tableLayoutPanel11.Controls.Add(this.btnNew, 0, 0);
-            this.tableLayoutPanel11.Controls.Add(this.btnSwitch, 5, 0);
-            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 1;
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(1081, 29);
-            this.tableLayoutPanel11.TabIndex = 0;
+            this.tlpButton.ColumnCount = 7;
+            this.tlpButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpButton.Controls.Add(this.btnOut, 4, 0);
+            this.tlpButton.Controls.Add(this.btnInto, 3, 0);
+            this.tlpButton.Controls.Add(this.btnInfo, 2, 0);
+            this.tlpButton.Controls.Add(this.btnQuery, 1, 0);
+            this.tlpButton.Controls.Add(this.btnNew, 0, 0);
+            this.tlpButton.Controls.Add(this.btnSwitch, 5, 0);
+            this.tlpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpButton.Location = new System.Drawing.Point(3, 3);
+            this.tlpButton.Name = "tlpButton";
+            this.tlpButton.RowCount = 1;
+            this.tlpButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpButton.Size = new System.Drawing.Size(1081, 29);
+            this.tlpButton.TabIndex = 0;
             // 
             // btnOut
             // 
@@ -255,14 +255,29 @@
             this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // skinDataGridView1
+            // btnSwitch
+            // 
+            this.btnSwitch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSwitch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSwitch.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnSwitch.DownBack = null;
+            this.btnSwitch.Location = new System.Drawing.Point(412, 5);
+            this.btnSwitch.MouseBack = null;
+            this.btnSwitch.Name = "btnSwitch";
+            this.btnSwitch.NormlBack = null;
+            this.btnSwitch.Size = new System.Drawing.Size(55, 19);
+            this.btnSwitch.TabIndex = 5;
+            this.btnSwitch.Text = "转用例";
+            this.btnSwitch.UseVisualStyleBackColor = false;
+            // 
+            // dgvBugManager
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.skinDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.skinDataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.skinDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.skinDataGridView1.ColumnFont = null;
-            this.skinDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvBugManager.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBugManager.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvBugManager.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvBugManager.ColumnFont = null;
+            this.dgvBugManager.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -270,9 +285,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.skinDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.skinDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.skinDataGridView1.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvBugManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBugManager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBugManager.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -280,42 +295,42 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.skinDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.skinDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinDataGridView1.EnableHeadersVisualStyles = false;
-            this.skinDataGridView1.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.skinDataGridView1.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinDataGridView1.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skinDataGridView1.Location = new System.Drawing.Point(3, 38);
-            this.skinDataGridView1.Name = "skinDataGridView1";
-            this.skinDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.skinDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvBugManager.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvBugManager.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBugManager.EnableHeadersVisualStyles = false;
+            this.dgvBugManager.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dgvBugManager.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dgvBugManager.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvBugManager.Location = new System.Drawing.Point(3, 38);
+            this.dgvBugManager.Name = "dgvBugManager";
+            this.dgvBugManager.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvBugManager.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skinDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.skinDataGridView1.RowTemplate.Height = 23;
-            this.skinDataGridView1.Size = new System.Drawing.Size(1081, 718);
-            this.skinDataGridView1.TabIndex = 1;
-            this.skinDataGridView1.TitleBack = null;
-            this.skinDataGridView1.TitleBackColorBegin = System.Drawing.Color.White;
-            this.skinDataGridView1.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.dgvBugManager.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvBugManager.RowTemplate.Height = 23;
+            this.dgvBugManager.Size = new System.Drawing.Size(1081, 718);
+            this.dgvBugManager.TabIndex = 1;
+            this.dgvBugManager.TitleBack = null;
+            this.dgvBugManager.TitleBackColorBegin = System.Drawing.Color.White;
+            this.dgvBugManager.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
             // 
-            // tableLayoutPanel1
+            // tlpBugDetails
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.slabTitle, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tbcCaseDesign, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(631, 789);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tlpBugDetails.ColumnCount = 1;
+            this.tlpBugDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpBugDetails.Controls.Add(this.slabTitle, 0, 0);
+            this.tlpBugDetails.Controls.Add(this.tbcCaseDesign, 0, 1);
+            this.tlpBugDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpBugDetails.Location = new System.Drawing.Point(0, 0);
+            this.tlpBugDetails.Name = "tlpBugDetails";
+            this.tlpBugDetails.RowCount = 2;
+            this.tlpBugDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlpBugDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpBugDetails.Size = new System.Drawing.Size(631, 789);
+            this.tlpBugDetails.TabIndex = 1;
             // 
             // slabTitle
             // 
@@ -334,12 +349,12 @@
             // 
             this.tbcCaseDesign.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
             this.tbcCaseDesign.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
-            this.tbcCaseDesign.Controls.Add(this.skinTabPage1);
-            this.tbcCaseDesign.Controls.Add(this.skinTabPage2);
-            this.tbcCaseDesign.Controls.Add(this.skinTabPage3);
-            this.tbcCaseDesign.Controls.Add(this.skinTabPage4);
-            this.tbcCaseDesign.Controls.Add(this.skinTabPage5);
-            this.tbcCaseDesign.Controls.Add(this.skinTabPage6);
+            this.tbcCaseDesign.Controls.Add(this.stpBaseInfo);
+            this.tbcCaseDesign.Controls.Add(this.stpHighInfo);
+            this.tbcCaseDesign.Controls.Add(this.stpOperate);
+            this.tbcCaseDesign.Controls.Add(this.stpAttachment);
+            this.tbcCaseDesign.Controls.Add(this.stpChart);
+            this.tbcCaseDesign.Controls.Add(this.stpRelevance);
             this.tbcCaseDesign.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbcCaseDesign.HeadBack = null;
             this.tbcCaseDesign.ImgTxtOffset = new System.Drawing.Point(0, 0);
@@ -359,18 +374,18 @@
             this.tbcCaseDesign.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tbcCaseDesign.TabIndex = 1;
             // 
-            // skinTabPage1
+            // stpBaseInfo
             // 
-            this.skinTabPage1.BackColor = System.Drawing.Color.White;
-            this.skinTabPage1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.skinTabPage1.Controls.Add(this.tableLayoutPanel2);
-            this.skinTabPage1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage1.Location = new System.Drawing.Point(0, 36);
-            this.skinTabPage1.Name = "skinTabPage1";
-            this.skinTabPage1.Size = new System.Drawing.Size(625, 717);
-            this.skinTabPage1.TabIndex = 0;
-            this.skinTabPage1.TabItemImage = null;
-            this.skinTabPage1.Text = "基本信息";
+            this.stpBaseInfo.BackColor = System.Drawing.Color.White;
+            this.stpBaseInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.stpBaseInfo.Controls.Add(this.tableLayoutPanel2);
+            this.stpBaseInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stpBaseInfo.Location = new System.Drawing.Point(0, 36);
+            this.stpBaseInfo.Name = "stpBaseInfo";
+            this.stpBaseInfo.Size = new System.Drawing.Size(625, 717);
+            this.stpBaseInfo.TabIndex = 0;
+            this.stpBaseInfo.TabItemImage = null;
+            this.stpBaseInfo.Text = "基本信息";
             // 
             // tableLayoutPanel2
             // 
@@ -391,12 +406,12 @@
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel10, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel9, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.tlpAddComment, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.tlpHistoryComment, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.tlpItems, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel7, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.tlpDescription, 0, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 33);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -410,87 +425,87 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(619, 681);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
-            // tableLayoutPanel10
+            // tlpAddComment
             // 
-            this.tableLayoutPanel10.ColumnCount = 2;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.Controls.Add(this.richTextBox3, 0, 0);
-            this.tableLayoutPanel10.Controls.Add(this.skinLabel16, 0, 0);
-            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 610);
-            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 1;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(613, 68);
-            this.tableLayoutPanel10.TabIndex = 11;
+            this.tlpAddComment.ColumnCount = 2;
+            this.tlpAddComment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpAddComment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpAddComment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpAddComment.Controls.Add(this.rtbAddComment, 0, 0);
+            this.tlpAddComment.Controls.Add(this.labAddComment, 0, 0);
+            this.tlpAddComment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpAddComment.Location = new System.Drawing.Point(3, 610);
+            this.tlpAddComment.Name = "tlpAddComment";
+            this.tlpAddComment.RowCount = 1;
+            this.tlpAddComment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpAddComment.Size = new System.Drawing.Size(613, 68);
+            this.tlpAddComment.TabIndex = 11;
             // 
-            // richTextBox3
+            // rtbAddComment
             // 
-            this.richTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox3.Location = new System.Drawing.Point(83, 3);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(527, 62);
-            this.richTextBox3.TabIndex = 18;
-            this.richTextBox3.Text = "";
+            this.rtbAddComment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbAddComment.Location = new System.Drawing.Point(83, 3);
+            this.rtbAddComment.Name = "rtbAddComment";
+            this.rtbAddComment.Size = new System.Drawing.Size(527, 62);
+            this.rtbAddComment.TabIndex = 18;
+            this.rtbAddComment.Text = "";
             // 
-            // skinLabel16
+            // labAddComment
             // 
-            this.skinLabel16.AutoSize = true;
-            this.skinLabel16.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel16.BorderColor = System.Drawing.Color.White;
-            this.skinLabel16.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel16.Location = new System.Drawing.Point(3, 0);
-            this.skinLabel16.Name = "skinLabel16";
-            this.skinLabel16.Size = new System.Drawing.Size(56, 17);
-            this.skinLabel16.TabIndex = 17;
-            this.skinLabel16.Text = "添加评论";
+            this.labAddComment.AutoSize = true;
+            this.labAddComment.BackColor = System.Drawing.Color.Transparent;
+            this.labAddComment.BorderColor = System.Drawing.Color.White;
+            this.labAddComment.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labAddComment.Location = new System.Drawing.Point(3, 0);
+            this.labAddComment.Name = "labAddComment";
+            this.labAddComment.Size = new System.Drawing.Size(56, 17);
+            this.labAddComment.TabIndex = 17;
+            this.labAddComment.Text = "添加评论";
             // 
-            // tableLayoutPanel9
+            // tlpHistoryComment
             // 
-            this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Controls.Add(this.richTextBox2, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.skinLabel15, 0, 0);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 489);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 1;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(613, 115);
-            this.tableLayoutPanel9.TabIndex = 10;
+            this.tlpHistoryComment.ColumnCount = 2;
+            this.tlpHistoryComment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpHistoryComment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpHistoryComment.Controls.Add(this.rtbHistoryComment, 0, 0);
+            this.tlpHistoryComment.Controls.Add(this.labHistoryComment, 0, 0);
+            this.tlpHistoryComment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpHistoryComment.Location = new System.Drawing.Point(3, 489);
+            this.tlpHistoryComment.Name = "tlpHistoryComment";
+            this.tlpHistoryComment.RowCount = 1;
+            this.tlpHistoryComment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpHistoryComment.Size = new System.Drawing.Size(613, 115);
+            this.tlpHistoryComment.TabIndex = 10;
             // 
-            // richTextBox2
+            // rtbHistoryComment
             // 
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Location = new System.Drawing.Point(83, 3);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(527, 109);
-            this.richTextBox2.TabIndex = 17;
-            this.richTextBox2.Text = "";
+            this.rtbHistoryComment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbHistoryComment.Location = new System.Drawing.Point(83, 3);
+            this.rtbHistoryComment.Name = "rtbHistoryComment";
+            this.rtbHistoryComment.ReadOnly = true;
+            this.rtbHistoryComment.Size = new System.Drawing.Size(527, 109);
+            this.rtbHistoryComment.TabIndex = 17;
+            this.rtbHistoryComment.Text = "";
             // 
-            // skinLabel15
+            // labHistoryComment
             // 
-            this.skinLabel15.AutoSize = true;
-            this.skinLabel15.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel15.BorderColor = System.Drawing.Color.White;
-            this.skinLabel15.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel15.Location = new System.Drawing.Point(3, 0);
-            this.skinLabel15.Name = "skinLabel15";
-            this.skinLabel15.Size = new System.Drawing.Size(56, 17);
-            this.skinLabel15.TabIndex = 16;
-            this.skinLabel15.Text = "历史评论";
+            this.labHistoryComment.AutoSize = true;
+            this.labHistoryComment.BackColor = System.Drawing.Color.Transparent;
+            this.labHistoryComment.BorderColor = System.Drawing.Color.White;
+            this.labHistoryComment.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labHistoryComment.Location = new System.Drawing.Point(3, 0);
+            this.labHistoryComment.Name = "labHistoryComment";
+            this.labHistoryComment.Size = new System.Drawing.Size(56, 17);
+            this.labHistoryComment.TabIndex = 16;
+            this.labHistoryComment.Text = "历史评论";
             // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.textBox4, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.skinLabel1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtTitle, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.labTitle, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -499,278 +514,278 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(613, 24);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
-            // textBox4
+            // txtTitle
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Location = new System.Drawing.Point(83, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(527, 21);
-            this.textBox4.TabIndex = 3;
+            this.txtTitle.BackColor = System.Drawing.Color.White;
+            this.txtTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTitle.Location = new System.Drawing.Point(83, 3);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(527, 21);
+            this.txtTitle.TabIndex = 3;
             // 
-            // skinLabel1
+            // labTitle
             // 
-            this.skinLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.skinLabel1.AutoSize = true;
-            this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel1.BorderColor = System.Drawing.Color.White;
-            this.skinLabel1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel1.Location = new System.Drawing.Point(3, 3);
-            this.skinLabel1.Name = "skinLabel1";
-            this.skinLabel1.Size = new System.Drawing.Size(32, 17);
-            this.skinLabel1.TabIndex = 1;
-            this.skinLabel1.Text = "标题";
+            this.labTitle.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labTitle.AutoSize = true;
+            this.labTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labTitle.BorderColor = System.Drawing.Color.White;
+            this.labTitle.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labTitle.Location = new System.Drawing.Point(3, 3);
+            this.labTitle.Name = "labTitle";
+            this.labTitle.Size = new System.Drawing.Size(32, 17);
+            this.labTitle.TabIndex = 1;
+            this.labTitle.Text = "标题";
             // 
-            // tableLayoutPanel6
+            // tlpItems
             // 
-            this.tableLayoutPanel6.ColumnCount = 4;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Controls.Add(this.skinLabel7, 0, 4);
-            this.tableLayoutPanel6.Controls.Add(this.skinLabel3, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.skinLabel5, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(this.skinLabel8, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.skinLabel9, 2, 1);
-            this.tableLayoutPanel6.Controls.Add(this.skinLabel10, 2, 2);
-            this.tableLayoutPanel6.Controls.Add(this.skinLabel11, 2, 3);
-            this.tableLayoutPanel6.Controls.Add(this.skinLabel12, 2, 4);
-            this.tableLayoutPanel6.Controls.Add(this.textBox1, 1, 4);
-            this.tableLayoutPanel6.Controls.Add(this.skinLabel4, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.skinLabel6, 0, 3);
-            this.tableLayoutPanel6.Controls.Add(this.textBox3, 1, 3);
-            this.tableLayoutPanel6.Controls.Add(this.textBox5, 1, 2);
-            this.tableLayoutPanel6.Controls.Add(this.textBox6, 1, 1);
-            this.tableLayoutPanel6.Controls.Add(this.textBox7, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.textBox8, 3, 0);
-            this.tableLayoutPanel6.Controls.Add(this.textBox9, 3, 1);
-            this.tableLayoutPanel6.Controls.Add(this.textBox10, 3, 2);
-            this.tableLayoutPanel6.Controls.Add(this.textBox11, 3, 3);
-            this.tableLayoutPanel6.Controls.Add(this.textBox12, 3, 4);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 63);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 5;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(613, 129);
-            this.tableLayoutPanel6.TabIndex = 2;
+            this.tlpItems.ColumnCount = 4;
+            this.tlpItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpItems.Controls.Add(this.labIntroducer, 0, 4);
+            this.tlpItems.Controls.Add(this.labCategory, 0, 0);
+            this.tlpItems.Controls.Add(this.labPriority, 0, 2);
+            this.tlpItems.Controls.Add(this.labHowFound, 2, 0);
+            this.tlpItems.Controls.Add(this.labGravity, 2, 1);
+            this.tlpItems.Controls.Add(this.labFoundBuild, 2, 2);
+            this.tlpItems.Controls.Add(this.labResolveTime, 2, 3);
+            this.tlpItems.Controls.Add(this.labCommitTime, 2, 4);
+            this.tlpItems.Controls.Add(this.txtIntroducer, 1, 4);
+            this.tlpItems.Controls.Add(this.labProbability, 0, 1);
+            this.tlpItems.Controls.Add(this.labProductBuild, 0, 3);
+            this.tlpItems.Controls.Add(this.txtProductBuild, 1, 3);
+            this.tlpItems.Controls.Add(this.txtPriority, 1, 2);
+            this.tlpItems.Controls.Add(this.txtProbability, 1, 1);
+            this.tlpItems.Controls.Add(this.txtCateGory, 1, 0);
+            this.tlpItems.Controls.Add(this.txtHowFound, 3, 0);
+            this.tlpItems.Controls.Add(this.txtGravity, 3, 1);
+            this.tlpItems.Controls.Add(this.txtFoundBuild, 3, 2);
+            this.tlpItems.Controls.Add(this.txtResolveTime, 3, 3);
+            this.tlpItems.Controls.Add(this.txtCommitTime, 3, 4);
+            this.tlpItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpItems.Location = new System.Drawing.Point(3, 63);
+            this.tlpItems.Name = "tlpItems";
+            this.tlpItems.RowCount = 5;
+            this.tlpItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpItems.Size = new System.Drawing.Size(613, 129);
+            this.tlpItems.TabIndex = 2;
             // 
-            // skinLabel7
+            // labIntroducer
             // 
-            this.skinLabel7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.skinLabel7.AutoSize = true;
-            this.skinLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel7.BorderColor = System.Drawing.Color.White;
-            this.skinLabel7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel7.Location = new System.Drawing.Point(3, 106);
-            this.skinLabel7.Name = "skinLabel7";
-            this.skinLabel7.Size = new System.Drawing.Size(44, 17);
-            this.skinLabel7.TabIndex = 13;
-            this.skinLabel7.Text = "提出人";
+            this.labIntroducer.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labIntroducer.AutoSize = true;
+            this.labIntroducer.BackColor = System.Drawing.Color.Transparent;
+            this.labIntroducer.BorderColor = System.Drawing.Color.White;
+            this.labIntroducer.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labIntroducer.Location = new System.Drawing.Point(3, 106);
+            this.labIntroducer.Name = "labIntroducer";
+            this.labIntroducer.Size = new System.Drawing.Size(44, 17);
+            this.labIntroducer.TabIndex = 13;
+            this.labIntroducer.Text = "提出人";
             // 
-            // skinLabel3
+            // labCategory
             // 
-            this.skinLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.skinLabel3.AutoSize = true;
-            this.skinLabel3.BackColor = System.Drawing.Color.White;
-            this.skinLabel3.BorderColor = System.Drawing.Color.White;
-            this.skinLabel3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel3.Location = new System.Drawing.Point(3, 4);
-            this.skinLabel3.Name = "skinLabel3";
-            this.skinLabel3.Size = new System.Drawing.Size(32, 17);
-            this.skinLabel3.TabIndex = 4;
-            this.skinLabel3.Text = "类别";
+            this.labCategory.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labCategory.AutoSize = true;
+            this.labCategory.BackColor = System.Drawing.Color.White;
+            this.labCategory.BorderColor = System.Drawing.Color.White;
+            this.labCategory.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labCategory.Location = new System.Drawing.Point(3, 4);
+            this.labCategory.Name = "labCategory";
+            this.labCategory.Size = new System.Drawing.Size(32, 17);
+            this.labCategory.TabIndex = 4;
+            this.labCategory.Text = "类别";
             // 
-            // skinLabel5
+            // labPriority
             // 
-            this.skinLabel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.skinLabel5.AutoSize = true;
-            this.skinLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel5.BorderColor = System.Drawing.Color.White;
-            this.skinLabel5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel5.Location = new System.Drawing.Point(3, 54);
-            this.skinLabel5.Name = "skinLabel5";
-            this.skinLabel5.Size = new System.Drawing.Size(44, 17);
-            this.skinLabel5.TabIndex = 10;
-            this.skinLabel5.Text = "优先级";
+            this.labPriority.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labPriority.AutoSize = true;
+            this.labPriority.BackColor = System.Drawing.Color.Transparent;
+            this.labPriority.BorderColor = System.Drawing.Color.White;
+            this.labPriority.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labPriority.Location = new System.Drawing.Point(3, 54);
+            this.labPriority.Name = "labPriority";
+            this.labPriority.Size = new System.Drawing.Size(44, 17);
+            this.labPriority.TabIndex = 10;
+            this.labPriority.Text = "优先级";
             // 
-            // skinLabel8
+            // labHowFound
             // 
-            this.skinLabel8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.skinLabel8.AutoSize = true;
-            this.skinLabel8.BackColor = System.Drawing.Color.White;
-            this.skinLabel8.BorderColor = System.Drawing.Color.White;
-            this.skinLabel8.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel8.Location = new System.Drawing.Point(309, 4);
-            this.skinLabel8.Name = "skinLabel8";
-            this.skinLabel8.Size = new System.Drawing.Size(56, 17);
-            this.skinLabel8.TabIndex = 14;
-            this.skinLabel8.Text = "发现方法";
+            this.labHowFound.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labHowFound.AutoSize = true;
+            this.labHowFound.BackColor = System.Drawing.Color.White;
+            this.labHowFound.BorderColor = System.Drawing.Color.White;
+            this.labHowFound.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labHowFound.Location = new System.Drawing.Point(309, 4);
+            this.labHowFound.Name = "labHowFound";
+            this.labHowFound.Size = new System.Drawing.Size(56, 17);
+            this.labHowFound.TabIndex = 14;
+            this.labHowFound.Text = "发现方法";
             // 
-            // skinLabel9
+            // labGravity
             // 
-            this.skinLabel9.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.skinLabel9.AutoSize = true;
-            this.skinLabel9.BackColor = System.Drawing.Color.White;
-            this.skinLabel9.BorderColor = System.Drawing.Color.White;
-            this.skinLabel9.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel9.Location = new System.Drawing.Point(309, 29);
-            this.skinLabel9.Name = "skinLabel9";
-            this.skinLabel9.Size = new System.Drawing.Size(44, 17);
-            this.skinLabel9.TabIndex = 15;
-            this.skinLabel9.Text = "严重性";
+            this.labGravity.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labGravity.AutoSize = true;
+            this.labGravity.BackColor = System.Drawing.Color.White;
+            this.labGravity.BorderColor = System.Drawing.Color.White;
+            this.labGravity.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labGravity.Location = new System.Drawing.Point(309, 29);
+            this.labGravity.Name = "labGravity";
+            this.labGravity.Size = new System.Drawing.Size(44, 17);
+            this.labGravity.TabIndex = 15;
+            this.labGravity.Text = "严重性";
             // 
-            // skinLabel10
+            // labFoundBuild
             // 
-            this.skinLabel10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.skinLabel10.AutoSize = true;
-            this.skinLabel10.BackColor = System.Drawing.Color.White;
-            this.skinLabel10.BorderColor = System.Drawing.Color.White;
-            this.skinLabel10.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel10.Location = new System.Drawing.Point(309, 54);
-            this.skinLabel10.Name = "skinLabel10";
-            this.skinLabel10.Size = new System.Drawing.Size(56, 17);
-            this.skinLabel10.TabIndex = 16;
-            this.skinLabel10.Text = "发现构建";
+            this.labFoundBuild.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labFoundBuild.AutoSize = true;
+            this.labFoundBuild.BackColor = System.Drawing.Color.White;
+            this.labFoundBuild.BorderColor = System.Drawing.Color.White;
+            this.labFoundBuild.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labFoundBuild.Location = new System.Drawing.Point(309, 54);
+            this.labFoundBuild.Name = "labFoundBuild";
+            this.labFoundBuild.Size = new System.Drawing.Size(56, 17);
+            this.labFoundBuild.TabIndex = 16;
+            this.labFoundBuild.Text = "发现构建";
             // 
-            // skinLabel11
+            // labResolveTime
             // 
-            this.skinLabel11.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.skinLabel11.AutoSize = true;
-            this.skinLabel11.BackColor = System.Drawing.Color.White;
-            this.skinLabel11.BorderColor = System.Drawing.Color.White;
-            this.skinLabel11.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel11.Location = new System.Drawing.Point(309, 79);
-            this.skinLabel11.Name = "skinLabel11";
-            this.skinLabel11.Size = new System.Drawing.Size(56, 17);
-            this.skinLabel11.TabIndex = 17;
-            this.skinLabel11.Text = "解决日期";
+            this.labResolveTime.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labResolveTime.AutoSize = true;
+            this.labResolveTime.BackColor = System.Drawing.Color.White;
+            this.labResolveTime.BorderColor = System.Drawing.Color.White;
+            this.labResolveTime.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labResolveTime.Location = new System.Drawing.Point(309, 79);
+            this.labResolveTime.Name = "labResolveTime";
+            this.labResolveTime.Size = new System.Drawing.Size(56, 17);
+            this.labResolveTime.TabIndex = 17;
+            this.labResolveTime.Text = "解决日期";
             // 
-            // skinLabel12
+            // labCommitTime
             // 
-            this.skinLabel12.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.skinLabel12.AutoSize = true;
-            this.skinLabel12.BackColor = System.Drawing.Color.White;
-            this.skinLabel12.BorderColor = System.Drawing.Color.White;
-            this.skinLabel12.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel12.Location = new System.Drawing.Point(309, 106);
-            this.skinLabel12.Name = "skinLabel12";
-            this.skinLabel12.Size = new System.Drawing.Size(56, 17);
-            this.skinLabel12.TabIndex = 18;
-            this.skinLabel12.Text = "提出日期";
+            this.labCommitTime.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labCommitTime.AutoSize = true;
+            this.labCommitTime.BackColor = System.Drawing.Color.White;
+            this.labCommitTime.BorderColor = System.Drawing.Color.White;
+            this.labCommitTime.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labCommitTime.Location = new System.Drawing.Point(309, 106);
+            this.labCommitTime.Name = "labCommitTime";
+            this.labCommitTime.Size = new System.Drawing.Size(56, 17);
+            this.labCommitTime.TabIndex = 18;
+            this.labCommitTime.Text = "提出日期";
             // 
-            // textBox1
+            // txtIntroducer
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(83, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 21);
-            this.textBox1.TabIndex = 27;
+            this.txtIntroducer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtIntroducer.Location = new System.Drawing.Point(83, 103);
+            this.txtIntroducer.Name = "txtIntroducer";
+            this.txtIntroducer.Size = new System.Drawing.Size(220, 21);
+            this.txtIntroducer.TabIndex = 27;
             // 
-            // skinLabel4
+            // labProbability
             // 
-            this.skinLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.skinLabel4.AutoSize = true;
-            this.skinLabel4.BackColor = System.Drawing.Color.White;
-            this.skinLabel4.BorderColor = System.Drawing.Color.White;
-            this.skinLabel4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel4.Location = new System.Drawing.Point(3, 29);
-            this.skinLabel4.Name = "skinLabel4";
-            this.skinLabel4.Size = new System.Drawing.Size(56, 17);
-            this.skinLabel4.TabIndex = 29;
-            this.skinLabel4.Text = "发生概率";
+            this.labProbability.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labProbability.AutoSize = true;
+            this.labProbability.BackColor = System.Drawing.Color.White;
+            this.labProbability.BorderColor = System.Drawing.Color.White;
+            this.labProbability.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labProbability.Location = new System.Drawing.Point(3, 29);
+            this.labProbability.Name = "labProbability";
+            this.labProbability.Size = new System.Drawing.Size(56, 17);
+            this.labProbability.TabIndex = 29;
+            this.labProbability.Text = "发生概率";
             // 
-            // skinLabel6
+            // labProductBuild
             // 
-            this.skinLabel6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.skinLabel6.AutoSize = true;
-            this.skinLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel6.BorderColor = System.Drawing.Color.White;
-            this.skinLabel6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel6.Location = new System.Drawing.Point(3, 79);
-            this.skinLabel6.Name = "skinLabel6";
-            this.skinLabel6.Size = new System.Drawing.Size(56, 17);
-            this.skinLabel6.TabIndex = 30;
-            this.skinLabel6.Text = "产品构建";
+            this.labProductBuild.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labProductBuild.AutoSize = true;
+            this.labProductBuild.BackColor = System.Drawing.Color.Transparent;
+            this.labProductBuild.BorderColor = System.Drawing.Color.White;
+            this.labProductBuild.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labProductBuild.Location = new System.Drawing.Point(3, 79);
+            this.labProductBuild.Name = "labProductBuild";
+            this.labProductBuild.Size = new System.Drawing.Size(56, 17);
+            this.labProductBuild.TabIndex = 30;
+            this.labProductBuild.Text = "产品构建";
             // 
-            // textBox3
+            // txtProductBuild
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(83, 78);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(220, 21);
-            this.textBox3.TabIndex = 31;
+            this.txtProductBuild.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtProductBuild.Location = new System.Drawing.Point(83, 78);
+            this.txtProductBuild.Name = "txtProductBuild";
+            this.txtProductBuild.Size = new System.Drawing.Size(220, 21);
+            this.txtProductBuild.TabIndex = 31;
             // 
-            // textBox5
+            // txtPriority
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(83, 53);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(220, 21);
-            this.textBox5.TabIndex = 32;
+            this.txtPriority.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPriority.Location = new System.Drawing.Point(83, 53);
+            this.txtPriority.Name = "txtPriority";
+            this.txtPriority.Size = new System.Drawing.Size(220, 21);
+            this.txtPriority.TabIndex = 32;
             // 
-            // textBox6
+            // txtProbability
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(83, 28);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(220, 21);
-            this.textBox6.TabIndex = 33;
+            this.txtProbability.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtProbability.Location = new System.Drawing.Point(83, 28);
+            this.txtProbability.Name = "txtProbability";
+            this.txtProbability.Size = new System.Drawing.Size(220, 21);
+            this.txtProbability.TabIndex = 33;
             // 
-            // textBox7
+            // txtCateGory
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(83, 3);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(220, 21);
-            this.textBox7.TabIndex = 34;
+            this.txtCateGory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCateGory.Location = new System.Drawing.Point(83, 3);
+            this.txtCateGory.Name = "txtCateGory";
+            this.txtCateGory.Size = new System.Drawing.Size(220, 21);
+            this.txtCateGory.TabIndex = 34;
             // 
-            // textBox8
+            // txtHowFound
             // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Location = new System.Drawing.Point(389, 3);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(221, 21);
-            this.textBox8.TabIndex = 35;
+            this.txtHowFound.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtHowFound.Location = new System.Drawing.Point(389, 3);
+            this.txtHowFound.Name = "txtHowFound";
+            this.txtHowFound.Size = new System.Drawing.Size(221, 21);
+            this.txtHowFound.TabIndex = 35;
             // 
-            // textBox9
+            // txtGravity
             // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.Location = new System.Drawing.Point(389, 28);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(221, 21);
-            this.textBox9.TabIndex = 36;
+            this.txtGravity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGravity.Location = new System.Drawing.Point(389, 28);
+            this.txtGravity.Name = "txtGravity";
+            this.txtGravity.Size = new System.Drawing.Size(221, 21);
+            this.txtGravity.TabIndex = 36;
             // 
-            // textBox10
+            // txtFoundBuild
             // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox10.Location = new System.Drawing.Point(389, 53);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(221, 21);
-            this.textBox10.TabIndex = 37;
+            this.txtFoundBuild.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFoundBuild.Location = new System.Drawing.Point(389, 53);
+            this.txtFoundBuild.Name = "txtFoundBuild";
+            this.txtFoundBuild.Size = new System.Drawing.Size(221, 21);
+            this.txtFoundBuild.TabIndex = 37;
             // 
-            // textBox11
+            // txtResolveTime
             // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.Location = new System.Drawing.Point(389, 78);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(221, 21);
-            this.textBox11.TabIndex = 38;
+            this.txtResolveTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtResolveTime.Location = new System.Drawing.Point(389, 78);
+            this.txtResolveTime.Name = "txtResolveTime";
+            this.txtResolveTime.Size = new System.Drawing.Size(221, 21);
+            this.txtResolveTime.TabIndex = 38;
             // 
-            // textBox12
+            // txtCommitTime
             // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.Location = new System.Drawing.Point(389, 104);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(221, 21);
-            this.textBox12.TabIndex = 39;
+            this.txtCommitTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCommitTime.Location = new System.Drawing.Point(389, 104);
+            this.txtCommitTime.Name = "txtCommitTime";
+            this.txtCommitTime.Size = new System.Drawing.Size(221, 21);
+            this.txtCommitTime.TabIndex = 39;
             // 
             // tableLayoutPanel5
             // 
@@ -778,8 +793,8 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Controls.Add(this.skinLabel2, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.textBox2, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.labProject, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.txtProject, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 33);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -788,64 +803,64 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(613, 24);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
-            // skinLabel2
+            // labProject
             // 
-            this.skinLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.skinLabel2.AutoSize = true;
-            this.skinLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel2.BorderColor = System.Drawing.Color.White;
-            this.skinLabel2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel2.Location = new System.Drawing.Point(3, 3);
-            this.skinLabel2.Name = "skinLabel2";
-            this.skinLabel2.Size = new System.Drawing.Size(56, 17);
-            this.skinLabel2.TabIndex = 1;
-            this.skinLabel2.Text = "所属项目";
+            this.labProject.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labProject.AutoSize = true;
+            this.labProject.BackColor = System.Drawing.Color.Transparent;
+            this.labProject.BorderColor = System.Drawing.Color.White;
+            this.labProject.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labProject.Location = new System.Drawing.Point(3, 3);
+            this.labProject.Name = "labProject";
+            this.labProject.Size = new System.Drawing.Size(56, 17);
+            this.labProject.TabIndex = 1;
+            this.labProject.Text = "所属项目";
             // 
-            // textBox2
+            // txtProject
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(83, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(527, 21);
-            this.textBox2.TabIndex = 2;
+            this.txtProject.BackColor = System.Drawing.Color.White;
+            this.txtProject.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtProject.Location = new System.Drawing.Point(83, 3);
+            this.txtProject.Name = "txtProject";
+            this.txtProject.Size = new System.Drawing.Size(527, 21);
+            this.txtProject.TabIndex = 2;
             // 
-            // tableLayoutPanel7
+            // tlpDescription
             // 
-            this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Controls.Add(this.richTextBox1, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.skinLabel13, 0, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 198);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(613, 285);
-            this.tableLayoutPanel7.TabIndex = 5;
+            this.tlpDescription.ColumnCount = 2;
+            this.tlpDescription.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tlpDescription.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDescription.Controls.Add(this.rtbDescription, 0, 0);
+            this.tlpDescription.Controls.Add(this.labDescription, 0, 0);
+            this.tlpDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpDescription.Location = new System.Drawing.Point(3, 198);
+            this.tlpDescription.Name = "tlpDescription";
+            this.tlpDescription.RowCount = 1;
+            this.tlpDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpDescription.Size = new System.Drawing.Size(613, 285);
+            this.tlpDescription.TabIndex = 5;
             // 
-            // richTextBox1
+            // rtbDescription
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(83, 3);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(527, 279);
-            this.richTextBox1.TabIndex = 15;
-            this.richTextBox1.Text = "";
+            this.rtbDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbDescription.Location = new System.Drawing.Point(83, 3);
+            this.rtbDescription.Name = "rtbDescription";
+            this.rtbDescription.ReadOnly = true;
+            this.rtbDescription.Size = new System.Drawing.Size(527, 279);
+            this.rtbDescription.TabIndex = 15;
+            this.rtbDescription.Text = "";
             // 
-            // skinLabel13
+            // labDescription
             // 
-            this.skinLabel13.AutoSize = true;
-            this.skinLabel13.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel13.BorderColor = System.Drawing.Color.White;
-            this.skinLabel13.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel13.Location = new System.Drawing.Point(3, 0);
-            this.skinLabel13.Name = "skinLabel13";
-            this.skinLabel13.Size = new System.Drawing.Size(68, 17);
-            this.skinLabel13.TabIndex = 14;
-            this.skinLabel13.Text = "描述和建议";
+            this.labDescription.AutoSize = true;
+            this.labDescription.BackColor = System.Drawing.Color.Transparent;
+            this.labDescription.BorderColor = System.Drawing.Color.White;
+            this.labDescription.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labDescription.Location = new System.Drawing.Point(3, 0);
+            this.labDescription.Name = "labDescription";
+            this.labDescription.Size = new System.Drawing.Size(68, 17);
+            this.labDescription.TabIndex = 14;
+            this.labDescription.Text = "描述和建议";
             // 
             // stStrip
             // 
@@ -884,11 +899,11 @@
             this.stStrip.ItemRadius = 4;
             this.stStrip.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.stStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4,
-            this.toolStripButton5});
+            this.tsbExport,
+            this.tsbInform,
+            this.tsbTransmit,
+            this.tsbMark,
+            this.tsbReStart});
             this.stStrip.Location = new System.Drawing.Point(0, 0);
             this.stStrip.Name = "stStrip";
             this.stStrip.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
@@ -901,120 +916,105 @@
             this.stStrip.TitleRadius = 4;
             this.stStrip.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             // 
-            // toolStripButton1
+            // tsbExport
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(36, 22);
-            this.toolStripButton1.Text = "导出";
+            this.tsbExport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbExport.Image = ((System.Drawing.Image)(resources.GetObject("tsbExport.Image")));
+            this.tsbExport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbExport.Name = "tsbExport";
+            this.tsbExport.Size = new System.Drawing.Size(36, 22);
+            this.tsbExport.Text = "导出";
             // 
-            // toolStripButton2
+            // tsbInform
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(36, 22);
-            this.toolStripButton2.Text = "通知";
+            this.tsbInform.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbInform.Image = ((System.Drawing.Image)(resources.GetObject("tsbInform.Image")));
+            this.tsbInform.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbInform.Name = "tsbInform";
+            this.tsbInform.Size = new System.Drawing.Size(36, 22);
+            this.tsbInform.Text = "通知";
             // 
-            // toolStripButton3
+            // tsbTransmit
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(36, 22);
-            this.toolStripButton3.Text = "转发";
+            this.tsbTransmit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbTransmit.Image = ((System.Drawing.Image)(resources.GetObject("tsbTransmit.Image")));
+            this.tsbTransmit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbTransmit.Name = "tsbTransmit";
+            this.tsbTransmit.Size = new System.Drawing.Size(36, 22);
+            this.tsbTransmit.Text = "转发";
             // 
-            // toolStripButton4
+            // tsbMark
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(36, 22);
-            this.toolStripButton4.Text = "标签";
+            this.tsbMark.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbMark.Image = ((System.Drawing.Image)(resources.GetObject("tsbMark.Image")));
+            this.tsbMark.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbMark.Name = "tsbMark";
+            this.tsbMark.Size = new System.Drawing.Size(36, 22);
+            this.tsbMark.Text = "标签";
             // 
-            // toolStripButton5
+            // tsbReStart
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(60, 22);
-            this.toolStripButton5.Text = "重新开启";
+            this.tsbReStart.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbReStart.Image = ((System.Drawing.Image)(resources.GetObject("tsbReStart.Image")));
+            this.tsbReStart.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbReStart.Name = "tsbReStart";
+            this.tsbReStart.Size = new System.Drawing.Size(60, 22);
+            this.tsbReStart.Text = "重新开启";
             // 
-            // skinTabPage2
+            // stpHighInfo
             // 
-            this.skinTabPage2.BackColor = System.Drawing.Color.White;
-            this.skinTabPage2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage2.Location = new System.Drawing.Point(0, 36);
-            this.skinTabPage2.Name = "skinTabPage2";
-            this.skinTabPage2.Size = new System.Drawing.Size(625, 717);
-            this.skinTabPage2.TabIndex = 1;
-            this.skinTabPage2.TabItemImage = null;
-            this.skinTabPage2.Text = "高级信息";
+            this.stpHighInfo.BackColor = System.Drawing.Color.White;
+            this.stpHighInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stpHighInfo.Location = new System.Drawing.Point(0, 36);
+            this.stpHighInfo.Name = "stpHighInfo";
+            this.stpHighInfo.Size = new System.Drawing.Size(625, 717);
+            this.stpHighInfo.TabIndex = 1;
+            this.stpHighInfo.TabItemImage = null;
+            this.stpHighInfo.Text = "高级信息";
             // 
-            // skinTabPage3
+            // stpOperate
             // 
-            this.skinTabPage3.BackColor = System.Drawing.Color.White;
-            this.skinTabPage3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage3.Location = new System.Drawing.Point(0, 36);
-            this.skinTabPage3.Name = "skinTabPage3";
-            this.skinTabPage3.Size = new System.Drawing.Size(625, 717);
-            this.skinTabPage3.TabIndex = 2;
-            this.skinTabPage3.TabItemImage = null;
-            this.skinTabPage3.Text = "操作记录";
+            this.stpOperate.BackColor = System.Drawing.Color.White;
+            this.stpOperate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stpOperate.Location = new System.Drawing.Point(0, 36);
+            this.stpOperate.Name = "stpOperate";
+            this.stpOperate.Size = new System.Drawing.Size(625, 717);
+            this.stpOperate.TabIndex = 2;
+            this.stpOperate.TabItemImage = null;
+            this.stpOperate.Text = "操作记录";
             // 
-            // skinTabPage4
+            // stpAttachment
             // 
-            this.skinTabPage4.BackColor = System.Drawing.Color.White;
-            this.skinTabPage4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage4.Location = new System.Drawing.Point(0, 36);
-            this.skinTabPage4.Name = "skinTabPage4";
-            this.skinTabPage4.Size = new System.Drawing.Size(625, 717);
-            this.skinTabPage4.TabIndex = 3;
-            this.skinTabPage4.TabItemImage = null;
-            this.skinTabPage4.Text = "附件";
+            this.stpAttachment.BackColor = System.Drawing.Color.White;
+            this.stpAttachment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stpAttachment.Location = new System.Drawing.Point(0, 36);
+            this.stpAttachment.Name = "stpAttachment";
+            this.stpAttachment.Size = new System.Drawing.Size(625, 717);
+            this.stpAttachment.TabIndex = 3;
+            this.stpAttachment.TabItemImage = null;
+            this.stpAttachment.Text = "附件";
             // 
-            // skinTabPage5
+            // stpChart
             // 
-            this.skinTabPage5.BackColor = System.Drawing.Color.White;
-            this.skinTabPage5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage5.Location = new System.Drawing.Point(0, 36);
-            this.skinTabPage5.Name = "skinTabPage5";
-            this.skinTabPage5.Size = new System.Drawing.Size(625, 717);
-            this.skinTabPage5.TabIndex = 4;
-            this.skinTabPage5.TabItemImage = null;
-            this.skinTabPage5.Text = "流程图";
+            this.stpChart.BackColor = System.Drawing.Color.White;
+            this.stpChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stpChart.Location = new System.Drawing.Point(0, 36);
+            this.stpChart.Name = "stpChart";
+            this.stpChart.Size = new System.Drawing.Size(625, 717);
+            this.stpChart.TabIndex = 4;
+            this.stpChart.TabItemImage = null;
+            this.stpChart.Text = "流程图";
             // 
-            // skinTabPage6
+            // stpRelevance
             // 
-            this.skinTabPage6.BackColor = System.Drawing.Color.White;
-            this.skinTabPage6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage6.Location = new System.Drawing.Point(0, 36);
-            this.skinTabPage6.Name = "skinTabPage6";
-            this.skinTabPage6.Size = new System.Drawing.Size(625, 717);
-            this.skinTabPage6.TabIndex = 5;
-            this.skinTabPage6.TabItemImage = null;
-            this.skinTabPage6.Text = "关联";
-            // 
-            // btnSwitch
-            // 
-            this.btnSwitch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSwitch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSwitch.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnSwitch.DownBack = null;
-            this.btnSwitch.Location = new System.Drawing.Point(412, 5);
-            this.btnSwitch.MouseBack = null;
-            this.btnSwitch.Name = "btnSwitch";
-            this.btnSwitch.NormlBack = null;
-            this.btnSwitch.Size = new System.Drawing.Size(55, 19);
-            this.btnSwitch.TabIndex = 5;
-            this.btnSwitch.Text = "转用例";
-            this.btnSwitch.UseVisualStyleBackColor = false;
+            this.stpRelevance.BackColor = System.Drawing.Color.White;
+            this.stpRelevance.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stpRelevance.Location = new System.Drawing.Point(0, 36);
+            this.stpRelevance.Name = "stpRelevance";
+            this.stpRelevance.Size = new System.Drawing.Size(625, 717);
+            this.stpRelevance.TabIndex = 5;
+            this.stpRelevance.TabItemImage = null;
+            this.stpRelevance.Text = "关联";
             // 
             // MainBugManager
             // 
@@ -1022,37 +1022,37 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
             this.ClientSize = new System.Drawing.Size(1730, 825);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.splitContainerMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainBugManager";
             this.Text = "缺陷管理";
             this.TitleCenter = false;
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.splitContainerMain.Panel1.ResumeLayout(false);
+            this.splitContainerMain.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).EndInit();
+            this.splitContainerMain.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tlpButton.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBugManager)).EndInit();
+            this.tlpBugDetails.ResumeLayout(false);
+            this.tlpBugDetails.PerformLayout();
             this.tbcCaseDesign.ResumeLayout(false);
-            this.skinTabPage1.ResumeLayout(false);
+            this.stpBaseInfo.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel10.ResumeLayout(false);
-            this.tableLayoutPanel10.PerformLayout();
-            this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel9.PerformLayout();
+            this.tlpAddComment.ResumeLayout(false);
+            this.tlpAddComment.PerformLayout();
+            this.tlpHistoryComment.ResumeLayout(false);
+            this.tlpHistoryComment.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
+            this.tlpItems.ResumeLayout(false);
+            this.tlpItems.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel7.ResumeLayout(false);
-            this.tableLayoutPanel7.PerformLayout();
+            this.tlpDescription.ResumeLayout(false);
+            this.tlpDescription.PerformLayout();
             this.stStrip.ResumeLayout(false);
             this.stStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -1061,68 +1061,68 @@
 
         #endregion
 
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.SplitContainer splitContainerMain;
+        private System.Windows.Forms.TableLayoutPanel tlpBugDetails;
         private CCWin.SkinControl.SkinLabel slabTitle;
         private CCWin.SkinControl.SkinTabControl tbcCaseDesign;
-        private CCWin.SkinControl.SkinTabPage skinTabPage1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.TableLayoutPanel tlpAddComment;
+        private System.Windows.Forms.TableLayoutPanel tlpHistoryComment;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private CCWin.SkinControl.SkinLabel skinLabel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private CCWin.SkinControl.SkinLabel skinLabel7;
-        private CCWin.SkinControl.SkinLabel skinLabel3;
-        private CCWin.SkinControl.SkinLabel skinLabel5;
-        private CCWin.SkinControl.SkinLabel skinLabel8;
-        private CCWin.SkinControl.SkinLabel skinLabel9;
-        private CCWin.SkinControl.SkinLabel skinLabel10;
-        private CCWin.SkinControl.SkinLabel skinLabel11;
-        private CCWin.SkinControl.SkinLabel skinLabel12;
-        private System.Windows.Forms.TextBox textBox1;
-        private CCWin.SkinControl.SkinLabel skinLabel4;
-        private CCWin.SkinControl.SkinLabel skinLabel6;
+        private CCWin.SkinControl.SkinLabel labTitle;
+        private System.Windows.Forms.TableLayoutPanel tlpItems;
+        private CCWin.SkinControl.SkinLabel labIntroducer;
+        private CCWin.SkinControl.SkinLabel labCategory;
+        private CCWin.SkinControl.SkinLabel labPriority;
+        private CCWin.SkinControl.SkinLabel labHowFound;
+        private CCWin.SkinControl.SkinLabel labGravity;
+        private CCWin.SkinControl.SkinLabel labFoundBuild;
+        private CCWin.SkinControl.SkinLabel labResolveTime;
+        private CCWin.SkinControl.SkinLabel labCommitTime;
+        private System.Windows.Forms.TextBox txtIntroducer;
+        private CCWin.SkinControl.SkinLabel labProbability;
+        private CCWin.SkinControl.SkinLabel labProductBuild;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private CCWin.SkinControl.SkinLabel skinLabel2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private CCWin.SkinControl.SkinLabel skinLabel13;
-        private CCWin.SkinControl.SkinTabPage skinTabPage2;
-        private CCWin.SkinControl.SkinTabPage skinTabPage3;
-        private CCWin.SkinControl.SkinTabPage skinTabPage4;
-        private CCWin.SkinControl.SkinTabPage skinTabPage5;
-        private CCWin.SkinControl.SkinTabPage skinTabPage6;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private CCWin.SkinControl.SkinLabel skinLabel16;
-        private CCWin.SkinControl.SkinLabel skinLabel15;
+        private CCWin.SkinControl.SkinLabel labProject;
+        private System.Windows.Forms.TableLayoutPanel tlpDescription;
+        private CCWin.SkinControl.SkinLabel labDescription;
+        private CCWin.SkinControl.SkinTabPage stpHighInfo;
+        private CCWin.SkinControl.SkinTabPage stpOperate;
+        private CCWin.SkinControl.SkinTabPage stpAttachment;
+        private CCWin.SkinControl.SkinTabPage stpChart;
+        private CCWin.SkinControl.SkinTabPage stpRelevance;
+        private System.Windows.Forms.RichTextBox rtbDescription;
+        private CCWin.SkinControl.SkinLabel labAddComment;
+        private CCWin.SkinControl.SkinLabel labHistoryComment;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.TableLayoutPanel tlpButton;
         private CCWin.SkinControl.SkinButton btnOut;
         private CCWin.SkinControl.SkinButton btnInto;
         private CCWin.SkinControl.SkinButton btnInfo;
         private CCWin.SkinControl.SkinButton btnQuery;
         private CCWin.SkinControl.SkinButton btnNew;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox rtbAddComment;
+        private System.Windows.Forms.RichTextBox rtbHistoryComment;
         private CCWin.SkinControl.SkinToolStrip stStrip;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox2;
-        private CCWin.SkinControl.SkinDataGridView skinDataGridView1;
+        private System.Windows.Forms.ToolStripButton tsbExport;
+        private System.Windows.Forms.ToolStripButton tsbInform;
+        private System.Windows.Forms.ToolStripButton tsbTransmit;
+        private System.Windows.Forms.ToolStripButton tsbMark;
+        private System.Windows.Forms.ToolStripButton tsbReStart;
+        private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.TextBox txtProductBuild;
+        private System.Windows.Forms.TextBox txtPriority;
+        private System.Windows.Forms.TextBox txtProbability;
+        private System.Windows.Forms.TextBox txtCateGory;
+        private System.Windows.Forms.TextBox txtHowFound;
+        private System.Windows.Forms.TextBox txtGravity;
+        private System.Windows.Forms.TextBox txtFoundBuild;
+        private System.Windows.Forms.TextBox txtResolveTime;
+        private System.Windows.Forms.TextBox txtCommitTime;
+        private System.Windows.Forms.TextBox txtProject;
+        private CCWin.SkinControl.SkinDataGridView dgvBugManager;
         private CCWin.SkinControl.SkinButton btnSwitch;
+        private CCWin.SkinControl.SkinTabPage stpBaseInfo;
     }
 }
