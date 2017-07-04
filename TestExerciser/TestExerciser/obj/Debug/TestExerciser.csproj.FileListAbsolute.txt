@@ -409,3 +409,6 @@ E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.exe
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.pdb
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\zh-Hans\TestExerciser.resources.dll
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ToolSelectDB.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainCaseManager.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainRecord.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainRequirement.resources

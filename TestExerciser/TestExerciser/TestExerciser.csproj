@@ -29,7 +29,7 @@
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationRevision>8</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -170,6 +170,12 @@
     <Compile Include="MainBugManager.Designer.cs">
       <DependentUpon>MainBugManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainCaseManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainCaseManager.Designer.cs">
+      <DependentUpon>MainCaseManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainCaseReview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,18 @@
     </Compile>
     <Compile Include="MainPackageManager.Designer.cs">
       <DependentUpon>MainPackageManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainRecord.Designer.cs">
+      <DependentUpon>MainRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainRequirement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainRequirement.Designer.cs">
+      <DependentUpon>MainRequirement.cs</DependentUpon>
     </Compile>
     <Compile Include="MainUpdateHis.cs">
       <SubType>Form</SubType>
@@ -362,6 +380,9 @@
     <EmbeddedResource Include="MainBugManager.resx">
       <DependentUpon>MainBugManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainCaseManager.resx">
+      <DependentUpon>MainCaseManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainCaseReview.resx">
       <DependentUpon>MainCaseReview.cs</DependentUpon>
     </EmbeddedResource>
@@ -376,6 +397,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainPackageManager.resx">
       <DependentUpon>MainPackageManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainRecord.resx">
+      <DependentUpon>MainRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainRequirement.resx">
+      <DependentUpon>MainRequirement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainUpdateHis.resx">
       <DependentUpon>MainUpdateHis.cs</DependentUpon>

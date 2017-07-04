@@ -2643,17 +2643,20 @@ namespace TestExerciser
 
         private void 脚本录制F4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MainRecord myMainRecord = new MainRecord();
+            myMainRecord.Show();
         }
 
         private void 用例管理TToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MainCaseManager myMainCaseManager = new MainCaseManager();
+            myMainCaseManager.Show();
         }
 
         private void 需求管理QToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MainRequirement myMainRequirement = new MainRequirement();
+            myMainRequirement.Show();
         }
 
         private void 选项ToolStripMenuItem_Click(object sender, EventArgs e)

@@ -519,14 +519,13 @@
             // 
             this.tableLayoutPanel9.ColumnCount = 1;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 0, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 17);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.25911F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.74089F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(349, 247);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
@@ -538,12 +537,12 @@
             this.tableLayoutPanel10.Controls.Add(this.cbSelectExcel, 1, 0);
             this.tableLayoutPanel10.Controls.Add(this.labSelectExcel, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 221);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 215);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(343, 23);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(343, 29);
             this.tableLayoutPanel10.TabIndex = 2;
             // 
             // cbSelectExcel
@@ -562,7 +561,7 @@
             // 
             this.labSelectExcel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labSelectExcel.AutoSize = true;
-            this.labSelectExcel.Location = new System.Drawing.Point(3, 5);
+            this.labSelectExcel.Location = new System.Drawing.Point(3, 8);
             this.labSelectExcel.Name = "labSelectExcel";
             this.labSelectExcel.Size = new System.Drawing.Size(59, 12);
             this.labSelectExcel.TabIndex = 1;
