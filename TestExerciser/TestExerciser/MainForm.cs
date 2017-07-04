@@ -709,6 +709,7 @@ namespace TestExerciser
                 新建文件ToolStripMenuItem.Visible = false;
                 闭合CToolStripMenuItem.Visible = false;
                 展开EToolStripMenuItem.Visible = false;
+                this.tsbStart.Visible = false;
             }
             else
             {
@@ -725,6 +726,7 @@ namespace TestExerciser
                 新建文件ToolStripMenuItem.Visible = true;
                 闭合CToolStripMenuItem.Visible = true;
                 展开EToolStripMenuItem.Visible = true;
+                this.tsbStart.Visible = true;
 
             }
         }
@@ -2416,6 +2418,7 @@ namespace TestExerciser
                 闭合CToolStripMenuItem.Visible = false;
                 展开EToolStripMenuItem.Visible = false;
                 selectProjectFolder.SelectedPath = null;
+                this.tsbStart.Visible = false;
             }
             else
             {
@@ -2431,6 +2434,7 @@ namespace TestExerciser
                 新建文件ToolStripMenuItem.Visible = true;
                 闭合CToolStripMenuItem.Visible = true;
                 展开EToolStripMenuItem.Visible = true;
+                this.tsbStart.Visible = true;
             }       
         }
 

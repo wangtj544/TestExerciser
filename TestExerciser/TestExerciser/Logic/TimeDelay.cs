@@ -48,5 +48,13 @@ namespace TestExerciser.Logic
             Application.Restart();
             return true;
         }
+
+        public string timeNow()
+        {
+            string timeNow = null;
+            DateTime now = DateTime.Now;
+            timeNow = now.ToShortTimeString();
+            return timeNow;
+        }
     }
 }
