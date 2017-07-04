@@ -85,7 +85,7 @@
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.skinLabel13 = new CCWin.SkinControl.SkinLabel();
-            this.skinToolStrip1 = new CCWin.SkinControl.SkinToolStrip();
+            this.stStrip = new CCWin.SkinControl.SkinToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
@@ -96,6 +96,7 @@
             this.skinTabPage4 = new CCWin.SkinControl.SkinTabPage();
             this.skinTabPage5 = new CCWin.SkinControl.SkinTabPage();
             this.skinTabPage6 = new CCWin.SkinControl.SkinTabPage();
+            this.btnSwitch = new CCWin.SkinControl.SkinButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -114,7 +115,7 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            this.skinToolStrip1.SuspendLayout();
+            this.stStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -155,7 +156,8 @@
             // 
             // tableLayoutPanel11
             // 
-            this.tableLayoutPanel11.ColumnCount = 6;
+            this.tableLayoutPanel11.ColumnCount = 7;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
@@ -167,6 +169,7 @@
             this.tableLayoutPanel11.Controls.Add(this.btnInfo, 2, 0);
             this.tableLayoutPanel11.Controls.Add(this.btnQuery, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.btnNew, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.btnSwitch, 5, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
@@ -325,7 +328,7 @@
             this.slabTitle.Name = "slabTitle";
             this.slabTitle.Size = new System.Drawing.Size(56, 17);
             this.slabTitle.TabIndex = 0;
-            this.slabTitle.Text = "用例名称";
+            this.slabTitle.Text = "缺陷名称";
             // 
             // tbcCaseDesign
             // 
@@ -374,7 +377,7 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.skinToolStrip1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.stStrip, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -844,59 +847,59 @@
             this.skinLabel13.TabIndex = 14;
             this.skinLabel13.Text = "描述和建议";
             // 
-            // skinToolStrip1
+            // stStrip
             // 
-            this.skinToolStrip1.Arrow = System.Drawing.Color.Black;
-            this.skinToolStrip1.Back = System.Drawing.Color.White;
-            this.skinToolStrip1.BackRadius = 4;
-            this.skinToolStrip1.BackRectangle = new System.Drawing.Rectangle(10, 10, 10, 10);
-            this.skinToolStrip1.Base = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(200)))), ((int)(((byte)(254)))));
-            this.skinToolStrip1.BaseFore = System.Drawing.Color.Black;
-            this.skinToolStrip1.BaseForeAnamorphosis = false;
-            this.skinToolStrip1.BaseForeAnamorphosisBorder = 4;
-            this.skinToolStrip1.BaseForeAnamorphosisColor = System.Drawing.Color.White;
-            this.skinToolStrip1.BaseForeOffset = new System.Drawing.Point(0, 0);
-            this.skinToolStrip1.BaseHoverFore = System.Drawing.Color.White;
-            this.skinToolStrip1.BaseItemAnamorphosis = true;
-            this.skinToolStrip1.BaseItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinToolStrip1.BaseItemBorderShow = true;
-            this.skinToolStrip1.BaseItemDown = ((System.Drawing.Image)(resources.GetObject("skinToolStrip1.BaseItemDown")));
-            this.skinToolStrip1.BaseItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinToolStrip1.BaseItemMouse = ((System.Drawing.Image)(resources.GetObject("skinToolStrip1.BaseItemMouse")));
-            this.skinToolStrip1.BaseItemNorml = null;
-            this.skinToolStrip1.BaseItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinToolStrip1.BaseItemRadius = 4;
-            this.skinToolStrip1.BaseItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinToolStrip1.BaseItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinToolStrip1.BindTabControl = null;
-            this.skinToolStrip1.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.skinToolStrip1.Fore = System.Drawing.Color.Black;
-            this.skinToolStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 4, 2);
-            this.skinToolStrip1.HoverFore = System.Drawing.Color.White;
-            this.skinToolStrip1.ItemAnamorphosis = true;
-            this.skinToolStrip1.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinToolStrip1.ItemBorderShow = true;
-            this.skinToolStrip1.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinToolStrip1.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinToolStrip1.ItemRadius = 4;
-            this.skinToolStrip1.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stStrip.Arrow = System.Drawing.Color.Black;
+            this.stStrip.Back = System.Drawing.Color.White;
+            this.stStrip.BackRadius = 4;
+            this.stStrip.BackRectangle = new System.Drawing.Rectangle(10, 10, 10, 10);
+            this.stStrip.Base = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(200)))), ((int)(((byte)(254)))));
+            this.stStrip.BaseFore = System.Drawing.Color.Black;
+            this.stStrip.BaseForeAnamorphosis = false;
+            this.stStrip.BaseForeAnamorphosisBorder = 4;
+            this.stStrip.BaseForeAnamorphosisColor = System.Drawing.Color.White;
+            this.stStrip.BaseForeOffset = new System.Drawing.Point(0, 0);
+            this.stStrip.BaseHoverFore = System.Drawing.Color.White;
+            this.stStrip.BaseItemAnamorphosis = true;
+            this.stStrip.BaseItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stStrip.BaseItemBorderShow = true;
+            this.stStrip.BaseItemDown = ((System.Drawing.Image)(resources.GetObject("stStrip.BaseItemDown")));
+            this.stStrip.BaseItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stStrip.BaseItemMouse = ((System.Drawing.Image)(resources.GetObject("stStrip.BaseItemMouse")));
+            this.stStrip.BaseItemNorml = null;
+            this.stStrip.BaseItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stStrip.BaseItemRadius = 4;
+            this.stStrip.BaseItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.stStrip.BaseItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stStrip.BindTabControl = null;
+            this.stStrip.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.stStrip.Fore = System.Drawing.Color.Black;
+            this.stStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 4, 2);
+            this.stStrip.HoverFore = System.Drawing.Color.White;
+            this.stStrip.ItemAnamorphosis = true;
+            this.stStrip.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stStrip.ItemBorderShow = true;
+            this.stStrip.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stStrip.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.stStrip.ItemRadius = 4;
+            this.stStrip.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.stStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
             this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripButton5});
-            this.skinToolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.skinToolStrip1.Name = "skinToolStrip1";
-            this.skinToolStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinToolStrip1.Size = new System.Drawing.Size(625, 25);
-            this.skinToolStrip1.SkinAllColor = true;
-            this.skinToolStrip1.TabIndex = 3;
-            this.skinToolStrip1.Text = "skinToolStrip1";
-            this.skinToolStrip1.TitleAnamorphosis = true;
-            this.skinToolStrip1.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
-            this.skinToolStrip1.TitleRadius = 4;
-            this.skinToolStrip1.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.stStrip.Location = new System.Drawing.Point(0, 0);
+            this.stStrip.Name = "stStrip";
+            this.stStrip.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.stStrip.Size = new System.Drawing.Size(625, 25);
+            this.stStrip.SkinAllColor = true;
+            this.stStrip.TabIndex = 3;
+            this.stStrip.Text = "skinToolStrip1";
+            this.stStrip.TitleAnamorphosis = true;
+            this.stStrip.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
+            this.stStrip.TitleRadius = 4;
+            this.stStrip.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             // 
             // toolStripButton1
             // 
@@ -998,6 +1001,21 @@
             this.skinTabPage6.TabItemImage = null;
             this.skinTabPage6.Text = "关联";
             // 
+            // btnSwitch
+            // 
+            this.btnSwitch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSwitch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSwitch.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnSwitch.DownBack = null;
+            this.btnSwitch.Location = new System.Drawing.Point(412, 5);
+            this.btnSwitch.MouseBack = null;
+            this.btnSwitch.Name = "btnSwitch";
+            this.btnSwitch.NormlBack = null;
+            this.btnSwitch.Size = new System.Drawing.Size(55, 19);
+            this.btnSwitch.TabIndex = 5;
+            this.btnSwitch.Text = "转用例";
+            this.btnSwitch.UseVisualStyleBackColor = false;
+            // 
             // MainBugManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1035,8 +1053,8 @@
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
-            this.skinToolStrip1.ResumeLayout(false);
-            this.skinToolStrip1.PerformLayout();
+            this.stStrip.ResumeLayout(false);
+            this.stStrip.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1087,7 +1105,7 @@
         private CCWin.SkinControl.SkinButton btnNew;
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private CCWin.SkinControl.SkinToolStrip skinToolStrip1;
+        private CCWin.SkinControl.SkinToolStrip stStrip;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
@@ -1105,5 +1123,6 @@
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox2;
         private CCWin.SkinControl.SkinDataGridView skinDataGridView1;
+        private CCWin.SkinControl.SkinButton btnSwitch;
     }
 }
