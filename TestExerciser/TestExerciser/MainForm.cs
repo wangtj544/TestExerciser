@@ -2843,7 +2843,52 @@ namespace TestExerciser
             richError.ScrollToCaret();
         }
 
-     
+        private void richError_TextChanged(object sender, EventArgs e)
+        {
+            if (this.richError.Text != "")
+            {
+                this.spbStatus.Visible = true;
+                bool foundMatchSucceed = false;
+                bool foundMatchFailed = false;
+                try
+                {
+                    foundMatchSucceed = Regex.IsMatch(this.richError.Text, @"\sOK[\s]*\z", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+                }
+                catch (ArgumentException ex)
+                {
+                    MessageBox.Show(ex.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
+                try
+                {
+                    foundMatchFailed = Regex.IsMatch(this.richError.Text, @"\sFAILED\s\(errors=[\d]*\)[\s]*\Z|SyntaxError:\sinvalid\ssyntax[\s]*", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+                }
+                catch (ArgumentException ex)
+                {
+                    MessageBox.Show(ex.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+                if (foundMatchSucceed)
+                {
+                    this.spbStatus.Value = 100;
+                    this.spbStatus.TrackFore = Color.Green;
+                }
+
+                else if (foundMatchFailed)
+                {
+                    this.spbStatus.Value = 100;
+                    this.spbStatus.TrackFore = Color.Red;
+                }
+                else
+                {
+                    this.spbStatus.Value = 0;
+                }
+            }
+            else
+            {
+                this.spbStatus.Visible = false;
+            }
+        }
     }
 }
