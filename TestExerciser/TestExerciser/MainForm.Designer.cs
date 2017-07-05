@@ -1203,10 +1203,9 @@
             // tcOutPut
             // 
             this.tcOutPut.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.tcOutPut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.tcOutPut.Controls.Add(this.tpError);
             this.tcOutPut.Controls.Add(this.tpResult);
+            this.tcOutPut.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcOutPut.Location = new System.Drawing.Point(3, 3);
             this.tcOutPut.Multiline = true;
             this.tcOutPut.Name = "tcOutPut";
@@ -2355,7 +2354,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.76609F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.23391F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 681F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel5.Controls.Add(this.stsOutPut, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.spbStatus, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.tStripReport, 3, 0);
@@ -2518,7 +2517,7 @@
             this.spbStatus.Location = new System.Drawing.Point(498, 3);
             this.spbStatus.Name = "spbStatus";
             this.spbStatus.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.spbStatus.Size = new System.Drawing.Size(475, 17);
+            this.spbStatus.Size = new System.Drawing.Size(474, 17);
             this.spbStatus.TabIndex = 4;
             this.spbStatus.TrackFore = System.Drawing.Color.Lime;
             this.spbStatus.Visible = false;
@@ -2562,7 +2561,7 @@
             this.tStripReport.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbLogView});
-            this.tStripReport.Location = new System.Drawing.Point(1657, 0);
+            this.tStripReport.Location = new System.Drawing.Point(1656, 0);
             this.tStripReport.Name = "tStripReport";
             this.tStripReport.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Size = new System.Drawing.Size(37, 23);
