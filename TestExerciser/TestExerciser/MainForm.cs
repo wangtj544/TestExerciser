@@ -2861,7 +2861,7 @@ namespace TestExerciser
 
                 try
                 {
-                    foundMatchFailed = Regex.IsMatch(this.richError.Text, @"\sFAILED\s\(errors=[\d]*\)[\s]*\Z|SyntaxError:\sinvalid\ssyntax[\s]*", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+                    foundMatchFailed = Regex.IsMatch(this.richError.Text, @"\sFAILED\s\(errors=[\d]*\)[\s]*\Z|SyntaxError:\sinvalid\ssyntax[\s]*|..错误\:\s没有找到进程", RegexOptions.IgnoreCase | RegexOptions.Singleline);
                 }
                 catch (ArgumentException ex)
                 {
@@ -2869,16 +2869,16 @@ namespace TestExerciser
                 }
 
 
-                if (foundMatchSucceed)
+                if (foundMatchFailed)
+                {             
+                    this.spbStatus.Value = 100;
+                    this.spbStatus.TrackFore = Color.Red;
+                }
+
+                else if (foundMatchSucceed)
                 {
                     this.spbStatus.Value = 100;
                     this.spbStatus.TrackFore = Color.Green;
-                }
-
-                else if (foundMatchFailed)
-                {
-                    this.spbStatus.Value = 100;
-                    this.spbStatus.TrackFore = Color.Red;
                 }
                 else
                 {
@@ -2889,6 +2889,11 @@ namespace TestExerciser
             {
                 this.spbStatus.Visible = false;
             }
+        }
+
+        private void richOutPut_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

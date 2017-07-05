@@ -1237,6 +1237,7 @@
             this.richError.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richError.Location = new System.Drawing.Point(3, 3);
             this.richError.Name = "richError";
+            this.richError.ReadOnly = true;
             this.richError.Size = new System.Drawing.Size(1152, 156);
             this.richError.TabIndex = 1;
             this.richError.Text = "";
@@ -1357,9 +1358,11 @@
             this.richOutPut.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richOutPut.Location = new System.Drawing.Point(3, 3);
             this.richOutPut.Name = "richOutPut";
+            this.richOutPut.ReadOnly = true;
             this.richOutPut.Size = new System.Drawing.Size(1152, 156);
             this.richOutPut.TabIndex = 0;
             this.richOutPut.Text = "";
+            this.richOutPut.TextChanged += new System.EventHandler(this.richOutPut_TextChanged);
             // 
             // selectProjectFolder
             // 
@@ -2314,8 +2317,8 @@
             this.tsbUp.Image = ((System.Drawing.Image)(resources.GetObject("tsbUp.Image")));
             this.tsbUp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbUp.Name = "tsbUp";
-            this.tsbUp.Size = new System.Drawing.Size(21, 20);
-            this.tsbUp.Text = "向上翻";
+            this.tsbUp.Size = new System.Drawing.Size(29, 20);
+            this.tsbUp.Text = "回到顶部";
             this.tsbUp.Click += new System.EventHandler(this.tsbUp_Click);
             // 
             // stbDown
@@ -2324,8 +2327,8 @@
             this.stbDown.Image = ((System.Drawing.Image)(resources.GetObject("stbDown.Image")));
             this.stbDown.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.stbDown.Name = "stbDown";
-            this.stbDown.Size = new System.Drawing.Size(21, 20);
-            this.stbDown.Text = "向下翻 ";
+            this.stbDown.Size = new System.Drawing.Size(29, 20);
+            this.stbDown.Text = "回到底部";
             this.stbDown.Click += new System.EventHandler(this.stbDown_Click);
             // 
             // stbWarp
