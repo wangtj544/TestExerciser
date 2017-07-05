@@ -137,8 +137,6 @@
             this.toolTips = new System.Windows.Forms.ToolTip(this.components);
             this.tcOutPut = new System.Windows.Forms.TabControl();
             this.tpError = new System.Windows.Forms.TabPage();
-            this.richOutPut = new System.Windows.Forms.RichTextBox();
-            this.tpResult = new System.Windows.Forms.TabPage();
             this.richError = new System.Windows.Forms.RichTextBox();
             this.rightClickOnErrorWindow = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmErrClearnAll = new System.Windows.Forms.ToolStripMenuItem();
@@ -152,6 +150,8 @@
             this.tsmErrAutoScroll = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmErrQuitAutoScroll = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmErrQuit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tpResult = new System.Windows.Forms.TabPage();
+            this.richOutPut = new System.Windows.Forms.RichTextBox();
             this.selectProjectFolder = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
@@ -253,7 +253,7 @@
             this.tsbSetting = new System.Windows.Forms.ToolStripButton();
             this.spbStatus = new CCWin.SkinControl.SkinProgressBar();
             this.tStripReport = new CCWin.SkinControl.SkinToolStrip();
-            this.tsbReport = new System.Windows.Forms.ToolStripButton();
+            this.tsbLogView = new System.Windows.Forms.ToolStripButton();
             this.tpDebug = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
@@ -296,8 +296,8 @@
             this.rightClickOnOutPutWindow.SuspendLayout();
             this.tcOutPut.SuspendLayout();
             this.tpError.SuspendLayout();
-            this.tpResult.SuspendLayout();
             this.rightClickOnErrorWindow.SuspendLayout();
+            this.tpResult.SuspendLayout();
             this.cmMain.SuspendLayout();
             this.ssMain.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -1231,31 +1231,6 @@
             this.tpError.ToolTipText = "异常输出";
             this.tpError.UseVisualStyleBackColor = true;
             // 
-            // richOutPut
-            // 
-            this.richOutPut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richOutPut.ContextMenuStrip = this.rightClickOnOutPutWindow;
-            this.richOutPut.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richOutPut.Location = new System.Drawing.Point(3, 3);
-            this.richOutPut.Name = "richOutPut";
-            this.richOutPut.Size = new System.Drawing.Size(1152, 156);
-            this.richOutPut.TabIndex = 0;
-            this.richOutPut.Text = "";
-            // 
-            // tpResult
-            // 
-            this.tpResult.AutoScroll = true;
-            this.tpResult.Controls.Add(this.richOutPut);
-            this.tpResult.Location = new System.Drawing.Point(4, 4);
-            this.tpResult.Name = "tpResult";
-            this.tpResult.Padding = new System.Windows.Forms.Padding(3);
-            this.tpResult.Size = new System.Drawing.Size(1158, 162);
-            this.tpResult.TabIndex = 1;
-            this.tpResult.Text = "结果输出";
-            this.toolTips.SetToolTip(this.tpResult, "结果输出");
-            this.tpResult.ToolTipText = "结果输出";
-            this.tpResult.UseVisualStyleBackColor = true;
-            // 
             // richError
             // 
             this.richError.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1361,6 +1336,31 @@
             this.tsmErrQuit.Size = new System.Drawing.Size(166, 22);
             this.tsmErrQuit.Text = "退出(&Q)";
             this.tsmErrQuit.Click += new System.EventHandler(this.tsmErrQuit_Click);
+            // 
+            // tpResult
+            // 
+            this.tpResult.AutoScroll = true;
+            this.tpResult.Controls.Add(this.richOutPut);
+            this.tpResult.Location = new System.Drawing.Point(4, 4);
+            this.tpResult.Name = "tpResult";
+            this.tpResult.Padding = new System.Windows.Forms.Padding(3);
+            this.tpResult.Size = new System.Drawing.Size(1158, 162);
+            this.tpResult.TabIndex = 1;
+            this.tpResult.Text = "结果输出";
+            this.toolTips.SetToolTip(this.tpResult, "结果输出");
+            this.tpResult.ToolTipText = "结果输出";
+            this.tpResult.UseVisualStyleBackColor = true;
+            // 
+            // richOutPut
+            // 
+            this.richOutPut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richOutPut.ContextMenuStrip = this.rightClickOnOutPutWindow;
+            this.richOutPut.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richOutPut.Location = new System.Drawing.Point(3, 3);
+            this.richOutPut.Name = "richOutPut";
+            this.richOutPut.Size = new System.Drawing.Size(1152, 156);
+            this.richOutPut.TabIndex = 0;
+            this.richOutPut.Text = "";
             // 
             // selectProjectFolder
             // 
@@ -2354,8 +2354,8 @@
             this.tableLayoutPanel5.ColumnCount = 4;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.76609F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.23391F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 677F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 681F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel5.Controls.Add(this.stsOutPut, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.spbStatus, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.tStripReport, 3, 0);
@@ -2417,7 +2417,7 @@
             this.stsOutPut.Location = new System.Drawing.Point(0, 0);
             this.stsOutPut.Name = "stsOutPut";
             this.stsOutPut.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.stsOutPut.Size = new System.Drawing.Size(497, 23);
+            this.stsOutPut.Size = new System.Drawing.Size(495, 23);
             this.stsOutPut.SkinAllColor = true;
             this.stsOutPut.TabIndex = 1;
             this.stsOutPut.Text = "skinToolStrip1";
@@ -2515,7 +2515,7 @@
             this.spbStatus.BarRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.spbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.spbStatus.ForeColor = System.Drawing.Color.Red;
-            this.spbStatus.Location = new System.Drawing.Point(500, 3);
+            this.spbStatus.Location = new System.Drawing.Point(498, 3);
             this.spbStatus.Name = "spbStatus";
             this.spbStatus.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.spbStatus.Size = new System.Drawing.Size(475, 17);
@@ -2561,8 +2561,8 @@
             this.tStripReport.ItemRadius = 4;
             this.tStripReport.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbReport});
-            this.tStripReport.Location = new System.Drawing.Point(1655, 0);
+            this.tsbLogView});
+            this.tStripReport.Location = new System.Drawing.Point(1657, 0);
             this.tStripReport.Name = "tStripReport";
             this.tStripReport.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Size = new System.Drawing.Size(37, 23);
@@ -2574,17 +2574,18 @@
             this.tStripReport.TitleRadius = 4;
             this.tStripReport.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             // 
-            // tsbReport
+            // tsbLogView
             // 
-            this.tsbReport.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tsbReport.BackColor = System.Drawing.Color.White;
-            this.tsbReport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbReport.ForeColor = System.Drawing.Color.White;
-            this.tsbReport.Image = ((System.Drawing.Image)(resources.GetObject("tsbReport.Image")));
-            this.tsbReport.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbReport.Name = "tsbReport";
-            this.tsbReport.Size = new System.Drawing.Size(23, 20);
-            this.tsbReport.Text = "查看日志";
+            this.tsbLogView.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tsbLogView.BackColor = System.Drawing.Color.White;
+            this.tsbLogView.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbLogView.ForeColor = System.Drawing.Color.White;
+            this.tsbLogView.Image = ((System.Drawing.Image)(resources.GetObject("tsbLogView.Image")));
+            this.tsbLogView.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbLogView.Name = "tsbLogView";
+            this.tsbLogView.Size = new System.Drawing.Size(23, 20);
+            this.tsbLogView.Text = "查看日志";
+            this.tsbLogView.Click += new System.EventHandler(this.tsbLogView_Click);
             // 
             // tpDebug
             // 
@@ -3115,8 +3116,8 @@
             this.rightClickOnOutPutWindow.ResumeLayout(false);
             this.tcOutPut.ResumeLayout(false);
             this.tpError.ResumeLayout(false);
-            this.tpResult.ResumeLayout(false);
             this.rightClickOnErrorWindow.ResumeLayout(false);
+            this.tpResult.ResumeLayout(false);
             this.cmMain.ResumeLayout(false);
             this.ssMain.ResumeLayout(false);
             this.ssMain.PerformLayout();
@@ -3442,7 +3443,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private CCWin.SkinControl.SkinProgressBar spbStatus;
         private CCWin.SkinControl.SkinToolStrip tStripReport;
-        private System.Windows.Forms.ToolStripButton tsbReport;
+        private System.Windows.Forms.ToolStripButton tsbLogView;
     }
 }
 

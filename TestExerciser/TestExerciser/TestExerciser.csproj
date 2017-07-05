@@ -29,7 +29,7 @@
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>13</ApplicationRevision>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -245,6 +245,12 @@
     <Compile Include="MainWorkProgress.Designer.cs">
       <DependentUpon>MainWorkProgress.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\BugManagement\ToolBugDefectInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\BugManagement\ToolBugDefectInfo.Designer.cs">
+      <DependentUpon>ToolBugDefectInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\CaseManagement\ToolCaseCommit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -432,6 +438,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainWorkProgress.resx">
       <DependentUpon>MainWorkProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\BugManagement\ToolBugDefectInfo.resx">
+      <DependentUpon>ToolBugDefectInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\CaseManagement\ToolCaseCommit.resx">
       <DependentUpon>ToolCaseCommit.cs</DependentUpon>

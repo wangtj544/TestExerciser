@@ -30,5 +30,11 @@ namespace TestExerciser
             ToolBugQuery myToolBugQuery = new ToolBugQuery();
             myToolBugQuery.Show();
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            ToolBugDefectInfo myToolBugDefectInfo = new ToolBugDefectInfo();
+            myToolBugDefectInfo.Show();
+        }
     }
 }
