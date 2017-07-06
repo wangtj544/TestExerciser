@@ -292,7 +292,7 @@ namespace TestExerciser
        /// <param name="e"></param>
         private void 清除CToolStripOutPut_Click(object sender, EventArgs e)
         {
-            richOutPut.Clear();
+            richDetails.Clear();
         }
 
         private void 查找FToolStripOutPut_Click(object sender, EventArgs e)
@@ -302,27 +302,27 @@ namespace TestExerciser
 
         private void 红RToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richOutPut.SelectionBackColor = Color.Red;
+            richDetails.SelectionBackColor = Color.Red;
         }
 
         private void 粉ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richOutPut.SelectionBackColor = Color.Pink;
+            richDetails.SelectionBackColor = Color.Pink;
         }
 
         private void 黄3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richOutPut.SelectionBackColor = Color.Yellow;
+            richDetails.SelectionBackColor = Color.Yellow;
         }
 
         private void 绿4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richOutPut.SelectionBackColor = Color.SpringGreen;
+            richDetails.SelectionBackColor = Color.SpringGreen;
         }
 
         private void 默认DToolStripOutPut_Click(object sender, EventArgs e)
         {
-            richOutPut.SelectionBackColor = Color.White;
+            richDetails.SelectionBackColor = Color.White;
         }
 
         private void 自动标记IToolStripOutPut_Click(object sender, EventArgs e)
@@ -332,13 +332,13 @@ namespace TestExerciser
 
         private void 自动滚屏RToolStripOutPut_Click(object sender, EventArgs e)
         {
-            richOutPut.SelectionStart = richOutPut.TextLength;
-            richOutPut.ScrollToCaret();
+            richDetails.SelectionStart = richDetails.TextLength;
+            richDetails.ScrollToCaret();
         }
 
         private void 退出自动滚屏OToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richOutPut.SelectionStart = 0;
+            richDetails.SelectionStart = 0;
         }
 
         private void 退出EToolStripOutPut_Click(object sender, EventArgs e)
@@ -357,8 +357,7 @@ namespace TestExerciser
             {
                 rootFolder = selectProjectFolder.SelectedPath;
                 writeRunProjectSupportFile(rootFolder);
-                runCmd("python.exe", @".\__runner.py");                
-
+                RunAction("python.exe", @".\__runner.py");                
             }
             catch (Exception exception)
             {
@@ -442,7 +441,8 @@ namespace TestExerciser
 
                 p.WaitForExit();
                 p.Close();
-                this.richOutPut.AppendText(outputMsg + errorMsg);
+                this.richResults.AppendText(errorMsg);
+                this.richDetails.AppendText(outputMsg);
             }
             catch (Exception exception)
             {
@@ -511,12 +511,12 @@ namespace TestExerciser
 
         private void ReadStdOutputAction(string result)
         {
-            this.richOutPut.AppendText(result + "\r\n");
+            this.richDetails.AppendText(result + "\r\n");
         }
 
         private void ReadErrOutputAction(string result)
         {
-            this.richError.AppendText(result + "\r\n");
+            this.richResults.AppendText(result + "\r\n");
         }
 
         private void CmdProcess_Exited(object sender, EventArgs e)
@@ -752,7 +752,7 @@ namespace TestExerciser
                 sw.WriteLine("    start_dir = os.path.dirname(__file__)");
                 sw.WriteLine("    RunTestSuite().run(start_dir = start_dir)");
                 sw.Close();
-                richOutPut.AppendText("The execute binary files have beed copied successfully...\n");
+                richDetails.AppendText("The execute binary files have beed copied successfully...\n");
 
             }
             else
@@ -2087,14 +2087,14 @@ namespace TestExerciser
         {
             Regex regex = new Regex(key);
             //找出内容中所有的要替换的关键字
-            MatchCollection collection = regex.Matches(richOutPut.Text);
+            MatchCollection collection = regex.Matches(richDetails.Text);
             //对所有的要替换颜色的关键字逐个替换颜色    
             foreach (Match match in collection)
             {
                 //开始位置、长度、颜色缺一不可
-                richOutPut.SelectionStart = match.Index;
-                richOutPut.SelectionLength = key.Length;
-                richOutPut.SelectionColor = color;
+                richDetails.SelectionStart = match.Index;
+                richDetails.SelectionLength = key.Length;
+                richDetails.SelectionColor = color;
             }
         }
 
@@ -2761,32 +2761,32 @@ namespace TestExerciser
 
         private void tsmErrClearnAll_Click(object sender, EventArgs e)
         {
-            this.richError.Clear();
+            this.richResults.Clear();
         }
 
         private void tsmErrRed_Click(object sender, EventArgs e)
         {
-            richOutPut.SelectionBackColor = Color.Red;
+            richDetails.SelectionBackColor = Color.Red;
         }
 
         private void tsmErrPink_Click(object sender, EventArgs e)
         {
-            richOutPut.SelectionBackColor = Color.Pink;
+            richDetails.SelectionBackColor = Color.Pink;
         }
 
         private void tsmErrYellow_Click(object sender, EventArgs e)
         {
-            richOutPut.SelectionBackColor = Color.Yellow;
+            richDetails.SelectionBackColor = Color.Yellow;
         }
 
         private void tsmErrGreen_Click(object sender, EventArgs e)
         {
-            richOutPut.SelectionBackColor = Color.Green;
+            richDetails.SelectionBackColor = Color.Green;
         }
 
         private void tsmErrDefault_Click(object sender, EventArgs e)
         {
-            richOutPut.SelectionBackColor = Color.Black;
+            richDetails.SelectionBackColor = Color.Black;
         }
 
         private void tsmErrAutoMark_Click(object sender, EventArgs e)
@@ -2796,14 +2796,14 @@ namespace TestExerciser
 
         private void tsmErrAutoScroll_Click(object sender, EventArgs e)
         {
-            richError.SelectionStart = richError.TextLength;
-            richError.ScrollToCaret();
+            richResults.SelectionStart = richResults.TextLength;
+            richResults.ScrollToCaret();
         }
 
         private void tsmErrQuitAutoScroll_Click(object sender, EventArgs e)
         {
-            richError.SelectionStart = 0;
-            richError.ScrollToCaret();
+            richResults.SelectionStart = 0;
+            richResults.ScrollToCaret();
         }
 
         private void tsmErrQuit_Click(object sender, EventArgs e)
@@ -2813,46 +2813,46 @@ namespace TestExerciser
 
         private void tsbDelete_Click(object sender, EventArgs e)
         {
-            this.richOutPut.Clear();
-            this.richError.Clear();
+            this.richDetails.Clear();
+            this.richResults.Clear();
         }
 
         private void stbWarp_CheckedChanged(object sender, EventArgs e)
         {
             if (this.stbWarp.Checked)
             {
-                this.richOutPut.WordWrap = true;
-                this.richError.WordWrap = true;
+                this.richDetails.WordWrap = true;
+                this.richResults.WordWrap = true;
             }
             else
             {
-                this.richOutPut.WordWrap = false;
-                this.richError.WordWrap = false;
+                this.richDetails.WordWrap = false;
+                this.richResults.WordWrap = false;
             }
         }
 
         private void tsbUp_Click(object sender, EventArgs e)
         {
-            richError.SelectionStart = 0;
-            richError.ScrollToCaret();
+            richResults.SelectionStart = 0;
+            richResults.ScrollToCaret();
         }
 
         private void stbDown_Click(object sender, EventArgs e)
         {
-            richError.SelectionStart = richError.TextLength;
-            richError.ScrollToCaret();
+            richResults.SelectionStart = richResults.TextLength;
+            richResults.ScrollToCaret();
         }
 
         private void richError_TextChanged(object sender, EventArgs e)
         {
-            if (this.richError.Text != "")
+            if (this.richResults.Text != "")
             {
                 this.spbStatus.Visible = true;
                 bool foundMatchSucceed = false;
                 bool foundMatchFailed = false;
                 try
                 {
-                    foundMatchSucceed = Regex.IsMatch(this.richError.Text, @"\sOK[\s]*\z", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+                    foundMatchSucceed = Regex.IsMatch(this.richResults.Text, @"\sOK[\s]*\z", RegexOptions.IgnoreCase | RegexOptions.Singleline);
                 }
                 catch (ArgumentException ex)
                 {
@@ -2861,7 +2861,7 @@ namespace TestExerciser
 
                 try
                 {
-                    foundMatchFailed = Regex.IsMatch(this.richError.Text, @"\sFAILED\s\(errors=[\d]*\)[\s]*\Z|SyntaxError:\sinvalid\ssyntax[\s]*|..错误\:\s没有找到进程", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+                    foundMatchFailed = Regex.IsMatch(this.richResults.Text, @"\sFAILED\s\(errors=[\d]*\)[\s]*\Z|SyntaxError:\sinvalid\ssyntax[\s]*|..错误\:\s没有找到进程", RegexOptions.IgnoreCase | RegexOptions.Singleline);
                 }
                 catch (ArgumentException ex)
                 {
