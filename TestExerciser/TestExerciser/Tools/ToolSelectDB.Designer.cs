@@ -51,7 +51,7 @@
             this.btnOK.NormlBack = null;
             this.btnOK.Size = new System.Drawing.Size(98, 23);
             this.btnOK.TabIndex = 3;
-            this.btnOK.Text = "重新登录";
+            this.btnOK.Text = "确认";
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -67,7 +67,7 @@
             this.btnCancel.NormlBack = null;
             this.btnCancel.Size = new System.Drawing.Size(111, 23);
             this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "取消登录";
+            this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 

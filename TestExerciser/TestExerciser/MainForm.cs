@@ -356,8 +356,9 @@ namespace TestExerciser
             try
             {
                 rootFolder = selectProjectFolder.SelectedPath;
+                string selectedProject = selectTreeNodeFullPath();
                 writeRunProjectSupportFile(rootFolder);
-                RunAction("python.exe", @".\__runner.py");                
+                //runCmd("python.exe", @".\__runner.py");                
             }
             catch (Exception exception)
             {
@@ -437,18 +438,25 @@ namespace TestExerciser
                 p.StandardInput.AutoFlush = true;
                 string outputMsg = p.StandardOutput.ReadToEnd();
                 string errorMsg = p.StandardError.ReadToEnd();
-                
+
 
                 p.WaitForExit();
                 p.Close();
-                this.richResults.AppendText(errorMsg);
-                this.richDetails.AppendText(outputMsg);
+                this.richResults.AppendText(outputMsg + errorMsg);
+                
             }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+        private void runCmd_Exited(object sender, EventArgs e)
+        {
+            // 执行结束后触发  
+        }
+
 
         // 定义委托  
         public delegate void DelReadStdOutput(string result);
@@ -479,7 +487,7 @@ namespace TestExerciser
 
 
             CmdProcess.EnableRaisingEvents = true;                      // 启用Exited事件  
-            CmdProcess.Exited += new EventHandler(CmdProcess_Exited);   // 注册进程结束事件  
+            CmdProcess.Exited += new EventHandler(RunAction_Exited);   // 注册进程结束事件  
             CmdProcess.OutputDataReceived += new DataReceivedEventHandler(p_OutputDataReceived);
             CmdProcess.ErrorDataReceived += new DataReceivedEventHandler(p_ErrorDataReceived);
             CmdProcess.Start();
@@ -519,7 +527,7 @@ namespace TestExerciser
             this.richResults.AppendText(result + "\r\n");
         }
 
-        private void CmdProcess_Exited(object sender, EventArgs e)
+        private void RunAction_Exited(object sender, EventArgs e)
         {
             // 执行结束后触发  
         }
@@ -718,14 +726,21 @@ namespace TestExerciser
                 删除ToolStripMenuItem.Visible = true;
                 标识ToolStripMenuItem.Visible = true;
                 打开文件路径ToolStripMenuItem.Visible = true;
-                执行工程ToolStripMenuItem.Visible = true;
-                执行测试套ToolStripMenuItem.Visible = true;
-                重命名ToolStripMenuItem.Visible = true;
-                刷新ToolStripMenuItem.Visible = true;
-                新建工程PToolStripMenuItem.Visible = true;
-                新建文件ToolStripMenuItem.Visible = true;
-                闭合CToolStripMenuItem.Visible = true;
-                展开EToolStripMenuItem.Visible = true;
+                if (Directory.Exists(selectTreeNodeFullPath()))
+                {
+                    执行工程ToolStripMenuItem.Visible = true;
+                    闭合CToolStripMenuItem.Visible = true;
+                    展开EToolStripMenuItem.Visible = true;
+                    刷新ToolStripMenuItem.Visible = true;
+                    新建文件ToolStripMenuItem.Visible = true;
+                }
+                if (File.Exists(selectTreeNodeFullPath()))
+                {
+                    执行测试套ToolStripMenuItem.Visible = true;
+                }                
+                重命名ToolStripMenuItem.Visible = true;                
+                新建工程PToolStripMenuItem.Visible = true;                
+                
                 this.tsbStart.Visible = true;
 
             }
@@ -819,7 +834,7 @@ namespace TestExerciser
                 addToRootPaths(full_path);
                 if (e.Label.LastIndexOf(".") + 1 != 0)
                 {  
-                    string ext = e.Label.Substring(e.Label.LastIndexOf(".") + 1, (e.Label.Length - e.Label.LastIndexOf(".") - 1));
+                    string ext = e.Label.Substring(e.Label.LastIndexOf(".") + 1, (e.Label.Length - e.Label.LastIndexOf(".") - 1));                    
                     setImageIndex(ext, tree_Solution.SelectedNode);
                 }
             }            
@@ -949,7 +964,7 @@ namespace TestExerciser
                             chldNode.Tag = chlFile.FullName;
                             string ext = chlFile.Name.Substring(chlFile.Name.LastIndexOf(".") + 1, (chlFile.Name.Length - chlFile.Name.LastIndexOf(".") - 1));
                             node.Nodes.Add(chldNode);
-                            setImageIndex(ext,chldNode);                                                                                      
+                            setImageIndex(ext,chldNode,chlFile);                                                                                     
                         }
                     }
 
@@ -972,6 +987,8 @@ namespace TestExerciser
                 MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
 
         /// <summary>
         /// 清理文件夹
@@ -2190,7 +2207,59 @@ namespace TestExerciser
           MainAbout aboutDialog = new MainAbout();
           aboutDialog.ShowDialog();
         }
- 
+
+
+        string[] tsFilePath;
+        List<string> tsFilePathList = new List<string>();
+
+        string[] tcFilePath;
+        List<string> tcFilePathList = new List<string>();
+
+        private void setImageIndex(string ext,TreeNode node,FileInfo chlFile)
+        {
+
+            if (ext == "ts")
+            {
+                node.ImageIndex = 1;
+                node.SelectedImageIndex = 1;
+            }
+            else if (ext == "tc")
+            {
+                node.ImageIndex = 0;
+                node.SelectedImageIndex = 0;
+            }
+            else if (ext == "py")
+            {
+                node.ImageIndex = 3;
+                node.SelectedImageIndex = 3;
+            }
+            else if (ext == "cs")
+            {
+                node.ImageIndex = 6;
+                node.SelectedImageIndex = 6;
+            }
+            else if (ext == "rb")
+            {
+                node.ImageIndex = 7;
+                node.SelectedImageIndex = 7;
+            }
+            else if (ext == "txt")
+            {
+                node.ImageIndex = 8;
+                node.SelectedImageIndex = 8;
+            }
+            else if (ext == "vb")
+            {
+                node.ImageIndex = 9;
+                node.SelectedImageIndex = 9;
+            }
+            else
+            {
+                node.ImageIndex = 10;
+                node.SelectedImageIndex = 10;
+            }
+        }
+
         private void setImageIndex(string ext,TreeNode node)
         {
 

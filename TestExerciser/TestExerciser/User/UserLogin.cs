@@ -84,10 +84,17 @@ namespace TestExerciser.User
                 }
                 else
                 {
-                    this.txtStatus.ForeColor = Color.Red;
-                    this.txtStatus.Text = "登录信息：登录失败，用户名不存在，请注册！";
-                }
-                
+                    if (ToolSelectDB.selectDBStatus)
+                    {
+                        this.txtStatus.ForeColor = Color.Blue;
+                        this.txtStatus.Text = "登录信息：您需要重新登录！";
+                    }
+                    else
+                    {
+                        this.txtStatus.ForeColor = Color.Red;
+                        this.txtStatus.Text = "登录信息：登录失败，用户名不存在，请注册！";
+                    }                   
+                }                
             }
             else
             {

@@ -17,6 +17,8 @@ namespace TestExerciser.Tools
     public partial class ToolSelectDB : Skin_Mac
     {
         public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
+        public static bool selectDBStatus = false;
+
 
         public ToolSelectDB()
         {
@@ -50,6 +52,7 @@ namespace TestExerciser.Tools
             }
             Properties.Settings.Default.ConnectionString = strcon;
             Properties.Settings.Default.Save();
+            selectDBStatus = true;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
