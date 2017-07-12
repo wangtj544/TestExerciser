@@ -21,7 +21,8 @@ namespace TestExerciser.Tools
         Label labDetails = new Label();
         SkinTextBox stbServerDBPath = new SkinTextBox();
 
-        public static string strcon = ToolSelectDB.strcon;
+        public static string strconLocal = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
+        public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + @"\\172.20.32.147\data\TestExerciser.accdb" + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
 
         string operate = null;
 
@@ -46,7 +47,6 @@ namespace TestExerciser.Tools
                         {
                             //配置为远程服务器上的数据库                        
                             strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+ this.stbServerDBPath.Text.ToString()+ ";Jet OLEDB:Database Password=admin@123";
-                            Properties.Settings.Default.isLocalAccessDB = false;
                             this.txtStatus.ForeColor = Color.Green;
                             this.txtStatus.Text = "设置信息：设置成功，更改为远程服务器数据库连接！关闭并重启软件后生效！";
 
@@ -59,7 +59,7 @@ namespace TestExerciser.Tools
                     }
                     else if(radbLocal.Checked==true)
                     {
-                        Properties.Settings.Default.isLocalAccessDB = true;
+                        strcon = strconLocal;
                         this.txtStatus.ForeColor = Color.Green;
                         this.txtStatus.Text = "设置信息：设置成功，更改为本地数据库连接！关闭并重启软件后生效！";
                     }
@@ -221,14 +221,6 @@ namespace TestExerciser.Tools
         private void ToolManager_Load(object sender, EventArgs e)
         {
             this.tvItems.ExpandAll();
-            if (Properties.Settings.Default.isLocalAccessDB == true)
-            {
-                this.radbLocal.Checked = true;
-            }
-            else
-            {
-                this.radbServer.Checked = true;
-            }
         }
     }
 }

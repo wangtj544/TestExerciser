@@ -20,7 +20,7 @@ namespace TestExerciser {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ExcelDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSetExcelReader")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSetExcelReader : global::System.Data.DataSet {
         
@@ -175,9 +175,9 @@ namespace TestExerciser {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "ExcelDataSet";
+            this.DataSetName = "DataSetExcelReader";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ExcelDataSet.xsd";
+            this.Namespace = "http://tempuri.org/DataSetExcelReader.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         }

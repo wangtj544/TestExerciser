@@ -18,6 +18,7 @@ namespace TestExerciser.User
     {
         public static string pubUserName = null;
         public static string pubPasswd = null;
+        public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + @"\\172.20.32.147\data\TestExerciser.accdb" + ";Jet OLEDB:Database Password=admin@123";
 
         public UserLogin()
         {
@@ -25,11 +26,10 @@ namespace TestExerciser.User
         }
 
         private void MainLogin_Load(object sender, EventArgs e)
-        {
+        {            
+            Properties.Settings.Default.ConnectionString = strcon;
+            Properties.Settings.Default.Save();
             this.txtUserName.Focus();
-            //string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
-            //Properties.Settings.Default.ConnectionString = strcon;
-            //Properties.Settings.Default.Save();
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -84,16 +84,8 @@ namespace TestExerciser.User
                 }
                 else
                 {
-                    if (ToolSelectDB.selectDBStatus)
-                    {
-                        this.txtStatus.ForeColor = Color.Blue;
-                        this.txtStatus.Text = "登录信息：您需要重新登录！";
-                    }
-                    else
-                    {
-                        this.txtStatus.ForeColor = Color.Red;
-                        this.txtStatus.Text = "登录信息：登录失败，用户名不存在，请注册！";
-                    }                   
+                    this.txtStatus.ForeColor = Color.Red;
+                    this.txtStatus.Text = "登录信息：登录失败，用户名不存在，请注册！";                    
                 }                
             }
             else

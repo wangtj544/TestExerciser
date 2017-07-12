@@ -56,5 +56,10 @@ namespace TestExerciser.Logic
             timeNow = now.ToShortTimeString();
             return timeNow;
         }
+
+        public void timeUse(Control txtStatus)
+        {
+            
+        }
     }
 }

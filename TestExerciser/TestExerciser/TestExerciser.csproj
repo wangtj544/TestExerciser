@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestExerciser</RootNamespace>
     <AssemblyName>TestExerciser</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>E:\AutoTest\tools\TestExerciser\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -22,7 +23,9 @@
     <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <UpdateUrl>https://github.com/devdiv/TestExerciser/releases/</UpdateUrl>
+    <UpdateUrl>http://172.20.32.147:8080/</UpdateUrl>
+    <SupportUrl>http://172.20.32.147:8080/</SupportUrl>
+    <ErrorReportUrl>http://172.20.32.147:8080/</ErrorReportUrl>
     <ProductName>TestExerciser</ProductName>
     <PublisherName>张渊</PublisherName>
     <SuiteName>TestExerciser</SuiteName>
@@ -48,7 +51,8 @@
     <WarningLevel>4</WarningLevel>
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -58,6 +62,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>9C910D4578AACCB32B6E444059E91B2A7F6EF882</ManifestCertificateThumbprint>
@@ -96,6 +101,7 @@
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
@@ -103,10 +109,6 @@
     <Reference Include="CSkin, Version=16.1.14.2, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\lenovo\Desktop\CSkin+16.1.14.2\CSkin 16.1.14.2\CSkin 4.0\CSkin.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\lenovo\Desktop\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -148,6 +150,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetCaseReview.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetExcelReader.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetExcelReader.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSetPackageManager.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -307,12 +314,6 @@
     <Compile Include="Tools\ToolManager.Designer.cs">
       <DependentUpon>ToolManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\ToolSelectDB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tools\ToolSelectDB.Designer.cs">
-      <DependentUpon>ToolSelectDB.cs</DependentUpon>
-    </Compile>
     <Compile Include="User\UserAuthentication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,11 +325,6 @@
     </Compile>
     <Compile Include="User\UserChangePSD.Designer.cs">
       <DependentUpon>UserChangePSD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataSetExcelReader.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetExcelReader.xsd</DependentUpon>
     </Compile>
     <Compile Include="User\UserChangeUserEmail.cs">
       <SubType>Form</SubType>
@@ -469,9 +465,6 @@
     <EmbeddedResource Include="Tools\ToolManager.resx">
       <DependentUpon>ToolManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tools\ToolSelectDB.resx">
-      <DependentUpon>ToolSelectDB.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="User\UserAuthentication.resx">
       <DependentUpon>UserAuthentication.cs</DependentUpon>
     </EmbeddedResource>
@@ -597,11 +590,6 @@
     </FileAssociation>
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>

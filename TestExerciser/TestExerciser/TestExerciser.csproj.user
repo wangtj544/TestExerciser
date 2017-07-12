@@ -4,10 +4,10 @@
     <ProjectView>ShowAllFiles</ProjectView>
     <PublishUrlHistory>E:\AutoTest\tools\TestExerciser\|E:\AutoTest\测试工具\TestExerciser\|E:\AutoTest\测试工具\|E:\AutoTest\测试用例\|\\172.20.32.147\publish\</PublishUrlHistory>
     <InstallUrlHistory>http://localhost:60203/</InstallUrlHistory>
-    <SupportUrlHistory />
-    <UpdateUrlHistory>http://localhost/TestExerciser/</UpdateUrlHistory>
+    <SupportUrlHistory>http://172.20.32.147:8080/</SupportUrlHistory>
+    <UpdateUrlHistory>https://github.com/devdiv/TestExerciser/releases/|http://localhost/TestExerciser/</UpdateUrlHistory>
     <BootstrapperUrlHistory>E:\School\Python</BootstrapperUrlHistory>
-    <ErrorReportUrlHistory />
+    <ErrorReportUrlHistory>http://172.20.32.147:8080/</ErrorReportUrlHistory>
     <FallbackCulture>zh-CN</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>

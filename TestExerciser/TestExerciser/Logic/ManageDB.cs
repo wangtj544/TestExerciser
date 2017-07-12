@@ -166,16 +166,9 @@ namespace TestExerciser.Logic
                     falg = true;
                 }
             }
-            catch 
-            {               
-                ToolSelectDB myToolSelectDB =new ToolSelectDB();
-                DialogResult myToolSelectDBRS = myToolSelectDB.ShowDialog();
-                if (myToolSelectDBRS == DialogResult.OK)
-                {
-                    strcon = ToolSelectDB.strcon;
-                    Properties.Settings.Default.ConnectionString = strcon;
-                    Properties.Settings.Default.Save();
-                }                
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

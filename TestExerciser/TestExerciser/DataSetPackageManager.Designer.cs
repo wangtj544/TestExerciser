@@ -1243,9 +1243,6 @@ namespace TestExerciser.DataSetPackageManagerTableAdapters {
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
     ///</summary>
-    ///
-    //使用ManageDB中定义的链接
-    using TestExerciser.Logic;
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.ComponentModel.DataObjectAttribute(true)]
@@ -1406,12 +1403,7 @@ namespace TestExerciser.DataSetPackageManagerTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-
-            //使用本地数据库
-            //this._connection.ConnectionString = global::TestExerciser.Properties.Settings.Default.TestExerciserConnectionString;
-
-            //使用ManageDB中统一指定的数据库
-            this._connection.ConnectionString = ManageDB.strcon;
+            this._connection.ConnectionString = global::TestExerciser.Properties.Settings.Default.TestExerciserConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

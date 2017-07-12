@@ -346,6 +346,13 @@ namespace TestExerciser
             rightClickOnOutPutWindow.Close();
         }
 
+        private void 执行项目ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rootFolder = selectProjectFolder.SelectedPath;
+            writeRunProjectSupportFile(rootFolder);
+            runCmd("python.exe", @".\__runner.py");
+        } 
+
         /// <summary>
         /// 执行工程
         /// </summary>
@@ -354,11 +361,22 @@ namespace TestExerciser
         private void 执行工程ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
-            {
-                rootFolder = selectProjectFolder.SelectedPath;
-                string selectedProject = selectTreeNodeFullPath();
-                writeRunProjectSupportFile(rootFolder);
-                //runCmd("python.exe", @".\__runner.py");                
+            {                
+                getFiles(selectTreeNodeFullPath());                            
+                spbStatusBegin();
+                foreach (string strts in tsFilePath)
+                {                    
+                    if (this.spbStatus.Value < this.spbStatus.Maximum)
+                    {                    
+                        this.spbStatus.Value++;
+                        outPut("执行进行中【" + this.spbStatus.Value.ToString() + " / " + this.spbStatus.Maximum + "】...");                       
+                    }
+                    else
+                    {
+                        outPut("执行结束...");
+                    }
+                    runCmd("python.exe", strts);
+                }
             }
             catch (Exception exception)
             {
@@ -387,7 +405,7 @@ namespace TestExerciser
         
         private void MainForm_Load(object sender, EventArgs e)
         {
-            InitializeControl();        
+            InitializeControl();
             this.登录ToolStripMenuItem.ForeColor = Color.Green;          
             this.登录ToolStripMenuItem.Text = ManageDB.userFullName;
         }
@@ -399,15 +417,19 @@ namespace TestExerciser
         /// <param name="e"></param>
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F5)
+            if (e.KeyCode == Keys.Control && e.KeyCode == Keys.ShiftKey && e.KeyCode == Keys.F5)
+            {
+                this.执行项目ToolStripMenuItem_Click(sender,e);
+            }
+            else if (e.KeyCode == Keys.F5 && e.KeyCode ==Keys.Control)
             {
                 this.执行工程ToolStripMenuItem_Click(sender, e);
             }
-            else if (e.KeyCode == Keys.F6)
+            else if (e.KeyCode == Keys.F5)
             {
                 this.执行测试套ToolStripMenuItem_Click(sender, e);
             }
-            else if (e.KeyCode == Keys.F7)
+            else if (e.KeyCode == Keys.F6)
             {
                 this.生成脚本ToolStripMenuItem_Click(sender, e);
             }
@@ -709,6 +731,7 @@ namespace TestExerciser
                 删除ToolStripMenuItem.Visible = false;
                 标识ToolStripMenuItem.Visible = false;
                 打开文件路径ToolStripMenuItem.Visible = false;
+                执行项目ToolStripMenuItem.Visible = false;
                 执行工程ToolStripMenuItem.Visible = false;
                 执行测试套ToolStripMenuItem.Visible = false;
                 重命名ToolStripMenuItem.Visible = false;
@@ -728,6 +751,7 @@ namespace TestExerciser
                 打开文件路径ToolStripMenuItem.Visible = true;
                 if (Directory.Exists(selectTreeNodeFullPath()))
                 {
+                    执行项目ToolStripMenuItem.Visible = true;
                     执行工程ToolStripMenuItem.Visible = true;
                     闭合CToolStripMenuItem.Visible = true;
                     展开EToolStripMenuItem.Visible = true;
@@ -964,7 +988,7 @@ namespace TestExerciser
                             chldNode.Tag = chlFile.FullName;
                             string ext = chlFile.Name.Substring(chlFile.Name.LastIndexOf(".") + 1, (chlFile.Name.Length - chlFile.Name.LastIndexOf(".") - 1));
                             node.Nodes.Add(chldNode);
-                            setImageIndex(ext,chldNode,chlFile);                                                                                     
+                            setImageIndex(ext,chldNode);                                                                                     
                         }
                     }
 
@@ -989,6 +1013,55 @@ namespace TestExerciser
         }
 
 
+        string[] tsFilePath;
+        List<string> tsFilePathList = new List<string>();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="filePath"></param>
+        private void getFiles(string filePath)
+        {
+            try
+            {
+                if (filePath == null || filePath == "")
+                {
+
+                }
+                else
+                {
+                    DirectoryInfo folder = new DirectoryInfo(filePath);
+                    FileInfo[] chldFiles = folder.GetFiles("*.*");
+                    foreach (FileInfo chlFile in chldFiles)
+                    {
+                        if (!chlFile.Name.StartsWith(".") && chlFile.Name != "workspace" && chlFile.Name != "__pycache__" && !chlFile.Name.StartsWith("__runner"))
+                        {
+                            TreeNode chldNode = new TreeNode();
+                            chldNode.Text = chlFile.Name;
+                            chldNode.Tag = chlFile.FullName;
+                            string ext = chlFile.Name.Substring(chlFile.Name.LastIndexOf(".") + 1, (chlFile.Name.Length - chlFile.Name.LastIndexOf(".") - 1));
+                            if (ext == "ts")
+                            {
+                                tsFilePathList.Add( chlFile.FullName);
+                                tsFilePath = tsFilePathList.ToArray();
+                            }
+                        }
+                    }
+
+                    DirectoryInfo[] chldFolders = folder.GetDirectories();
+                    foreach (DirectoryInfo chldFolder in chldFolders)
+                    {
+                        if (!chldFolder.Name.StartsWith(".") && chldFolder.Name != "workspace" && chldFolder.Name != "__pycache__")
+                        {
+                            getFiles(chldFolder.FullName);
+                        }
+                    }
+                }              
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         /// <summary>
         /// 清理文件夹
@@ -2209,56 +2282,7 @@ namespace TestExerciser
         }
 
 
-        string[] tsFilePath;
-        List<string> tsFilePathList = new List<string>();
-
-        string[] tcFilePath;
-        List<string> tcFilePathList = new List<string>();
-
-        private void setImageIndex(string ext,TreeNode node,FileInfo chlFile)
-        {
-
-            if (ext == "ts")
-            {
-                node.ImageIndex = 1;
-                node.SelectedImageIndex = 1;
-            }
-            else if (ext == "tc")
-            {
-                node.ImageIndex = 0;
-                node.SelectedImageIndex = 0;
-            }
-            else if (ext == "py")
-            {
-                node.ImageIndex = 3;
-                node.SelectedImageIndex = 3;
-            }
-            else if (ext == "cs")
-            {
-                node.ImageIndex = 6;
-                node.SelectedImageIndex = 6;
-            }
-            else if (ext == "rb")
-            {
-                node.ImageIndex = 7;
-                node.SelectedImageIndex = 7;
-            }
-            else if (ext == "txt")
-            {
-                node.ImageIndex = 8;
-                node.SelectedImageIndex = 8;
-            }
-            else if (ext == "vb")
-            {
-                node.ImageIndex = 9;
-                node.SelectedImageIndex = 9;
-            }
-            else
-            {
-                node.ImageIndex = 10;
-                node.SelectedImageIndex = 10;
-            }
-        }
+       
 
         private void setImageIndex(string ext,TreeNode node)
         {
@@ -2912,11 +2936,40 @@ namespace TestExerciser
             richResults.ScrollToCaret();
         }
 
-        private void richError_TextChanged(object sender, EventArgs e)
+        private void richOutPut_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richResults_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void outPut( string log)
+        {
+            this.richResults.AppendText(DateTime.Now.ToString("HH:mm:ss：") + log +"\r\n");            
+        }
+
+        private void spbStatusBegin()
+        {
+            this.spbStatus.Value = 0;
+            this.spbStatus.Minimum = 0;
+            this.spbStatus.Maximum = tsFilePath.Length;
+            outPut("开始执行...");
+        }
+
+        private void timerNow_Tick(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            this.labtimeNow.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        
+        private void spbStatusTrueOrFalse()
         {
             if (this.richResults.Text != "")
             {
-                this.spbStatus.Visible = true;
                 bool foundMatchSucceed = false;
                 bool foundMatchFailed = false;
                 try
@@ -2939,19 +2992,17 @@ namespace TestExerciser
 
 
                 if (foundMatchFailed)
-                {             
-                    this.spbStatus.Value = 100;
+                {
                     this.spbStatus.TrackFore = Color.Red;
                 }
 
                 else if (foundMatchSucceed)
                 {
-                    this.spbStatus.Value = 100;
                     this.spbStatus.TrackFore = Color.Green;
                 }
                 else
                 {
-                    this.spbStatus.Value = 0;
+                    this.spbStatus.TrackFore = Color.Gold;
                 }
             }
             else
@@ -2960,9 +3011,7 @@ namespace TestExerciser
             }
         }
 
-        private void richOutPut_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+           
+       
     }
 }
