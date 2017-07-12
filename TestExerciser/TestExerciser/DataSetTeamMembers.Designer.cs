@@ -24,7 +24,7 @@ namespace TestExerciser {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSetTeamMembers : global::System.Data.DataSet {
         
-        private 用户信息DataTable table用户信息;
+        private 用户管理DataTable table用户管理;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace TestExerciser {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["用户信息"] != null)) {
-                    base.Tables.Add(new 用户信息DataTable(ds.Tables["用户信息"]));
+                if ((ds.Tables["用户管理"] != null)) {
+                    base.Tables.Add(new 用户管理DataTable(ds.Tables["用户管理"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace TestExerciser {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public 用户信息DataTable 用户信息 {
+        public 用户管理DataTable 用户管理 {
             get {
-                return this.table用户信息;
+                return this.table用户管理;
             }
         }
         
@@ -152,8 +152,8 @@ namespace TestExerciser {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["用户信息"] != null)) {
-                    base.Tables.Add(new 用户信息DataTable(ds.Tables["用户信息"]));
+                if ((ds.Tables["用户管理"] != null)) {
+                    base.Tables.Add(new 用户管理DataTable(ds.Tables["用户管理"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace TestExerciser {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.table用户信息 = ((用户信息DataTable)(base.Tables["用户信息"]));
+            this.table用户管理 = ((用户管理DataTable)(base.Tables["用户管理"]));
             if ((initTable == true)) {
-                if ((this.table用户信息 != null)) {
-                    this.table用户信息.InitVars();
+                if ((this.table用户管理 != null)) {
+                    this.table用户管理.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace TestExerciser {
             this.Namespace = "http://tempuri.org/DataSetTeamMembers.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.table用户信息 = new 用户信息DataTable();
-            base.Tables.Add(this.table用户信息);
+            this.table用户管理 = new 用户管理DataTable();
+            base.Tables.Add(this.table用户管理);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerialize用户信息() {
+        private bool ShouldSerialize用户管理() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace TestExerciser {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void 用户信息RowChangeEventHandler(object sender, 用户信息RowChangeEvent e);
+        public delegate void 用户管理RowChangeEventHandler(object sender, 用户管理RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class 用户信息DataTable : global::System.Data.TypedTableBase<用户信息Row> {
+        public partial class 用户管理DataTable : global::System.Data.TypedTableBase<用户管理Row> {
             
             private global::System.Data.DataColumn columnfullName;
             
@@ -285,8 +285,8 @@ namespace TestExerciser {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public 用户信息DataTable() {
-                this.TableName = "用户信息";
+            public 用户管理DataTable() {
+                this.TableName = "用户管理";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +294,7 @@ namespace TestExerciser {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal 用户信息DataTable(global::System.Data.DataTable table) {
+            internal 用户管理DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,7 +311,7 @@ namespace TestExerciser {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected 用户信息DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected 用户管理DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -343,53 +343,53 @@ namespace TestExerciser {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public 用户信息Row this[int index] {
+            public 用户管理Row this[int index] {
                 get {
-                    return ((用户信息Row)(this.Rows[index]));
+                    return ((用户管理Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event 用户信息RowChangeEventHandler 用户信息RowChanging;
+            public event 用户管理RowChangeEventHandler 用户管理RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event 用户信息RowChangeEventHandler 用户信息RowChanged;
+            public event 用户管理RowChangeEventHandler 用户管理RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event 用户信息RowChangeEventHandler 用户信息RowDeleting;
+            public event 用户管理RowChangeEventHandler 用户管理RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event 用户信息RowChangeEventHandler 用户信息RowDeleted;
+            public event 用户管理RowChangeEventHandler 用户管理RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Add用户信息Row(用户信息Row row) {
+            public void Add用户管理Row(用户管理Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public 用户信息Row Add用户信息Row(string fullName, string userName) {
-                用户信息Row row用户信息Row = ((用户信息Row)(this.NewRow()));
+            public 用户管理Row Add用户管理Row(string fullName, string userName) {
+                用户管理Row row用户管理Row = ((用户管理Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         fullName,
                         userName};
-                row用户信息Row.ItemArray = columnValuesArray;
-                this.Rows.Add(row用户信息Row);
-                return row用户信息Row;
+                row用户管理Row.ItemArray = columnValuesArray;
+                this.Rows.Add(row用户管理Row);
+                return row用户管理Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public 用户信息Row FindByuserName(string userName) {
-                return ((用户信息Row)(this.Rows.Find(new object[] {
+            public 用户管理Row FindByuserName(string userName) {
+                return ((用户管理Row)(this.Rows.Find(new object[] {
                             userName})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                用户信息DataTable cln = ((用户信息DataTable)(base.Clone()));
+                用户管理DataTable cln = ((用户管理DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -397,7 +397,7 @@ namespace TestExerciser {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new 用户信息DataTable();
+                return new 用户管理DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -416,36 +416,37 @@ namespace TestExerciser {
                 base.Columns.Add(this.columnuserName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnuserName}, true));
-                this.columnfullName.MaxLength = 255;
+                this.columnfullName.AllowDBNull = false;
+                this.columnfullName.MaxLength = 50;
                 this.columnuserName.AllowDBNull = false;
                 this.columnuserName.Unique = true;
-                this.columnuserName.MaxLength = 255;
+                this.columnuserName.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public 用户信息Row New用户信息Row() {
-                return ((用户信息Row)(this.NewRow()));
+            public 用户管理Row New用户管理Row() {
+                return ((用户管理Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new 用户信息Row(builder);
+                return new 用户管理Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(用户信息Row);
+                return typeof(用户管理Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.用户信息RowChanged != null)) {
-                    this.用户信息RowChanged(this, new 用户信息RowChangeEvent(((用户信息Row)(e.Row)), e.Action));
+                if ((this.用户管理RowChanged != null)) {
+                    this.用户管理RowChanged(this, new 用户管理RowChangeEvent(((用户管理Row)(e.Row)), e.Action));
                 }
             }
             
@@ -453,8 +454,8 @@ namespace TestExerciser {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.用户信息RowChanging != null)) {
-                    this.用户信息RowChanging(this, new 用户信息RowChangeEvent(((用户信息Row)(e.Row)), e.Action));
+                if ((this.用户管理RowChanging != null)) {
+                    this.用户管理RowChanging(this, new 用户管理RowChangeEvent(((用户管理Row)(e.Row)), e.Action));
                 }
             }
             
@@ -462,8 +463,8 @@ namespace TestExerciser {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.用户信息RowDeleted != null)) {
-                    this.用户信息RowDeleted(this, new 用户信息RowChangeEvent(((用户信息Row)(e.Row)), e.Action));
+                if ((this.用户管理RowDeleted != null)) {
+                    this.用户管理RowDeleted(this, new 用户管理RowChangeEvent(((用户管理Row)(e.Row)), e.Action));
                 }
             }
             
@@ -471,14 +472,14 @@ namespace TestExerciser {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.用户信息RowDeleting != null)) {
-                    this.用户信息RowDeleting(this, new 用户信息RowChangeEvent(((用户信息Row)(e.Row)), e.Action));
+                if ((this.用户管理RowDeleting != null)) {
+                    this.用户管理RowDeleting(this, new 用户管理RowChangeEvent(((用户管理Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Remove用户信息Row(用户信息Row row) {
+            public void Remove用户管理Row(用户管理Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -505,7 +506,7 @@ namespace TestExerciser {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "用户信息DataTable";
+                attribute2.FixedValue = "用户管理DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -549,30 +550,25 @@ namespace TestExerciser {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class 用户信息Row : global::System.Data.DataRow {
+        public partial class 用户管理Row : global::System.Data.DataRow {
             
-            private 用户信息DataTable table用户信息;
+            private 用户管理DataTable table用户管理;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal 用户信息Row(global::System.Data.DataRowBuilder rb) : 
+            internal 用户管理Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.table用户信息 = ((用户信息DataTable)(this.Table));
+                this.table用户管理 = ((用户管理DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string fullName {
                 get {
-                    try {
-                        return ((string)(this[this.table用户信息.fullNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“用户信息”中列“fullName”的值为 DBNull。", e);
-                    }
+                    return ((string)(this[this.table用户管理.fullNameColumn]));
                 }
                 set {
-                    this[this.table用户信息.fullNameColumn] = value;
+                    this[this.table用户管理.fullNameColumn] = value;
                 }
             }
             
@@ -580,23 +576,11 @@ namespace TestExerciser {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string userName {
                 get {
-                    return ((string)(this[this.table用户信息.userNameColumn]));
+                    return ((string)(this[this.table用户管理.userNameColumn]));
                 }
                 set {
-                    this[this.table用户信息.userNameColumn] = value;
+                    this[this.table用户管理.userNameColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsfullNameNull() {
-                return this.IsNull(this.table用户信息.fullNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetfullNameNull() {
-                this[this.table用户信息.fullNameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -604,22 +588,22 @@ namespace TestExerciser {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class 用户信息RowChangeEvent : global::System.EventArgs {
+        public class 用户管理RowChangeEvent : global::System.EventArgs {
             
-            private 用户信息Row eventRow;
+            private 用户管理Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public 用户信息RowChangeEvent(用户信息Row row, global::System.Data.DataRowAction action) {
+            public 用户管理RowChangeEvent(用户管理Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public 用户信息Row Row {
+            public 用户管理Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -647,27 +631,27 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class 用户信息TableAdapter : global::System.ComponentModel.Component {
+    public partial class 用户管理TableAdapter : global::System.ComponentModel.Component {
         
-        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
-        private global::System.Data.OleDb.OleDbConnection _connection;
+        private global::System.Data.SqlClient.SqlConnection _connection;
         
-        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
         
-        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
         
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public 用户信息TableAdapter() {
+        public 用户管理TableAdapter() {
             this.ClearBeforeFill = true;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
             get {
                 if ((this._adapter == null)) {
                     this.InitAdapter();
@@ -678,7 +662,7 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.OleDb.OleDbConnection Connection {
+        internal global::System.Data.SqlClient.SqlConnection Connection {
             get {
                 if ((this._connection == null)) {
                     this.InitConnection();
@@ -698,7 +682,7 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
                 }
                 for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
                     if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
                     }
                 }
             }
@@ -706,7 +690,7 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
             get {
                 return this._transaction;
             }
@@ -732,7 +716,7 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
             get {
                 if ((this._commandCollection == null)) {
                     this.InitCommandCollection();
@@ -755,47 +739,46 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitAdapter() {
-            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "用户信息";
+            tableMapping.DataSetTable = "用户管理";
             tableMapping.ColumnMappings.Add("fullName", "fullName");
             tableMapping.ColumnMappings.Add("userName", "userName");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `用户信息` WHERE (((? = 1 AND `fullName` IS NULL) OR (`fullName` = ?)) AN" +
-                "D (`userName` = ?))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[用户管理] WHERE (([fullName] = @Original_fullName) AND ([userName]" +
+                " = @Original_userName))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_fullName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fullName", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_fullName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fullName", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_userName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userName", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fullName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fullName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_userName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `用户信息` SET `fullName` = ?, `userName` = ? WHERE (((? = 1 AND `fullName` IS" +
-                " NULL) OR (`fullName` = ?)) AND (`userName` = ?))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[用户管理] SET [fullName] = @fullName, [userName] = @userName WHERE (([f" +
+                "ullName] = @Original_fullName) AND ([userName] = @Original_userName));\r\nSELECT f" +
+                "ullName, userName FROM 用户管理 WHERE (userName = @userName)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("fullName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fullName", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("userName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userName", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_fullName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fullName", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_fullName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fullName", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_userName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "userName", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fullName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fullName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fullName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fullName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_userName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
-            this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::TestExerciser.Properties.Settings.Default.TestExerciserConnectionString;
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::TestExerciser.Properties.Settings.Default.TestExerciserConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
-            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT fullName, userName FROM 用户信息";
+            this._commandCollection[0].CommandText = "SELECT fullName, userName FROM dbo.用户管理";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -803,7 +786,7 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetTeamMembers.用户信息DataTable dataTable) {
+        public virtual int Fill(DataSetTeamMembers.用户管理DataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -816,9 +799,9 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetTeamMembers.用户信息DataTable GetData() {
+        public virtual DataSetTeamMembers.用户管理DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetTeamMembers.用户信息DataTable dataTable = new DataSetTeamMembers.用户信息DataTable();
+            DataSetTeamMembers.用户管理DataTable dataTable = new DataSetTeamMembers.用户管理DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -826,7 +809,7 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSetTeamMembers.用户信息DataTable dataTable) {
+        public virtual int Update(DataSetTeamMembers.用户管理DataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -834,7 +817,7 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DataSetTeamMembers dataSet) {
-            return this.Adapter.Update(dataSet, "用户信息");
+            return this.Adapter.Update(dataSet, "用户管理");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -861,14 +844,13 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
                 throw new global::System.ArgumentNullException("Original_fullName");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_fullName));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_fullName));
             }
             if ((Original_userName == null)) {
                 throw new global::System.ArgumentNullException("Original_userName");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_userName));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_userName));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -907,14 +889,13 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
                 throw new global::System.ArgumentNullException("Original_fullName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_fullName));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_fullName));
             }
             if ((Original_userName == null)) {
                 throw new global::System.ArgumentNullException("Original_userName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_userName));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_userName));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -953,7 +934,7 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private 用户信息TableAdapter _用户信息TableAdapter;
+        private 用户管理TableAdapter _用户管理TableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -975,12 +956,12 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public 用户信息TableAdapter 用户信息TableAdapter {
+        public 用户管理TableAdapter 用户管理TableAdapter {
             get {
-                return this._用户信息TableAdapter;
+                return this._用户管理TableAdapter;
             }
             set {
-                this._用户信息TableAdapter = value;
+                this._用户管理TableAdapter = value;
             }
         }
         
@@ -1003,9 +984,9 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._用户信息TableAdapter != null) 
-                            && (this._用户信息TableAdapter.Connection != null))) {
-                    return this._用户信息TableAdapter.Connection;
+                if (((this._用户管理TableAdapter != null) 
+                            && (this._用户管理TableAdapter.Connection != null))) {
+                    return this._用户管理TableAdapter.Connection;
                 }
                 return null;
             }
@@ -1020,7 +1001,7 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._用户信息TableAdapter != null)) {
+                if ((this._用户管理TableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1034,12 +1015,12 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(DataSetTeamMembers dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._用户信息TableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.用户信息.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._用户管理TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.用户管理.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._用户信息TableAdapter.Update(updatedRows));
+                    result = (result + this._用户管理TableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1053,11 +1034,11 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(DataSetTeamMembers dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._用户信息TableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.用户信息.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._用户管理TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.用户管理.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._用户信息TableAdapter.Update(addedRows));
+                    result = (result + this._用户管理TableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1071,11 +1052,11 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(DataSetTeamMembers dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._用户信息TableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.用户信息.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._用户管理TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.用户管理.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._用户信息TableAdapter.Update(deletedRows));
+                    result = (result + this._用户管理TableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1118,8 +1099,8 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._用户信息TableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._用户信息TableAdapter.Connection) == false))) {
+            if (((this._用户管理TableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._用户管理TableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("由 TableAdapterManager 管理的所有 TableAdapter 必须使用相同的连接字符串。");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
@@ -1153,13 +1134,13 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._用户信息TableAdapter != null)) {
-                    revertConnections.Add(this._用户信息TableAdapter, this._用户信息TableAdapter.Connection);
-                    this._用户信息TableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
-                    this._用户信息TableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
-                    if (this._用户信息TableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._用户信息TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._用户信息TableAdapter.Adapter);
+                if ((this._用户管理TableAdapter != null)) {
+                    revertConnections.Add(this._用户管理TableAdapter, this._用户管理TableAdapter.Connection);
+                    this._用户管理TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._用户管理TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._用户管理TableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._用户管理TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._用户管理TableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1220,9 +1201,9 @@ namespace TestExerciser.DataSetTeamMembersTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._用户信息TableAdapter != null)) {
-                    this._用户信息TableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._用户信息TableAdapter]));
-                    this._用户信息TableAdapter.Transaction = null;
+                if ((this._用户管理TableAdapter != null)) {
+                    this._用户管理TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._用户管理TableAdapter]));
+                    this._用户管理TableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

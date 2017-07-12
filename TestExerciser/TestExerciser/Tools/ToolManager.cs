@@ -21,8 +21,10 @@ namespace TestExerciser.Tools
         Label labDetails = new Label();
         SkinTextBox stbServerDBPath = new SkinTextBox();
 
-        public static string strconLocal = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
-        public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + @"\\172.20.32.147\data\TestExerciser.accdb" + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
+        //public static string strconLocal = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
+        //public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + @"\\172.20.32.147\data\TestExerciser.accdb" + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
+        public static string strconLocal = "Data Source=(local);Initial Catalog=TestExerciser;User ID=sa;Password=admin@123";
+        public static string strcon = "Data Source=172.20.32.147;Initial Catalog=TestExerciser;User ID=sa;Password=admin@123";
 
         string operate = null;
 
@@ -40,13 +42,13 @@ namespace TestExerciser.Tools
                     this.txtStatus.Text = "设置信息：设置失败，请选择正确的节点！";
                     break;
 
-                case "tnAccess":
+                case "tnSQL":
                     if (radbServer.Checked == true)
                     {
                         if (this.stbServerDBPath.Text != "")
                         {
                             //配置为远程服务器上的数据库                        
-                            strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+ this.stbServerDBPath.Text.ToString()+ ";Jet OLEDB:Database Password=admin@123";
+                            strcon = this.stbServerDBPath.Text.ToString() + ";User ID=sa;Password=admin@123";
                             this.txtStatus.ForeColor = Color.Green;
                             this.txtStatus.Text = "设置信息：设置成功，更改为远程服务器数据库连接！关闭并重启软件后生效！";
 
@@ -59,7 +61,7 @@ namespace TestExerciser.Tools
                     }
                     else if(radbLocal.Checked==true)
                     {
-                        strcon = strconLocal;
+
                         this.txtStatus.ForeColor = Color.Green;
                         this.txtStatus.Text = "设置信息：设置成功，更改为本地数据库连接！关闭并重启软件后生效！";
                     }
@@ -79,7 +81,7 @@ namespace TestExerciser.Tools
         {
             if (this.tvItems.SelectedNode != null)
             {
-                if (this.tvItems.SelectedNode.Name == "tnAccess")
+                if (this.tvItems.SelectedNode.Name == "tnSQL")
                 {                  
                     this.spCMain.Panel2.Controls.Add(this.gbSelectDB);
                     // 
@@ -93,7 +95,7 @@ namespace TestExerciser.Tools
                     this.gbSelectDB.Size = new System.Drawing.Size(405, 369);
                     this.gbSelectDB.TabIndex = 0;
                     this.gbSelectDB.TabStop = false;
-                    this.gbSelectDB.Text = "选择Access数据库：";
+                    this.gbSelectDB.Text = "选择数据库：";
 
                     // 
                     // labDetails
@@ -127,7 +129,7 @@ namespace TestExerciser.Tools
                     this.radbServer.Text = "远程服务器";
                     this.radbServer.UseVisualStyleBackColor = true;
                     this.radbServer.CheckedChanged += new System.EventHandler(this.radbServer_CheckedChanged);
-                    this.operate = "tnAccess";
+                    this.operate = "tnSQL";
                     // 
                     // stbServerDBPath
                     // 
@@ -165,11 +167,11 @@ namespace TestExerciser.Tools
                     this.stbServerDBPath.SkinTxt.Size = new System.Drawing.Size(311, 138);
                     this.stbServerDBPath.SkinTxt.TabIndex = 0;
                     this.stbServerDBPath.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-                    this.stbServerDBPath.SkinTxt.WaterText = "\\\\172.20.32.147\\data\\TestExerciser.accdb";
+                    this.stbServerDBPath.SkinTxt.WaterText = "Data Source=172.20.32.147;Initial Catalog=TestExerciser;";
                     this.stbServerDBPath.TabIndex = 20;
                     this.stbServerDBPath.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
                     this.stbServerDBPath.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-                    this.stbServerDBPath.WaterText = "\\\\172.20.32.147\\data\\TestExerciser.accdb";
+                    this.stbServerDBPath.WaterText = "Data Source=172.20.32.147;Initial Catalog=TestExerciser;";
                     this.stbServerDBPath.WordWrap = true;
                 }
                 else

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CCWin;
 using TestExerciser.Logic;
-using System.Data.OleDb;
+using System.Data.SqlClient;
 
 
 
@@ -29,23 +29,22 @@ namespace TestExerciser
 
         private void MainCaseReview_Load(object sender, EventArgs e)
         {
-            OleDbConnection mycon = null;
+            SqlConnection mycon = null;
             try
-                    {
-                        mycon = new OleDbConnection(ManageDB.strcon);
-                        mycon.Open();
-                        DataColumn myDataColumn = this.dataSetTeamMembers.用户信息.fullNameColumn;                      
-                        
-                    }
-                    catch (Exception exception)
-                    {
-                        MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    finally
-                    {
-                        mycon.Close();
-                    }         
-            
+            {
+                mycon = new SqlConnection(ManageDB.strcon);
+                mycon.Open();
+                //DataColumn myDataColumn = this.dataSetTeamMembers.用户管理.fullNameColumn;
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                mycon.Close();
+            }       
         }
 
         private void btnSelectFile_Click(object sender, EventArgs e)

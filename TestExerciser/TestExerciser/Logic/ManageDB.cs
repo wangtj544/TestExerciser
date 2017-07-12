@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using System.Data.OleDb;
+using System.Data.SqlClient;
 using System.Threading;
 using System.Windows.Forms;
 using TestExerciser.User;
@@ -19,8 +19,8 @@ namespace TestExerciser.Logic
         public static string userEmailAddress = null;
         public static string updateDBStatus =null;
        
-        OleDbConnection mycon = null;
-        OleDbDataReader myReader = null;
+        SqlConnection mycon = null;
+        SqlDataReader myReader = null;
       
         //配置数据库默认位置为本地
         public static string strcon =Properties.Settings.Default.ConnectionString;
@@ -31,12 +31,12 @@ namespace TestExerciser.Logic
         public bool checkUserNameDuplicate(string userName)
         {
             bool falg = false;
-            string selectFullName = "select ID from 用户信息 where userName=" + "'" + userName + "'";
+            string selectFullName = "select ID from 用户管理 where userName=" + "'" + userName + "'";
             try
             {
-                mycon = new OleDbConnection(strcon);
+                mycon = new SqlConnection(strcon);
                 mycon.Open();
-                OleDbCommand mycom = new OleDbCommand(selectFullName, mycon);
+                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
                 myReader = mycom.ExecuteReader();
                 if (myReader.HasRows == true)
                 {
@@ -59,12 +59,12 @@ namespace TestExerciser.Logic
         public bool queryUserFullName(string userName,string passwd)
         {
             bool falg = false;
-            string selectFullName = "select fullName from 用户信息 where userName=" + "'" + userName + "'" + "AND" + "[passWord]=" + "'" + passwd + "'";
+            string selectFullName = "select fullName from 用户管理 where userName=" + "'" + userName + "'" + "AND" + "[passWord]=" + "'" + passwd + "'";
             try
             {
-                mycon = new OleDbConnection(strcon);
+                mycon = new SqlConnection(strcon);
                 mycon.Open();
-                OleDbCommand mycom = new OleDbCommand(selectFullName, mycon);
+                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
                 myReader = mycom.ExecuteReader();
                 if (myReader.HasRows == true)
                 {
@@ -91,12 +91,12 @@ namespace TestExerciser.Logic
         public bool queryEmailAddress(string userName, string passwd)
         {
             bool falg = false;
-            string mySQL = "select email from 用户信息 where userName=" + "'" + userName + "'" + "AND" + "[passWord]=" + "'" + passwd + "'";
+            string mySQL = "select email from 用户管理 where userName=" + "'" + userName + "'" + "AND" + "[passWord]=" + "'" + passwd + "'";
             try
             {
-                mycon = new OleDbConnection(strcon);
+                mycon = new SqlConnection(strcon);
                 mycon.Open();
-                OleDbCommand mycom = new OleDbCommand(mySQL, mycon);
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
                 if (myReader.HasRows == true)
                 {
@@ -122,9 +122,9 @@ namespace TestExerciser.Logic
 
         public void UpdateDB(string sql)
         {
-            mycon = new OleDbConnection(strcon);
+            mycon = new SqlConnection(strcon);
             mycon.Open();
-            OleDbCommand mycomm = new OleDbCommand(sql, mycon);
+            SqlCommand mycomm = new SqlCommand(sql, mycon);
             mycomm.Connection = mycon;
             mycomm.CommandText = sql;
             if (mycomm.ExecuteNonQuery() > 0)
@@ -142,7 +142,7 @@ namespace TestExerciser.Logic
 
         public void UpdateDB(string column, Control txtChangeTo)
         {
-            UpdateDB("update 用户信息 set " + column + "='" + txtChangeTo.Text + "'" + " where userName='" + UserLogin.pubUserName + "'");
+            UpdateDB("update 用户管理 set " + column + "='" + txtChangeTo.Text + "'" + " where userName='" + UserLogin.pubUserName + "'");
         }
 
         public void UpdateDB(string column, string changeTo)
@@ -153,13 +153,13 @@ namespace TestExerciser.Logic
         public bool checkUserName(string userName)
         {
             bool falg = false;
-            string mySQL = "select ID from 用户信息 where userName=" + "'" + userName +"'";
+            string mySQL = "select ID from 用户管理 where userName=" + "'" + userName +"'";
    
             try
             {
-                mycon = new OleDbConnection(strcon);
+                mycon = new SqlConnection(strcon);
                 mycon.Open();
-                OleDbCommand mycom = new OleDbCommand(mySQL, mycon);
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
                 if (myReader.HasRows == true)
                 {
@@ -184,12 +184,12 @@ namespace TestExerciser.Logic
         public bool userMailToResetPassword(string userName, string userEmail)
         {
             bool falg = false;
-            string mySQL = "select ID from 用户信息 where userName=" + "'" + userName + "'" + "AND" + "[email]=" + "'" + userEmail + "'";
+            string mySQL = "select ID from 用户管理 where userName=" + "'" + userName + "'" + "AND" + "[email]=" + "'" + userEmail + "'";
             try
             {
-                mycon = new OleDbConnection(strcon);
+                mycon = new SqlConnection(strcon);
                 mycon.Open();
-                OleDbCommand mycom = new OleDbCommand(mySQL, mycon);
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
                 if (myReader.HasRows == true)
                 {
@@ -211,12 +211,12 @@ namespace TestExerciser.Logic
         public bool showTeamMembers()
         {
             bool falg = false;
-            string mySQL = "select fullName from 用户信息";
+            string mySQL = "select fullName from 用户管理";
             try
             {
-                mycon = new OleDbConnection(strcon);
+                mycon = new SqlConnection(strcon);
                 mycon.Open();
-                OleDbCommand mycom = new OleDbCommand(mySQL, mycon);
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
                 if (myReader.HasRows == true)
                 {

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CCWin;
 using TestExerciser.Logic;
 using TestExerciser.Tools;
+using System.Data.SqlClient;
 
 
 namespace TestExerciser.User
@@ -18,7 +19,8 @@ namespace TestExerciser.User
     {
         public static string pubUserName = null;
         public static string pubPasswd = null;
-        public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + @"\\172.20.32.147\data\TestExerciser.accdb" + ";Jet OLEDB:Database Password=admin@123";
+        //public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + @"\\172.20.32.147\data\TestExerciser.accdb" + ";Jet OLEDB:Database Password=admin@123";
+        public static string strcon = "Data Source=172.20.32.147;Initial Catalog=TestExerciser;User ID=sa;Password=admin@123";
 
         public UserLogin()
         {

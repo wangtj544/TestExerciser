@@ -13,5 +13,13 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\TestExerciser.accdb;Persist Security Info=True;Jet OLEDB:Database Password=admin@123</Value>
     </Setting>
+    <Setting Name="TestExerciserConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.20.32.147;Initial Catalog=TestExerciser;User ID=sa;Password=admin@123&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.20.32.147;Initial Catalog=TestExerciser;User ID=sa;Password=admin@123</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

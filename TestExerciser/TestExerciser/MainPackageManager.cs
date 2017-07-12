@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CCWin;
 using TestExerciser.Logic;
-using System.Data.OleDb;
+using System.Data.SqlClient;
 
 
 namespace TestExerciser
@@ -59,16 +59,16 @@ namespace TestExerciser
         {
             if (needUpdate)
             {
-                OleDbConnection mycon = null;
+                SqlConnection mycon = null;
                 if (MessageBox.Show("确定修改并将修改内容保存到数据库吗？", "消息提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     try
                     {
-                        mycon = new OleDbConnection(ManageDB.strcon);
+                        mycon = new SqlConnection(ManageDB.strcon);
                         mycon.Open();
                         DataTable myDataTable = this.dataSetPackageManager.方法封装;
-                        OleDbDataAdapter myDataAdapter = this.方法封装TableAdapter.Adapter;
-                        OleDbCommandBuilder myOleDbCommandBuilder = new OleDbCommandBuilder(myDataAdapter);
+                        SqlDataAdapter myDataAdapter = this.方法封装TableAdapter.Adapter;
+                        SqlCommandBuilder myOleDbCommandBuilder = new SqlCommandBuilder(myDataAdapter);
                         myDataAdapter.Update(myDataTable);
                     }
                     catch (Exception exception)

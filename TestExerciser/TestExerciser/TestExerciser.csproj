@@ -32,8 +32,8 @@
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>2</ApplicationRevision>
-    <ApplicationVersion>1.0.0.2</ApplicationVersion>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.3</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -160,10 +160,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSetTeamMembers.cs">
-      <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSetTeamMembers.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -656,9 +652,6 @@
     <Content Include="Resources\vb.png" />
     <Content Include="Resources\WrongAnswer.png" />
     <Content Include="Resources\Yellow.png" />
-    <Content Include="TestExerciser.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Tools\AutoIt.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
