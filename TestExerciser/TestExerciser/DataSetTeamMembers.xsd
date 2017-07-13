@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TestExerciserConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TestExerciserConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TestExerciser.Properties.Settings.GlobalReference.Default.TestExerciserConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TestExerciserConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TestExerciserConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TestExerciser.Properties.Settings.GlobalReference.Default.TestExerciserConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="用户管理TableAdapter" GeneratorDataComponentClassName="用户管理TableAdapter" Name="用户管理" UserDataComponentName="用户管理TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="TestExerciserConnectionString1 (Settings)" DbObjectName="TestExerciser.dbo.用户管理" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="TestExerciserConnectionString (Settings)" DbObjectName="TestExerciser.dbo.用户管理" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[用户管理] WHERE (([fullName] = @Original_fullName) AND ([userName] = @Original_userName))</CommandText>
@@ -53,7 +53,7 @@ SELECT fullName, userName FROM 用户管理 WHERE (userName = @userName)</Comman
   <xs:element name="DataSetTeamMembers" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetTeamMembers" msprop:Generator_UserDSName="DataSetTeamMembers">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="用户管理" msprop:Generator_TableClassName="用户管理DataTable" msprop:Generator_TableVarName="table用户管理" msprop:Generator_TablePropName="用户管理" msprop:Generator_RowDeletingName="用户管理RowDeleting" msprop:Generator_RowChangingName="用户管理RowChanging" msprop:Generator_RowEvHandlerName="用户管理RowChangeEventHandler" msprop:Generator_RowDeletedName="用户管理RowDeleted" msprop:Generator_UserTableName="用户管理" msprop:Generator_RowChangedName="用户管理RowChanged" msprop:Generator_RowEvArgName="用户管理RowChangeEvent" msprop:Generator_RowClassName="用户管理Row">
+        <xs:element name="用户管理" msprop:Generator_TableClassName="用户管理DataTable" msprop:Generator_TableVarName="table用户管理" msprop:Generator_RowChangedName="用户管理RowChanged" msprop:Generator_TablePropName="用户管理" msprop:Generator_RowDeletingName="用户管理RowDeleting" msprop:Generator_RowChangingName="用户管理RowChanging" msprop:Generator_RowEvHandlerName="用户管理RowChangeEventHandler" msprop:Generator_RowDeletedName="用户管理RowDeleted" msprop:Generator_RowClassName="用户管理Row" msprop:Generator_UserTableName="用户管理" msprop:Generator_RowEvArgName="用户管理RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="fullName" msprop:Generator_ColumnVarNameInTable="columnfullName" msprop:Generator_ColumnPropNameInRow="fullName" msprop:Generator_ColumnPropNameInTable="fullNameColumn" msprop:Generator_UserColumnName="fullName">

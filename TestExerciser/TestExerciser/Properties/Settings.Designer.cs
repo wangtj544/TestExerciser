@@ -38,22 +38,11 @@ namespace TestExerciser.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\TestExerciser.accdb" +
-            ";Persist Security Info=True;Jet OLEDB:Database Password=admin@123")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=172.20.32.147;Initial Catalog=TestExerciser;User ID=sa;Password=admin" +
+            "@123")]
         public string TestExerciserConnectionString {
             get {
                 return ((string)(this["TestExerciserConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=172.20.32.147;Initial Catalog=TestExerciser;User ID=sa;Password=admin" +
-            "@123")]
-        public string TestExerciserConnectionString1 {
-            get {
-                return ((string)(this["TestExerciserConnectionString1"]));
             }
         }
     }

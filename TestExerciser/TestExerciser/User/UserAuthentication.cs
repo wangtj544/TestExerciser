@@ -57,7 +57,7 @@ namespace TestExerciser.User
         private void addDataToDB()
         {
             ManageDB myManageDB = new ManageDB();
-            myManageDB.UpdateDB("insert into 用户信息(userName,[passWord],FullName,email) values ('" + UserRegister.userName + "','" + UserRegister.passwd + "','" + UserRegister.fullName + "','" + UserRegister.emailAddress + "')");
+            myManageDB.UpdateDB("insert into 用户管理(userName,[passWord],FullName,email,administrator) values ('" + UserRegister.userName + "','" + UserRegister.passwd + "','" + UserRegister.fullName + "','" + UserRegister.emailAddress + "','False')");
         }
 
         private void UserAuthentication_KeyDown(object sender, KeyEventArgs e)

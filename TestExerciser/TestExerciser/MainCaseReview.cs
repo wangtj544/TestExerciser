@@ -29,13 +29,16 @@ namespace TestExerciser
 
         private void MainCaseReview_Load(object sender, EventArgs e)
         {
+            string SQL = "";
             SqlConnection mycon = null;
+            SqlCommand mycom = null;
+            SqlDataReader mydr = null;
             try
             {
+                mycom = new SqlCommand(SQL, mycon);
                 mycon = new SqlConnection(ManageDB.strcon);
                 mycon.Open();
-                //DataColumn myDataColumn = this.dataSetTeamMembers.用户管理.fullNameColumn;
-
+                mydr = mycom.ExecuteReader();
             }
             catch (Exception exception)
             {
