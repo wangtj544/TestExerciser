@@ -12,15 +12,12 @@ using TestExerciser.Logic;
 using System.Data.SqlClient;
 
 
-
 namespace TestExerciser
 {
     public partial class MainCaseReview : Skin_Mac
     {
         string [] caseToReview = null;
-        DataSetCaseReview dataSetCaseReview = new DataSetCaseReview();
-        DataSetTeamMembers dataSetTeamMembers = new DataSetTeamMembers();
-        
+        ManageDB myManageDB = new Logic.ManageDB();
 
         public MainCaseReview()
         {
@@ -29,25 +26,9 @@ namespace TestExerciser
 
         private void MainCaseReview_Load(object sender, EventArgs e)
         {
-            string SQL = "";
-            SqlConnection mycon = null;
-            SqlCommand mycom = null;
-            SqlDataReader mydr = null;
-            try
-            {
-                mycom = new SqlCommand(SQL, mycon);
-                mycon = new SqlConnection(ManageDB.strcon);
-                mycon.Open();
-                mydr = mycom.ExecuteReader();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                mycon.Close();
-            }       
+            myManageDB.selectUserName();
+            this.cbIfAuto.DataSource = ManageDB.fullNameList;
+            this.cbIfAuto.Text = null;
         }
 
         private void btnSelectFile_Click(object sender, EventArgs e)

@@ -22,11 +22,10 @@ namespace TestExerciser.Logic
         SqlConnection mycon = null;
         SqlDataReader myReader = null;
       
-        //配置数据库默认位置为本地
-        public static string strcon =Properties.Settings.Default.ConnectionString;
+        public static string strcon = Properties.Settings.Default.ConnectionString;
+        string[] fullName; 
+        public static List<string> fullNameList = new List<string>();
 
-
-        //public static string strcon = "";
 
         public bool checkUserNameDuplicate(string userName)
         {
@@ -208,6 +207,7 @@ namespace TestExerciser.Logic
             }
             return falg;
         }
+        
         public bool showTeamMembers()
         {
             bool falg = false;
@@ -230,6 +230,34 @@ namespace TestExerciser.Logic
             finally
             {
                 myReader.Close();
+                mycon.Close();
+            }
+            return falg;
+        }
+
+        public bool selectUserName()
+        {
+            bool falg = false;
+            string mySQL = "select fullName from 用户管理";
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlDataAdapter myda = new SqlDataAdapter(mySQL, mycon);
+                DataTable mydt = new DataTable();
+                myda.Fill(mydt);
+                foreach (DataRow row in mydt.Rows)
+                {
+                    fullNameList.Add(row["fullName"].ToString());
+                    fullName = fullNameList.ToArray();
+                }            
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
                 mycon.Close();
             }
             return falg;
