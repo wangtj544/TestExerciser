@@ -384,7 +384,7 @@
             this.新建NToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.新建NToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("新建NToolStripMenuItem.Image")));
             this.新建NToolStripMenuItem.Name = "新建NToolStripMenuItem";
-            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.新建NToolStripMenuItem.Text = "新建(&N)";
             this.新建NToolStripMenuItem.Click += new System.EventHandler(this.新建NToolStripMenuItem_Click);
             // 
@@ -1937,7 +1937,6 @@
             this.tree_Solution.TabIndex = 0;
             this.tree_Solution.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.tree_Solution_AfterLabelEdit);
             this.tree_Solution.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tree_Solution_AfterSelect);
-            this.tree_Solution.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tree_Solution_NodeMouseClick);
             this.tree_Solution.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tree_Solution_NodeMouseDoubleClick);
             // 
             // treeSolutionImageList
@@ -2370,7 +2369,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.23391F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 596F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
             this.tableLayoutPanel5.Controls.Add(this.stsOutPut, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.labtimeNow, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.spbStatus, 1, 0);
@@ -2530,7 +2529,7 @@
             this.labtimeNow.BackColor = System.Drawing.Color.Transparent;
             this.labtimeNow.BorderColor = System.Drawing.Color.White;
             this.labtimeNow.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labtimeNow.Location = new System.Drawing.Point(1640, 4);
+            this.labtimeNow.Location = new System.Drawing.Point(1639, 4);
             this.labtimeNow.Name = "labtimeNow";
             this.labtimeNow.Size = new System.Drawing.Size(0, 17);
             this.labtimeNow.TabIndex = 5;
@@ -2546,7 +2545,7 @@
             this.spbStatus.Location = new System.Drawing.Point(503, 3);
             this.spbStatus.Name = "spbStatus";
             this.spbStatus.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.spbStatus.Size = new System.Drawing.Size(479, 20);
+            this.spbStatus.Size = new System.Drawing.Size(478, 20);
             this.spbStatus.TabIndex = 4;
             this.spbStatus.TrackFore = System.Drawing.Color.Gold;
             this.spbStatus.Visible = false;
@@ -2590,7 +2589,7 @@
             this.tStripReport.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbLogView});
-            this.tStripReport.Location = new System.Drawing.Point(1643, 0);
+            this.tStripReport.Location = new System.Drawing.Point(1642, 0);
             this.tStripReport.Name = "tStripReport";
             this.tStripReport.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Size = new System.Drawing.Size(37, 25);
@@ -2618,7 +2617,7 @@
             // dtpTimeNow
             // 
             this.dtpTimeNow.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dtpTimeNow.Location = new System.Drawing.Point(1462, 3);
+            this.dtpTimeNow.Location = new System.Drawing.Point(1461, 3);
             this.dtpTimeNow.Name = "dtpTimeNow";
             this.dtpTimeNow.Size = new System.Drawing.Size(116, 21);
             this.dtpTimeNow.TabIndex = 6;
@@ -3146,7 +3145,7 @@
             this.KeyPreview = true;
             this.MainMenuStrip = this.menu_ProjectManage;
             this.Name = "MainForm";
-            this.Text = "自动化管理工具";
+            this.Text = "自动化管理平台";
             this.TitleCenter = false;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);

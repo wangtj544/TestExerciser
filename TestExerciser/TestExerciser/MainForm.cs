@@ -87,7 +87,7 @@ namespace TestExerciser
                 {
                     DialogResult deleteFolder = MessageBox.Show("确定要移除工程吗？", "消息提示：", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     tree_Solution.SelectedNode.Remove();
-                    setMenuItemVisible();
+                    InitializeControl();
                 }
                 else
                 {
@@ -720,57 +720,6 @@ namespace TestExerciser
         }
 
         /// <summary>
-        /// 选中树节点事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void tree_Solution_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            if ((tree_Solution.SelectedNode == null))
-            {
-                删除ToolStripMenuItem.Visible = false;
-                标识ToolStripMenuItem.Visible = false;
-                打开文件路径ToolStripMenuItem.Visible = false;
-                执行项目ToolStripMenuItem.Visible = false;
-                执行工程ToolStripMenuItem.Visible = false;
-                执行测试套ToolStripMenuItem.Visible = false;
-                重命名ToolStripMenuItem.Visible = false;
-                刷新ToolStripMenuItem.Visible = false;
-                新建工程PToolStripMenuItem.Visible = false;
-                新建文件ToolStripMenuItem.Visible = false;
-                闭合CToolStripMenuItem.Visible = false;
-                展开EToolStripMenuItem.Visible = false;
-                this.tsbStart.Visible = false;
-            }
-            else
-            {
-                setSelectedNodeBackColor();  
-                //this.tree_Solution.SelectedNode.BackColor = Color.White;
-                删除ToolStripMenuItem.Visible = true;
-                标识ToolStripMenuItem.Visible = true;
-                打开文件路径ToolStripMenuItem.Visible = true;
-                if (Directory.Exists(selectTreeNodeFullPath()))
-                {
-                    执行项目ToolStripMenuItem.Visible = true;
-                    执行工程ToolStripMenuItem.Visible = true;
-                    闭合CToolStripMenuItem.Visible = true;
-                    展开EToolStripMenuItem.Visible = true;
-                    刷新ToolStripMenuItem.Visible = true;
-                    新建文件ToolStripMenuItem.Visible = true;
-                }
-                if (File.Exists(selectTreeNodeFullPath()))
-                {
-                    执行测试套ToolStripMenuItem.Visible = true;
-                }                
-                重命名ToolStripMenuItem.Visible = true;                
-                新建工程PToolStripMenuItem.Visible = true;                
-                
-                this.tsbStart.Visible = true;
-
-            }
-        }
-
-        /// <summary>
         /// 写入待执行文件__runner.py
         /// </summary>
         /// <param name="folder"></param>
@@ -808,7 +757,7 @@ namespace TestExerciser
         private void tree_Solution_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {                          
             clickTreeNodeToLoadFile();
-            rightClickFuncVisable();
+            InitializeControl();
         }
 
 
@@ -819,7 +768,7 @@ namespace TestExerciser
         /// <param name="e"></param>
         private void tree_Solution_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            rightClickFuncVisable();
+            InitializeControl();
         }
 
         /// <summary>
@@ -1999,75 +1948,104 @@ namespace TestExerciser
             Close();
         }
 
-        private void setMenuItemVisible()
+        /// <summary>
+        /// 设置控件为不可见状态
+        /// </summary>
+        private void InitMenuItemToFlase()
         {
-            if (tree_Solution.SelectedNode != null)
+            this.删除ToolStripMenuItem.Visible = false;
+            this.刷新ToolStripMenuItem.Visible = false;
+            this.闭合CToolStripMenuItem.Visible = false;
+            this.展开EToolStripMenuItem.Visible = false;
+            this.标识ToolStripMenuItem.Visible = false;
+            this.重命名ToolStripMenuItem.Visible = false;
+            this.执行测试套ToolStripMenuItem.Visible = false;
+            this.执行项目ToolStripMenuItem.Visible = false;
+            this.执行工程ToolStripMenuItem.Visible = false;
+            this.自动标记IToolStripOutPut.Visible = false;
+            this.自动滚屏RToolStripOutPut.Visible = false;
+            this.打开文件路径ToolStripMenuItem.Visible = false;
+        }
+
+
+        /// <summary>
+        /// 初始化右键菜单栏
+        /// </summary>
+        private void InitializeControl()
+        {
+            this.pythonToolStripMenuItem.Checked = true;
+            if (tree_Solution.SelectedNode == null)
             {
+                this.KeyPreview = false;
+                InitMenuItemToFlase();
+                selectProjectFolder.SelectedPath = null;
+                this.tsbStart.Visible = false;
+            }
+            else if (tree_Solution.SelectedNode.Text == null) 
+            {
+                InitMenuItemToFlase();
+            }
+            else
+            {
+                setSelectedNodeBackColor();
                 if (tree_Solution.SelectedNode.FullPath.Contains("\\"))
                 {
-                    try
-                    {
-                        this.删除ToolStripMenuItem.Visible = true;
-                        this.刷新ToolStripMenuItem.Visible = true;
+                    this.KeyPreview = true;
+                    this.删除ToolStripMenuItem.Visible = true;
+                    this.标识ToolStripMenuItem.Visible = true;
+                    this.打开文件路径ToolStripMenuItem.Visible = true;
+                    this.刷新ToolStripMenuItem.Visible = true;
+                    this.重命名ToolStripMenuItem.Visible = true;
+                    this.tsbStart.Visible = true;
+
+                    if (Directory.Exists(selectTreeNodeFullPath()))
+                    {                        
+                        this.执行工程ToolStripMenuItem.Visible = true;
                         this.闭合CToolStripMenuItem.Visible = true;
                         this.展开EToolStripMenuItem.Visible = true;
-                        this.标识ToolStripMenuItem.Visible = true;
-                        this.重命名ToolStripMenuItem.Visible = true;
-                        this.执行测试套ToolStripMenuItem.Visible = true;
-                        this.执行工程ToolStripMenuItem.Visible = true;
-                        this.自动标记IToolStripOutPut.Visible = true;
-                        this.自动滚屏RToolStripOutPut.Visible = true;
-                        this.打开文件路径ToolStripMenuItem.Visible = true;
+                        this.刷新ToolStripMenuItem.Visible = true;
+                        this.新建工程PToolStripMenuItem.Visible = true;
+                        this.新建文件ToolStripMenuItem.Visible = true;
                     }
-                    catch (Exception exception)
+                    else
                     {
-                        MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        this.执行工程ToolStripMenuItem.Visible = false;
+                        this.闭合CToolStripMenuItem.Visible = false;
+                        this.展开EToolStripMenuItem.Visible = false;
+                        this.刷新ToolStripMenuItem.Visible = false;
+                        this.新建工程PToolStripMenuItem.Visible = false;
+                        this.新建文件ToolStripMenuItem.Visible = false;
+                    }
+                    if (File.Exists(selectTreeNodeFullPath()))
+                    {
+                        this.执行测试套ToolStripMenuItem.Visible = true;
+                    }
+                    else
+                    {
+                        this.执行测试套ToolStripMenuItem.Visible = false;
                     }
                 }
                 else
                 {
-                    try
-                    {
-                        this.删除ToolStripMenuItem.Visible = false;
-                        this.刷新ToolStripMenuItem.Visible = false;
-                        this.闭合CToolStripMenuItem.Visible = false;
-                        this.展开EToolStripMenuItem.Visible = false;
-                        this.标识ToolStripMenuItem.Visible = false;
-                        this.重命名ToolStripMenuItem.Visible = false;
-                        this.执行测试套ToolStripMenuItem.Visible = false;
-                        this.执行工程ToolStripMenuItem.Visible = false;
-                        this.自动标记IToolStripOutPut.Visible = false;
-                        this.自动滚屏RToolStripOutPut.Visible = false;
-                        this.打开文件路径ToolStripMenuItem.Visible = false;
-                    }
-                    catch (Exception exception)
-                    {
-                        MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+                    this.执行项目ToolStripMenuItem.Visible = true;
+                    this.闭合CToolStripMenuItem.Visible = true;
+                    this.展开EToolStripMenuItem.Visible = true;
+                    this.刷新ToolStripMenuItem.Visible = true;
+                    this.新建工程PToolStripMenuItem.Visible = true;
+                    this.新建文件ToolStripMenuItem.Visible = true;
+                }           
             }
-            else
-            {
-                try
-                {
-                    this.删除ToolStripMenuItem.Visible = false;
-                    this.刷新ToolStripMenuItem.Visible = false;
-                    this.闭合CToolStripMenuItem.Visible = false;
-                    this.展开EToolStripMenuItem.Visible = false;
-                    this.标识ToolStripMenuItem.Visible = false;
-                    this.重命名ToolStripMenuItem.Visible = false;
-                    this.执行测试套ToolStripMenuItem.Visible = false;
-                    this.执行工程ToolStripMenuItem.Visible = false;
-                    this.自动标记IToolStripOutPut.Visible = false;
-                    this.自动滚屏RToolStripOutPut.Visible = false;
-                    this.打开文件路径ToolStripMenuItem.Visible = false;
-                }
-                catch (Exception exception)
-                {
-                    MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            
+        }
+
+
+        /// <summary>
+        /// 选中树节点事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tree_Solution_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            InitializeControl();
         }
 
         private static string tryGetSoftwarePath(string softName)
@@ -2257,22 +2235,6 @@ namespace TestExerciser
                     selectedNode[selectedNode.Length - 2].BackColor = Color.White;
                 }
             }        
-        }
-
-        private void rightClickFuncVisable()
-        {
-            if ((tree_Solution.SelectedNode == null) || (tree_Solution.SelectedNode.Text == null) || File.Exists(selectTreeNodeFullPath()))
-            {
-                this.刷新ToolStripMenuItem.Visible = false;
-                this.闭合CToolStripMenuItem.Visible = false;
-                this.展开EToolStripMenuItem.Visible = false;
-            }
-            else
-            {
-                this.刷新ToolStripMenuItem.Visible = true;
-                this.闭合CToolStripMenuItem.Visible = true;
-                this.展开EToolStripMenuItem.Visible = true;
-            }
         }
 
         private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2488,48 +2450,18 @@ namespace TestExerciser
             this.luaToolStripMenuItem.Checked = true;
         }
 
+        /// <summary>
+        /// 远程连接
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void 远程连接ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process runMSTSC = new Process();
             runMSTSC.StartInfo.FileName = "mstsc";
             runMSTSC.Start();
             runMSTSC.Close();
-        }
-        private void InitializeControl()
-        {
-            this.pythonToolStripMenuItem.Checked = true;
-            if ((tree_Solution.SelectedNode == null))
-            {
-                this.KeyPreview = false;
-                删除ToolStripMenuItem.Visible = false;
-                标识ToolStripMenuItem.Visible = false;
-                打开文件路径ToolStripMenuItem.Visible = false;
-                执行工程ToolStripMenuItem.Visible = false;
-                执行测试套ToolStripMenuItem.Visible = false;
-                刷新ToolStripMenuItem.Visible = false;
-                重命名ToolStripMenuItem.Visible = false;
-                闭合CToolStripMenuItem.Visible = false;
-                展开EToolStripMenuItem.Visible = false;
-                selectProjectFolder.SelectedPath = null;
-                this.tsbStart.Visible = false;
-            }
-            else
-            {
-                this.KeyPreview = true;
-                删除ToolStripMenuItem.Visible = true;
-                标识ToolStripMenuItem.Visible = true;
-                打开文件路径ToolStripMenuItem.Visible = true;
-                执行工程ToolStripMenuItem.Visible = true;
-                执行测试套ToolStripMenuItem.Visible = true;
-                刷新ToolStripMenuItem.Visible = true;
-                重命名ToolStripMenuItem.Visible = true;
-                新建工程PToolStripMenuItem.Visible = true;
-                新建文件ToolStripMenuItem.Visible = true;
-                闭合CToolStripMenuItem.Visible = true;
-                展开EToolStripMenuItem.Visible = true;
-                this.tsbStart.Visible = true;
-            }       
-        }
+        }       
 
         private void pUTTYPToolStripMenuItem_Click(object sender, EventArgs e)
         {
