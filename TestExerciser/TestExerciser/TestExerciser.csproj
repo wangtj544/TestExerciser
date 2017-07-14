@@ -110,6 +110,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\lenovo\Desktop\CSkin+16.1.14.2\CSkin 16.1.14.2\CSkin 4.0\CSkin.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="SharpSvn">
@@ -122,6 +127,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -310,6 +316,12 @@
     <Compile Include="Tools\ToolManager.Designer.cs">
       <DependentUpon>ToolManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\ToolNewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolNewProject.Designer.cs">
+      <DependentUpon>ToolNewProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\UserAuthentication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,19 +386,19 @@
     <Compile Include="User\UserResetPwd.Designer.cs">
       <DependentUpon>UserResetPwd.cs</DependentUpon>
     </Compile>
-    <Content Include="Tools\spyxx.exe">
+    <Content Include="Tools\Sources\spyxx.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Tools\spyxxhk.dll">
+    <Content Include="Tools\Sources\spyxxhk.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Tools\spyxxhk_amd64.dll">
+    <Content Include="Tools\Sources\spyxxhk_amd64.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Tools\spyxx_amd64.exe">
+    <Content Include="Tools\Sources\spyxx_amd64.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Tools\ToolUISpy.exe">
+    <Content Include="Tools\Sources\ToolUISpy.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="MainBugManager.resx">
@@ -558,13 +570,13 @@
     </Compile>
     <None Include="SharpPlink-Win32.svnExe" />
     <None Include="TestExerciser_TemporaryKey.pfx" />
-    <Content Include="Tools\AutoIt.chm">
+    <Content Include="Tools\Sources\AutoIt.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Tools\spyxx.chm">
+    <None Include="Tools\Sources\spyxx.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Tools\spyxx_amd64.chm">
+    <None Include="Tools\Sources\spyxx_amd64.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
@@ -652,16 +664,16 @@
     <Content Include="Resources\vb.png" />
     <Content Include="Resources\WrongAnswer.png" />
     <Content Include="Resources\Yellow.png" />
-    <Content Include="Tools\AutoIt.exe">
+    <Content Include="Tools\Sources\AutoIt.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Tools\inspect_x32.exe">
+    <Content Include="Tools\Sources\inspect_x32.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Tools\inspect_x64.exe">
+    <Content Include="Tools\Sources\inspect_x64.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Tools\PUTTY.exe">
+    <Content Include="Tools\Sources\PUTTY.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\unsure.gif" />

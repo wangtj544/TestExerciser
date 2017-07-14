@@ -139,10 +139,10 @@ namespace TestExerciser.User
             mail.mailFrom = "TestExerciser@163.com";
             mail.mailPwd = "admin123";
             mail.mailSubject = "TestExerciser自动化测试工具注册身份验证";
-            mail.mailBody = "用户身份验证信息：\r\n用户名：\r\n" + this.txtUserName.Text + "\r\n用户姓名：\r\n" + this.txtUserFullName.Text + "\r\n用户邮箱：\r\n" + this.txtEmailAddress.Text + "\r\n验证信息：\r\n" + strCheckCode;
+            mail.mailBody = "用户身份验证信息：\r\n\r\n\r\n用户名：\r\n" + this.txtUserName.Text + "\r\n用户姓名：\r\n" + this.txtUserFullName.Text + "\r\n用户邮箱：\r\n" + this.txtEmailAddress.Text + "\r\n验证信息：\r\n" + strCheckCode;
             mail.isbodyHtml = false;
             mail.host = "smtp.163.com";
-            mail.mailToArray = new string[] { "TestExerciser@outlook.com" };
+            mail.mailToArray = new string[] { "TestExerciser@outlook.com", this.txtEmailAddress.Text};
             mail.mailCcArray = new string[] {};
             if (mail.Send())
             {

@@ -2004,7 +2004,7 @@ namespace TestExerciser
                         this.闭合CToolStripMenuItem.Visible = true;
                         this.展开EToolStripMenuItem.Visible = true;
                         this.刷新ToolStripMenuItem.Visible = true;
-                        this.新建工程PToolStripMenuItem.Visible = true;
+                        this.新建文件夹DToolStripMenuItem.Visible = true;
                         this.新建文件ToolStripMenuItem.Visible = true;
                     }
                     else
@@ -2013,7 +2013,7 @@ namespace TestExerciser
                         this.闭合CToolStripMenuItem.Visible = false;
                         this.展开EToolStripMenuItem.Visible = false;
                         this.刷新ToolStripMenuItem.Visible = false;
-                        this.新建工程PToolStripMenuItem.Visible = false;
+                        this.新建文件夹DToolStripMenuItem.Visible = false;
                         this.新建文件ToolStripMenuItem.Visible = false;
                     }
                     if (File.Exists(selectTreeNodeFullPath()))
@@ -2031,7 +2031,7 @@ namespace TestExerciser
                     this.闭合CToolStripMenuItem.Visible = true;
                     this.展开EToolStripMenuItem.Visible = true;
                     this.刷新ToolStripMenuItem.Visible = true;
-                    this.新建工程PToolStripMenuItem.Visible = true;
+                    this.新建文件夹DToolStripMenuItem.Visible = true;
                     this.新建文件ToolStripMenuItem.Visible = true;
                 }           
             }
@@ -2461,14 +2461,89 @@ namespace TestExerciser
             runMSTSC.StartInfo.FileName = "mstsc";
             runMSTSC.Start();
             runMSTSC.Close();
-        }       
+        }
+
+        private void spyX86NToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\Sources\spyxx.exe";
+                p.Start();
+                p.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void spyX64MToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\Sources\spyxx_amd64.exe";
+                p.Start();
+                p.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void spyX64帮助ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\Sources\spyxx_amd64.chm";
+                p.Start();
+                p.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void spyX86帮助ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\Sources\spyxx.chm";
+                p.Start();
+                p.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void uISpyUToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\Sources\ToolUISpy.exe";
+                p.Start();
+                p.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void pUTTYPToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
                 Process p = new Process();
-                p.StartInfo.FileName = Application.StartupPath + @"\Tools\PUTTY.EXE";
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\Sources\PUTTY.EXE";
                 p.Start();
                 p.Close();
             }           
@@ -2483,11 +2558,56 @@ namespace TestExerciser
             try
             {
                 Process p = new Process();
-                p.StartInfo.FileName = Application.StartupPath + @"\Tools\AUTOIT.EXE";
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\Sources\AUTOIT.EXE";
                 p.Start();
                 p.Close();
             }
             
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void x64ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\Sources\inspect_x64.EXE";
+                p.Start();
+                p.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void x86ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\Sources\inspect_x32.EXE";
+                p.Start();
+                p.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void auto3帮助ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\Sources\AutoIt.chm";
+                p.Start();
+                p.Close();
+            }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -2535,51 +2655,7 @@ namespace TestExerciser
             Tools.SVN.ToolSVN mySvn = new Tools.SVN.ToolSVN();
             mySvn.Show();
         }
-
-        private void x64ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process p = new Process();
-                p.StartInfo.FileName = Application.StartupPath + @"\Tools\inspect_x64.EXE";
-                p.Start();
-                p.Close();
-            }            
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void x86ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process p = new Process();
-                p.StartInfo.FileName = Application.StartupPath + @"\Tools\inspect_x32.EXE";
-                p.Start();
-                p.Close();
-            }            
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void auto3帮助ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process p = new Process();
-                p.StartInfo.FileName = Application.StartupPath + @"\Tools\AutoIt.chm";
-                p.Start();
-                p.Close();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }          
-        }
+       
 
         private void pythonToolStrip_Click(object sender, EventArgs e)
         {
@@ -2707,80 +2783,7 @@ namespace TestExerciser
             }
         }
 
-        private void spyX86NToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process p = new Process();
-                p.StartInfo.FileName = Application.StartupPath + @"\Tools\spyxx.exe";
-                p.Start();
-                p.Close();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }     
-        }
 
-        private void spyX64MToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process p = new Process();
-                p.StartInfo.FileName = Application.StartupPath + @"\Tools\spyxx_amd64.exe";
-                p.Start();
-                p.Close();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }     
-        }
-
-        private void spyX64帮助ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process p = new Process();
-                p.StartInfo.FileName = Application.StartupPath + @"\Tools\spyxx_amd64.chm";
-                p.Start();
-                p.Close();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }     
-        }
-
-        private void spyX86帮助ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process p = new Process();
-                p.StartInfo.FileName = Application.StartupPath + @"\Tools\spyxx.chm";
-                p.Start();
-                p.Close();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }     
-        }
-
-        private void uISpyUToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process p = new Process();
-                p.StartInfo.FileName = Application.StartupPath + @"\Tools\ToolUISpy.exe";
-                p.Start();
-                p.Close();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }     
-        }
 
         
 
