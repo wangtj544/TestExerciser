@@ -209,7 +209,14 @@ namespace TestExerciser
                 }
             }
             //}
-        }       
+        }
+
+        private void 新建项目PToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolNewSolution myToolNewSolution = new ToolNewSolution();
+            DialogResult mydrNewSolution = myToolNewSolution.ShowDialog();
+
+        }
 
         private void 新建文件夹PToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -229,6 +236,32 @@ namespace TestExerciser
 
         }
 
+        private void 新建文件FToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (File.Exists(selectTreeNodeFullPath()) == false)
+                {
+                    saveFileDialog.InitialDirectory = selectTreeNodeFullPath();
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        FileStream fs = File.Create(saveFileDialog.FileName);
+                        fs.Dispose();
+                        refreshTreeViewData();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("请选择相应的文件夹！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
         private void 打开支持库DToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (getPythonPath() == null)
@@ -242,31 +275,7 @@ namespace TestExerciser
             }           
         }
 
-        private void 新建文件FToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (File.Exists(selectTreeNodeFullPath()) == false)
-                {
-                    saveFileDialog.InitialDirectory = selectTreeNodeFullPath();
-                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        FileStream fs = File.Create(saveFileDialog.FileName);
-                        fs.Dispose(); 
-                        refreshTreeViewData();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("请选择相应的文件夹！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch(Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-           
-        }
+        
 
         private void 重命名ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -2004,7 +2013,7 @@ namespace TestExerciser
                         this.闭合CToolStripMenuItem.Visible = true;
                         this.展开EToolStripMenuItem.Visible = true;
                         this.刷新ToolStripMenuItem.Visible = true;
-                        this.新建文件夹DToolStripMenuItem.Visible = true;
+                        this.新建工程PToolStripMenuItem.Visible = true;
                         this.新建文件ToolStripMenuItem.Visible = true;
                     }
                     else
@@ -2013,7 +2022,7 @@ namespace TestExerciser
                         this.闭合CToolStripMenuItem.Visible = false;
                         this.展开EToolStripMenuItem.Visible = false;
                         this.刷新ToolStripMenuItem.Visible = false;
-                        this.新建文件夹DToolStripMenuItem.Visible = false;
+                        this.新建工程PToolStripMenuItem.Visible = false;
                         this.新建文件ToolStripMenuItem.Visible = false;
                     }
                     if (File.Exists(selectTreeNodeFullPath()))
@@ -2031,7 +2040,7 @@ namespace TestExerciser
                     this.闭合CToolStripMenuItem.Visible = true;
                     this.展开EToolStripMenuItem.Visible = true;
                     this.刷新ToolStripMenuItem.Visible = true;
-                    this.新建文件夹DToolStripMenuItem.Visible = true;
+                    this.新建工程PToolStripMenuItem.Visible = true;
                     this.新建文件ToolStripMenuItem.Visible = true;
                 }           
             }
@@ -2945,6 +2954,8 @@ namespace TestExerciser
                 this.spbStatus.Visible = false;
             }
         }
+
+        
 
            
        

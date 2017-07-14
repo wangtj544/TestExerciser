@@ -58,7 +58,7 @@ namespace TestExerciser.User
             this.txtStatus.Text = "注册信息：注册中...";
             Application.DoEvents();         
 
-            if (this.txtUserName.Text != "" && this.txtPasswd.Text != ""&& this.txtConfirmPassWD.Text!=""&txtEmailAddress.Text!=""&&this.txtUserFullName.Text!="")
+            if (this.txtUserName.Text != "" && this.txtPasswd.Text != "" && this.txtConfirmPassWD.Text!="" & txtEmailAddress.Text!="" && this.txtUserFullName.Text!="")
             {
                 if (myLoginInfo.isUserNameFair(this.txtUserName.Text))
                 {

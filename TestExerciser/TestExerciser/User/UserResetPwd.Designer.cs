@@ -34,9 +34,9 @@
             this.btnCancel = new CCWin.SkinControl.SkinButton();
             this.btnOK = new CCWin.SkinControl.SkinButton();
             this.txtUserEmail = new CCWin.SkinControl.SkinTextBox();
-            this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
+            this.labUserMail = new CCWin.SkinControl.SkinLabel();
             this.txtUserName = new CCWin.SkinControl.SkinTextBox();
-            this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
+            this.labUserName = new CCWin.SkinControl.SkinLabel();
             this.SuspendLayout();
             // 
             // txtStatus
@@ -120,17 +120,17 @@
             this.txtUserEmail.WaterText = "如@outlook.com";
             this.txtUserEmail.WordWrap = true;
             // 
-            // skinLabel1
+            // labUserMail
             // 
-            this.skinLabel1.AutoSize = true;
-            this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel1.BorderColor = System.Drawing.Color.White;
-            this.skinLabel1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel1.Location = new System.Drawing.Point(37, 115);
-            this.skinLabel1.Name = "skinLabel1";
-            this.skinLabel1.Size = new System.Drawing.Size(68, 17);
-            this.skinLabel1.TabIndex = 6;
-            this.skinLabel1.Text = "用户邮箱：";
+            this.labUserMail.AutoSize = true;
+            this.labUserMail.BackColor = System.Drawing.Color.Transparent;
+            this.labUserMail.BorderColor = System.Drawing.Color.White;
+            this.labUserMail.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labUserMail.Location = new System.Drawing.Point(37, 115);
+            this.labUserMail.Name = "labUserMail";
+            this.labUserMail.Size = new System.Drawing.Size(68, 17);
+            this.labUserMail.TabIndex = 6;
+            this.labUserMail.Text = "用户邮箱：";
             // 
             // txtUserName
             // 
@@ -173,17 +173,17 @@
             this.txtUserName.WaterText = "";
             this.txtUserName.WordWrap = true;
             // 
-            // skinLabel2
+            // labUserName
             // 
-            this.skinLabel2.AutoSize = true;
-            this.skinLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel2.BorderColor = System.Drawing.Color.White;
-            this.skinLabel2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel2.Location = new System.Drawing.Point(49, 64);
-            this.skinLabel2.Name = "skinLabel2";
-            this.skinLabel2.Size = new System.Drawing.Size(56, 17);
-            this.skinLabel2.TabIndex = 5;
-            this.skinLabel2.Text = "用户名：";
+            this.labUserName.AutoSize = true;
+            this.labUserName.BackColor = System.Drawing.Color.Transparent;
+            this.labUserName.BorderColor = System.Drawing.Color.White;
+            this.labUserName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labUserName.Location = new System.Drawing.Point(49, 64);
+            this.labUserName.Name = "labUserName";
+            this.labUserName.Size = new System.Drawing.Size(56, 17);
+            this.labUserName.TabIndex = 5;
+            this.labUserName.Text = "用户名：";
             // 
             // UserResetPwd
             // 
@@ -192,12 +192,12 @@
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
             this.ClientSize = new System.Drawing.Size(345, 249);
             this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.skinLabel2);
+            this.Controls.Add(this.labUserName);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtUserEmail);
-            this.Controls.Add(this.skinLabel1);
+            this.Controls.Add(this.labUserMail);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -216,8 +216,8 @@
         private CCWin.SkinControl.SkinButton btnCancel;
         private CCWin.SkinControl.SkinButton btnOK;
         private CCWin.SkinControl.SkinTextBox txtUserEmail;
-        private CCWin.SkinControl.SkinLabel skinLabel1;
+        private CCWin.SkinControl.SkinLabel labUserMail;
         private CCWin.SkinControl.SkinTextBox txtUserName;
-        private CCWin.SkinControl.SkinLabel skinLabel2;
+        private CCWin.SkinControl.SkinLabel labUserName;
     }
 }

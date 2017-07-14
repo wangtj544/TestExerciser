@@ -10,7 +10,11 @@ namespace TestExerciser.Logic
 {
     class LoginInfo
     {
-
+        /// <summary>
+        /// 判断是否是邮箱地址
+        /// </summary>
+        /// <param name="emailAddress"></param>
+        /// <returns></returns>
         public bool isMailAddress(string emailAddress)
         {
             bool foundMatch = false;
@@ -25,6 +29,11 @@ namespace TestExerciser.Logic
             return foundMatch;
         }
 
+        /// <summary>
+        /// 判断是6-20位密码
+        /// </summary>
+        /// <param name="txtPasswd"></param>
+        /// <returns></returns>
         public bool isPasswdSecurity(string txtPasswd)
         {
             bool foundMatch = false;
@@ -39,12 +48,17 @@ namespace TestExerciser.Logic
             return foundMatch;
         }
 
+        /// <summary>
+        /// 判断是否是2-10位中文
+        /// </summary>
+        /// <param name="txtFullName"></param>
+        /// <returns></returns>
         public bool isChineseChar(string txtFullName)
         {
             bool foundMatch = false;
             try
             {
-                foundMatch = Regex.IsMatch(txtFullName, @"^[\u4e00-\u9fa5]{1,10}", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+                foundMatch = Regex.IsMatch(txtFullName, @"^[\u4e00-\u9fa5]{2,10}", RegexOptions.IgnoreCase | RegexOptions.Singleline);
             }
             catch (ArgumentException exception)
             {
@@ -53,12 +67,88 @@ namespace TestExerciser.Logic
             return foundMatch;
         }
 
+        /// <summary>
+        /// 判断用户名是否是6到20位字母或数字
+        /// </summary>
+        /// <param name="txtUserName"></param>
+        /// <returns></returns>
         public bool isUserNameFair(string txtUserName)
         {
             bool foundMatch = false;
             try
             {
                 foundMatch = Regex.IsMatch(txtUserName, @"^(?![0-9]*$)[a-zA-Z0-9]{6,20}$", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+            }
+            catch (ArgumentException exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return foundMatch;
+        }
+
+        /// <summary>
+        /// 判断是否是IP地址
+        /// </summary>
+        /// <param name="txtIP"></param>
+        /// <returns></returns>
+        public bool isIP(string txtIP)
+        {
+            bool foundMatch = false;
+            try
+            {
+                foundMatch = Regex.IsMatch(txtIP, @"d+.d+.d+.d+", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+            }
+            catch (ArgumentException exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return foundMatch;
+        }
+
+        /// <summary>
+        /// 判断是否是电话号码
+        /// </summary>
+        /// <param name="txtTelePhone"></param>
+        /// <returns></returns>
+        public bool isTelePhone(string txtTelePhone)
+        {
+            bool foundMatch = false;
+            try
+            {
+                foundMatch = Regex.IsMatch(txtTelePhone, @"((d{3,4})|d{3,4}-)?d{7,8}(-d{3})*", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+            }
+            catch (ArgumentException exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return foundMatch;
+        }
+
+        /// <summary>
+        /// 判断项目名称是否满足：最长不得超过7个汉字，或14个字节(数字，字母和下划线)正则表达式
+        /// </summary>
+        /// <param name="txtTelePhone"></param>
+        /// <returns></returns>
+        public bool isProjectName(string txtTelePhone)
+        {
+            bool foundMatch = false;
+            try
+            {
+                foundMatch = Regex.IsMatch(txtTelePhone, @"^[\u4e00-\u9fa5]{1,7}$|^[\dA-Za-z_]{1,14}$", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+            }
+            catch (ArgumentException exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return foundMatch;
+        }
+
+        public bool isProjectLocation(string txtLocation)
+        {
+            bool foundMatch = false;
+            try
+            {
+                foundMatch = Regex.IsMatch(txtLocation, @"[a-zA-Z]\:[\\a-zA-Z0-9_\u4e00-\u9fa5\\]+[\.]?[a-zA-Z0-9_\u4e00-\u9fa5]+", RegexOptions.IgnoreCase | RegexOptions.Singleline);
             }
             catch (ArgumentException exception)
             {
