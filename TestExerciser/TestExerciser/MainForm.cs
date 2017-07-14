@@ -29,6 +29,7 @@ namespace TestExerciser
         string workspacePath = null;
         public static string pythonEnv = null;
         public static string rootFolder = null;
+        
         Style invisibleCharsStyle = new InvisibleCharsRenderer(Pens.Gray);
         Color currentLineColor = Color.FromArgb(100, 210, 210, 255);
         Color changedLineColor = Color.FromArgb(255, 230, 230, 255);
@@ -125,9 +126,7 @@ namespace TestExerciser
                 toolTips.Show("请左键选中相应的节点", this.rightClickOnProManager);
                 toolTips.AutoPopDelay = 10;
                 toolTips.UseFading = true;
-
             }
-
         }
 
         private void 黄ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -169,8 +168,7 @@ namespace TestExerciser
             else
             {
                 MessageBox.Show("请选中响应节点！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            
+            }           
         }
 
         private void 新建文件ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -211,14 +209,58 @@ namespace TestExerciser
             //}
         }
 
-        private void 新建项目PToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 新建解决方案SToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ToolNewSolution myToolNewSolution = new ToolNewSolution();
-            DialogResult mydrNewSolution = myToolNewSolution.ShowDialog();
-
+            
+            if (myToolNewSolution.ShowDialog()==DialogResult.OK)
+            {
+                if (myToolNewSolution.stbProName.Text != "")
+                {
+                    LoginInfo myLoginInfo = new LoginInfo();
+                    if (myLoginInfo.isProjectName(myToolNewSolution.stbProName.Text))
+                    {
+                        if (myLoginInfo.isProjectLocation(myToolNewSolution.stbLocation.Text))
+                        {
+                            string location = myToolNewSolution.stbLocation.Text + "\\" + myToolNewSolution.stbProName.Text;
+                            createFolder(location);
+                            myToolNewSolution.txtStatus.ForeColor = Color.Green;
+                            myToolNewSolution.txtStatus.Text = "创建信息：创建成功！";
+                            myToolNewSolution.Close();
+                            workspacePath = ToolNewSolution.projectLocation;
+                            if (Array.IndexOf<string>(root_paths, workspacePath) != -1)
+                            {
+                                MessageBox.Show("打开工程名称冲突，请修改工程名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                addToRootPaths(workspacePath);
+                                getTreeViewData(workspacePath);
+                            }
+                        }
+                        else
+                        {
+                            myToolNewSolution.txtStatus.ForeColor = Color.Red;
+                            myToolNewSolution.txtStatus.Text = "创建信息：创建失败，请正确填写项目路径！";
+                        }
+                    }
+                    else
+                    {
+                        myToolNewSolution.txtStatus.ForeColor = Color.Red;
+                        myToolNewSolution.txtStatus.Text = "创建信息：创建失败，请正确填写项目名称！";
+                    }
+                }
+                else
+                {
+                    myToolNewSolution.txtStatus.ForeColor = Color.Red;
+                    myToolNewSolution.txtStatus.Text = "创建信息：创建失败，项目名称不能为空！";
+                }               
+            }
         }
 
-        private void 新建文件夹PToolStripMenuItem_Click(object sender, EventArgs e)
+
+
+        private void 新建工程PToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (File.Exists(selectTreeNodeFullPath()) == false)
             {
@@ -686,46 +728,6 @@ namespace TestExerciser
                 getFiles(selectTreeNodeFullPath(), tree_Solution.SelectedNode);
             }
             
-        }
-
-        /// <summary>
-        /// 提示信息
-        /// </summary>
-        /// <param name="tipMsg"></param>
-        /// <param name="control"></param>
-        private void toolTipsSetToolTip(string tipMsg, Control control)
-        {
-            toolTips.Dispose();
-            toolTips.UseFading = true;
-            toolTips.UseAnimation = true;
-            toolTips.IsBalloon = true;
-            toolTips.ToolTipTitle = "提示：";
-            toolTips.SetToolTip(control, tipMsg);
-            toolTips.Active = true;
-            toolTips.AutoPopDelay = 5000;
-            toolTips.InitialDelay = 1000;
-            toolTips.ReshowDelay = 500;
-            toolTips.ShowAlways = true;
-        }
-
-        /// <summary>
-        /// 提示信息
-        /// </summary>
-        /// <param name="tipMsg"></param>
-        /// <param name="control"></param>
-        private void toolTipsShow(string tipMsg, Control control)
-        {
-            toolTips.Dispose();
-            toolTips.UseFading = true;
-            toolTips.UseAnimation = true;
-            toolTips.IsBalloon = true;
-            toolTips.ToolTipTitle = "提示：";
-            toolTips.Show(tipMsg, control);
-            toolTips.Active = true;
-            toolTips.AutoPopDelay = 5000;
-            toolTips.InitialDelay = 1000;
-            toolTips.ReshowDelay = 500;
-            toolTips.ShowAlways = true;
         }
 
         /// <summary>
@@ -1914,7 +1916,7 @@ namespace TestExerciser
             
         }
 
-        private void 打开OToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 打开解决方案SToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (selectProjectFolder.ShowDialog() == DialogResult.OK)
             {
@@ -2042,6 +2044,8 @@ namespace TestExerciser
                     this.刷新ToolStripMenuItem.Visible = true;
                     this.新建工程PToolStripMenuItem.Visible = true;
                     this.新建文件ToolStripMenuItem.Visible = true;
+                    this.打开文件路径ToolStripMenuItem.Visible = true;
+                    this.删除ToolStripMenuItem.Visible = true;
                 }           
             }
         }
@@ -2532,21 +2536,6 @@ namespace TestExerciser
             }
         }
 
-        private void uISpyUToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process p = new Process();
-                p.StartInfo.FileName = Application.StartupPath + @"\Tools\Sources\ToolUISpy.exe";
-                p.Start();
-                p.Close();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void pUTTYPToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -2952,6 +2941,14 @@ namespace TestExerciser
             else
             {
                 this.spbStatus.Visible = false;
+            }
+        }
+
+        private void createFolder(string projectLocation)
+        {
+            if (!Directory.Exists(projectLocation))
+            {
+                Directory.CreateDirectory(projectLocation);
             }
         }
 

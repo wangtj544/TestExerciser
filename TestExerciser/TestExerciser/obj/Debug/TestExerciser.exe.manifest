@@ -45,6 +45,11 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DevExpress.BonusSkins.v15.2" version="15.2.4.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="DevExpress.Data.v15.2" version="15.2.4.0" publicKeyToken="B88D1754D700E49A" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
@@ -1015,14 +1020,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1857024">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1856000">
       <assemblyIdentity name="TestExerciser" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0fN4VSQK1pz8HKgGBcMx6WF/L6o=</dsig:DigestValue>
+        <dsig:DigestValue>TfL7pKAE78qPlWqJ6+7g0MXF0Tc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1034,7 +1039,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>7xhBWvCkbCwNr866TFJ/5VART1M=</dsig:DigestValue>
+        <dsig:DigestValue>bwH79avI3Z6YsVxR+L3rEpMSvBM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1666,15 +1671,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>Sy9MZgonRasDaui7C+SOLPPDZIQ=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Tools\Sources\ToolUISpy.exe" size="431104">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>C0aWUb4wb5GDMFUWZndwgHD7p1w=</dsig:DigestValue>
     </hash>
   </file>
   <fileAssociation extension=".tc" description="测试用例" progid="tc" defaultIcon="Resources\tc.ico" xmlns="urn:schemas-microsoft-com:clickonce.v1" />

@@ -406,7 +406,6 @@ E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\spyxx.exe
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\spyxxhk.dll
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\spyxxhk_amd64.dll
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\spyxx_amd64.exe
-E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\ToolUISpy.exe
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\AutoIt.chm
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\AutoIt.exe
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\inspect_x32.exe
@@ -414,5 +413,5 @@ E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\inspect_x64
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\PUTTY.exe
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\spyxx.chm
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\spyxx_amd64.chm
-E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ToolNewProject.resources
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.exe.licenses
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ToolNewSolution.resources
