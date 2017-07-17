@@ -165,7 +165,6 @@
             this.btnCancel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
             this.btnCancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.btnCancel.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.DownBack = null;
             this.btnCancel.Location = new System.Drawing.Point(300, 189);
             this.btnCancel.MouseBack = null;
@@ -183,7 +182,6 @@
             this.btnOK.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
             this.btnOK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.btnOK.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.DownBack = null;
             this.btnOK.Location = new System.Drawing.Point(151, 189);
             this.btnOK.MouseBack = null;

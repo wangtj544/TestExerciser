@@ -25,8 +25,8 @@ namespace TestExerciser
 {
     public partial class MainForm : Skin_Mac
     {
-        string[] root_paths = {};
-        string workspacePath = null;
+        public static string[] root_paths = {};
+        public static string workspacePath = null;
         public static string pythonEnv = null;
         public static string rootFolder = null;
         
@@ -212,49 +212,26 @@ namespace TestExerciser
         private void 新建解决方案SToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ToolNewSolution myToolNewSolution = new ToolNewSolution();
-            
-            if (myToolNewSolution.ShowDialog()==DialogResult.OK)
+            if (myToolNewSolution.ShowDialog() == DialogResult.OK)
             {
-                if (myToolNewSolution.stbProName.Text != "")
+                if (myToolNewSolution.IsCreateSolution)
                 {
-                    LoginInfo myLoginInfo = new LoginInfo();
-                    if (myLoginInfo.isProjectName(myToolNewSolution.stbProName.Text))
+                    try
                     {
-                        if (myLoginInfo.isProjectLocation(myToolNewSolution.stbLocation.Text))
-                        {
-                            string location = myToolNewSolution.stbLocation.Text + "\\" + myToolNewSolution.stbProName.Text;
-                            createFolder(location);
-                            myToolNewSolution.txtStatus.ForeColor = Color.Green;
-                            myToolNewSolution.txtStatus.Text = "创建信息：创建成功！";
-                            myToolNewSolution.Close();
-                            workspacePath = ToolNewSolution.projectLocation;
-                            if (Array.IndexOf<string>(root_paths, workspacePath) != -1)
-                            {
-                                MessageBox.Show("打开工程名称冲突，请修改工程名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else
-                            {
-                                addToRootPaths(workspacePath);
-                                getTreeViewData(workspacePath);
-                            }
-                        }
-                        else
-                        {
-                            myToolNewSolution.txtStatus.ForeColor = Color.Red;
-                            myToolNewSolution.txtStatus.Text = "创建信息：创建失败，请正确填写项目路径！";
-                        }
+                        workspacePath = ToolNewSolution.projectLocation;
+
+                        addToRootPaths(workspacePath);
+                        getTreeViewData(workspacePath);
                     }
-                    else
+                    catch (Exception exception)
                     {
-                        myToolNewSolution.txtStatus.ForeColor = Color.Red;
-                        myToolNewSolution.txtStatus.Text = "创建信息：创建失败，请正确填写项目名称！";
+                        MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    myToolNewSolution.txtStatus.ForeColor = Color.Red;
-                    myToolNewSolution.txtStatus.Text = "创建信息：创建失败，项目名称不能为空！";
-                }               
+                    MessageBox.Show("创建解决方案失败！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -2944,13 +2921,7 @@ namespace TestExerciser
             }
         }
 
-        private void createFolder(string projectLocation)
-        {
-            if (!Directory.Exists(projectLocation))
-            {
-                Directory.CreateDirectory(projectLocation);
-            }
-        }
+     
 
         
 
