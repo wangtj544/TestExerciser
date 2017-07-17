@@ -247,5 +247,10 @@ namespace TestExerciser.Tools
                 MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void ToolClean_KeyDown(object sender, KeyEventArgs e)
+        {
+            btnOK_Click(sender, e);
+        }
     }
 }

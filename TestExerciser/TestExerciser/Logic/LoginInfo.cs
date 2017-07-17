@@ -148,7 +148,7 @@ namespace TestExerciser.Logic
             bool foundMatch = false;
             try
             {
-                foundMatch = Regex.IsMatch(txtLocation, @"[a-zA-Z]\:[\\a-zA-Z0-9_\u4e00-\u9fa5\\]+[\.]?[a-zA-Z0-9_\u4e00-\u9fa5]+", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+                foundMatch = Regex.IsMatch(txtLocation, @"[a-zA-Z]\:[\\a-zA-Z0-9_\u4e00-\u9fa5\\]+[\.]?[a-zA-Z0-9_\u4e00-\u9fa5]+|[a-zA-Z]\:\\", RegexOptions.IgnoreCase | RegexOptions.Singleline);
             }
             catch (ArgumentException exception)
             {

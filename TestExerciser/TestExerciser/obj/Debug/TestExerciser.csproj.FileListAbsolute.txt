@@ -415,3 +415,4 @@ E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\spyxx.chm
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\spyxx_amd64.chm
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.exe.licenses
 E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ToolNewSolution.resources
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ToolNewFolder.resources

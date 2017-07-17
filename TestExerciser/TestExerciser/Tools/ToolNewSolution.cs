@@ -81,6 +81,7 @@ namespace TestExerciser.Tools
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            this.Visible = true;
             this.Close();
         }   
     
@@ -96,6 +97,16 @@ namespace TestExerciser.Tools
         {
             get { return isCreateSolution; }
             set { isCreateSolution = value; }
+        }
+
+        private void btnOK_KeyDown(object sender, KeyEventArgs e)
+        {
+            btnOK_Click(sender, e);
+        }
+
+        private void ToolNewSolution_KeyDown(object sender, KeyEventArgs e)
+        {
+            btnOK_Click(sender, e);
         }
     }
 }

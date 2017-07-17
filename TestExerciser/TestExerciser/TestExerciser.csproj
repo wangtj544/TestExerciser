@@ -329,6 +329,12 @@
     <Compile Include="Tools\ToolManager.Designer.cs">
       <DependentUpon>ToolManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\ToolNewFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolNewFolder.Designer.cs">
+      <DependentUpon>ToolNewFolder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\ToolNewSolution.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -483,6 +489,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolManager.resx">
       <DependentUpon>ToolManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolNewFolder.resx">
+      <DependentUpon>ToolNewFolder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolNewSolution.resx">
       <DependentUpon>ToolNewSolution.cs</DependentUpon>

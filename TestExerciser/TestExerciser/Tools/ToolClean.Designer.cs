@@ -312,9 +312,11 @@
             this.ClientSize = new System.Drawing.Size(739, 557);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "ToolClean";
             this.Text = "文件清理";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ToolClean_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);

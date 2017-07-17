@@ -29,6 +29,7 @@ namespace TestExerciser
         public static string workspacePath = null;
         public static string pythonEnv = null;
         public static string rootFolder = null;
+        public static string selectedNodePath = null;
         
         Style invisibleCharsStyle = new InvisibleCharsRenderer(Pens.Gray);
         Color currentLineColor = Color.FromArgb(100, 210, 210, 255);
@@ -211,6 +212,13 @@ namespace TestExerciser
 
         private void 新建解决方案SToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("待添加功能！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+
+
+        private void 新建项目PToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             ToolNewSolution myToolNewSolution = new ToolNewSolution();
             if (myToolNewSolution.ShowDialog() == DialogResult.OK)
             {
@@ -230,29 +238,47 @@ namespace TestExerciser
                 }
                 else
                 {
-                    MessageBox.Show("创建解决方案失败！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("创建项目失败！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
 
-
-
-        private void 新建工程PToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 新建文件夹RToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (File.Exists(selectTreeNodeFullPath()) == false)
             {
-                if (selectProjectFolder.ShowDialog() == DialogResult.OK)
+                //if (selectProjectFolder.ShowDialog() == DialogResult.OK)
+                //{
+                //    //getTreeViewData(selectProjectFolder.SelectedPath);
+                //    addToRootPaths(selectProjectFolder.SelectedPath);
+                //    refreshTreeViewData();
+
+                //}
+                ToolNewFolder myToolNewFolder =new ToolNewFolder();
+                if (myToolNewFolder.ShowDialog() == DialogResult.OK)
                 {
-                    //getTreeViewData(selectProjectFolder.SelectedPath);
-                    addToRootPaths(selectProjectFolder.SelectedPath);
-                    refreshTreeViewData();
+                    if (myToolNewFolder.IsCreateFolder)
+                    {
+                        try
+                        {
+                            workspacePath = ToolNewSolution.projectLocation;
+                            refreshTreeViewData();
+                        }
+                        catch (Exception exception)
+                        {
+                            MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("创建文件夹失败！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
             else
             {
                 MessageBox.Show("请选择相应的文件夹！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
         private void 新建文件FToolStripMenuItem_Click(object sender, EventArgs e)
@@ -650,6 +676,7 @@ namespace TestExerciser
                     }
                 }              
             }
+            selectedNodePath = full_path;
             return full_path;
         }
 
@@ -774,9 +801,7 @@ namespace TestExerciser
                 {
                     MessageBox.Show(exception.Message, "异常消息提示：",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
-
         }
 
         /// <summary>
@@ -1895,20 +1920,26 @@ namespace TestExerciser
 
         private void 打开解决方案SToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("待添加功能！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void 打开项目PToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             if (selectProjectFolder.ShowDialog() == DialogResult.OK)
             {
                 workspacePath = selectProjectFolder.SelectedPath;
                 if (Array.IndexOf<string>(root_paths, workspacePath) != -1)
                 {
-                    MessageBox.Show("打开工程名称冲突，请修改工程名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("打开项目名称冲突，请修改工程名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     addToRootPaths(workspacePath);
                     getTreeViewData(workspacePath);
-                }            
+                }
             }
         }
+
 
         private void 保存SToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1992,7 +2023,7 @@ namespace TestExerciser
                         this.闭合CToolStripMenuItem.Visible = true;
                         this.展开EToolStripMenuItem.Visible = true;
                         this.刷新ToolStripMenuItem.Visible = true;
-                        this.新建工程PToolStripMenuItem.Visible = true;
+                        this.新建文件夹RToolStripMenuItem.Visible = true;
                         this.新建文件ToolStripMenuItem.Visible = true;
                     }
                     else
@@ -2001,7 +2032,7 @@ namespace TestExerciser
                         this.闭合CToolStripMenuItem.Visible = false;
                         this.展开EToolStripMenuItem.Visible = false;
                         this.刷新ToolStripMenuItem.Visible = false;
-                        this.新建工程PToolStripMenuItem.Visible = false;
+                        this.新建文件夹RToolStripMenuItem.Visible = false;
                         this.新建文件ToolStripMenuItem.Visible = false;
                     }
                     if (File.Exists(selectTreeNodeFullPath()))
@@ -2019,7 +2050,7 @@ namespace TestExerciser
                     this.闭合CToolStripMenuItem.Visible = true;
                     this.展开EToolStripMenuItem.Visible = true;
                     this.刷新ToolStripMenuItem.Visible = true;
-                    this.新建工程PToolStripMenuItem.Visible = true;
+                    this.新建文件夹RToolStripMenuItem.Visible = true;
                     this.新建文件ToolStripMenuItem.Visible = true;
                     this.打开文件路径ToolStripMenuItem.Visible = true;
                     this.删除ToolStripMenuItem.Visible = true;
@@ -2091,7 +2122,7 @@ namespace TestExerciser
             if (strPathResult == string.Empty)
             {
                 //Not found
-                MessageBox.Show("无法找到程序集所在的路径！请尝试通过打开工程打开文件路径！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("无法找到程序集路径！请尝试通过“打开项目”打开文件路径！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             //Found
@@ -2290,7 +2321,7 @@ namespace TestExerciser
                 workspacePath = rdb.selectedWorkspacePath();
                 if (Array.IndexOf<string>(root_paths, workspacePath) != -1)
                 {
-                    MessageBox.Show("打开工程名称冲突，请修改工程名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("打开项目名称冲突，请修改工程名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -2921,6 +2952,11 @@ namespace TestExerciser
             }
         }
 
+       
+
+        
+
+       
      
 
         

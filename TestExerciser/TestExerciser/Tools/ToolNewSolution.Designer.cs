@@ -192,6 +192,7 @@
             this.btnOK.Text = "确定新建";
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.btnOK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnOK_KeyDown);
             // 
             // ToolNewSolution
             // 
@@ -208,11 +209,13 @@
             this.Controls.Add(this.labLocation);
             this.Controls.Add(this.labProName);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "ToolNewSolution";
-            this.Text = "新建项目";
+            this.Text = "新建项目选项";
             this.TitleCenter = false;
             this.Load += new System.EventHandler(this.ToolNewSolution_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ToolNewSolution_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
