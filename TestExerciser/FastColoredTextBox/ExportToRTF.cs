@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     /// <summary>
     /// Exports colored text as RTF
@@ -20,7 +20,7 @@ namespace FastColoredTextBoxNS
         /// </summary>
         public bool UseOriginalFont { get; set; }
 
-        FastColoredTextBox tb;
+        Editor tb;
         Dictionary<Color, int> colorTable = new Dictionary<Color, int>();
 
         public ExportToRTF()
@@ -28,7 +28,7 @@ namespace FastColoredTextBoxNS
             UseOriginalFont = true;
         }
 
-        public string GetRtf(FastColoredTextBox tb)
+        public string GetRtf(Editor tb)
         {
             this.tb = tb;
             Range sel = new Range(tb);

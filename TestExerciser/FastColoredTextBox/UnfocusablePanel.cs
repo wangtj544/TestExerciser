@@ -5,7 +5,7 @@ using System.Drawing.Drawing2D;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     [System.ComponentModel.ToolboxItem(false)]
     public class UnfocusablePanel : UserControl

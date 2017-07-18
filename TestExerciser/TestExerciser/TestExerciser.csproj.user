@@ -2,7 +2,7 @@
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectView>ShowAllFiles</ProjectView>
-    <PublishUrlHistory>E:\AutoTest\tools\TestExerciser\|E:\AutoTest\测试工具\TestExerciser\|E:\AutoTest\测试工具\|E:\AutoTest\测试用例\|\\172.20.32.147\publish\</PublishUrlHistory>
+    <PublishUrlHistory>E:\AutoTest\tools\TestExerciser\|E:\AutoTest\tools\TestExerciser%28离线版%29\|E:\AutoTest\测试工具\TestExerciser\|E:\AutoTest\测试工具\|E:\AutoTest\测试用例\</PublishUrlHistory>
     <InstallUrlHistory>http://localhost:60203/</InstallUrlHistory>
     <SupportUrlHistory>http://172.20.32.147:8080/</SupportUrlHistory>
     <UpdateUrlHistory>https://github.com/devdiv/TestExerciser/releases/|http://localhost/TestExerciser/</UpdateUrlHistory>

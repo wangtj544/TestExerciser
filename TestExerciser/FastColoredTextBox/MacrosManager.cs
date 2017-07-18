@@ -6,7 +6,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     /// <summary>
     /// This class records, stores and executes the macros.
@@ -15,7 +15,7 @@ namespace FastColoredTextBoxNS
     {
         private readonly List<object> macro = new List<object>();
 
-        internal MacrosManager(FastColoredTextBox ctrl)
+        internal MacrosManager(Editor ctrl)
         {
             UnderlayingControl = ctrl;
             AllowMacroRecordingByUser = true;
@@ -40,7 +40,7 @@ namespace FastColoredTextBoxNS
         /// <summary>
         /// FCTB
         /// </summary>
-        public FastColoredTextBox UnderlayingControl { get; private set; }
+        public Editor UnderlayingControl { get; private set; }
 
         /// <summary>
         /// Executes recorded macro

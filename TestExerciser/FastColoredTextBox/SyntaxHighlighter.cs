@@ -6,7 +6,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Xml;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     public class SyntaxHighlighter : IDisposable
     {
@@ -219,7 +219,7 @@ namespace FastColoredTextBoxNS
 
         public virtual void AutoIndentNeeded(object sender, AutoIndentEventArgs args)
         {
-            var tb = (sender as FastColoredTextBox);
+            var tb = (sender as Editor);
             Language language = tb.Language;
             switch (language)
             {
@@ -290,19 +290,19 @@ namespace FastColoredTextBoxNS
 
         protected void SQLAutoIndentNeeded(object sender, AutoIndentEventArgs args)
         {
-            var tb = sender as FastColoredTextBox;
+            var tb = sender as Editor;
             tb.CalcAutoIndentShiftByCodeFolding(sender, args);
         }
 
         protected void HTMLAutoIndentNeeded(object sender, AutoIndentEventArgs args)
         {
-            var tb = sender as FastColoredTextBox;
+            var tb = sender as Editor;
             tb.CalcAutoIndentShiftByCodeFolding(sender, args);
         }
 
         protected void XMLAutoIndentNeeded(object sender, AutoIndentEventArgs args)
         {
-            var tb = sender as FastColoredTextBox;
+            var tb = sender as Editor;
             tb.CalcAutoIndentShiftByCodeFolding(sender, args);
         }
 
@@ -537,7 +537,7 @@ namespace FastColoredTextBoxNS
             RestoreBrackets(range.tb, oldBrackets);
         }
 
-        protected void RestoreBrackets(FastColoredTextBox tb, char[] oldBrackets)
+        protected void RestoreBrackets(Editor tb, char[] oldBrackets)
         {
             tb.LeftBracket = oldBrackets[0];
             tb.RightBracket = oldBrackets[1];
@@ -545,7 +545,7 @@ namespace FastColoredTextBoxNS
             tb.RightBracket2 = oldBrackets[3];
         }
 
-        protected char[] RememberBrackets(FastColoredTextBox tb)
+        protected char[] RememberBrackets(Editor tb)
         {
             return new[] { tb.LeftBracket, tb.RightBracket, tb.LeftBracket2, tb.RightBracket2 };
         }

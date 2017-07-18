@@ -5,7 +5,7 @@ using System.Drawing.Drawing2D;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     /// <summary>
     /// Collection of Hints.
@@ -13,10 +13,10 @@ namespace FastColoredTextBoxNS
     /// </summary>
     public class Hints : ICollection<Hint>, IDisposable
     {
-        FastColoredTextBox tb;
+        Editor tb;
         List<Hint> items = new List<Hint>();
 
-        public Hints(FastColoredTextBox tb)
+        public Hints(Editor tb)
         {
             this.tb = tb;
             tb.TextChanged += OnTextBoxTextChanged;

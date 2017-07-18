@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Text;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     /// <summary>
     /// Base class for bookmark collection
@@ -48,11 +48,11 @@ namespace FastColoredTextBoxNS
     /// </summary>
     public class Bookmarks : BaseBookmarks
     {
-        protected FastColoredTextBox tb;
+        protected Editor tb;
         protected List<Bookmark> items = new List<Bookmark>();
         protected int counter;
 
-        public Bookmarks(FastColoredTextBox tb)
+        public Bookmarks(Editor tb)
         {
             this.tb = tb;
             tb.LineInserted += tb_LineInserted;
@@ -212,7 +212,7 @@ namespace FastColoredTextBoxNS
     /// </summary>
     public class Bookmark
     {
-        public FastColoredTextBox TB { get; private set; }
+        public Editor TB { get; private set; }
         /// <summary>
         /// Name of bookmark
         /// </summary>
@@ -236,7 +236,7 @@ namespace FastColoredTextBoxNS
             TB.Invalidate();
         }
 
-        public Bookmark(FastColoredTextBox tb, string name, int lineIndex)
+        public Bookmark(Editor tb, string name, int lineIndex)
         {
             this.TB = tb;
             this.Name = name;

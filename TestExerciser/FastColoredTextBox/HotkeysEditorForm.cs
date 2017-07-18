@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     public partial class HotkeysEditorForm : Form
     {

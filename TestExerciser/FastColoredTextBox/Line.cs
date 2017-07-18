@@ -3,7 +3,7 @@ using System;
 using System.Text;
 using System.Drawing;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     /// <summary>
     /// Line of text

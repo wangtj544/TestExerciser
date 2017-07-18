@@ -3,15 +3,15 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     public partial class ReplaceForm : Form
     {
-        FastColoredTextBox tb;
+        Editor tb;
         bool firstSearch = true;
         Place startPlace;
 
-        public ReplaceForm(FastColoredTextBox tb)
+        public ReplaceForm(Editor tb)
         {
             InitializeComponent();
             this.tb = tb;

@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Collections.Generic;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     /// <summary>
     /// Exports colored text as HTML
@@ -37,7 +37,7 @@ namespace FastColoredTextBoxNS
         /// </summary>
         public bool IncludeLineNumbers { get; set; }
 
-        FastColoredTextBox tb;
+        Editor tb;
 
         public ExportToHTML()
         {
@@ -47,7 +47,7 @@ namespace FastColoredTextBoxNS
             UseBr = true;
         }
 
-        public string GetHtml(FastColoredTextBox tb)
+        public string GetHtml(Editor tb)
         {
             this.tb = tb;
             Range sel = new Range(tb);

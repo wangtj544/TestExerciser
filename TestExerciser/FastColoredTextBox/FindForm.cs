@@ -3,15 +3,15 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     public partial class FindForm : Form
     {
         bool firstSearch = true;
         Place startPlace;
-        FastColoredTextBox tb;
+        Editor tb;
 
-        public FindForm(FastColoredTextBox tb)
+        public FindForm(Editor tb)
         {
             InitializeComponent();
             this.tb = tb;

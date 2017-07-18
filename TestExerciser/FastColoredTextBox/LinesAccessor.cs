@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     public class LinesAccessor : IList<string>
     {

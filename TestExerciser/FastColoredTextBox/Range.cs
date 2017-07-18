@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     /// <summary>
     /// Diapason of text chars
@@ -13,7 +13,7 @@ namespace FastColoredTextBoxNS
     {
         Place start;
         Place end;
-        public readonly FastColoredTextBox tb;
+        public readonly Editor tb;
         int preferedPos = -1;
         int updating = 0;
 
@@ -24,7 +24,7 @@ namespace FastColoredTextBoxNS
         /// <summary>
         /// Constructor
         /// </summary>
-        public Range(FastColoredTextBox tb)
+        public Range(Editor tb)
         {
             this.tb = tb;
         }
@@ -56,7 +56,7 @@ namespace FastColoredTextBoxNS
         /// <summary>
         /// Constructor
         /// </summary>
-        public Range(FastColoredTextBox tb, int iStartChar, int iStartLine, int iEndChar, int iEndLine)
+        public Range(Editor tb, int iStartChar, int iStartLine, int iEndChar, int iEndLine)
             : this(tb)
         {
             start = new Place(iStartChar, iStartLine);
@@ -66,7 +66,7 @@ namespace FastColoredTextBoxNS
         /// <summary>
         /// Constructor
         /// </summary>
-        public Range(FastColoredTextBox tb, Place start, Place end)
+        public Range(Editor tb, Place start, Place end)
             : this(tb)
         {
             this.start = start;
@@ -76,7 +76,7 @@ namespace FastColoredTextBoxNS
         /// <summary>
         /// Constructor. Creates range of the line
         /// </summary>
-        public Range(FastColoredTextBox tb, int iLine)
+        public Range(Editor tb, int iLine)
             : this(tb)
         {
             start = new Place(0, iLine);

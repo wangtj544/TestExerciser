@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Drawing.Drawing2D;
 using System.Text.RegularExpressions;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     /// <summary>
     /// Popup menu for autocomplete
@@ -68,7 +68,7 @@ namespace FastColoredTextBoxNS
             set { listView.HoveredColor = value; }
         }
 
-        public AutocompleteMenu(FastColoredTextBox tb)
+        public AutocompleteMenu(Editor tb)
         {
             // create a new popup and add the list view to it 
             AutoClose = false;
@@ -210,7 +210,7 @@ namespace FastColoredTextBoxNS
 
         AutocompleteMenu Menu { get { return Parent as AutocompleteMenu; } }
         int oldItemCount = 0;
-        FastColoredTextBox tb;
+        Editor tb;
         internal ToolTip toolTip = new ToolTip();
         System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
 
@@ -249,7 +249,7 @@ namespace FastColoredTextBoxNS
             }
         }
 
-        internal AutocompleteListView(FastColoredTextBox tb)
+        internal AutocompleteListView(Editor tb)
         {
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.UserPaint, true);
             base.Font = new Font(FontFamily.GenericSansSerif, 9);
@@ -425,7 +425,7 @@ namespace FastColoredTextBoxNS
 
         void tb_KeyDown(object sender, KeyEventArgs e)
         {
-            var tb = sender as FastColoredTextBox;
+            var tb = sender as Editor;
 
             if (Menu.Visible)
                 if (ProcessKey(e.KeyCode, e.Modifiers))
@@ -725,6 +725,6 @@ namespace FastColoredTextBoxNS
     public class SelectedEventArgs : EventArgs
     {
         public AutocompleteItem Item { get; internal set; }
-        public FastColoredTextBox Tb { get; set; }
+        public Editor Tb { get; set; }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     public partial class GoToForm : Form
     {

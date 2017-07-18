@@ -4,7 +4,7 @@ using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     public class VisualMarker
     {

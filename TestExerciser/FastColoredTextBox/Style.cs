@@ -3,7 +3,7 @@ using System;
 using System.Drawing.Drawing2D;
 using System.Collections.Generic;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     /// <summary>
     /// Style of chars
@@ -39,7 +39,7 @@ namespace FastColoredTextBoxNS
         /// <summary>
         /// Occurs when user click on StyleVisualMarker joined to this style 
         /// </summary>
-        public virtual void OnVisualMarkerClick(FastColoredTextBox tb, VisualMarkerEventArgs args)
+        public virtual void OnVisualMarkerClick(Editor tb, VisualMarkerEventArgs args)
         {
             if (VisualMarkerClick != null)
                 VisualMarkerClick(tb, args);
@@ -49,7 +49,7 @@ namespace FastColoredTextBoxNS
         /// Shows VisualMarker
         /// Call this method in Draw method, when you need to show VisualMarker for your style
         /// </summary>
-        protected virtual void AddVisualMarker(FastColoredTextBox tb, StyleVisualMarker marker)
+        protected virtual void AddVisualMarker(Editor tb, StyleVisualMarker marker)
         {
             tb.AddVisualMarker(marker);
         }
@@ -126,7 +126,7 @@ namespace FastColoredTextBoxNS
             if (BackgroundBrush != null)
             {
 
-                Rectangle rect = new Rectangle(position.X, position.Y, (range.End.iChar - range.Start.iChar) * range.tb.CharWidth + FastColoredTextBox.diffWidth, range.tb.CharHeight);
+                Rectangle rect = new Rectangle(position.X, position.Y, (range.End.iChar - range.Start.iChar) * range.tb.CharWidth + Editor.diffWidth, range.tb.CharHeight);
                 if (rect.Width == 0)
                     return;
                 gr.FillRectangle(BackgroundBrush, rect);
@@ -175,7 +175,7 @@ namespace FastColoredTextBoxNS
                     for (int i = range.Start.iChar; i < range.End.iChar; i++)
                     {
 
-                        SizeF size = FastColoredTextBox.GetCharSize(f, line[i].c);
+                        SizeF size = Editor.GetCharSize(f, line[i].c);
 
                         var gs = gr.Save();
                         //float k = size.Width>range.tb.CharWidth + 1?range.tb.CharWidth / size.Width:1;
@@ -381,7 +381,7 @@ namespace FastColoredTextBoxNS
             {
                 
                 //通过字符计算宽度
-                SizeF sizef = FastColoredTextBox.GetCharSize(range.tb.Font, '中');
+                SizeF sizef = Editor.GetCharSize(range.tb.Font, '中');
                 int Xwidth = 0;
 
                 //通过计算每个字符的宽度计算坐标

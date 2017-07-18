@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     ///
     /// These classes are required for correct data binding to Text property of FastColoredTextbox
@@ -70,12 +70,12 @@ namespace FastColoredTextBoxNS
 
         public override void AddEventHandler(object component, Delegate value)
         {
-            (component as FastColoredTextBox).BindingTextChanged += value as EventHandler;
+            (component as Editor).BindingTextChanged += value as EventHandler;
         }
 
         public override Type ComponentType
         {
-            get { return typeof(FastColoredTextBox); }
+            get { return typeof(Editor); }
         }
 
         public override Type EventType
@@ -90,7 +90,7 @@ namespace FastColoredTextBoxNS
 
         public override void RemoveEventHandler(object component, Delegate value)
         {
-            (component as FastColoredTextBox).BindingTextChanged -= value as EventHandler;
+            (component as Editor).BindingTextChanged -= value as EventHandler;
         }
     }
 }

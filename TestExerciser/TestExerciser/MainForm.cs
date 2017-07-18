@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
-using FastColoredTextBoxNS;
+using EditorNS;
 using FarsiLibrary.Win;
 using System.Threading;
 using System.Drawing.Drawing2D;
@@ -227,9 +227,10 @@ namespace TestExerciser
                     try
                     {
                         workspacePath = ToolNewSolution.projectLocation;
-
                         addToRootPaths(workspacePath);
                         getTreeViewData(workspacePath);
+                        Properties.Settings.Default.lastProjectPath = workspacePath;
+                        Properties.Settings.Default.Save();
                     }
                     catch (Exception exception)
                     {
@@ -462,6 +463,13 @@ namespace TestExerciser
             InitializeControl();
             this.登录ToolStripMenuItem.ForeColor = Color.Green;          
             this.登录ToolStripMenuItem.Text = ManageDB.userFullName;
+            打开支持库DToolStripMenuItem_Click(sender, e);
+            if (Properties.Settings.Default.lastProjectPath != "")
+            {
+                workspacePath = Properties.Settings.Default.lastProjectPath;
+                addToRootPaths(workspacePath);
+                getTreeViewData(workspacePath);
+            }                       
         }
 
         /// <summary>
@@ -1128,7 +1136,7 @@ namespace TestExerciser
         {
             try
             {
-                var tb = new FastColoredTextBox();
+                var tb = new Editor();
                 tb.Font = new Font("Consolas", 9.75f);
                 tb.ImeMode = ImeMode.On;
                 tb.ContextMenuStrip = cmMain;
@@ -1219,7 +1227,7 @@ namespace TestExerciser
 
         void tb_MouseMove(object sender, MouseEventArgs e)
         {
-            var tb = sender as FastColoredTextBox;
+            var tb = sender as Editor;
             var place = tb.PointToPlace(e.Location);
             var r = new Range(tb, place, place);
             string text = r.GetFragment("[a-zA-Z]").Text;
@@ -1250,7 +1258,7 @@ namespace TestExerciser
 
         void tb_SelectionChangedDelayed(object sender, EventArgs e)
         {
-            var tb = sender as FastColoredTextBox;
+            var tb = sender as Editor;
             //remember last visit time
             if (tb.Selection.IsEmpty && tb.Selection.Start.iLine < tb.LinesCount)
             {
@@ -1279,9 +1287,9 @@ namespace TestExerciser
 
         void tb_TextChangedDelayed(object sender, TextChangedEventArgs e)
         {
-            FastColoredTextBox tb = (sender as FastColoredTextBox);
+            Editor tb = (sender as Editor);
             //rebuild object explorer
-            string text = (sender as FastColoredTextBox).Text;
+            string text = (sender as Editor).Text;
             ThreadPool.QueueUserWorkItem(
                 (o) => ReBuildObjectExplorer(text)
             );
@@ -1319,7 +1327,7 @@ namespace TestExerciser
 
         void tb_LineRemoved(object sender, LineRemovedEventArgs e)
         {
-            TbInfo info = (sender as FastColoredTextBox).Tag as TbInfo;
+            TbInfo info = (sender as Editor).Tag as TbInfo;
 
             //remove lines from bookmarks
             foreach (int id in e.RemovedLineUniqueIds)
@@ -1332,10 +1340,10 @@ namespace TestExerciser
 
         void tb_PaintLine(object sender, PaintLineEventArgs e)
         {
-            TbInfo info = (sender as FastColoredTextBox).Tag as TbInfo;
+            TbInfo info = (sender as Editor).Tag as TbInfo;
 
             //draw bookmark
-            if (info.bookmarksLineId.Contains((sender as FastColoredTextBox)[e.LineIndex].UniqueId))
+            if (info.bookmarksLineId.Contains((sender as Editor)[e.LineIndex].UniqueId))
             {
                 e.Graphics.FillEllipse(new LinearGradientBrush(new Rectangle(0, e.LineRect.Top, 15, 15), Color.White, Color.PowderBlue, 45), 0, e.LineRect.Top, 15, 15);
                 e.Graphics.DrawEllipse(Pens.PowderBlue, 0, e.LineRect.Top, 15, 15);
@@ -1364,10 +1372,10 @@ namespace TestExerciser
         {
             DateTime max = new DateTime();
             int iLine = -1;
-            FastColoredTextBox tb = null;
+            Editor tb = null;
             for (int iTab = 0; iTab < tsFiles.Items.Count; iTab++)
             {
-                var t = (tsFiles.Items[iTab].Controls[0] as FastColoredTextBox);
+                var t = (tsFiles.Items[iTab].Controls[0] as Editor);
                 for (int i = 0; i < t.LinesCount; i++)
                     if (t[i].LastVisit < lastNavigatedDateTime && t[i].LastVisit > max)
                     {
@@ -1394,10 +1402,10 @@ namespace TestExerciser
         {
             DateTime min = DateTime.Now;
             int iLine = -1;
-            FastColoredTextBox tb = null;
+            Editor tb = null;
             for (int iTab = 0; iTab < tsFiles.Items.Count; iTab++)
             {
-                var t = (tsFiles.Items[iTab].Controls[0] as FastColoredTextBox);
+                var t = (tsFiles.Items[iTab].Controls[0] as Editor);
                 for (int i = 0; i < t.LinesCount; i++)
                     if (t[i].LastVisit > lastNavigatedDateTime && t[i].LastVisit < min)
                     {
@@ -1524,13 +1532,13 @@ namespace TestExerciser
         }
 
 
-        FastColoredTextBox CurrentTB
+        Editor CurrentTB
         {
             get
             {
                 if (tsFiles.SelectedItem == null)
                     return null;
-                return (tsFiles.SelectedItem.Controls[0] as FastColoredTextBox);
+                return (tsFiles.SelectedItem.Controls[0] as Editor);
             }
 
             set
@@ -1591,7 +1599,7 @@ namespace TestExerciser
 
         private bool Save(FATabStripItem tab)
         {
-            var tb = (tab.Controls[0] as FastColoredTextBox);
+            var tb = (tab.Controls[0] as Editor);
             if (tab.Tag == null)
             {
                 if (saveFileDialog.ShowDialog() != System.Windows.Forms.DialogResult.OK)
@@ -1665,7 +1673,7 @@ namespace TestExerciser
         private void btInvisibleChars_Click(object sender, EventArgs e)
         {
             foreach (FATabStripItem tab in tsFiles.Items)
-                HighlightInvisibleChars((tab.Controls[0] as FastColoredTextBox).Range);
+                HighlightInvisibleChars((tab.Controls[0] as Editor).Range);
             if (CurrentTB != null)
                 CurrentTB.Invalidate();
         }
@@ -1675,9 +1683,9 @@ namespace TestExerciser
             foreach (FATabStripItem tab in tsFiles.Items)
             {
                 if (btHighlightCurrentLine.Checked)
-                    (tab.Controls[0] as FastColoredTextBox).CurrentLineColor = currentLineColor;
+                    (tab.Controls[0] as Editor).CurrentLineColor = currentLineColor;
                 else
-                    (tab.Controls[0] as FastColoredTextBox).CurrentLineColor = Color.Transparent;
+                    (tab.Controls[0] as Editor).CurrentLineColor = Color.Transparent;
             }
             if (CurrentTB != null)
                 CurrentTB.Invalidate();
@@ -1686,7 +1694,7 @@ namespace TestExerciser
         private void btShowFoldingLines_Click(object sender, EventArgs e)
         {
             foreach (FATabStripItem tab in tsFiles.Items)
-                (tab.Controls[0] as FastColoredTextBox).ShowFoldingLines = btShowFoldingLines.Checked;
+                (tab.Controls[0] as Editor).ShowFoldingLines = btShowFoldingLines.Checked;
             if (CurrentTB != null)
                 CurrentTB.Invalidate();
         }
@@ -1732,7 +1740,7 @@ namespace TestExerciser
             gotoButton.DropDownItems.Clear();
             foreach (Control tab in tsFiles.Items)
             {
-                FastColoredTextBox tb = tab.Controls[0] as FastColoredTextBox;
+                Editor tb = tab.Controls[0] as Editor;
                 foreach (var bookmark in tb.Bookmarks)
                 {
                     var item = gotoButton.DropDownItems.Add(bookmark.Name + " [" + Path.GetFileNameWithoutExtension(tab.Tag as String) + "]");
@@ -1810,7 +1818,7 @@ namespace TestExerciser
 
         private void tsFiles_TabStripItemClosing(TabStripItemClosingEventArgs e)
         {
-            if ((e.Item.Controls[0] as FastColoredTextBox).IsChanged)
+            if ((e.Item.Controls[0] as Editor).IsChanged)
             {
                 switch (MessageBox.Show("您确定要保存文件： " + e.Item.Title + "吗 ?", "保存提示：", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information))
                 {
@@ -1936,6 +1944,8 @@ namespace TestExerciser
                 {
                     addToRootPaths(workspacePath);
                     getTreeViewData(workspacePath);
+                    Properties.Settings.Default.lastProjectPath=workspacePath;
+                    Properties.Settings.Default.Save();
                 }
             }
         }
@@ -2634,11 +2644,11 @@ namespace TestExerciser
 
         private void tsFiles_KeyDown(object sender, KeyEventArgs e)
         {
-            FastColoredTextBoxNS.AutocompleteMenu popupMenu;
+            EditorNS.AutocompleteMenu popupMenu;
             if (e.KeyData == (Keys.K | Keys.Control))
             {
-                var tb = sender as FastColoredTextBox;
-                popupMenu = new FastColoredTextBoxNS.AutocompleteMenu(tb);
+                var tb = sender as Editor;
+                popupMenu = new EditorNS.AutocompleteMenu(tb);
                 popupMenu.Show(true);
                 e.Handled = true;
             }

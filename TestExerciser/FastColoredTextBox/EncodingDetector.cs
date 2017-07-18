@@ -7,7 +7,7 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     public static class EncodingDetector
     {

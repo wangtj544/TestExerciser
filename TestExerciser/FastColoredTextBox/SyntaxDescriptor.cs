@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using System;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     public class SyntaxDescriptor: IDisposable
     {

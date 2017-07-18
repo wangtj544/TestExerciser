@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     /// <summary>
     /// Line index and char index

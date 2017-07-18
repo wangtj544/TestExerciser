@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     /// <summary>
     /// This class contains the source text (chars and styles).
@@ -28,7 +28,7 @@ namespace FastColoredTextBoxNS
         /// </summary>
         public event EventHandler<LinePushedEventArgs> LinePushed;
 
-        public FileTextSource(FastColoredTextBox currentTB)
+        public FileTextSource(Editor currentTB)
             : base(currentTB)
         {
             timer.Interval = 10000;

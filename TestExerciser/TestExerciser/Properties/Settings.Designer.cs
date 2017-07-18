@@ -45,5 +45,29 @@ namespace TestExerciser.Properties {
                 return ((string)(this["TestExerciserConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pythonLibraryPath {
+            get {
+                return ((string)(this["pythonLibraryPath"]));
+            }
+            set {
+                this["pythonLibraryPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string lastProjectPath {
+            get {
+                return ((string)(this["lastProjectPath"]));
+            }
+            set {
+                this["lastProjectPath"] = value;
+            }
+        }
     }
 }

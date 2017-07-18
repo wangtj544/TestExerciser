@@ -5,7 +5,7 @@ using System.Collections;
 using System.Drawing;
 using System.IO;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     /// <summary>
     /// This class contains the source text (chars and styles).
@@ -17,7 +17,7 @@ namespace FastColoredTextBoxNS
         protected LinesAccessor linesAccessor;
         int lastLineUniqueId;
         public CommandManager Manager { get; set; }
-        FastColoredTextBox currentTB;
+        Editor currentTB;
         /// <summary>
         /// Styles
         /// </summary>
@@ -53,7 +53,8 @@ namespace FastColoredTextBoxNS
         /// <summary>
         /// Current focused FastColoredTextBox
         /// </summary>
-        public FastColoredTextBox CurrentTB {
+        public Editor CurrentTB
+        {
             get { return currentTB; }
             set {
                 if (currentTB == value)
@@ -86,7 +87,7 @@ namespace FastColoredTextBoxNS
         /// </summary>
         public TextStyle DefaultStyle { get; set; }
 
-        public TextSource(FastColoredTextBox currentTB)
+        public TextSource(Editor currentTB)
         {
             this.CurrentTB = currentTB;
             linesAccessor = new LinesAccessor(this);

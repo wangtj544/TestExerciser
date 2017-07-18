@@ -7,7 +7,7 @@ using System.Drawing.Drawing2D;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FastColoredTextBoxNS
+namespace EditorNS
 {
     public partial class Ruler : UserControl
     {
@@ -22,10 +22,10 @@ namespace FastColoredTextBoxNS
         [DefaultValue(typeof(Color), "Black")]
         public Color CaretTickColor { get; set; }
 
-        FastColoredTextBox target;
+        Editor target;
 
         [Description("Target FastColoredTextBox")]
-        public FastColoredTextBox Target
+        public Editor Target
         {
             get { return target; }
             set
@@ -59,14 +59,14 @@ namespace FastColoredTextBoxNS
                 TargetChanged(this, EventArgs.Empty);
         }
 
-        protected virtual void UnSubscribe(FastColoredTextBox target)
+        protected virtual void UnSubscribe(Editor target)
         {
             target.Scroll -= new ScrollEventHandler(target_Scroll);
             target.SelectionChanged -= new EventHandler(target_SelectionChanged);
             target.VisibleRangeChanged -= new EventHandler(target_VisibleRangeChanged);
         }
 
-        protected virtual void Subscribe(FastColoredTextBox target)
+        protected virtual void Subscribe(Editor target)
         {
             target.Scroll += new ScrollEventHandler(target_Scroll);
             target.SelectionChanged += new EventHandler(target_SelectionChanged);
