@@ -422,7 +422,10 @@ namespace TestExerciser
         private void 执行工程ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
-            {                
+            {
+                TreeNode root = new TreeNode();
+                getResultData(root,selectTreeNodeFullPath());
+                Application.DoEvents();
                 getFiles(selectTreeNodeFullPath());                            
                 spbStatusBegin();
                 foreach (string strts in tsFilePath)
@@ -437,6 +440,9 @@ namespace TestExerciser
                         outPut("执行结束...");
                     }
                     runCmd("python.exe", strts);
+                    root.ImageIndex = 2;
+                    root.SelectedImageIndex = 2;
+
                 }
             }
             catch (Exception exception)
@@ -940,6 +946,42 @@ namespace TestExerciser
             this.KeyPreview = true;
         }
 
+        private void getResultData(string path)
+        {
+            TreeNode root = new TreeNode();
+            //root.Text = "MyTest";
+            getFiles(path, root);
+            stvStatus.Nodes.Add(root);
+            stvStatus.ExpandAll();
+            if (root.Text == "site-packages")
+            {
+                root.ImageIndex = 2;
+                root.SelectedImageIndex = 2;
+            }
+            else
+            {
+                root.ImageIndex = 0;
+                root.SelectedImageIndex = 0;
+            }
+        }
+
+        private void getResultData(TreeNode root, string path)
+        {
+            //root.Text = "MyTest";
+            getFiles(path, root);
+            stvStatus.Nodes.Add(root);
+            stvStatus.ExpandAll();
+            if (root.Text == "site-packages")
+            {
+                root.ImageIndex = 2;
+                root.SelectedImageIndex = 2;
+            }
+            else
+            {
+                root.ImageIndex = 0;
+                root.SelectedImageIndex = 0;
+            }
+        }
 
         /// <summary>
         /// 从树形目录中读取文件，对应生成树形节点
