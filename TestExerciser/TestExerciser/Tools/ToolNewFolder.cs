@@ -17,7 +17,9 @@ namespace TestExerciser.Tools
     {
         public static string folderLocation = null;
         public static bool isCreateFolder = false;
-        private string [] folders ;
+        //private string [] folders ;
+        string[] newFolderName;
+        List<string> newFolderNameList = new List<string>();
 
         public ToolNewFolder()
         {
@@ -32,12 +34,30 @@ namespace TestExerciser.Tools
                 if (myLoginInfo.isProjectName(this.stbFolderName.Text))
                 {
                     if (MainForm.selectedNodePath != "")
-                    {
-                        MainForm myMainForm = new MainForm();
+                    {                                                
                         folderLocation = MainForm.selectedNodePath + "\\" + this.stbFolderName.Text;
-                        if (Array.IndexOf<string>(newFolderName, folderLocation) != -1)
+                        DirectoryInfo myDirInfo = new DirectoryInfo(MainForm.selectedNodePath);
+                        DirectoryInfo [] chldFolders = myDirInfo.GetDirectories();
+                        foreach (DirectoryInfo chldFolder in chldFolders)
                         {
-                            MessageBox.Show("文件夹名称冲突，请修改工程名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            newFolderNameList.Add(chldFolder.Name);                            
+                            newFolderName = newFolderNameList.ToArray();
+                        }
+                        if (newFolderName != null)
+                        {
+                            if (Array.IndexOf<string>(newFolderName, this.stbFolderName.Text) != -1)
+                            {
+                                MessageBox.Show("文件夹名称冲突，请修改工程名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                this.IsCreateFolder = true;
+                                createFolder(folderLocation);
+                                this.txtStatus.ForeColor = Color.Green;
+                                this.txtStatus.Text = "创建信息：创建成功！";
+                                this.Close();
+                                this.DialogResult = DialogResult.OK;
+                            }
                         }
                         else
                         {
@@ -47,7 +67,7 @@ namespace TestExerciser.Tools
                             this.txtStatus.Text = "创建信息：创建成功！";
                             this.Close();
                             this.DialogResult = DialogResult.OK;
-                        }
+                        }                       
                     }
                     else
                     {
@@ -105,7 +125,6 @@ namespace TestExerciser.Tools
         }
 
 
-        string[] newFolderName;
-        List<string> newFolderNameList = new List<string>(); 
+        
     }
 }

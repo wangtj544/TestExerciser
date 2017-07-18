@@ -28,7 +28,9 @@ namespace TestExerciser
         {
             myManageDB.selectUserName();
             this.cbIfAuto.DataSource = ManageDB.fullNameList;
+            this.cbIfCover.DataSource = ManageDB.fullNameList;
             this.cbIfAuto.Text = null;
+            this.cbIfCover.Text = null;
         }
 
         private void btnSelectFile_Click(object sender, EventArgs e)

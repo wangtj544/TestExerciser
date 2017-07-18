@@ -88,8 +88,13 @@ namespace TestExerciser
                 if (!tree_Solution.SelectedNode.FullPath.Contains("\\"))
                 {
                     DialogResult deleteFolder = MessageBox.Show("确定要移除工程吗？", "消息提示：", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    tree_Solution.SelectedNode.Remove();
-                    InitializeControl();
+                    if (deleteFolder == DialogResult.Yes)
+                    {
+                        deleteRootPaths(selectTreeNodeFullPath());
+                        tree_Solution.SelectedNode.Remove();
+                        InitializeControl();
+                        deleteRootPaths(selectTreeNodeFullPath());
+                    }
                 }
                 else
                 {
@@ -98,9 +103,10 @@ namespace TestExerciser
                         DialogResult deleteFolder = MessageBox.Show("确定要删除所选内容？", "消息提示：", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                         if (deleteFolder == DialogResult.Yes)
                         {
+                            deleteRootPaths(selectTreeNodeFullPath());
                             delectDir(selectTreeNodeFullPath());
                             Directory.Delete(selectTreeNodeFullPath());
-                            this.tree_Solution.SelectedNode.Remove();
+                            this.tree_Solution.SelectedNode.Remove();                            
                         }
                     }
                     catch (Exception exception)
@@ -712,6 +718,12 @@ namespace TestExerciser
             root_paths = root_paths_list.ToArray();
         }
 
+        private void deleteRootPaths(string workspacePath)
+        {
+            List<string> root_paths_list = root_paths.ToList();
+            root_paths_list.Remove(workspacePath);
+            root_paths = root_paths_list.ToArray();
+        }
 
         /// <summary>
         /// 定位对应文件夹下的文件

@@ -146,15 +146,6 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataSetCaseReview.cs">
-      <DependentUpon>DataSetCaseReview.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="DataSetCaseReview.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetCaseReview.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DataSetExcelReader.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -517,17 +508,6 @@
       <DependentUpon>UserResetPwd.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\SharpPlink-Win32.svnExe" />
-    <None Include="DataSetCaseReview.xsc">
-      <DependentUpon>DataSetCaseReview.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetCaseReview.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetCaseReview.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSetCaseReview.xss">
-      <DependentUpon>DataSetCaseReview.xsd</DependentUpon>
-    </None>
     <None Include="DataSetExcelReader.xsc">
       <DependentUpon>DataSetExcelReader.xsd</DependentUpon>
     </None>
