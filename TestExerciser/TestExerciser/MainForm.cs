@@ -410,8 +410,10 @@ namespace TestExerciser
         private void 执行项目ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             rootFolder = selectProjectFolder.SelectedPath;
+            rootFolder = selectTreeNodeFullPath();
             writeRunProjectSupportFile(rootFolder);
             runCmd("python.exe", @".\__runner.py");
+            sendLogMail();
         } 
 
         /// <summary>
@@ -440,10 +442,7 @@ namespace TestExerciser
                         outPut("执行结束...");
                     }
                     runCmd("python.exe", strts);
-                    root.ImageIndex = 2;
-                    root.SelectedImageIndex = 2;
-
-                }
+                    root.ImageIndex = 2;                }
             }
             catch (Exception exception)
             {
@@ -980,7 +979,8 @@ namespace TestExerciser
             {
                 root.ImageIndex = 0;
                 root.SelectedImageIndex = 0;
-            }
+
+            } 
         }
 
         /// <summary>
@@ -3016,16 +3016,25 @@ namespace TestExerciser
             }
         }
 
-       
 
-        
+        private void sendLogMail()
+        {
+            if (ManageDB.userEmailAddress != null)
+            {
+                SendMail mail = new SendMail();
+                mail.mailFrom = "TestExerciser@163.com";
+                mail.mailPwd = "admin123";
+                mail.mailSubject = "用例执行结果";
+                mail.mailBody = MainForm.rootFolder + @"\.log";
+                mail.isbodyHtml = false;
+                mail.host = "smtp.163.com";
+                mail.mailToArray = new string[] { "TestExerciser@outlook.com", ManageDB.userEmailAddress };
+                mail.mailCcArray = new string[] { };
+                if (mail.Send())
+                {
 
-       
-     
-
-        
-
-           
-       
+                }
+            }           
+        }   
     }
 }
