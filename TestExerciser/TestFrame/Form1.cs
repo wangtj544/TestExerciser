@@ -16,5 +16,10 @@ namespace TestFrame
         {
             InitializeComponent();
         }
+
+        private void label1_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

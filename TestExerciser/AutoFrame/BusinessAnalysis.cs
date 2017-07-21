@@ -10,23 +10,50 @@ namespace AutoFrame
 {
     public class BusinessAnalysis
     {
-        void findProject(string projectName)
+        //桌面
+        AutomationElement RootElement = AutomationElement.RootElement;
+        //产品打开后工程管理窗口
+        AutomationElement windowProject;
+        //产品
+        AutomationElement dataGridProject;
+
+
+        /// <summary>
+        /// 定位窗口
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="localizedControlType"></param>
+        /// <param name="className"></param>
+        void findWinodw(string name,string localizedControlType,string className)
         {
-            //先识别桌面 
-            AutomationElement RootElement = AutomationElement.RootElement;
+            //先识别桌面             
             //找到分析工具打开的窗口
-            AutomationElement CalcWindows = RootElement.FindFirst(TreeScope.Children,
+            windowProject = RootElement.FindFirst(TreeScope.Children,
             new AndCondition(
-            new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.DataGrid),
-            new PropertyCondition(AutomationElement.NameProperty, ""),
-            new PropertyCondition(AutomationElement.LocalizedControlTypeProperty,"数据网格")));
-
-            //找到项目名称显示列表
-
-
+            new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Window),
+            new PropertyCondition(AutomationElement.NameProperty, name),
+            new PropertyCondition(AutomationElement.LocalizedControlTypeProperty,localizedControlType),
+            new PropertyCondition(AutomationElement.ClassNameProperty, className)            
+            ));
             //找到项目名称显示列表中对应项
-        }  
+        }
 
-        
+        void findDataGridProjectList(string name, string localizedControlType, string className)
+        {
+            findWinodw(Config.NAME_PROJECT_LIST, Config.LOCALIZEDCONTROLTYPE_PROJECT_LIST, Config.CLASSNAME_PROJECT_LIST);
+            //找到项目名称显示列表
+            dataGridProject = windowProject.FindFirst(TreeScope.Children,
+            new AndCondition(
+            new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Window),
+            new PropertyCondition(AutomationElement.NameProperty, name),
+            new PropertyCondition(AutomationElement.LocalizedControlTypeProperty, localizedControlType),
+            new PropertyCondition(AutomationElement.ClassNameProperty, className)
+            ));
+        }
+
+        void findDataGridProjectSpecific()
+        {
+            
+        }
     }
 }

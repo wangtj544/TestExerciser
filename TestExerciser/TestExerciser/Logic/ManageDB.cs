@@ -23,8 +23,9 @@ namespace TestExerciser.Logic
         SqlDataReader myReader = null;
       
         public static string strcon = Properties.Settings.Default.ConnectionString;
-        string[] fullName; 
-        public static List<string> fullNameList = new List<string>();
+        string[] fullName;
+        public static List<string> autoFullNameList = new List<string>();
+        public static List<string> coverFullNameList = new List<string>();
 
 
         public bool checkUserNameDuplicate(string userName)
@@ -235,7 +236,7 @@ namespace TestExerciser.Logic
             return falg;
         }
 
-        public bool selectUserName()
+        public bool selectAutoFullName()
         {
             bool falg = false;
             string mySQL = "select fullName from 用户管理";
@@ -248,9 +249,65 @@ namespace TestExerciser.Logic
                 myda.Fill(mydt);
                 foreach (DataRow row in mydt.Rows)
                 {
-                    fullNameList.Add(row["fullName"].ToString());
-                    fullName = fullNameList.ToArray();
+                    autoFullNameList.Add(row["fullName"].ToString());
+                    fullName = autoFullNameList.ToArray();
                 }            
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                mycon.Close();
+            }
+            return falg;
+        }
+
+        public bool selectCoverFullName()
+        {
+            bool falg = false;
+            string mySQL = "select fullName from 用户管理";
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlDataAdapter myda = new SqlDataAdapter(mySQL, mycon);
+                DataTable mydt = new DataTable();
+                myda.Fill(mydt);
+                foreach (DataRow row in mydt.Rows)
+                {
+                    coverFullNameList.Add(row["fullName"].ToString());
+                    fullName = coverFullNameList.ToArray();
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                mycon.Close();
+            }
+            return falg;
+        }
+
+        public bool clearnFullNameList()
+        {
+            bool falg = false;
+            string mySQL = "select fullName from 用户管理";
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlDataAdapter myda = new SqlDataAdapter(mySQL, mycon);
+                DataTable mydt = new DataTable();
+                myda.Fill(mydt);
+                foreach (DataRow row in mydt.Rows)
+                {
+                    autoFullNameList.Remove(row["fullName"].ToString());
+                    coverFullNameList.Remove(row["fullName"].ToString());
+                }
             }
             catch (Exception exception)
             {
