@@ -23,9 +23,12 @@ namespace TestExerciser.Logic
         SqlDataReader myReader = null;
       
         public static string strcon = Properties.Settings.Default.ConnectionString;
-        string[] fullName;
-        public static List<string> autoFullNameList = new List<string>();
-        public static List<string> coverFullNameList = new List<string>();
+        string[] fullName = null;
+        string[] email = null;
+
+        public static List<ListItem> autoList = new List<ListItem>();
+        public static List<ListItem> coverList = new List<ListItem>();
+
 
 
         public bool checkUserNameDuplicate(string userName)
@@ -236,38 +239,36 @@ namespace TestExerciser.Logic
             return falg;
         }
 
-        public bool selectAutoFullName()
+        public void selectAutoFullName()
         {
-            bool falg = false;
-            string mySQL = "select fullName from 用户管理";
-            try
-            {
-                mycon = new SqlConnection(strcon);
-                mycon.Open();
-                SqlDataAdapter myda = new SqlDataAdapter(mySQL, mycon);
-                DataTable mydt = new DataTable();
-                myda.Fill(mydt);
-                foreach (DataRow row in mydt.Rows)
-                {
-                    autoFullNameList.Add(row["fullName"].ToString());
-                    fullName = autoFullNameList.ToArray();
-                }            
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                mycon.Close();
-            }
-            return falg;
+            selectItems(autoList, fullName);
         }
 
-        public bool selectCoverFullName()
+        public void selectCoverFullName()
+        {
+            selectItems(coverList, fullName);
+        }
+
+        public void clearFullNameList()
+        {
+            clearList(autoList,coverList);
+        }
+
+
+        public void selectAuto()
+        {
+            selectItems(autoList,email);
+        }
+
+        public void selectCover()
+        {
+            selectItems(coverList,email);
+        }
+
+        public bool selectItems(List<ListItem>list,Array itemList)
         {
             bool falg = false;
-            string mySQL = "select fullName from 用户管理";
+            string mySQL = "select fullName [email] from 用户管理";
             try
             {
                 mycon = new SqlConnection(strcon);
@@ -277,8 +278,8 @@ namespace TestExerciser.Logic
                 myda.Fill(mydt);
                 foreach (DataRow row in mydt.Rows)
                 {
-                    coverFullNameList.Add(row["fullName"].ToString());
-                    fullName = coverFullNameList.ToArray();
+                    list.Add(new ListItem(row["fullName"].ToString(),row["email"].ToString()));
+                    itemList = list.ToArray();
                 }
             }
             catch (Exception exception)
@@ -292,7 +293,8 @@ namespace TestExerciser.Logic
             return falg;
         }
 
-        public bool clearnFullNameList()
+
+        public bool clearList(List<ListItem> list1, List<ListItem> list2)
         {
             bool falg = false;
             string mySQL = "select fullName from 用户管理";
@@ -305,8 +307,8 @@ namespace TestExerciser.Logic
                 myda.Fill(mydt);
                 foreach (DataRow row in mydt.Rows)
                 {
-                    autoFullNameList.Remove(row["fullName"].ToString());
-                    coverFullNameList.Remove(row["fullName"].ToString());
+                    list1.Remove(new ListItem(row["fullName"].ToString(),row["email"].ToString()));
+                    list2.Remove(new ListItem(row["fullName"].ToString(), row["email"].ToString()));
                 }
             }
             catch (Exception exception)

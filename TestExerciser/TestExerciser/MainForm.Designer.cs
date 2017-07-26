@@ -1111,49 +1111,49 @@
             // 红ToolStripMenuItem
             // 
             this.红ToolStripMenuItem.Name = "红ToolStripMenuItem";
-            this.红ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.红ToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.红ToolStripMenuItem.Text = "红(&1)";
             this.红ToolStripMenuItem.Click += new System.EventHandler(this.红ToolStripMenuItem_Click);
             // 
             // 粉ToolStripMenuItem
             // 
             this.粉ToolStripMenuItem.Name = "粉ToolStripMenuItem";
-            this.粉ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.粉ToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.粉ToolStripMenuItem.Text = "粉(&2)";
             this.粉ToolStripMenuItem.Click += new System.EventHandler(this.粉2ToolStripMenuItem_Click);
             // 
             // 绿ToolStripMenuItem
             // 
             this.绿ToolStripMenuItem.Name = "绿ToolStripMenuItem";
-            this.绿ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.绿ToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.绿ToolStripMenuItem.Text = "绿(&3)";
             this.绿ToolStripMenuItem.Click += new System.EventHandler(this.绿ToolStripMenuItem_Click);
             // 
             // 黄ToolStripMenuItem
             // 
             this.黄ToolStripMenuItem.Name = "黄ToolStripMenuItem";
-            this.黄ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.黄ToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.黄ToolStripMenuItem.Text = "黄(&4)";
             this.黄ToolStripMenuItem.Click += new System.EventHandler(this.黄ToolStripMenuItem_Click);
             // 
             // 蓝ToolStripMenuItem
             // 
             this.蓝ToolStripMenuItem.Name = "蓝ToolStripMenuItem";
-            this.蓝ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.蓝ToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.蓝ToolStripMenuItem.Text = "蓝(&5)";
             this.蓝ToolStripMenuItem.Click += new System.EventHandler(this.蓝ToolStripMenuItem_Click);
             // 
             // 紫ToolStripMenuItem
             // 
             this.紫ToolStripMenuItem.Name = "紫ToolStripMenuItem";
-            this.紫ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.紫ToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.紫ToolStripMenuItem.Text = "紫(&6)";
             this.紫ToolStripMenuItem.Click += new System.EventHandler(this.紫ToolStripMenuItem_Click);
             // 
             // 默认DToolStripMenuItem
             // 
             this.默认DToolStripMenuItem.Name = "默认DToolStripMenuItem";
-            this.默认DToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.默认DToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.默认DToolStripMenuItem.Text = "默认(&D)";
             this.默认DToolStripMenuItem.Click += new System.EventHandler(this.默认DToolStripMenuItem_Click);
             // 
@@ -2468,7 +2468,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.23391F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 596F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel5.Controls.Add(this.stsOutPut, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.labtimeNow, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.spbStatus, 1, 0);
@@ -2531,7 +2531,7 @@
             this.stsOutPut.Location = new System.Drawing.Point(0, 0);
             this.stsOutPut.Name = "stsOutPut";
             this.stsOutPut.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.stsOutPut.Size = new System.Drawing.Size(485, 25);
+            this.stsOutPut.Size = new System.Drawing.Size(484, 25);
             this.stsOutPut.SkinAllColor = true;
             this.stsOutPut.TabIndex = 1;
             this.stsOutPut.Text = "skinToolStrip1";
@@ -2628,7 +2628,7 @@
             this.labtimeNow.BackColor = System.Drawing.Color.Transparent;
             this.labtimeNow.BorderColor = System.Drawing.Color.White;
             this.labtimeNow.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labtimeNow.Location = new System.Drawing.Point(1610, 4);
+            this.labtimeNow.Location = new System.Drawing.Point(1609, 4);
             this.labtimeNow.Name = "labtimeNow";
             this.labtimeNow.Size = new System.Drawing.Size(0, 17);
             this.labtimeNow.TabIndex = 5;
@@ -2641,7 +2641,7 @@
             this.spbStatus.BarRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.spbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.spbStatus.ForeColor = System.Drawing.Color.Red;
-            this.spbStatus.Location = new System.Drawing.Point(488, 3);
+            this.spbStatus.Location = new System.Drawing.Point(487, 3);
             this.spbStatus.Name = "spbStatus";
             this.spbStatus.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.spbStatus.Size = new System.Drawing.Size(464, 20);
@@ -2688,7 +2688,7 @@
             this.tStripReport.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbLogView});
-            this.tStripReport.Location = new System.Drawing.Point(1613, 0);
+            this.tStripReport.Location = new System.Drawing.Point(1612, 0);
             this.tStripReport.Name = "tStripReport";
             this.tStripReport.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Size = new System.Drawing.Size(37, 25);
@@ -2716,7 +2716,7 @@
             // dtpTimeNow
             // 
             this.dtpTimeNow.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dtpTimeNow.Location = new System.Drawing.Point(1432, 3);
+            this.dtpTimeNow.Location = new System.Drawing.Point(1431, 3);
             this.dtpTimeNow.Name = "dtpTimeNow";
             this.dtpTimeNow.Size = new System.Drawing.Size(116, 21);
             this.dtpTimeNow.TabIndex = 6;

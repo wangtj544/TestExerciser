@@ -65,6 +65,7 @@
             this.tlpSelectExcelFile = new System.Windows.Forms.TableLayoutPanel();
             this.cbSelectExcel = new CCWin.SkinControl.SkinComboBox();
             this.labSelectExcel = new System.Windows.Forms.Label();
+            this.tlpSelectTestCase = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.dgvCommit = new System.Windows.Forms.DataGridView();
             this.tlpAddComment = new System.Windows.Forms.TableLayoutPanel();
@@ -521,6 +522,7 @@
             this.btnLaunch.TabIndex = 5;
             this.btnLaunch.Text = "发起评审";
             this.btnLaunch.UseVisualStyleBackColor = false;
+            this.btnLaunch.Click += new System.EventHandler(this.btnLaunch_Click);
             // 
             // gbselectCases
             // 
@@ -538,6 +540,7 @@
             this.tlpExcelFileList.ColumnCount = 1;
             this.tlpExcelFileList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpExcelFileList.Controls.Add(this.tlpSelectExcelFile, 0, 1);
+            this.tlpExcelFileList.Controls.Add(this.tlpSelectTestCase, 0, 0);
             this.tlpExcelFileList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpExcelFileList.Location = new System.Drawing.Point(3, 17);
             this.tlpExcelFileList.Name = "tlpExcelFileList";
@@ -585,6 +588,25 @@
             this.labSelectExcel.TabIndex = 1;
             this.labSelectExcel.Text = "选择用例:";
             // 
+            // tlpSelectTestCase
+            // 
+            this.tlpSelectTestCase.ColumnCount = 1;
+            this.tlpSelectTestCase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpSelectTestCase.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpSelectTestCase.Location = new System.Drawing.Point(3, 3);
+            this.tlpSelectTestCase.Name = "tlpSelectTestCase";
+            this.tlpSelectTestCase.RowCount = 8;
+            this.tlpSelectTestCase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpSelectTestCase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpSelectTestCase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpSelectTestCase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpSelectTestCase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpSelectTestCase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpSelectTestCase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpSelectTestCase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpSelectTestCase.Size = new System.Drawing.Size(343, 249);
+            this.tlpSelectTestCase.TabIndex = 3;
+            // 
             // splitContainer4
             // 
             this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -624,7 +646,7 @@
             this.tlpAddComment.Name = "tlpAddComment";
             this.tlpAddComment.RowCount = 1;
             this.tlpAddComment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpAddComment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 204F));
+            this.tlpAddComment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 236F));
             this.tlpAddComment.Size = new System.Drawing.Size(1072, 236);
             this.tlpAddComment.TabIndex = 0;
             // 
@@ -661,7 +683,7 @@
             // 
             this.splitContainer3.Panel2.Controls.Add(this.gbAnalyze);
             this.splitContainer3.Size = new System.Drawing.Size(267, 903);
-            this.splitContainer3.SplitterDistance = 450;
+            this.splitContainer3.SplitterDistance = 449;
             this.splitContainer3.TabIndex = 1;
             // 
             // gbFlow
@@ -670,7 +692,7 @@
             this.gbFlow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbFlow.Location = new System.Drawing.Point(0, 0);
             this.gbFlow.Name = "gbFlow";
-            this.gbFlow.Size = new System.Drawing.Size(267, 450);
+            this.gbFlow.Size = new System.Drawing.Size(267, 449);
             this.gbFlow.TabIndex = 0;
             this.gbFlow.TabStop = false;
             this.gbFlow.Text = "评审流程与结果：";
@@ -695,7 +717,7 @@
             this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCommitResults.Size = new System.Drawing.Size(261, 430);
+            this.tlpCommitResults.Size = new System.Drawing.Size(261, 429);
             this.tlpCommitResults.TabIndex = 6;
             // 
             // sbStep6
@@ -707,7 +729,7 @@
             this.sbStep6.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbStep6.DownBack = null;
             this.sbStep6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sbStep6.Location = new System.Drawing.Point(56, 373);
+            this.sbStep6.Location = new System.Drawing.Point(56, 372);
             this.sbStep6.MouseBack = null;
             this.sbStep6.Name = "sbStep6";
             this.sbStep6.NormlBack = null;
@@ -812,7 +834,7 @@
             this.gbAnalyze.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbAnalyze.Location = new System.Drawing.Point(0, 0);
             this.gbAnalyze.Name = "gbAnalyze";
-            this.gbAnalyze.Size = new System.Drawing.Size(267, 449);
+            this.gbAnalyze.Size = new System.Drawing.Size(267, 450);
             this.gbAnalyze.TabIndex = 0;
             this.gbAnalyze.TabStop = false;
             this.gbAnalyze.Text = "统计与分析：";
@@ -832,7 +854,7 @@
             series1.Legend = "Legend1";
             series1.Name = "SerCapability";
             this.chartForAnalyze.Series.Add(series1);
-            this.chartForAnalyze.Size = new System.Drawing.Size(261, 429);
+            this.chartForAnalyze.Size = new System.Drawing.Size(261, 430);
             this.chartForAnalyze.TabIndex = 0;
             // 
             // selectFileDialog
@@ -948,5 +970,6 @@
         private System.Windows.Forms.Label labSelectExcel;
         private System.Windows.Forms.GroupBox gbCoverFullNameList;
         public System.Windows.Forms.TableLayoutPanel tlpCoverFullNameList;
+        private System.Windows.Forms.TableLayoutPanel tlpSelectTestCase;
     }
 }

@@ -19,5 +19,8 @@
     <Setting Name="lastProjectPath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="serverPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@"\\172.20.32.147\DATA\TestCaseReviewExcelPool\"</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

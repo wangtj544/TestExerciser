@@ -162,6 +162,7 @@
       <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
     </Compile>
     <Compile Include="Logic\CmdCallback.cs" />
+    <Compile Include="Logic\ListItem.cs" />
     <Compile Include="MainBugManager.cs">
       <SubType>Form</SubType>
     </Compile>

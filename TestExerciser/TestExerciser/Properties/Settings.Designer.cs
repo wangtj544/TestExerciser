@@ -69,5 +69,17 @@ namespace TestExerciser.Properties {
                 this["lastProjectPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("@\"\\\\172.20.32.147\\DATA\\TestCaseReviewExcelPool\\\"")]
+        public string serverPath {
+            get {
+                return ((string)(this["serverPath"]));
+            }
+            set {
+                this["serverPath"] = value;
+            }
+        }
     }
 }
