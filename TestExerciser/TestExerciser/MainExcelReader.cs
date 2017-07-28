@@ -38,7 +38,7 @@ namespace TestExerciser
         /// </summary>
         /// <param name="sheetName"></param>
         /// <returns></returns>
-        private DataTable GetDataFromExcelToDT(string sheetName)
+        public DataTable GetDataFromExcelToDT(string sheetName)
         {
             bool hasTitle = true;
             if(openExcelFileDialog.ShowDialog()==DialogResult.OK)
@@ -467,6 +467,11 @@ namespace TestExerciser
                     this.Close();
                 }
             }   
+        }
+
+        private void MainExcelReader_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

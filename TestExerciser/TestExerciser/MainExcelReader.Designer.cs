@@ -249,6 +249,7 @@
             this.Name = "MainExcelReader";
             this.Text = "脚本智能生成";
             this.TitleCenter = false;
+            this.Load += new System.EventHandler(this.MainExcelReader_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);

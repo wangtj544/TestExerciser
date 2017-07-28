@@ -20,7 +20,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="serverPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@"\\172.20.32.147\DATA\TestCaseReviewExcelPool\"</Value>
+      <Value Profile="(Default)">172.20.32.147</Value>
     </Setting>
   </Settings>
 </SettingsFile>

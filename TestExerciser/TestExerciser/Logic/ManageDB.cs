@@ -23,11 +23,9 @@ namespace TestExerciser.Logic
         SqlDataReader myReader = null;
       
         public static string strcon = Properties.Settings.Default.ConnectionString;
-        string[] fullName = null;
-        string[] email = null;
+        public static List<ListItem> items = new List<ListItem>();
 
-        public static List<ListItem> autoList = new List<ListItem>();
-        public static List<ListItem> coverList = new List<ListItem>();
+        public static  ListItem listItem;
 
 
 
@@ -239,36 +237,10 @@ namespace TestExerciser.Logic
             return falg;
         }
 
-        public void selectAutoFullName()
-        {
-            selectItems(autoList, fullName);
-        }
-
-        public void selectCoverFullName()
-        {
-            selectItems(coverList, fullName);
-        }
-
-        public void clearFullNameList()
-        {
-            clearList(autoList,coverList);
-        }
-
-
-        public void selectAuto()
-        {
-            selectItems(autoList,email);
-        }
-
-        public void selectCover()
-        {
-            selectItems(coverList,email);
-        }
-
-        public bool selectItems(List<ListItem>list,Array itemList)
+        public bool selectItems(ComboBox comBox)
         {
             bool falg = false;
-            string mySQL = "select fullName [email] from 用户管理";
+            string mySQL = "select * from 用户管理";
             try
             {
                 mycon = new SqlConnection(strcon);
@@ -278,9 +250,12 @@ namespace TestExerciser.Logic
                 myda.Fill(mydt);
                 foreach (DataRow row in mydt.Rows)
                 {
-                    list.Add(new ListItem(row["fullName"].ToString(),row["email"].ToString()));
-                    itemList = list.ToArray();
+                    listItem = new ListItem(row["email"].ToString(),row["fullName"].ToString()+"("+row["email"].ToString() +")");
+                    comBox.Items.Add(listItem);
                 }
+                comBox.DisplayMember = "Text";
+                comBox.ValueMember = "Value";
+                listItem = (ListItem)comBox.SelectedItem;
             }
             catch (Exception exception)
             {
@@ -294,10 +269,10 @@ namespace TestExerciser.Logic
         }
 
 
-        public bool clearList(List<ListItem> list1, List<ListItem> list2)
+        public bool clearList(ComboBox comBox)
         {
             bool falg = false;
-            string mySQL = "select fullName from 用户管理";
+            string mySQL = "select * from 用户管理";
             try
             {
                 mycon = new SqlConnection(strcon);
@@ -307,8 +282,7 @@ namespace TestExerciser.Logic
                 myda.Fill(mydt);
                 foreach (DataRow row in mydt.Rows)
                 {
-                    list1.Remove(new ListItem(row["fullName"].ToString(),row["email"].ToString()));
-                    list2.Remove(new ListItem(row["fullName"].ToString(), row["email"].ToString()));
+                    comBox.Items.Clear();
                 }
             }
             catch (Exception exception)

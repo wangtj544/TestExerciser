@@ -72,7 +72,7 @@ namespace TestExerciser.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"\\\\172.20.32.147\\DATA\\TestCaseReviewExcelPool\\\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("172.20.32.147")]
         public string serverPath {
             get {
                 return ((string)(this["serverPath"]));

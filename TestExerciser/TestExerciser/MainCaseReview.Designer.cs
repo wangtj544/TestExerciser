@@ -133,7 +133,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer1.Size = new System.Drawing.Size(1722, 903);
+            this.splitContainer1.Size = new System.Drawing.Size(1722, 789);
             this.splitContainer1.SplitterDistance = 1451;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -144,7 +144,7 @@
             this.tabControlReview.Location = new System.Drawing.Point(0, 0);
             this.tabControlReview.Name = "tabControlReview";
             this.tabControlReview.SelectedIndex = 0;
-            this.tabControlReview.Size = new System.Drawing.Size(1451, 903);
+            this.tabControlReview.Size = new System.Drawing.Size(1451, 789);
             this.tabControlReview.TabIndex = 1;
             // 
             // tabPageCommit
@@ -153,7 +153,7 @@
             this.tabPageCommit.Location = new System.Drawing.Point(4, 22);
             this.tabPageCommit.Name = "tabPageCommit";
             this.tabPageCommit.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCommit.Size = new System.Drawing.Size(1443, 877);
+            this.tabPageCommit.Size = new System.Drawing.Size(1443, 763);
             this.tabPageCommit.TabIndex = 0;
             this.tabPageCommit.Text = "评审流程";
             this.tabPageCommit.UseVisualStyleBackColor = true;
@@ -172,7 +172,7 @@
             // sCMain.Panel2
             // 
             this.sCMain.Panel2.Controls.Add(this.splitContainer4);
-            this.sCMain.Size = new System.Drawing.Size(1437, 871);
+            this.sCMain.Size = new System.Drawing.Size(1437, 757);
             this.sCMain.SplitterDistance = 361;
             this.sCMain.TabIndex = 1;
             // 
@@ -190,7 +190,7 @@
             this.tlpPreCommit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.39669F));
             this.tlpPreCommit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.60331F));
             this.tlpPreCommit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpPreCommit.Size = new System.Drawing.Size(361, 871);
+            this.tlpPreCommit.Size = new System.Drawing.Size(361, 757);
             this.tlpPreCommit.TabIndex = 0;
             // 
             // btnStart
@@ -202,7 +202,7 @@
             this.btnStart.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnStart.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnStart.DownBack = null;
-            this.btnStart.Location = new System.Drawing.Point(131, 844);
+            this.btnStart.Location = new System.Drawing.Point(131, 730);
             this.btnStart.MouseBack = null;
             this.btnStart.Name = "btnStart";
             this.btnStart.NormlBack = null;
@@ -210,6 +210,7 @@
             this.btnStart.TabIndex = 4;
             this.btnStart.Text = "开始评审";
             this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // gbPreReview
             // 
@@ -217,7 +218,7 @@
             this.gbPreReview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbPreReview.Location = new System.Drawing.Point(3, 3);
             this.gbPreReview.Name = "gbPreReview";
-            this.gbPreReview.Size = new System.Drawing.Size(355, 518);
+            this.gbPreReview.Size = new System.Drawing.Size(355, 447);
             this.gbPreReview.TabIndex = 8;
             this.gbPreReview.TabStop = false;
             this.gbPreReview.Text = "预置评审：";
@@ -236,16 +237,16 @@
             this.tlpCommitSteps.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.44954F));
             this.tlpCommitSteps.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.55046F));
             this.tlpCommitSteps.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpCommitSteps.Size = new System.Drawing.Size(349, 498);
+            this.tlpCommitSteps.Size = new System.Drawing.Size(349, 427);
             this.tlpCommitSteps.TabIndex = 6;
             // 
             // gbAddReviewer
             // 
             this.gbAddReviewer.Controls.Add(this.tlpAddCommiter);
             this.gbAddReviewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbAddReviewer.Location = new System.Drawing.Point(3, 70);
+            this.gbAddReviewer.Location = new System.Drawing.Point(3, 60);
             this.gbAddReviewer.Name = "gbAddReviewer";
-            this.gbAddReviewer.Size = new System.Drawing.Size(343, 394);
+            this.gbAddReviewer.Size = new System.Drawing.Size(343, 333);
             this.gbAddReviewer.TabIndex = 6;
             this.gbAddReviewer.TabStop = false;
             this.gbAddReviewer.Text = "第二步：添加评审人";
@@ -262,7 +263,7 @@
             this.tlpAddCommiter.RowCount = 2;
             this.tlpAddCommiter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpAddCommiter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 176F));
-            this.tlpAddCommiter.Size = new System.Drawing.Size(337, 374);
+            this.tlpAddCommiter.Size = new System.Drawing.Size(337, 313);
             this.tlpAddCommiter.TabIndex = 0;
             // 
             // tlpAddCommiters
@@ -287,14 +288,14 @@
             this.tlpAddCommiters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpAddCommiters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpAddCommiters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpAddCommiters.Size = new System.Drawing.Size(331, 192);
+            this.tlpAddCommiters.Size = new System.Drawing.Size(331, 131);
             this.tlpAddCommiters.TabIndex = 0;
             // 
             // labIfAuto
             // 
             this.labIfAuto.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labIfAuto.AutoSize = true;
-            this.labIfAuto.Location = new System.Drawing.Point(3, 114);
+            this.labIfAuto.Location = new System.Drawing.Point(3, 74);
             this.labIfAuto.Name = "labIfAuto";
             this.labIfAuto.Size = new System.Drawing.Size(71, 12);
             this.labIfAuto.TabIndex = 0;
@@ -306,7 +307,7 @@
             this.cbIfCover.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbIfCover.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIfCover.FormattingEnabled = true;
-            this.cbIfCover.Location = new System.Drawing.Point(92, 157);
+            this.cbIfCover.Location = new System.Drawing.Point(92, 102);
             this.cbIfCover.Name = "cbIfCover";
             this.cbIfCover.Size = new System.Drawing.Size(236, 22);
             this.cbIfCover.TabIndex = 5;
@@ -320,7 +321,7 @@
             this.cbIfAuto.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbIfAuto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIfAuto.FormattingEnabled = true;
-            this.cbIfAuto.Location = new System.Drawing.Point(92, 109);
+            this.cbIfAuto.Location = new System.Drawing.Point(92, 69);
             this.cbIfAuto.Name = "cbIfAuto";
             this.cbIfAuto.Size = new System.Drawing.Size(236, 22);
             this.cbIfAuto.TabIndex = 1;
@@ -333,7 +334,7 @@
             this.cbIfOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbIfOrder.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbIfOrder.FormattingEnabled = true;
-            this.cbIfOrder.Location = new System.Drawing.Point(92, 61);
+            this.cbIfOrder.Location = new System.Drawing.Point(92, 37);
             this.cbIfOrder.Name = "cbIfOrder";
             this.cbIfOrder.Size = new System.Drawing.Size(236, 22);
             this.cbIfOrder.TabIndex = 3;
@@ -343,7 +344,7 @@
             // 
             this.labIfCover.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labIfCover.AutoSize = true;
-            this.labIfCover.Location = new System.Drawing.Point(3, 162);
+            this.labIfCover.Location = new System.Drawing.Point(3, 107);
             this.labIfCover.Name = "labIfCover";
             this.labIfCover.Size = new System.Drawing.Size(71, 12);
             this.labIfCover.TabIndex = 0;
@@ -353,7 +354,7 @@
             // 
             this.labIfOrder.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labIfOrder.AutoSize = true;
-            this.labIfOrder.Location = new System.Drawing.Point(3, 66);
+            this.labIfOrder.Location = new System.Drawing.Point(3, 42);
             this.labIfOrder.Name = "labIfOrder";
             this.labIfOrder.Size = new System.Drawing.Size(83, 12);
             this.labIfOrder.TabIndex = 2;
@@ -363,7 +364,7 @@
             // 
             this.labIfMatch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labIfMatch.AutoSize = true;
-            this.labIfMatch.Location = new System.Drawing.Point(3, 18);
+            this.labIfMatch.Location = new System.Drawing.Point(3, 10);
             this.labIfMatch.Name = "labIfMatch";
             this.labIfMatch.Size = new System.Drawing.Size(83, 12);
             this.labIfMatch.TabIndex = 0;
@@ -374,7 +375,7 @@
             this.cbIfMatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbIfMatch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbIfMatch.FormattingEnabled = true;
-            this.cbIfMatch.Location = new System.Drawing.Point(92, 13);
+            this.cbIfMatch.Location = new System.Drawing.Point(92, 5);
             this.cbIfMatch.Name = "cbIfMatch";
             this.cbIfMatch.Size = new System.Drawing.Size(236, 22);
             this.cbIfMatch.TabIndex = 4;
@@ -384,7 +385,7 @@
             // 
             this.gbCoverFullNameList.Controls.Add(this.tlpCoverFullNameList);
             this.gbCoverFullNameList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbCoverFullNameList.Location = new System.Drawing.Point(3, 201);
+            this.gbCoverFullNameList.Location = new System.Drawing.Point(3, 140);
             this.gbCoverFullNameList.Name = "gbCoverFullNameList";
             this.gbCoverFullNameList.Size = new System.Drawing.Size(331, 170);
             this.gbCoverFullNameList.TabIndex = 1;
@@ -418,7 +419,7 @@
             this.gbSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbSubmit.Location = new System.Drawing.Point(3, 3);
             this.gbSubmit.Name = "gbSubmit";
-            this.gbSubmit.Size = new System.Drawing.Size(343, 61);
+            this.gbSubmit.Size = new System.Drawing.Size(343, 51);
             this.gbSubmit.TabIndex = 5;
             this.gbSubmit.TabStop = false;
             this.gbSubmit.Text = "第一步：添加用例";
@@ -437,14 +438,14 @@
             this.tlpAddExcelFile.Name = "tlpAddExcelFile";
             this.tlpAddExcelFile.RowCount = 1;
             this.tlpAddExcelFile.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpAddExcelFile.Size = new System.Drawing.Size(337, 41);
+            this.tlpAddExcelFile.Size = new System.Drawing.Size(337, 31);
             this.tlpAddExcelFile.TabIndex = 0;
             // 
             // labExcelPath
             // 
             this.labExcelPath.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labExcelPath.AutoSize = true;
-            this.labExcelPath.Location = new System.Drawing.Point(4, 14);
+            this.labExcelPath.Location = new System.Drawing.Point(4, 9);
             this.labExcelPath.Name = "labExcelPath";
             this.labExcelPath.Size = new System.Drawing.Size(41, 12);
             this.labExcelPath.TabIndex = 0;
@@ -453,9 +454,9 @@
             // btnSelectFile
             // 
             this.btnSelectFile.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSelectFile.Location = new System.Drawing.Point(302, 10);
+            this.btnSelectFile.Location = new System.Drawing.Point(302, 3);
             this.btnSelectFile.Name = "btnSelectFile";
-            this.btnSelectFile.Size = new System.Drawing.Size(31, 20);
+            this.btnSelectFile.Size = new System.Drawing.Size(32, 25);
             this.btnSelectFile.TabIndex = 1;
             this.btnSelectFile.Text = "...";
             this.btnSelectFile.UseVisualStyleBackColor = true;
@@ -472,7 +473,7 @@
             this.tbFilePath.IsPasswordChat = '\0';
             this.tbFilePath.IsSystemPasswordChar = false;
             this.tbFilePath.Lines = new string[0];
-            this.tbFilePath.Location = new System.Drawing.Point(50, 6);
+            this.tbFilePath.Location = new System.Drawing.Point(50, 1);
             this.tbFilePath.Margin = new System.Windows.Forms.Padding(0);
             this.tbFilePath.MaxLength = 32767;
             this.tbFilePath.MinimumSize = new System.Drawing.Size(28, 28);
@@ -514,7 +515,7 @@
             this.btnLaunch.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnLaunch.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnLaunch.DownBack = null;
-            this.btnLaunch.Location = new System.Drawing.Point(125, 471);
+            this.btnLaunch.Location = new System.Drawing.Point(125, 400);
             this.btnLaunch.MouseBack = null;
             this.btnLaunch.Name = "btnLaunch";
             this.btnLaunch.NormlBack = null;
@@ -528,9 +529,9 @@
             // 
             this.gbselectCases.Controls.Add(this.tlpExcelFileList);
             this.gbselectCases.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbselectCases.Location = new System.Drawing.Point(3, 527);
+            this.gbselectCases.Location = new System.Drawing.Point(3, 456);
             this.gbselectCases.Name = "gbselectCases";
-            this.gbselectCases.Size = new System.Drawing.Size(355, 310);
+            this.gbselectCases.Size = new System.Drawing.Size(355, 267);
             this.gbselectCases.TabIndex = 7;
             this.gbselectCases.TabStop = false;
             this.gbselectCases.Text = "选择用例：";
@@ -547,7 +548,7 @@
             this.tlpExcelFileList.RowCount = 2;
             this.tlpExcelFileList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpExcelFileList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tlpExcelFileList.Size = new System.Drawing.Size(349, 290);
+            this.tlpExcelFileList.Size = new System.Drawing.Size(349, 247);
             this.tlpExcelFileList.TabIndex = 0;
             // 
             // tlpSelectExcelFile
@@ -558,7 +559,7 @@
             this.tlpSelectExcelFile.Controls.Add(this.cbSelectExcel, 1, 0);
             this.tlpSelectExcelFile.Controls.Add(this.labSelectExcel, 0, 0);
             this.tlpSelectExcelFile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpSelectExcelFile.Location = new System.Drawing.Point(3, 258);
+            this.tlpSelectExcelFile.Location = new System.Drawing.Point(3, 215);
             this.tlpSelectExcelFile.Name = "tlpSelectExcelFile";
             this.tlpSelectExcelFile.RowCount = 1;
             this.tlpSelectExcelFile.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -604,7 +605,7 @@
             this.tlpSelectTestCase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tlpSelectTestCase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tlpSelectTestCase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpSelectTestCase.Size = new System.Drawing.Size(343, 249);
+            this.tlpSelectTestCase.Size = new System.Drawing.Size(343, 206);
             this.tlpSelectTestCase.TabIndex = 3;
             // 
             // splitContainer4
@@ -621,8 +622,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.tlpAddComment);
-            this.splitContainer4.Size = new System.Drawing.Size(1072, 871);
-            this.splitContainer4.SplitterDistance = 631;
+            this.splitContainer4.Size = new System.Drawing.Size(1072, 757);
+            this.splitContainer4.SplitterDistance = 548;
             this.splitContainer4.TabIndex = 1;
             // 
             // dgvCommit
@@ -632,7 +633,7 @@
             this.dgvCommit.Location = new System.Drawing.Point(0, 0);
             this.dgvCommit.Name = "dgvCommit";
             this.dgvCommit.RowTemplate.Height = 23;
-            this.dgvCommit.Size = new System.Drawing.Size(1072, 631);
+            this.dgvCommit.Size = new System.Drawing.Size(1072, 548);
             this.dgvCommit.TabIndex = 0;
             // 
             // tlpAddComment
@@ -647,7 +648,7 @@
             this.tlpAddComment.RowCount = 1;
             this.tlpAddComment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpAddComment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 236F));
-            this.tlpAddComment.Size = new System.Drawing.Size(1072, 236);
+            this.tlpAddComment.Size = new System.Drawing.Size(1072, 205);
             this.tlpAddComment.TabIndex = 0;
             // 
             // btnCommit
@@ -659,7 +660,7 @@
             this.btnCommit.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnCommit.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnCommit.DownBack = null;
-            this.btnCommit.Location = new System.Drawing.Point(1025, 106);
+            this.btnCommit.Location = new System.Drawing.Point(1025, 91);
             this.btnCommit.MouseBack = null;
             this.btnCommit.Name = "btnCommit";
             this.btnCommit.NormlBack = null;
@@ -682,8 +683,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.gbAnalyze);
-            this.splitContainer3.Size = new System.Drawing.Size(267, 903);
-            this.splitContainer3.SplitterDistance = 449;
+            this.splitContainer3.Size = new System.Drawing.Size(267, 789);
+            this.splitContainer3.SplitterDistance = 392;
             this.splitContainer3.TabIndex = 1;
             // 
             // gbFlow
@@ -692,7 +693,7 @@
             this.gbFlow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbFlow.Location = new System.Drawing.Point(0, 0);
             this.gbFlow.Name = "gbFlow";
-            this.gbFlow.Size = new System.Drawing.Size(267, 449);
+            this.gbFlow.Size = new System.Drawing.Size(267, 392);
             this.gbFlow.TabIndex = 0;
             this.gbFlow.TabStop = false;
             this.gbFlow.Text = "评审流程与结果：";
@@ -717,7 +718,7 @@
             this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCommitResults.Size = new System.Drawing.Size(261, 429);
+            this.tlpCommitResults.Size = new System.Drawing.Size(261, 372);
             this.tlpCommitResults.TabIndex = 6;
             // 
             // sbStep6
@@ -729,7 +730,7 @@
             this.sbStep6.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbStep6.DownBack = null;
             this.sbStep6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sbStep6.Location = new System.Drawing.Point(56, 372);
+            this.sbStep6.Location = new System.Drawing.Point(56, 319);
             this.sbStep6.MouseBack = null;
             this.sbStep6.Name = "sbStep6";
             this.sbStep6.NormlBack = null;
@@ -747,7 +748,7 @@
             this.sbStep5.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbStep5.DownBack = null;
             this.sbStep5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sbStep5.Location = new System.Drawing.Point(56, 300);
+            this.sbStep5.Location = new System.Drawing.Point(56, 255);
             this.sbStep5.MouseBack = null;
             this.sbStep5.Name = "sbStep5";
             this.sbStep5.NormlBack = null;
@@ -765,7 +766,7 @@
             this.sbStep4.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbStep4.DownBack = null;
             this.sbStep4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sbStep4.Location = new System.Drawing.Point(56, 229);
+            this.sbStep4.Location = new System.Drawing.Point(56, 194);
             this.sbStep4.MouseBack = null;
             this.sbStep4.Name = "sbStep4";
             this.sbStep4.NormlBack = null;
@@ -783,7 +784,7 @@
             this.sbStep3.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbStep3.DownBack = null;
             this.sbStep3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sbStep3.Location = new System.Drawing.Point(56, 158);
+            this.sbStep3.Location = new System.Drawing.Point(56, 133);
             this.sbStep3.MouseBack = null;
             this.sbStep3.Name = "sbStep3";
             this.sbStep3.NormlBack = null;
@@ -801,7 +802,7 @@
             this.sbStep2.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbStep2.DownBack = null;
             this.sbStep2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sbStep2.Location = new System.Drawing.Point(56, 87);
+            this.sbStep2.Location = new System.Drawing.Point(56, 72);
             this.sbStep2.MouseBack = null;
             this.sbStep2.Name = "sbStep2";
             this.sbStep2.NormlBack = null;
@@ -819,7 +820,7 @@
             this.sbStep1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbStep1.DownBack = null;
             this.sbStep1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sbStep1.Location = new System.Drawing.Point(56, 16);
+            this.sbStep1.Location = new System.Drawing.Point(56, 11);
             this.sbStep1.MouseBack = null;
             this.sbStep1.Name = "sbStep1";
             this.sbStep1.NormlBack = null;
@@ -834,7 +835,7 @@
             this.gbAnalyze.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbAnalyze.Location = new System.Drawing.Point(0, 0);
             this.gbAnalyze.Name = "gbAnalyze";
-            this.gbAnalyze.Size = new System.Drawing.Size(267, 450);
+            this.gbAnalyze.Size = new System.Drawing.Size(267, 393);
             this.gbAnalyze.TabIndex = 0;
             this.gbAnalyze.TabStop = false;
             this.gbAnalyze.Text = "统计与分析：";
@@ -854,7 +855,7 @@
             series1.Legend = "Legend1";
             series1.Name = "SerCapability";
             this.chartForAnalyze.Series.Add(series1);
-            this.chartForAnalyze.Size = new System.Drawing.Size(261, 430);
+            this.chartForAnalyze.Size = new System.Drawing.Size(261, 373);
             this.chartForAnalyze.TabIndex = 0;
             // 
             // selectFileDialog
@@ -868,7 +869,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(1730, 939);
+            this.ClientSize = new System.Drawing.Size(1730, 825);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainCaseReview";
