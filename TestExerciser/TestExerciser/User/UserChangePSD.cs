@@ -38,7 +38,7 @@ namespace TestExerciser.User
                     if (myLoginInfo.isPasswdSecurity(this.txtChangeTo.Text))
                     {
                         ManageDB myManageDB = new ManageDB();
-                        myManageDB.UpdateDB("[passWord]", this.txtChangeTo);
+                        myManageDB.UpdateDB("用户管理","[passWord]", this.txtChangeTo);
                         TimeDelay myTimeDelay = new TimeDelay();
                         this.btnOK.Enabled = false;
                         this.btnCancel.Enabled = false;

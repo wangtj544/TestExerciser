@@ -13,6 +13,7 @@ using System.Data.SqlClient;
 using TestExerciser.Tools.Control;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Data.OleDb;
 
 
 
@@ -42,7 +43,11 @@ namespace TestExerciser
         string currentExcelPath = null;
         string serverTestCaseReviewExcelPool = @"\\" + Properties.Settings.Default.serverPath + @"\DATA\TestCaseReviewExcelPool\";
 
-       
+
+        int readColumnNo = 200;//读取Excel行数
+        public bool addToProj = false;
+        string excelFileName = null;
+      
 
         public MainCaseReview()
         {
@@ -51,14 +56,34 @@ namespace TestExerciser
 
         private void MainCaseReview_Load(object sender, EventArgs e)
         {
+            this.btnSelectFile.Enabled = false;
             this.cbIfAuto.Enabled = false;
             this.cbIfCover.Enabled = false;
             this.cbIfMatch.Enabled = false;
             this.cbIfOrder.Enabled = false;
             this.cbSelectExcel.Enabled = false;
-            this.btnStart.Enabled = false;
             this.btnLaunch.Enabled = false;
+            this.btnStart.Enabled = false;
+            this.rtbCommit.Enabled = false;
             this.btnCommit.Enabled = false;
+
+            if (myManageDB.checkReviewFrom())            
+            {               
+                this.cbSelectExcel.Enabled = true;
+                string[] files = Directory.GetFiles(serverTestCaseReviewExcelPool);
+                foreach (string file in files)
+                {
+                    addExcelToTlpSelectTestCase(Path.GetFileName(file));
+                }     
+            }
+            else if (myManageDB.checkReviewTo())
+            {
+                this.btnSelectFile.Enabled = true;       
+            }
+            else
+            {
+                this.btnSelectFile.Enabled = true;
+            }           
             myManageDB.selectItems(cbIfAuto);
             myManageDB.selectItems(cbIfCover);
         }
@@ -213,6 +238,7 @@ namespace TestExerciser
 
         private void btnLaunch_Click(object sender, EventArgs e)
         {
+            myManageDB.InsertInto("insert into 用例评审(revUserName,revEmail) values('" + ManageDB.userFullName + "'," + "'" + ManageDB.userEmailAddress +"')");
             string FilesPath = this.tbFilePath.Text;
             string[] excelFilesPath = FilesPath.Split(';');
             foreach (string str in excelFilesPath)
@@ -225,7 +251,6 @@ namespace TestExerciser
                         caseNameToReviewList.Add(Path.GetFileName(str) + "\r\n");
                         caseNameToReview = caseNameToReviewList.ToArray();
                         mailBody = Path.GetFileName(str) + "\r\n" + mailBody;
-                        addExcelToTlpSelectTestCase(Path.GetFileName(str));
                     }
                     catch (Exception exception)
                     {
@@ -257,49 +282,96 @@ namespace TestExerciser
             {
                 sendMail("测试用例测试点覆盖评审流程", ifCoverReviewer);
             }
-
+            foreach(string mailForm in autoReviewer)
+            {
+                myManageDB.UpdateDB("用户管理","reviewFrom", "True", "email", mailForm);
+            }
+            foreach (string mailTo in ifCoverReviewer)
+            {
+                myManageDB.UpdateDB("用户管理", "reviewTo", "True", "email", mailTo);              
+            }
             
         }
 
         private void sendMail(string mailSubject, string [] mailTo)
         {
-            SendMail mail = new SendMail();
-            mail.mailFrom = "TestExerciser@163.com";
-            mail.mailPwd = "admin123";
-            mail.mailSubject = mailSubject;
-            mail.mailBody = "有以下用例需要您审批：\r\n\r\n\r\n"+ mailBody + "\r\n\r\n\r\n注：该邮件由自动化测试测试工具自动发送\r\n（自动化测试工具TestExerciser）";
-            mail.isbodyHtml = false;
-            mail.host = "smtp.163.com";
-            mail.mailToArray = mailTo;
-            mail.mailCcArray = new string[] { };
-            if (mail.Send())
+            try
             {
-                this.sbStep3.BaseColor = Color.Lime;
-                this.sbStep3.BorderColor = Color.Lime;
-                this.btnLaunch.Enabled = true;
+                SendMail mail = new SendMail();
+                mail.mailFrom = "TestExerciser@163.com";
+                mail.mailPwd = "admin123";
+                mail.mailSubject = mailSubject;
+                mail.mailBody = "有以下用例需要您审批：\r\n\r\n\r\n" + mailBody + "\r\n\r\n\r\n注：该邮件由自动化测试测试工具自动发送\r\n（自动化测试工具TestExerciser）";
+                mail.isbodyHtml = false;
+                mail.host = "smtp.163.com";
+                mail.mailToArray = mailTo;
+                mail.mailCcArray = new string[] { };
             }
-            else
+            catch (Exception exception)
             {
-              
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            //if ((this.cbSelectExcel.Text != null) && (this.cbSelectExcel.Text != ""))
-            //{
-            //    dgvCommit.DataSource = GetDataFromExcelToDT(this.tstbText.Text);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("请填写需要导入的Excel工作簿名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
+            if ((this.cbSelectExcel.Text != null) && (this.cbSelectExcel.Text != ""))
+            {
+                dgvCommit.DataSource = GetDataFromExcelToDT();
+                this.sbStep5.BaseColor = Color.Lime;
+                this.sbStep5.BorderColor = Color.Lime;
+                btnStart.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("请填写需要导入的Excel工作簿名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        //public void GetDataFromExcelToDT()
-        //{
-        //    MainExcelReader myMainExcelReader = new MainExcelReader();
-        //    myMainExcelReader.GetDataFromExcelToDT();
-        //}
+        /// <summary>
+        /// 从Excel获取数据
+        /// </summary>
+        /// <param name="sheetName"></param>
+        /// <returns></returns>
+        DataSet ds = new DataSet();
+        private DataTable GetDataFromExcelToDT()
+        {
+            bool hasTitle = true;
+            if (cbSelectExcel.Text!="")
+            {
+                var filePath = serverTestCaseReviewExcelPool + this.cbSelectExcel.Text;
+                excelFileName = Path.GetFileName(filePath);
+                string fileType = System.IO.Path.GetExtension(filePath);
+                if (string.IsNullOrEmpty(fileType)) return null;
+
+                try
+                {
+                    string strCon = string.Format("Provider=Microsoft.ACE.OLEDB.{0}.0;" +
+                                                  "Extended Properties=\"Excel {1}.0;HDR={2};IMEX=1;\";" +
+                                                  "data source={3};",
+                                                  (fileType == ".xls" ? 4 : 12), (fileType == ".xls" ? 8 : 12), (hasTitle ? "Yes" : "NO"), filePath);                                       
+                    using (OleDbConnection myConn = new OleDbConnection(strCon))
+                    {
+                        myConn.Open();
+                        DataTable sheetsName = myConn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "Table" }); //得到所有sheet的名字
+                        string firstSheetName = sheetsName.Rows[0][2].ToString(); //得到第一个sheet的名字
+                        string strCom = string.Format(" SELECT * FROM [{0}A3:M{1}]", (firstSheetName), readColumnNo);
+                        OleDbDataAdapter myCommand = new OleDbDataAdapter(strCom, myConn);
+                        myCommand.Fill(ds, firstSheetName);
+                    }
+                    if (ds == null || ds.Tables.Count <= 0) return null;
+                    return ds.Tables[0];
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("数据绑定Excel失败！ 失败原因：" + ex.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    return null;
+
+                }
+            }
+            return null;
+        }
     }
 }

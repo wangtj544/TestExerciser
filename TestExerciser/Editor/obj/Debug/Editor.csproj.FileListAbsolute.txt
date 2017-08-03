@@ -23,3 +23,17 @@ E:\TestExerciser\TestExerciser\FastColoredTextBox\bin\Debug\EditorNS.dll
 E:\TestExerciser\TestExerciser\FastColoredTextBox\bin\Debug\EditorNS.pdb
 E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\EditorNS.dll
 E:\TestExerciser\TestExerciser\FastColoredTextBox\obj\Debug\EditorNS.pdb
+E:\TestExerciser\TestExerciser\Editor\bin\Debug\EditorNS.xml
+E:\TestExerciser\TestExerciser\Editor\bin\Debug\EditorNS.dll
+E:\TestExerciser\TestExerciser\Editor\bin\Debug\EditorNS.pdb
+E:\TestExerciser\TestExerciser\Editor\obj\Debug\Editor.csprojResolveAssemblyReference.cache
+E:\TestExerciser\TestExerciser\Editor\obj\Debug\EditorNS.AutocompleteMenu.resources
+E:\TestExerciser\TestExerciser\Editor\obj\Debug\EditorNS.Editor.resources
+E:\TestExerciser\TestExerciser\Editor\obj\Debug\EditorNS.FindForm.resources
+E:\TestExerciser\TestExerciser\Editor\obj\Debug\EditorNS.GoToForm.resources
+E:\TestExerciser\TestExerciser\Editor\obj\Debug\EditorNS.HotkeysEditorForm.resources
+E:\TestExerciser\TestExerciser\Editor\obj\Debug\EditorNS.Properties.Resources.resources
+E:\TestExerciser\TestExerciser\Editor\obj\Debug\EditorNS.ReplaceForm.resources
+E:\TestExerciser\TestExerciser\Editor\obj\Debug\Editor.csproj.GenerateResource.Cache
+E:\TestExerciser\TestExerciser\Editor\obj\Debug\EditorNS.dll
+E:\TestExerciser\TestExerciser\Editor\obj\Debug\EditorNS.pdb

@@ -66,8 +66,9 @@ namespace TestExerciser.User
             {
                 if (myManageDB.checkUserName(this.txtUserName.Text))
                 {
-                    if (myManageDB.queryUserFullName(this.txtUserName.Text, this.txtPasswd.Text))
+                    if (myManageDB.queryUserFullName(this.txtUserName.Text, this.txtPasswd.Text) && myManageDB.queryEmailAddress(this.txtUserName.Text, this.txtPasswd.Text))
                     {
+
                         pubUserName = this.txtUserName.Text;
                         pubPasswd = this.txtPasswd.Text;
                         this.txtStatus.ForeColor = Color.Green;

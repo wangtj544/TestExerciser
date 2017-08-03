@@ -36,7 +36,7 @@ namespace TestExerciser.User
                 if (myLoginInfo.isMailAddress(this.txtChangeTo.Text))
                 {
                     ManageDB myManageDB = new ManageDB();
-                    myManageDB.UpdateDB("email", this.txtChangeTo);
+                    myManageDB.UpdateDB("用户管理","email", this.txtChangeTo);
                     TimeDelay myTimeDelay = new TimeDelay();
                     this.btnOK.Enabled = false;
                     this.btnCancel.Enabled = false;

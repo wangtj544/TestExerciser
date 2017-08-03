@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainCaseReview));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControlReview = new System.Windows.Forms.TabControl();
             this.tabPageCommit = new System.Windows.Forms.TabPage();
@@ -82,6 +82,7 @@
             this.gbAnalyze = new System.Windows.Forms.GroupBox();
             this.chartForAnalyze = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.selectFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.rtbCommit = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -429,7 +430,7 @@
             this.tlpAddExcelFile.ColumnCount = 3;
             this.tlpAddExcelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlpAddExcelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpAddExcelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tlpAddExcelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tlpAddExcelFile.Controls.Add(this.labExcelPath, 0, 0);
             this.tlpAddExcelFile.Controls.Add(this.btnSelectFile, 2, 0);
             this.tlpAddExcelFile.Controls.Add(this.tbFilePath, 1, 0);
@@ -453,10 +454,11 @@
             // 
             // btnSelectFile
             // 
-            this.btnSelectFile.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSelectFile.Location = new System.Drawing.Point(302, 3);
+            this.btnSelectFile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSelectFile.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectFile.Image")));
+            this.btnSelectFile.Location = new System.Drawing.Point(315, 3);
             this.btnSelectFile.Name = "btnSelectFile";
-            this.btnSelectFile.Size = new System.Drawing.Size(32, 25);
+            this.btnSelectFile.Size = new System.Drawing.Size(19, 25);
             this.btnSelectFile.TabIndex = 1;
             this.btnSelectFile.Text = "...";
             this.btnSelectFile.UseVisualStyleBackColor = true;
@@ -485,7 +487,7 @@
             this.tbFilePath.Padding = new System.Windows.Forms.Padding(5);
             this.tbFilePath.ReadOnly = true;
             this.tbFilePath.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.tbFilePath.Size = new System.Drawing.Size(249, 28);
+            this.tbFilePath.Size = new System.Drawing.Size(262, 28);
             // 
             // 
             // 
@@ -496,7 +498,7 @@
             this.tbFilePath.SkinTxt.Name = "BaseText";
             this.tbFilePath.SkinTxt.ReadOnly = true;
             this.tbFilePath.SkinTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.tbFilePath.SkinTxt.Size = new System.Drawing.Size(239, 15);
+            this.tbFilePath.SkinTxt.Size = new System.Drawing.Size(252, 15);
             this.tbFilePath.SkinTxt.TabIndex = 0;
             this.tbFilePath.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.tbFilePath.SkinTxt.WaterText = "请选择要添加的文件...";
@@ -642,12 +644,13 @@
             this.tlpAddComment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpAddComment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlpAddComment.Controls.Add(this.btnCommit, 1, 0);
+            this.tlpAddComment.Controls.Add(this.rtbCommit, 0, 0);
             this.tlpAddComment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpAddComment.Location = new System.Drawing.Point(0, 0);
             this.tlpAddComment.Name = "tlpAddComment";
             this.tlpAddComment.RowCount = 1;
             this.tlpAddComment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpAddComment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 236F));
+            this.tlpAddComment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 205F));
             this.tlpAddComment.Size = new System.Drawing.Size(1072, 205);
             this.tlpAddComment.TabIndex = 0;
             // 
@@ -684,7 +687,7 @@
             // 
             this.splitContainer3.Panel2.Controls.Add(this.gbAnalyze);
             this.splitContainer3.Size = new System.Drawing.Size(267, 789);
-            this.splitContainer3.SplitterDistance = 392;
+            this.splitContainer3.SplitterDistance = 391;
             this.splitContainer3.TabIndex = 1;
             // 
             // gbFlow
@@ -693,7 +696,7 @@
             this.gbFlow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbFlow.Location = new System.Drawing.Point(0, 0);
             this.gbFlow.Name = "gbFlow";
-            this.gbFlow.Size = new System.Drawing.Size(267, 392);
+            this.gbFlow.Size = new System.Drawing.Size(267, 391);
             this.gbFlow.TabIndex = 0;
             this.gbFlow.TabStop = false;
             this.gbFlow.Text = "评审流程与结果：";
@@ -718,7 +721,7 @@
             this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCommitResults.Size = new System.Drawing.Size(261, 372);
+            this.tlpCommitResults.Size = new System.Drawing.Size(261, 371);
             this.tlpCommitResults.TabIndex = 6;
             // 
             // sbStep6
@@ -730,7 +733,7 @@
             this.sbStep6.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbStep6.DownBack = null;
             this.sbStep6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sbStep6.Location = new System.Drawing.Point(56, 319);
+            this.sbStep6.Location = new System.Drawing.Point(56, 318);
             this.sbStep6.MouseBack = null;
             this.sbStep6.Name = "sbStep6";
             this.sbStep6.NormlBack = null;
@@ -835,7 +838,7 @@
             this.gbAnalyze.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbAnalyze.Location = new System.Drawing.Point(0, 0);
             this.gbAnalyze.Name = "gbAnalyze";
-            this.gbAnalyze.Size = new System.Drawing.Size(267, 393);
+            this.gbAnalyze.Size = new System.Drawing.Size(267, 394);
             this.gbAnalyze.TabIndex = 0;
             this.gbAnalyze.TabStop = false;
             this.gbAnalyze.Text = "统计与分析：";
@@ -843,19 +846,19 @@
             // chartForAnalyze
             // 
             this.chartForAnalyze.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chartForAnalyze.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.chartForAnalyze.ChartAreas.Add(chartArea2);
             this.chartForAnalyze.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartForAnalyze.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.chartForAnalyze.Legends.Add(legend2);
             this.chartForAnalyze.Location = new System.Drawing.Point(3, 17);
             this.chartForAnalyze.Name = "chartForAnalyze";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Legend = "Legend1";
-            series1.Name = "SerCapability";
-            this.chartForAnalyze.Series.Add(series1);
-            this.chartForAnalyze.Size = new System.Drawing.Size(261, 373);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Legend = "Legend1";
+            series2.Name = "SerCapability";
+            this.chartForAnalyze.Series.Add(series2);
+            this.chartForAnalyze.Size = new System.Drawing.Size(261, 374);
             this.chartForAnalyze.TabIndex = 0;
             // 
             // selectFileDialog
@@ -863,6 +866,15 @@
             this.selectFileDialog.Filter = "Excel(*.xlsx)|*.xlsx|Excel(*.xls)|*.xls";
             this.selectFileDialog.Multiselect = true;
             this.selectFileDialog.Title = "选择相应的Excel文件...";
+            // 
+            // rtbCommit
+            // 
+            this.rtbCommit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbCommit.Location = new System.Drawing.Point(3, 3);
+            this.rtbCommit.Name = "rtbCommit";
+            this.rtbCommit.Size = new System.Drawing.Size(1016, 199);
+            this.rtbCommit.TabIndex = 6;
+            this.rtbCommit.Text = "";
             // 
             // MainCaseReview
             // 
@@ -972,5 +984,6 @@
         private System.Windows.Forms.GroupBox gbCoverFullNameList;
         public System.Windows.Forms.TableLayoutPanel tlpCoverFullNameList;
         private System.Windows.Forms.TableLayoutPanel tlpSelectTestCase;
+        private System.Windows.Forms.RichTextBox rtbCommit;
     }
 }

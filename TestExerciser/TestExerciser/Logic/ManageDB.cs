@@ -57,6 +57,76 @@ namespace TestExerciser.Logic
             return falg;
         }
 
+        public bool checkReviewTo()
+        {
+            bool falg = false;
+            string selectFullName = "select email from 用户管理 where reviewTo='True'";
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {                   
+                    while (myReader.Read())
+                    {
+                        if (userEmailAddress == Convert.ToString(myReader[0]))
+                        {
+                            falg = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+
+            }
+            return falg;
+        }
+
+        public bool checkReviewFrom()
+        {
+            bool falg = false;
+            string selectFullName = "select email from 用户管理 where reviewFrom='True'";
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
+                    while (myReader.Read())
+                    {
+                        if (userEmailAddress == Convert.ToString(myReader[0]))
+                        {
+                            falg = true;
+                            break;
+                        }                                               
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+
+            }
+            return falg;
+        }
+
         public bool queryUserFullName(string userName,string passwd)
         {
             bool falg = false;
@@ -141,14 +211,19 @@ namespace TestExerciser.Logic
             mycon.Dispose();
         }
 
-        public void UpdateDB(string column, Control txtChangeTo)
+        public void UpdateDB(string table, string column, Control txtChangeTo)
         {
-            UpdateDB("update 用户管理 set " + column + "='" + txtChangeTo.Text + "'" + " where userName='" + UserLogin.pubUserName + "'");
+            UpdateDB("update " + table + " set " + column + "='" + txtChangeTo.Text + "'" + " where userName='" + UserLogin.pubUserName + "'");
         }
 
-        public void UpdateDB(string column, string changeTo)
+        public void UpdateDB(string table, string column, string changeTo,string otherColumn,string otherChangeTo)
         {
-            UpdateDB("update 方法封装 set " + column + "='" );
+            UpdateDB("update " + table + " set " + column + "='" + changeTo + "'" + " where " + otherColumn + "='" + otherChangeTo + "'");
+        }
+
+        public void UpdateDB(string table, string column, string changeTo)
+        {
+            UpdateDB("update " + table + " set " + column + "='" + changeTo + "'");
         }
 
         public bool checkUserName(string userName)
@@ -268,7 +343,6 @@ namespace TestExerciser.Logic
             return falg;
         }
 
-
         public bool clearList(ComboBox comBox)
         {
             bool falg = false;
@@ -295,5 +369,27 @@ namespace TestExerciser.Logic
             }
             return falg;
         }
+
+        public void InsertInto(string sql)
+        {
+            mycon = new SqlConnection(strcon);
+            mycon.Open();
+            SqlCommand mycomm = new SqlCommand(sql, mycon);
+            mycomm.Connection = mycon;
+            mycomm.CommandText = sql;
+            if (mycomm.ExecuteNonQuery() > 0)
+            {
+                updateDBStatus = "数据添加成功！";
+            }
+            else
+            {
+                updateDBStatus = "数据添加失败！";
+            }
+            mycomm.Dispose();
+            mycon.Close();
+            mycon.Dispose();
+        }
+
+
     }
 }

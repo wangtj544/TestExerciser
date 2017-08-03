@@ -35,7 +35,7 @@ namespace TestExerciser.User
                 if (myLoginInfo.isChineseChar(this.txtChangeTo.Text))
                 {
                     ManageDB myManageDB = new ManageDB();
-                    myManageDB.UpdateDB("fullName", this.txtChangeTo);
+                    myManageDB.UpdateDB("用户管理","fullName", this.txtChangeTo);
                     TimeDelay myTimeDelay = new TimeDelay();
                     this.btnOK.Enabled = false;
                     this.btnCancel.Enabled = false;
