@@ -47,6 +47,11 @@ namespace TestExerciser
         int readColumnNo = 200;//读取Excel行数
         public bool addToProj = false;
         string excelFileName = null;
+
+
+        Object cellTempValue = new object { };
+        bool needUpdate = false;
+        
       
 
         public MainCaseReview()
@@ -56,6 +61,8 @@ namespace TestExerciser
 
         private void MainCaseReview_Load(object sender, EventArgs e)
         {
+            // TODO:  这行代码将数据加载到表“dataSetCasesForReview.评审用例”中。您可以根据需要移动或删除它。
+            //this.评审用例TableAdapter.Fill(this.dataSetCasesForReview.评审用例);
             this.btnSelectFile.Enabled = false;
             this.cbIfAuto.Enabled = false;
             this.cbIfCover.Enabled = false;
@@ -67,8 +74,14 @@ namespace TestExerciser
             this.rtbCommit.Enabled = false;
             this.btnCommit.Enabled = false;
 
-            if (myManageDB.checkReviewFrom())            
-            {               
+            if (myManageDB.checkCoverReviewTo() || myManageDB.checkAutoReviewTo())            
+            {
+                this.sbStep1.BaseColor = Color.Lime;
+                this.sbStep1.BorderColor = Color.Lime;
+                this.sbStep2.BaseColor = Color.Lime;
+                this.sbStep2.BorderColor = Color.Lime;
+                this.sbStep3.BaseColor = Color.Lime;
+                this.sbStep3.BorderColor = Color.Lime;
                 this.cbSelectExcel.Enabled = true;
                 string[] files = Directory.GetFiles(serverTestCaseReviewExcelPool);
                 foreach (string file in files)
@@ -76,9 +89,9 @@ namespace TestExerciser
                     addExcelToTlpSelectTestCase(Path.GetFileName(file));
                 }     
             }
-            else if (myManageDB.checkReviewTo())
+            else if (myManageDB.checkReviewFrom())
             {
-                this.btnSelectFile.Enabled = true;       
+                
             }
             else
             {
@@ -145,11 +158,13 @@ namespace TestExerciser
 
         private void myLabelIfCover_DoubleClick(object sender, EventArgs e)
         {
-           DialogResult myLabel_DoubleClick = MessageBox.Show("确定要删除评审人： " + cbIfCover.SelectedItem.ToString() + " 吗？","消息提示：", MessageBoxButtons.OKCancel,MessageBoxIcon.Asterisk);
+           DialogResult myLabel_DoubleClick = MessageBox.Show("确定要删除该评审人吗？","消息提示：", MessageBoxButtons.OKCancel,MessageBoxIcon.Asterisk);
            if (myLabel_DoubleClick == DialogResult.OK)
            {
                var myLabel = sender as Label;
                tlpCoverFullNameList.Controls.Remove((myLabel));
+               selectedItemList.Remove(myLabel.Text.Split('；')[0]);
+               selectedItem = selectedItemList.ToArray();
            }
         }
 
@@ -180,9 +195,8 @@ namespace TestExerciser
         private void addMyLabelControl()
         {
             Label myLabel = new Label();
-            myLabel.DoubleClick += new System.EventHandler(this.myLabelIfCover_DoubleClick);
-            myLabel.Text = cbIfCover.SelectedItem.ToString() + "；";
-            tlpCoverFullNameList.Controls.Add(myLabel);
+            myLabel.DoubleClick += new System.EventHandler(this.myLabelIfCover_DoubleClick);           
+
             string mailAddressStr = null;
             try
             {
@@ -192,6 +206,10 @@ namespace TestExerciser
             {
                 MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
+            myLabel.Text = cbIfCover.SelectedItem.ToString() + "；";
+            tlpCoverFullNameList.Controls.Add(myLabel);
+            
             ifCoverReviewerList.Add(mailAddressStr);
             ifCoverReviewer = ifCoverReviewerList.ToArray();
             selectedItemList.Add(cbIfCover.SelectedItem.ToString());
@@ -238,59 +256,66 @@ namespace TestExerciser
 
         private void btnLaunch_Click(object sender, EventArgs e)
         {
-            myManageDB.InsertInto("insert into 用例评审(revUserName,revEmail) values('" + ManageDB.userFullName + "'," + "'" + ManageDB.userEmailAddress +"')");
-            string FilesPath = this.tbFilePath.Text;
-            string[] excelFilesPath = FilesPath.Split(';');
-            foreach (string str in excelFilesPath)
+            if (myManageDB.checkUserName("用例评审", "revFullName", ManageDB.userFullName, "revEmail", ManageDB.userEmailAddress))
             {
-                if (str != "")
+                MessageBox.Show("您已经发起了评审流程！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                myManageDB.InsertInto("insert into 用例评审(revFullName,revEmail) values('" + ManageDB.userFullName + "'," + "'" + ManageDB.userEmailAddress + "')");
+                string FilesPath = this.tbFilePath.Text;
+                string[] excelFilesPath = FilesPath.Split(';');
+                foreach (string str in excelFilesPath)
                 {
+                    if (str != "")
+                    {
+                        try
+                        {
+                            File.Copy(str, serverTestCaseReviewExcelPool + Path.GetFileName(str), true);
+                            caseNameToReviewList.Add(Path.GetFileName(str) + "\r\n");
+                            caseNameToReview = caseNameToReviewList.ToArray();
+                            mailBody = Path.GetFileName(str) + "\r\n" + mailBody;
+                        }
+                        catch (Exception exception)
+                        {
+                            MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                if ((cbIfAuto.Text != null) || (cbIfAuto.Text != ""))
+                {
+                    this.cbIfCover.Enabled = true;
+                    string mailAddressStr = null;
                     try
                     {
-                        File.Copy(str, serverTestCaseReviewExcelPool + Path.GetFileName(str), true);
-                        caseNameToReviewList.Add(Path.GetFileName(str) + "\r\n");
-                        caseNameToReview = caseNameToReviewList.ToArray();
-                        mailBody = Path.GetFileName(str) + "\r\n" + mailBody;
+                        mailAddressStr = Regex.Match(cbIfAuto.Text.ToString(), @"(?<=\()[\s\S]*@sit.com.cn(?=\))").Value;
                     }
-                    catch (Exception exception)
+                    catch (ArgumentException exception)
                     {
                         MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }                
-            }
-            if ((cbIfAuto.Text != null) || (cbIfAuto.Text != ""))
-            {
-                this.cbIfCover.Enabled = true;
-                string mailAddressStr = null;
-                try
-                {
-                    mailAddressStr = Regex.Match(cbIfAuto.Text.ToString(), @"(?<=\()[\s\S]*@sit.com.cn(?=\))").Value;
+                    autoReviewerList.Add(mailAddressStr);
+                    autoReviewer = autoReviewerList.ToArray();
                 }
-                catch (ArgumentException exception)
-                {
-                    MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                autoReviewerList.Add(mailAddressStr);
-                autoReviewer = autoReviewerList.ToArray();
-            }
 
-            if (autoReviewer != null)
-            {
-                sendMail("测试用例自动化评审流程", autoReviewer);
-            }
-            if (ifCoverReviewer != null)
-            {
-                sendMail("测试用例测试点覆盖评审流程", ifCoverReviewer);
-            }
-            foreach(string mailForm in autoReviewer)
-            {
-                myManageDB.UpdateDB("用户管理","reviewFrom", "True", "email", mailForm);
-            }
-            foreach (string mailTo in ifCoverReviewer)
-            {
-                myManageDB.UpdateDB("用户管理", "reviewTo", "True", "email", mailTo);              
-            }
-            
+                if (autoReviewer != null)
+                {
+                    sendMail("测试用例自动化评审流程", autoReviewer);
+                }
+                if (ifCoverReviewer != null)
+                {
+                    sendMail("测试用例测试点覆盖评审流程", ifCoverReviewer);
+                }
+                foreach (string autoReviewTo in autoReviewer)
+                {
+                    myManageDB.UpdateDB("用户管理", "autoReviewTo", "True", "email", autoReviewTo);
+                }
+                foreach (string coverReviewTo in ifCoverReviewer)
+                {
+                    myManageDB.UpdateDB("用户管理", "coverReviewTo", "True", "email", coverReviewTo);
+                }
+                myManageDB.UpdateDB("用户管理", "reviewFrom", "True", "email", ManageDB.userEmailAddress);
+            }                       
         }
 
         private void sendMail(string mailSubject, string [] mailTo)
@@ -320,7 +345,8 @@ namespace TestExerciser
                 dgvCommit.DataSource = GetDataFromExcelToDT();
                 this.sbStep5.BaseColor = Color.Lime;
                 this.sbStep5.BorderColor = Color.Lime;
-                btnStart.Enabled = true;
+                this.btnStart.Enabled = true;
+                this.rtbCommit.Enabled = true;
             }
             else
             {
@@ -355,7 +381,7 @@ namespace TestExerciser
                         myConn.Open();
                         DataTable sheetsName = myConn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "Table" }); //得到所有sheet的名字
                         string firstSheetName = sheetsName.Rows[0][2].ToString(); //得到第一个sheet的名字
-                        string strCom = string.Format(" SELECT * FROM [{0}A3:M{1}]", (firstSheetName), readColumnNo);
+                        string strCom = string.Format(" SELECT * FROM [{0}A3:P{1}]", (firstSheetName), readColumnNo);
                         OleDbDataAdapter myCommand = new OleDbDataAdapter(strCom, myConn);
                         myCommand.Fill(ds, firstSheetName);
                     }
@@ -372,6 +398,68 @@ namespace TestExerciser
                 }
             }
             return null;
+        }
+
+        private void dgvCommit_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            cellTempValue = this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+        }
+
+        private void dgvCommit_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!Object.Equals(cellTempValue, this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Value))
+            {
+                needUpdate = true;
+
+                if (MessageBox.Show("确定要修改该单元格内容吗？", "消息提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+
+                }
+                else
+                {
+                    this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = cellTempValue;
+                }
+            }
+        }
+
+        private void btnCommit_Click(object sender, EventArgs e)
+        {
+            if (needUpdate)
+            {
+                SqlConnection mycon = null;
+                if (MessageBox.Show("确定修改并保存修改内容吗？", "消息提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                {
+                    try
+                    {                        
+                        mycon = new SqlConnection(ManageDB.strcon);
+                        mycon.Open();
+                        DataTable myDataTable = this.dataSetCasesForReview.评审用例;
+                        SqlDataAdapter myDataAdapter = this.评审用例TableAdapter.Adapter;
+                        SqlCommandBuilder myOleDbCommandBuilder = new SqlCommandBuilder(myDataAdapter);
+                        myDataAdapter.Update(myDataTable);
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        mycon.Close();
+                    }
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private void rtbCommit_TextChanged(object sender, EventArgs e)
+        {
+            if (this.rtbCommit.Text != "")
+            {
+                this.btnCommit.Enabled = true;
+            }
         }
     }
 }

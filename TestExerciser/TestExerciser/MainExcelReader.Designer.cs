@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainExcelReader));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.tstbText = new System.Windows.Forms.ToolStripTextBox();
+            this.tstbDownLoadExcel = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tstbCreateDB = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
@@ -50,9 +54,10 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgvReadDB = new System.Windows.Forms.DataGridView();
             this.openExcelFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.selectWorkspaceBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.saveExcelModule = new System.Windows.Forms.SaveFileDialog();
+            this.dgvReadDB = new CCWin.SkinControl.SkinDataGridView();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -63,7 +68,7 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.tstbText,
+            this.tstbDownLoadExcel,
             this.toolStripSeparator1,
             this.tstbCreateDB,
             this.toolStripSeparator7,
@@ -89,15 +94,17 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(107, 22);
-            this.toolStripLabel1.Text = "WorkBook名称：";
+            this.toolStripLabel1.Size = new System.Drawing.Size(92, 22);
+            this.toolStripLabel1.Text = "点击下载模板：";
             // 
-            // tstbText
+            // tstbDownLoadExcel
             // 
-            this.tstbText.Name = "tstbText";
-            this.tstbText.Size = new System.Drawing.Size(200, 25);
-            this.tstbText.Text = "在这里填写工作簿名称...";
-            this.tstbText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tstbText_KeyDown);
+            this.tstbDownLoadExcel.Image = ((System.Drawing.Image)(resources.GetObject("tstbDownLoadExcel.Image")));
+            this.tstbDownLoadExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstbDownLoadExcel.Name = "tstbDownLoadExcel";
+            this.tstbDownLoadExcel.Size = new System.Drawing.Size(76, 22);
+            this.tstbDownLoadExcel.Text = "下载模板";
+            this.tstbDownLoadExcel.Click += new System.EventHandler(this.tstbDownLoadExcel_Click);
             // 
             // toolStripSeparator1
             // 
@@ -223,19 +230,62 @@
             this.tabPage1.Text = "生成自动化脚本对应用例如下：";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dgvReadDB
-            // 
-            this.dgvReadDB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvReadDB.Location = new System.Drawing.Point(3, 3);
-            this.dgvReadDB.Name = "dgvReadDB";
-            this.dgvReadDB.RowTemplate.Height = 23;
-            this.dgvReadDB.Size = new System.Drawing.Size(1708, 732);
-            this.dgvReadDB.TabIndex = 0;
-            // 
             // openExcelFileDialog
             // 
             this.openExcelFileDialog.Filter = "Excel(*.xlsx)|*.xlsx|Excel(*.xls)|*.xls";
             this.openExcelFileDialog.InitialDirectory = "Environment.GetFolderPath(Environment.SpecialFolder.Desktop";
+            // 
+            // saveExcelModule
+            // 
+            this.saveExcelModule.Filter = "Excel(*.xls)|*.xls";
+            this.saveExcelModule.InitialDirectory = "Environment.GetFolderPath(Environment.SpecialFolder.Desktop";
+            // 
+            // dgvReadDB
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvReadDB.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvReadDB.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvReadDB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvReadDB.ColumnFont = null;
+            this.dgvReadDB.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReadDB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvReadDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReadDB.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvReadDB.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvReadDB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvReadDB.EnableHeadersVisualStyles = false;
+            this.dgvReadDB.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dgvReadDB.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dgvReadDB.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvReadDB.Location = new System.Drawing.Point(3, 3);
+            this.dgvReadDB.Name = "dgvReadDB";
+            this.dgvReadDB.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvReadDB.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvReadDB.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvReadDB.RowTemplate.Height = 23;
+            this.dgvReadDB.Size = new System.Drawing.Size(1708, 732);
+            this.dgvReadDB.TabIndex = 0;
+            this.dgvReadDB.TitleBack = null;
+            this.dgvReadDB.TitleBackColorBegin = System.Drawing.Color.White;
+            this.dgvReadDB.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
             // 
             // MainExcelReader
             // 
@@ -249,7 +299,6 @@
             this.Name = "MainExcelReader";
             this.Text = "脚本智能生成";
             this.TitleCenter = false;
-            this.Load += new System.EventHandler(this.MainExcelReader_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -265,14 +314,12 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripTextBox tstbText;
         private System.Windows.Forms.ToolStripButton tstbCreateDB;
         private System.Windows.Forms.ToolStripButton tstbCreateScript;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripProgressBar tstbCreateScriptProgress;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dgvReadDB;
         private System.Windows.Forms.OpenFileDialog openExcelFileDialog;
         private System.Windows.Forms.FolderBrowserDialog selectWorkspaceBrowserDialog;
         private System.Windows.Forms.ToolStripButton tstbAddToProj;
@@ -287,5 +334,8 @@
         private System.Windows.Forms.ToolStripTextBox tstbTestCaseName;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton tstbDownLoadExcel;
+        private System.Windows.Forms.SaveFileDialog saveExcelModule;
+        private CCWin.SkinControl.SkinDataGridView dgvReadDB;
     }
 }

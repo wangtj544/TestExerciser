@@ -57,10 +57,10 @@ namespace TestExerciser.Logic
             return falg;
         }
 
-        public bool checkReviewTo()
+        public bool checkAutoReviewTo()
         {
             bool falg = false;
-            string selectFullName = "select email from 用户管理 where reviewTo='True'";
+            string selectFullName = "select email from 用户管理 where autoReviewTo='True'";
             try
             {
                 mycon = new SqlConnection(strcon);
@@ -69,6 +69,41 @@ namespace TestExerciser.Logic
                 myReader = mycom.ExecuteReader();
                 if (myReader.HasRows == true)
                 {                   
+                    while (myReader.Read())
+                    {
+                        if (userEmailAddress == Convert.ToString(myReader[0]))
+                        {
+                            falg = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+
+            }
+            return falg;
+        }
+
+        public bool checkCoverReviewTo()
+        {
+            bool falg = false;
+            string selectFullName = "select email from 用户管理 where coverReviewTo='True'";
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
                     while (myReader.Read())
                     {
                         if (userEmailAddress == Convert.ToString(myReader[0]))
@@ -211,19 +246,19 @@ namespace TestExerciser.Logic
             mycon.Dispose();
         }
 
-        public void UpdateDB(string table, string column, Control txtChangeTo)
+        public void UpdateDB(string table, string row, Control txtChangeTo)
         {
-            UpdateDB("update " + table + " set " + column + "='" + txtChangeTo.Text + "'" + " where userName='" + UserLogin.pubUserName + "'");
+            UpdateDB("update " + table + " set " + row + "='" + txtChangeTo.Text + "'" + " where userName='" + UserLogin.pubUserName + "'");
         }
 
-        public void UpdateDB(string table, string column, string changeTo,string otherColumn,string otherChangeTo)
+        public void UpdateDB(string table, string row, string changeTo,string otherColumn,string otherChangeTo)
         {
-            UpdateDB("update " + table + " set " + column + "='" + changeTo + "'" + " where " + otherColumn + "='" + otherChangeTo + "'");
+            UpdateDB("update " + table + " set " + row + "='" + changeTo + "'" + " where " + otherColumn + "='" + otherChangeTo + "'");
         }
 
-        public void UpdateDB(string table, string column, string changeTo)
+        public void UpdateDB(string table, string row, string changeTo)
         {
-            UpdateDB("update " + table + " set " + column + "='" + changeTo + "'");
+            UpdateDB("update " + table + " set " + row + "='" + changeTo + "'");
         }
 
         public bool checkUserName(string userName)
@@ -253,6 +288,44 @@ namespace TestExerciser.Logic
                     myReader.Close();
                     mycon.Close();
                 }                
+            }
+            return falg;
+        }
+
+        public bool checkUserName(string table,string row1,string value1,string row2,string value2 )
+        {
+            bool falg = false;
+            string mySQL = "select " + row1 + " from " + table + " where " + row2 + "=" + "'" + value2 + "'";
+
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
+                    while (myReader.Read())
+                    {
+                        if (value1 == Convert.ToString(myReader[0]))
+                        {
+                            falg = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (myReader != null)
+                {
+                    myReader.Close();
+                    mycon.Close();
+                }
             }
             return falg;
         }

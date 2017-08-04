@@ -78,8 +78,7 @@ namespace TestExerciser
                     finally
                     {
                         mycon.Close();
-                    }           
-                    
+                    }                               
                 }
                 else
                 {

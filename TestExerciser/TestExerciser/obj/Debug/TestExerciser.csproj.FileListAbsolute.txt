@@ -416,3 +416,4 @@ E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ToolN
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorNS.dll
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorNS.pdb
 E:\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorNS.xml
+E:\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.csproj.ResolveComReference.cache

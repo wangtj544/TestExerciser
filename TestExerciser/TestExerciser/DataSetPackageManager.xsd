@@ -2,9 +2,8 @@
 <xs:schema id="DataSetPackageManager" targetNamespace="http://tempuri.org/DataSetPackageManager.xsd" xmlns:mstns="http://tempuri.org/DataSetPackageManager.xsd" xmlns="http://tempuri.org/DataSetPackageManager.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TestExerciserConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="TestExerciserConnectionString (Settings)" PropertyReference="ApplicationSettings.TestExerciser.Properties.Settings.GlobalReference.Default.TestExerciserConnectionString" Provider="System.Data.OleDb" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TestExerciserConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TestExerciserConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TestExerciser.Properties.Settings.GlobalReference.Default.TestExerciserConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
@@ -164,7 +163,7 @@ SELECT ID, packProductName, packClassName, packClassDescribe, packMethodID, pack
   <xs:element name="DataSetPackageManager" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetPackageManager" msprop:Generator_UserDSName="DataSetPackageManager">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="方法封装" msprop:Generator_TableClassName="方法封装DataTable" msprop:Generator_TableVarName="table方法封装" msprop:Generator_RowChangedName="方法封装RowChanged" msprop:Generator_TablePropName="方法封装" msprop:Generator_RowDeletingName="方法封装RowDeleting" msprop:Generator_RowChangingName="方法封装RowChanging" msprop:Generator_RowEvHandlerName="方法封装RowChangeEventHandler" msprop:Generator_RowDeletedName="方法封装RowDeleted" msprop:Generator_RowClassName="方法封装Row" msprop:Generator_UserTableName="方法封装" msprop:Generator_RowEvArgName="方法封装RowChangeEvent">
+        <xs:element name="方法封装" msprop:Generator_TableClassName="方法封装DataTable" msprop:Generator_TableVarName="table方法封装" msprop:Generator_TablePropName="方法封装" msprop:Generator_RowDeletingName="方法封装RowDeleting" msprop:Generator_RowChangingName="方法封装RowChanging" msprop:Generator_RowEvHandlerName="方法封装RowChangeEventHandler" msprop:Generator_RowDeletedName="方法封装RowDeleted" msprop:Generator_UserTableName="方法封装" msprop:Generator_RowChangedName="方法封装RowChanged" msprop:Generator_RowEvArgName="方法封装RowChangeEvent" msprop:Generator_RowClassName="方法封装Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />

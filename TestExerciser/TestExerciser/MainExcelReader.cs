@@ -38,7 +38,7 @@ namespace TestExerciser
         /// </summary>
         /// <param name="sheetName"></param>
         /// <returns></returns>
-        private DataTable GetDataFromExcelToDT(string sheetName)
+        private System.Data.DataTable GetDataFromExcelToDT()
         {
             bool hasTitle = true;
             if(openExcelFileDialog.ShowDialog()==DialogResult.OK)
@@ -54,12 +54,15 @@ namespace TestExerciser
                                                   "Extended Properties=\"Excel {1}.0;HDR={2};IMEX=1;\";" +
                                                   "data source={3};",
                                                   (fileType == ".xls" ? 4 : 12), (fileType == ".xls" ? 8 : 12), (hasTitle ? "Yes" : "NO"), filePath);
-                    string strCom = string.Format(" SELECT * FROM [{0}$A3:M{1}]", (sheetName), readColumnNo);
+                    
                     using (OleDbConnection myConn = new OleDbConnection(strCon))
-                    using (OleDbDataAdapter myCommand = new OleDbDataAdapter(strCom, myConn))
                     {
                         myConn.Open();
-                        myCommand.Fill(ds, sheetName);
+                        System.Data.DataTable sheetsName = myConn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "Table" }); //得到所有sheet的名字
+                        string firstSheetName = sheetsName.Rows[0][2].ToString(); //得到第一个sheet的名字
+                        string strCom = string.Format(" SELECT * FROM [{0}A3:P{1}]", (firstSheetName), readColumnNo);
+                        OleDbDataAdapter myCommand = new OleDbDataAdapter(strCom, myConn);
+                        myCommand.Fill(ds, firstSheetName);
                     }
                     if (ds == null || ds.Tables.Count <= 0) return null;
                     return ds.Tables[0];                                  
@@ -83,17 +86,10 @@ namespace TestExerciser
         /// <param name="e"></param>
         private void tstbCreateDB_Click(object sender, EventArgs e)
         {
-            if ((this.tstbText.Text != null) && (this.tstbText.Text != ""))
-            {
-                dgvReadDB.DataSource = GetDataFromExcelToDT(this.tstbText.Text);
-                this.tstbCreateDB.Enabled = false;
-                this.tstbCreateScript.Enabled = true;
-                this.tstbTestCaseName.Text = excelFileName;
-            }
-            else
-            {
-                MessageBox.Show("请填写需要导入的Excel工作簿名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            dgvReadDB.DataSource = GetDataFromExcelToDT();
+            this.tstbCreateDB.Enabled = false;
+            this.tstbCreateScript.Enabled = true;
+            this.tstbTestCaseName.Text = excelFileName;
         }
 
         /// <summary>
@@ -146,16 +142,9 @@ namespace TestExerciser
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if ((this.tstbText.Text != null) && (this.tstbText.Text != ""))
-                {
-                    dgvReadDB.DataSource = GetDataFromExcelToDT(this.tstbText.Text);
-                    this.tstbCreateDB.Enabled = false;
-                    this.tstbCreateScript.Enabled = true;
-                }
-                else
-                {
-                    MessageBox.Show("请填写需要导入的Excel工作簿名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                dgvReadDB.DataSource = GetDataFromExcelToDT();
+                this.tstbCreateDB.Enabled = false;
+                this.tstbCreateScript.Enabled = true;
             }                
         }
 
@@ -447,7 +436,6 @@ namespace TestExerciser
             }
         }
 
-
         public string selectedWorkspacePath()
         {
             return this.selectWorkspaceBrowserDialog.SelectedPath;
@@ -469,9 +457,11 @@ namespace TestExerciser
             }   
         }
 
-        private void MainExcelReader_Load(object sender, EventArgs e)
+        private void tstbDownLoadExcel_Click(object sender, EventArgs e)
         {
-
+            Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook wkb = app.Workbooks.Add(@"\\" + Properties.Settings.Default.serverPath + @"\DATA\用例模板.xlsx");
+            app.Visible = true;
         }
     }
 }

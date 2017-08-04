@@ -121,6 +121,16 @@
     <value>29, 14</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tstbDownLoadExcel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADmSURBVChTfZGh0sMgEIQr8wh5hUhkbWRlJLaPgUVGnsQi
+        IyNjK5FIbGQeYTt7HZhk2v+/mZ0MsN/dQm61Yoz4SyKCnDPUOG8zwhbgxaNWSgncL6Xo2nsP59wHmvyE
+        0Y8w3mBdVzWP8wjuE2INw4C+72GMwc2uFm5zsLNViDDN9/neGlCcpkAuWQGK5qplWZqRURrwKi9MMuER
+        HpAkLZ4Tp5H2fb9OOMcgdI4XltC6N+Acg3rGZ4tno0U5ik65RKIkiH5TSeBD1NfjHS93qMUfdByHHlbD
+        Of9PoB78Ept8Adz4T13X4Q03TXCXiDg6nQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="tstbCreateDB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -176,6 +186,9 @@
   </metadata>
   <metadata name="selectWorkspaceBrowserDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>309, 14</value>
+  </metadata>
+  <metadata name="saveExcelModule.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>546, 14</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>81</value>
