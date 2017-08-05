@@ -61,6 +61,8 @@ namespace TestExerciser
 
         private void MainCaseReview_Load(object sender, EventArgs e)
         {
+            try
+            {
             // TODO:  这行代码将数据加载到表“dataSetCasesForReview.评审用例”中。您可以根据需要移动或删除它。
             //this.评审用例TableAdapter.Fill(this.dataSetCasesForReview.评审用例);
             this.btnSelectFile.Enabled = false;
@@ -99,6 +101,11 @@ namespace TestExerciser
             }           
             myManageDB.selectItems(cbIfAuto);
             myManageDB.selectItems(cbIfCover);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnSelectFile_Click(object sender, EventArgs e)
@@ -461,5 +468,7 @@ namespace TestExerciser
                 this.btnCommit.Enabled = true;
             }
         }
+
+
     }
 }

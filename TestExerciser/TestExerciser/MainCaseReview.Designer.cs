@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainCaseReview));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControlReview = new System.Windows.Forms.TabControl();
             this.tabPageCommit = new System.Windows.Forms.TabPage();
@@ -74,6 +74,8 @@
             this.dgvCommit = new CCWin.SkinControl.SkinDataGridView();
             this.tlpAddComment = new System.Windows.Forms.TableLayoutPanel();
             this.btnCommit = new CCWin.SkinControl.SkinButton();
+            this.tabCAddCommit = new System.Windows.Forms.TabControl();
+            this.tabPAddCommit = new System.Windows.Forms.TabPage();
             this.rtbCommit = new System.Windows.Forms.RichTextBox();
             this.tabPageAffirm = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
@@ -119,6 +121,8 @@
             this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommit)).BeginInit();
             this.tlpAddComment.SuspendLayout();
+            this.tabCAddCommit.SuspendLayout();
+            this.tabPAddCommit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -200,8 +204,8 @@
             this.tlpPreCommit.Location = new System.Drawing.Point(0, 0);
             this.tlpPreCommit.Name = "tlpPreCommit";
             this.tlpPreCommit.RowCount = 3;
-            this.tlpPreCommit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.39669F));
-            this.tlpPreCommit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.60331F));
+            this.tlpPreCommit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 450F));
+            this.tlpPreCommit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpPreCommit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpPreCommit.Size = new System.Drawing.Size(369, 757);
             this.tlpPreCommit.TabIndex = 0;
@@ -231,7 +235,7 @@
             this.gbPreReview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbPreReview.Location = new System.Drawing.Point(3, 3);
             this.gbPreReview.Name = "gbPreReview";
-            this.gbPreReview.Size = new System.Drawing.Size(363, 447);
+            this.gbPreReview.Size = new System.Drawing.Size(363, 444);
             this.gbPreReview.TabIndex = 8;
             this.gbPreReview.TabStop = false;
             this.gbPreReview.Text = "预置评审：";
@@ -247,19 +251,19 @@
             this.tlpCommitSteps.Location = new System.Drawing.Point(3, 17);
             this.tlpCommitSteps.Name = "tlpCommitSteps";
             this.tlpCommitSteps.RowCount = 3;
-            this.tlpCommitSteps.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.44954F));
-            this.tlpCommitSteps.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.55046F));
-            this.tlpCommitSteps.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpCommitSteps.Size = new System.Drawing.Size(357, 427);
+            this.tlpCommitSteps.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tlpCommitSteps.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpCommitSteps.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tlpCommitSteps.Size = new System.Drawing.Size(357, 424);
             this.tlpCommitSteps.TabIndex = 6;
             // 
             // gbAddReviewer
             // 
             this.gbAddReviewer.Controls.Add(this.tlpAddCommiter);
             this.gbAddReviewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbAddReviewer.Location = new System.Drawing.Point(3, 60);
+            this.gbAddReviewer.Location = new System.Drawing.Point(3, 58);
             this.gbAddReviewer.Name = "gbAddReviewer";
-            this.gbAddReviewer.Size = new System.Drawing.Size(351, 333);
+            this.gbAddReviewer.Size = new System.Drawing.Size(351, 332);
             this.gbAddReviewer.TabIndex = 6;
             this.gbAddReviewer.TabStop = false;
             this.gbAddReviewer.Text = "第二步：添加评审人";
@@ -274,9 +278,9 @@
             this.tlpAddCommiter.Location = new System.Drawing.Point(3, 17);
             this.tlpAddCommiter.Name = "tlpAddCommiter";
             this.tlpAddCommiter.RowCount = 2;
-            this.tlpAddCommiter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpAddCommiter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tlpAddCommiter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 176F));
-            this.tlpAddCommiter.Size = new System.Drawing.Size(345, 313);
+            this.tlpAddCommiter.Size = new System.Drawing.Size(345, 312);
             this.tlpAddCommiter.TabIndex = 0;
             // 
             // tlpAddCommiters
@@ -301,14 +305,14 @@
             this.tlpAddCommiters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpAddCommiters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpAddCommiters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpAddCommiters.Size = new System.Drawing.Size(339, 131);
+            this.tlpAddCommiters.Size = new System.Drawing.Size(339, 119);
             this.tlpAddCommiters.TabIndex = 0;
             // 
             // labIfAuto
             // 
             this.labIfAuto.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labIfAuto.AutoSize = true;
-            this.labIfAuto.Location = new System.Drawing.Point(3, 74);
+            this.labIfAuto.Location = new System.Drawing.Point(3, 66);
             this.labIfAuto.Name = "labIfAuto";
             this.labIfAuto.Size = new System.Drawing.Size(71, 12);
             this.labIfAuto.TabIndex = 0;
@@ -320,7 +324,7 @@
             this.cbIfCover.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbIfCover.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIfCover.FormattingEnabled = true;
-            this.cbIfCover.Location = new System.Drawing.Point(92, 102);
+            this.cbIfCover.Location = new System.Drawing.Point(92, 92);
             this.cbIfCover.Name = "cbIfCover";
             this.cbIfCover.Size = new System.Drawing.Size(244, 22);
             this.cbIfCover.TabIndex = 5;
@@ -334,7 +338,7 @@
             this.cbIfAuto.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbIfAuto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIfAuto.FormattingEnabled = true;
-            this.cbIfAuto.Location = new System.Drawing.Point(92, 69);
+            this.cbIfAuto.Location = new System.Drawing.Point(92, 61);
             this.cbIfAuto.Name = "cbIfAuto";
             this.cbIfAuto.Size = new System.Drawing.Size(244, 22);
             this.cbIfAuto.TabIndex = 1;
@@ -347,7 +351,7 @@
             this.cbIfOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbIfOrder.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbIfOrder.FormattingEnabled = true;
-            this.cbIfOrder.Location = new System.Drawing.Point(92, 37);
+            this.cbIfOrder.Location = new System.Drawing.Point(92, 32);
             this.cbIfOrder.Name = "cbIfOrder";
             this.cbIfOrder.Size = new System.Drawing.Size(244, 22);
             this.cbIfOrder.TabIndex = 3;
@@ -357,7 +361,7 @@
             // 
             this.labIfCover.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labIfCover.AutoSize = true;
-            this.labIfCover.Location = new System.Drawing.Point(3, 107);
+            this.labIfCover.Location = new System.Drawing.Point(3, 97);
             this.labIfCover.Name = "labIfCover";
             this.labIfCover.Size = new System.Drawing.Size(71, 12);
             this.labIfCover.TabIndex = 0;
@@ -367,7 +371,7 @@
             // 
             this.labIfOrder.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labIfOrder.AutoSize = true;
-            this.labIfOrder.Location = new System.Drawing.Point(3, 42);
+            this.labIfOrder.Location = new System.Drawing.Point(3, 37);
             this.labIfOrder.Name = "labIfOrder";
             this.labIfOrder.Size = new System.Drawing.Size(83, 12);
             this.labIfOrder.TabIndex = 2;
@@ -377,7 +381,7 @@
             // 
             this.labIfMatch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labIfMatch.AutoSize = true;
-            this.labIfMatch.Location = new System.Drawing.Point(3, 10);
+            this.labIfMatch.Location = new System.Drawing.Point(3, 8);
             this.labIfMatch.Name = "labIfMatch";
             this.labIfMatch.Size = new System.Drawing.Size(83, 12);
             this.labIfMatch.TabIndex = 0;
@@ -388,7 +392,7 @@
             this.cbIfMatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbIfMatch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbIfMatch.FormattingEnabled = true;
-            this.cbIfMatch.Location = new System.Drawing.Point(92, 5);
+            this.cbIfMatch.Location = new System.Drawing.Point(92, 3);
             this.cbIfMatch.Name = "cbIfMatch";
             this.cbIfMatch.Size = new System.Drawing.Size(244, 22);
             this.cbIfMatch.TabIndex = 4;
@@ -398,9 +402,9 @@
             // 
             this.gbCoverFullNameList.Controls.Add(this.tlpCoverFullNameList);
             this.gbCoverFullNameList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbCoverFullNameList.Location = new System.Drawing.Point(3, 140);
+            this.gbCoverFullNameList.Location = new System.Drawing.Point(3, 128);
             this.gbCoverFullNameList.Name = "gbCoverFullNameList";
-            this.gbCoverFullNameList.Size = new System.Drawing.Size(339, 170);
+            this.gbCoverFullNameList.Size = new System.Drawing.Size(339, 181);
             this.gbCoverFullNameList.TabIndex = 1;
             this.gbCoverFullNameList.TabStop = false;
             // 
@@ -423,7 +427,7 @@
             this.tlpCoverFullNameList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpCoverFullNameList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpCoverFullNameList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpCoverFullNameList.Size = new System.Drawing.Size(333, 150);
+            this.tlpCoverFullNameList.Size = new System.Drawing.Size(333, 161);
             this.tlpCoverFullNameList.TabIndex = 1;
             // 
             // gbSubmit
@@ -432,7 +436,7 @@
             this.gbSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbSubmit.Location = new System.Drawing.Point(3, 3);
             this.gbSubmit.Name = "gbSubmit";
-            this.gbSubmit.Size = new System.Drawing.Size(351, 51);
+            this.gbSubmit.Size = new System.Drawing.Size(351, 49);
             this.gbSubmit.TabIndex = 5;
             this.gbSubmit.TabStop = false;
             this.gbSubmit.Text = "第一步：添加用例";
@@ -451,14 +455,14 @@
             this.tlpAddExcelFile.Name = "tlpAddExcelFile";
             this.tlpAddExcelFile.RowCount = 1;
             this.tlpAddExcelFile.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpAddExcelFile.Size = new System.Drawing.Size(345, 31);
+            this.tlpAddExcelFile.Size = new System.Drawing.Size(345, 29);
             this.tlpAddExcelFile.TabIndex = 0;
             // 
             // labExcelPath
             // 
             this.labExcelPath.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labExcelPath.AutoSize = true;
-            this.labExcelPath.Location = new System.Drawing.Point(4, 9);
+            this.labExcelPath.Location = new System.Drawing.Point(4, 8);
             this.labExcelPath.Name = "labExcelPath";
             this.labExcelPath.Size = new System.Drawing.Size(41, 12);
             this.labExcelPath.TabIndex = 0;
@@ -466,11 +470,10 @@
             // 
             // btnSelectFile
             // 
-            this.btnSelectFile.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSelectFile.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectFile.Image")));
             this.btnSelectFile.Location = new System.Drawing.Point(323, 3);
             this.btnSelectFile.Name = "btnSelectFile";
-            this.btnSelectFile.Size = new System.Drawing.Size(19, 25);
+            this.btnSelectFile.Size = new System.Drawing.Size(19, 23);
             this.btnSelectFile.TabIndex = 1;
             this.btnSelectFile.Text = "...";
             this.btnSelectFile.UseVisualStyleBackColor = true;
@@ -487,7 +490,7 @@
             this.tbFilePath.IsPasswordChat = '\0';
             this.tbFilePath.IsSystemPasswordChar = false;
             this.tbFilePath.Lines = new string[0];
-            this.tbFilePath.Location = new System.Drawing.Point(50, 1);
+            this.tbFilePath.Location = new System.Drawing.Point(50, 0);
             this.tbFilePath.Margin = new System.Windows.Forms.Padding(0);
             this.tbFilePath.MaxLength = 32767;
             this.tbFilePath.MinimumSize = new System.Drawing.Size(28, 28);
@@ -529,7 +532,7 @@
             this.btnLaunch.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnLaunch.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnLaunch.DownBack = null;
-            this.btnLaunch.Location = new System.Drawing.Point(129, 400);
+            this.btnLaunch.Location = new System.Drawing.Point(129, 397);
             this.btnLaunch.MouseBack = null;
             this.btnLaunch.Name = "btnLaunch";
             this.btnLaunch.NormlBack = null;
@@ -543,9 +546,9 @@
             // 
             this.gbselectCases.Controls.Add(this.tlpExcelFileList);
             this.gbselectCases.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbselectCases.Location = new System.Drawing.Point(3, 456);
+            this.gbselectCases.Location = new System.Drawing.Point(3, 453);
             this.gbselectCases.Name = "gbselectCases";
-            this.gbselectCases.Size = new System.Drawing.Size(363, 267);
+            this.gbselectCases.Size = new System.Drawing.Size(363, 271);
             this.gbselectCases.TabIndex = 7;
             this.gbselectCases.TabStop = false;
             this.gbselectCases.Text = "选择用例：";
@@ -562,22 +565,21 @@
             this.tlpExcelFileList.RowCount = 2;
             this.tlpExcelFileList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpExcelFileList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tlpExcelFileList.Size = new System.Drawing.Size(357, 247);
+            this.tlpExcelFileList.Size = new System.Drawing.Size(357, 251);
             this.tlpExcelFileList.TabIndex = 0;
             // 
             // tlpSelectExcelFile
             // 
             this.tlpSelectExcelFile.ColumnCount = 2;
+            this.tlpSelectExcelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tlpSelectExcelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpSelectExcelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 260F));
             this.tlpSelectExcelFile.Controls.Add(this.cbSelectExcel, 1, 0);
             this.tlpSelectExcelFile.Controls.Add(this.labSelectExcel, 0, 0);
             this.tlpSelectExcelFile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpSelectExcelFile.Location = new System.Drawing.Point(3, 215);
+            this.tlpSelectExcelFile.Location = new System.Drawing.Point(3, 219);
             this.tlpSelectExcelFile.Name = "tlpSelectExcelFile";
             this.tlpSelectExcelFile.RowCount = 1;
             this.tlpSelectExcelFile.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpSelectExcelFile.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tlpSelectExcelFile.Size = new System.Drawing.Size(351, 29);
             this.tlpSelectExcelFile.TabIndex = 2;
             // 
@@ -587,17 +589,17 @@
             this.cbSelectExcel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbSelectExcel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSelectExcel.FormattingEnabled = true;
-            this.cbSelectExcel.Location = new System.Drawing.Point(94, 3);
+            this.cbSelectExcel.Location = new System.Drawing.Point(73, 3);
             this.cbSelectExcel.Name = "cbSelectExcel";
-            this.cbSelectExcel.Size = new System.Drawing.Size(254, 22);
+            this.cbSelectExcel.Size = new System.Drawing.Size(275, 22);
             this.cbSelectExcel.TabIndex = 6;
             this.cbSelectExcel.WaterText = "";
             // 
             // labSelectExcel
             // 
-            this.labSelectExcel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labSelectExcel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labSelectExcel.AutoSize = true;
-            this.labSelectExcel.Location = new System.Drawing.Point(3, 8);
+            this.labSelectExcel.Location = new System.Drawing.Point(5, 8);
             this.labSelectExcel.Name = "labSelectExcel";
             this.labSelectExcel.Size = new System.Drawing.Size(59, 12);
             this.labSelectExcel.TabIndex = 1;
@@ -619,7 +621,7 @@
             this.tlpSelectTestCase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tlpSelectTestCase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tlpSelectTestCase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlpSelectTestCase.Size = new System.Drawing.Size(351, 206);
+            this.tlpSelectTestCase.Size = new System.Drawing.Size(351, 210);
             this.tlpSelectTestCase.TabIndex = 3;
             // 
             // splitContainer4
@@ -642,30 +644,30 @@
             // 
             // dgvCommit
             // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.dgvCommit.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvCommit.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCommit.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvCommit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvCommit.ColumnFont = null;
             this.dgvCommit.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCommit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCommit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCommit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCommit.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCommit.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCommit.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvCommit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCommit.EnableHeadersVisualStyles = false;
             this.dgvCommit.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -675,11 +677,11 @@
             this.dgvCommit.Name = "dgvCommit";
             this.dgvCommit.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvCommit.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvCommit.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvCommit.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvCommit.RowTemplate.Height = 23;
             this.dgvCommit.Size = new System.Drawing.Size(1097, 548);
             this.dgvCommit.TabIndex = 0;
@@ -695,7 +697,7 @@
             this.tlpAddComment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpAddComment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpAddComment.Controls.Add(this.btnCommit, 1, 0);
-            this.tlpAddComment.Controls.Add(this.rtbCommit, 0, 0);
+            this.tlpAddComment.Controls.Add(this.tabCAddCommit, 0, 0);
             this.tlpAddComment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpAddComment.Location = new System.Drawing.Point(0, 0);
             this.tlpAddComment.Name = "tlpAddComment";
@@ -723,12 +725,33 @@
             this.btnCommit.UseVisualStyleBackColor = false;
             this.btnCommit.Click += new System.EventHandler(this.btnCommit_Click);
             // 
+            // tabCAddCommit
+            // 
+            this.tabCAddCommit.Controls.Add(this.tabPAddCommit);
+            this.tabCAddCommit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabCAddCommit.Location = new System.Drawing.Point(3, 3);
+            this.tabCAddCommit.Name = "tabCAddCommit";
+            this.tabCAddCommit.SelectedIndex = 0;
+            this.tabCAddCommit.Size = new System.Drawing.Size(1061, 199);
+            this.tabCAddCommit.TabIndex = 6;
+            // 
+            // tabPAddCommit
+            // 
+            this.tabPAddCommit.Controls.Add(this.rtbCommit);
+            this.tabPAddCommit.Location = new System.Drawing.Point(4, 22);
+            this.tabPAddCommit.Name = "tabPAddCommit";
+            this.tabPAddCommit.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPAddCommit.Size = new System.Drawing.Size(1053, 173);
+            this.tabPAddCommit.TabIndex = 0;
+            this.tabPAddCommit.Text = "添加评论";
+            this.tabPAddCommit.UseVisualStyleBackColor = true;
+            // 
             // rtbCommit
             // 
             this.rtbCommit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbCommit.Location = new System.Drawing.Point(3, 3);
             this.rtbCommit.Name = "rtbCommit";
-            this.rtbCommit.Size = new System.Drawing.Size(1061, 199);
+            this.rtbCommit.Size = new System.Drawing.Size(1047, 167);
             this.rtbCommit.TabIndex = 6;
             this.rtbCommit.Text = "";
             this.rtbCommit.TextChanged += new System.EventHandler(this.rtbCommit_TextChanged);
@@ -919,18 +942,18 @@
             // chartForAnalyze
             // 
             this.chartForAnalyze.BackColor = System.Drawing.Color.Transparent;
-            chartArea5.Name = "ChartArea1";
-            this.chartForAnalyze.ChartAreas.Add(chartArea5);
+            chartArea2.Name = "ChartArea1";
+            this.chartForAnalyze.ChartAreas.Add(chartArea2);
             this.chartForAnalyze.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend5.Name = "Legend1";
-            this.chartForAnalyze.Legends.Add(legend5);
+            legend2.Name = "Legend1";
+            this.chartForAnalyze.Legends.Add(legend2);
             this.chartForAnalyze.Location = new System.Drawing.Point(3, 17);
             this.chartForAnalyze.Name = "chartForAnalyze";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series5.Legend = "Legend1";
-            series5.Name = "SerCapability";
-            this.chartForAnalyze.Series.Add(series5);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Legend = "Legend1";
+            series2.Name = "SerCapability";
+            this.chartForAnalyze.Series.Add(series2);
             this.chartForAnalyze.Size = new System.Drawing.Size(228, 374);
             this.chartForAnalyze.TabIndex = 0;
             // 
@@ -999,6 +1022,8 @@
             this.splitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommit)).EndInit();
             this.tlpAddComment.ResumeLayout(false);
+            this.tabCAddCommit.ResumeLayout(false);
+            this.tabPAddCommit.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
@@ -1069,5 +1094,7 @@
         private DataSetCasesForReview dataSetCasesForReview;
         private System.Windows.Forms.BindingSource 评审用例BindingSource;
         private DataSetCasesForReviewTableAdapters.评审用例TableAdapter 评审用例TableAdapter;
+        private System.Windows.Forms.TabControl tabCAddCommit;
+        private System.Windows.Forms.TabPage tabPAddCommit;
     }
 }
