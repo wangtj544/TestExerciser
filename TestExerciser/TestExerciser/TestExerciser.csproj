@@ -170,8 +170,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Logic\ColorRandom.cs" />
     <Compile Include="Logic\FTPClient.cs" />
     <Compile Include="Logic\ListItem.cs" />
+    <Compile Include="Logic\TextAndImageColumn.cs" />
     <Compile Include="MainBugManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -391,6 +393,38 @@
     <Compile Include="User\UserResetPwd.Designer.cs">
       <DependentUpon>UserResetPwd.cs</DependentUpon>
     </Compile>
+    <Content Include="Resources\ajax-loader.gif" />
+    <Content Include="Resources\breakpoints.PNG" />
+    <Content Include="Resources\close.PNG" />
+    <Content Include="Resources\collapse.PNG" />
+    <Content Include="Resources\debug.PNG" />
+    <Content Include="Resources\delete.PNG" />
+    <Content Include="Resources\down.PNG" />
+    <Content Include="Resources\ExpandAll.PNG" />
+    <Content Include="Resources\export.PNG" />
+    <Content Include="Resources\FNDJLFCN.gif" />
+    <Content Include="Resources\FNDJLFOK.gif" />
+    <Content Include="Resources\help.PNG" />
+    <Content Include="Resources\icon-run-white.d51728d.gif" />
+    <Content Include="Resources\ignored.PNG" />
+    <Content Include="Resources\import.PNG" />
+    <Content Include="Resources\muteBreakPoint.PNG" />
+    <Content Include="Resources\on-t.PNG" />
+    <Content Include="Resources\pin.PNG" />
+    <Content Include="Resources\rerunerr.PNG" />
+    <Content Include="Resources\restart.PNG" />
+    <Content Include="Resources\restore.PNG" />
+    <Content Include="Resources\scroll.PNG" />
+    <Content Include="Resources\setting.PNG" />
+    <Content Include="Resources\sortA.PNG" />
+    <Content Include="Resources\sortD.PNG" />
+    <Content Include="Resources\start.PNG" />
+    <Content Include="Resources\stop-f.PNG" />
+    <Content Include="Resources\stop-t.PNG" />
+    <Content Include="Resources\toggle.PNG" />
+    <Content Include="Resources\up.PNG" />
+    <Content Include="Resources\wait-f.PNG" />
+    <Content Include="Resources\warp.PNG" />
     <Content Include="Tools\Sources\spyxx.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

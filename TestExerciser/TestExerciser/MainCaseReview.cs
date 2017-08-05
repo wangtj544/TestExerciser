@@ -38,6 +38,12 @@ namespace TestExerciser
         string[] selectedItem = null;
         static List<string> selectedItemList = new List<string>();
 
+        string[] sheetNames = null;
+        static List<string> sheetNamesList = new List<string>();
+
+        string[] excelNames = null;
+        static List<string> excelNamesList = new List<string>();
+
         string mailBody = null;
 
         string currentExcelPath = null;
@@ -51,7 +57,15 @@ namespace TestExerciser
 
         Object cellTempValue = new object { };
         bool needUpdate = false;
-        
+
+
+        //定义两种行样式
+        private DataGridViewCellStyle m_RowStyleNormal;
+        private DataGridViewCellStyle m_RowStyleAlternate;
+
+        string markFlag;
+
+        string excelFilePath = null;
       
 
         public MainCaseReview()
@@ -229,27 +243,76 @@ namespace TestExerciser
             }
         }
 
+        private string[] getExcelSheetName(string excelName)
+        {
+            bool hasTitle = true;
+            excelFilePath = serverTestCaseReviewExcelPool + excelName;
+            excelFileName = Path.GetFileName(excelFilePath);
+            string fileType = System.IO.Path.GetExtension(excelFilePath);
+            if (string.IsNullOrEmpty(fileType)) return null;
+            DataTable sheetsName;
+
+            try
+            {
+                string strCon = string.Format("Provider=Microsoft.ACE.OLEDB.{0}.0;" +
+                                              "Extended Properties=\"Excel {1}.0;HDR={2};IMEX=1;\";" +
+                                              "data source={3};",
+                                              (fileType == ".xls" ? 4 : 12), (fileType == ".xls" ? 8 : 12), (hasTitle ? "Yes" : "NO"), excelFilePath);
+                using (OleDbConnection myConn = new OleDbConnection(strCon))
+                {
+                    myConn.Open();
+                    sheetsName = myConn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "Table" }); //得到所有sheet的名字
+                    //string firstSheetName = sheetsName.Rows[0][2].ToString(); //得到第一个sheet的名字
+                }
+                //得到所有的sheet的名字
+                foreach (DataRow dr in sheetsName.Rows)
+                {                    
+                    string resultString = null;
+                    try
+                    {
+                        resultString = Regex.Match(dr[2].ToString(), @"[\s\S]*(?=\$)").Value;
+                    }
+                    catch (ArgumentException ex)
+                    {
+                        MessageBox.Show("写入Sheet名称失败！ 失败原因：" + ex.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    sheetNamesList.Add(resultString);
+                }
+                sheetNames = sheetNamesList.ToArray();
+                return sheetNames; 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("获取Excel中所有Sheet名称失败！ 失败原因：" + ex.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return sheetNames = null;
+            }
+        }
 
         private void myTextSelectTestCase_DoubleClick(object sender, EventArgs e)
         {
             DialogResult myText_DoubleClick = MessageBox.Show("确定要选择用例吗？", "消息提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
             if (myText_DoubleClick == DialogResult.OK)
             {
+                if (cbSelectExcel.DataSource != null)
+                {
+                    cbSelectExcel.DataSource = null;
+                }
                 var myText = sender as TextBox;
-                //tlpSelectTestCase.Controls.Remove((myText));
+                sheetNamesList.Clear();
+                sheetNames = sheetNamesList.ToArray();
+                getExcelSheetName(myText.Text);               
                 myText.BackColor = Color.LightGoldenrodYellow;
                 cbSelectExcel.Enabled = true;
-                if (!cbSelectExcel.Items.Contains(myText.Text))
-                {
-                    cbSelectExcel.Items.Add(myText.Text);
-                    cbSelectExcel.Text = myText.Text;
-                    currentExcelPath = serverTestCaseReviewExcelPool + myText.Text;
-                }               
+                
+                cbSelectExcel.DataSource = sheetNamesList;
+                currentExcelPath = serverTestCaseReviewExcelPool + myText.Text;
                 this.sbStep4.BaseColor = Color.Lime;
                 this.sbStep4.BorderColor = Color.Lime;
                 btnStart.Enabled = true;
             }
         }
+
 
         private void addExcelToTlpSelectTestCase(string labelText)
         {
@@ -349,7 +412,14 @@ namespace TestExerciser
         {
             if ((this.cbSelectExcel.Text != null) && (this.cbSelectExcel.Text != ""))
             {
-                dgvCommit.DataSource = GetDataFromExcelToDT();
+                if (dgvCommit.DataSource != null)
+                {
+                    //DataTable dt = (DataTable)dgvCommit.DataSource;
+                    //dt.Rows.Clear();
+                    dgvCommit.DataSource = null;                   
+                }                
+                dgvCommit.DataSource = GetDataFromExcelToDT(this.cbSelectExcel.Text);
+                dgvCommit.ResetBindings();
                 this.sbStep5.BaseColor = Color.Lime;
                 this.sbStep5.BorderColor = Color.Lime;
                 this.btnStart.Enabled = true;
@@ -357,7 +427,7 @@ namespace TestExerciser
             }
             else
             {
-                MessageBox.Show("请填写需要导入的Excel工作簿名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("请选取需要导入的Excel工作簿名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -366,15 +436,15 @@ namespace TestExerciser
         /// </summary>
         /// <param name="sheetName"></param>
         /// <returns></returns>
-        DataSet ds = new DataSet();
-        private DataTable GetDataFromExcelToDT()
+        
+        private DataTable GetDataFromExcelToDT(string currentSheetName)
         {
+            DataSet ds = new DataSet();
             bool hasTitle = true;
             if (cbSelectExcel.Text!="")
             {
-                var filePath = serverTestCaseReviewExcelPool + this.cbSelectExcel.Text;
-                excelFileName = Path.GetFileName(filePath);
-                string fileType = System.IO.Path.GetExtension(filePath);
+                excelFileName = Path.GetFileName(excelFilePath);
+                string fileType = System.IO.Path.GetExtension(excelFilePath);
                 if (string.IsNullOrEmpty(fileType)) return null;
 
                 try
@@ -382,15 +452,15 @@ namespace TestExerciser
                     string strCon = string.Format("Provider=Microsoft.ACE.OLEDB.{0}.0;" +
                                                   "Extended Properties=\"Excel {1}.0;HDR={2};IMEX=1;\";" +
                                                   "data source={3};",
-                                                  (fileType == ".xls" ? 4 : 12), (fileType == ".xls" ? 8 : 12), (hasTitle ? "Yes" : "NO"), filePath);                                       
+                                                  (fileType == ".xls" ? 4 : 12), (fileType == ".xls" ? 8 : 12), (hasTitle ? "Yes" : "NO"), excelFilePath);                                       
                     using (OleDbConnection myConn = new OleDbConnection(strCon))
                     {
                         myConn.Open();
-                        DataTable sheetsName = myConn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "Table" }); //得到所有sheet的名字
-                        string firstSheetName = sheetsName.Rows[0][2].ToString(); //得到第一个sheet的名字
-                        string strCom = string.Format(" SELECT * FROM [{0}A3:P{1}]", (firstSheetName), readColumnNo);
+                        //DataTable sheetsName = myConn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "Table" }); //得到所有sheet的名字
+                        //string firstSheetName = sheetsName.Rows[0][2].ToString(); //得到第一个sheet的名字
+                        string strCom = string.Format(" SELECT * FROM [{0}$A3:P{1}]", (currentSheetName), readColumnNo);
                         OleDbDataAdapter myCommand = new OleDbDataAdapter(strCom, myConn);
-                        myCommand.Fill(ds, firstSheetName);
+                        myCommand.Fill(ds, currentSheetName);
                     }
                     if (ds == null || ds.Tables.Count <= 0) return null;
                     return ds.Tables[0];
@@ -398,7 +468,7 @@ namespace TestExerciser
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show("数据绑定Excel失败！ 失败原因：" + ex.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("读取Excel数据失败！ 失败原因：" + ex.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     return null;
 
@@ -467,6 +537,78 @@ namespace TestExerciser
             {
                 this.btnCommit.Enabled = true;
             }
+        }
+
+        private void 标记删除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            markFlag = "DELETE";
+            
+        }
+
+        private void 标记修改ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            markFlag = "EDIT";
+        }
+
+        private void 标记新增ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            markFlag = "ADD";
+        }
+
+        private void 标记通过ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            markFlag = "PASS";
+        }
+
+        /// <summary>
+        /// 设置行样式
+        /// </summary>
+        private void SetRowStyle()
+        {
+            //可根据需要设置更多样式属性，如字体、对齐、前景色、背景色等
+            this.m_RowStyleNormal = new DataGridViewCellStyle();
+            this.m_RowStyleNormal.BackColor = Color.LightBlue;
+            this.m_RowStyleNormal.SelectionBackColor = Color.LightSteelBlue;
+
+            this.m_RowStyleAlternate = new DataGridViewCellStyle();
+            this.m_RowStyleAlternate.BackColor = Color.LightGray;
+            this.m_RowStyleAlternate.SelectionBackColor = Color.LightSlateGray;
+        }
+
+        private void dgvCommit_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {           
+                Image rowicon;//标头图标
+                string strtooltip;//提示信息
+
+                if (markFlag == "delete")
+                {
+                    rowicon = TestExerciser.Properties.Resources._1;//从资源文件中获取图片
+                    strtooltip = "标记删除";
+                }
+                else if (markFlag == "edit")
+                {
+                    rowicon = TestExerciser.Properties.Resources._6;
+                    strtooltip = "标记修改";
+                }
+                else if (markFlag == "add")
+                {
+                    rowicon = TestExerciser.Properties.Resources._3;
+                    strtooltip = "标记新增";
+                }
+
+                else if (markFlag == "pass")
+                {
+                    rowicon = TestExerciser.Properties.Resources.FNDJLFCN;
+                    strtooltip = "通过";
+                }
+                else
+                {
+                    rowicon = TestExerciser.Properties.Resources.FNDJLFOK;
+                    strtooltip = "通过";
+                }
+
+                e.Graphics.DrawImage(rowicon, e.RowBounds.Left + this.dgvCommit.RowHeadersWidth - 20, e.RowBounds.Top + 4, 16, 16);//绘制图标
+                this.dgvCommit.Rows[e.RowIndex].HeaderCell.ToolTipText = strtooltip;//设置提示信息
         }
 
 

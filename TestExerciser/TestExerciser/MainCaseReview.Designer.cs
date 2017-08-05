@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainCaseReview));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControlReview = new System.Windows.Forms.TabControl();
             this.tabPageCommit = new System.Windows.Forms.TabPage();
@@ -72,6 +72,11 @@
             this.tlpSelectTestCase = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.dgvCommit = new CCWin.SkinControl.SkinDataGridView();
+            this.contextMenuCommit = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.标记删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.标记修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.标记新增ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.标记通过ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tlpAddComment = new System.Windows.Forms.TableLayoutPanel();
             this.btnCommit = new CCWin.SkinControl.SkinButton();
             this.tabCAddCommit = new System.Windows.Forms.TabControl();
@@ -120,6 +125,7 @@
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommit)).BeginInit();
+            this.contextMenuCommit.SuspendLayout();
             this.tlpAddComment.SuspendLayout();
             this.tabCAddCommit.SuspendLayout();
             this.tabPAddCommit.SuspendLayout();
@@ -571,7 +577,7 @@
             // tlpSelectExcelFile
             // 
             this.tlpSelectExcelFile.ColumnCount = 2;
-            this.tlpSelectExcelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tlpSelectExcelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tlpSelectExcelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpSelectExcelFile.Controls.Add(this.cbSelectExcel, 1, 0);
             this.tlpSelectExcelFile.Controls.Add(this.labSelectExcel, 0, 0);
@@ -589,9 +595,9 @@
             this.cbSelectExcel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbSelectExcel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSelectExcel.FormattingEnabled = true;
-            this.cbSelectExcel.Location = new System.Drawing.Point(73, 3);
+            this.cbSelectExcel.Location = new System.Drawing.Point(83, 3);
             this.cbSelectExcel.Name = "cbSelectExcel";
-            this.cbSelectExcel.Size = new System.Drawing.Size(275, 22);
+            this.cbSelectExcel.Size = new System.Drawing.Size(265, 22);
             this.cbSelectExcel.TabIndex = 6;
             this.cbSelectExcel.WaterText = "";
             // 
@@ -599,11 +605,11 @@
             // 
             this.labSelectExcel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labSelectExcel.AutoSize = true;
-            this.labSelectExcel.Location = new System.Drawing.Point(5, 8);
+            this.labSelectExcel.Location = new System.Drawing.Point(4, 8);
             this.labSelectExcel.Name = "labSelectExcel";
-            this.labSelectExcel.Size = new System.Drawing.Size(59, 12);
+            this.labSelectExcel.Size = new System.Drawing.Size(71, 12);
             this.labSelectExcel.TabIndex = 1;
-            this.labSelectExcel.Text = "选择用例:";
+            this.labSelectExcel.Text = "选择工作簿:";
             // 
             // tlpSelectTestCase
             // 
@@ -644,30 +650,31 @@
             // 
             // dgvCommit
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.dgvCommit.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvCommit.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCommit.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvCommit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvCommit.ColumnFont = null;
             this.dgvCommit.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCommit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCommit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCommit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCommit.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCommit.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvCommit.ContextMenuStrip = this.contextMenuCommit;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCommit.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCommit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCommit.EnableHeadersVisualStyles = false;
             this.dgvCommit.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -675,13 +682,14 @@
             this.dgvCommit.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
             this.dgvCommit.Location = new System.Drawing.Point(0, 0);
             this.dgvCommit.Name = "dgvCommit";
+            this.dgvCommit.ReadOnly = true;
             this.dgvCommit.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvCommit.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvCommit.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvCommit.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCommit.RowTemplate.Height = 23;
             this.dgvCommit.Size = new System.Drawing.Size(1097, 548);
             this.dgvCommit.TabIndex = 0;
@@ -690,6 +698,49 @@
             this.dgvCommit.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
             this.dgvCommit.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvCommit_CellBeginEdit);
             this.dgvCommit.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCommit_CellEndEdit);
+            this.dgvCommit.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvCommit_RowPostPaint);
+            // 
+            // contextMenuCommit
+            // 
+            this.contextMenuCommit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.标记删除ToolStripMenuItem,
+            this.标记修改ToolStripMenuItem,
+            this.标记新增ToolStripMenuItem,
+            this.标记通过ToolStripMenuItem});
+            this.contextMenuCommit.Name = "contextMenuCommit";
+            this.contextMenuCommit.Size = new System.Drawing.Size(125, 92);
+            // 
+            // 标记删除ToolStripMenuItem
+            // 
+            this.标记删除ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("标记删除ToolStripMenuItem.Image")));
+            this.标记删除ToolStripMenuItem.Name = "标记删除ToolStripMenuItem";
+            this.标记删除ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.标记删除ToolStripMenuItem.Text = "标记删除";
+            this.标记删除ToolStripMenuItem.Click += new System.EventHandler(this.标记删除ToolStripMenuItem_Click);
+            // 
+            // 标记修改ToolStripMenuItem
+            // 
+            this.标记修改ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("标记修改ToolStripMenuItem.Image")));
+            this.标记修改ToolStripMenuItem.Name = "标记修改ToolStripMenuItem";
+            this.标记修改ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.标记修改ToolStripMenuItem.Text = "标记修改";
+            this.标记修改ToolStripMenuItem.Click += new System.EventHandler(this.标记修改ToolStripMenuItem_Click);
+            // 
+            // 标记新增ToolStripMenuItem
+            // 
+            this.标记新增ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("标记新增ToolStripMenuItem.Image")));
+            this.标记新增ToolStripMenuItem.Name = "标记新增ToolStripMenuItem";
+            this.标记新增ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.标记新增ToolStripMenuItem.Text = "标记新增";
+            this.标记新增ToolStripMenuItem.Click += new System.EventHandler(this.标记新增ToolStripMenuItem_Click);
+            // 
+            // 标记通过ToolStripMenuItem
+            // 
+            this.标记通过ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("标记通过ToolStripMenuItem.Image")));
+            this.标记通过ToolStripMenuItem.Name = "标记通过ToolStripMenuItem";
+            this.标记通过ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.标记通过ToolStripMenuItem.Text = "标记通过";
+            this.标记通过ToolStripMenuItem.Click += new System.EventHandler(this.标记通过ToolStripMenuItem_Click);
             // 
             // tlpAddComment
             // 
@@ -942,18 +993,18 @@
             // chartForAnalyze
             // 
             this.chartForAnalyze.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chartForAnalyze.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.chartForAnalyze.ChartAreas.Add(chartArea1);
             this.chartForAnalyze.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chartForAnalyze.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.chartForAnalyze.Legends.Add(legend1);
             this.chartForAnalyze.Location = new System.Drawing.Point(3, 17);
             this.chartForAnalyze.Name = "chartForAnalyze";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Legend = "Legend1";
-            series2.Name = "SerCapability";
-            this.chartForAnalyze.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Legend = "Legend1";
+            series1.Name = "SerCapability";
+            this.chartForAnalyze.Series.Add(series1);
             this.chartForAnalyze.Size = new System.Drawing.Size(228, 374);
             this.chartForAnalyze.TabIndex = 0;
             // 
@@ -1021,6 +1072,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommit)).EndInit();
+            this.contextMenuCommit.ResumeLayout(false);
             this.tlpAddComment.ResumeLayout(false);
             this.tabCAddCommit.ResumeLayout(false);
             this.tabPAddCommit.ResumeLayout(false);
@@ -1096,5 +1148,10 @@
         private DataSetCasesForReviewTableAdapters.评审用例TableAdapter 评审用例TableAdapter;
         private System.Windows.Forms.TabControl tabCAddCommit;
         private System.Windows.Forms.TabPage tabPAddCommit;
+        private System.Windows.Forms.ContextMenuStrip contextMenuCommit;
+        private System.Windows.Forms.ToolStripMenuItem 标记删除ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 标记修改ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 标记新增ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 标记通过ToolStripMenuItem;
     }
 }
