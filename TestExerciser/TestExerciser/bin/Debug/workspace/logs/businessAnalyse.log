@@ -1,0 +1,2 @@
+2017-07-19 13:31:33,376-[ANALYSE] INFO main com.sailing.businessanalysis.db.DBHelper.getDruidDataSource(96) ===> 使用Druid数据源连接数据库成功,当前数据库连接为：config.db3
+2017-07-19 13:39:37,718-[ANALYSE] INFO main com.sailing.businessanalysis.db.DBHelper.getDruidDataSource(96) ===> 使用Druid数据源连接数据库成功,当前数据库连接为：config.db3
