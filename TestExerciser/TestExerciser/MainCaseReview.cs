@@ -14,6 +14,7 @@ using TestExerciser.Tools.Control;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Data.OleDb;
+using System.Windows.Forms.DataVisualization.Charting;
 
 
 
@@ -41,11 +42,7 @@ namespace TestExerciser
         string[] sheetNames = null;
         static List<string> sheetNamesList = new List<string>();
 
-        string[] excelNames = null;
-        static List<string> excelNamesList = new List<string>();
-
         string mailBody = null;
-
         string currentExcelPath = null;
         string serverTestCaseReviewExcelPool = @"\\" + Properties.Settings.Default.serverPath + @"\DATA\TestCaseReviewExcelPool\";
 
@@ -57,16 +54,36 @@ namespace TestExerciser
 
         Object cellTempValue = new object { };
         bool needUpdate = false;
-
-
-        //定义两种行样式
-        private DataGridViewCellStyle m_RowStyleNormal;
-        private DataGridViewCellStyle m_RowStyleAlternate;
-
         string markFlag;
-
         string excelFilePath = null;
-      
+
+        int yDel= 0;
+        int yEidt =0;
+        int yAdd =0;
+        int yPass =0;
+        int yUnRe = 0;
+
+        string cmdReviewerMail = ManageDB.userEmailAddress;
+        string comDel = "";
+        string comAdd = "";
+        string comEdit = "";
+        string comPass = "";
+        bool comAuto = false;
+        bool comCover = false;
+        
+
+        string[] comDelArray = null;
+        List<string> comDelArrayList = new List<string>();
+        string[] comAddArray = null;
+        List<string> comAddArrayList = new List<string>();
+        string[] comEditArray = null;
+        List<string> comEditArrayList = new List<string>();
+        string[] comPassArray = null;
+        List<string> comPassArrayList = new List<string>();
+
+        
+
+        
 
         public MainCaseReview()
         {
@@ -160,21 +177,6 @@ namespace TestExerciser
         private void cbIfAuto_SelectionChangeCommitted(object sender, EventArgs e)
         {
             this.cbIfCover.Enabled = true;
-            //if ((cbIfAuto.Text != null)||(cbIfAuto.Text!=""))
-            //{
-            //    this.cbIfCover.Enabled = true;
-            //    string mailAddressStr = null;
-            //    try
-            //    {
-            //        mailAddressStr = Regex.Match(cbIfAuto.Text.ToString(), @"(?<=\()[\s\S]*@sit.com.cn(?=\))").Value;
-            //    }
-            //    catch (ArgumentException exception)
-            //    {
-            //        MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //    autoReviewerList.Add(mailAddressStr);
-            //    autoReviewer = autoReviewerList.ToArray();
-            //}
         }
 
         private void myLabelIfCover_DoubleClick(object sender, EventArgs e)
@@ -499,36 +501,87 @@ namespace TestExerciser
             }
         }
 
-        private void btnCommit_Click(object sender, EventArgs e)
+        private int TotalNonNullCell()
         {
-            if (needUpdate)
+            int nonNullCellNum = 0;
+            int noRowsMax = this.dgvCommit.Rows.Count - 1;
+            for (int noRow = 0; noRow < noRowsMax; noRow++)
             {
-                SqlConnection mycon = null;
-                if (MessageBox.Show("确定修改并保存修改内容吗？", "消息提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                for (int noCell = 0; noCell < this.dgvCommit.Rows[noRow].Cells.Count - 1; noCell++)
                 {
-                    try
-                    {                        
-                        mycon = new SqlConnection(ManageDB.strcon);
-                        mycon.Open();
-                        DataTable myDataTable = this.dataSetCasesForReview.评审用例;
-                        SqlDataAdapter myDataAdapter = this.评审用例TableAdapter.Adapter;
-                        SqlCommandBuilder myOleDbCommandBuilder = new SqlCommandBuilder(myDataAdapter);
-                        myDataAdapter.Update(myDataTable);
-                    }
-                    catch (Exception exception)
+                    //判断当前行是否全为空，如果为空，则后面的数据不需要再读取
+                    bool flag = false;
+                    if (this.dgvCommit.Rows[noRow].Cells[noCell].Value != DBNull.Value)
                     {
-                        MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        nonNullCellNum = nonNullCellNum + 1;
+                        flag = true;
                     }
-                    finally
+                    if (!flag)
                     {
-                        mycon.Close();
+                        noRowsMax = noRow;
+                        break;
                     }
-                }
-                else
-                {
-
                 }
             }
+            return nonNullCellNum; 
+        }
+        
+        /// <summary>
+        /// 统计当前表中的测试用例个数
+        /// </summary>
+        /// <returns></returns>
+        private int TotalCasesNo()
+        {
+            int nonNullCellNum = 0;
+            int noRowsMax = this.dgvCommit.Rows.Count - 1;
+            for (int noRow = 0; noRow < noRowsMax; noRow++)
+            {
+                if (this.dgvCommit.Rows[noRow].Cells[5].Value != DBNull.Value)
+                {
+                    nonNullCellNum = nonNullCellNum + 1;
+                }
+            }
+            return nonNullCellNum; 
+        }
+
+        private void btnCommit_Click(object sender, EventArgs e)
+        {     
+            if(rtbCommit.Text!="")
+            {
+                List<string> xData = new List<string>() { "增", "删", "改", "过", "空" };
+                yUnRe = TotalCasesNo() - yDel - yEidt - yAdd - yPass;
+                List<int> yData = new List<int>() { yAdd,yDel,yEidt,yPass,yUnRe };
+                this.chartForAnalyze.ChartAreas[0].Area3DStyle.Enable3D = true;
+                this.chartForAnalyze.Series[0].ChartType = SeriesChartType.Doughnut;//选择图的类型为饼图
+                this.chartForAnalyze.Series[0]["PieLabelStyle"] = "Outside";//将文字移到外侧
+                this.chartForAnalyze.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
+                this.chartForAnalyze.Series[0].Points.DataBindXY(xData, yData);
+                foreach (string str in comDelArray)
+                {
+                    comDel = comDel + str + "|";
+                }
+                foreach (string str in comAddArray)
+                {
+                    comAdd = comAdd + str + "|";
+                }
+                foreach (string str in comEditArray)
+                {
+                    comEdit = comEdit + str + "|";
+                }
+                foreach (string str in comPassArray)
+                {
+                    comPass = comPass + str + "|";
+                }
+                myManageDB.InsertInto("insert into 评审内容(comReviewerMail,comDel,comAdd,comEdit,comPass,comAuto,comCover) values('" + cmdReviewerMail + "'," + "'" + comDel + "'," + "'" + comAdd + "'," + "'" + comEdit + "'," + "'" + comPass + "'," + "'" + comAuto + "'," + "'" + comCover + "')");           
+
+            }
+            else
+            {
+                MessageBox.Show("评审内容不能为空！", "消息提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            }
+            
+
+             
         }
 
         private void rtbCommit_TextChanged(object sender, EventArgs e)
@@ -550,7 +603,7 @@ namespace TestExerciser
             markFlag = "EDIT";
         }
 
-        private void 标记新增ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 标记增加ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             markFlag = "ADD";
         }
@@ -560,57 +613,171 @@ namespace TestExerciser
             markFlag = "PASS";
         }
 
-        /// <summary>
-        /// 设置行样式
-        /// </summary>
-        private void SetRowStyle()
+        private void 清除标记ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //可根据需要设置更多样式属性，如字体、对齐、前景色、背景色等
-            this.m_RowStyleNormal = new DataGridViewCellStyle();
-            this.m_RowStyleNormal.BackColor = Color.LightBlue;
-            this.m_RowStyleNormal.SelectionBackColor = Color.LightSteelBlue;
+            markFlag = "CLEAN";
+        }
+       
+        private void dgvCommit_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Color currentCellColor = this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor;
+            int rowNo;
+            if(myManageDB.checkAutoReviewTo())
+            {
+                rowNo = 13;
+                comAuto = true;
+            }
+            else 
+            {
+                rowNo = 5;
+                comCover = true;
+            }
+            //单击用例编号单元格修改用例
+             if (e.RowIndex > -1 && e.ColumnIndex == rowNo)
+            {
+                if (this.dgvCommit.Rows[e.RowIndex].Cells[rowNo].Value != DBNull.Value)
+                {
+                    int X = e.RowIndex + 1;
+                    int Y = e.ColumnIndex + 1;
+                    bool ifChange = ((currentCellColor != Color.Yellow) && (currentCellColor != Color.Red) && (currentCellColor != Color.DeepSkyBlue) && (currentCellColor != Color.LightGreen));
+                    switch (markFlag)
+                    {
+                        case "DELETE":
+                            if (ifChange)
+                            {
+                                this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Yellow;
+                                this.rtbCommit.SelectionBackColor = Color.Yellow;
+                                this.dgvCommit.ColumnSelectBackColor = Color.Yellow;
+                                this.rtbCommit.AppendText("【行" + X + "列" + Y + "】" + "【删除说明】【" + ManageDB.userFullName + "】：\n");
+                                yDel = yDel + 1;
+                                comDelArrayList.Add(X.ToString());
+                                comDelArray = comDelArrayList.ToArray();
+                            }                        
+                            break;
+                        case "EDIT":
+                            if (ifChange)
+                            {
+                                this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
+                                this.rtbCommit.SelectionBackColor = Color.Red;
+                                this.dgvCommit.ColumnSelectBackColor = Color.Red;
+                                this.rtbCommit.AppendText("【行" + X + "列" + Y + "】【修改说明】【" + ManageDB.userFullName + "】：\n");
+                                yEidt = yEidt + 1;
+                                comEditArrayList.Add(X.ToString());
+                                comEditArray = comDelArrayList.ToArray();
+                            }
+                            break;
+                        case "ADD":
+                            if (ifChange)
+                            {
+                                this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.DeepSkyBlue;
+                                this.rtbCommit.SelectionBackColor = Color.DeepSkyBlue;
+                                this.dgvCommit.ColumnSelectBackColor = Color.DeepSkyBlue;
+                                this.rtbCommit.AppendText("【行" + X + "列" + Y + "】【添加说明】【" + ManageDB.userFullName + "】：\n");
+                                yAdd = yAdd + 1;
+                                comAddArrayList.Add(X.ToString());
+                                comAddArray = comAddArrayList.ToArray();
+                            }
+                            break;
+                        case "PASS":
+                            if (ifChange)
+                            {
+                                this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.LightGreen;
+                                this.rtbCommit.SelectionBackColor = Color.LightGreen;
+                                this.dgvCommit.ColumnSelectBackColor = Color.LightGreen;
+                                this.rtbCommit.AppendText("【行" + X + "列" + Y + "】【通过说明】【" + ManageDB.userFullName + "】：通过\n");
+                                yPass = yPass + 1;
+                                comPassArrayList.Add(X.ToString());
+                                comPassArray = comPassArrayList.ToArray();
+                            }
+                            break;
+                        case "CLEAN":                           
+                            if (this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.Yellow)
+                            {
+                                string str = "【行" + X + "列" + Y + "】【删除说明】【" + ManageDB.userFullName + "】：\n";
+                                if (this.rtbCommit.Text.IndexOf(str) > -1)
+                                {
+                                    this.rtbCommit.Text = this.rtbCommit.Text.Remove(this.rtbCommit.Text.IndexOf(str), str.Length);
+                                }
+                                else
+                                {
+                                    this.rtbCommit.Text = this.rtbCommit.Text.Remove(this.rtbCommit.Text.IndexOf(str) + 1, str.Length);
+                                }
+                                yDel = yDel - 1;
+                                comDelArrayList.Remove(X.ToString());
+                                comDelArray = comDelArrayList.ToArray();
 
-            this.m_RowStyleAlternate = new DataGridViewCellStyle();
-            this.m_RowStyleAlternate.BackColor = Color.LightGray;
-            this.m_RowStyleAlternate.SelectionBackColor = Color.LightSlateGray;
+                            }
+                            else if (this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.Red)
+                            {
+                                string str = "【行" + X + "列" + Y + "】【修改说明】【" + ManageDB.userFullName + "】：\n";
+                                if (this.rtbCommit.Text.IndexOf(str) > -1)
+                                {
+                                    this.rtbCommit.Text = this.rtbCommit.Text.Remove(this.rtbCommit.Text.IndexOf(str), str.Length);
+                                }
+                                else
+                                {
+                                    this.rtbCommit.Text = this.rtbCommit.Text.Remove(this.rtbCommit.Text.IndexOf(str) + 1, str.Length);
+                                }
+                                yEidt = yEidt - 1;
+                                comEditArrayList.Remove(X.ToString());
+                                comEditArray = comDelArrayList.ToArray();
+
+                            }
+                            else if (this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.DeepSkyBlue)
+                            {
+                                string str = "【行" + X + "列" + Y + "】【添加说明】【" + ManageDB.userFullName + "】：\n";
+                                if (this.rtbCommit.Text.IndexOf(str) > -1)
+                                {
+                                    this.rtbCommit.Text = this.rtbCommit.Text.Remove(this.rtbCommit.Text.IndexOf(str), str.Length);
+                                }
+                                else
+                                {
+                                    this.rtbCommit.Text = this.rtbCommit.Text.Remove(this.rtbCommit.Text.IndexOf(str) + 1, str.Length);
+                                }
+                                yAdd = yAdd - 1;
+                                comAddArrayList.Remove(X.ToString());
+                                comAddArray = comDelArrayList.ToArray();
+
+                            }
+                            else if (this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.LightGreen)
+                            {
+                                string str = "【行" + X + "列" + Y + "】【通过说明】【" + ManageDB.userFullName + "】：通过\n";
+                                if (this.rtbCommit.Text.IndexOf(str) > -1)
+                                {
+                                    this.rtbCommit.Text = this.rtbCommit.Text.Remove(this.rtbCommit.Text.IndexOf(str), str.Length);
+                                }
+                                else
+                                {
+                                    this.rtbCommit.Text = this.rtbCommit.Text.Remove(this.rtbCommit.Text.IndexOf(str)+1, str.Length);
+                                }
+                                yPass = yPass - 1;
+                                comPassArrayList.Remove(X.ToString());
+                                comPassArray = comDelArrayList.ToArray();
+
+                            }
+                            this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.White;
+                            this.dgvCommit.ColumnSelectBackColor = Color.White;
+                            break;
+                        default:
+                            break;
+                    }                       
+                }                
+            }
         }
 
-        private void dgvCommit_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
-        {           
-                Image rowicon;//标头图标
-                string strtooltip;//提示信息
+        private void selectKeyWord(string key)
+        {
+            // 获取RichTextBox中的全部文字内容
+            var text = this.rtbCommit.Text.Trim();
+            // 获取关键字在文本中的索引
+            var startIndex = text.IndexOf(key);
+            // 获取关键字的长度
+            var length = key.Length;
 
-                if (markFlag == "delete")
-                {
-                    rowicon = TestExerciser.Properties.Resources._1;//从资源文件中获取图片
-                    strtooltip = "标记删除";
-                }
-                else if (markFlag == "edit")
-                {
-                    rowicon = TestExerciser.Properties.Resources._6;
-                    strtooltip = "标记修改";
-                }
-                else if (markFlag == "add")
-                {
-                    rowicon = TestExerciser.Properties.Resources._3;
-                    strtooltip = "标记新增";
-                }
-
-                else if (markFlag == "pass")
-                {
-                    rowicon = TestExerciser.Properties.Resources.FNDJLFCN;
-                    strtooltip = "通过";
-                }
-                else
-                {
-                    rowicon = TestExerciser.Properties.Resources.FNDJLFOK;
-                    strtooltip = "通过";
-                }
-
-                e.Graphics.DrawImage(rowicon, e.RowBounds.Left + this.dgvCommit.RowHeadersWidth - 20, e.RowBounds.Top + 4, 16, 16);//绘制图标
-                this.dgvCommit.Rows[e.RowIndex].HeaderCell.ToolTipText = strtooltip;//设置提示信息
+            // RichTextBox文本框获得焦点
+            this.rtbCommit.Focus();
+            // 选中文本文本框中的关键字
+            this.rtbCommit.Select(startIndex, length);
         }
-
-
     }
 }

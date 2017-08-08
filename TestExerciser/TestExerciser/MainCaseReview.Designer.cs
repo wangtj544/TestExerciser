@@ -34,9 +34,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControlReview = new System.Windows.Forms.TabControl();
             this.tabPageCommit = new System.Windows.Forms.TabPage();
@@ -75,8 +75,9 @@
             this.contextMenuCommit = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.标记删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.标记修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.标记新增ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.标记增加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.标记通过ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.清除标记ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tlpAddComment = new System.Windows.Forms.TableLayoutPanel();
             this.btnCommit = new CCWin.SkinControl.SkinButton();
             this.tabCAddCommit = new System.Windows.Forms.TabControl();
@@ -98,6 +99,7 @@
             this.评审用例BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetCasesForReview = new TestExerciser.DataSetCasesForReview();
             this.评审用例TableAdapter = new TestExerciser.DataSetCasesForReviewTableAdapters.评审用例TableAdapter();
+            this.dataSetCasesForReview1 = new TestExerciser.DataSetCasesForReview();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -139,6 +141,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartForAnalyze)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.评审用例BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCasesForReview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetCasesForReview1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -533,8 +536,8 @@
             // 
             this.btnLaunch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLaunch.BackColor = System.Drawing.Color.Transparent;
-            this.btnLaunch.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnLaunch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnLaunch.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnLaunch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnLaunch.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnLaunch.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnLaunch.DownBack = null;
@@ -650,7 +653,8 @@
             // 
             // dgvCommit
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvCommit.AlternatingCellBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvCommit.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCommit.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvCommit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -660,12 +664,13 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCommit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCommit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCommit.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvCommit.ColumnSelectBackColor = System.Drawing.Color.White;
+            this.dgvCommit.ColumnSelectForeColor = System.Drawing.Color.Black;
             this.dgvCommit.ContextMenuStrip = this.contextMenuCommit;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -679,7 +684,8 @@
             this.dgvCommit.EnableHeadersVisualStyles = false;
             this.dgvCommit.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvCommit.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dgvCommit.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvCommit.HeadSelectBackColor = System.Drawing.Color.White;
+            this.dgvCommit.HeadSelectForeColor = System.Drawing.Color.Black;
             this.dgvCommit.Location = new System.Drawing.Point(0, 0);
             this.dgvCommit.Name = "dgvCommit";
             this.dgvCommit.ReadOnly = true;
@@ -687,32 +693,34 @@
             this.dgvCommit.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvCommit.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCommit.RowTemplate.Height = 23;
+            this.dgvCommit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvCommit.Size = new System.Drawing.Size(1097, 548);
             this.dgvCommit.TabIndex = 0;
             this.dgvCommit.TitleBack = null;
             this.dgvCommit.TitleBackColorBegin = System.Drawing.Color.White;
             this.dgvCommit.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
             this.dgvCommit.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvCommit_CellBeginEdit);
+            this.dgvCommit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCommit_CellClick);
             this.dgvCommit.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCommit_CellEndEdit);
-            this.dgvCommit.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvCommit_RowPostPaint);
             // 
             // contextMenuCommit
             // 
             this.contextMenuCommit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.标记删除ToolStripMenuItem,
             this.标记修改ToolStripMenuItem,
-            this.标记新增ToolStripMenuItem,
-            this.标记通过ToolStripMenuItem});
+            this.标记增加ToolStripMenuItem,
+            this.标记通过ToolStripMenuItem,
+            this.清除标记ToolStripMenuItem});
             this.contextMenuCommit.Name = "contextMenuCommit";
-            this.contextMenuCommit.Size = new System.Drawing.Size(125, 92);
+            this.contextMenuCommit.Size = new System.Drawing.Size(125, 114);
             // 
             // 标记删除ToolStripMenuItem
             // 
-            this.标记删除ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("标记删除ToolStripMenuItem.Image")));
+            this.标记删除ToolStripMenuItem.Image = global::TestExerciser.Properties.Resources._6;
             this.标记删除ToolStripMenuItem.Name = "标记删除ToolStripMenuItem";
             this.标记删除ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.标记删除ToolStripMenuItem.Text = "标记删除";
@@ -720,19 +728,19 @@
             // 
             // 标记修改ToolStripMenuItem
             // 
-            this.标记修改ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("标记修改ToolStripMenuItem.Image")));
+            this.标记修改ToolStripMenuItem.Image = global::TestExerciser.Properties.Resources._1;
             this.标记修改ToolStripMenuItem.Name = "标记修改ToolStripMenuItem";
             this.标记修改ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.标记修改ToolStripMenuItem.Text = "标记修改";
             this.标记修改ToolStripMenuItem.Click += new System.EventHandler(this.标记修改ToolStripMenuItem_Click);
             // 
-            // 标记新增ToolStripMenuItem
+            // 标记增加ToolStripMenuItem
             // 
-            this.标记新增ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("标记新增ToolStripMenuItem.Image")));
-            this.标记新增ToolStripMenuItem.Name = "标记新增ToolStripMenuItem";
-            this.标记新增ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.标记新增ToolStripMenuItem.Text = "标记新增";
-            this.标记新增ToolStripMenuItem.Click += new System.EventHandler(this.标记新增ToolStripMenuItem_Click);
+            this.标记增加ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("标记增加ToolStripMenuItem.Image")));
+            this.标记增加ToolStripMenuItem.Name = "标记增加ToolStripMenuItem";
+            this.标记增加ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.标记增加ToolStripMenuItem.Text = "标记增加";
+            this.标记增加ToolStripMenuItem.Click += new System.EventHandler(this.标记增加ToolStripMenuItem_Click);
             // 
             // 标记通过ToolStripMenuItem
             // 
@@ -741,6 +749,14 @@
             this.标记通过ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.标记通过ToolStripMenuItem.Text = "标记通过";
             this.标记通过ToolStripMenuItem.Click += new System.EventHandler(this.标记通过ToolStripMenuItem_Click);
+            // 
+            // 清除标记ToolStripMenuItem
+            // 
+            this.清除标记ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("清除标记ToolStripMenuItem.Image")));
+            this.清除标记ToolStripMenuItem.Name = "清除标记ToolStripMenuItem";
+            this.清除标记ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.清除标记ToolStripMenuItem.Text = "清除标记";
+            this.清除标记ToolStripMenuItem.Click += new System.EventHandler(this.清除标记ToolStripMenuItem_Click);
             // 
             // tlpAddComment
             // 
@@ -993,18 +1009,19 @@
             // chartForAnalyze
             // 
             this.chartForAnalyze.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chartForAnalyze.ChartAreas.Add(chartArea1);
+            chartArea3.Name = "ChartArea1";
+            this.chartForAnalyze.ChartAreas.Add(chartArea3);
             this.chartForAnalyze.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartForAnalyze.Legends.Add(legend1);
+            legend3.Name = "Legend1";
+            this.chartForAnalyze.Legends.Add(legend3);
             this.chartForAnalyze.Location = new System.Drawing.Point(3, 17);
             this.chartForAnalyze.Name = "chartForAnalyze";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Legend = "Legend1";
-            series1.Name = "SerCapability";
-            this.chartForAnalyze.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series3.IsValueShownAsLabel = true;
+            series3.Legend = "Legend1";
+            series3.Name = "SerCapability";
+            this.chartForAnalyze.Series.Add(series3);
             this.chartForAnalyze.Size = new System.Drawing.Size(228, 374);
             this.chartForAnalyze.TabIndex = 0;
             // 
@@ -1027,6 +1044,11 @@
             // 评审用例TableAdapter
             // 
             this.评审用例TableAdapter.ClearBeforeFill = true;
+            // 
+            // dataSetCasesForReview1
+            // 
+            this.dataSetCasesForReview1.DataSetName = "DataSetCasesForReview";
+            this.dataSetCasesForReview1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // MainCaseReview
             // 
@@ -1086,6 +1108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartForAnalyze)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.评审用例BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCasesForReview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetCasesForReview1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1151,7 +1174,9 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuCommit;
         private System.Windows.Forms.ToolStripMenuItem 标记删除ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 标记修改ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 标记新增ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 标记增加ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 标记通过ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 清除标记ToolStripMenuItem;
+        private DataSetCasesForReview dataSetCasesForReview1;
     }
 }

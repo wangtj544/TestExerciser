@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="contextMenuCommit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>720, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnSelectFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -130,24 +133,7 @@
         qHdJ+8vRd1HbC/svogb/InHJFXDOGD2zktpkAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="contextMenuCommit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>720, 17</value>
-  </metadata>
-  <data name="标记删除ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAACFJREFUOE9j+E8hGI4GvJVRwYvRwagBw9MAUsGQN+D/fwCn5Igu+pXRKwAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <data name="标记修改ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAACBJREFUOE9j+E8hGJYGnOTDj9HAqAHD1AASwZA34P9/AJ4Osm5TDp6PAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
-  <data name="标记新增ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="标记增加ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAACFJREFUOE9j+E8hGI4G2HucwYvRwagBw9MAUsGQN+D/fwCkQZGuZob0ugAAAABJ
@@ -156,16 +142,19 @@
   </data>
   <data name="标记通过ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAB0ElEQVQ4T2P4//8/RRirICkY
-        QkwXZGCYLcTAMAeIQTSIv0iYgWGpCAQvA+IVogwMK0XlGVaJngFiD4blIgQMmAnE84FsEIYYJgDUtCHt
-        Xfl/IH0GiD1IMYCNYbHIPMNjzk+jHmX/j39Z8BvIP0OsAYwMC4RbFXYY3wu4kfjf+2rML54VcpcYFgr7
-        oBvgAcRnwDSIP5kfJp4pvErlhtv58H8uZ0P/CixXvAa0KBloKFIYTBMEaTqT9Kr4L4gG80EGTBP04Zgr
-        cVlnm+1vtfXm//gWyN8CylczzAAbjGTAJP4zMU9zf3lciPwf8TDzD4gPxLksU4VPK28x+aG4yeg//3z5
-        +0CxHoYpAkwMUwUYQBhhQB+fB0Mv3xn/m/E/lfYY/3e4EPADxJfapPVZeofOf/5Fck+A/HkM/fwcQAPA
-        mlEN6OVjYOjg9WBo5z1jfMr5m8Rhzf8aZyz/ix/S+M+/Su4VUHwdQxevANAABtwGtPMyMDRzezA0cZ+R
-        PqD1Rfisyn++bbLvGZt5djO08kgDDWAgbEATNwNDKYcHQxH7Ga5lYi8YyziOAPmaDOUcDNgwdgOK2BkY
-        Epk9GOKZzgBpCzAfi2YQhhtACcYqSDz+zwAAsg/AZ2raV/wAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAACFJREFUOE9j+E8hGI4GKG30wYvRwagBw9MAUsGQN+D/fwBM+4Sud8PtFQAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="清除标记ToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhGAAYAIT/AP///8DAwMz//8zM/8zMzJnM/5nMzJmZzGaZzGZmzGZmmTNmzDNmmTMzZjMzMwAz
+        ZgAzMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBF
+        Mi4wAwEBAAAh+QQBAAABACwAAAAAGAAYAAAIrgADCBxIsKDBgwgTKgwg4ACChxAXEnRoAIBFiwcSICCw
+        0OGAiyABIHBQQCGCAxYHIFCw4EHFAwwYmKwIgMABAwYIfCTQQGbChzRDAoDQgOPMmxAfNugpEYHIlQsU
+        MIiAgIGDpiKzOnXKoAHWrVoBWP0aluvVhWDTij1rsmzWrmTVjkXr1mzcsHMVMnjo1oFPhQQcIFCZVeoD
+        owut7mUpVbDEgVYdPJDs+LHlyxIDAgA7
 </value>
   </data>
   <metadata name="selectFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -177,8 +166,14 @@
   <metadata name="dataSetCasesForReview.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>161, 17</value>
   </metadata>
+  <metadata name="dataSetCasesForReview.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>161, 17</value>
+  </metadata>
   <metadata name="评审用例TableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>539, 17</value>
+  </metadata>
+  <metadata name="dataSetCasesForReview1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>897, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>53</value>
