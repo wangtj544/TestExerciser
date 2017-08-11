@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("环境");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Access数据库");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("数据库选择");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("数据库", new System.Windows.Forms.TreeNode[] {
             treeNode2});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToolManager));
@@ -41,9 +41,9 @@
             this.btnCancel = new CCWin.SkinControl.SkinButton();
             this.spCMain = new System.Windows.Forms.SplitContainer();
             this.tlpTreeView = new System.Windows.Forms.TableLayoutPanel();
+            this.mySearch = new TestExerciser.Tools.Control.ControlSearch();
             this.tvItems = new System.Windows.Forms.TreeView();
             this.ImageToolManager = new System.Windows.Forms.ImageList(this.components);
-            this.mySearch = new TestExerciser.Tools.Control.ControlSearch();
             this.tlpMain.SuspendLayout();
             this.tlpButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spCMain)).BeginInit();
@@ -161,6 +161,13 @@
             this.tlpTreeView.Size = new System.Drawing.Size(212, 403);
             this.tlpTreeView.TabIndex = 0;
             // 
+            // mySearch
+            // 
+            this.mySearch.Location = new System.Drawing.Point(3, 3);
+            this.mySearch.Name = "mySearch";
+            this.mySearch.Size = new System.Drawing.Size(204, 29);
+            this.mySearch.TabIndex = 0;
+            // 
             // tvItems
             // 
             this.tvItems.BackColor = System.Drawing.Color.White;
@@ -172,9 +179,9 @@
             treeNode1.Name = "tnEnv";
             treeNode1.Text = "环境";
             treeNode1.ToolTipText = "环境";
-            treeNode2.Name = "tnAccess";
-            treeNode2.Text = "Access数据库";
-            treeNode2.ToolTipText = "Access数据库";
+            treeNode2.Name = "tnSQL";
+            treeNode2.Text = "数据库选择";
+            treeNode2.ToolTipText = "数据库选择";
             treeNode3.Name = "tnDB";
             treeNode3.Text = "数据库";
             treeNode3.ToolTipText = "数据库";
@@ -194,13 +201,6 @@
             this.ImageToolManager.TransparentColor = System.Drawing.Color.Transparent;
             this.ImageToolManager.Images.SetKeyName(0, "9.png");
             this.ImageToolManager.Images.SetKeyName(1, "8.png");
-            // 
-            // mySearch
-            // 
-            this.mySearch.Location = new System.Drawing.Point(3, 3);
-            this.mySearch.Name = "mySearch";
-            this.mySearch.Size = new System.Drawing.Size(204, 29);
-            this.mySearch.TabIndex = 0;
             // 
             // ToolManager
             // 

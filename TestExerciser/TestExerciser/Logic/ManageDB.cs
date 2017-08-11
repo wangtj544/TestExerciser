@@ -462,7 +462,5 @@ namespace TestExerciser.Logic
             mycon.Close();
             mycon.Dispose();
         }
-
-
     }
 }

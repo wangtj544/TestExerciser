@@ -38,8 +38,6 @@ namespace TestExerciser.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=172.20.32.147;Initial Catalog=TestExerciser;User ID=sa;Password=admin" +
-            "@123")]
         public string TestExerciserConnectionString {
             get {
                 return ((string)(this["TestExerciserConnectionString"]));
@@ -72,13 +70,25 @@ namespace TestExerciser.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("172.20.32.147")]
-        public string serverPath {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string dataSource {
             get {
-                return ((string)(this["serverPath"]));
+                return ((string)(this["dataSource"]));
             }
             set {
-                this["serverPath"] = value;
+                this["dataSource"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(";Initial Catalog=TestExerciser;User ID=sa;Password=admin@123")]
+        public string ConnectionParas {
+            get {
+                return ((string)(this["ConnectionParas"]));
+            }
+            set {
+                this["ConnectionParas"] = value;
             }
         }
     }

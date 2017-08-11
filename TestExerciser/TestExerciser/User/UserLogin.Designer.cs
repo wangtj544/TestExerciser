@@ -39,6 +39,7 @@
             this.txtStatus = new System.Windows.Forms.Label();
             this.linkRegister = new System.Windows.Forms.LinkLabel();
             this.linkForgetPwd = new System.Windows.Forms.LinkLabel();
+            this.linkSelectDB = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // btnOK
@@ -47,7 +48,7 @@
             this.btnOK.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.DownBack = null;
-            this.btnOK.Location = new System.Drawing.Point(45, 205);
+            this.btnOK.Location = new System.Drawing.Point(61, 205);
             this.btnOK.MouseBack = null;
             this.btnOK.Name = "btnOK";
             this.btnOK.NormlBack = null;
@@ -63,11 +64,11 @@
             this.btnCancel.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.DownBack = null;
-            this.btnCancel.Location = new System.Drawing.Point(194, 205);
+            this.btnCancel.Location = new System.Drawing.Point(214, 205);
             this.btnCancel.MouseBack = null;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.NormlBack = null;
-            this.btnCancel.Size = new System.Drawing.Size(111, 23);
+            this.btnCancel.Size = new System.Drawing.Size(98, 23);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "取消登录";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -203,7 +204,7 @@
             // linkForgetPwd
             // 
             this.linkForgetPwd.AutoSize = true;
-            this.linkForgetPwd.Location = new System.Drawing.Point(268, 155);
+            this.linkForgetPwd.Location = new System.Drawing.Point(289, 128);
             this.linkForgetPwd.Name = "linkForgetPwd";
             this.linkForgetPwd.Size = new System.Drawing.Size(65, 12);
             this.linkForgetPwd.TabIndex = 9;
@@ -211,12 +212,24 @@
             this.linkForgetPwd.Text = "忘记密码？";
             this.linkForgetPwd.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkForgetPwd_LinkClicked);
             // 
+            // linkSelectDB
+            // 
+            this.linkSelectDB.AutoSize = true;
+            this.linkSelectDB.Location = new System.Drawing.Point(219, 153);
+            this.linkSelectDB.Name = "linkSelectDB";
+            this.linkSelectDB.Size = new System.Drawing.Size(77, 12);
+            this.linkSelectDB.TabIndex = 10;
+            this.linkSelectDB.TabStop = true;
+            this.linkSelectDB.Text = "选择服务器？";
+            this.linkSelectDB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSelectDB_LinkClicked);
+            // 
             // UserLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(345, 254);
+            this.ClientSize = new System.Drawing.Size(374, 254);
+            this.Controls.Add(this.linkSelectDB);
             this.Controls.Add(this.linkForgetPwd);
             this.Controls.Add(this.linkRegister);
             this.Controls.Add(this.txtStatus);
@@ -251,5 +264,6 @@
         private CCWin.SkinControl.SkinTextBox txtUserName;
         private System.Windows.Forms.LinkLabel linkRegister;
         private System.Windows.Forms.LinkLabel linkForgetPwd;
+        private System.Windows.Forms.LinkLabel linkSelectDB;
     }
 }

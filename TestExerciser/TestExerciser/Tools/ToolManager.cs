@@ -21,10 +21,8 @@ namespace TestExerciser.Tools
         Label labDetails = new Label();
         SkinTextBox stbServerDBPath = new SkinTextBox();
 
-        //public static string strconLocal = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
-        //public static string strcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + @"\\172.20.32.147\data\TestExerciser.accdb" + @"\TestExerciser.accdb;Jet OLEDB:Database Password=admin@123";
-        public static string strconLocal = "Data Source=(local);Initial Catalog=TestExerciser;User ID=sa;Password=admin@123";
-        public static string strcon = "Data Source=172.20.32.147;Initial Catalog=TestExerciser;User ID=sa;Password=admin@123";
+        public static string strconLocal = "Data Source=.\\SQLEXPRESS";
+        public static string strcon = null;
 
         string operate = null;
 
@@ -48,7 +46,7 @@ namespace TestExerciser.Tools
                         if (this.stbServerDBPath.Text != "")
                         {
                             //配置为远程服务器上的数据库                        
-                            strcon = this.stbServerDBPath.Text.ToString() + ";User ID=sa;Password=admin@123";
+                            strcon = this.stbServerDBPath.Text.ToString() + ";Initial Catalog=TestExerciser;User ID=sa;Password=admin@123";
                             this.txtStatus.ForeColor = Color.Green;
                             this.txtStatus.Text = "设置信息：设置成功，更改为远程服务器数据库连接！关闭并重启软件后生效！";
 
@@ -56,16 +54,17 @@ namespace TestExerciser.Tools
                         else
                         {
                             this.txtStatus.ForeColor = Color.Red;
-                            this.txtStatus.Text = "设置信息：设置失败，请填写远程服务器上数据库文件路径！";
+                            this.txtStatus.Text = "设置信息：设置失败，请填写远程服务器上数据库文件路径！";                            
                         }
                     }
                     else if(radbLocal.Checked==true)
                     {
-
+                        strcon = strconLocal;
                         this.txtStatus.ForeColor = Color.Green;
                         this.txtStatus.Text = "设置信息：设置成功，更改为本地数据库连接！关闭并重启软件后生效！";
                     }
-                    Properties.Settings.Default.ConnectionString = strcon;
+                    Properties.Settings.Default.dataSource = strcon;                    
+                    Properties.Settings.Default.ConnectionString = Properties.Settings.Default.dataSource + Properties.Settings.Default.ConnectionParas;
                     Properties.Settings.Default.Save();
                     break;
             }            
@@ -167,11 +166,11 @@ namespace TestExerciser.Tools
                     this.stbServerDBPath.SkinTxt.Size = new System.Drawing.Size(311, 138);
                     this.stbServerDBPath.SkinTxt.TabIndex = 0;
                     this.stbServerDBPath.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-                    this.stbServerDBPath.SkinTxt.WaterText = "Data Source=172.20.32.147;Initial Catalog=TestExerciser;";
+                    this.stbServerDBPath.SkinTxt.WaterText = "Data Source=172.20.32.147";
                     this.stbServerDBPath.TabIndex = 20;
                     this.stbServerDBPath.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
                     this.stbServerDBPath.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-                    this.stbServerDBPath.WaterText = "Data Source=172.20.32.147;Initial Catalog=TestExerciser;";
+                    this.stbServerDBPath.WaterText = "Data Source=172.20.32.147";
                     this.stbServerDBPath.WordWrap = true;
                 }
                 else

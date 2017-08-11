@@ -44,7 +44,7 @@ namespace TestExerciser
 
         string mailBody = null;
         string currentExcelPath = null;
-        string serverTestCaseReviewExcelPool = @"\\" + Properties.Settings.Default.serverPath + @"\DATA\TestCaseReviewExcelPool\";
+        string serverTestCaseReviewExcelPool = @"\\" + Properties.Settings.Default.dataSource + @"\DATA\TestCaseReviewExcelPool\";
 
 
         int readColumnNo = 200;//读取Excel行数
@@ -554,6 +554,7 @@ namespace TestExerciser
                 this.chartForAnalyze.ChartAreas[0].Area3DStyle.Enable3D = true;
                 this.chartForAnalyze.Series[0].ChartType = SeriesChartType.Doughnut;//选择图的类型为饼图
                 this.chartForAnalyze.Series[0]["PieLabelStyle"] = "Outside";//将文字移到外侧
+
                 this.chartForAnalyze.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
                 this.chartForAnalyze.Series[0].Points.DataBindXY(xData, yData);
                 foreach (string str in comDelArray)

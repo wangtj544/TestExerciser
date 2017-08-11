@@ -34,9 +34,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControlReview = new System.Windows.Forms.TabControl();
             this.tabPageCommit = new System.Windows.Forms.TabPage();
@@ -99,7 +99,8 @@
             this.评审用例BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetCasesForReview = new TestExerciser.DataSetCasesForReview();
             this.评审用例TableAdapter = new TestExerciser.DataSetCasesForReviewTableAdapters.评审用例TableAdapter();
-            this.dataSetCasesForReview1 = new TestExerciser.DataSetCasesForReview();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.gbSelectExcelFile = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -131,6 +132,7 @@
             this.tlpAddComment.SuspendLayout();
             this.tabCAddCommit.SuspendLayout();
             this.tabPAddCommit.SuspendLayout();
+            this.tabPageAffirm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -141,7 +143,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartForAnalyze)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.评审用例BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCasesForReview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetCasesForReview1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -825,6 +829,7 @@
             // 
             // tabPageAffirm
             // 
+            this.tabPageAffirm.Controls.Add(this.splitContainer2);
             this.tabPageAffirm.Location = new System.Drawing.Point(4, 22);
             this.tabPageAffirm.Name = "tabPageAffirm";
             this.tabPageAffirm.Padding = new System.Windows.Forms.Padding(3);
@@ -1009,19 +1014,19 @@
             // chartForAnalyze
             // 
             this.chartForAnalyze.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            this.chartForAnalyze.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.chartForAnalyze.ChartAreas.Add(chartArea1);
             this.chartForAnalyze.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chartForAnalyze.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.chartForAnalyze.Legends.Add(legend1);
             this.chartForAnalyze.Location = new System.Drawing.Point(3, 17);
             this.chartForAnalyze.Name = "chartForAnalyze";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series3.IsValueShownAsLabel = true;
-            series3.Legend = "Legend1";
-            series3.Name = "SerCapability";
-            this.chartForAnalyze.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.IsValueShownAsLabel = true;
+            series1.Legend = "Legend1";
+            series1.Name = "SerCapability";
+            this.chartForAnalyze.Series.Add(series1);
             this.chartForAnalyze.Size = new System.Drawing.Size(228, 374);
             this.chartForAnalyze.TabIndex = 0;
             // 
@@ -1045,10 +1050,27 @@
             // 
             this.评审用例TableAdapter.ClearBeforeFill = true;
             // 
-            // dataSetCasesForReview1
+            // splitContainer2
             // 
-            this.dataSetCasesForReview1.DataSetName = "DataSetCasesForReview";
-            this.dataSetCasesForReview1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.gbSelectExcelFile);
+            this.splitContainer2.Size = new System.Drawing.Size(1470, 757);
+            this.splitContainer2.SplitterDistance = 265;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // gbSelectExcelFile
+            // 
+            this.gbSelectExcelFile.Location = new System.Drawing.Point(24, 25);
+            this.gbSelectExcelFile.Name = "gbSelectExcelFile";
+            this.gbSelectExcelFile.Size = new System.Drawing.Size(200, 100);
+            this.gbSelectExcelFile.TabIndex = 0;
+            this.gbSelectExcelFile.TabStop = false;
+            this.gbSelectExcelFile.Text = "选择用例：";
             // 
             // MainCaseReview
             // 
@@ -1098,6 +1120,7 @@
             this.tlpAddComment.ResumeLayout(false);
             this.tabCAddCommit.ResumeLayout(false);
             this.tabPAddCommit.ResumeLayout(false);
+            this.tabPageAffirm.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
@@ -1108,7 +1131,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartForAnalyze)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.评审用例BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCasesForReview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetCasesForReview1)).EndInit();
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1177,6 +1202,7 @@
         private System.Windows.Forms.ToolStripMenuItem 标记增加ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 标记通过ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 清除标记ToolStripMenuItem;
-        private DataSetCasesForReview dataSetCasesForReview1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.GroupBox gbSelectExcelFile;
     }
 }

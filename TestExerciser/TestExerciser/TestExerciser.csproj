@@ -255,6 +255,7 @@
     <Compile Include="MainWorkProgress.Designer.cs">
       <DependentUpon>MainWorkProgress.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="Tools\BugManagement\ToolBugDefectInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +329,12 @@
     </Compile>
     <Compile Include="Tools\ToolNewSolution.Designer.cs">
       <DependentUpon>ToolNewSolution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ToolSelectDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolSelectDB.Designer.cs">
+      <DependentUpon>ToolSelectDB.cs</DependentUpon>
     </Compile>
     <Compile Include="User\UserAuthentication.cs">
       <SubType>Form</SubType>
@@ -515,6 +522,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolNewSolution.resx">
       <DependentUpon>ToolNewSolution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolSelectDB.resx">
+      <DependentUpon>ToolSelectDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\UserAuthentication.resx">
       <DependentUpon>UserAuthentication.cs</DependentUpon>

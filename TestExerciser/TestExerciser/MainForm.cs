@@ -477,9 +477,12 @@ namespace TestExerciser
             打开支持库DToolStripMenuItem_Click(sender, e);
             if (Properties.Settings.Default.lastProjectPath != "")
             {
-                workspacePath = Properties.Settings.Default.lastProjectPath;
-                addToRootPaths(workspacePath);
-                getTreeViewData(workspacePath);
+                if (Directory.Exists(Properties.Settings.Default.lastProjectPath))
+                {
+                    workspacePath = Properties.Settings.Default.lastProjectPath;
+                    addToRootPaths(workspacePath);
+                    getTreeViewData(workspacePath);
+                }                
             }                       
         }
 

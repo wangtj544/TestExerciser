@@ -19,7 +19,6 @@ namespace TestExerciser.User
     {
         public static string pubUserName = null;
         public static string pubPasswd = null;
-        public static string strcon = "Data Source=172.20.32.147;Initial Catalog=TestExerciser;User ID=sa;Password=admin@123";
 
         public UserLogin()
         {
@@ -27,9 +26,7 @@ namespace TestExerciser.User
         }
 
         private void MainLogin_Load(object sender, EventArgs e)
-        {            
-            Properties.Settings.Default.ConnectionString = strcon;
-            Properties.Settings.Default.Save();
+        {           
             this.txtUserName.Focus();
         }
 
@@ -58,43 +55,51 @@ namespace TestExerciser.User
 
         private void myLoginFunc()
         {
-            this.txtStatus.ForeColor = Color.Blue;
-            this.txtStatus.Text = "登录信息：登录中...";
-            Application.DoEvents();
-            ManageDB myManageDB = new ManageDB();
-            if (this.txtUserName.Text != "" && this.txtPasswd.Text != "")
+            if (Properties.Settings.Default.ConnectionString == null || Properties.Settings.Default.ConnectionString == "")
             {
-                if (myManageDB.checkUserName(this.txtUserName.Text))
+                this.txtStatus.ForeColor = Color.Red;
+                this.txtStatus.Text = "登录信息：登录失败，请先选择服务器！";
+            }
+            else
+            {
+                this.txtStatus.ForeColor = Color.Blue;
+                this.txtStatus.Text = "登录信息：登录中...";
+                Application.DoEvents();
+                ManageDB myManageDB = new ManageDB();
+                if (this.txtUserName.Text != "" && this.txtPasswd.Text != "")
                 {
-                    if (myManageDB.queryUserFullName(this.txtUserName.Text, this.txtPasswd.Text) && myManageDB.queryEmailAddress(this.txtUserName.Text, this.txtPasswd.Text))
+                    if (myManageDB.checkUserName(this.txtUserName.Text))
                     {
+                        if (myManageDB.queryUserFullName(this.txtUserName.Text, this.txtPasswd.Text) && myManageDB.queryEmailAddress(this.txtUserName.Text, this.txtPasswd.Text))
+                        {
 
-                        pubUserName = this.txtUserName.Text;
-                        pubPasswd = this.txtPasswd.Text;
-                        this.txtStatus.ForeColor = Color.Green;
-                        this.txtStatus.Text = "登录信息：成功！";
-                        Application.DoEvents();
-                        this.Visible = false;                       
-                        MainForm myMainForm = new MainForm();
-                        myMainForm.Show();
+                            pubUserName = this.txtUserName.Text;
+                            pubPasswd = this.txtPasswd.Text;
+                            this.txtStatus.ForeColor = Color.Green;
+                            this.txtStatus.Text = "登录信息：成功！";
+                            Application.DoEvents();
+                            this.Visible = false;
+                            MainForm myMainForm = new MainForm();
+                            myMainForm.Show();
+                        }
+                        else
+                        {
+                            this.txtStatus.ForeColor = Color.Red;
+                            this.txtStatus.Text = "登录信息：登录失败，请确认密码是否填写正确！";
+                        }
                     }
                     else
                     {
                         this.txtStatus.ForeColor = Color.Red;
-                        this.txtStatus.Text = "登录信息：登录失败，请确认密码是否填写正确！";
+                        this.txtStatus.Text = "登录信息：登录失败，用户名不存在，请注册！";
                     }
                 }
                 else
                 {
                     this.txtStatus.ForeColor = Color.Red;
-                    this.txtStatus.Text = "登录信息：登录失败，用户名不存在，请注册！";                    
-                }                
-            }
-            else
-            {
-                this.txtStatus.ForeColor = Color.Red;
-                this.txtStatus.Text = "登录信息：登录失败，用户名和密码不能为空！";
-            }
+                    this.txtStatus.Text = "登录信息：登录失败，用户名和密码不能为空！";
+                }
+            }            
         }
 
         private void myCancelFunc()
@@ -121,5 +126,12 @@ namespace TestExerciser.User
             UserResetPwd myUserResetPwd = new UserResetPwd();
             myUserResetPwd.Show();
         }
+
+        private void linkSelectDB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ToolSelectDB myToolSelectDB = new ToolSelectDB();
+            myToolSelectDB.Show();
+        }
+
     }
 }
