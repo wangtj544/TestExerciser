@@ -1858,6 +1858,7 @@ namespace TestExerciser
                 }
                 tsFiles.RemoveTab(tab);
             }
+            windowClosingEffects();
             Application.Exit();
         }
 
@@ -3038,6 +3039,46 @@ namespace TestExerciser
 
                 }
             }           
-        }   
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
+
+
+        static int x;
+        static int y;
+        //结束窗体时特效
+        private void windowClosingEffects()
+        {
+            while (this.Width > 374)
+            {
+                if (this.Height >= 254)
+                {
+                    this.Location = new System.Drawing.Point(x, y += 35);//设置窗体位置
+                    this.Size = new Size(this.Width, this.Height -= 254);//设置窗体大小
+                    this.Refresh();//重绘窗体
+                }
+
+                else
+                {
+                    this.Location = new System.Drawing.Point(x += 35, y);
+
+                    if (this.Width > 253)
+                    {
+
+                        this.Size = new Size(this.Width -= 254, this.Height);
+                        this.Refresh();
+                    }
+                }
+            }
+        }
+
+        private void MainForm_Move(object sender, EventArgs e)
+        {
+            x = this.Location.X;
+            y = this.Location.Y;
+        }
     }
 }

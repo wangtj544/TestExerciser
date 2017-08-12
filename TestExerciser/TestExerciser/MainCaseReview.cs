@@ -116,12 +116,12 @@ namespace TestExerciser
                 this.sbStep3.BaseColor = Color.Lime;
                 this.sbStep3.BorderColor = Color.Lime;
                 this.cbSelectExcel.Enabled = true;
-                string[] files = Directory.GetFiles(serverTestCaseReviewExcelPool);
-                foreach (string file in files)
-                {
-                    addExcelToTlpSelectTestCase(Path.GetFileName(file));
-                }     
-            }
+                    string[] files = Directory.GetFiles(serverTestCaseReviewExcelPool);
+                    foreach (string file in files)
+                    {
+                        addExcelToTlpSelectTestCase(Path.GetFileName(file));
+                    }
+                }
             else if (myManageDB.checkReviewFrom())
             {
                 
@@ -343,6 +343,10 @@ namespace TestExerciser
                     {
                         try
                         {
+                            if (!Directory.Exists(serverTestCaseReviewExcelPool))
+                            {
+                                Directory.CreateDirectory(serverTestCaseReviewExcelPool);
+                            }
                             File.Copy(str, serverTestCaseReviewExcelPool + Path.GetFileName(str), true);
                             caseNameToReviewList.Add(Path.GetFileName(str) + "\r\n");
                             caseNameToReview = caseNameToReviewList.ToArray();
