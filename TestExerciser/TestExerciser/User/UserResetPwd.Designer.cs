@@ -53,11 +53,11 @@
             this.btnCancel.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.DownBack = null;
-            this.btnCancel.Location = new System.Drawing.Point(184, 182);
+            this.btnCancel.Location = new System.Drawing.Point(214, 182);
             this.btnCancel.MouseBack = null;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.NormlBack = null;
-            this.btnCancel.Size = new System.Drawing.Size(111, 23);
+            this.btnCancel.Size = new System.Drawing.Size(98, 23);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "取消申请";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -69,7 +69,7 @@
             this.btnOK.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.DownBack = null;
-            this.btnOK.Location = new System.Drawing.Point(39, 182);
+            this.btnOK.Location = new System.Drawing.Point(61, 182);
             this.btnOK.MouseBack = null;
             this.btnOK.Name = "btnOK";
             this.btnOK.NormlBack = null;
@@ -89,7 +89,7 @@
             this.txtUserEmail.IsPasswordChat = '\0';
             this.txtUserEmail.IsSystemPasswordChar = false;
             this.txtUserEmail.Lines = new string[0];
-            this.txtUserEmail.Location = new System.Drawing.Point(109, 110);
+            this.txtUserEmail.Location = new System.Drawing.Point(126, 110);
             this.txtUserEmail.Margin = new System.Windows.Forms.Padding(0);
             this.txtUserEmail.MaxLength = 32767;
             this.txtUserEmail.MinimumSize = new System.Drawing.Size(28, 28);
@@ -126,7 +126,7 @@
             this.labUserMail.BackColor = System.Drawing.Color.Transparent;
             this.labUserMail.BorderColor = System.Drawing.Color.White;
             this.labUserMail.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labUserMail.Location = new System.Drawing.Point(37, 115);
+            this.labUserMail.Location = new System.Drawing.Point(54, 115);
             this.labUserMail.Name = "labUserMail";
             this.labUserMail.Size = new System.Drawing.Size(68, 17);
             this.labUserMail.TabIndex = 6;
@@ -142,7 +142,7 @@
             this.txtUserName.IsPasswordChat = '\0';
             this.txtUserName.IsSystemPasswordChar = false;
             this.txtUserName.Lines = new string[0];
-            this.txtUserName.Location = new System.Drawing.Point(109, 58);
+            this.txtUserName.Location = new System.Drawing.Point(126, 58);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(0);
             this.txtUserName.MaxLength = 32767;
             this.txtUserName.MinimumSize = new System.Drawing.Size(28, 28);
@@ -179,7 +179,7 @@
             this.labUserName.BackColor = System.Drawing.Color.Transparent;
             this.labUserName.BorderColor = System.Drawing.Color.White;
             this.labUserName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labUserName.Location = new System.Drawing.Point(49, 64);
+            this.labUserName.Location = new System.Drawing.Point(66, 64);
             this.labUserName.Name = "labUserName";
             this.labUserName.Size = new System.Drawing.Size(56, 17);
             this.labUserName.TabIndex = 5;
@@ -190,7 +190,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(345, 249);
+            this.ClientSize = new System.Drawing.Size(374, 249);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.labUserName);
             this.Controls.Add(this.txtStatus);

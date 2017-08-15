@@ -28,7 +28,7 @@ namespace TestExerciser.User
             InitializeComponent();
         }
 
-        private void MainRegister_FormClosing(object sender, FormClosingEventArgs e)
+        private void UserRegister_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Visible = false;
             UserLogin myLogin = new UserLogin();
@@ -45,7 +45,7 @@ namespace TestExerciser.User
             myCancelFunc();
         }
 
-        private void MainRegister_KeyDown(object sender, KeyEventArgs e)
+        private void UserRegister_KeyDown(object sender, KeyEventArgs e)
         {
             myLoginKeyDown(sender, e);
         }

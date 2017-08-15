@@ -468,7 +468,6 @@ F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tool
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ToolManager.resources
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ToolNewFolder.resources
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ToolNewSolution.resources
-F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ToolSelectDB.resources
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.User.UserAuthentication.resources
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.User.UserChangePSD.resources
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.User.UserChangeUserEmail.resources
@@ -487,3 +486,4 @@ F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\zh-Hans\TestExerci
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.TrustInfo.xml
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.exe.manifest
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.application
+F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.User.UserSelectDB.resources

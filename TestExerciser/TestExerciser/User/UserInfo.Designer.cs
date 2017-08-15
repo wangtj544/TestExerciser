@@ -42,7 +42,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 56);
+            this.label1.Location = new System.Drawing.Point(50, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 12);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 105);
+            this.label2.Location = new System.Drawing.Point(50, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 1;
@@ -60,7 +60,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 154);
+            this.label3.Location = new System.Drawing.Point(50, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 12);
             this.label3.TabIndex = 2;
@@ -69,7 +69,7 @@
             // labUserName
             // 
             this.labUserName.AutoSize = true;
-            this.labUserName.Location = new System.Drawing.Point(117, 56);
+            this.labUserName.Location = new System.Drawing.Point(132, 56);
             this.labUserName.Name = "labUserName";
             this.labUserName.Size = new System.Drawing.Size(0, 12);
             this.labUserName.TabIndex = 3;
@@ -77,7 +77,7 @@
             // labFullName
             // 
             this.labFullName.AutoSize = true;
-            this.labFullName.Location = new System.Drawing.Point(117, 105);
+            this.labFullName.Location = new System.Drawing.Point(132, 105);
             this.labFullName.Name = "labFullName";
             this.labFullName.Size = new System.Drawing.Size(0, 12);
             this.labFullName.TabIndex = 4;
@@ -85,7 +85,7 @@
             // labEmailAddress
             // 
             this.labEmailAddress.AutoSize = true;
-            this.labEmailAddress.Location = new System.Drawing.Point(117, 154);
+            this.labEmailAddress.Location = new System.Drawing.Point(132, 154);
             this.labEmailAddress.Name = "labEmailAddress";
             this.labEmailAddress.Size = new System.Drawing.Size(0, 12);
             this.labEmailAddress.TabIndex = 5;
@@ -93,7 +93,7 @@
             // linkChangeFullName
             // 
             this.linkChangeFullName.AutoSize = true;
-            this.linkChangeFullName.Location = new System.Drawing.Point(273, 106);
+            this.linkChangeFullName.Location = new System.Drawing.Point(288, 106);
             this.linkChangeFullName.Name = "linkChangeFullName";
             this.linkChangeFullName.Size = new System.Drawing.Size(29, 12);
             this.linkChangeFullName.TabIndex = 7;
@@ -104,7 +104,7 @@
             // linkChangeMail
             // 
             this.linkChangeMail.AutoSize = true;
-            this.linkChangeMail.Location = new System.Drawing.Point(273, 155);
+            this.linkChangeMail.Location = new System.Drawing.Point(288, 155);
             this.linkChangeMail.Name = "linkChangeMail";
             this.linkChangeMail.Size = new System.Drawing.Size(29, 12);
             this.linkChangeMail.TabIndex = 8;
@@ -117,7 +117,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(345, 200);
+            this.ClientSize = new System.Drawing.Size(374, 200);
             this.Controls.Add(this.linkChangeMail);
             this.Controls.Add(this.linkChangeFullName);
             this.Controls.Add(this.labEmailAddress);

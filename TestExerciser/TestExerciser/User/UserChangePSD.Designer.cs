@@ -49,7 +49,7 @@
             this.txtPasswd.IsPasswordChat = '●';
             this.txtPasswd.IsSystemPasswordChar = true;
             this.txtPasswd.Lines = new string[0];
-            this.txtPasswd.Location = new System.Drawing.Point(103, 70);
+            this.txtPasswd.Location = new System.Drawing.Point(115, 72);
             this.txtPasswd.Margin = new System.Windows.Forms.Padding(0);
             this.txtPasswd.MaxLength = 32767;
             this.txtPasswd.MinimumSize = new System.Drawing.Size(28, 28);
@@ -88,7 +88,7 @@
             this.skinLabel2.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel2.BorderColor = System.Drawing.Color.White;
             this.skinLabel2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel2.Location = new System.Drawing.Point(44, 76);
+            this.skinLabel2.Location = new System.Drawing.Point(52, 76);
             this.skinLabel2.Name = "skinLabel2";
             this.skinLabel2.Size = new System.Drawing.Size(44, 17);
             this.skinLabel2.TabIndex = 5;
@@ -104,7 +104,7 @@
             this.txtChangeTo.IsPasswordChat = '●';
             this.txtChangeTo.IsSystemPasswordChar = true;
             this.txtChangeTo.Lines = new string[0];
-            this.txtChangeTo.Location = new System.Drawing.Point(103, 119);
+            this.txtChangeTo.Location = new System.Drawing.Point(115, 119);
             this.txtChangeTo.Margin = new System.Windows.Forms.Padding(0);
             this.txtChangeTo.MaxLength = 32767;
             this.txtChangeTo.MinimumSize = new System.Drawing.Size(28, 28);
@@ -143,7 +143,7 @@
             this.skinLabel3.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel3.BorderColor = System.Drawing.Color.White;
             this.skinLabel3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel3.Location = new System.Drawing.Point(44, 127);
+            this.skinLabel3.Location = new System.Drawing.Point(42, 125);
             this.skinLabel3.Name = "skinLabel3";
             this.skinLabel3.Size = new System.Drawing.Size(68, 17);
             this.skinLabel3.TabIndex = 6;
@@ -155,11 +155,11 @@
             this.btnCancel.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.DownBack = null;
-            this.btnCancel.Location = new System.Drawing.Point(192, 192);
+            this.btnCancel.Location = new System.Drawing.Point(214, 192);
             this.btnCancel.MouseBack = null;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.NormlBack = null;
-            this.btnCancel.Size = new System.Drawing.Size(111, 23);
+            this.btnCancel.Size = new System.Drawing.Size(98, 23);
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "取消修改";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -171,7 +171,7 @@
             this.btnOK.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.DownBack = null;
-            this.btnOK.Location = new System.Drawing.Point(43, 192);
+            this.btnOK.Location = new System.Drawing.Point(61, 192);
             this.btnOK.MouseBack = null;
             this.btnOK.Name = "btnOK";
             this.btnOK.NormlBack = null;
@@ -194,7 +194,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(345, 249);
+            this.ClientSize = new System.Drawing.Size(374, 249);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);

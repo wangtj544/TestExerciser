@@ -30,21 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserChangeUserFullName));
-            this.txtStatus = new System.Windows.Forms.Label();
             this.btnCancel = new CCWin.SkinControl.SkinButton();
             this.btnOK = new CCWin.SkinControl.SkinButton();
             this.txtChangeTo = new CCWin.SkinControl.SkinTextBox();
-            this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labNewUserName = new CCWin.SkinControl.SkinLabel();
+            this.txtStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.AutoSize = true;
-            this.txtStatus.Location = new System.Drawing.Point(20, 98);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(0, 12);
-            this.txtStatus.TabIndex = 27;
             // 
             // btnCancel
             // 
@@ -52,11 +43,11 @@
             this.btnCancel.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.DownBack = null;
-            this.btnCancel.Location = new System.Drawing.Point(181, 124);
+            this.btnCancel.Location = new System.Drawing.Point(214, 124);
             this.btnCancel.MouseBack = null;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.NormlBack = null;
-            this.btnCancel.Size = new System.Drawing.Size(111, 23);
+            this.btnCancel.Size = new System.Drawing.Size(98, 23);
             this.btnCancel.TabIndex = 31;
             this.btnCancel.Text = "取消修改";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -68,7 +59,7 @@
             this.btnOK.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.DownBack = null;
-            this.btnOK.Location = new System.Drawing.Point(35, 124);
+            this.btnOK.Location = new System.Drawing.Point(61, 124);
             this.btnOK.MouseBack = null;
             this.btnOK.Name = "btnOK";
             this.btnOK.NormlBack = null;
@@ -88,7 +79,7 @@
             this.txtChangeTo.IsPasswordChat = '\0';
             this.txtChangeTo.IsSystemPasswordChar = false;
             this.txtChangeTo.Lines = new string[0];
-            this.txtChangeTo.Location = new System.Drawing.Point(105, 57);
+            this.txtChangeTo.Location = new System.Drawing.Point(128, 57);
             this.txtChangeTo.Margin = new System.Windows.Forms.Padding(0);
             this.txtChangeTo.MaxLength = 32767;
             this.txtChangeTo.MinimumSize = new System.Drawing.Size(28, 28);
@@ -119,38 +110,37 @@
             this.txtChangeTo.WaterText = "3-20位中文字符";
             this.txtChangeTo.WordWrap = true;
             // 
-            // skinLabel1
+            // labNewUserName
             // 
-            this.skinLabel1.AutoSize = true;
-            this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel1.BorderColor = System.Drawing.Color.White;
-            this.skinLabel1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel1.Location = new System.Drawing.Point(31, 63);
-            this.skinLabel1.Name = "skinLabel1";
-            this.skinLabel1.Size = new System.Drawing.Size(80, 17);
-            this.skinLabel1.TabIndex = 29;
-            this.skinLabel1.Text = "新用户姓名：";
+            this.labNewUserName.AutoSize = true;
+            this.labNewUserName.BackColor = System.Drawing.Color.Transparent;
+            this.labNewUserName.BorderColor = System.Drawing.Color.White;
+            this.labNewUserName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labNewUserName.Location = new System.Drawing.Point(54, 63);
+            this.labNewUserName.Name = "labNewUserName";
+            this.labNewUserName.Size = new System.Drawing.Size(80, 17);
+            this.labNewUserName.TabIndex = 29;
+            this.labNewUserName.Text = "新用户姓名：";
             // 
-            // label1
+            // txtStatus
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 12);
-            this.label1.TabIndex = 32;
+            this.txtStatus.AutoSize = true;
+            this.txtStatus.Location = new System.Drawing.Point(20, 100);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(0, 12);
+            this.txtStatus.TabIndex = 38;
             // 
             // UserChangeUserFullName
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(345, 178);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(374, 178);
+            this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtChangeTo);
-            this.Controls.Add(this.skinLabel1);
-            this.Controls.Add(this.txtStatus);
+            this.Controls.Add(this.labNewUserName);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -163,12 +153,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label txtStatus;
         private CCWin.SkinControl.SkinButton btnCancel;
         private CCWin.SkinControl.SkinButton btnOK;
         private CCWin.SkinControl.SkinTextBox txtChangeTo;
-        private CCWin.SkinControl.SkinLabel skinLabel1;
-        private System.Windows.Forms.Label label1;
+        private CCWin.SkinControl.SkinLabel labNewUserName;
+        private System.Windows.Forms.Label txtStatus;
     }
 }

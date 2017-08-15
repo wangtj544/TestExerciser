@@ -129,7 +129,8 @@ namespace TestExerciser.User
 
         private void linkSelectDB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ToolSelectDB myToolSelectDB = new ToolSelectDB();
+            this.Visible = false;
+            UserSelectDB myToolSelectDB = new UserSelectDB();
             myToolSelectDB.Show();
         }
 

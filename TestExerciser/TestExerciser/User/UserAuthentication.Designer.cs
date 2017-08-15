@@ -43,11 +43,11 @@
             this.btnCancel.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.DownBack = null;
-            this.btnCancel.Location = new System.Drawing.Point(183, 222);
+            this.btnCancel.Location = new System.Drawing.Point(214, 212);
             this.btnCancel.MouseBack = null;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.NormlBack = null;
-            this.btnCancel.Size = new System.Drawing.Size(111, 23);
+            this.btnCancel.Size = new System.Drawing.Size(98, 23);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "取消验证";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -59,7 +59,7 @@
             this.btnOK.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.DownBack = null;
-            this.btnOK.Location = new System.Drawing.Point(34, 222);
+            this.btnOK.Location = new System.Drawing.Point(61, 212);
             this.btnOK.MouseBack = null;
             this.btnOK.Name = "btnOK";
             this.btnOK.NormlBack = null;
@@ -80,9 +80,9 @@
             // 
             // richCheckStr
             // 
-            this.richCheckStr.Location = new System.Drawing.Point(13, 53);
+            this.richCheckStr.Location = new System.Drawing.Point(16, 53);
             this.richCheckStr.Name = "richCheckStr";
-            this.richCheckStr.Size = new System.Drawing.Size(314, 129);
+            this.richCheckStr.Size = new System.Drawing.Size(345, 123);
             this.richCheckStr.TabIndex = 2;
             this.richCheckStr.Text = "";
             // 
@@ -99,7 +99,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(345, 264);
+            this.ClientSize = new System.Drawing.Size(374, 264);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.richCheckStr);
             this.Controls.Add(this.label1);

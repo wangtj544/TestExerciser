@@ -1,6 +1,6 @@
-﻿namespace TestExerciser.Tools
+﻿namespace TestExerciser.User
 {
-    partial class ToolSelectDB
+    partial class UserSelectDB
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToolSelectDB));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserSelectDB));
             this.stbServerDBPath = new CCWin.SkinControl.SkinTextBox();
             this.rdbLocal = new CCWin.SkinControl.SkinRadioButton();
             this.rdbServer = new CCWin.SkinControl.SkinRadioButton();
@@ -98,6 +98,7 @@
             this.rdbLocal.TabStop = true;
             this.rdbLocal.Text = "本地（需本地配置SQL数据库）";
             this.rdbLocal.UseVisualStyleBackColor = false;
+            this.rdbLocal.CheckedChanged += new System.EventHandler(this.rdbLocal_CheckedChanged);
             // 
             // rdbServer
             // 
@@ -118,6 +119,7 @@
             this.rdbServer.TabStop = true;
             this.rdbServer.Text = "远程服务器（服务器IP或名称）";
             this.rdbServer.UseVisualStyleBackColor = false;
+            this.rdbServer.CheckedChanged += new System.EventHandler(this.rdbServer_CheckedChanged);
             // 
             // txtStatus
             // 
@@ -159,7 +161,7 @@
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // ToolSelectDB
+            // UserSelectDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,9 +175,11 @@
             this.Controls.Add(this.stbServerDBPath);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Name = "ToolSelectDB";
+            this.MaximizeBox = false;
+            this.Name = "UserSelectDB";
             this.Text = "选择服务器";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ToolSelectDB_KeyDown);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserSelectDB_FormClosing);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UserSelectDB_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
