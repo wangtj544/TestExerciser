@@ -2784,12 +2784,6 @@ namespace TestExerciser
             myMainUpdateHis.Show();
         }
 
-        private void 用例评审AToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MainCaseReview myMainCaseReview = new MainCaseReview();
-            myMainCaseReview.Show();
-        }
-
         private void 工作笔记ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MainWorkingNotes myMainWorkingNotes = new MainWorkingNotes();

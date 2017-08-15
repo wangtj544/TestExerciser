@@ -445,7 +445,6 @@ F:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\SharpPlink-Win32.s
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.csprojResolveAssemblyReference.cache
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainBugManager.resources
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainCaseManager.resources
-F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainCaseReview.resources
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainAbout.resources
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainLogView.resources
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainPackageManager.resources
@@ -487,3 +486,6 @@ F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Trus
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.exe.manifest
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.application
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.User.UserSelectDB.resources
+F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.CaseManagement.ToolCaseReviewDirect.resources
+F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ToolCaseReviewFromExcel.resources
+F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.CaseManagement.ToolSelectModeForCaseReview.resources

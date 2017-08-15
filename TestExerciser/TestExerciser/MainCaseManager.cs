@@ -30,5 +30,11 @@ namespace TestExerciser
             ToolCaseQuery myToolCaseQuery = new ToolCaseQuery();
             myToolCaseQuery.Show();
         }
+
+        private void btnReview_Click(object sender, EventArgs e)
+        {
+            ToolSelectModeForCaseReview myToolSelectModeForCaseReview = new ToolSelectModeForCaseReview();
+            myToolSelectModeForCaseReview.Show();
+        }
     }
 }

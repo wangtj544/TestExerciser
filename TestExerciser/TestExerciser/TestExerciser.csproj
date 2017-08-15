@@ -146,6 +146,9 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetCasesForReview.cs">
+      <DependentUpon>DataSetCasesForReview.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetCasesForReview.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -155,6 +158,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetExcelReader.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPackageManager.cs">
+      <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSetPackageManager.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -185,11 +191,17 @@
     <Compile Include="MainCaseManager.Designer.cs">
       <DependentUpon>MainCaseManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainCaseReview.cs">
+    <Compile Include="Tools\CaseManagement\ToolCaseReviewDirect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainCaseReview.Designer.cs">
-      <DependentUpon>MainCaseReview.cs</DependentUpon>
+    <Compile Include="Tools\CaseManagement\ToolCaseReviewDirect.Designer.cs">
+      <DependentUpon>ToolCaseReviewDirect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolCaseReviewFromExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolCaseReviewFromExcel.Designer.cs">
+      <DependentUpon>ToolCaseReviewFromExcel.cs</DependentUpon>
     </Compile>
     <Compile Include="ExcelDataReader.cs" />
     <Compile Include="Logic\AutoComplete.cs" />
@@ -272,6 +284,12 @@
     </Compile>
     <Compile Include="Tools\CaseManagement\ToolCaseQuery.Designer.cs">
       <DependentUpon>ToolCaseQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolSelectModeForCaseReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolSelectModeForCaseReview.Designer.cs">
+      <DependentUpon>ToolSelectModeForCaseReview.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\Control\ControlSearch.cs">
       <SubType>UserControl</SubType>
@@ -449,8 +467,11 @@
     <EmbeddedResource Include="MainCaseManager.resx">
       <DependentUpon>MainCaseManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainCaseReview.resx">
-      <DependentUpon>MainCaseReview.cs</DependentUpon>
+    <EmbeddedResource Include="Tools\CaseManagement\ToolCaseReviewDirect.resx">
+      <DependentUpon>ToolCaseReviewDirect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\CaseManagement\ToolCaseReviewFromExcel.resx">
+      <DependentUpon>ToolCaseReviewFromExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainAbout.resx">
       <DependentUpon>MainAbout.cs</DependentUpon>
@@ -494,6 +515,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\CaseManagement\ToolCaseQuery.resx">
       <DependentUpon>ToolCaseQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\CaseManagement\ToolSelectModeForCaseReview.resx">
+      <DependentUpon>ToolSelectModeForCaseReview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Control\ControlSearch.resx">
       <DependentUpon>ControlSearch.cs</DependentUpon>

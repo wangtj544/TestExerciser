@@ -43,6 +43,7 @@
             this.btnQuery = new CCWin.SkinControl.SkinButton();
             this.btnNew = new CCWin.SkinControl.SkinButton();
             this.btnSwitch = new CCWin.SkinControl.SkinButton();
+            this.btnReview = new CCWin.SkinControl.SkinButton();
             this.dgvCaseManager = new CCWin.SkinControl.SkinDataGridView();
             this.tlpBugDetails = new System.Windows.Forms.TableLayoutPanel();
             this.slabTitle = new CCWin.SkinControl.SkinLabel();
@@ -155,7 +156,8 @@
             // 
             // tapButton
             // 
-            this.tapButton.ColumnCount = 7;
+            this.tapButton.ColumnCount = 8;
+            this.tapButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tapButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tapButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tapButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
@@ -168,7 +170,8 @@
             this.tapButton.Controls.Add(this.btnInfo, 2, 0);
             this.tapButton.Controls.Add(this.btnQuery, 1, 0);
             this.tapButton.Controls.Add(this.btnNew, 0, 0);
-            this.tapButton.Controls.Add(this.btnSwitch, 5, 0);
+            this.tapButton.Controls.Add(this.btnSwitch, 6, 0);
+            this.tapButton.Controls.Add(this.btnReview, 5, 0);
             this.tapButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tapButton.Location = new System.Drawing.Point(3, 3);
             this.tapButton.Name = "tapButton";
@@ -183,11 +186,11 @@
             this.btnOut.BackColor = System.Drawing.Color.Transparent;
             this.btnOut.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnOut.DownBack = null;
-            this.btnOut.Location = new System.Drawing.Point(332, 5);
+            this.btnOut.Location = new System.Drawing.Point(332, 4);
             this.btnOut.MouseBack = null;
             this.btnOut.Name = "btnOut";
             this.btnOut.NormlBack = null;
-            this.btnOut.Size = new System.Drawing.Size(55, 19);
+            this.btnOut.Size = new System.Drawing.Size(55, 20);
             this.btnOut.TabIndex = 4;
             this.btnOut.Text = "导出";
             this.btnOut.UseVisualStyleBackColor = false;
@@ -244,11 +247,11 @@
             this.btnNew.BackColor = System.Drawing.Color.Transparent;
             this.btnNew.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnNew.DownBack = null;
-            this.btnNew.Location = new System.Drawing.Point(12, 3);
+            this.btnNew.Location = new System.Drawing.Point(12, 4);
             this.btnNew.MouseBack = null;
             this.btnNew.Name = "btnNew";
             this.btnNew.NormlBack = null;
-            this.btnNew.Size = new System.Drawing.Size(55, 22);
+            this.btnNew.Size = new System.Drawing.Size(55, 20);
             this.btnNew.TabIndex = 0;
             this.btnNew.Text = "新建";
             this.btnNew.UseVisualStyleBackColor = false;
@@ -260,14 +263,30 @@
             this.btnSwitch.BackColor = System.Drawing.Color.Transparent;
             this.btnSwitch.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnSwitch.DownBack = null;
-            this.btnSwitch.Location = new System.Drawing.Point(412, 5);
+            this.btnSwitch.Location = new System.Drawing.Point(492, 4);
             this.btnSwitch.MouseBack = null;
             this.btnSwitch.Name = "btnSwitch";
             this.btnSwitch.NormlBack = null;
-            this.btnSwitch.Size = new System.Drawing.Size(55, 19);
+            this.btnSwitch.Size = new System.Drawing.Size(55, 20);
             this.btnSwitch.TabIndex = 5;
             this.btnSwitch.Text = "转缺陷";
             this.btnSwitch.UseVisualStyleBackColor = false;
+            // 
+            // btnReview
+            // 
+            this.btnReview.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnReview.BackColor = System.Drawing.Color.Transparent;
+            this.btnReview.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnReview.DownBack = null;
+            this.btnReview.Location = new System.Drawing.Point(412, 4);
+            this.btnReview.MouseBack = null;
+            this.btnReview.Name = "btnReview";
+            this.btnReview.NormlBack = null;
+            this.btnReview.Size = new System.Drawing.Size(55, 20);
+            this.btnReview.TabIndex = 6;
+            this.btnReview.Text = "评审";
+            this.btnReview.UseVisualStyleBackColor = false;
+            this.btnReview.Click += new System.EventHandler(this.btnReview_Click);
             // 
             // dgvCaseManager
             // 
@@ -956,7 +975,7 @@
             this.stpHighInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpHighInfo.Location = new System.Drawing.Point(0, 36);
             this.stpHighInfo.Name = "stpHighInfo";
-            this.stpHighInfo.Size = new System.Drawing.Size(625, 717);
+            this.stpHighInfo.Size = new System.Drawing.Size(519, 717);
             this.stpHighInfo.TabIndex = 1;
             this.stpHighInfo.TabItemImage = null;
             this.stpHighInfo.Text = "高级信息";
@@ -967,7 +986,7 @@
             this.stpOperate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpOperate.Location = new System.Drawing.Point(0, 36);
             this.stpOperate.Name = "stpOperate";
-            this.stpOperate.Size = new System.Drawing.Size(625, 717);
+            this.stpOperate.Size = new System.Drawing.Size(519, 717);
             this.stpOperate.TabIndex = 2;
             this.stpOperate.TabItemImage = null;
             this.stpOperate.Text = "操作记录";
@@ -978,7 +997,7 @@
             this.stpAttachment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpAttachment.Location = new System.Drawing.Point(0, 36);
             this.stpAttachment.Name = "stpAttachment";
-            this.stpAttachment.Size = new System.Drawing.Size(625, 717);
+            this.stpAttachment.Size = new System.Drawing.Size(519, 717);
             this.stpAttachment.TabIndex = 3;
             this.stpAttachment.TabItemImage = null;
             this.stpAttachment.Text = "附件";
@@ -989,7 +1008,7 @@
             this.stpChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpChart.Location = new System.Drawing.Point(0, 36);
             this.stpChart.Name = "stpChart";
-            this.stpChart.Size = new System.Drawing.Size(625, 717);
+            this.stpChart.Size = new System.Drawing.Size(519, 717);
             this.stpChart.TabIndex = 4;
             this.stpChart.TabItemImage = null;
             this.stpChart.Text = "流程图";
@@ -1000,7 +1019,7 @@
             this.stpRelevance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpRelevance.Location = new System.Drawing.Point(0, 36);
             this.stpRelevance.Name = "stpRelevance";
-            this.stpRelevance.Size = new System.Drawing.Size(625, 717);
+            this.stpRelevance.Size = new System.Drawing.Size(519, 717);
             this.stpRelevance.TabIndex = 5;
             this.stpRelevance.TabItemImage = null;
             this.stpRelevance.Text = "关联";
@@ -1112,5 +1131,6 @@
         private CCWin.SkinControl.SkinTabPage stpAttachment;
         private CCWin.SkinControl.SkinTabPage stpChart;
         private CCWin.SkinControl.SkinTabPage stpRelevance;
+        private CCWin.SkinControl.SkinButton btnReview;
     }
 }
