@@ -50,10 +50,10 @@
             this.jSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.luaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.查找ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.项目ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.工程ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新建NToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.新建解决方案SToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.新建项目PToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.新建工程PToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.新建文件夹RToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.新建文件FToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.打开OToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,11 +73,11 @@
             this.执行测试套ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.生成脚本ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.脚本录制F4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.团队ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.项目ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.需求管理QToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.用例管理TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.团队协作TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.缺陷管理BToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.团队协作TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.文件清理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.远程连接ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -304,6 +304,7 @@
             this.dtslTimeUse = new System.Windows.Forms.ToolStripLabel();
             this.dtslTime = new System.Windows.Forms.ToolStripLabel();
             this.timerNow = new System.Windows.Forms.Timer(this.components);
+            this.项目管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_ProjectManage.SuspendLayout();
             this.rightClickOnProManager.SuspendLayout();
             this.rightClickOnOutPutWindow.SuspendLayout();
@@ -361,16 +362,16 @@
             this.menu_ProjectManage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.文件ToolStripMenuItem,
             this.编辑ToolStripMenuItem,
-            this.项目ToolStripMenuItem,
+            this.工程ToolStripMenuItem,
             this.生成ToolStripMenuItem,
             this.调试ToolStripMenuItem,
-            this.团队ToolStripMenuItem,
+            this.项目ToolStripMenuItem,
             this.工具ToolStripMenuItem,
             this.帮助ToolStripMenuItem,
             this.登录ToolStripMenuItem});
             this.menu_ProjectManage.Location = new System.Drawing.Point(4, 32);
             this.menu_ProjectManage.Name = "menu_ProjectManage";
-            this.menu_ProjectManage.Size = new System.Drawing.Size(1722, 25);
+            this.menu_ProjectManage.Size = new System.Drawing.Size(1432, 25);
             this.menu_ProjectManage.TabIndex = 0;
             this.menu_ProjectManage.Text = "menuStrip1";
             // 
@@ -393,7 +394,7 @@
             this.新建NToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.新建NToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("新建NToolStripMenuItem.Image")));
             this.新建NToolStripMenuItem.Name = "新建NToolStripMenuItem";
-            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.新建NToolStripMenuItem.Text = "新建(&N)";
             this.新建NToolStripMenuItem.Click += new System.EventHandler(this.新建NToolStripMenuItem_Click);
             // 
@@ -401,7 +402,7 @@
             // 
             this.打开ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("打开ToolStripMenuItem.Image")));
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.打开ToolStripMenuItem.Text = "打开(&O)";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
@@ -410,7 +411,7 @@
             this.保存SToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.保存SToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("保存SToolStripMenuItem.Image")));
             this.保存SToolStripMenuItem.Name = "保存SToolStripMenuItem";
-            this.保存SToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.保存SToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.保存SToolStripMenuItem.Text = "保存(&S)";
             this.保存SToolStripMenuItem.Click += new System.EventHandler(this.保存SToolStripMenuItem_Click);
             // 
@@ -418,7 +419,7 @@
             // 
             this.另存为AToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("另存为AToolStripMenuItem.Image")));
             this.另存为AToolStripMenuItem.Name = "另存为AToolStripMenuItem";
-            this.另存为AToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.另存为AToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.另存为AToolStripMenuItem.Text = "另存为...(&A)";
             this.另存为AToolStripMenuItem.Click += new System.EventHandler(this.另存为AToolStripMenuItem_Click);
             // 
@@ -426,7 +427,7 @@
             // 
             this.退出QToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("退出QToolStripMenuItem.Image")));
             this.退出QToolStripMenuItem.Name = "退出QToolStripMenuItem";
-            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.退出QToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.退出QToolStripMenuItem.Text = "退出(&Q)";
             this.退出QToolStripMenuItem.Click += new System.EventHandler(this.退出QToolStripMenuItem_Click);
             // 
@@ -454,7 +455,7 @@
             this.luaToolStripMenuItem});
             this.语言ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("语言ToolStripMenuItem.Image")));
             this.语言ToolStripMenuItem.Name = "语言ToolStripMenuItem";
-            this.语言ToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.语言ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.语言ToolStripMenuItem.Text = "语言(&L)";
             this.语言ToolStripMenuItem.Visible = false;
             // 
@@ -532,29 +533,29 @@
             // 
             this.查找ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("查找ToolStripMenuItem.Image")));
             this.查找ToolStripMenuItem.Name = "查找ToolStripMenuItem";
-            this.查找ToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.查找ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.查找ToolStripMenuItem.Text = "定位到...(&G)";
             this.查找ToolStripMenuItem.Click += new System.EventHandler(this.gotoButton_DropDownOpening);
             // 
-            // 项目ToolStripMenuItem
+            // 工程ToolStripMenuItem
             // 
-            this.项目ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.工程ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.新建NToolStripMenuItem1,
             this.打开OToolStripMenuItem});
-            this.项目ToolStripMenuItem.Name = "项目ToolStripMenuItem";
-            this.项目ToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
-            this.项目ToolStripMenuItem.Text = "项目(&P)";
+            this.工程ToolStripMenuItem.Name = "工程ToolStripMenuItem";
+            this.工程ToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
+            this.工程ToolStripMenuItem.Text = "工程(&P)";
             // 
             // 新建NToolStripMenuItem1
             // 
             this.新建NToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.新建解决方案SToolStripMenuItem1,
-            this.新建项目PToolStripMenuItem1,
+            this.新建工程PToolStripMenuItem1,
             this.新建文件夹RToolStripMenuItem1,
             this.新建文件FToolStripMenuItem1});
             this.新建NToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("新建NToolStripMenuItem1.Image")));
             this.新建NToolStripMenuItem1.Name = "新建NToolStripMenuItem1";
-            this.新建NToolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
+            this.新建NToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.新建NToolStripMenuItem1.Text = "新建(&N)";
             this.新建NToolStripMenuItem1.Click += new System.EventHandler(this.新建项目PToolStripMenuItem_Click);
             // 
@@ -566,12 +567,12 @@
             this.新建解决方案SToolStripMenuItem1.Visible = false;
             this.新建解决方案SToolStripMenuItem1.Click += new System.EventHandler(this.新建解决方案SToolStripMenuItem_Click);
             // 
-            // 新建项目PToolStripMenuItem1
+            // 新建工程PToolStripMenuItem1
             // 
-            this.新建项目PToolStripMenuItem1.Name = "新建项目PToolStripMenuItem1";
-            this.新建项目PToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
-            this.新建项目PToolStripMenuItem1.Text = "新建项目(&P)";
-            this.新建项目PToolStripMenuItem1.Click += new System.EventHandler(this.新建项目PToolStripMenuItem_Click);
+            this.新建工程PToolStripMenuItem1.Name = "新建工程PToolStripMenuItem1";
+            this.新建工程PToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
+            this.新建工程PToolStripMenuItem1.Text = "新建工程(&P)";
+            this.新建工程PToolStripMenuItem1.Click += new System.EventHandler(this.新建项目PToolStripMenuItem_Click);
             // 
             // 新建文件夹RToolStripMenuItem1
             // 
@@ -596,7 +597,7 @@
             this.打开支撑库ToolStripMenuItem});
             this.打开OToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("打开OToolStripMenuItem.Image")));
             this.打开OToolStripMenuItem.Name = "打开OToolStripMenuItem";
-            this.打开OToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.打开OToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.打开OToolStripMenuItem.Text = "打开(&O)";
             this.打开OToolStripMenuItem.Click += new System.EventHandler(this.打开解决方案SToolStripMenuItem_Click);
             // 
@@ -611,7 +612,7 @@
             // 
             this.打开工程PToolStripMenuItem.Name = "打开工程PToolStripMenuItem";
             this.打开工程PToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.打开工程PToolStripMenuItem.Text = "打开项目(&P)";
+            this.打开工程PToolStripMenuItem.Text = "打开工程(&P)";
             this.打开工程PToolStripMenuItem.Click += new System.EventHandler(this.打开项目PToolStripMenuItem_Click);
             // 
             // 打开文件FToolStripMenuItem
@@ -727,22 +728,23 @@
             this.脚本录制F4ToolStripMenuItem.Text = "脚本录制(&F4)";
             this.脚本录制F4ToolStripMenuItem.Click += new System.EventHandler(this.脚本录制F4ToolStripMenuItem_Click);
             // 
-            // 团队ToolStripMenuItem
+            // 项目ToolStripMenuItem
             // 
-            this.团队ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.项目ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.需求管理QToolStripMenuItem,
+            this.项目管理ToolStripMenuItem,
             this.用例管理TToolStripMenuItem,
-            this.团队协作TToolStripMenuItem,
-            this.缺陷管理BToolStripMenuItem});
-            this.团队ToolStripMenuItem.Name = "团队ToolStripMenuItem";
-            this.团队ToolStripMenuItem.Size = new System.Drawing.Size(64, 21);
-            this.团队ToolStripMenuItem.Text = "团队(&M)";
+            this.缺陷管理BToolStripMenuItem,
+            this.团队协作TToolStripMenuItem});
+            this.项目ToolStripMenuItem.Name = "项目ToolStripMenuItem";
+            this.项目ToolStripMenuItem.Size = new System.Drawing.Size(64, 21);
+            this.项目ToolStripMenuItem.Text = "项目(&M)";
             // 
             // 需求管理QToolStripMenuItem
             // 
             this.需求管理QToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("需求管理QToolStripMenuItem.Image")));
             this.需求管理QToolStripMenuItem.Name = "需求管理QToolStripMenuItem";
-            this.需求管理QToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.需求管理QToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.需求管理QToolStripMenuItem.Text = "需求管理(&Q)";
             this.需求管理QToolStripMenuItem.Click += new System.EventHandler(this.需求管理QToolStripMenuItem_Click);
             // 
@@ -750,25 +752,25 @@
             // 
             this.用例管理TToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("用例管理TToolStripMenuItem.Image")));
             this.用例管理TToolStripMenuItem.Name = "用例管理TToolStripMenuItem";
-            this.用例管理TToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.用例管理TToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.用例管理TToolStripMenuItem.Text = "用例管理(&T)";
             this.用例管理TToolStripMenuItem.Click += new System.EventHandler(this.用例管理TToolStripMenuItem_Click);
-            // 
-            // 团队协作TToolStripMenuItem
-            // 
-            this.团队协作TToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("团队协作TToolStripMenuItem.Image")));
-            this.团队协作TToolStripMenuItem.Name = "团队协作TToolStripMenuItem";
-            this.团队协作TToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.团队协作TToolStripMenuItem.Text = "封装管理(&M)";
-            this.团队协作TToolStripMenuItem.Click += new System.EventHandler(this.团队协作TToolStripMenuItem_Click);
             // 
             // 缺陷管理BToolStripMenuItem
             // 
             this.缺陷管理BToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("缺陷管理BToolStripMenuItem.Image")));
             this.缺陷管理BToolStripMenuItem.Name = "缺陷管理BToolStripMenuItem";
-            this.缺陷管理BToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.缺陷管理BToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.缺陷管理BToolStripMenuItem.Text = "缺陷管理(&B)";
             this.缺陷管理BToolStripMenuItem.Click += new System.EventHandler(this.缺陷管理BToolStripMenuItem_Click);
+            // 
+            // 团队协作TToolStripMenuItem
+            // 
+            this.团队协作TToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("团队协作TToolStripMenuItem.Image")));
+            this.团队协作TToolStripMenuItem.Name = "团队协作TToolStripMenuItem";
+            this.团队协作TToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.团队协作TToolStripMenuItem.Text = "封装管理(&M)";
+            this.团队协作TToolStripMenuItem.Click += new System.EventHandler(this.团队协作TToolStripMenuItem_Click);
             // 
             // 工具ToolStripMenuItem
             // 
@@ -789,7 +791,7 @@
             // 
             this.文件清理ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("文件清理ToolStripMenuItem.Image")));
             this.文件清理ToolStripMenuItem.Name = "文件清理ToolStripMenuItem";
-            this.文件清理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.文件清理ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.文件清理ToolStripMenuItem.Text = "文件清理(&F)";
             this.文件清理ToolStripMenuItem.Click += new System.EventHandler(this.文件清理ToolStripMenuItem_Click);
             // 
@@ -797,7 +799,7 @@
             // 
             this.远程连接ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("远程连接ToolStripMenuItem.Image")));
             this.远程连接ToolStripMenuItem.Name = "远程连接ToolStripMenuItem";
-            this.远程连接ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.远程连接ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.远程连接ToolStripMenuItem.Text = "远程连接(&C)";
             this.远程连接ToolStripMenuItem.Click += new System.EventHandler(this.远程连接ToolStripMenuItem_Click);
             // 
@@ -805,7 +807,7 @@
             // 
             this.sVNSToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sVNSToolStripMenuItem.Image")));
             this.sVNSToolStripMenuItem.Name = "sVNSToolStripMenuItem";
-            this.sVNSToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.sVNSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sVNSToolStripMenuItem.Text = "SVN(&N)";
             this.sVNSToolStripMenuItem.Click += new System.EventHandler(this.sVNSToolStripMenuItem_Click);
             // 
@@ -813,7 +815,7 @@
             // 
             this.pUTTYPToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pUTTYPToolStripMenuItem.Image")));
             this.pUTTYPToolStripMenuItem.Name = "pUTTYPToolStripMenuItem";
-            this.pUTTYPToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.pUTTYPToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pUTTYPToolStripMenuItem.Text = "PUTTY(&P)";
             this.pUTTYPToolStripMenuItem.Click += new System.EventHandler(this.pUTTYPToolStripMenuItem_Click);
             // 
@@ -821,7 +823,7 @@
             // 
             this.AutoItToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("AutoItToolStripMenuItem.Image")));
             this.AutoItToolStripMenuItem.Name = "AutoItToolStripMenuItem";
-            this.AutoItToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.AutoItToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.AutoItToolStripMenuItem.Text = "AutoIt(&A)";
             this.AutoItToolStripMenuItem.Click += new System.EventHandler(this.AutoItToolStripMenuItem_Click);
             // 
@@ -834,7 +836,7 @@
             this.spyX86帮助ToolStripMenuItem});
             this.spyToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("spyToolStripMenuItem.Image")));
             this.spyToolStripMenuItem.Name = "spyToolStripMenuItem";
-            this.spyToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.spyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.spyToolStripMenuItem.Text = "Spy++(&S)";
             // 
             // spyX64MToolStripMenuItem
@@ -871,7 +873,7 @@
             this.x86ToolStripMenuItem});
             this.inspectToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("inspectToolStripMenuItem.Image")));
             this.inspectToolStripMenuItem.Name = "inspectToolStripMenuItem";
-            this.inspectToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.inspectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.inspectToolStripMenuItem.Text = "Inspect(&I)";
             // 
             // x64ToolStripMenuItem
@@ -892,7 +894,7 @@
             // 
             this.选项ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("选项ToolStripMenuItem.Image")));
             this.选项ToolStripMenuItem.Name = "选项ToolStripMenuItem";
-            this.选项ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.选项ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.选项ToolStripMenuItem.Text = "选项(&T)";
             this.选项ToolStripMenuItem.Click += new System.EventHandler(this.选项ToolStripMenuItem_Click);
             // 
@@ -949,42 +951,42 @@
             // 用户信息ToolStripMenuItem
             // 
             this.用户信息ToolStripMenuItem.Name = "用户信息ToolStripMenuItem";
-            this.用户信息ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.用户信息ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.用户信息ToolStripMenuItem.Text = "个人信息";
             this.用户信息ToolStripMenuItem.Click += new System.EventHandler(this.用户信息ToolStripMenuItem_Click);
             // 
             // 修改密码ToolStripMenuItem
             // 
             this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
-            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.修改密码ToolStripMenuItem.Text = "修改密码";
             this.修改密码ToolStripMenuItem.Click += new System.EventHandler(this.修改密码ToolStripMenuItem_Click);
             // 
             // 工作笔记ToolStripMenuItem
             // 
             this.工作笔记ToolStripMenuItem.Name = "工作笔记ToolStripMenuItem";
-            this.工作笔记ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.工作笔记ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.工作笔记ToolStripMenuItem.Text = "工作笔记";
             this.工作笔记ToolStripMenuItem.Click += new System.EventHandler(this.工作笔记ToolStripMenuItem_Click);
             // 
             // 工作进展ToolStripMenuItem
             // 
             this.工作进展ToolStripMenuItem.Name = "工作进展ToolStripMenuItem";
-            this.工作进展ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.工作进展ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.工作进展ToolStripMenuItem.Text = "工作进展";
             this.工作进展ToolStripMenuItem.Click += new System.EventHandler(this.工作进展ToolStripMenuItem_Click);
             // 
             // 流程发起ToolStripMenuItem
             // 
             this.流程发起ToolStripMenuItem.Name = "流程发起ToolStripMenuItem";
-            this.流程发起ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.流程发起ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.流程发起ToolStripMenuItem.Text = "流程发起";
             this.流程发起ToolStripMenuItem.Click += new System.EventHandler(this.流程发起ToolStripMenuItem_Click);
             // 
             // 团队成员ToolStripMenuItem
             // 
             this.团队成员ToolStripMenuItem.Name = "团队成员ToolStripMenuItem";
-            this.团队成员ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.团队成员ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.团队成员ToolStripMenuItem.Text = "团队成员";
             this.团队成员ToolStripMenuItem.Click += new System.EventHandler(this.团队成员ToolStripMenuItem_Click);
             // 
@@ -1302,7 +1304,7 @@
             this.tcOutPut.Name = "tcOutPut";
             this.tcOutPut.SelectedIndex = 0;
             this.tcOutPut.ShowToolTips = true;
-            this.tcOutPut.Size = new System.Drawing.Size(1167, 187);
+            this.tcOutPut.Size = new System.Drawing.Size(962, 187);
             this.tcOutPut.TabIndex = 1;
             this.toolTips.SetToolTip(this.tcOutPut, "输出");
             // 
@@ -1314,7 +1316,7 @@
             this.tpResults.Name = "tpResults";
             this.tpResults.Padding = new System.Windows.Forms.Padding(3);
             this.tpResults.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tpResults.Size = new System.Drawing.Size(1159, 161);
+            this.tpResults.Size = new System.Drawing.Size(954, 161);
             this.tpResults.TabIndex = 0;
             this.tpResults.Text = "结果输出";
             this.toolTips.SetToolTip(this.tpResults, "异常输出");
@@ -1329,7 +1331,7 @@
             this.richResults.Location = new System.Drawing.Point(3, 3);
             this.richResults.Name = "richResults";
             this.richResults.ReadOnly = true;
-            this.richResults.Size = new System.Drawing.Size(1153, 155);
+            this.richResults.Size = new System.Drawing.Size(948, 155);
             this.richResults.TabIndex = 1;
             this.richResults.Text = "";
             this.richResults.TextChanged += new System.EventHandler(this.richResults_TextChanged);
@@ -1435,7 +1437,7 @@
             this.tpDetails.Location = new System.Drawing.Point(4, 4);
             this.tpDetails.Name = "tpDetails";
             this.tpDetails.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDetails.Size = new System.Drawing.Size(1159, 161);
+            this.tpDetails.Size = new System.Drawing.Size(954, 161);
             this.tpDetails.TabIndex = 1;
             this.tpDetails.Text = "输出详细";
             this.toolTips.SetToolTip(this.tpDetails, "结果输出");
@@ -1450,7 +1452,7 @@
             this.richDetails.Location = new System.Drawing.Point(3, 3);
             this.richDetails.Name = "richDetails";
             this.richDetails.ReadOnly = true;
-            this.richDetails.Size = new System.Drawing.Size(1153, 155);
+            this.richDetails.Size = new System.Drawing.Size(948, 155);
             this.richDetails.TabIndex = 0;
             this.richDetails.Text = "";
             this.richDetails.TextChanged += new System.EventHandler(this.richOutPut_TextChanged);
@@ -1618,7 +1620,7 @@
             this.lbWordUnderMouse});
             this.ssMain.Location = new System.Drawing.Point(4, 799);
             this.ssMain.Name = "ssMain";
-            this.ssMain.Size = new System.Drawing.Size(1722, 22);
+            this.ssMain.Size = new System.Drawing.Size(1432, 22);
             this.ssMain.TabIndex = 5;
             this.ssMain.Text = "statusStrip1";
             // 
@@ -1673,7 +1675,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(4, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1722, 29);
+            this.panel1.Size = new System.Drawing.Size(1432, 29);
             this.panel1.TabIndex = 6;
             // 
             // tsMain
@@ -1705,7 +1707,7 @@
             this.toolStripSeparator1});
             this.tsMain.Location = new System.Drawing.Point(0, 0);
             this.tsMain.Name = "tsMain";
-            this.tsMain.Size = new System.Drawing.Size(1722, 25);
+            this.tsMain.Size = new System.Drawing.Size(1432, 25);
             this.tsMain.TabIndex = 5;
             this.tsMain.Text = "toolStrip1";
             // 
@@ -1954,7 +1956,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tcManager);
-            this.splitContainer1.Size = new System.Drawing.Size(1722, 713);
+            this.splitContainer1.Size = new System.Drawing.Size(1432, 713);
             this.splitContainer1.SplitterDistance = 446;
             this.splitContainer1.TabIndex = 7;
             // 
@@ -1972,8 +1974,8 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tsFiles);
             this.splitContainer2.Panel2.Controls.Add(this.vScrollBar1);
-            this.splitContainer2.Size = new System.Drawing.Size(1722, 446);
-            this.splitContainer2.SplitterDistance = 318;
+            this.splitContainer2.Size = new System.Drawing.Size(1432, 446);
+            this.splitContainer2.SplitterDistance = 264;
             this.splitContainer2.TabIndex = 1;
             // 
             // mainTabControl
@@ -1984,7 +1986,7 @@
             this.mainTabControl.Location = new System.Drawing.Point(0, 0);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
-            this.mainTabControl.Size = new System.Drawing.Size(318, 446);
+            this.mainTabControl.Size = new System.Drawing.Size(264, 446);
             this.mainTabControl.TabIndex = 0;
             // 
             // tabPage1
@@ -1993,7 +1995,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(310, 420);
+            this.tabPage1.Size = new System.Drawing.Size(256, 420);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "工程";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2011,7 +2013,7 @@
             this.tree_Solution.Name = "tree_Solution";
             this.tree_Solution.SelectedImageIndex = 11;
             this.tree_Solution.ShowNodeToolTips = true;
-            this.tree_Solution.Size = new System.Drawing.Size(304, 414);
+            this.tree_Solution.Size = new System.Drawing.Size(250, 414);
             this.tree_Solution.TabIndex = 0;
             this.tree_Solution.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.tree_Solution_AfterLabelEdit);
             this.tree_Solution.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tree_Solution_AfterSelect);
@@ -2040,7 +2042,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(310, 420);
+            this.tabPage2.Size = new System.Drawing.Size(256, 420);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "类视图";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2071,7 +2073,7 @@
             this.dgvObjectExplorer.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Green;
             this.dgvObjectExplorer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvObjectExplorer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvObjectExplorer.Size = new System.Drawing.Size(304, 414);
+            this.dgvObjectExplorer.Size = new System.Drawing.Size(250, 414);
             this.dgvObjectExplorer.TabIndex = 7;
             this.dgvObjectExplorer.VirtualMode = true;
             this.dgvObjectExplorer.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvObjectExplorer_CellMouseDoubleClick);
@@ -2098,7 +2100,7 @@
             this.tsFiles.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.tsFiles.Location = new System.Drawing.Point(0, 0);
             this.tsFiles.Name = "tsFiles";
-            this.tsFiles.Size = new System.Drawing.Size(1383, 446);
+            this.tsFiles.Size = new System.Drawing.Size(1147, 446);
             this.tsFiles.TabIndex = 2;
             this.tsFiles.Text = "文本编辑器";
             this.tsFiles.TabStripItemClosing += new FarsiLibrary.Win.TabStripItemClosingHandler(this.tsFiles_TabStripItemClosing);
@@ -2108,7 +2110,7 @@
             // vScrollBar1
             // 
             this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.vScrollBar1.Location = new System.Drawing.Point(1383, 0);
+            this.vScrollBar1.Location = new System.Drawing.Point(1147, 0);
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(17, 446);
             this.vScrollBar1.TabIndex = 1;
@@ -2121,7 +2123,7 @@
             this.tcManager.Location = new System.Drawing.Point(0, 0);
             this.tcManager.Name = "tcManager";
             this.tcManager.SelectedIndex = 0;
-            this.tcManager.Size = new System.Drawing.Size(1722, 263);
+            this.tcManager.Size = new System.Drawing.Size(1432, 263);
             this.tcManager.TabIndex = 0;
             // 
             // tpRun
@@ -2130,7 +2132,7 @@
             this.tpRun.Location = new System.Drawing.Point(4, 22);
             this.tpRun.Name = "tpRun";
             this.tpRun.Padding = new System.Windows.Forms.Padding(3);
-            this.tpRun.Size = new System.Drawing.Size(1714, 237);
+            this.tpRun.Size = new System.Drawing.Size(1424, 237);
             this.tpRun.TabIndex = 0;
             this.tpRun.Text = "执行";
             this.tpRun.UseVisualStyleBackColor = true;
@@ -2147,7 +2149,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1708, 231);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1418, 231);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // splitContainer3
@@ -2163,8 +2165,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.tlpOut);
-            this.splitContainer3.Size = new System.Drawing.Size(1702, 193);
-            this.splitContainer3.SplitterDistance = 495;
+            this.splitContainer3.Size = new System.Drawing.Size(1412, 193);
+            this.splitContainer3.SplitterDistance = 410;
             this.splitContainer3.TabIndex = 0;
             // 
             // tlpRunControl
@@ -2180,7 +2182,7 @@
             this.tlpRunControl.RowCount = 1;
             this.tlpRunControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpRunControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 193F));
-            this.tlpRunControl.Size = new System.Drawing.Size(495, 193);
+            this.tlpRunControl.Size = new System.Drawing.Size(410, 193);
             this.tlpRunControl.TabIndex = 0;
             // 
             // stsRunButton
@@ -2321,7 +2323,7 @@
             this.stvStatus.Location = new System.Drawing.Point(33, 3);
             this.stvStatus.Name = "stvStatus";
             this.stvStatus.SelectedImageIndex = 0;
-            this.stvStatus.Size = new System.Drawing.Size(459, 187);
+            this.stvStatus.Size = new System.Drawing.Size(374, 187);
             this.stvStatus.TabIndex = 2;
             // 
             // errorImageList
@@ -2345,7 +2347,7 @@
             this.tlpOut.RowCount = 1;
             this.tlpOut.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpOut.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 193F));
-            this.tlpOut.Size = new System.Drawing.Size(1203, 193);
+            this.tlpOut.Size = new System.Drawing.Size(998, 193);
             this.tlpOut.TabIndex = 0;
             // 
             // stsOut
@@ -2391,7 +2393,7 @@
             this.stbDown,
             this.stbWarp,
             this.tsbDelete});
-            this.stsOut.Location = new System.Drawing.Point(1173, 0);
+            this.stsOut.Location = new System.Drawing.Point(968, 0);
             this.stsOut.Name = "stsOut";
             this.stsOut.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.stsOut.Size = new System.Drawing.Size(24, 193);
@@ -2458,7 +2460,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.23391F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 596F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
             this.tableLayoutPanel5.Controls.Add(this.stsOutPut, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.labtimeNow, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.spbStatus, 1, 0);
@@ -2469,7 +2471,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1702, 26);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1412, 26);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // stsOutPut
@@ -2521,7 +2523,7 @@
             this.stsOutPut.Location = new System.Drawing.Point(0, 0);
             this.stsOutPut.Name = "stsOutPut";
             this.stsOutPut.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.stsOutPut.Size = new System.Drawing.Size(474, 25);
+            this.stsOutPut.Size = new System.Drawing.Size(326, 25);
             this.stsOutPut.SkinAllColor = true;
             this.stsOutPut.TabIndex = 1;
             this.stsOutPut.Text = "skinToolStrip1";
@@ -2618,7 +2620,7 @@
             this.labtimeNow.BackColor = System.Drawing.Color.Transparent;
             this.labtimeNow.BorderColor = System.Drawing.Color.White;
             this.labtimeNow.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labtimeNow.Location = new System.Drawing.Point(1589, 4);
+            this.labtimeNow.Location = new System.Drawing.Point(1297, 4);
             this.labtimeNow.Name = "labtimeNow";
             this.labtimeNow.Size = new System.Drawing.Size(0, 17);
             this.labtimeNow.TabIndex = 5;
@@ -2631,10 +2633,10 @@
             this.spbStatus.BarRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.spbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.spbStatus.ForeColor = System.Drawing.Color.Red;
-            this.spbStatus.Location = new System.Drawing.Point(477, 3);
+            this.spbStatus.Location = new System.Drawing.Point(329, 3);
             this.spbStatus.Name = "spbStatus";
             this.spbStatus.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.spbStatus.Size = new System.Drawing.Size(454, 20);
+            this.spbStatus.Size = new System.Drawing.Size(310, 20);
             this.spbStatus.TabIndex = 4;
             this.spbStatus.TrackFore = System.Drawing.Color.Gold;
             this.spbStatus.Visible = false;
@@ -2678,7 +2680,7 @@
             this.tStripReport.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbLogView});
-            this.tStripReport.Location = new System.Drawing.Point(1592, 0);
+            this.tStripReport.Location = new System.Drawing.Point(1300, 0);
             this.tStripReport.Name = "tStripReport";
             this.tStripReport.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Size = new System.Drawing.Size(37, 25);
@@ -2706,7 +2708,7 @@
             // dtpTimeNow
             // 
             this.dtpTimeNow.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dtpTimeNow.Location = new System.Drawing.Point(1411, 3);
+            this.dtpTimeNow.Location = new System.Drawing.Point(1119, 3);
             this.dtpTimeNow.Name = "dtpTimeNow";
             this.dtpTimeNow.Size = new System.Drawing.Size(116, 21);
             this.dtpTimeNow.TabIndex = 6;
@@ -2717,7 +2719,7 @@
             this.tpDebug.Location = new System.Drawing.Point(4, 22);
             this.tpDebug.Name = "tpDebug";
             this.tpDebug.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDebug.Size = new System.Drawing.Size(1714, 237);
+            this.tpDebug.Size = new System.Drawing.Size(1424, 237);
             this.tpDebug.TabIndex = 1;
             this.tpDebug.Text = "调试";
             this.tpDebug.UseVisualStyleBackColor = true;
@@ -2735,7 +2737,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1708, 231);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1418, 231);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // splitContainer4
@@ -2751,8 +2753,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.tableLayoutPanel4);
-            this.splitContainer4.Size = new System.Drawing.Size(1702, 196);
-            this.splitContainer4.SplitterDistance = 495;
+            this.splitContainer4.Size = new System.Drawing.Size(1412, 196);
+            this.splitContainer4.SplitterDistance = 410;
             this.splitContainer4.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -2768,7 +2770,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 196F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(495, 196);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(410, 196);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // stsToolLeft
@@ -2918,7 +2920,7 @@
             this.stvResultsTree.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stvResultsTree.Location = new System.Drawing.Point(33, 3);
             this.stvResultsTree.Name = "stvResultsTree";
-            this.stvResultsTree.Size = new System.Drawing.Size(459, 190);
+            this.stvResultsTree.Size = new System.Drawing.Size(374, 190);
             this.stvResultsTree.TabIndex = 2;
             // 
             // tableLayoutPanel4
@@ -2933,7 +2935,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 196F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1203, 196);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(998, 196);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // stsToolRight
@@ -2979,7 +2981,7 @@
             this.dtsbDown,
             this.dtsbWarp,
             this.dtsbDelete});
-            this.stsToolRight.Location = new System.Drawing.Point(1173, 0);
+            this.stsToolRight.Location = new System.Drawing.Point(968, 0);
             this.stsToolRight.Name = "stsToolRight";
             this.stsToolRight.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.stsToolRight.Size = new System.Drawing.Size(24, 196);
@@ -3089,7 +3091,7 @@
             this.stsToolTop.Location = new System.Drawing.Point(0, 0);
             this.stsToolTop.Name = "stsToolTop";
             this.stsToolTop.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.stsToolTop.Size = new System.Drawing.Size(1708, 25);
+            this.stsToolTop.Size = new System.Drawing.Size(1418, 25);
             this.stsToolTop.SkinAllColor = true;
             this.stsToolTop.TabIndex = 1;
             this.stsToolTop.Text = "skinToolStrip1";
@@ -3219,13 +3221,20 @@
             this.timerNow.Interval = 1000;
             this.timerNow.Tick += new System.EventHandler(this.timerNow_Tick);
             // 
+            // 项目管理ToolStripMenuItem
+            // 
+            this.项目管理ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("项目管理ToolStripMenuItem.Image")));
+            this.项目管理ToolStripMenuItem.Name = "项目管理ToolStripMenuItem";
+            this.项目管理ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.项目管理ToolStripMenuItem.Text = "项目管理(&P)";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(1730, 825);
+            this.ClientSize = new System.Drawing.Size(1440, 825);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ssMain);
@@ -3317,7 +3326,7 @@
         private System.Windows.Forms.MenuStrip menu_ProjectManage;
         private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 编辑ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 项目ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 工程ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 生成ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 调试ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 工具ToolStripMenuItem;
@@ -3436,7 +3445,7 @@
         private System.Windows.Forms.ImageList treeSolutionImageList;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 生成脚本ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 团队ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 项目ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 远程连接ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 团队协作TToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sVNSToolStripMenuItem;
@@ -3580,7 +3589,7 @@
         private System.Windows.Forms.ToolStripMenuItem 新建解决方案SToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 打开解决方案SToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 新建解决方案SToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem 新建项目PToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 新建工程PToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 新建文件夹RToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 新建文件FToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 打开解决方案SToolStripMenuItem1;
@@ -3588,6 +3597,7 @@
         private System.Windows.Forms.ToolStripMenuItem 打开文件FToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 打开支撑库ToolStripMenuItem;
         private System.Windows.Forms.ImageList errorImageList;
+        private System.Windows.Forms.ToolStripMenuItem 项目管理ToolStripMenuItem;
     }
 }
 
