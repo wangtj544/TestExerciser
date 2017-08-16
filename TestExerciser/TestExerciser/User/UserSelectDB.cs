@@ -87,6 +87,7 @@ namespace TestExerciser.User
             {
                 Properties.Settings.Default.dataSource = strDataSource + strcon;
                 Properties.Settings.Default.ConnectionString = Properties.Settings.Default.dataSource + Properties.Settings.Default.ConnectionParas;
+                Properties.Settings.Default.ServerIP = this.stbServerDBPath.Text;
                 Properties.Settings.Default.Save();
             }            
         }

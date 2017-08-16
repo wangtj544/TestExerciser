@@ -104,26 +104,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="2045400">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="2052096">
       <assemblyIdentity name="TestExerciser" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>nQqJDVe9FiOb1Mm/kIHP6SnLd+0=</dsig:DigestValue>
+        <dsig:DigestValue>1y8QzJdU7rhpYBS2SrWcUuqrbIQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-Hans\TestExerciser.resources.dll" size="68608">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-Hans\TestExerciser.resources.dll" size="49152">
       <assemblyIdentity name="TestExerciser.resources" version="1.0.0.0" language="zh-Hans" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Rt91TE1wqpxZluBgbaR2ArMvAD8=</dsig:DigestValue>
+        <dsig:DigestValue>NARSvITTktP+ixJ8yT/UnKonkZ8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -955,13 +955,13 @@
       <dsig:DigestValue>ZeYZU8XcjBcOT0KfDKqPhMpwi1Q=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TestExerciser.exe.config" size="2061">
+  <file name="TestExerciser.exe.config" size="2152">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>bgkLhh3jMpzbAYEqXWXpbeQZGvA=</dsig:DigestValue>
+      <dsig:DigestValue>6SlGVHd+w3ho/ZTeGo483FmNkU0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Tools\Sources\AutoIt.chm" size="6791791">

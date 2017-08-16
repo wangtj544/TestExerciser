@@ -127,9 +127,6 @@
   <data name="okButton.Text" xml:space="preserve">
     <value>确定(&amp;O)</value>
   </data>
-  <data name="labelCopyright.Text" xml:space="preserve">
-    <value>用途：自动化测试</value>
-  </data>
   <data name="&gt;&gt;labelVersion.Parent" xml:space="preserve">
     <value>tableLayoutPanel</value>
   </data>
@@ -628,8 +625,14 @@
         cJWw3xX9u6JfoPW7on9X9Ku1flf074p+tdbviv5d0a/S+r//+/8BPTxUq6Ub7iwAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="labelCopyright.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 3, 0</value>
+  </data>
   <data name="labelCopyright.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 16</value>
+  </data>
+  <data name="&gt;&gt;labelCompanyName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="textBoxDescription.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 3, 3, 3</value>
@@ -652,9 +655,6 @@
   </data>
   <data name="labelProductName.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 16</value>
-  </data>
-  <data name="okButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
@@ -680,20 +680,23 @@
   <data name="&gt;&gt;logoPictureBox.Parent" xml:space="preserve">
     <value>tableLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;labelCompanyName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="okButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="textBoxDescription.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Both</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>435, 261</value>
+  <data name="labelVersion.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="&gt;&gt;labelVersion.Name" xml:space="preserve">
     <value>labelVersion</value>
   </data>
   <data name="labelVersion.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>0, 16</value>
+  </data>
+  <data name="&gt;&gt;labelProductName.Parent" xml:space="preserve">
+    <value>tableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;labelProductName.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -790,6 +793,13 @@
   </data>
   <data name="&gt;&gt;tableLayoutPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.BackPalace" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAACFJREFUOE9j+E8hGI4GzLz5Ci9GB6MGDE8DSAVD3oD//wFuStPuEmXBpQAAAABJ
+        RU5ErkJggg==
+</value>
   </data>
   <data name="labelProductName.Location" type="System.Drawing.Point, System.Drawing">
     <value>143, 0</value>
@@ -1353,11 +1363,8 @@
   <data name="&gt;&gt;logoPictureBox.Name" xml:space="preserve">
     <value>logoPictureBox</value>
   </data>
-  <data name="&gt;&gt;labelProductName.Parent" xml:space="preserve">
-    <value>tableLayoutPanel</value>
-  </data>
-  <data name="labelProductName.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 16</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>关于</value>
   </data>
   <data name="&gt;&gt;labelCompanyName.Parent" xml:space="preserve">
     <value>tableLayoutPanel</value>
@@ -1386,11 +1393,11 @@
   <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>9, 8, 9, 8</value>
   </data>
-  <data name="labelVersion.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="labelCopyright.Text" xml:space="preserve">
+    <value>用途：自动化测试</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>关于</value>
+  <data name="labelProductName.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 16</value>
   </data>
   <data name="&gt;&gt;logoPictureBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1410,8 +1417,8 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>CCWin.Skin_Mac, CSkin, Version=16.1.14.2, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="labelCopyright.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 0, 3, 0</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>435, 261</value>
   </data>
   <data name="&gt;&gt;textBoxDescription.Parent" xml:space="preserve">
     <value>tableLayoutPanel</value>

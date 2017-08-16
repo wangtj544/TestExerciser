@@ -23,11 +23,15 @@ namespace TestExerciser.Tools.CaseManagement
             {
                 ToolCaseReviewFromExcel myToolCaseReview = new ToolCaseReviewFromExcel();
                 myToolCaseReview.Show();
+                this.Visible = false;
+                this.Close();
             }
             else if (this.rdbReviewDirect.Checked == true)
             {
                 ToolCaseReviewDirect myToolCaseReviewDirect = new ToolCaseReviewDirect();
                 myToolCaseReviewDirect.Show();
+                this.Visible = false;
+                this.Close();
             }
         }
 

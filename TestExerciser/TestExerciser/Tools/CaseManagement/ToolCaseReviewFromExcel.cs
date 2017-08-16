@@ -43,8 +43,7 @@ namespace TestExerciser.Tools
         static List<string> sheetNamesList = new List<string>();
 
         string mailBody = null;
-        string currentExcelPath = null;
-        string serverTestCaseReviewExcelPool = @"\\" + Properties.Settings.Default.dataSource + @"\DATA\TestCaseReviewExcelPool\";
+        string currentExcelPath = null;      
 
 
         int readColumnNo = 200;//读取Excel行数
@@ -116,7 +115,7 @@ namespace TestExerciser.Tools
                 this.sbStep3.BaseColor = Color.Lime;
                 this.sbStep3.BorderColor = Color.Lime;
                 this.cbSelectExcel.Enabled = true;
-                    string[] files = Directory.GetFiles(serverTestCaseReviewExcelPool);
+                string[] files = Directory.GetFiles(testCasesPool());
                     foreach (string file in files)
                     {
                         addExcelToTlpSelectTestCase(Path.GetFileName(file));
@@ -248,7 +247,7 @@ namespace TestExerciser.Tools
         private string[] getExcelSheetName(string excelName)
         {
             bool hasTitle = true;
-            excelFilePath = serverTestCaseReviewExcelPool + excelName;
+            excelFilePath = testCasesPool() + excelName;
             excelFileName = Path.GetFileName(excelFilePath);
             string fileType = System.IO.Path.GetExtension(excelFilePath);
             if (string.IsNullOrEmpty(fileType)) return null;
@@ -308,7 +307,7 @@ namespace TestExerciser.Tools
                 cbSelectExcel.Enabled = true;
                 
                 cbSelectExcel.DataSource = sheetNamesList;
-                currentExcelPath = serverTestCaseReviewExcelPool + myText.Text;
+                currentExcelPath = testCasesPool() + myText.Text;
                 this.sbStep4.BaseColor = Color.Lime;
                 this.sbStep4.BorderColor = Color.Lime;
                 btnStart.Enabled = true;
@@ -343,11 +342,11 @@ namespace TestExerciser.Tools
                     {
                         try
                         {
-                            if (!Directory.Exists(serverTestCaseReviewExcelPool))
+                            if (!Directory.Exists(testCasesPool()))
                             {
-                                Directory.CreateDirectory(serverTestCaseReviewExcelPool);
+                                Directory.CreateDirectory(testCasesPool());
                             }
-                            File.Copy(str, serverTestCaseReviewExcelPool + Path.GetFileName(str), true);
+                            File.Copy(str, testCasesPool() + Path.GetFileName(str), true);
                             caseNameToReviewList.Add(Path.GetFileName(str) + "\r\n");
                             caseNameToReview = caseNameToReviewList.ToArray();
                             mailBody = Path.GetFileName(str) + "\r\n" + mailBody;
@@ -783,6 +782,20 @@ namespace TestExerciser.Tools
             this.rtbCommit.Focus();
             // 选中文本文本框中的关键字
             this.rtbCommit.Select(startIndex, length);
+        }
+
+        private string testCasesPool()
+        {
+            string serverTestCaseReviewExcelPool = "";
+            if (Properties.Settings.Default.ServerIP == "")
+            {
+                serverTestCaseReviewExcelPool = @"C:\DATA\TestCaseReviewExcelPool\";
+            }
+            else
+            {
+                serverTestCaseReviewExcelPool = @"\\" + Properties.Settings.Default.ServerIP + @"\DATA\TestCaseReviewExcelPool\";
+            }
+            return serverTestCaseReviewExcelPool;
         }
     }
 }
