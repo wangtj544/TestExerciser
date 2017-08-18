@@ -34,6 +34,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -85,7 +89,10 @@
             this.rtbCommit = new System.Windows.Forms.RichTextBox();
             this.tabPageAffirm = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbSelectExcelFile = new System.Windows.Forms.GroupBox();
+            this.dgvSelectExcelFiles = new CCWin.SkinControl.SkinDataGridView();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.gbFlow = new System.Windows.Forms.GroupBox();
             this.tlpCommitResults = new System.Windows.Forms.TableLayoutPanel();
@@ -101,6 +108,9 @@
             this.评审用例BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetCasesForReview = new TestExerciser.DataSetCasesForReview();
             this.评审用例TableAdapter = new TestExerciser.DataSetCasesForReviewTableAdapters.评审用例TableAdapter();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.skinComboBox1 = new CCWin.SkinControl.SkinComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -136,6 +146,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
+            this.splitContainer5.Panel1.SuspendLayout();
+            this.splitContainer5.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.gbSelectExcelFile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSelectExcelFiles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -146,6 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartForAnalyze)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.评审用例BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCasesForReview)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -176,6 +193,7 @@
             this.tabControlReview.SelectedIndex = 0;
             this.tabControlReview.Size = new System.Drawing.Size(1483, 789);
             this.tabControlReview.TabIndex = 1;
+            this.tabControlReview.SelectedIndexChanged += new System.EventHandler(this.tabControlReview_SelectedIndexChanged);
             // 
             // tabPageCommit
             // 
@@ -833,7 +851,7 @@
             this.tabPageAffirm.Location = new System.Drawing.Point(4, 22);
             this.tabPageAffirm.Name = "tabPageAffirm";
             this.tabPageAffirm.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAffirm.Size = new System.Drawing.Size(1226, 763);
+            this.tabPageAffirm.Size = new System.Drawing.Size(1475, 763);
             this.tabPageAffirm.TabIndex = 1;
             this.tabPageAffirm.Text = "评审确认";
             this.tabPageAffirm.UseVisualStyleBackColor = true;
@@ -846,19 +864,101 @@
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.gbSelectExcelFile);
-            this.splitContainer2.Size = new System.Drawing.Size(1220, 757);
-            this.splitContainer2.SplitterDistance = 219;
+            this.splitContainer2.Panel1.Controls.Add(this.splitContainer5);
+            this.splitContainer2.Size = new System.Drawing.Size(1469, 757);
+            this.splitContainer2.SplitterDistance = 325;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // splitContainer5
+            // 
+            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer5.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer5.Name = "splitContainer5";
+            this.splitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer5.Panel1
+            // 
+            this.splitContainer5.Panel1.Controls.Add(this.tableLayoutPanel1);
+            this.splitContainer5.Size = new System.Drawing.Size(325, 757);
+            this.splitContainer5.SplitterDistance = 320;
+            this.splitContainer5.TabIndex = 0;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.gbSelectExcelFile, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(325, 320);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // gbSelectExcelFile
             // 
-            this.gbSelectExcelFile.Location = new System.Drawing.Point(24, 25);
+            this.gbSelectExcelFile.Controls.Add(this.dgvSelectExcelFiles);
+            this.gbSelectExcelFile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbSelectExcelFile.Location = new System.Drawing.Point(3, 3);
             this.gbSelectExcelFile.Name = "gbSelectExcelFile";
-            this.gbSelectExcelFile.Size = new System.Drawing.Size(200, 100);
+            this.gbSelectExcelFile.Size = new System.Drawing.Size(319, 279);
             this.gbSelectExcelFile.TabIndex = 0;
             this.gbSelectExcelFile.TabStop = false;
             this.gbSelectExcelFile.Text = "选择用例：";
+            // 
+            // dgvSelectExcelFiles
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvSelectExcelFiles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvSelectExcelFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSelectExcelFiles.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvSelectExcelFiles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvSelectExcelFiles.ColumnFont = null;
+            this.dgvSelectExcelFiles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectExcelFiles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvSelectExcelFiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSelectExcelFiles.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSelectExcelFiles.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvSelectExcelFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSelectExcelFiles.EnableHeadersVisualStyles = false;
+            this.dgvSelectExcelFiles.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dgvSelectExcelFiles.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dgvSelectExcelFiles.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvSelectExcelFiles.Location = new System.Drawing.Point(3, 17);
+            this.dgvSelectExcelFiles.Name = "dgvSelectExcelFiles";
+            this.dgvSelectExcelFiles.ReadOnly = true;
+            this.dgvSelectExcelFiles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvSelectExcelFiles.RowHeadersVisible = false;
+            this.dgvSelectExcelFiles.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvSelectExcelFiles.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvSelectExcelFiles.RowTemplate.Height = 23;
+            this.dgvSelectExcelFiles.Size = new System.Drawing.Size(313, 259);
+            this.dgvSelectExcelFiles.TabIndex = 0;
+            this.dgvSelectExcelFiles.TitleBack = null;
+            this.dgvSelectExcelFiles.TitleBackColorBegin = System.Drawing.Color.White;
+            this.dgvSelectExcelFiles.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.dgvSelectExcelFiles.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSelectExcelFiles_CellContentDoubleClick);
             // 
             // splitContainer3
             // 
@@ -1072,6 +1172,43 @@
             // 
             this.评审用例TableAdapter.ClearBeforeFill = true;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.skinComboBox1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 288);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(319, 29);
+            this.tableLayoutPanel2.TabIndex = 3;
+            // 
+            // skinComboBox1
+            // 
+            this.skinComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.skinComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.skinComboBox1.FormattingEnabled = true;
+            this.skinComboBox1.Location = new System.Drawing.Point(83, 3);
+            this.skinComboBox1.Name = "skinComboBox1";
+            this.skinComboBox1.Size = new System.Drawing.Size(233, 22);
+            this.skinComboBox1.TabIndex = 6;
+            this.skinComboBox1.WaterText = "";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 12);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "选择工作簿:";
+            // 
             // ToolCaseReviewFromExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1124,6 +1261,12 @@
             this.splitContainer2.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.splitContainer5.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
+            this.splitContainer5.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.gbSelectExcelFile.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSelectExcelFiles)).EndInit();
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
@@ -1134,6 +1277,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartForAnalyze)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.评审用例BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCasesForReview)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1204,5 +1349,11 @@
         private System.Windows.Forms.ToolStripMenuItem 清除标记ToolStripMenuItem;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.GroupBox gbSelectExcelFile;
+        private System.Windows.Forms.SplitContainer splitContainer5;
+        private CCWin.SkinControl.SkinDataGridView dgvSelectExcelFiles;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private CCWin.SkinControl.SkinComboBox skinComboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -21,7 +21,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 namespace TestExerciser.Tools
 {
     public partial class ToolCaseReviewFromExcel : Skin_Mac
-    {
+    {        
         string [] caseToReview = null;
         
         ManageDB myManageDB = new Logic.ManageDB();       
@@ -323,6 +323,24 @@ namespace TestExerciser.Tools
             myText.DoubleClick += new System.EventHandler(this.myTextSelectTestCase_DoubleClick);           
             myText.Text = labelText;
             tlpSelectTestCase.Controls.Add(myText);
+        }
+
+        private void addExcelToDgv(CCWin.SkinControl.SkinDataGridView dgvExcel)
+        {
+            DataTable dt = new DataTable();//建立个数据表
+            dt.Columns.Add(new DataColumn("Excel文件名", typeof(string)));//在表中添加string类型的Name列
+            DataRow dr;//行
+            if (Directory.Exists(testCasesPool()))
+            {
+               string [] excelFilepool = Directory.GetFiles(testCasesPool());
+               foreach (string str in excelFilepool)
+               {                  
+                   dr = dt.NewRow();
+                   dr["Excel文件名"] = Path.GetFileName(str);
+                   dt.Rows.Add(dr);//在表的对象的行里添加此行
+               }
+            }
+            dgvExcel.DataSource = dt;
         }
 
         private void btnLaunch_Click(object sender, EventArgs e)
@@ -797,5 +815,39 @@ namespace TestExerciser.Tools
             }
             return serverTestCaseReviewExcelPool;
         }
+
+        private void tabControlReview_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.tabControlReview.SelectedIndex == 1)
+            {
+                addExcelToDgv(this.dgvSelectExcelFiles);
+            }
+        }
+
+        private void dgvSelectExcelFiles_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult myText_DoubleClick = MessageBox.Show("确定要选择用例吗？", "消息提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+            if (myText_DoubleClick == DialogResult.OK)
+            {
+                if (cbSelectExcel.DataSource != null)
+                {
+                    cbSelectExcel.DataSource = null;
+                }
+                var myText = sender as TextBox;
+                sheetNamesList.Clear();
+                sheetNames = sheetNamesList.ToArray();
+                getExcelSheetName(myText.Text);
+                myText.BackColor = Color.LightGoldenrodYellow;
+                cbSelectExcel.Enabled = true;
+
+                cbSelectExcel.DataSource = sheetNamesList;
+                currentExcelPath = testCasesPool() + myText.Text;
+                this.sbStep4.BaseColor = Color.Lime;
+                this.sbStep4.BorderColor = Color.Lime;
+                btnStart.Enabled = true;
+            }
+        }
+
+       
     }
 }
