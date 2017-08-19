@@ -71,14 +71,14 @@
             this.执行项目ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.执行工程ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.执行测试套ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.生成脚本ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.脚本录制F4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.项目ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.需求管理QToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.项目管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.用例管理TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.缺陷管理BToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.团队协作TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.自动化管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.封装管理MToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.批量生成脚本ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.文件清理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.远程连接ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -225,7 +225,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvObjectExplorer = new System.Windows.Forms.DataGridView();
             this.clImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tsFiles = new FarsiLibrary.Win.FATabStrip();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.tcManager = new System.Windows.Forms.TabControl();
@@ -305,6 +304,8 @@
             this.dtslTimeUse = new System.Windows.Forms.ToolStripLabel();
             this.dtslTime = new System.Windows.Forms.ToolStripLabel();
             this.timerNow = new System.Windows.Forms.Timer(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu_ProjectManage.SuspendLayout();
             this.rightClickOnProManager.SuspendLayout();
             this.rightClickOnOutPutWindow.SuspendLayout();
@@ -681,9 +682,7 @@
             this.调试ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.执行项目ToolStripMenuItem,
             this.执行工程ToolStripMenuItem,
-            this.执行测试套ToolStripMenuItem,
-            this.生成脚本ToolStripMenuItem,
-            this.脚本录制F4ToolStripMenuItem});
+            this.执行测试套ToolStripMenuItem});
             this.调试ToolStripMenuItem.Name = "调试ToolStripMenuItem";
             this.调试ToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
             this.调试ToolStripMenuItem.Text = "测试(&S)";
@@ -712,22 +711,6 @@
             this.执行测试套ToolStripMenuItem.Text = "执行测试套(&F5)";
             this.执行测试套ToolStripMenuItem.Click += new System.EventHandler(this.执行测试套ToolStripMenuItem_Click);
             // 
-            // 生成脚本ToolStripMenuItem
-            // 
-            this.生成脚本ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("生成脚本ToolStripMenuItem.Image")));
-            this.生成脚本ToolStripMenuItem.Name = "生成脚本ToolStripMenuItem";
-            this.生成脚本ToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.生成脚本ToolStripMenuItem.Text = "批量生成(&F6)";
-            this.生成脚本ToolStripMenuItem.Click += new System.EventHandler(this.生成脚本ToolStripMenuItem_Click);
-            // 
-            // 脚本录制F4ToolStripMenuItem
-            // 
-            this.脚本录制F4ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("脚本录制F4ToolStripMenuItem.Image")));
-            this.脚本录制F4ToolStripMenuItem.Name = "脚本录制F4ToolStripMenuItem";
-            this.脚本录制F4ToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.脚本录制F4ToolStripMenuItem.Text = "脚本录制(&F4)";
-            this.脚本录制F4ToolStripMenuItem.Click += new System.EventHandler(this.脚本录制F4ToolStripMenuItem_Click);
-            // 
             // 项目ToolStripMenuItem
             // 
             this.项目ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -735,7 +718,7 @@
             this.项目管理ToolStripMenuItem,
             this.用例管理TToolStripMenuItem,
             this.缺陷管理BToolStripMenuItem,
-            this.团队协作TToolStripMenuItem});
+            this.自动化管理ToolStripMenuItem});
             this.项目ToolStripMenuItem.Name = "项目ToolStripMenuItem";
             this.项目ToolStripMenuItem.Size = new System.Drawing.Size(64, 21);
             this.项目ToolStripMenuItem.Text = "项目(&M)";
@@ -744,7 +727,7 @@
             // 
             this.需求管理QToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("需求管理QToolStripMenuItem.Image")));
             this.需求管理QToolStripMenuItem.Name = "需求管理QToolStripMenuItem";
-            this.需求管理QToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.需求管理QToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.需求管理QToolStripMenuItem.Text = "需求管理(&Q)";
             this.需求管理QToolStripMenuItem.Click += new System.EventHandler(this.需求管理QToolStripMenuItem_Click);
             // 
@@ -752,14 +735,14 @@
             // 
             this.项目管理ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("项目管理ToolStripMenuItem.Image")));
             this.项目管理ToolStripMenuItem.Name = "项目管理ToolStripMenuItem";
-            this.项目管理ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.项目管理ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.项目管理ToolStripMenuItem.Text = "项目管理(&P)";
             // 
             // 用例管理TToolStripMenuItem
             // 
             this.用例管理TToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("用例管理TToolStripMenuItem.Image")));
             this.用例管理TToolStripMenuItem.Name = "用例管理TToolStripMenuItem";
-            this.用例管理TToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.用例管理TToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.用例管理TToolStripMenuItem.Text = "用例管理(&T)";
             this.用例管理TToolStripMenuItem.Click += new System.EventHandler(this.用例管理TToolStripMenuItem_Click);
             // 
@@ -767,17 +750,35 @@
             // 
             this.缺陷管理BToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("缺陷管理BToolStripMenuItem.Image")));
             this.缺陷管理BToolStripMenuItem.Name = "缺陷管理BToolStripMenuItem";
-            this.缺陷管理BToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.缺陷管理BToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.缺陷管理BToolStripMenuItem.Text = "缺陷管理(&B)";
             this.缺陷管理BToolStripMenuItem.Click += new System.EventHandler(this.缺陷管理BToolStripMenuItem_Click);
             // 
-            // 团队协作TToolStripMenuItem
+            // 自动化管理ToolStripMenuItem
             // 
-            this.团队协作TToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("团队协作TToolStripMenuItem.Image")));
-            this.团队协作TToolStripMenuItem.Name = "团队协作TToolStripMenuItem";
-            this.团队协作TToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.团队协作TToolStripMenuItem.Text = "封装管理(&M)";
-            this.团队协作TToolStripMenuItem.Click += new System.EventHandler(this.团队协作TToolStripMenuItem_Click);
+            this.自动化管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.封装管理MToolStripMenuItem,
+            this.批量生成脚本ToolStripMenuItem});
+            this.自动化管理ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("自动化管理ToolStripMenuItem.Image")));
+            this.自动化管理ToolStripMenuItem.Name = "自动化管理ToolStripMenuItem";
+            this.自动化管理ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.自动化管理ToolStripMenuItem.Text = "自动化管理(&A)";
+            // 
+            // 封装管理MToolStripMenuItem
+            // 
+            this.封装管理MToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("封装管理MToolStripMenuItem.Image")));
+            this.封装管理MToolStripMenuItem.Name = "封装管理MToolStripMenuItem";
+            this.封装管理MToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.封装管理MToolStripMenuItem.Text = "封装管理(&M)";
+            this.封装管理MToolStripMenuItem.Click += new System.EventHandler(this.封装管理MToolStripMenuItem_Click);
+            // 
+            // 批量生成脚本ToolStripMenuItem
+            // 
+            this.批量生成脚本ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("批量生成脚本ToolStripMenuItem.Image")));
+            this.批量生成脚本ToolStripMenuItem.Name = "批量生成脚本ToolStripMenuItem";
+            this.批量生成脚本ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.批量生成脚本ToolStripMenuItem.Text = "批量生成(&G)";
+            this.批量生成脚本ToolStripMenuItem.Click += new System.EventHandler(this.批量生成GToolStripMenuItem_Click);
             // 
             // 工具ToolStripMenuItem
             // 
@@ -2094,13 +2095,6 @@
             this.clImage.ReadOnly = true;
             this.clImage.Width = 32;
             // 
-            // clName
-            // 
-            this.clName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clName.HeaderText = "Column1";
-            this.clName.Name = "clName";
-            this.clName.ReadOnly = true;
-            // 
             // tsFiles
             // 
             this.tsFiles.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2467,7 +2461,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.23391F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 596F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
             this.tableLayoutPanel5.Controls.Add(this.stsOutPut, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.labtimeNow, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.spbStatus, 1, 0);
@@ -2530,7 +2524,7 @@
             this.stsOutPut.Location = new System.Drawing.Point(0, 0);
             this.stsOutPut.Name = "stsOutPut";
             this.stsOutPut.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.stsOutPut.Size = new System.Drawing.Size(325, 25);
+            this.stsOutPut.Size = new System.Drawing.Size(323, 25);
             this.stsOutPut.SkinAllColor = true;
             this.stsOutPut.TabIndex = 1;
             this.stsOutPut.Text = "skinToolStrip1";
@@ -2627,7 +2621,7 @@
             this.labtimeNow.BackColor = System.Drawing.Color.Transparent;
             this.labtimeNow.BorderColor = System.Drawing.Color.White;
             this.labtimeNow.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labtimeNow.Location = new System.Drawing.Point(1296, 4);
+            this.labtimeNow.Location = new System.Drawing.Point(1291, 4);
             this.labtimeNow.Name = "labtimeNow";
             this.labtimeNow.Size = new System.Drawing.Size(0, 17);
             this.labtimeNow.TabIndex = 5;
@@ -2640,10 +2634,10 @@
             this.spbStatus.BarRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.spbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.spbStatus.ForeColor = System.Drawing.Color.Red;
-            this.spbStatus.Location = new System.Drawing.Point(328, 3);
+            this.spbStatus.Location = new System.Drawing.Point(326, 3);
             this.spbStatus.Name = "spbStatus";
             this.spbStatus.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.spbStatus.Size = new System.Drawing.Size(310, 20);
+            this.spbStatus.Size = new System.Drawing.Size(307, 20);
             this.spbStatus.TabIndex = 4;
             this.spbStatus.TrackFore = System.Drawing.Color.Gold;
             this.spbStatus.Visible = false;
@@ -2687,7 +2681,7 @@
             this.tStripReport.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbLogView});
-            this.tStripReport.Location = new System.Drawing.Point(1299, 0);
+            this.tStripReport.Location = new System.Drawing.Point(1294, 0);
             this.tStripReport.Name = "tStripReport";
             this.tStripReport.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Size = new System.Drawing.Size(37, 25);
@@ -2715,7 +2709,7 @@
             // dtpTimeNow
             // 
             this.dtpTimeNow.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dtpTimeNow.Location = new System.Drawing.Point(1118, 3);
+            this.dtpTimeNow.Location = new System.Drawing.Point(1113, 3);
             this.dtpTimeNow.Name = "dtpTimeNow";
             this.dtpTimeNow.Size = new System.Drawing.Size(116, 21);
             this.dtpTimeNow.TabIndex = 6;
@@ -3228,6 +3222,20 @@
             this.timerNow.Interval = 1000;
             this.timerNow.Tick += new System.EventHandler(this.timerNow_Tick);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Column1";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // clName
+            // 
+            this.clName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clName.HeaderText = "Column1";
+            this.clName.Name = "clName";
+            this.clName.ReadOnly = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -3444,17 +3452,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clName;
         private System.Windows.Forms.ImageList treeSolutionImageList;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 生成脚本ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 项目ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 远程连接ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 团队协作TToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sVNSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pUTTYPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AutoItToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 断点F9ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 单步调试F10ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 逐过程调试F11ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 脚本录制F4ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 用户信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 修改密码ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 团队成员ToolStripMenuItem;
@@ -3598,6 +3603,10 @@
         private System.Windows.Forms.ToolStripMenuItem 打开支撑库ToolStripMenuItem;
         private System.Windows.Forms.ImageList errorImageList;
         private System.Windows.Forms.ToolStripMenuItem 项目管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 自动化管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 封装管理MToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 批量生成脚本ToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }
 

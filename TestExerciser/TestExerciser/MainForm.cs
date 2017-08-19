@@ -507,7 +507,7 @@ namespace TestExerciser
             }
             else if (e.KeyCode == Keys.F6)
             {
-                this.生成脚本ToolStripMenuItem_Click(sender, e);
+                
             }
         }
 
@@ -2380,7 +2380,7 @@ namespace TestExerciser
             }
         }
 
-        private void 生成脚本ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 批量生成GToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MainExcelReader rdb = new MainExcelReader();
             rdb.ShowDialog();
@@ -2712,7 +2712,7 @@ namespace TestExerciser
             }
         }
 
-        private void 团队协作TToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 封装管理MToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MainPackageManager myMainPackageManager = new MainPackageManager();
             myMainPackageManager.Show();
