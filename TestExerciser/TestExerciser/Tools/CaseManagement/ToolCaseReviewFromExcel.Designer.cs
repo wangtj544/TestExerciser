@@ -30,21 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToolCaseReviewFromExcel));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControlReview = new System.Windows.Forms.TabControl();
             this.tabPageCommit = new System.Windows.Forms.TabPage();
@@ -102,7 +102,7 @@
             this.labSelectWorkBook = new System.Windows.Forms.Label();
             this.gbMakeSure = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.skinButton1 = new CCWin.SkinControl.SkinButton();
+            this.btnOkSave = new CCWin.SkinControl.SkinButton();
             this.dgvMakeSure = new CCWin.SkinControl.SkinDataGridView();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.gbFlow = new System.Windows.Forms.GroupBox();
@@ -119,6 +119,9 @@
             this.评审用例BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetCasesForReview = new TestExerciser.DataSetCasesForReview();
             this.评审用例TableAdapter = new TestExerciser.DataSetCasesForReviewTableAdapters.评审用例TableAdapter();
+            this.btnMakeSure = new CCWin.SkinControl.SkinButton();
+            this.sbStep7 = new CCWin.SkinControl.SkinButton();
+            this.sbStep8 = new CCWin.SkinControl.SkinButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -191,7 +194,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer1.Panel2MinSize = 50;
+            this.splitContainer1.Panel2MinSize = 100;
             this.splitContainer1.Size = new System.Drawing.Size(1722, 789);
             this.splitContainer1.SplitterDistance = 1482;
             this.splitContainer1.TabIndex = 1;
@@ -228,11 +231,12 @@
             // sCMain.Panel1
             // 
             this.sCMain.Panel1.Controls.Add(this.tlpPreCommit);
-            this.sCMain.Panel1MinSize = 300;
+            this.sCMain.Panel1MinSize = 240;
             // 
             // sCMain.Panel2
             // 
             this.sCMain.Panel2.Controls.Add(this.splitContainer4);
+            this.sCMain.Panel2MinSize = 800;
             this.sCMain.Size = new System.Drawing.Size(1468, 757);
             this.sCMain.SplitterDistance = 367;
             this.sCMain.TabIndex = 1;
@@ -689,32 +693,32 @@
             // dgvCommit
             // 
             this.dgvCommit.AlternatingCellBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvCommit.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            this.dgvCommit.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvCommit.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvCommit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvCommit.ColumnFont = null;
             this.dgvCommit.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCommit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCommit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvCommit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCommit.ColumnSelectBackColor = System.Drawing.Color.White;
             this.dgvCommit.ColumnSelectForeColor = System.Drawing.Color.Black;
             this.dgvCommit.ContextMenuStrip = this.contextMenuCommit;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCommit.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCommit.DefaultCellStyle = dataGridViewCellStyle19;
             this.dgvCommit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCommit.EnableHeadersVisualStyles = false;
             this.dgvCommit.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -726,11 +730,11 @@
             this.dgvCommit.ReadOnly = true;
             this.dgvCommit.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvCommit.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvCommit.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvCommit.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dgvCommit.RowTemplate.Height = 23;
             this.dgvCommit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvCommit.Size = new System.Drawing.Size(1097, 548);
@@ -864,7 +868,7 @@
             this.tabPageAffirm.Location = new System.Drawing.Point(4, 22);
             this.tabPageAffirm.Name = "tabPageAffirm";
             this.tabPageAffirm.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAffirm.Size = new System.Drawing.Size(1225, 763);
+            this.tabPageAffirm.Size = new System.Drawing.Size(1474, 763);
             this.tabPageAffirm.TabIndex = 1;
             this.tabPageAffirm.Text = "评审确认";
             this.tabPageAffirm.UseVisualStyleBackColor = true;
@@ -878,12 +882,14 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.Controls.Add(this.splitContainer5);
+            this.splitContainer2.Panel1MinSize = 240;
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dgvMakeSure);
-            this.splitContainer2.Size = new System.Drawing.Size(1219, 757);
-            this.splitContainer2.SplitterDistance = 269;
+            this.splitContainer2.Panel2MinSize = 800;
+            this.splitContainer2.Size = new System.Drawing.Size(1468, 757);
+            this.splitContainer2.SplitterDistance = 323;
             this.splitContainer2.TabIndex = 0;
             // 
             // splitContainer5
@@ -896,27 +902,31 @@
             // splitContainer5.Panel1
             // 
             this.splitContainer5.Panel1.Controls.Add(this.tableLayoutPanel1);
+            this.splitContainer5.Panel1MinSize = 200;
             // 
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.gbMakeSure);
-            this.splitContainer5.Size = new System.Drawing.Size(269, 757);
-            this.splitContainer5.SplitterDistance = 320;
+            this.splitContainer5.Panel2MinSize = 200;
+            this.splitContainer5.Size = new System.Drawing.Size(323, 757);
+            this.splitContainer5.SplitterDistance = 376;
             this.splitContainer5.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.btnMakeSure, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.gbSelectExcelFile, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(269, 320);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(323, 376);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // gbSelectExcelFile
@@ -925,56 +935,58 @@
             this.gbSelectExcelFile.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbSelectExcelFile.Location = new System.Drawing.Point(3, 3);
             this.gbSelectExcelFile.Name = "gbSelectExcelFile";
-            this.gbSelectExcelFile.Size = new System.Drawing.Size(263, 279);
+            this.gbSelectExcelFile.Size = new System.Drawing.Size(317, 300);
             this.gbSelectExcelFile.TabIndex = 0;
             this.gbSelectExcelFile.TabStop = false;
             this.gbSelectExcelFile.Text = "选择用例：";
             // 
             // dgvSelectExcelFiles
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.dgvSelectExcelFiles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvSelectExcelFiles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSelectExcelFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSelectExcelFiles.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvSelectExcelFiles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvSelectExcelFiles.ColumnFont = null;
             this.dgvSelectExcelFiles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSelectExcelFiles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectExcelFiles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSelectExcelFiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSelectExcelFiles.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSelectExcelFiles.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSelectExcelFiles.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSelectExcelFiles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSelectExcelFiles.EnableHeadersVisualStyles = false;
             this.dgvSelectExcelFiles.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvSelectExcelFiles.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgvSelectExcelFiles.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
             this.dgvSelectExcelFiles.Location = new System.Drawing.Point(3, 17);
+            this.dgvSelectExcelFiles.MultiSelect = false;
             this.dgvSelectExcelFiles.Name = "dgvSelectExcelFiles";
             this.dgvSelectExcelFiles.ReadOnly = true;
             this.dgvSelectExcelFiles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvSelectExcelFiles.RowHeadersVisible = false;
             this.dgvSelectExcelFiles.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvSelectExcelFiles.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvSelectExcelFiles.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSelectExcelFiles.RowTemplate.Height = 23;
-            this.dgvSelectExcelFiles.Size = new System.Drawing.Size(257, 259);
+            this.dgvSelectExcelFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvSelectExcelFiles.Size = new System.Drawing.Size(311, 280);
             this.dgvSelectExcelFiles.TabIndex = 0;
             this.dgvSelectExcelFiles.TitleBack = null;
             this.dgvSelectExcelFiles.TitleBackColorBegin = System.Drawing.Color.White;
@@ -989,11 +1001,11 @@
             this.tableLayoutPanel2.Controls.Add(this.scbSelectFile, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.labSelectWorkBook, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 288);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 309);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(263, 29);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(317, 29);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // scbSelectFile
@@ -1004,7 +1016,7 @@
             this.scbSelectFile.FormattingEnabled = true;
             this.scbSelectFile.Location = new System.Drawing.Point(83, 3);
             this.scbSelectFile.Name = "scbSelectFile";
-            this.scbSelectFile.Size = new System.Drawing.Size(177, 22);
+            this.scbSelectFile.Size = new System.Drawing.Size(231, 22);
             this.scbSelectFile.TabIndex = 6;
             this.scbSelectFile.WaterText = "";
             // 
@@ -1024,7 +1036,7 @@
             this.gbMakeSure.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbMakeSure.Location = new System.Drawing.Point(0, 0);
             this.gbMakeSure.Name = "gbMakeSure";
-            this.gbMakeSure.Size = new System.Drawing.Size(269, 433);
+            this.gbMakeSure.Size = new System.Drawing.Size(323, 377);
             this.gbMakeSure.TabIndex = 1;
             this.gbMakeSure.TabStop = false;
             this.gbMakeSure.Text = "确认结果：";
@@ -1033,59 +1045,60 @@
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.skinButton1, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.btnOkSave, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 17);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(263, 413);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(317, 357);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // skinButton1
+            // btnOkSave
             // 
-            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.skinButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinButton1.DownBack = null;
-            this.skinButton1.Location = new System.Drawing.Point(3, 386);
-            this.skinButton1.MouseBack = null;
-            this.skinButton1.Name = "skinButton1";
-            this.skinButton1.NormlBack = null;
-            this.skinButton1.Size = new System.Drawing.Size(257, 24);
-            this.skinButton1.TabIndex = 0;
-            this.skinButton1.Text = "确认修改并保存";
-            this.skinButton1.UseVisualStyleBackColor = false;
+            this.btnOkSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnOkSave.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnOkSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnOkSave.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnOkSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnOkSave.DownBack = null;
+            this.btnOkSave.Location = new System.Drawing.Point(3, 330);
+            this.btnOkSave.MouseBack = null;
+            this.btnOkSave.Name = "btnOkSave";
+            this.btnOkSave.NormlBack = null;
+            this.btnOkSave.Size = new System.Drawing.Size(311, 24);
+            this.btnOkSave.TabIndex = 0;
+            this.btnOkSave.Text = "确认并保存";
+            this.btnOkSave.UseVisualStyleBackColor = false;
+            this.btnOkSave.Click += new System.EventHandler(this.btnOkSave_Click);
             // 
             // dgvMakeSure
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.dgvMakeSure.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvMakeSure.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvMakeSure.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvMakeSure.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvMakeSure.ColumnFont = null;
             this.dgvMakeSure.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMakeSure.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMakeSure.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvMakeSure.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMakeSure.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMakeSure.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMakeSure.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvMakeSure.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMakeSure.EnableHeadersVisualStyles = false;
             this.dgvMakeSure.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -1095,13 +1108,13 @@
             this.dgvMakeSure.Name = "dgvMakeSure";
             this.dgvMakeSure.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvMakeSure.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvMakeSure.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvMakeSure.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvMakeSure.RowTemplate.Height = 23;
-            this.dgvMakeSure.Size = new System.Drawing.Size(946, 757);
+            this.dgvMakeSure.Size = new System.Drawing.Size(1141, 757);
             this.dgvMakeSure.TabIndex = 0;
             this.dgvMakeSure.TitleBack = null;
             this.dgvMakeSure.TitleBackColorBegin = System.Drawing.Color.White;
@@ -1140,23 +1153,26 @@
             // 
             this.tlpCommitResults.ColumnCount = 1;
             this.tlpCommitResults.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpCommitResults.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpCommitResults.Controls.Add(this.sbStep8, 0, 7);
             this.tlpCommitResults.Controls.Add(this.sbStep6, 0, 5);
             this.tlpCommitResults.Controls.Add(this.sbStep5, 0, 4);
             this.tlpCommitResults.Controls.Add(this.sbStep4, 0, 3);
             this.tlpCommitResults.Controls.Add(this.sbStep3, 0, 2);
             this.tlpCommitResults.Controls.Add(this.sbStep2, 0, 1);
             this.tlpCommitResults.Controls.Add(this.sbStep1, 0, 0);
+            this.tlpCommitResults.Controls.Add(this.sbStep7, 0, 6);
             this.tlpCommitResults.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpCommitResults.Location = new System.Drawing.Point(3, 17);
             this.tlpCommitResults.Name = "tlpCommitResults";
-            this.tlpCommitResults.RowCount = 6;
-            this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tlpCommitResults.RowCount = 8;
+            this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tlpCommitResults.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpCommitResults.Size = new System.Drawing.Size(230, 371);
             this.tlpCommitResults.TabIndex = 6;
@@ -1170,11 +1186,11 @@
             this.sbStep6.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbStep6.DownBack = null;
             this.sbStep6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sbStep6.Location = new System.Drawing.Point(41, 318);
+            this.sbStep6.Location = new System.Drawing.Point(41, 238);
             this.sbStep6.MouseBack = null;
             this.sbStep6.Name = "sbStep6";
             this.sbStep6.NormlBack = null;
-            this.sbStep6.Size = new System.Drawing.Size(148, 39);
+            this.sbStep6.Size = new System.Drawing.Size(148, 30);
             this.sbStep6.TabIndex = 5;
             this.sbStep6.Text = "结束评审";
             this.sbStep6.UseVisualStyleBackColor = false;
@@ -1188,11 +1204,11 @@
             this.sbStep5.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbStep5.DownBack = null;
             this.sbStep5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sbStep5.Location = new System.Drawing.Point(41, 255);
+            this.sbStep5.Location = new System.Drawing.Point(41, 192);
             this.sbStep5.MouseBack = null;
             this.sbStep5.Name = "sbStep5";
             this.sbStep5.NormlBack = null;
-            this.sbStep5.Size = new System.Drawing.Size(148, 39);
+            this.sbStep5.Size = new System.Drawing.Size(148, 30);
             this.sbStep5.TabIndex = 4;
             this.sbStep5.Text = "开始评审";
             this.sbStep5.UseVisualStyleBackColor = false;
@@ -1206,11 +1222,11 @@
             this.sbStep4.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbStep4.DownBack = null;
             this.sbStep4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sbStep4.Location = new System.Drawing.Point(41, 194);
+            this.sbStep4.Location = new System.Drawing.Point(41, 146);
             this.sbStep4.MouseBack = null;
             this.sbStep4.Name = "sbStep4";
             this.sbStep4.NormlBack = null;
-            this.sbStep4.Size = new System.Drawing.Size(148, 39);
+            this.sbStep4.Size = new System.Drawing.Size(148, 30);
             this.sbStep4.TabIndex = 3;
             this.sbStep4.Text = "选择用例";
             this.sbStep4.UseVisualStyleBackColor = false;
@@ -1224,11 +1240,11 @@
             this.sbStep3.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbStep3.DownBack = null;
             this.sbStep3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sbStep3.Location = new System.Drawing.Point(41, 133);
+            this.sbStep3.Location = new System.Drawing.Point(41, 100);
             this.sbStep3.MouseBack = null;
             this.sbStep3.Name = "sbStep3";
             this.sbStep3.NormlBack = null;
-            this.sbStep3.Size = new System.Drawing.Size(148, 39);
+            this.sbStep3.Size = new System.Drawing.Size(148, 30);
             this.sbStep3.TabIndex = 2;
             this.sbStep3.Text = "发起评审";
             this.sbStep3.UseVisualStyleBackColor = false;
@@ -1242,11 +1258,11 @@
             this.sbStep2.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbStep2.DownBack = null;
             this.sbStep2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sbStep2.Location = new System.Drawing.Point(41, 72);
+            this.sbStep2.Location = new System.Drawing.Point(41, 54);
             this.sbStep2.MouseBack = null;
             this.sbStep2.Name = "sbStep2";
             this.sbStep2.NormlBack = null;
-            this.sbStep2.Size = new System.Drawing.Size(147, 39);
+            this.sbStep2.Size = new System.Drawing.Size(147, 30);
             this.sbStep2.TabIndex = 1;
             this.sbStep2.Text = "添加评审人";
             this.sbStep2.UseVisualStyleBackColor = false;
@@ -1260,11 +1276,11 @@
             this.sbStep1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbStep1.DownBack = null;
             this.sbStep1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sbStep1.Location = new System.Drawing.Point(41, 11);
+            this.sbStep1.Location = new System.Drawing.Point(41, 8);
             this.sbStep1.MouseBack = null;
             this.sbStep1.Name = "sbStep1";
             this.sbStep1.NormlBack = null;
-            this.sbStep1.Size = new System.Drawing.Size(148, 39);
+            this.sbStep1.Size = new System.Drawing.Size(148, 30);
             this.sbStep1.TabIndex = 0;
             this.sbStep1.Text = "添加用例";
             this.sbStep1.UseVisualStyleBackColor = false;
@@ -1283,19 +1299,19 @@
             // chartForAnalyze
             // 
             this.chartForAnalyze.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chartForAnalyze.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.chartForAnalyze.ChartAreas.Add(chartArea2);
             this.chartForAnalyze.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartForAnalyze.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.chartForAnalyze.Legends.Add(legend2);
             this.chartForAnalyze.Location = new System.Drawing.Point(3, 17);
             this.chartForAnalyze.Name = "chartForAnalyze";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.IsValueShownAsLabel = true;
-            series1.Legend = "Legend1";
-            series1.Name = "SerCapability";
-            this.chartForAnalyze.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.IsValueShownAsLabel = true;
+            series2.Legend = "Legend1";
+            series2.Name = "SerCapability";
+            this.chartForAnalyze.Series.Add(series2);
             this.chartForAnalyze.Size = new System.Drawing.Size(230, 374);
             this.chartForAnalyze.TabIndex = 0;
             // 
@@ -1318,6 +1334,61 @@
             // 评审用例TableAdapter
             // 
             this.评审用例TableAdapter.ClearBeforeFill = true;
+            // 
+            // btnMakeSure
+            // 
+            this.btnMakeSure.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnMakeSure.BackColor = System.Drawing.Color.Transparent;
+            this.btnMakeSure.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnMakeSure.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnMakeSure.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnMakeSure.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnMakeSure.DownBack = null;
+            this.btnMakeSure.Location = new System.Drawing.Point(112, 347);
+            this.btnMakeSure.MouseBack = null;
+            this.btnMakeSure.Name = "btnMakeSure";
+            this.btnMakeSure.NormlBack = null;
+            this.btnMakeSure.Size = new System.Drawing.Size(98, 23);
+            this.btnMakeSure.TabIndex = 5;
+            this.btnMakeSure.Text = "开始确认";
+            this.btnMakeSure.UseVisualStyleBackColor = false;
+            this.btnMakeSure.Click += new System.EventHandler(this.btnMakeSure_Click);
+            // 
+            // sbStep7
+            // 
+            this.sbStep7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.sbStep7.BackColor = System.Drawing.Color.Transparent;
+            this.sbStep7.BaseColor = System.Drawing.Color.Silver;
+            this.sbStep7.BorderColor = System.Drawing.Color.Silver;
+            this.sbStep7.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.sbStep7.DownBack = null;
+            this.sbStep7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.sbStep7.Location = new System.Drawing.Point(41, 284);
+            this.sbStep7.MouseBack = null;
+            this.sbStep7.Name = "sbStep7";
+            this.sbStep7.NormlBack = null;
+            this.sbStep7.Size = new System.Drawing.Size(148, 30);
+            this.sbStep7.TabIndex = 6;
+            this.sbStep7.Text = "开始确认";
+            this.sbStep7.UseVisualStyleBackColor = false;
+            // 
+            // sbStep8
+            // 
+            this.sbStep8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.sbStep8.BackColor = System.Drawing.Color.Transparent;
+            this.sbStep8.BaseColor = System.Drawing.Color.Silver;
+            this.sbStep8.BorderColor = System.Drawing.Color.Silver;
+            this.sbStep8.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.sbStep8.DownBack = null;
+            this.sbStep8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.sbStep8.Location = new System.Drawing.Point(41, 331);
+            this.sbStep8.MouseBack = null;
+            this.sbStep8.Name = "sbStep8";
+            this.sbStep8.NormlBack = null;
+            this.sbStep8.Size = new System.Drawing.Size(148, 30);
+            this.sbStep8.TabIndex = 7;
+            this.sbStep8.Text = "结束确认";
+            this.sbStep8.UseVisualStyleBackColor = false;
             // 
             // ToolCaseReviewFromExcel
             // 
@@ -1473,6 +1544,9 @@
         private System.Windows.Forms.GroupBox gbMakeSure;
         private CCWin.SkinControl.SkinDataGridView dgvMakeSure;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private CCWin.SkinControl.SkinButton skinButton1;
+        private CCWin.SkinControl.SkinButton btnOkSave;
+        private CCWin.SkinControl.SkinButton btnMakeSure;
+        private CCWin.SkinControl.SkinButton sbStep8;
+        private CCWin.SkinControl.SkinButton sbStep7;
     }
 }

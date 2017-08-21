@@ -52,7 +52,6 @@ namespace TestExerciser.Tools
 
 
         Object cellTempValue = new object { };
-        bool needUpdate = false;
         string markFlag;
         string excelFilePath = null;
 
@@ -441,7 +440,7 @@ namespace TestExerciser.Tools
                     //dt.Rows.Clear();
                     dgvCommit.DataSource = null;                   
                 }                
-                dgvCommit.DataSource = GetDataFromExcelToDT(this.cbSelectExcel.Text);
+                dgvCommit.DataSource = GetDataFromExcelToDT(this.cbSelectExcel.Text,this.cbSelectExcel);
                 dgvCommit.ResetBindings();
                 this.sbStep5.BaseColor = Color.Lime;
                 this.sbStep5.BorderColor = Color.Lime;
@@ -460,11 +459,11 @@ namespace TestExerciser.Tools
         /// <param name="sheetName"></param>
         /// <returns></returns>
         
-        private DataTable GetDataFromExcelToDT(string currentSheetName)
+        private DataTable GetDataFromExcelToDT(string currentSheetName,CCWin.SkinControl.SkinComboBox comboBox)
         {
             DataSet ds = new DataSet();
             bool hasTitle = true;
-            if (cbSelectExcel.Text!="")
+            if (comboBox.Text != "")
             {
                 excelFileName = Path.GetFileName(excelFilePath);
                 string fileType = System.IO.Path.GetExtension(excelFilePath);
@@ -500,6 +499,7 @@ namespace TestExerciser.Tools
             return null;
         }
 
+
         private void dgvCommit_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             cellTempValue = this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
@@ -509,8 +509,6 @@ namespace TestExerciser.Tools
         {
             if (!Object.Equals(cellTempValue, this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Value))
             {
-                needUpdate = true;
-
                 if (MessageBox.Show("确定要修改该单元格内容吗？", "消息提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
 
@@ -578,24 +576,37 @@ namespace TestExerciser.Tools
 
                 this.chartForAnalyze.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
                 this.chartForAnalyze.Series[0].Points.DataBindXY(xData, yData);
-                foreach (string str in comDelArray)
+                if (this.comDelArray != null)
                 {
-                    comDel = comDel + str + "|";
+                    foreach (string str in comDelArray)
+                    {
+                        comDel = comDel + str + "|";
+                    }
                 }
-                foreach (string str in comAddArray)
+                if (this.comAddArray != null)
                 {
-                    comAdd = comAdd + str + "|";
+                    foreach (string str in comAddArray)
+                    {
+                        comAdd = comAdd + str + "|";
+                    }
                 }
-                foreach (string str in comEditArray)
+                if (this.comAddArray != null)
                 {
-                    comEdit = comEdit + str + "|";
+                    foreach (string str in comEditArray)
+                    {
+                        comEdit = comEdit + str + "|";
+                    }
                 }
-                foreach (string str in comPassArray)
+                if (this.comAddArray != null)
                 {
-                    comPass = comPass + str + "|";
-                }
-                myManageDB.InsertInto("insert into 评审内容(comReviewerMail,comDel,comAdd,comEdit,comPass,comAuto,comCover) values('" + cmdReviewerMail + "'," + "'" + comDel + "'," + "'" + comAdd + "'," + "'" + comEdit + "'," + "'" + comPass + "'," + "'" + comAuto + "'," + "'" + comCover + "')");           
-
+                    foreach (string str in comPassArray)
+                    {
+                        comPass = comPass + str + "|";
+                    }
+                }                
+                myManageDB.InsertInto("insert into 评审内容(comReviewerMail,comDel,comAdd,comEdit,comPass,comAuto,comCover) values('" + cmdReviewerMail + "'," + "'" + comDel + "'," + "'" + comAdd + "'," + "'" + comEdit + "'," + "'" + comPass + "'," + "'" + comAuto + "'," + "'" + comCover + "')");
+                this.sbStep6.BaseColor = Color.Lime;
+                this.sbStep6.BorderColor = Color.Lime;
             }
             else
             {
@@ -821,6 +832,11 @@ namespace TestExerciser.Tools
             if (this.tabControlReview.SelectedIndex == 1)
             {
                 addExcelToDgv(this.dgvSelectExcelFiles);
+                if (this.scbSelectFile.Text == "")
+                {
+                    this.scbSelectFile.Enabled = false;
+                    this.btnMakeSure.Enabled = false;
+                }               
             }
         }
 
@@ -829,24 +845,47 @@ namespace TestExerciser.Tools
             DialogResult myText_DoubleClick = MessageBox.Show("确定要选择用例吗？", "消息提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
             if (myText_DoubleClick == DialogResult.OK)
             {
-                if (cbSelectExcel.DataSource != null)
+                if (scbSelectFile.DataSource != null)
                 {
-                    cbSelectExcel.DataSource = null;
+                    scbSelectFile.DataSource = null; 
                 }
-                var myText = sender as TextBox;
+                string excelName = this.dgvSelectExcelFiles.CurrentCell.Value.ToString();
                 sheetNamesList.Clear();
                 sheetNames = sheetNamesList.ToArray();
-                getExcelSheetName(myText.Text);
-                myText.BackColor = Color.LightGoldenrodYellow;
-                cbSelectExcel.Enabled = true;
-
-                cbSelectExcel.DataSource = sheetNamesList;
-                currentExcelPath = testCasesPool() + myText.Text;
-                this.sbStep4.BaseColor = Color.Lime;
-                this.sbStep4.BorderColor = Color.Lime;
-                btnStart.Enabled = true;
+                getExcelSheetName(excelName);
+                this.scbSelectFile.Enabled = true;
+                this.btnMakeSure.Enabled = true;
+                scbSelectFile.DataSource = sheetNamesList;
+                currentExcelPath = testCasesPool() + excelName;
             }
         }
+
+        private void btnMakeSure_Click(object sender, EventArgs e)
+        {
+            if ((this.scbSelectFile.Text != null) && (this.scbSelectFile.Text != ""))
+            {
+                if (dgvMakeSure.DataSource != null)
+                {
+                    dgvMakeSure.DataSource = null;
+                }
+                dgvMakeSure.DataSource = GetDataFromExcelToDT(this.scbSelectFile.Text,this.scbSelectFile);
+                dgvMakeSure.ResetBindings();
+                this.sbStep7.BaseColor = Color.Lime;
+                this.sbStep7.BorderColor = Color.Lime;
+            }
+            else
+            {
+                MessageBox.Show("请选取需要确认的Excel工作簿名称！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnOkSave_Click(object sender, EventArgs e)
+        {
+            this.sbStep8.BaseColor = Color.Lime;
+            this.sbStep8.BorderColor = Color.Lime;
+        }
+
+      
 
        
     }
