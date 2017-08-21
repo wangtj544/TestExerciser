@@ -225,6 +225,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvObjectExplorer = new System.Windows.Forms.DataGridView();
             this.clImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tsFiles = new FarsiLibrary.Win.FATabStrip();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.tcManager = new System.Windows.Forms.TabControl();
@@ -305,7 +306,6 @@
             this.dtslTime = new System.Windows.Forms.ToolStripLabel();
             this.timerNow = new System.Windows.Forms.Timer(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu_ProjectManage.SuspendLayout();
             this.rightClickOnProManager.SuspendLayout();
             this.rightClickOnOutPutWindow.SuspendLayout();
@@ -372,7 +372,7 @@
             this.登录ToolStripMenuItem});
             this.menu_ProjectManage.Location = new System.Drawing.Point(4, 32);
             this.menu_ProjectManage.Name = "menu_ProjectManage";
-            this.menu_ProjectManage.Size = new System.Drawing.Size(1432, 25);
+            this.menu_ProjectManage.Size = new System.Drawing.Size(1722, 25);
             this.menu_ProjectManage.TabIndex = 0;
             this.menu_ProjectManage.Text = "menuStrip1";
             // 
@@ -768,7 +768,7 @@
             // 
             this.封装管理MToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("封装管理MToolStripMenuItem.Image")));
             this.封装管理MToolStripMenuItem.Name = "封装管理MToolStripMenuItem";
-            this.封装管理MToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.封装管理MToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.封装管理MToolStripMenuItem.Text = "封装管理(&M)";
             this.封装管理MToolStripMenuItem.Click += new System.EventHandler(this.封装管理MToolStripMenuItem_Click);
             // 
@@ -776,7 +776,7 @@
             // 
             this.批量生成脚本ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("批量生成脚本ToolStripMenuItem.Image")));
             this.批量生成脚本ToolStripMenuItem.Name = "批量生成脚本ToolStripMenuItem";
-            this.批量生成脚本ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.批量生成脚本ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.批量生成脚本ToolStripMenuItem.Text = "批量生成(&G)";
             this.批量生成脚本ToolStripMenuItem.Click += new System.EventHandler(this.批量生成GToolStripMenuItem_Click);
             // 
@@ -1312,7 +1312,7 @@
             this.tcOutPut.Name = "tcOutPut";
             this.tcOutPut.SelectedIndex = 0;
             this.tcOutPut.ShowToolTips = true;
-            this.tcOutPut.Size = new System.Drawing.Size(962, 187);
+            this.tcOutPut.Size = new System.Drawing.Size(1168, 187);
             this.tcOutPut.TabIndex = 1;
             this.toolTips.SetToolTip(this.tcOutPut, "输出");
             // 
@@ -1324,7 +1324,7 @@
             this.tpResults.Name = "tpResults";
             this.tpResults.Padding = new System.Windows.Forms.Padding(3);
             this.tpResults.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tpResults.Size = new System.Drawing.Size(954, 161);
+            this.tpResults.Size = new System.Drawing.Size(1160, 161);
             this.tpResults.TabIndex = 0;
             this.tpResults.Text = "结果输出";
             this.toolTips.SetToolTip(this.tpResults, "异常输出");
@@ -1339,7 +1339,7 @@
             this.richResults.Location = new System.Drawing.Point(3, 3);
             this.richResults.Name = "richResults";
             this.richResults.ReadOnly = true;
-            this.richResults.Size = new System.Drawing.Size(948, 155);
+            this.richResults.Size = new System.Drawing.Size(1154, 155);
             this.richResults.TabIndex = 1;
             this.richResults.Text = "";
             this.richResults.TextChanged += new System.EventHandler(this.richResults_TextChanged);
@@ -1628,7 +1628,7 @@
             this.lbWordUnderMouse});
             this.ssMain.Location = new System.Drawing.Point(4, 799);
             this.ssMain.Name = "ssMain";
-            this.ssMain.Size = new System.Drawing.Size(1432, 22);
+            this.ssMain.Size = new System.Drawing.Size(1722, 22);
             this.ssMain.TabIndex = 5;
             this.ssMain.Text = "statusStrip1";
             // 
@@ -1683,7 +1683,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(4, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1432, 29);
+            this.panel1.Size = new System.Drawing.Size(1722, 29);
             this.panel1.TabIndex = 6;
             // 
             // tsMain
@@ -1715,7 +1715,7 @@
             this.toolStripSeparator1});
             this.tsMain.Location = new System.Drawing.Point(0, 0);
             this.tsMain.Name = "tsMain";
-            this.tsMain.Size = new System.Drawing.Size(1432, 25);
+            this.tsMain.Size = new System.Drawing.Size(1722, 25);
             this.tsMain.TabIndex = 5;
             this.tsMain.Text = "toolStrip1";
             // 
@@ -1964,7 +1964,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tcManager);
-            this.splitContainer1.Size = new System.Drawing.Size(1432, 713);
+            this.splitContainer1.Size = new System.Drawing.Size(1722, 713);
             this.splitContainer1.SplitterDistance = 446;
             this.splitContainer1.TabIndex = 7;
             // 
@@ -1982,8 +1982,8 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tsFiles);
             this.splitContainer2.Panel2.Controls.Add(this.vScrollBar1);
-            this.splitContainer2.Size = new System.Drawing.Size(1432, 446);
-            this.splitContainer2.SplitterDistance = 264;
+            this.splitContainer2.Size = new System.Drawing.Size(1722, 446);
+            this.splitContainer2.SplitterDistance = 317;
             this.splitContainer2.TabIndex = 1;
             // 
             // mainTabControl
@@ -1994,7 +1994,7 @@
             this.mainTabControl.Location = new System.Drawing.Point(0, 0);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
-            this.mainTabControl.Size = new System.Drawing.Size(264, 446);
+            this.mainTabControl.Size = new System.Drawing.Size(317, 446);
             this.mainTabControl.TabIndex = 0;
             // 
             // tabPage1
@@ -2003,7 +2003,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(256, 420);
+            this.tabPage1.Size = new System.Drawing.Size(309, 420);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "工程";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2021,7 +2021,7 @@
             this.tree_Solution.Name = "tree_Solution";
             this.tree_Solution.SelectedImageIndex = 11;
             this.tree_Solution.ShowNodeToolTips = true;
-            this.tree_Solution.Size = new System.Drawing.Size(250, 414);
+            this.tree_Solution.Size = new System.Drawing.Size(303, 414);
             this.tree_Solution.TabIndex = 0;
             this.tree_Solution.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.tree_Solution_AfterLabelEdit);
             this.tree_Solution.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tree_Solution_AfterSelect);
@@ -2095,13 +2095,20 @@
             this.clImage.ReadOnly = true;
             this.clImage.Width = 32;
             // 
+            // clName
+            // 
+            this.clName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clName.HeaderText = "Column1";
+            this.clName.Name = "clName";
+            this.clName.ReadOnly = true;
+            // 
             // tsFiles
             // 
             this.tsFiles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tsFiles.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.tsFiles.Location = new System.Drawing.Point(0, 0);
             this.tsFiles.Name = "tsFiles";
-            this.tsFiles.Size = new System.Drawing.Size(1147, 446);
+            this.tsFiles.Size = new System.Drawing.Size(1384, 446);
             this.tsFiles.TabIndex = 2;
             this.tsFiles.Text = "文本编辑器";
             this.tsFiles.TabStripItemClosing += new FarsiLibrary.Win.TabStripItemClosingHandler(this.tsFiles_TabStripItemClosing);
@@ -2111,7 +2118,7 @@
             // vScrollBar1
             // 
             this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.vScrollBar1.Location = new System.Drawing.Point(1147, 0);
+            this.vScrollBar1.Location = new System.Drawing.Point(1384, 0);
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(17, 446);
             this.vScrollBar1.TabIndex = 1;
@@ -2124,7 +2131,7 @@
             this.tcManager.Location = new System.Drawing.Point(0, 0);
             this.tcManager.Name = "tcManager";
             this.tcManager.SelectedIndex = 0;
-            this.tcManager.Size = new System.Drawing.Size(1432, 263);
+            this.tcManager.Size = new System.Drawing.Size(1722, 263);
             this.tcManager.TabIndex = 0;
             // 
             // tpRun
@@ -2133,7 +2140,7 @@
             this.tpRun.Location = new System.Drawing.Point(4, 22);
             this.tpRun.Name = "tpRun";
             this.tpRun.Padding = new System.Windows.Forms.Padding(3);
-            this.tpRun.Size = new System.Drawing.Size(1424, 237);
+            this.tpRun.Size = new System.Drawing.Size(1714, 237);
             this.tpRun.TabIndex = 0;
             this.tpRun.Text = "执行";
             this.tpRun.UseVisualStyleBackColor = true;
@@ -2150,7 +2157,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1418, 231);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1708, 231);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // splitContainer3
@@ -2166,8 +2173,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.tlpOut);
-            this.splitContainer3.Size = new System.Drawing.Size(1412, 193);
-            this.splitContainer3.SplitterDistance = 410;
+            this.splitContainer3.Size = new System.Drawing.Size(1702, 193);
+            this.splitContainer3.SplitterDistance = 494;
             this.splitContainer3.TabIndex = 0;
             // 
             // tlpRunControl
@@ -2183,7 +2190,7 @@
             this.tlpRunControl.RowCount = 1;
             this.tlpRunControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpRunControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 193F));
-            this.tlpRunControl.Size = new System.Drawing.Size(410, 193);
+            this.tlpRunControl.Size = new System.Drawing.Size(494, 193);
             this.tlpRunControl.TabIndex = 0;
             // 
             // stsRunButton
@@ -2324,7 +2331,7 @@
             this.stvStatus.Location = new System.Drawing.Point(33, 3);
             this.stvStatus.Name = "stvStatus";
             this.stvStatus.SelectedImageIndex = 0;
-            this.stvStatus.Size = new System.Drawing.Size(374, 187);
+            this.stvStatus.Size = new System.Drawing.Size(458, 187);
             this.stvStatus.TabIndex = 2;
             // 
             // errorImageList
@@ -2348,7 +2355,7 @@
             this.tlpOut.RowCount = 1;
             this.tlpOut.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpOut.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 193F));
-            this.tlpOut.Size = new System.Drawing.Size(998, 193);
+            this.tlpOut.Size = new System.Drawing.Size(1204, 193);
             this.tlpOut.TabIndex = 0;
             // 
             // stsOut
@@ -2394,7 +2401,7 @@
             this.stbDown,
             this.stbWarp,
             this.tsbDelete});
-            this.stsOut.Location = new System.Drawing.Point(968, 0);
+            this.stsOut.Location = new System.Drawing.Point(1174, 0);
             this.stsOut.Name = "stsOut";
             this.stsOut.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.stsOut.Size = new System.Drawing.Size(24, 193);
@@ -2461,7 +2468,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.23391F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 596F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
             this.tableLayoutPanel5.Controls.Add(this.stsOutPut, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.labtimeNow, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.spbStatus, 1, 0);
@@ -2472,7 +2479,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1412, 26);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1702, 26);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // stsOutPut
@@ -2524,7 +2531,7 @@
             this.stsOutPut.Location = new System.Drawing.Point(0, 0);
             this.stsOutPut.Name = "stsOutPut";
             this.stsOutPut.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.stsOutPut.Size = new System.Drawing.Size(323, 25);
+            this.stsOutPut.Size = new System.Drawing.Size(470, 25);
             this.stsOutPut.SkinAllColor = true;
             this.stsOutPut.TabIndex = 1;
             this.stsOutPut.Text = "skinToolStrip1";
@@ -2621,7 +2628,7 @@
             this.labtimeNow.BackColor = System.Drawing.Color.Transparent;
             this.labtimeNow.BorderColor = System.Drawing.Color.White;
             this.labtimeNow.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labtimeNow.Location = new System.Drawing.Point(1291, 4);
+            this.labtimeNow.Location = new System.Drawing.Point(1580, 4);
             this.labtimeNow.Name = "labtimeNow";
             this.labtimeNow.Size = new System.Drawing.Size(0, 17);
             this.labtimeNow.TabIndex = 5;
@@ -2634,10 +2641,10 @@
             this.spbStatus.BarRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.spbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.spbStatus.ForeColor = System.Drawing.Color.Red;
-            this.spbStatus.Location = new System.Drawing.Point(326, 3);
+            this.spbStatus.Location = new System.Drawing.Point(473, 3);
             this.spbStatus.Name = "spbStatus";
             this.spbStatus.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.spbStatus.Size = new System.Drawing.Size(307, 20);
+            this.spbStatus.Size = new System.Drawing.Size(449, 20);
             this.spbStatus.TabIndex = 4;
             this.spbStatus.TrackFore = System.Drawing.Color.Gold;
             this.spbStatus.Visible = false;
@@ -2681,7 +2688,7 @@
             this.tStripReport.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbLogView});
-            this.tStripReport.Location = new System.Drawing.Point(1294, 0);
+            this.tStripReport.Location = new System.Drawing.Point(1583, 0);
             this.tStripReport.Name = "tStripReport";
             this.tStripReport.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Size = new System.Drawing.Size(37, 25);
@@ -2709,7 +2716,7 @@
             // dtpTimeNow
             // 
             this.dtpTimeNow.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dtpTimeNow.Location = new System.Drawing.Point(1113, 3);
+            this.dtpTimeNow.Location = new System.Drawing.Point(1402, 3);
             this.dtpTimeNow.Name = "dtpTimeNow";
             this.dtpTimeNow.Size = new System.Drawing.Size(116, 21);
             this.dtpTimeNow.TabIndex = 6;
@@ -3229,20 +3236,13 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // clName
-            // 
-            this.clName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clName.HeaderText = "Column1";
-            this.clName.Name = "clName";
-            this.clName.ReadOnly = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(1440, 825);
+            this.ClientSize = new System.Drawing.Size(1730, 825);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ssMain);

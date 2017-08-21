@@ -226,7 +226,7 @@
             this.stpResults.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpResults.Location = new System.Drawing.Point(0, 36);
             this.stpResults.Name = "stpResults";
-            this.stpResults.Size = new System.Drawing.Size(1252, 421);
+            this.stpResults.Size = new System.Drawing.Size(1722, 753);
             this.stpResults.TabIndex = 1;
             this.stpResults.TabItemImage = null;
             this.stpResults.Text = "统计结果";

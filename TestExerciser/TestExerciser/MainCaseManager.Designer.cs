@@ -131,8 +131,8 @@
             // splitContainerMain.Panel2
             // 
             this.splitContainerMain.Panel2.Controls.Add(this.tlpBugDetails);
-            this.splitContainerMain.Size = new System.Drawing.Size(1432, 789);
-            this.splitContainerMain.SplitterDistance = 902;
+            this.splitContainerMain.Size = new System.Drawing.Size(1722, 789);
+            this.splitContainerMain.SplitterDistance = 1084;
             this.splitContainerMain.TabIndex = 1;
             // 
             // tableLayoutPanel8
@@ -151,7 +151,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(902, 789);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1084, 789);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // tapButton
@@ -177,7 +177,7 @@
             this.tapButton.Name = "tapButton";
             this.tapButton.RowCount = 1;
             this.tapButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tapButton.Size = new System.Drawing.Size(896, 29);
+            this.tapButton.Size = new System.Drawing.Size(1078, 29);
             this.tapButton.TabIndex = 0;
             // 
             // btnOut
@@ -329,7 +329,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.dgvCaseManager.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCaseManager.RowTemplate.Height = 23;
-            this.dgvCaseManager.Size = new System.Drawing.Size(896, 718);
+            this.dgvCaseManager.Size = new System.Drawing.Size(1078, 718);
             this.dgvCaseManager.TabIndex = 1;
             this.dgvCaseManager.TitleBack = null;
             this.dgvCaseManager.TitleBackColorBegin = System.Drawing.Color.White;
@@ -347,7 +347,7 @@
             this.tlpBugDetails.RowCount = 2;
             this.tlpBugDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpBugDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpBugDetails.Size = new System.Drawing.Size(526, 789);
+            this.tlpBugDetails.Size = new System.Drawing.Size(634, 789);
             this.tlpBugDetails.TabIndex = 2;
             // 
             // slabTitle
@@ -388,7 +388,7 @@
             this.tbcCaseDesign.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.tbcCaseDesign.PageNorml = null;
             this.tbcCaseDesign.SelectedIndex = 0;
-            this.tbcCaseDesign.Size = new System.Drawing.Size(520, 753);
+            this.tbcCaseDesign.Size = new System.Drawing.Size(628, 753);
             this.tbcCaseDesign.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tbcCaseDesign.TabIndex = 1;
             // 
@@ -400,7 +400,7 @@
             this.stpBaseInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpBaseInfo.Location = new System.Drawing.Point(0, 36);
             this.stpBaseInfo.Name = "stpBaseInfo";
-            this.stpBaseInfo.Size = new System.Drawing.Size(520, 717);
+            this.stpBaseInfo.Size = new System.Drawing.Size(628, 717);
             this.stpBaseInfo.TabIndex = 0;
             this.stpBaseInfo.TabItemImage = null;
             this.stpBaseInfo.Text = "基本信息";
@@ -417,7 +417,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(520, 717);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(628, 717);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -440,7 +440,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(514, 681);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(622, 681);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // tlpAddComment
@@ -456,7 +456,7 @@
             this.tlpAddComment.Name = "tlpAddComment";
             this.tlpAddComment.RowCount = 1;
             this.tlpAddComment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpAddComment.Size = new System.Drawing.Size(508, 68);
+            this.tlpAddComment.Size = new System.Drawing.Size(616, 68);
             this.tlpAddComment.TabIndex = 11;
             // 
             // rtbAddComment
@@ -464,7 +464,7 @@
             this.rtbAddComment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbAddComment.Location = new System.Drawing.Point(83, 3);
             this.rtbAddComment.Name = "rtbAddComment";
-            this.rtbAddComment.Size = new System.Drawing.Size(422, 62);
+            this.rtbAddComment.Size = new System.Drawing.Size(530, 62);
             this.rtbAddComment.TabIndex = 18;
             this.rtbAddComment.Text = "";
             // 
@@ -492,7 +492,7 @@
             this.tlpHistoryComment.Name = "tlpHistoryComment";
             this.tlpHistoryComment.RowCount = 1;
             this.tlpHistoryComment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpHistoryComment.Size = new System.Drawing.Size(508, 115);
+            this.tlpHistoryComment.Size = new System.Drawing.Size(616, 115);
             this.tlpHistoryComment.TabIndex = 10;
             // 
             // rtbHistoryComment
@@ -501,7 +501,7 @@
             this.rtbHistoryComment.Location = new System.Drawing.Point(83, 3);
             this.rtbHistoryComment.Name = "rtbHistoryComment";
             this.rtbHistoryComment.ReadOnly = true;
-            this.rtbHistoryComment.Size = new System.Drawing.Size(422, 109);
+            this.rtbHistoryComment.Size = new System.Drawing.Size(530, 109);
             this.rtbHistoryComment.TabIndex = 17;
             this.rtbHistoryComment.Text = "";
             // 
@@ -529,7 +529,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(508, 24);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(616, 24);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
             // txtTitle
@@ -538,7 +538,7 @@
             this.txtTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTitle.Location = new System.Drawing.Point(83, 3);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(422, 21);
+            this.txtTitle.Size = new System.Drawing.Size(530, 21);
             this.txtTitle.TabIndex = 3;
             // 
             // labTitle
@@ -592,7 +592,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(508, 129);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(616, 129);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // labIntroducer
@@ -641,7 +641,7 @@
             this.labHowFound.BackColor = System.Drawing.Color.White;
             this.labHowFound.BorderColor = System.Drawing.Color.White;
             this.labHowFound.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labHowFound.Location = new System.Drawing.Point(257, 4);
+            this.labHowFound.Location = new System.Drawing.Point(311, 4);
             this.labHowFound.Name = "labHowFound";
             this.labHowFound.Size = new System.Drawing.Size(56, 17);
             this.labHowFound.TabIndex = 14;
@@ -654,7 +654,7 @@
             this.skinLabel9.BackColor = System.Drawing.Color.White;
             this.skinLabel9.BorderColor = System.Drawing.Color.White;
             this.skinLabel9.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel9.Location = new System.Drawing.Point(257, 29);
+            this.skinLabel9.Location = new System.Drawing.Point(311, 29);
             this.skinLabel9.Name = "skinLabel9";
             this.skinLabel9.Size = new System.Drawing.Size(44, 17);
             this.skinLabel9.TabIndex = 15;
@@ -667,7 +667,7 @@
             this.labFoundBuild.BackColor = System.Drawing.Color.White;
             this.labFoundBuild.BorderColor = System.Drawing.Color.White;
             this.labFoundBuild.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labFoundBuild.Location = new System.Drawing.Point(257, 54);
+            this.labFoundBuild.Location = new System.Drawing.Point(311, 54);
             this.labFoundBuild.Name = "labFoundBuild";
             this.labFoundBuild.Size = new System.Drawing.Size(56, 17);
             this.labFoundBuild.TabIndex = 16;
@@ -680,7 +680,7 @@
             this.labResolveTime.BackColor = System.Drawing.Color.White;
             this.labResolveTime.BorderColor = System.Drawing.Color.White;
             this.labResolveTime.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labResolveTime.Location = new System.Drawing.Point(257, 79);
+            this.labResolveTime.Location = new System.Drawing.Point(311, 79);
             this.labResolveTime.Name = "labResolveTime";
             this.labResolveTime.Size = new System.Drawing.Size(56, 17);
             this.labResolveTime.TabIndex = 17;
@@ -693,7 +693,7 @@
             this.labCommitTime.BackColor = System.Drawing.Color.White;
             this.labCommitTime.BorderColor = System.Drawing.Color.White;
             this.labCommitTime.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labCommitTime.Location = new System.Drawing.Point(257, 106);
+            this.labCommitTime.Location = new System.Drawing.Point(311, 106);
             this.labCommitTime.Name = "labCommitTime";
             this.labCommitTime.Size = new System.Drawing.Size(56, 17);
             this.labCommitTime.TabIndex = 18;
@@ -704,7 +704,7 @@
             this.txtIntroducer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtIntroducer.Location = new System.Drawing.Point(83, 103);
             this.txtIntroducer.Name = "txtIntroducer";
-            this.txtIntroducer.Size = new System.Drawing.Size(168, 21);
+            this.txtIntroducer.Size = new System.Drawing.Size(222, 21);
             this.txtIntroducer.TabIndex = 27;
             // 
             // labProbability
@@ -738,7 +738,7 @@
             this.txtProductBuild.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtProductBuild.Location = new System.Drawing.Point(83, 78);
             this.txtProductBuild.Name = "txtProductBuild";
-            this.txtProductBuild.Size = new System.Drawing.Size(168, 21);
+            this.txtProductBuild.Size = new System.Drawing.Size(222, 21);
             this.txtProductBuild.TabIndex = 31;
             // 
             // txtPriority
@@ -746,7 +746,7 @@
             this.txtPriority.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPriority.Location = new System.Drawing.Point(83, 53);
             this.txtPriority.Name = "txtPriority";
-            this.txtPriority.Size = new System.Drawing.Size(168, 21);
+            this.txtPriority.Size = new System.Drawing.Size(222, 21);
             this.txtPriority.TabIndex = 32;
             // 
             // txtProbability
@@ -754,7 +754,7 @@
             this.txtProbability.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtProbability.Location = new System.Drawing.Point(83, 28);
             this.txtProbability.Name = "txtProbability";
-            this.txtProbability.Size = new System.Drawing.Size(168, 21);
+            this.txtProbability.Size = new System.Drawing.Size(222, 21);
             this.txtProbability.TabIndex = 33;
             // 
             // txtCateGory
@@ -762,47 +762,47 @@
             this.txtCateGory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCateGory.Location = new System.Drawing.Point(83, 3);
             this.txtCateGory.Name = "txtCateGory";
-            this.txtCateGory.Size = new System.Drawing.Size(168, 21);
+            this.txtCateGory.Size = new System.Drawing.Size(222, 21);
             this.txtCateGory.TabIndex = 34;
             // 
             // txtHowFound
             // 
             this.txtHowFound.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHowFound.Location = new System.Drawing.Point(337, 3);
+            this.txtHowFound.Location = new System.Drawing.Point(391, 3);
             this.txtHowFound.Name = "txtHowFound";
-            this.txtHowFound.Size = new System.Drawing.Size(168, 21);
+            this.txtHowFound.Size = new System.Drawing.Size(222, 21);
             this.txtHowFound.TabIndex = 35;
             // 
             // txtGravity
             // 
             this.txtGravity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGravity.Location = new System.Drawing.Point(337, 28);
+            this.txtGravity.Location = new System.Drawing.Point(391, 28);
             this.txtGravity.Name = "txtGravity";
-            this.txtGravity.Size = new System.Drawing.Size(168, 21);
+            this.txtGravity.Size = new System.Drawing.Size(222, 21);
             this.txtGravity.TabIndex = 36;
             // 
             // txtFoundBuild
             // 
             this.txtFoundBuild.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFoundBuild.Location = new System.Drawing.Point(337, 53);
+            this.txtFoundBuild.Location = new System.Drawing.Point(391, 53);
             this.txtFoundBuild.Name = "txtFoundBuild";
-            this.txtFoundBuild.Size = new System.Drawing.Size(168, 21);
+            this.txtFoundBuild.Size = new System.Drawing.Size(222, 21);
             this.txtFoundBuild.TabIndex = 37;
             // 
             // txtResolveTime
             // 
             this.txtResolveTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtResolveTime.Location = new System.Drawing.Point(337, 78);
+            this.txtResolveTime.Location = new System.Drawing.Point(391, 78);
             this.txtResolveTime.Name = "txtResolveTime";
-            this.txtResolveTime.Size = new System.Drawing.Size(168, 21);
+            this.txtResolveTime.Size = new System.Drawing.Size(222, 21);
             this.txtResolveTime.TabIndex = 38;
             // 
             // txtCommitTime
             // 
             this.txtCommitTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCommitTime.Location = new System.Drawing.Point(337, 104);
+            this.txtCommitTime.Location = new System.Drawing.Point(391, 104);
             this.txtCommitTime.Name = "txtCommitTime";
-            this.txtCommitTime.Size = new System.Drawing.Size(168, 21);
+            this.txtCommitTime.Size = new System.Drawing.Size(222, 21);
             this.txtCommitTime.TabIndex = 39;
             // 
             // tableLayoutPanel5
@@ -818,7 +818,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(508, 24);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(616, 24);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // labProject
@@ -840,7 +840,7 @@
             this.txtProject.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtProject.Location = new System.Drawing.Point(83, 3);
             this.txtProject.Name = "txtProject";
-            this.txtProject.Size = new System.Drawing.Size(422, 21);
+            this.txtProject.Size = new System.Drawing.Size(530, 21);
             this.txtProject.TabIndex = 2;
             // 
             // tlpDescription
@@ -855,7 +855,7 @@
             this.tlpDescription.Name = "tlpDescription";
             this.tlpDescription.RowCount = 1;
             this.tlpDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpDescription.Size = new System.Drawing.Size(508, 285);
+            this.tlpDescription.Size = new System.Drawing.Size(616, 285);
             this.tlpDescription.TabIndex = 5;
             // 
             // rtbDescription
@@ -864,7 +864,7 @@
             this.rtbDescription.Location = new System.Drawing.Point(83, 3);
             this.rtbDescription.Name = "rtbDescription";
             this.rtbDescription.ReadOnly = true;
-            this.rtbDescription.Size = new System.Drawing.Size(422, 279);
+            this.rtbDescription.Size = new System.Drawing.Size(530, 279);
             this.rtbDescription.TabIndex = 15;
             this.rtbDescription.Text = "";
             // 
@@ -924,7 +924,7 @@
             this.stStrip.Location = new System.Drawing.Point(0, 0);
             this.stStrip.Name = "stStrip";
             this.stStrip.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.stStrip.Size = new System.Drawing.Size(520, 25);
+            this.stStrip.Size = new System.Drawing.Size(628, 25);
             this.stStrip.SkinAllColor = true;
             this.stStrip.TabIndex = 3;
             this.stStrip.Text = "skinToolStrip1";
@@ -975,7 +975,7 @@
             this.stpHighInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpHighInfo.Location = new System.Drawing.Point(0, 36);
             this.stpHighInfo.Name = "stpHighInfo";
-            this.stpHighInfo.Size = new System.Drawing.Size(627, 717);
+            this.stpHighInfo.Size = new System.Drawing.Size(520, 717);
             this.stpHighInfo.TabIndex = 1;
             this.stpHighInfo.TabItemImage = null;
             this.stpHighInfo.Text = "高级信息";
@@ -986,7 +986,7 @@
             this.stpOperate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpOperate.Location = new System.Drawing.Point(0, 36);
             this.stpOperate.Name = "stpOperate";
-            this.stpOperate.Size = new System.Drawing.Size(627, 717);
+            this.stpOperate.Size = new System.Drawing.Size(520, 717);
             this.stpOperate.TabIndex = 2;
             this.stpOperate.TabItemImage = null;
             this.stpOperate.Text = "操作记录";
@@ -997,7 +997,7 @@
             this.stpAttachment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpAttachment.Location = new System.Drawing.Point(0, 36);
             this.stpAttachment.Name = "stpAttachment";
-            this.stpAttachment.Size = new System.Drawing.Size(627, 717);
+            this.stpAttachment.Size = new System.Drawing.Size(520, 717);
             this.stpAttachment.TabIndex = 3;
             this.stpAttachment.TabItemImage = null;
             this.stpAttachment.Text = "附件";
@@ -1008,7 +1008,7 @@
             this.stpChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpChart.Location = new System.Drawing.Point(0, 36);
             this.stpChart.Name = "stpChart";
-            this.stpChart.Size = new System.Drawing.Size(627, 717);
+            this.stpChart.Size = new System.Drawing.Size(520, 717);
             this.stpChart.TabIndex = 4;
             this.stpChart.TabItemImage = null;
             this.stpChart.Text = "流程图";
@@ -1019,7 +1019,7 @@
             this.stpRelevance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpRelevance.Location = new System.Drawing.Point(0, 36);
             this.stpRelevance.Name = "stpRelevance";
-            this.stpRelevance.Size = new System.Drawing.Size(627, 717);
+            this.stpRelevance.Size = new System.Drawing.Size(520, 717);
             this.stpRelevance.TabIndex = 5;
             this.stpRelevance.TabItemImage = null;
             this.stpRelevance.Text = "关联";
@@ -1029,7 +1029,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(1440, 825);
+            this.ClientSize = new System.Drawing.Size(1730, 825);
             this.Controls.Add(this.splitContainerMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainCaseManager";

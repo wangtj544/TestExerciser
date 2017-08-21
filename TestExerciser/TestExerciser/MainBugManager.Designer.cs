@@ -968,7 +968,7 @@
             this.stpHighInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpHighInfo.Location = new System.Drawing.Point(0, 36);
             this.stpHighInfo.Name = "stpHighInfo";
-            this.stpHighInfo.Size = new System.Drawing.Size(519, 717);
+            this.stpHighInfo.Size = new System.Drawing.Size(627, 717);
             this.stpHighInfo.TabIndex = 1;
             this.stpHighInfo.TabItemImage = null;
             this.stpHighInfo.Text = "高级信息";
@@ -979,7 +979,7 @@
             this.stpOperate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpOperate.Location = new System.Drawing.Point(0, 36);
             this.stpOperate.Name = "stpOperate";
-            this.stpOperate.Size = new System.Drawing.Size(519, 717);
+            this.stpOperate.Size = new System.Drawing.Size(627, 717);
             this.stpOperate.TabIndex = 2;
             this.stpOperate.TabItemImage = null;
             this.stpOperate.Text = "操作记录";
@@ -990,7 +990,7 @@
             this.stpAttachment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpAttachment.Location = new System.Drawing.Point(0, 36);
             this.stpAttachment.Name = "stpAttachment";
-            this.stpAttachment.Size = new System.Drawing.Size(519, 717);
+            this.stpAttachment.Size = new System.Drawing.Size(627, 717);
             this.stpAttachment.TabIndex = 3;
             this.stpAttachment.TabItemImage = null;
             this.stpAttachment.Text = "附件";
@@ -1001,7 +1001,7 @@
             this.stpChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpChart.Location = new System.Drawing.Point(0, 36);
             this.stpChart.Name = "stpChart";
-            this.stpChart.Size = new System.Drawing.Size(519, 717);
+            this.stpChart.Size = new System.Drawing.Size(627, 717);
             this.stpChart.TabIndex = 4;
             this.stpChart.TabItemImage = null;
             this.stpChart.Text = "流程图";
@@ -1012,7 +1012,7 @@
             this.stpRelevance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpRelevance.Location = new System.Drawing.Point(0, 36);
             this.stpRelevance.Name = "stpRelevance";
-            this.stpRelevance.Size = new System.Drawing.Size(519, 717);
+            this.stpRelevance.Size = new System.Drawing.Size(627, 717);
             this.stpRelevance.TabIndex = 5;
             this.stpRelevance.TabItemImage = null;
             this.stpRelevance.Text = "关联";
