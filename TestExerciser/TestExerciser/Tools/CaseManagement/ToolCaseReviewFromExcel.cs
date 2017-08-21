@@ -114,12 +114,8 @@ namespace TestExerciser.Tools
                 this.sbStep3.BaseColor = Color.Lime;
                 this.sbStep3.BorderColor = Color.Lime;
                 this.cbSelectExcel.Enabled = true;
-                string[] files = Directory.GetFiles(testCasesPool());
-                    foreach (string file in files)
-                    {
-                        addExcelToTlpSelectTestCase(Path.GetFileName(file));
-                    }
-                }
+                addExcelToDgv(this.dgvSelectFile);
+            }
             else if (myManageDB.checkReviewFrom())
             {
                 
@@ -192,6 +188,7 @@ namespace TestExerciser.Tools
         private void cbIfCover_SelectionChangeCommitted(object sender, EventArgs e)
         {
             bool flag = false;
+            int addNo = 0;
             if (cbIfCover.SelectedItem != null)
             {
                 if (selectedItem != null)
@@ -208,7 +205,15 @@ namespace TestExerciser.Tools
 
                 if (!flag)
                 {
-                    addMyLabelControl();
+                    if (addNo < 25)
+                    {
+                        addMyLabelControl();
+                        addNo++;
+                    }
+                    else
+                    {
+                        MessageBox.Show("目前仅支持最多添加25位覆盖点评审人员！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }
@@ -321,7 +326,7 @@ namespace TestExerciser.Tools
             myText.ReadOnly = true;
             myText.DoubleClick += new System.EventHandler(this.myTextSelectTestCase_DoubleClick);           
             myText.Text = labelText;
-            tlpSelectTestCase.Controls.Add(myText);
+            //tlpSelectTestCase.Controls.Add(myText);
         }
 
         private void addExcelToDgv(CCWin.SkinControl.SkinDataGridView dgvExcel)
@@ -590,14 +595,14 @@ namespace TestExerciser.Tools
                         comAdd = comAdd + str + "|";
                     }
                 }
-                if (this.comAddArray != null)
+                if (this.comEditArray != null)
                 {
                     foreach (string str in comEditArray)
                     {
                         comEdit = comEdit + str + "|";
                     }
                 }
-                if (this.comAddArray != null)
+                if (this.comPassArray != null)
                 {
                     foreach (string str in comPassArray)
                     {
@@ -607,6 +612,14 @@ namespace TestExerciser.Tools
                 myManageDB.InsertInto("insert into 评审内容(comReviewerMail,comDel,comAdd,comEdit,comPass,comAuto,comCover) values('" + cmdReviewerMail + "'," + "'" + comDel + "'," + "'" + comAdd + "'," + "'" + comEdit + "'," + "'" + comPass + "'," + "'" + comAuto + "'," + "'" + comCover + "')");
                 this.sbStep6.BaseColor = Color.Lime;
                 this.sbStep6.BorderColor = Color.Lime;
+                if (myManageDB.checkAutoReviewTo())
+                {
+                    myManageDB.UpdateDB("用户管理", "autoReviewTo", "false", "email",ManageDB.userEmailAddress);
+                }
+                else if (myManageDB.checkCoverReviewTo())
+                {
+                    myManageDB.UpdateDB("用户管理", "coverReviewTo", "false", "email", ManageDB.userEmailAddress);
+                }              
             }
             else
             {
@@ -679,8 +692,8 @@ namespace TestExerciser.Tools
                             if (ifChange)
                             {
                                 this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Yellow;
-                                this.rtbCommit.SelectionBackColor = Color.Yellow;
                                 this.dgvCommit.ColumnSelectBackColor = Color.Yellow;
+                                this.rtbCommit.SelectionBackColor = Color.Yellow;
                                 this.rtbCommit.AppendText("【行" + X + "列" + Y + "】" + "【删除说明】【" + ManageDB.userFullName + "】：\n");
                                 yDel = yDel + 1;
                                 comDelArrayList.Add(X.ToString());
@@ -691,20 +704,20 @@ namespace TestExerciser.Tools
                             if (ifChange)
                             {
                                 this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
-                                this.rtbCommit.SelectionBackColor = Color.Red;
                                 this.dgvCommit.ColumnSelectBackColor = Color.Red;
+                                this.rtbCommit.SelectionBackColor = Color.Red;
                                 this.rtbCommit.AppendText("【行" + X + "列" + Y + "】【修改说明】【" + ManageDB.userFullName + "】：\n");
                                 yEidt = yEidt + 1;
                                 comEditArrayList.Add(X.ToString());
-                                comEditArray = comDelArrayList.ToArray();
+                                comEditArray = comEditArrayList.ToArray();
                             }
                             break;
                         case "ADD":
                             if (ifChange)
                             {
                                 this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.DeepSkyBlue;
-                                this.rtbCommit.SelectionBackColor = Color.DeepSkyBlue;
                                 this.dgvCommit.ColumnSelectBackColor = Color.DeepSkyBlue;
+                                this.rtbCommit.SelectionBackColor = Color.DeepSkyBlue;
                                 this.rtbCommit.AppendText("【行" + X + "列" + Y + "】【添加说明】【" + ManageDB.userFullName + "】：\n");
                                 yAdd = yAdd + 1;
                                 comAddArrayList.Add(X.ToString());
@@ -715,8 +728,8 @@ namespace TestExerciser.Tools
                             if (ifChange)
                             {
                                 this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.LightGreen;
-                                this.rtbCommit.SelectionBackColor = Color.LightGreen;
                                 this.dgvCommit.ColumnSelectBackColor = Color.LightGreen;
+                                this.rtbCommit.SelectionBackColor = Color.LightGreen;
                                 this.rtbCommit.AppendText("【行" + X + "列" + Y + "】【通过说明】【" + ManageDB.userFullName + "】：通过\n");
                                 yPass = yPass + 1;
                                 comPassArrayList.Add(X.ToString());
@@ -738,7 +751,6 @@ namespace TestExerciser.Tools
                                 yDel = yDel - 1;
                                 comDelArrayList.Remove(X.ToString());
                                 comDelArray = comDelArrayList.ToArray();
-
                             }
                             else if (this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.Red)
                             {
@@ -770,7 +782,7 @@ namespace TestExerciser.Tools
                                 yAdd = yAdd - 1;
                                 comAddArrayList.Remove(X.ToString());
                                 comAddArray = comDelArrayList.ToArray();
-
+                                
                             }
                             else if (this.dgvCommit.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.LightGreen)
                             {
@@ -796,21 +808,6 @@ namespace TestExerciser.Tools
                     }                       
                 }                
             }
-        }
-
-        private void selectKeyWord(string key)
-        {
-            // 获取RichTextBox中的全部文字内容
-            var text = this.rtbCommit.Text.Trim();
-            // 获取关键字在文本中的索引
-            var startIndex = text.IndexOf(key);
-            // 获取关键字的长度
-            var length = key.Length;
-
-            // RichTextBox文本框获得焦点
-            this.rtbCommit.Focus();
-            // 选中文本文本框中的关键字
-            this.rtbCommit.Select(startIndex, length);
         }
 
         private string testCasesPool()
@@ -883,6 +880,29 @@ namespace TestExerciser.Tools
         {
             this.sbStep8.BaseColor = Color.Lime;
             this.sbStep8.BorderColor = Color.Lime;
+        }
+
+        private void dgvSelectFile_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DialogResult myText_DoubleClick = MessageBox.Show("确定要选择用例吗？", "消息提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+            if (myText_DoubleClick == DialogResult.OK)
+            {
+                if (cbSelectExcel.DataSource != null)
+                {
+                    cbSelectExcel.DataSource = null;
+                }
+                string excelName = this.dgvSelectFile.CurrentCell.Value.ToString();
+                sheetNamesList.Clear();
+                sheetNames = sheetNamesList.ToArray();
+                getExcelSheetName(excelName);
+                cbSelectExcel.Enabled = true;
+
+                cbSelectExcel.DataSource = sheetNamesList;
+                currentExcelPath = testCasesPool() + excelName;
+                this.sbStep4.BaseColor = Color.Lime;
+                this.sbStep4.BorderColor = Color.Lime;
+                btnStart.Enabled = true;
+            }
         }
 
       

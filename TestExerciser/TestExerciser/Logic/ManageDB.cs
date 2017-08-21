@@ -251,9 +251,9 @@ namespace TestExerciser.Logic
             UpdateDB("update " + table + " set " + row + "='" + txtChangeTo.Text + "'" + " where userName='" + UserLogin.pubUserName + "'");
         }
 
-        public void UpdateDB(string table, string row, string changeTo,string otherColumn,string otherChangeTo)
+        public void UpdateDB(string table, string row, string changeTo,string otherRow,string otherChangeTo)
         {
-            UpdateDB("update " + table + " set " + row + "='" + changeTo + "'" + " where " + otherColumn + "='" + otherChangeTo + "'");
+            UpdateDB("update " + table + " set " + row + "='" + changeTo + "'" + " where " + otherRow + "='" + otherChangeTo + "'");
         }
 
         public void UpdateDB(string table, string row, string changeTo)

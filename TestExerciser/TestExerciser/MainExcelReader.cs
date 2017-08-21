@@ -460,7 +460,7 @@ namespace TestExerciser
         private void tstbDownLoadExcel_Click(object sender, EventArgs e)
         {
             Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
-            Microsoft.Office.Interop.Excel.Workbook wkb = app.Workbooks.Add(@"\\" + Properties.Settings.Default.dataSource + @"\DATA\用例模板.xlsx");
+            Microsoft.Office.Interop.Excel.Workbook wkb = app.Workbooks.Add(@"\\" + Properties.Settings.Default.ServerIP + @"\DATA\用例模板.xlsx");
             app.Visible = true;
         }
     }
