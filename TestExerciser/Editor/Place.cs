@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EditorNS
+namespace EditorTE
 {
     /// <summary>
     /// Line index and char index

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace EditorNS
+namespace EditorTE
 {
     /// <summary>
     /// This class contains the source text (chars and styles).

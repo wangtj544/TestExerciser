@@ -3,7 +3,7 @@ using System;
 using System.Text;
 using System.Drawing;
 
-namespace EditorNS
+namespace EditorTE
 {
     /// <summary>
     /// Line of text

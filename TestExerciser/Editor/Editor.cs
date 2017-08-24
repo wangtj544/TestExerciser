@@ -39,7 +39,7 @@ using System.Windows.Forms.Design;
 using Microsoft.Win32;
 using Timer = System.Windows.Forms.Timer;
 
-namespace EditorNS
+namespace EditorTE
 {
     /// <summary>
     /// Fast colored textbox
@@ -1516,7 +1516,7 @@ namespace EditorNS
                     if (!base.AutoScroll)
                         base.AutoScroll = true;
                     Size newSize = value;
-                    if (WordWrap && WordWrapMode != EditorNS.WordWrapMode.Custom)
+                    if (WordWrap && WordWrapMode != WordWrapMode.Custom)
                     {
                         int maxWidth = GetMaxLineWordWrapedWidth();
                         newSize = new Size(Math.Min(newSize.Width, maxWidth), newSize.Height);

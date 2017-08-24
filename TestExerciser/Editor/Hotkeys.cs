@@ -13,7 +13,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.Design;
 using KEYS = System.Windows.Forms.Keys;
 
-namespace EditorNS
+namespace EditorTE
 {
     /// <summary>
     /// Dictionary of shortcuts for FCTB

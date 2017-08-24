@@ -148,6 +148,7 @@
   <ItemGroup>
     <Compile Include="DataSetCasesForReview.cs">
       <DependentUpon>DataSetCasesForReview.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSetCasesForReview.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -161,6 +162,7 @@
     </Compile>
     <Compile Include="DataSetPackageManager.cs">
       <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSetPackageManager.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -169,6 +171,7 @@
     </Compile>
     <Compile Include="DataSetTeamMembers.cs">
       <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSetTeamMembers.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -779,9 +782,9 @@
     <Content Include="Resources\ts.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Editor\Editor.csproj">
+    <ProjectReference Include="..\Editor\TestExerciser.Editor.csproj">
       <Project>{6dd14a85-ccfc-4774-bd26-0f5772512319}</Project>
-      <Name>Editor</Name>
+      <Name>TestExerciser.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

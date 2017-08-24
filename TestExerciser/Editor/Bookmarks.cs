@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Text;
 
-namespace EditorNS
+namespace EditorTE
 {
     /// <summary>
     /// Base class for bookmark collection

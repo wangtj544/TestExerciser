@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace EditorNS
+namespace EditorTE
 {
     public partial class HotkeysEditorForm : Form
     {

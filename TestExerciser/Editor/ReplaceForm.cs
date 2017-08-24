@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
-namespace EditorNS
+namespace EditorTE
 {
     public partial class ReplaceForm : Form
     {

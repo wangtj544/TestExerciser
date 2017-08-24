@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EditorNS
+namespace EditorTE
 {
     /// <summary>
     /// Insert single char

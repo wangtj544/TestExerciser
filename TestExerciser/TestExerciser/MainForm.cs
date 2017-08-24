@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
-using EditorNS;
+using EditorTE;
 using FarsiLibrary.Win;
 using System.Threading;
 using System.Drawing.Drawing2D;
@@ -2702,11 +2702,11 @@ namespace TestExerciser
 
         private void tsFiles_KeyDown(object sender, KeyEventArgs e)
         {
-            EditorNS.AutocompleteMenu popupMenu;
+            EditorTE.AutocompleteMenu popupMenu;
             if (e.KeyData == (Keys.K | Keys.Control))
             {
                 var tb = sender as Editor;
-                popupMenu = new EditorNS.AutocompleteMenu(tb);
+                popupMenu = new EditorTE.AutocompleteMenu(tb);
                 popupMenu.Show(true);
                 e.Handled = true;
             }

@@ -8,8 +8,8 @@
     <ProjectGuid>{6DD14A85-CCFC-4774-BD26-0F5772512319}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EditorNS</RootNamespace>
-    <AssemblyName>EditorNS</AssemblyName>
+    <RootNamespace>EditorTE</RootNamespace>
+    <AssemblyName>EditorTE</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -22,7 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\EditorNS.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\EditorTE.xml</DocumentationFile>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">

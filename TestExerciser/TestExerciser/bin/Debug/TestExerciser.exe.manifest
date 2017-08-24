@@ -56,14 +56,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EditorNS.dll" size="336896">
-      <assemblyIdentity name="EditorNS" version="2.16.1.0" publicKeyToken="FB8AA12B994EF61B" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EditorTE.dll" size="336896">
+      <assemblyIdentity name="EditorTE" version="2.16.1.0" publicKeyToken="FB8AA12B994EF61B" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>kmeU3MJL7vY/R1QDHXT7H2c/4s8=</dsig:DigestValue>
+        <dsig:DigestValue>g+l6dnZ5MlsbDbczTITY8SHDRIY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -111,7 +111,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/qm+3AU9GBjHu9PB6t8MREJZkCE=</dsig:DigestValue>
+        <dsig:DigestValue>0B6EaOMMJG/HaGeDFQcqc0ige50=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -123,7 +123,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>c83K36FEs1dsyASWCxt2x44idW0=</dsig:DigestValue>
+        <dsig:DigestValue>7v08MoXrPdw+yknBlg1erPPFlI4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

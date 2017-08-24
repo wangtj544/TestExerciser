@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
-namespace EditorNS
+namespace EditorTE
 {
     /// <summary>
     /// Exports colored text as RTF

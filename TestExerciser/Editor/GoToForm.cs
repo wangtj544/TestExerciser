@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace EditorNS
+namespace EditorTE
 {
     public partial class GoToForm : Form
     {

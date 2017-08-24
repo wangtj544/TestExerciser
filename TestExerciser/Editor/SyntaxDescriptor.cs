@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using System;
 
-namespace EditorNS
+namespace EditorTE
 {
     public class SyntaxDescriptor: IDisposable
     {

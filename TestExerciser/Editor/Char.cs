@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EditorNS
+namespace EditorTE
 {
     /// <summary>
     /// Char and style

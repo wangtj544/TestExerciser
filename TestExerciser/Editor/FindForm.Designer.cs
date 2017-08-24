@@ -1,4 +1,4 @@
-﻿namespace EditorNS
+﻿namespace EditorTE
 {
     partial class FindForm
     {

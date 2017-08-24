@@ -6,7 +6,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Xml;
 
-namespace EditorNS
+namespace EditorTE
 {
     public class SyntaxHighlighter : IDisposable
     {

@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace EditorNS
+namespace EditorTE
 {
     ///
     /// These classes are required for correct data binding to Text property of FastColoredTextbox

@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.Collections.Generic;
 
-namespace EditorNS
+namespace EditorTE
 {
     /// <summary>
     /// Item of autocomplete menu

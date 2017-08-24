@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
-namespace EditorNS
+namespace EditorTE
 {
     /// <summary>
     /// Diapason of text chars

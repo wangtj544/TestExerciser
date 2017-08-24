@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
-using EditorNS;
+using EditorTE;
 using System.IO;
 
 

@@ -3,7 +3,7 @@ using System;
 using System.Drawing.Drawing2D;
 using System.Collections.Generic;
 
-namespace EditorNS
+namespace EditorTE
 {
     /// <summary>
     /// Style of chars
