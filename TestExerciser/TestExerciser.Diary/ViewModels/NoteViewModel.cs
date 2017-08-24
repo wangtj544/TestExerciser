@@ -63,7 +63,7 @@ namespace TestExerciser.Diary.ViewModels
         {
             get 
             {
-                return Framework.Common.Helpers.RichTextHelper.GetPlainText(this.Content);
+                return TestExerciser.Diary.Common.Helpers.RichTextHelper.GetPlainText(this.Content);
             }
         }
 
@@ -301,7 +301,7 @@ namespace TestExerciser.Diary.ViewModels
             Logic.Enums.ExportTypes type = (Logic.Enums.ExportTypes)b;
 
 
-            var fileConfig = new Framework.Common.Dialog.FileConfig
+            var fileConfig = new TestExerciser.Diary.Common.Dialog.FileConfig
             {
                 FileName = this.GetFileName(type),
                 Filter = this.GetFileFilter(type),

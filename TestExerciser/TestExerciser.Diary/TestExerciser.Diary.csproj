@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Assets\Images\TestExerciser.Diary.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Hardcodet.Wpf.TaskbarNotification">
       <HintPath>C:\Users\lenovo\Desktop\SmokeNote\Using\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
@@ -284,13 +287,14 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="TestExerciser.Diary.db" />
+    <None Include="bin\Debug\TestExerciser.Diary.db" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -392,7 +396,7 @@
     <Resource Include="Assets\Images\RadioButton\Normal.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="TestExerciser.Diary.ico" />
+    <Resource Include="Assets\Images\TestExerciser.Diary.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TestExerciser.Diary.Common\TestExerciser.Diary.Common.csproj">
@@ -403,9 +407,6 @@
       <Project>{189ff1b0-a860-4a3e-a5de-1a3b00bf3775}</Project>
       <Name>TestExerciser.Diary.Logic</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Xceed.Wpf.Toolkit.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
