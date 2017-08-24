@@ -1,0 +1,9 @@
+E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\TestExerciser.Diary.Common.dll
+E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\TestExerciser.Diary.Common.pdb
+E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\Microsoft.Practices.Prism.dll
+E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\Microsoft.Practices.Prism.UnityExtensions.dll
+E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\Microsoft.Practices.Unity.dll
+E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\System.Windows.Interactivity.dll
+E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Common\obj\Debug\TestExerciser.Diary.Common.dll
+E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Common\obj\Debug\TestExerciser.Diary.Common.pdb
