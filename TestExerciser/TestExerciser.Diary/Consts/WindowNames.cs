@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SmokeNote.Client.Consts
+namespace TestExerciser.Diary.Consts
 {
     public sealed class WindowNames
     {

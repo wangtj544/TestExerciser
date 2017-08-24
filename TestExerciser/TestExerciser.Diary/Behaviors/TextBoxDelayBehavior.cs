@@ -7,7 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Interactivity;
 using System.Windows.Threading;
 
-namespace SmokeNote.Client.Behaviors
+namespace TestExerciser.Diary.Behaviors
 {
     public class TextBoxDelayBehavior : Behavior<TextBox>
     {

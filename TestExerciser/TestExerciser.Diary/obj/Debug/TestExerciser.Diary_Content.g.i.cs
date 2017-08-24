@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("smokenote.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("xceed.wpf.toolkit.dll")]
 
 

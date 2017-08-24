@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using Microsoft.Practices.Unity;
 using System.Windows;
-using SmokeNote.Logic.IService;
-using SmokeNote.Logic.Services;
-using Framework.Common.Dialog;
+using TestExerciser.Diary.Logic.IService;
+using TestExerciser.Diary.Logic.Services;
+using TestExerciser.Diary.Common.Dialog;
 
-namespace SmokeNote.Client
+namespace TestExerciser.Diary
 {
-    public class Bootstrapper : Framework.Common.Bootstrapper
+    public class Bootstrapper : TestExerciser.Diary.Common.Bootstrapper
     {
         protected override System.Windows.DependencyObject CreateShell()
         {
@@ -31,6 +31,7 @@ namespace SmokeNote.Client
             base.ConfigureContainer();
             
             //注册单例
+            
             this.Container.RegisterInstance<Logic.Models.NoteQueryCondition>(new Logic.Models.NoteQueryCondition());
 
             //注册对话框

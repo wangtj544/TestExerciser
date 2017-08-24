@@ -96,7 +96,7 @@
             <Setter.Value>
                 <BitmapImage>
                     <BitmapImage.UriSource>
-                        /SmokeNote.Client;component/Assets/Images/Editor/bold.png
+                        /TestExerciser.Diary;component/Assets/Images/Editor/bold.png
                     </BitmapImage.UriSource>
                 </BitmapImage>
             </Setter.Value>
@@ -110,7 +110,7 @@
             <Setter.Value>
                 <BitmapImage>
                     <BitmapImage.UriSource>
-                        /SmokeNote.Client;component/Assets/Images/Editor/italic.png
+                        /TestExerciser.Diary;component/Assets/Images/Editor/italic.png
                     </BitmapImage.UriSource>
                 </BitmapImage>
             </Setter.Value>
@@ -124,7 +124,7 @@
             <Setter.Value>
                 <BitmapImage>
                     <BitmapImage.UriSource>
-                        /SmokeNote.Client;component/Assets/Images/Editor/underline.png
+                        /TestExerciser.Diary;component/Assets/Images/Editor/underline.png
                     </BitmapImage.UriSource>
                 </BitmapImage>
             </Setter.Value>
@@ -138,7 +138,7 @@
             <Setter.Value>
                 <BitmapImage>
                     <BitmapImage.UriSource>
-                        /SmokeNote.Client;component/Assets/Images/Editor/align_left.png
+                        /TestExerciser.Diary;component/Assets/Images/Editor/align_left.png
                     </BitmapImage.UriSource>
                 </BitmapImage>
             </Setter.Value>
@@ -152,7 +152,7 @@
             <Setter.Value>
                 <BitmapImage>
                     <BitmapImage.UriSource>
-                        /SmokeNote.Client;component/Assets/Images/Editor/align_center.png
+                        /TestExerciser.Diary;component/Assets/Images/Editor/align_center.png
                     </BitmapImage.UriSource>
                 </BitmapImage>
             </Setter.Value>
@@ -166,7 +166,7 @@
             <Setter.Value>
                 <BitmapImage>
                     <BitmapImage.UriSource>
-                        /SmokeNote.Client;component/Assets/Images/Editor/align_right.png
+                        /TestExerciser.Diary;component/Assets/Images/Editor/align_right.png
                     </BitmapImage.UriSource>
                 </BitmapImage>
             </Setter.Value>
@@ -180,7 +180,7 @@
             <Setter.Value>
                 <BitmapImage>
                     <BitmapImage.UriSource>
-                        /SmokeNote.Client;component/Assets/Images/Editor/increase_indent.png
+                        /TestExerciser.Diary;component/Assets/Images/Editor/increase_indent.png
                     </BitmapImage.UriSource>
                 </BitmapImage>
             </Setter.Value>
@@ -194,7 +194,7 @@
             <Setter.Value>
                 <BitmapImage>
                     <BitmapImage.UriSource>
-                        /SmokeNote.Client;component/Assets/Images/Editor/decrease_indent.png
+                        /TestExerciser.Diary;component/Assets/Images/Editor/decrease_indent.png
                     </BitmapImage.UriSource>
                 </BitmapImage>
             </Setter.Value>
@@ -208,7 +208,7 @@
             <Setter.Value>
                 <BitmapImage>
                     <BitmapImage.UriSource>
-                        /SmokeNote.Client;component/Assets/Images/Editor/bullet_list.png
+                        /TestExerciser.Diary;component/Assets/Images/Editor/bullet_list.png
                     </BitmapImage.UriSource>
                 </BitmapImage>
             </Setter.Value>
@@ -222,7 +222,7 @@
             <Setter.Value>
                 <BitmapImage>
                     <BitmapImage.UriSource>
-                        /SmokeNote.Client;component/Assets/Images/Editor/numeric_list.png
+                        /TestExerciser.Diary;component/Assets/Images/Editor/numeric_list.png
                     </BitmapImage.UriSource>
                 </BitmapImage>
             </Setter.Value>
@@ -236,7 +236,7 @@
             <Setter.Value>
                 <BitmapImage>
                     <BitmapImage.UriSource>
-                        /SmokeNote.Client;component/Assets/Images/Editor/redo.png
+                        /TestExerciser.Diary;component/Assets/Images/Editor/redo.png
                     </BitmapImage.UriSource>
                 </BitmapImage>
             </Setter.Value>
@@ -250,7 +250,7 @@
             <Setter.Value>
                 <BitmapImage>
                     <BitmapImage.UriSource>
-                        /SmokeNote.Client;component/Assets/Images/Editor/undo.png
+                        /TestExerciser.Diary;component/Assets/Images/Editor/undo.png
                     </BitmapImage.UriSource>
                 </BitmapImage>
             </Setter.Value>
@@ -263,7 +263,7 @@
             <Setter.Value>
                 <BitmapImage>
                     <BitmapImage.UriSource>
-                        /SmokeNote.Client;component/Assets/Images/Editor/hyperlink.png
+                        /TestExerciser.Diary;component/Assets/Images/Editor/hyperlink.png
                     </BitmapImage.UriSource>
                 </BitmapImage>
             </Setter.Value>

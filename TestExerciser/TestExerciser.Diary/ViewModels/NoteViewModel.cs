@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Framework.Common.ViewModel;
-using SmokeNote.Logic.Models;
+using TestExerciser.Diary.Common.ViewModel;
+using TestExerciser.Diary.Logic.Models;
 using Microsoft.Practices.Prism.Commands;
-using SmokeNote.Logic.IService;
+using TestExerciser.Diary.Logic.IService;
 using Microsoft.Practices.Unity;
 using System.Windows.Documents;
 using System.IO;
 using System.Windows;
-using Framework.Common.Dialog;
+using TestExerciser.Diary.Common.Dialog;
 
-namespace SmokeNote.Client.ViewModels
+namespace TestExerciser.Diary.ViewModels
 {
     public class NoteViewModel : ViewModelBase
     {

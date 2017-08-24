@@ -1,4 +1,4 @@
-﻿<Window x:Class="SmokeNote.Client.Dialog.DialogWindow"
+﻿<Window x:Class="TestExerciser.Diary.Dialog.DialogWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="工作笔记" SizeToContent="WidthAndHeight" 

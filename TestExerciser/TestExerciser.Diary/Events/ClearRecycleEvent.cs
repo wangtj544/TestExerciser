@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SmokeNote.Client.Events
+namespace TestExerciser.Diary.Events
 {
     public class ClearRecycleEvent
     {

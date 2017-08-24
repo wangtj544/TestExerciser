@@ -6,7 +6,7 @@ using System.Windows;
 using System.Windows.Interactivity;
 using System.Windows.Media.Animation;
 
-namespace SmokeNote.Client.Behaviors
+namespace TestExerciser.Diary.Behaviors
 {
     public class NotifyMessageBehavior : Behavior<FrameworkElement>
     {

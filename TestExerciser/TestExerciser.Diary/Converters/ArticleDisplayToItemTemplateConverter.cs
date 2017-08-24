@@ -1,11 +1,12 @@
-﻿using SmokeNote.Logic.Enums;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Data;
+using TestExerciser.Diary.Logic.Enums;
 
-namespace SmokeNote.Client.Converters
+namespace TestExerciser.Diary.Converters
 {
     public class ArticleDisplayToItemTemplateConverter : IValueConverter
     {

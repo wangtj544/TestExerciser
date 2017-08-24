@@ -5,7 +5,7 @@
                     xmlns:commonBehaviors="clr-namespace:Framework.Common.Behaviors;assembly=Framework.Common"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/SmokeNote.Client;component/Assets/Themes/Default/Brushes.xaml"/>
+        <ResourceDictionary Source="/TestExerciser.Diary;component/Assets/Themes/Default/Brushes.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     
     <Style TargetType="Window" x:Key="NormalWindowStyle">

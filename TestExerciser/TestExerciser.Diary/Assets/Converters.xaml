@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:frameworkConverters="clr-namespace:Framework.Common.Converters;assembly=Framework.Common"
-                    xmlns:converters="clr-namespace:SmokeNote.Client.Converters"
+                    xmlns:frameworkConverters="clr-namespace:TestExerciser.Diary.Common.Converters;assembly=TestExerciser.Diary.Common"
+                    xmlns:converters="clr-namespace:TestExerciser.Diary.Converters"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <frameworkConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
     <frameworkConverters:OppositeConverter x:Key="OppositeConverter"/>

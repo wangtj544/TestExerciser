@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Framework.Common.ViewModel;
+using TestExerciser.Diary.Common.ViewModel;
 using System.Collections.ObjectModel;
 using System.Windows.Data;
 using System.ComponentModel;
-using SmokeNote.Logic.IService;
+using TestExerciser.Diary.Logic.IService;
 using Microsoft.Practices.Unity;
-using SmokeNote.Logic.Models;
+using TestExerciser.Diary.Logic.Models;
 using Microsoft.Practices.Prism.Commands;
 
-namespace SmokeNote.Client.ViewModels
+namespace TestExerciser.Diary.ViewModels
 {
     public class NotebookListViewModel : ViewModelBase
     {

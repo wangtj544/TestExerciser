@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SmokeNote.Client.Controls
+namespace TestExerciser.Diary.Controls
 {
     /// <summary>
     /// NotifyControl.xaml 的交互逻辑

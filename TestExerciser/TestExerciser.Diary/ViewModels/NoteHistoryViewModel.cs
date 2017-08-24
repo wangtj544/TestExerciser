@@ -1,15 +1,16 @@
-﻿using Framework.Common.ViewModel;
-using Microsoft.Practices.Prism.Commands;
-using SmokeNote.Logic.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections.ObjectModel;
-using SmokeNote.Logic.IService;
+using TestExerciser.Diary.Logic.IService;
 using Microsoft.Practices.Unity;
+using TestExerciser.Diary.Common.ViewModel;
+using Microsoft.Practices.Prism.Commands;
+using TestExerciser.Diary.Logic.Models;
 
-namespace SmokeNote.Client.ViewModels
+namespace TestExerciser.Diary.ViewModels
 {
     public class NoteHistoryViewModel : WindowViewModelBase
     {

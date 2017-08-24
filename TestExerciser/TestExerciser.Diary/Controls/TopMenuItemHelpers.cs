@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Media;
 
-namespace SmokeNote.Client.Controls
+namespace TestExerciser.Diary.Controls
 {
     public static class TopMenuItemHelpers
     {

@@ -7,13 +7,13 @@
                 <ControlTemplate TargetType="{x:Type RadioButton}">
                     <BulletDecorator Background="Transparent">
                         <BulletDecorator.Bullet>
-                            <Image Name="imgCheck" Width="16" Source="/SmokeNote.Client;component/Assets/Images/RadioButton/Normal.png"/>
+                            <Image Name="imgCheck" Width="16" Source="/TestExerciser.Diary;component/Assets/Images/RadioButton/Normal.png"/>
                         </BulletDecorator.Bullet>
                         <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                     </BulletDecorator>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="true">
-                            <Setter Property="Source" TargetName="imgCheck" Value="/SmokeNote.Client;component/Assets/Images/RadioButton/Checked.png"/>
+                            <Setter Property="Source" TargetName="imgCheck" Value="/TestExerciser.Diary;component/Assets/Images/RadioButton/Checked.png"/>
                         </Trigger>
                         <Trigger Property="HasContent" Value="true">
                             <Setter Property="Padding" Value="4,0,0,0"/>

@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
-namespace SmokeNote.Client.Controls
+namespace TestExerciser.Diary.Controls
 {
     /// <summary>
     /// RichTextEditor.xaml 的交互逻辑

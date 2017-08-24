@@ -1,8 +1,8 @@
-﻿<Window x:Class="SmokeNote.Client.Views.Config"
+﻿<Window x:Class="TestExerciser.Diary.Views.Config"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:model="clr-namespace:SmokeNote.Logic.Models;assembly=SmokeNote.Logic"
-        xmlns:helpers="clr-namespace:Framework.Common.Helpers;assembly=Framework.Common"
+        xmlns:model="clr-namespace:TestExerciser.Diary.Logic.Models;assembly=TestExerciser.Diary.Logic"
+        xmlns:helpers="clr-namespace:TestExerciser.Diary.Common.Helpers;assembly=TestExerciser.Diary.Common"
         Title="设置" Height="390" Width="560" Style="{StaticResource ChildWindowStyle}" WindowStartupLocation="CenterOwner">
     <Grid>
         <Grid.RowDefinitions>

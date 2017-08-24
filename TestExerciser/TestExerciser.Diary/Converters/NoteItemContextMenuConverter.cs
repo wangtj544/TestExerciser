@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Data;
 
-namespace SmokeNote.Client.Converters
+namespace TestExerciser.Diary.Converters
 {
     public class NoteItemContextMenuConverter : IMultiValueConverter
     {

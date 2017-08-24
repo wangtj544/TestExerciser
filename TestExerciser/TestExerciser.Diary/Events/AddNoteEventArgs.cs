@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SmokeNote.Logic.Models;
+using TestExerciser.Diary.Logic.Models;
 
-namespace SmokeNote.Client.Events
+namespace TestExerciser.Diary.Events
 {
     public class AddNoteEventArgs
     {

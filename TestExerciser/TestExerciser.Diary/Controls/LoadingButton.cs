@@ -7,7 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 
-namespace SmokeNote.Client.Controls
+namespace TestExerciser.Diary.Controls
 {
     public class LoadingButton : Button
     {

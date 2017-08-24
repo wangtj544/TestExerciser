@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Framework.Common.ViewModel;
+using TestExerciser.Diary.Common.ViewModel;
 
-namespace SmokeNote.Client.ViewModels
+namespace TestExerciser.Diary.ViewModels
 {
     public class TotalViewModel : WindowViewModelBase
     {

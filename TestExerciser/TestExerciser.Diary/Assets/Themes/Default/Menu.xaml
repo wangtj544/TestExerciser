@@ -1,5 +1,5 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:controls="clr-namespace:SmokeNote.Client.Controls"
+                    xmlns:controls="clr-namespace:TestExerciser.Diary.Controls"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style TargetType="{x:Type Menu}">
         <Setter Property="Template">
@@ -22,9 +22,9 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
-                        <Image Visibility="{TemplateBinding IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.Column="1" Width="12" Source="/SmokeNote.Client;component/Assets/Images/Menu/Check.png"/>
+                        <Image Visibility="{TemplateBinding IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.Column="1" Width="12" Source="/TestExerciser.Diary;component/Assets/Images/Menu/Check.png"/>
                         <Label Name="lblContent" Foreground="{DynamicResource DefaultForeground}" Grid.Column="2" VerticalContentAlignment="Center" Content="{TemplateBinding Header}"/>
-                        <Image Visibility="Hidden" Name="imgRightArrow" Grid.Column="3" Width="12" Source="/SmokeNote.Client;component/Assets/Images/Menu/RightArrow.png"/>
+                        <Image Visibility="Hidden" Name="imgRightArrow" Grid.Column="3" Width="12" Source="/TestExerciser.Diary;component/Assets/Images/Menu/RightArrow.png"/>
                         <Popup VerticalOffset="-3" Placement="Right" IsOpen="{TemplateBinding IsSubmenuOpen}" AllowsTransparency="true" Focusable="false" OpacityMask="Black">
                             <Border Background="White" BorderBrush="{DynamicResource DefaultBorderBrush}" BorderThickness="1,1,1,2" Padding="0,2,0,2">
                                 <ItemsPresenter/>
@@ -36,7 +36,7 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="grdContainer" Property="Background" Value="#FFDBEDFB"/>
                             <Setter TargetName="lblContent" Property="Foreground" Value="Black"/>
-                            <Setter TargetName="imgRightArrow" Property="Source" Value="/SmokeNote.Client;component/Assets/Images/Menu/RightArrow_Hover.png"/>
+                            <Setter TargetName="imgRightArrow" Property="Source" Value="/TestExerciser.Diary;component/Assets/Images/Menu/RightArrow_Hover.png"/>
                         </Trigger>
                         <Trigger Property="Role" Value="SubmenuHeader">
                             <Setter TargetName="imgRightArrow" Property="Visibility" Value="Visible"/>
@@ -99,7 +99,7 @@
                                 </Grid>
                                 <Label Name="lbHeader" Margin="0,0,5,0" Content="{TemplateBinding Header}" Foreground="{DynamicResource DefaultForeground}" Grid.Column="1"></Label>
                                 <Border Name="bdDown" Grid.Column="2" Visibility="Collapsed" BorderThickness="1,0,0,0">
-                                    <Image Height="24" Source="/SmokeNote.Client;component/Assets/Images/Menu/Down.png"/>
+                                    <Image Height="24" Source="/TestExerciser.Diary;component/Assets/Images/Menu/Down.png"/>
                                 </Border>
                             </Grid>
                         </Border>

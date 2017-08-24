@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows.Controls.Primitives;
 using System.Windows.Interactivity;
 
-namespace SmokeNote.Client.Behaviors
+namespace TestExerciser.Diary.Behaviors
 {
     /// <summary>
     /// 不允许ToggleButton选中的行为

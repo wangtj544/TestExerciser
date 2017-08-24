@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Interactivity;
 
-namespace SmokeNote.Client.Behaviors
+namespace TestExerciser.Diary.Behaviors
 {
     /// <summary>
     /// 这个行为是为了解决窗口在最小化后,点击任务栏图标还原,会使任务栏图标消失的情况

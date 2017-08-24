@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SmokeNote.Client
+namespace TestExerciser.Diary
 {
     /// <summary>
     /// TestWindow.xaml 的交互逻辑

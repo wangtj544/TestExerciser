@@ -1,4 +1,4 @@
-﻿using Framework.Common.Dialog;
+﻿using TestExerciser.Diary.Common.Dialog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Controls.Primitives;
 
-namespace SmokeNote.Client.Dialog
+namespace TestExerciser.Diary.Dialog
 {
     public class CustomDialogService : DialogBase
     {
