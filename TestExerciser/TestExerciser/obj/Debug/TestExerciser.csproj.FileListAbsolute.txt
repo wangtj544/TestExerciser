@@ -438,9 +438,6 @@ F:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.appl
 F:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.exe
 F:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.pdb
 F:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\zh-Hans\TestExerciser.resources.dll
-F:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorNS.dll
-F:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorNS.pdb
-F:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorNS.xml
 F:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\SharpPlink-Win32.svnExe
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.csprojResolveAssemblyReference.cache
 F:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.MainBugManager.resources
@@ -560,3 +557,6 @@ E:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.appl
 E:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorTE.dll
 E:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorTE.pdb
 E:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorTE.xml
+F:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorTE.dll
+F:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorTE.pdb
+F:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\EditorTE.xml

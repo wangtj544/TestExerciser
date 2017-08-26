@@ -2,7 +2,7 @@
                     xmlns:shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell"
                     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
                     xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
-                    xmlns:commonBehaviors="clr-namespace:Framework.Common.Behaviors;assembly=Framework.Common"
+                    xmlns:commonBehaviors="clr-namespace:TestExerciser.Diary.Common.Behaviors;assembly=TestExerciser.Diary.Common"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/TestExerciser.Diary;component/Assets/Themes/Default/Brushes.xaml"/>
