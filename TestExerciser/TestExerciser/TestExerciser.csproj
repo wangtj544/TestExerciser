@@ -782,6 +782,10 @@
     <Content Include="Resources\ts.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TestExerciser.Diary\TestExerciser.Diary.csproj">
+      <Project>{771bb6c4-9e85-448d-b038-56567e087a3a}</Project>
+      <Name>TestExerciser.Diary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TestExerciser.Editor\TestExerciser.Editor.csproj">
       <Project>{6dd14a85-ccfc-4774-bd26-0f5772512319}</Project>
       <Name>TestExerciser.Editor</Name>

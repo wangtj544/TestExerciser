@@ -6,7 +6,7 @@
              xmlns:xceed="http://schemas.xceed.com/wpf/xaml/toolkit"
              xmlns:controls="clr-namespace:TestExerciser.Diary.Controls"
              mc:Ignorable="d" Name="ucNoteEditor"
-             d:DesignHeight="300" d:DesignWidth="300" DataContextChanged="NoteEditor_DataContextChanged" IsEnabled="{Binding Note.IsDelete, Converter={StaticResource OppositeConverter}}">
+             d:DesignHeight="392" d:DesignWidth="669" DataContextChanged="NoteEditor_DataContextChanged" IsEnabled="{Binding Note.IsDelete, Converter={StaticResource OppositeConverter}}">
     <UserControl.Resources>
         <Style TargetType="Rectangle" x:Key="VerticalSeparator">
             <Setter Property="Width" Value="1"/>
@@ -23,19 +23,19 @@
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
             <Setter Property="VerticalAlignment" Value="Bottom"/>
         </Style>
-        
+
         <Style TargetType="FrameworkElement" x:Key="DisplayText">
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="HorizontalAlignment" Value="Right"/>
         </Style>
     </UserControl.Resources>
-    
+
     <Grid>
         <Grid Name="grdNoNote" Visibility="Collapsed">
             <Image Source="/TestExerciser.Diary;component/Assets/Images/EditorIcon.png" Width="128" Height="128"/>
         </Grid>
-        
-        <Grid Name="grdEditor"> 
+
+        <Grid Name="grdEditor">
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="Auto"/>
@@ -87,14 +87,14 @@
                 <TextBlock Grid.Column="5" VerticalAlignment="Center" Margin="10,0,0,0"  Text="1432"/>
 
                 <TextBlock Grid.Row="1" Text="作者:" Style="{StaticResource DisplayText}"/>
-                <xceed:WatermarkTextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="10,0,2,0" Text="{Binding Author}" Style="{StaticResource LikeLabelTextBox}" Watermark="点击编辑作者..."/>
+                <xceed:WatermarkTextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="10,0,2,0" Text="{Binding Author}" Style="{StaticResource LikeLabelTextBox}" Watermark=""/>
                 <Rectangle Grid.Row="1" Grid.Column="1" Style="{StaticResource VerticalSeparator}"/>
 
                 <TextBlock Grid.Row="1" Grid.Column="2" Text="来源:" Style="{StaticResource DisplayText}"/>
-                <xceed:WatermarkTextBox Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" Margin="10,0,2,0" Text="{Binding From}" Style="{StaticResource LikeLabelTextBox}" Watermark="点击添加来源..." />
+                <xceed:WatermarkTextBox Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" Margin="10,0,2,0" Text="{Binding From}" Style="{StaticResource LikeLabelTextBox}" Watermark="" />
 
                 <Rectangle Grid.Row="1" Grid.ColumnSpan="6" Style="{StaticResource HorizontalSeparator}"/>
-                
+
                 <TextBlock Grid.Row="2" Text="标签:" Style="{StaticResource DisplayText}"/>
 
                 <Rectangle Grid.Row="2" Grid.ColumnSpan="6" Style="{StaticResource HorizontalSeparator}"/>
@@ -107,6 +107,6 @@
 
             <controls:RichTextEditor Text="{Binding Content, Mode=TwoWay}" Grid.Row="2"/>
         </Grid>
-    </Grid>   
-    
+    </Grid>
+
 </UserControl>

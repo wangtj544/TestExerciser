@@ -60,8 +60,8 @@ namespace TestExerciser.Diary.Logic.Services
 
         public bool DeleteNotebook(Guid id, out int notes, ref string message)
         {
-            var para = SqliteHelper.CreateInParameter("@ID", id, DbType.Guid);
-
+            var para = SqliteHelper.CreateInParameter("@ID", id, DbType.String);
+    
             //删除日记历史记录
             string sql = @"DELETE FROM [NoteHistory] WHERE [NoteID] IN (SELECT [ID] FROM [Note] WHERE [NotebookID]=@ID);";
             SqliteHelper.ExecuteNonQuery(sql, para);
@@ -71,7 +71,7 @@ namespace TestExerciser.Diary.Logic.Services
             notes = SqliteHelper.ExecuteNonQuery(sql, para);
 
             //删除日记本
-            sql = "DELETE FROM [Notebook] WHERE [ID] = @ID";
+            sql = "DELETE FROM [Notebook] WHERE [ID] = @ID;";
             int result = SqliteHelper.ExecuteNonQuery(sql, para);
 
             if (result == 0)

@@ -225,7 +225,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvObjectExplorer = new System.Windows.Forms.DataGridView();
             this.clImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tsFiles = new FarsiLibrary.Win.FATabStrip();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.tcManager = new System.Windows.Forms.TabControl();
@@ -305,7 +304,16 @@
             this.dtslTimeUse = new System.Windows.Forms.ToolStripLabel();
             this.dtslTime = new System.Windows.Forms.ToolStripLabel();
             this.timerNow = new System.Windows.Forms.Timer(this.components);
+            this.myNotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.notifyContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem_ShowMainWindow = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_Setting = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_ScreenShot = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_LoginOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_Quit = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu_ProjectManage.SuspendLayout();
             this.rightClickOnProManager.SuspendLayout();
             this.rightClickOnOutPutWindow.SuspendLayout();
@@ -355,6 +363,7 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.stsToolRight.SuspendLayout();
             this.stsToolTop.SuspendLayout();
+            this.notifyContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu_ProjectManage
@@ -799,7 +808,7 @@
             // 
             this.文件清理ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("文件清理ToolStripMenuItem.Image")));
             this.文件清理ToolStripMenuItem.Name = "文件清理ToolStripMenuItem";
-            this.文件清理ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.文件清理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.文件清理ToolStripMenuItem.Text = "文件清理(&F)";
             this.文件清理ToolStripMenuItem.Click += new System.EventHandler(this.文件清理ToolStripMenuItem_Click);
             // 
@@ -807,7 +816,7 @@
             // 
             this.远程连接ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("远程连接ToolStripMenuItem.Image")));
             this.远程连接ToolStripMenuItem.Name = "远程连接ToolStripMenuItem";
-            this.远程连接ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.远程连接ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.远程连接ToolStripMenuItem.Text = "远程连接(&C)";
             this.远程连接ToolStripMenuItem.Click += new System.EventHandler(this.远程连接ToolStripMenuItem_Click);
             // 
@@ -815,7 +824,7 @@
             // 
             this.sVNSToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sVNSToolStripMenuItem.Image")));
             this.sVNSToolStripMenuItem.Name = "sVNSToolStripMenuItem";
-            this.sVNSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sVNSToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.sVNSToolStripMenuItem.Text = "SVN(&N)";
             this.sVNSToolStripMenuItem.Click += new System.EventHandler(this.sVNSToolStripMenuItem_Click);
             // 
@@ -823,7 +832,7 @@
             // 
             this.pUTTYPToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pUTTYPToolStripMenuItem.Image")));
             this.pUTTYPToolStripMenuItem.Name = "pUTTYPToolStripMenuItem";
-            this.pUTTYPToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pUTTYPToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.pUTTYPToolStripMenuItem.Text = "PUTTY(&P)";
             this.pUTTYPToolStripMenuItem.Click += new System.EventHandler(this.pUTTYPToolStripMenuItem_Click);
             // 
@@ -831,7 +840,7 @@
             // 
             this.AutoItToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("AutoItToolStripMenuItem.Image")));
             this.AutoItToolStripMenuItem.Name = "AutoItToolStripMenuItem";
-            this.AutoItToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.AutoItToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.AutoItToolStripMenuItem.Text = "AutoIt(&A)";
             this.AutoItToolStripMenuItem.Click += new System.EventHandler(this.AutoItToolStripMenuItem_Click);
             // 
@@ -844,7 +853,7 @@
             this.spyX86帮助ToolStripMenuItem});
             this.spyToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("spyToolStripMenuItem.Image")));
             this.spyToolStripMenuItem.Name = "spyToolStripMenuItem";
-            this.spyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.spyToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.spyToolStripMenuItem.Text = "Spy++(&S)";
             // 
             // spyX64MToolStripMenuItem
@@ -881,7 +890,7 @@
             this.x86ToolStripMenuItem});
             this.inspectToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("inspectToolStripMenuItem.Image")));
             this.inspectToolStripMenuItem.Name = "inspectToolStripMenuItem";
-            this.inspectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inspectToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.inspectToolStripMenuItem.Text = "Inspect(&I)";
             // 
             // x64ToolStripMenuItem
@@ -902,7 +911,7 @@
             // 
             this.选项ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("选项ToolStripMenuItem.Image")));
             this.选项ToolStripMenuItem.Name = "选项ToolStripMenuItem";
-            this.选项ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.选项ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.选项ToolStripMenuItem.Text = "选项(&T)";
             this.选项ToolStripMenuItem.Click += new System.EventHandler(this.选项ToolStripMenuItem_Click);
             // 
@@ -2095,13 +2104,6 @@
             this.clImage.ReadOnly = true;
             this.clImage.Width = 32;
             // 
-            // clName
-            // 
-            this.clName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clName.HeaderText = "Column1";
-            this.clName.Name = "clName";
-            this.clName.ReadOnly = true;
-            // 
             // tsFiles
             // 
             this.tsFiles.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2468,7 +2470,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.23391F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 596F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
             this.tableLayoutPanel5.Controls.Add(this.stsOutPut, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.labtimeNow, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.spbStatus, 1, 0);
@@ -2531,7 +2533,7 @@
             this.stsOutPut.Location = new System.Drawing.Point(0, 0);
             this.stsOutPut.Name = "stsOutPut";
             this.stsOutPut.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.stsOutPut.Size = new System.Drawing.Size(468, 25);
+            this.stsOutPut.Size = new System.Drawing.Size(465, 25);
             this.stsOutPut.SkinAllColor = true;
             this.stsOutPut.TabIndex = 1;
             this.stsOutPut.Text = "skinToolStrip1";
@@ -2628,7 +2630,7 @@
             this.labtimeNow.BackColor = System.Drawing.Color.Transparent;
             this.labtimeNow.BorderColor = System.Drawing.Color.White;
             this.labtimeNow.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labtimeNow.Location = new System.Drawing.Point(1576, 4);
+            this.labtimeNow.Location = new System.Drawing.Point(1571, 4);
             this.labtimeNow.Name = "labtimeNow";
             this.labtimeNow.Size = new System.Drawing.Size(0, 17);
             this.labtimeNow.TabIndex = 5;
@@ -2641,10 +2643,10 @@
             this.spbStatus.BarRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.spbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.spbStatus.ForeColor = System.Drawing.Color.Red;
-            this.spbStatus.Location = new System.Drawing.Point(471, 3);
+            this.spbStatus.Location = new System.Drawing.Point(468, 3);
             this.spbStatus.Name = "spbStatus";
             this.spbStatus.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.spbStatus.Size = new System.Drawing.Size(447, 20);
+            this.spbStatus.Size = new System.Drawing.Size(445, 20);
             this.spbStatus.TabIndex = 4;
             this.spbStatus.TrackFore = System.Drawing.Color.Gold;
             this.spbStatus.Visible = false;
@@ -2688,7 +2690,7 @@
             this.tStripReport.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbLogView});
-            this.tStripReport.Location = new System.Drawing.Point(1579, 0);
+            this.tStripReport.Location = new System.Drawing.Point(1574, 0);
             this.tStripReport.Name = "tStripReport";
             this.tStripReport.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.tStripReport.Size = new System.Drawing.Size(37, 25);
@@ -2716,7 +2718,7 @@
             // dtpTimeNow
             // 
             this.dtpTimeNow.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dtpTimeNow.Location = new System.Drawing.Point(1398, 3);
+            this.dtpTimeNow.Location = new System.Drawing.Point(1393, 3);
             this.dtpTimeNow.Name = "dtpTimeNow";
             this.dtpTimeNow.Size = new System.Drawing.Size(116, 21);
             this.dtpTimeNow.TabIndex = 6;
@@ -3229,12 +3231,72 @@
             this.timerNow.Interval = 1000;
             this.timerNow.Tick += new System.EventHandler(this.timerNow_Tick);
             // 
+            // myNotifyIcon
+            // 
+            this.myNotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("myNotifyIcon.Icon")));
+            this.myNotifyIcon.Visible = true;
+            this.myNotifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.myNotifyIcon_MouseClick);
+            // 
+            // notifyContextMenu
+            // 
+            this.notifyContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_ShowMainWindow,
+            this.toolStripMenuItem_Setting,
+            this.toolStripMenuItem_ScreenShot,
+            this.toolStripSeparator2,
+            this.toolStripMenuItem_LoginOut,
+            this.toolStripMenuItem_Quit});
+            this.notifyContextMenu.Name = "notifyContextMenu";
+            this.notifyContextMenu.Size = new System.Drawing.Size(137, 120);
+            // 
+            // toolStripMenuItem_ShowMainWindow
+            // 
+            this.toolStripMenuItem_ShowMainWindow.Name = "toolStripMenuItem_ShowMainWindow";
+            this.toolStripMenuItem_ShowMainWindow.Size = new System.Drawing.Size(136, 22);
+            this.toolStripMenuItem_ShowMainWindow.Text = "显示主窗口";
+            // 
+            // toolStripMenuItem_Setting
+            // 
+            this.toolStripMenuItem_Setting.Name = "toolStripMenuItem_Setting";
+            this.toolStripMenuItem_Setting.Size = new System.Drawing.Size(136, 22);
+            this.toolStripMenuItem_Setting.Text = "设置";
+            // 
+            // toolStripMenuItem_ScreenShot
+            // 
+            this.toolStripMenuItem_ScreenShot.Name = "toolStripMenuItem_ScreenShot";
+            this.toolStripMenuItem_ScreenShot.Size = new System.Drawing.Size(136, 22);
+            this.toolStripMenuItem_ScreenShot.Text = "截图";
+            // 
+            // toolStripMenuItem_LoginOut
+            // 
+            this.toolStripMenuItem_LoginOut.Name = "toolStripMenuItem_LoginOut";
+            this.toolStripMenuItem_LoginOut.Size = new System.Drawing.Size(136, 22);
+            this.toolStripMenuItem_LoginOut.Text = "注销";
+            // 
+            // toolStripMenuItem_Quit
+            // 
+            this.toolStripMenuItem_Quit.Name = "toolStripMenuItem_Quit";
+            this.toolStripMenuItem_Quit.Size = new System.Drawing.Size(136, 22);
+            this.toolStripMenuItem_Quit.Text = "退出";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(133, 6);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn1.HeaderText = "Column1";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // clName
+            // 
+            this.clName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clName.HeaderText = "Column1";
+            this.clName.Name = "clName";
+            this.clName.ReadOnly = true;
             // 
             // MainForm
             // 
@@ -3324,6 +3386,7 @@
             this.stsToolRight.PerformLayout();
             this.stsToolTop.ResumeLayout(false);
             this.stsToolTop.PerformLayout();
+            this.notifyContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3607,6 +3670,14 @@
         private System.Windows.Forms.ToolStripMenuItem 批量生成脚本ToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.RichTextBox richResults;
+        private System.Windows.Forms.NotifyIcon myNotifyIcon;
+        private System.Windows.Forms.ContextMenuStrip notifyContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ShowMainWindow;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Setting;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ScreenShot;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_LoginOut;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Quit;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 

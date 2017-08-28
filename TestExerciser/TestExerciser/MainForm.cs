@@ -3074,5 +3074,13 @@ namespace TestExerciser
             x = this.Location.X;
             y = this.Location.Y;
         }
+
+        private void myNotifyIcon_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                this.myNotifyIcon.ContextMenuStrip = this.notifyContextMenu;
+            }     
+        }
     }
 }

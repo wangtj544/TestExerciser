@@ -290,12 +290,13 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="bin\Debug\TestExerciser.Diary.db" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="bin\Debug\TestExerciser.Diary.db" />
+    <None Include="Data\TestExerciser.Diary.db" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -309,7 +310,6 @@
     <Resource Include="Assets\Images\Notebook_Local.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
     <Folder Include="TriggerActions\" />
   </ItemGroup>
   <ItemGroup>
