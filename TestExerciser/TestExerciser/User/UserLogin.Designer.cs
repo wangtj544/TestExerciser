@@ -40,6 +40,18 @@
             this.linkRegister = new System.Windows.Forms.LinkLabel();
             this.linkForgetPwd = new System.Windows.Forms.LinkLabel();
             this.linkSelectDB = new System.Windows.Forms.LinkLabel();
+            this.notifyContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem_ShowMainWindow = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_ScreenLock = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem_ScreenShot = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_Hide_ScreenShot = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem_Setting = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_LoginOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_Quit = new System.Windows.Forms.ToolStripMenuItem();
+            this.myNotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.notifyContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnOK
@@ -223,6 +235,87 @@
             this.linkSelectDB.Text = "选择服务器？";
             this.linkSelectDB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSelectDB_LinkClicked);
             // 
+            // notifyContextMenu
+            // 
+            this.notifyContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_ShowMainWindow,
+            this.toolStripMenuItem_ScreenLock,
+            this.toolStripSeparator1,
+            this.toolStripMenuItem_ScreenShot,
+            this.toolStripMenuItem_Hide_ScreenShot,
+            this.toolStripSeparator2,
+            this.toolStripMenuItem_Setting,
+            this.toolStripMenuItem_LoginOut,
+            this.toolStripMenuItem_Quit});
+            this.notifyContextMenu.Name = "notifyContextMenu";
+            this.notifyContextMenu.Size = new System.Drawing.Size(161, 170);
+            // 
+            // toolStripMenuItem_ShowMainWindow
+            // 
+            this.toolStripMenuItem_ShowMainWindow.Name = "toolStripMenuItem_ShowMainWindow";
+            this.toolStripMenuItem_ShowMainWindow.Size = new System.Drawing.Size(160, 22);
+            this.toolStripMenuItem_ShowMainWindow.Text = "显示主窗口";
+            this.toolStripMenuItem_ShowMainWindow.Click += new System.EventHandler(this.toolStripMenuItem_ShowMainWindow_Click);
+            // 
+            // toolStripMenuItem_ScreenLock
+            // 
+            this.toolStripMenuItem_ScreenLock.Name = "toolStripMenuItem_ScreenLock";
+            this.toolStripMenuItem_ScreenLock.Size = new System.Drawing.Size(160, 22);
+            this.toolStripMenuItem_ScreenLock.Text = "锁定窗口";
+            this.toolStripMenuItem_ScreenLock.Click += new System.EventHandler(this.toolStripMenuItem_ScreenLock_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
+            // 
+            // toolStripMenuItem_ScreenShot
+            // 
+            this.toolStripMenuItem_ScreenShot.Name = "toolStripMenuItem_ScreenShot";
+            this.toolStripMenuItem_ScreenShot.Size = new System.Drawing.Size(160, 22);
+            this.toolStripMenuItem_ScreenShot.Text = "截图";
+            this.toolStripMenuItem_ScreenShot.Click += new System.EventHandler(this.toolStripMenuItem_ScreenShot_Click);
+            // 
+            // toolStripMenuItem_Hide_ScreenShot
+            // 
+            this.toolStripMenuItem_Hide_ScreenShot.Name = "toolStripMenuItem_Hide_ScreenShot";
+            this.toolStripMenuItem_Hide_ScreenShot.Size = new System.Drawing.Size(160, 22);
+            this.toolStripMenuItem_Hide_ScreenShot.Text = "截图并隐藏窗口";
+            this.toolStripMenuItem_Hide_ScreenShot.Click += new System.EventHandler(this.toolStripMenuItem_Hide_ScreenShot_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(157, 6);
+            // 
+            // toolStripMenuItem_Setting
+            // 
+            this.toolStripMenuItem_Setting.Name = "toolStripMenuItem_Setting";
+            this.toolStripMenuItem_Setting.Size = new System.Drawing.Size(160, 22);
+            this.toolStripMenuItem_Setting.Text = "设置";
+            this.toolStripMenuItem_Setting.Click += new System.EventHandler(this.toolStripMenuItem_Setting_Click);
+            // 
+            // toolStripMenuItem_LoginOut
+            // 
+            this.toolStripMenuItem_LoginOut.Name = "toolStripMenuItem_LoginOut";
+            this.toolStripMenuItem_LoginOut.Size = new System.Drawing.Size(160, 22);
+            this.toolStripMenuItem_LoginOut.Text = "注销";
+            this.toolStripMenuItem_LoginOut.Click += new System.EventHandler(this.toolStripMenuItem_LoginOut_Click);
+            // 
+            // toolStripMenuItem_Quit
+            // 
+            this.toolStripMenuItem_Quit.Name = "toolStripMenuItem_Quit";
+            this.toolStripMenuItem_Quit.Size = new System.Drawing.Size(160, 22);
+            this.toolStripMenuItem_Quit.Text = "退出";
+            this.toolStripMenuItem_Quit.Click += new System.EventHandler(this.toolStripMenuItem_Quit_Click);
+            // 
+            // myNotifyIcon
+            // 
+            this.myNotifyIcon.ContextMenuStrip = this.notifyContextMenu;
+            this.myNotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("myNotifyIcon.Icon")));
+            this.myNotifyIcon.Visible = true;
+            this.myNotifyIcon.DoubleClick += new System.EventHandler(this.myNotifyIcon_DoubleClick);
+            // 
             // UserLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -248,6 +341,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainLogin_FormClosing);
             this.Load += new System.EventHandler(this.MainLogin_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainLogin_KeyDown);
+            this.notifyContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,5 +359,16 @@
         private System.Windows.Forms.LinkLabel linkRegister;
         private System.Windows.Forms.LinkLabel linkForgetPwd;
         private System.Windows.Forms.LinkLabel linkSelectDB;
+        private System.Windows.Forms.ContextMenuStrip notifyContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ShowMainWindow;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ScreenLock;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ScreenShot;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Hide_ScreenShot;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Setting;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_LoginOut;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Quit;
+        public System.Windows.Forms.NotifyIcon myNotifyIcon;
     }
 }

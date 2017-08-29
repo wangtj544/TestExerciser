@@ -19,6 +19,7 @@ namespace TestExerciser.User
     {
         public static string pubUserName = null;
         public static string pubPasswd = null;
+        MainForm myMainForm = new MainForm();
 
         public UserLogin()
         {
@@ -78,8 +79,7 @@ namespace TestExerciser.User
                             this.txtStatus.ForeColor = Color.Green;
                             this.txtStatus.Text = "登录信息：成功！";
                             Application.DoEvents();
-                            this.Visible = false;
-                            MainForm myMainForm = new MainForm();
+                            this.Visible = false;                           
                             myMainForm.Show();
                         }
                         else
@@ -132,6 +132,59 @@ namespace TestExerciser.User
             this.Visible = false;
             UserSelectDB myToolSelectDB = new UserSelectDB();
             myToolSelectDB.Show();
+        }
+
+        private void myNotifyIcon_DoubleClick(object sender, EventArgs e)
+        {
+            if (myMainForm.WindowState == FormWindowState.Minimized)
+            {
+                myMainForm.Visible = true;
+                //还原窗体显示    
+                myMainForm.WindowState = FormWindowState.Normal;
+                //激活窗体并给予它焦点
+                myMainForm.Activate();
+                //任务栏区显示图标
+                this.ShowInTaskbar = true;
+            }
+            else if (myMainForm.IsDisposed == true)
+            {
+                myMainForm.Show();
+            }
+        }
+
+        private void toolStripMenuItem_ShowMainWindow_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem_ScreenLock_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem_ScreenShot_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem_Hide_ScreenShot_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem_Setting_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem_LoginOut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem_Quit_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

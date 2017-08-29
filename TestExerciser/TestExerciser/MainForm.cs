@@ -30,6 +30,7 @@ namespace TestExerciser
         public static string pythonEnv = null;
         public static string rootFolder = null;
         public static string selectedNodePath = null;
+        public static bool isMainFormClosed = false;
         
         Style invisibleCharsStyle = new InvisibleCharsRenderer(Pens.Gray);
         Color currentLineColor = Color.FromArgb(100, 210, 210, 255);
@@ -1858,8 +1859,8 @@ namespace TestExerciser
                 }
                 tsFiles.RemoveTab(tab);
             }
-            windowClosingEffects();
-            Application.Exit();
+            windowHidingEffects();
+            //Application.Exit();
         }
 
         private void tsFiles_TabStripItemSelectionChanged(TabStripItemChangedEventArgs e)
@@ -3037,14 +3038,14 @@ namespace TestExerciser
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+  
         }
 
 
         static int x;
         static int y;
         //结束窗体时特效
-        private void windowClosingEffects()
+        private void windowHidingEffects()
         {
             while (this.Width > 374)
             {
@@ -3075,12 +3076,14 @@ namespace TestExerciser
             y = this.Location.Y;
         }
 
-        private void myNotifyIcon_MouseClick(object sender, MouseEventArgs e)
+        private void MainForm_SizeChanged(object sender, EventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
+            if (this.WindowState == FormWindowState.Minimized)
             {
-                this.myNotifyIcon.ContextMenuStrip = this.notifyContextMenu;
-            }     
+                this.Visible = false;
+                this.ShowInTaskbar = false;
+            }
         }
+
     }
 }
