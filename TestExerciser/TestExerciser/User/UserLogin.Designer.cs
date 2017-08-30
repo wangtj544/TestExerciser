@@ -51,6 +51,7 @@
             this.toolStripMenuItem_LoginOut = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Quit = new System.Windows.Forms.ToolStripMenuItem();
             this.myNotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.toolStripMenuItem_Paint = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -242,71 +243,72 @@
             this.toolStripMenuItem_ScreenLock,
             this.toolStripSeparator1,
             this.toolStripMenuItem_ScreenShot,
+            this.toolStripMenuItem_Paint,
             this.toolStripMenuItem_Hide_ScreenShot,
             this.toolStripSeparator2,
             this.toolStripMenuItem_Setting,
             this.toolStripMenuItem_LoginOut,
             this.toolStripMenuItem_Quit});
             this.notifyContextMenu.Name = "notifyContextMenu";
-            this.notifyContextMenu.Size = new System.Drawing.Size(161, 170);
+            this.notifyContextMenu.Size = new System.Drawing.Size(230, 192);
             // 
             // toolStripMenuItem_ShowMainWindow
             // 
             this.toolStripMenuItem_ShowMainWindow.Name = "toolStripMenuItem_ShowMainWindow";
-            this.toolStripMenuItem_ShowMainWindow.Size = new System.Drawing.Size(160, 22);
-            this.toolStripMenuItem_ShowMainWindow.Text = "显示主窗口";
+            this.toolStripMenuItem_ShowMainWindow.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem_ShowMainWindow.Text = "显示主窗口(Ctrl+M)";
             this.toolStripMenuItem_ShowMainWindow.Click += new System.EventHandler(this.toolStripMenuItem_ShowMainWindow_Click);
             // 
             // toolStripMenuItem_ScreenLock
             // 
             this.toolStripMenuItem_ScreenLock.Name = "toolStripMenuItem_ScreenLock";
-            this.toolStripMenuItem_ScreenLock.Size = new System.Drawing.Size(160, 22);
-            this.toolStripMenuItem_ScreenLock.Text = "锁定窗口";
+            this.toolStripMenuItem_ScreenLock.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem_ScreenLock.Text = "锁定窗口(Ctrl+Alt+L)";
             this.toolStripMenuItem_ScreenLock.Click += new System.EventHandler(this.toolStripMenuItem_ScreenLock_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(226, 6);
             // 
             // toolStripMenuItem_ScreenShot
             // 
             this.toolStripMenuItem_ScreenShot.Name = "toolStripMenuItem_ScreenShot";
-            this.toolStripMenuItem_ScreenShot.Size = new System.Drawing.Size(160, 22);
-            this.toolStripMenuItem_ScreenShot.Text = "截图";
+            this.toolStripMenuItem_ScreenShot.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem_ScreenShot.Text = "截图(Ctrl+C)";
             this.toolStripMenuItem_ScreenShot.Click += new System.EventHandler(this.toolStripMenuItem_ScreenShot_Click);
             // 
             // toolStripMenuItem_Hide_ScreenShot
             // 
             this.toolStripMenuItem_Hide_ScreenShot.Name = "toolStripMenuItem_Hide_ScreenShot";
-            this.toolStripMenuItem_Hide_ScreenShot.Size = new System.Drawing.Size(160, 22);
-            this.toolStripMenuItem_Hide_ScreenShot.Text = "截图并隐藏窗口";
+            this.toolStripMenuItem_Hide_ScreenShot.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem_Hide_ScreenShot.Text = "截图并隐藏窗口(Ctrl+Alt+C)";
             this.toolStripMenuItem_Hide_ScreenShot.Click += new System.EventHandler(this.toolStripMenuItem_Hide_ScreenShot_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(226, 6);
             // 
             // toolStripMenuItem_Setting
             // 
             this.toolStripMenuItem_Setting.Name = "toolStripMenuItem_Setting";
-            this.toolStripMenuItem_Setting.Size = new System.Drawing.Size(160, 22);
-            this.toolStripMenuItem_Setting.Text = "设置";
+            this.toolStripMenuItem_Setting.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem_Setting.Text = "设置(Ctrl+Alt+S)";
             this.toolStripMenuItem_Setting.Click += new System.EventHandler(this.toolStripMenuItem_Setting_Click);
             // 
             // toolStripMenuItem_LoginOut
             // 
             this.toolStripMenuItem_LoginOut.Name = "toolStripMenuItem_LoginOut";
-            this.toolStripMenuItem_LoginOut.Size = new System.Drawing.Size(160, 22);
-            this.toolStripMenuItem_LoginOut.Text = "注销";
+            this.toolStripMenuItem_LoginOut.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem_LoginOut.Text = "注销(Ctrl+Shift+O)";
             this.toolStripMenuItem_LoginOut.Click += new System.EventHandler(this.toolStripMenuItem_LoginOut_Click);
             // 
             // toolStripMenuItem_Quit
             // 
             this.toolStripMenuItem_Quit.Name = "toolStripMenuItem_Quit";
-            this.toolStripMenuItem_Quit.Size = new System.Drawing.Size(160, 22);
-            this.toolStripMenuItem_Quit.Text = "退出";
+            this.toolStripMenuItem_Quit.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem_Quit.Text = "退出(Ctrl+Shift+Q)";
             this.toolStripMenuItem_Quit.Click += new System.EventHandler(this.toolStripMenuItem_Quit_Click);
             // 
             // myNotifyIcon
@@ -315,6 +317,12 @@
             this.myNotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("myNotifyIcon.Icon")));
             this.myNotifyIcon.Visible = true;
             this.myNotifyIcon.DoubleClick += new System.EventHandler(this.myNotifyIcon_DoubleClick);
+            // 
+            // toolStripMenuItem_Paint
+            // 
+            this.toolStripMenuItem_Paint.Name = "toolStripMenuItem_Paint";
+            this.toolStripMenuItem_Paint.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem_Paint.Text = "画图(Ctrl+P)";
             // 
             // UserLogin
             // 
@@ -370,5 +378,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_LoginOut;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Quit;
         public System.Windows.Forms.NotifyIcon myNotifyIcon;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Paint;
     }
 }

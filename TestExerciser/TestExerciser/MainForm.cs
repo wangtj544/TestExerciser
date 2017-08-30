@@ -23,6 +23,9 @@ using TestExerciser.Tools;
 
 namespace TestExerciser
 {
+    //定义委托
+    public delegate void SetUserLoginForm(bool vis);
+
     public partial class MainForm : Skin_Mac
     {
         public static string[] root_paths = {};
@@ -31,11 +34,13 @@ namespace TestExerciser
         public static string rootFolder = null;
         public static string selectedNodePath = null;
         public static bool isMainFormClosed = false;
+
+        //定义委托事件
+        public event SetUserLoginForm SetUserLoginFormVisable; 
         
         Style invisibleCharsStyle = new InvisibleCharsRenderer(Pens.Gray);
         Color currentLineColor = Color.FromArgb(100, 210, 210, 255);
         Color changedLineColor = Color.FromArgb(255, 230, 230, 255);
-
 
         public MainForm()
         {
@@ -3038,7 +3043,7 @@ namespace TestExerciser
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-  
+            isMainFormClosed = true;
         }
 
 
@@ -3047,6 +3052,7 @@ namespace TestExerciser
         //结束窗体时特效
         private void windowHidingEffects()
         {
+            this.WindowState = FormWindowState.Normal;
             while (this.Width > 374)
             {
                 if (this.Height >= 254)
@@ -3062,7 +3068,6 @@ namespace TestExerciser
 
                     if (this.Width > 253)
                     {
-
                         this.Size = new Size(this.Width -= 254, this.Height);
                         this.Refresh();
                     }
@@ -3071,19 +3076,36 @@ namespace TestExerciser
         }
 
         private void MainForm_Move(object sender, EventArgs e)
-        {
+        {          
             x = this.Location.X;
             y = this.Location.Y;
         }
 
-        private void MainForm_SizeChanged(object sender, EventArgs e)
+        public void m_SetMainWindowActive()
         {
-            if (this.WindowState == FormWindowState.Minimized)
+            if (this.IsDisposed ==true)
             {
-                this.Visible = false;
-                this.ShowInTaskbar = false;
+                if (isMainFormClosed == true)
+                {
+                    //主窗口被释放过的时候
+                    SetUserLoginFormVisable(true);
+                }             
+            }
+            else if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.Visible = true;
+                //还原窗体显示    
+                this.WindowState = FormWindowState.Normal;
+                //激活窗体并给予它焦点
+                this.Activate();
+                //任务栏区显示图标
+                this.ShowInTaskbar = true;
             }
         }
 
+        public void m_SetMainWindowVisable()
+        {
+            this.Visible = false;
+        }
     }
 }

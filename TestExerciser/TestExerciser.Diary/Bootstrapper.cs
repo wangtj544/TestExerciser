@@ -20,10 +20,10 @@ namespace TestExerciser.Diary
 
         protected override void InitializeShell()
         {
-            base.InitializeShell();
-            var shell = (Window)this.Shell;
-            shell.Show();
-            Application.Current.MainWindow = shell;
+            //base.InitializeShell();
+            //var shell = (Window)this.Shell;
+            //shell.Show();
+            //Application.Current.MainWindow = shell;
         }
 
         protected override void ConfigureContainer()

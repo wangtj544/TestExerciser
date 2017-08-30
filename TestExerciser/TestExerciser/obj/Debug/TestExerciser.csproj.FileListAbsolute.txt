@@ -585,3 +585,10 @@ E:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\ja\System.Windows.
 E:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\ko\System.Windows.Interactivity.resources.dll
 E:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 E:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+E:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\Tools\Diary\ToolWorkingNotes.baml
+E:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\Tools\Diary\ToolWorkingNotes.g.cs
+E:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser_Content.g.cs
+E:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser_MarkupCompile.cache
+E:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.g.resources
+E:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\SnippingTool.exe
+E:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Tools\Sources\zh-CN\SnippingTool.exe.mui

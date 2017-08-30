@@ -300,6 +300,9 @@
     <Compile Include="Tools\Control\ControlSearch.Designer.cs">
       <DependentUpon>ControlSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\Diary\ToolWorkingNotes.xaml.cs">
+      <DependentUpon>ToolWorkingNotes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tools\SVN\SVNManager.cs" />
     <Compile Include="Tools\SVN\ToolSVN.cs">
       <SubType>Form</SubType>
@@ -452,6 +455,9 @@
     <Content Include="Resources\up.PNG" />
     <Content Include="Resources\wait-f.PNG" />
     <Content Include="Resources\warp.PNG" />
+    <Content Include="Tools\Sources\SnippingTool.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Tools\Sources\spyxx.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -658,6 +664,9 @@
     <None Include="Tools\Sources\spyxx_amd64.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Tools\Sources\zh-CN\SnippingTool.exe.mui">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -822,6 +831,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Tools\Diary\ToolWorkingNotes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

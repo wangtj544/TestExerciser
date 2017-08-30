@@ -11,20 +11,28 @@ using CCWin;
 using TestExerciser.Logic;
 using TestExerciser.Tools;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 
 namespace TestExerciser.User
 {
+    //定义委托
+    public delegate void SetMainForm();
+
     public partial class UserLogin : Skin_Mac
     {
         public static string pubUserName = null;
         public static string pubPasswd = null;
-        MainForm myMainForm = new MainForm();
+
+        //定义委托事件
+        public event SetMainForm SetMainFormActivate;
+        public event SetMainForm SetMainFormVisable;
 
         public UserLogin()
         {
             InitializeComponent();
-        }
+            this.myNotifyIcon.Visible = false;
+        }    
 
         private void MainLogin_Load(object sender, EventArgs e)
         {           
@@ -32,7 +40,7 @@ namespace TestExerciser.User
         }
 
         private void btnOK_Click(object sender, EventArgs e)
-        {            
+        {
             myLoginFunc();
         }
 
@@ -73,7 +81,7 @@ namespace TestExerciser.User
                     {
                         if (myManageDB.queryUserFullName(this.txtUserName.Text, this.txtPasswd.Text) && myManageDB.queryEmailAddress(this.txtUserName.Text, this.txtPasswd.Text))
                         {
-
+                            MainForm myMainForm = new MainForm();
                             pubUserName = this.txtUserName.Text;
                             pubPasswd = this.txtPasswd.Text;
                             this.txtStatus.ForeColor = Color.Green;
@@ -81,6 +89,11 @@ namespace TestExerciser.User
                             Application.DoEvents();
                             this.Visible = false;
                             myMainForm.Show();
+                            MainForm.isMainFormClosed = false;
+                            this.myNotifyIcon.Visible = true;
+                            this.SetMainFormActivate += new SetMainForm(myMainForm.m_SetMainWindowActive);
+                            this.SetMainFormVisable += new SetMainForm(myMainForm.m_SetMainWindowVisable);
+                            myMainForm.SetUserLoginFormVisable += new SetUserLoginForm(this.setUserLoginFormVisableTrue);
                         }
                         else
                         {
@@ -132,65 +145,70 @@ namespace TestExerciser.User
             this.Visible = false;
             UserSelectDB myToolSelectDB = new UserSelectDB();
             myToolSelectDB.Show();
+
         }
 
         private void myNotifyIcon_DoubleClick(object sender, EventArgs e)
         {
-            activeMainWindow();
+            SetMainFormActivate();
         }
 
         private void toolStripMenuItem_ShowMainWindow_Click(object sender, EventArgs e)
         {
-
+            myNotifyIcon_DoubleClick(sender, e);
         }
 
         private void toolStripMenuItem_ScreenLock_Click(object sender, EventArgs e)
         {
-
+            var myMainForm = sender as MainForm;
+            myMainForm.Enabled = false;
         }
 
         private void toolStripMenuItem_ScreenShot_Click(object sender, EventArgs e)
         {
-
+            Process runMSPAINT = new Process();
+            runMSPAINT.StartInfo.FileName = "mspaint.exe";
+            runMSPAINT.Start();
+            runMSPAINT.Close();
         }
 
         private void toolStripMenuItem_Hide_ScreenShot_Click(object sender, EventArgs e)
         {
-
+            SetMainFormVisable();
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\Tools\Sources\SnippingTool.exe";
+                p.Start();
+                p.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void toolStripMenuItem_Setting_Click(object sender, EventArgs e)
         {
-
+            ToolManager myToolManager = new ToolManager();
+            myToolManager.Show();
         }
 
         private void toolStripMenuItem_LoginOut_Click(object sender, EventArgs e)
         {
-
+            var myMainForm = sender as MainForm;
+            myMainForm.Close();
+            this.Visible = true;
         }
 
         private void toolStripMenuItem_Quit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void activeMainWindow()
-        {           
-            if (myMainForm.WindowState == FormWindowState.Minimized)
-            {
-                myMainForm.Visible = true;
-                //还原窗体显示    
-                myMainForm.WindowState = FormWindowState.Normal;
-                //激活窗体并给予它焦点
-                myMainForm.Activate();
-                //任务栏区显示图标
-                this.ShowInTaskbar = true;
-            }
-            else if (myMainForm.IsDisposed == true)
-            {
-                MainForm myMainFormReStart = new MainForm();
-                myMainFormReStart.Show();
-            }
+        private void setUserLoginFormVisableTrue(bool vis)
+        {
+            this.Visible = true;
         }
     }
 }

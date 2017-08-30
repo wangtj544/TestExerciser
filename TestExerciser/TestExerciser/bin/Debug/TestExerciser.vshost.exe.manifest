@@ -308,14 +308,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="2087936">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="2095104">
       <assemblyIdentity name="TestExerciser" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0M9Hrr22d91MxwqHKwzvxrvV6JI=</dsig:DigestValue>
+        <dsig:DigestValue>/5tf1OL9NqVGbUljPRG7iP2SiyU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -327,7 +327,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>FEPCCyXJcfxt1ETGPd+ScAwIHxQ=</dsig:DigestValue>
+        <dsig:DigestValue>xFWEh9/YNMBJeiDEvJILzumRVrk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -339,7 +339,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>1A0RRoBuiDwTSFmzvz+RzcKkZ4E=</dsig:DigestValue>
+        <dsig:DigestValue>NQv9CxvDLwQkclU5Vqork2W8Q0o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -351,7 +351,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>eW6yzHsTgvJ8p85Fn/Chgmcx0CE=</dsig:DigestValue>
+        <dsig:DigestValue>1kIcyTHFzdeG+3KfRnqylFZ1Rbg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -363,7 +363,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/f65MMauhA4c2hobh1d0SmepSCI=</dsig:DigestValue>
+        <dsig:DigestValue>Kcv3F5YXV4Dha0uyz2ZU3KweSb4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1259,6 +1259,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>EIMkWsZtQmH1JtGNTqx5p9vXKYk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Tools\Sources\SnippingTool.exe" size="3162112">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Ep9PAldxVxXVD9e3EpziMXca4eo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Tools\Sources\spyxx.exe" size="689304">
