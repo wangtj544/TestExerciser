@@ -45,13 +45,13 @@
             this.toolStripMenuItem_ScreenLock = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem_ScreenShot = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_Paint = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Hide_ScreenShot = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem_Setting = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_LoginOut = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Quit = new System.Windows.Forms.ToolStripMenuItem();
             this.myNotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.toolStripMenuItem_Paint = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -278,6 +278,13 @@
             this.toolStripMenuItem_ScreenShot.Text = "截图(Ctrl+C)";
             this.toolStripMenuItem_ScreenShot.Click += new System.EventHandler(this.toolStripMenuItem_ScreenShot_Click);
             // 
+            // toolStripMenuItem_Paint
+            // 
+            this.toolStripMenuItem_Paint.Name = "toolStripMenuItem_Paint";
+            this.toolStripMenuItem_Paint.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem_Paint.Text = "画图(Ctrl+P)";
+            this.toolStripMenuItem_Paint.Click += new System.EventHandler(this.toolStripMenuItem_Paint_Click);
+            // 
             // toolStripMenuItem_Hide_ScreenShot
             // 
             this.toolStripMenuItem_Hide_ScreenShot.Name = "toolStripMenuItem_Hide_ScreenShot";
@@ -317,12 +324,6 @@
             this.myNotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("myNotifyIcon.Icon")));
             this.myNotifyIcon.Visible = true;
             this.myNotifyIcon.DoubleClick += new System.EventHandler(this.myNotifyIcon_DoubleClick);
-            // 
-            // toolStripMenuItem_Paint
-            // 
-            this.toolStripMenuItem_Paint.Name = "toolStripMenuItem_Paint";
-            this.toolStripMenuItem_Paint.Size = new System.Drawing.Size(229, 22);
-            this.toolStripMenuItem_Paint.Text = "画图(Ctrl+P)";
             // 
             // UserLogin
             // 

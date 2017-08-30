@@ -27,6 +27,7 @@ namespace TestExerciser.User
         //定义委托事件
         public event SetMainForm SetMainFormActivate;
         public event SetMainForm SetMainFormVisable;
+        public event SetMainForm SetMainFormClosed;
 
         public UserLogin()
         {
@@ -93,6 +94,7 @@ namespace TestExerciser.User
                             this.myNotifyIcon.Visible = true;
                             this.SetMainFormActivate += new SetMainForm(myMainForm.m_SetMainWindowActive);
                             this.SetMainFormVisable += new SetMainForm(myMainForm.m_SetMainWindowVisable);
+                            this.SetMainFormClosed += new SetMainForm(myMainForm.m_SetMainWindowClosed);
                             myMainForm.SetUserLoginFormVisable += new SetUserLoginForm(this.setUserLoginFormVisableTrue);
                         }
                         else
@@ -166,15 +168,6 @@ namespace TestExerciser.User
 
         private void toolStripMenuItem_ScreenShot_Click(object sender, EventArgs e)
         {
-            Process runMSPAINT = new Process();
-            runMSPAINT.StartInfo.FileName = "mspaint.exe";
-            runMSPAINT.Start();
-            runMSPAINT.Close();
-        }
-
-        private void toolStripMenuItem_Hide_ScreenShot_Click(object sender, EventArgs e)
-        {
-            SetMainFormVisable();
             try
             {
                 Process p = new Process();
@@ -186,6 +179,21 @@ namespace TestExerciser.User
             {
                 MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
+        }
+
+        private void toolStripMenuItem_Paint_Click(object sender, EventArgs e)
+        {
+            Process runMSPAINT = new Process();
+            runMSPAINT.StartInfo.FileName = "mspaint.exe";
+            runMSPAINT.Start();
+            runMSPAINT.Close();
+        }
+
+        private void toolStripMenuItem_Hide_ScreenShot_Click(object sender, EventArgs e)
+        {
+            SetMainFormVisable();
+            toolStripMenuItem_ScreenShot_Click(sender, e);
         }
 
         private void toolStripMenuItem_Setting_Click(object sender, EventArgs e)
@@ -196,8 +204,7 @@ namespace TestExerciser.User
 
         private void toolStripMenuItem_LoginOut_Click(object sender, EventArgs e)
         {
-            var myMainForm = sender as MainForm;
-            myMainForm.Close();
+            SetMainFormClosed();
             this.Visible = true;
         }
 
@@ -210,5 +217,7 @@ namespace TestExerciser.User
         {
             this.Visible = true;
         }
+
+        
     }
 }

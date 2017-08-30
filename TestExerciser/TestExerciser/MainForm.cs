@@ -3091,7 +3091,7 @@ namespace TestExerciser
                     SetUserLoginFormVisable(true);
                 }             
             }
-            else if (this.WindowState == FormWindowState.Minimized)
+            else if (this.WindowState == FormWindowState.Minimized||this.Visible==false)
             {
                 this.Visible = true;
                 //还原窗体显示    
@@ -3106,6 +3106,12 @@ namespace TestExerciser
         public void m_SetMainWindowVisable()
         {
             this.Visible = false;
+        }
+
+        public void m_SetMainWindowClosed()
+        {
+            this.Visible = false;
+            this.Close();
         }
     }
 }
