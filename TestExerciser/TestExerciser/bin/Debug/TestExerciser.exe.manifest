@@ -56,14 +56,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EditorTE.dll" size="336896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EditorTE.dll" size="336384">
       <assemblyIdentity name="EditorTE" version="2.16.1.0" publicKeyToken="FB8AA12B994EF61B" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>wIAnDpHgp775cL1wKagjGAQ+O6U=</dsig:DigestValue>
+        <dsig:DigestValue>XPHyxQlji7gDCMTWo0T3Rga+GFQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -92,6 +92,126 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Expression.Interactions.dll" size="91648">
+      <assemblyIdentity name="Microsoft.Expression.Interactions" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>kW04yfmqElWSm12eO7qq1c8YyPg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\Microsoft.Expression.Interactions.resources.dll" size="6656">
+      <assemblyIdentity name="Microsoft.Expression.Interactions.resources" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="de" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>gQy11/hJvgxpashwgFcBfom1SXI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en\Microsoft.Expression.Interactions.resources.dll" size="7168">
+      <assemblyIdentity name="Microsoft.Expression.Interactions.resources" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="en" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>RFgIS55jW5yHrXczS8/ClCFe8gw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Microsoft.Expression.Interactions.resources.dll" size="6656">
+      <assemblyIdentity name="Microsoft.Expression.Interactions.resources" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>O0N/0oeJtOMFxPmNxExqE7A1fuk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr\Microsoft.Expression.Interactions.resources.dll" size="6656">
+      <assemblyIdentity name="Microsoft.Expression.Interactions.resources" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="fr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>vHkPT0mzzOCA602CUIHAwKpBBu0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="it\Microsoft.Expression.Interactions.resources.dll" size="6656">
+      <assemblyIdentity name="Microsoft.Expression.Interactions.resources" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="it" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>s3EHqpQzuBPpnIwVm92+U5gy0vQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ja\Microsoft.Expression.Interactions.resources.dll" size="7168">
+      <assemblyIdentity name="Microsoft.Expression.Interactions.resources" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="ja" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>YMdphQPf4ou8GkHCccIUpyhcqwA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ko\Microsoft.Expression.Interactions.resources.dll" size="6656">
+      <assemblyIdentity name="Microsoft.Expression.Interactions.resources" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="ko" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>pxRitwp9ml8w/LnGafPdsA56FqY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-Hans\Microsoft.Expression.Interactions.resources.dll" size="6656">
+      <assemblyIdentity name="Microsoft.Expression.Interactions.resources" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="zh-Hans" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>RBE33KMF4R0c5roMrHurvoCHrho=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-Hant\Microsoft.Expression.Interactions.resources.dll" size="6656">
+      <assemblyIdentity name="Microsoft.Expression.Interactions.resources" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="zh-Hant" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>5wsCbMErrdXzaDVJ2BA2lI8R4pg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Practices.Prism.dll" size="153416">
       <assemblyIdentity name="Microsoft.Practices.Prism" version="4.1.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -100,6 +220,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
         <dsig:DigestValue>gkrRF05cL8XGiwTmjDnDXhv06BI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Practices.Prism.Interactivity.dll" size="17224">
+      <assemblyIdentity name="Microsoft.Practices.Prism.Interactivity" version="4.1.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>20yeK30R5+gvuM+JgrZduOjNilk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -172,6 +304,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
         <dsig:DigestValue>Nf3wIpps5DOuOWYttLMU8RdCG2g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Data.SQLite.Linq.dll" size="182784">
+      <assemblyIdentity name="System.Data.SQLite.Linq" version="1.0.86.0" publicKeyToken="DB937BC2D44FF139" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>1jQkxzl5uQEoGJGOyUlEbJMHflw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -308,26 +452,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="2095616">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="2096128">
       <assemblyIdentity name="TestExerciser" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>F7jGBiDj/gTOkz0H3RxWb8d/BK4=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.Diary.exe" size="304128">
-      <assemblyIdentity name="TestExerciser.Diary" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>xFWEh9/YNMBJeiDEvJILzumRVrk=</dsig:DigestValue>
+        <dsig:DigestValue>cYhM6mggFA01KtypCqMfegjRFW8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -339,7 +471,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>NQv9CxvDLwQkclU5Vqork2W8Q0o=</dsig:DigestValue>
+        <dsig:DigestValue>3+lSwVlS73248uWTp8DUZJcSQ+g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -351,7 +483,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>1kIcyTHFzdeG+3KfRnqylFZ1Rbg=</dsig:DigestValue>
+        <dsig:DigestValue>FH7TRR2NhpfEfFvL89BkPriDYY4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -363,19 +495,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>9aI1KcLzDrlXMKvuNteiQopD3Oc=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xceed.Wpf.Toolkit.dll" size="900608">
-      <assemblyIdentity name="Xceed.Wpf.Toolkit" version="2.0.0.0" publicKeyToken="3E4669D2F30244F4" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Fq8PQ9tH/uDJBn47ep8LdlQpbJ0=</dsig:DigestValue>
+        <dsig:DigestValue>FFcldV+WZgeKE97q0wR4qF2AxGk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

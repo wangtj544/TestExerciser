@@ -80,6 +80,7 @@ namespace TestExerciser.Tools
         {
             if (this.tvItems.SelectedNode != null)
             {
+                this.spCMain.Panel2.Controls.Clear();
                 if (this.tvItems.SelectedNode.Name == "tnSQL")
                 {                  
                     this.spCMain.Panel2.Controls.Add(this.gbSelectDB);
@@ -173,9 +174,11 @@ namespace TestExerciser.Tools
                     this.stbServerDBPath.WaterText = "Data Source=172.20.32.147";
                     this.stbServerDBPath.WordWrap = true;
                 }
-                else
+                else if (this.tvItems.SelectedNode.Name == "tnHotKey")
                 {
-                    this.spCMain.Panel2.Controls.Remove(this.gbSelectDB);
+                    UserControl toolHotkeysEditor = new TestExerciser.Tools.ToolHotkeysEditor();
+                    spCMain.Panel2.Controls.Add(toolHotkeysEditor);
+                    toolHotkeysEditor.Dock = DockStyle.Fill;                    
                 }
             }
         }

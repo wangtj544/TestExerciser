@@ -8,10 +8,17 @@ using System.Windows.Forms;
 
 namespace EditorTE
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class HotkeysEditorForm : Form
     {
         BindingList<HotkeyWrapper> wrappers = new BindingList<HotkeyWrapper>();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="hotkeys"></param>
         public HotkeysEditorForm(HotkeysMapping hotkeys)
         {
             InitializeComponent();

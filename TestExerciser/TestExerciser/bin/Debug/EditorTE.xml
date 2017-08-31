@@ -468,6 +468,17 @@
             Inlining. If True then hint will moves apart text.
             </summary>
         </member>
+        <member name="T:EditorTE.HotkeysEditorForm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EditorTE.HotkeysEditorForm.#ctor(EditorTE.HotkeysMapping)">
+            <summary>
+            
+            </summary>
+            <param name="hotkeys"></param>
+        </member>
         <member name="M:EditorTE.HotkeysEditorForm.GetHotkeys">
             <summary>
             Returns edited hotkey map

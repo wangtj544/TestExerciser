@@ -110,6 +110,29 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\lenovo\Desktop\CSkin+16.1.14.2\CSkin 16.1.14.2\CSkin 4.0\CSkin.dll</HintPath>
     </Reference>
+    <Reference Include="Hardcodet.Wpf.TaskbarNotification, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestExerciser.Diary\bin\Debug\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+    </Reference>
+    <Reference Include="MarkupConverter, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestExerciser.Diary\bin\Debug\MarkupConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestExerciser.Diary\bin\Debug\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestExerciser.Diary\bin\Debug\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity">
+      <HintPath>..\TestExerciser.Diary\bin\Debug\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.UnityExtensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestExerciser.Diary\bin\Debug\Microsoft.Practices.Prism.UnityExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="SharpSvn">
@@ -123,12 +146,23 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.86.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestExerciser.Diary\bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\TestExerciser.Diary\bin\Debug\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestExerciser.Diary\bin\Debug\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -334,6 +368,12 @@
     </Compile>
     <Compile Include="Tools\ToolClean.Designer.cs">
       <DependentUpon>ToolClean.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ToolHotkeysEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolHotkeysEditor.Designer.cs">
+      <DependentUpon>ToolHotkeysEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\ToolManager.cs">
       <SubType>Form</SubType>
@@ -545,6 +585,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolClean.resx">
       <DependentUpon>ToolClean.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolHotkeysEditor.resx">
+      <DependentUpon>ToolHotkeysEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolManager.resx">
       <DependentUpon>ToolManager.cs</DependentUpon>
@@ -791,18 +834,20 @@
     <Content Include="Resources\ts.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TestExerciser.Diary\TestExerciser.Diary.csproj">
-      <Project>{771bb6c4-9e85-448d-b038-56567e087a3a}</Project>
-      <Name>TestExerciser.Diary</Name>
+    <ProjectReference Include="..\TestExerciser.Diary.Common\TestExerciser.Diary.Common.csproj">
+      <Project>{c01aaab2-d083-4461-8ee3-69047c7f5875}</Project>
+      <Name>TestExerciser.Diary.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestExerciser.Diary.Logic\TestExerciser.Diary.Logic.csproj">
+      <Project>{189ff1b0-a860-4a3e-a5de-1a3b00bf3775}</Project>
+      <Name>TestExerciser.Diary.Logic</Name>
     </ProjectReference>
     <ProjectReference Include="..\TestExerciser.Editor\TestExerciser.Editor.csproj">
       <Project>{6dd14a85-ccfc-4774-bd26-0f5772512319}</Project>
       <Name>TestExerciser.Editor</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tools\Common\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>

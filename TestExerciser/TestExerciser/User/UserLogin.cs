@@ -81,21 +81,14 @@ namespace TestExerciser.User
                     if (myManageDB.checkUserName(this.txtUserName.Text))
                     {
                         if (myManageDB.queryUserFullName(this.txtUserName.Text, this.txtPasswd.Text) && myManageDB.queryEmailAddress(this.txtUserName.Text, this.txtPasswd.Text))
-                        {
-                            MainForm myMainForm = new MainForm();
+                        {                           
                             pubUserName = this.txtUserName.Text;
                             pubPasswd = this.txtPasswd.Text;
                             this.txtStatus.ForeColor = Color.Green;
                             this.txtStatus.Text = "登录信息：成功！";
                             Application.DoEvents();
                             this.Visible = false;
-                            myMainForm.Show();
-                            MainForm.isMainFormClosed = false;
-                            this.myNotifyIcon.Visible = true;
-                            this.SetMainFormActivate += new SetMainForm(myMainForm.m_SetMainWindowActive);
-                            this.SetMainFormVisable += new SetMainForm(myMainForm.m_SetMainWindowVisable);
-                            this.SetMainFormClosed += new SetMainForm(myMainForm.m_SetMainWindowClosed);
-                            myMainForm.SetUserLoginFormVisable += new SetUserLoginForm(this.setUserLoginFormVisableTrue);
+                            d_ShowMainFrom();
                         }
                         else
                         {
@@ -213,11 +206,23 @@ namespace TestExerciser.User
             Application.Exit();
         }
 
-        private void setUserLoginFormVisableTrue(bool vis)
+        private void d_SetUserLoginFormVisableTrue(bool vis)
         {
             this.Visible = true;
         }
 
+        private void d_ShowMainFrom()
+        {
+            MainForm myMainForm = new MainForm();
+            myMainForm.Show();
+            MainForm.isMainFormClosed = false;
+            this.myNotifyIcon.Visible = true;
+            this.SetMainFormActivate += new SetMainForm(myMainForm.d_SetMainWindowActive);
+            this.SetMainFormVisable += new SetMainForm(myMainForm.d_SetMainWindowVisable);
+            this.SetMainFormClosed += new SetMainForm(myMainForm.d_SetMainWindowClosed);
+            myMainForm.SetUserLoginFormVisable += new SetUserLoginForm(this.d_SetUserLoginFormVisableTrue);
+            myMainForm.ShowMainFormWhenClosed += new ShowMainForm(this.d_ShowMainFrom);
+        }
         
     }
 }

@@ -25,6 +25,7 @@ namespace TestExerciser
 {
     //定义委托
     public delegate void SetUserLoginForm(bool vis);
+    public delegate void ShowMainForm();
 
     public partial class MainForm : Skin_Mac
     {
@@ -36,7 +37,8 @@ namespace TestExerciser
         public static bool isMainFormClosed = false;
 
         //定义委托事件
-        public event SetUserLoginForm SetUserLoginFormVisable; 
+        public event SetUserLoginForm SetUserLoginFormVisable;
+        public event ShowMainForm ShowMainFormWhenClosed;
         
         Style invisibleCharsStyle = new InvisibleCharsRenderer(Pens.Gray);
         Color currentLineColor = Color.FromArgb(100, 210, 210, 255);
@@ -3081,14 +3083,14 @@ namespace TestExerciser
             y = this.Location.Y;
         }
 
-        public void m_SetMainWindowActive()
+        public void d_SetMainWindowActive()
         {
             if (this.IsDisposed ==true)
             {
                 if (isMainFormClosed == true)
                 {
-                    //主窗口被释放过的时候
-                    SetUserLoginFormVisable(true);
+                    //SetUserLoginFormVisable(true);
+                    ShowMainFormWhenClosed();
                 }             
             }
             else if (this.WindowState == FormWindowState.Minimized||this.Visible==false)
@@ -3103,12 +3105,12 @@ namespace TestExerciser
             }
         }
 
-        public void m_SetMainWindowVisable()
+        public void d_SetMainWindowVisable()
         {
             this.Visible = false;
         }
 
-        public void m_SetMainWindowClosed()
+        public void d_SetMainWindowClosed()
         {
             this.Visible = false;
             this.Close();
