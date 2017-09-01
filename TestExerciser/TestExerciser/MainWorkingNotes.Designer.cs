@@ -59,8 +59,6 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.帮助LToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.stsToolStrip = new CCWin.SkinControl.SkinToolStrip();
-            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.toolWorkingNotes1 = new TestExerciser.Tools.Diary.ToolWorkingNotes();
             this.cmsTreeManager.SuspendLayout();
             this.stsToolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -376,23 +374,12 @@
             this.stsToolStrip.TitleRadius = 4;
             this.stsToolStrip.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             // 
-            // elementHost1
-            // 
-            this.elementHost1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost1.Location = new System.Drawing.Point(4, 32);
-            this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(1722, 789);
-            this.elementHost1.TabIndex = 1;
-            this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = this.toolWorkingNotes1;
-            // 
             // MainWorkingNotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
             this.ClientSize = new System.Drawing.Size(1730, 825);
-            this.Controls.Add(this.elementHost1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWorkingNotes";
             this.Text = "工作笔记";
@@ -435,7 +422,5 @@
         private System.Windows.Forms.ToolStripMenuItem 重命名RToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 删除DToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出QToolStripMenuItem;
-        private System.Windows.Forms.Integration.ElementHost elementHost1;
-        private Tools.Diary.ToolWorkingNotes toolWorkingNotes1;
     }
 }
