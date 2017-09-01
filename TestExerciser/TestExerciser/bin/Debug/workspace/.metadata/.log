@@ -1,0 +1,705 @@
+!SESSION 2017-07-11 10:19:35.192 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 10:19:41.054
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:19:41.054
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:19:41.054
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:19:41.054
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 10:19:58.211 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 10:20:14.704
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:20:14.704
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:20:14.704
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:20:14.704
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 10:31:12.794 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 10:31:29.084
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:31:29.084
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:31:29.084
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:31:29.084
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 10:31:54.797 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 10:31:59.938
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:31:59.938
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:31:59.938
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:31:59.938
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 10:39:40.127 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 10:39:56.540
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:39:56.540
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:39:56.540
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:39:56.540
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 10:40:09.181 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 10:40:25.440
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:40:25.440
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:40:25.440
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:40:25.440
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 10:40:36.812 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 10:40:52.753
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:40:52.753
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:40:52.753
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:40:52.753
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 10:46:21.709 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 10:46:38.078
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:46:38.078
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:46:38.078
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:46:38.078
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 10:47:03.740 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 10:47:10.610
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:47:10.610
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:47:10.610
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 10:47:10.610
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 11:26:42.441 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 11:26:58.634
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 11:26:58.634
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 11:26:58.634
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 11:26:58.634
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 11:30:06.125 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 11:30:22.676
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 11:30:22.676
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 11:30:22.676
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 11:30:22.676
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 11:42:27.327 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 11:42:43.706
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 11:42:43.706
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 11:42:43.706
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 11:42:43.706
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 13:09:45.626 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 13:10:01.932
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 13:10:01.932
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 13:10:01.932
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 13:10:01.932
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 13:22:37.587 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 13:22:54.169
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 13:22:54.170
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 13:22:54.170
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 13:22:54.170
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 13:59:38.381 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 13:59:54.842
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 13:59:54.842
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 13:59:54.842
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 13:59:54.842
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-11 14:07:13.754 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-11 14:07:30.093
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 14:07:30.093
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 14:07:30.093
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-11 14:07:30.093
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 09:31:59.941 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 09:32:11.298
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:32:11.298
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:32:11.298
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:32:11.298
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 09:40:36.577 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 09:40:48.031
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:40:48.031
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:40:48.031
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:40:48.031
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 09:49:05.949 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 09:49:17.412
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:49:17.412
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:49:17.412
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:49:17.412
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 09:50:09.030 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 09:50:20.475
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:50:20.475
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:50:20.475
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:50:20.476
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 09:53:58.635 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 09:54:10.090
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:54:10.090
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:54:10.090
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:54:10.090
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 09:55:46.771 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 09:55:58.225
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:55:58.225
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:55:58.225
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 09:55:58.225
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:00:33.334 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:00:44.774
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:00:44.775
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:00:44.775
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:00:44.775
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:03:42.074 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:03:53.635
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:03:53.635
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:03:53.635
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:03:53.635
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:07:46.592 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:07:58.002
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:07:58.002
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:07:58.002
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:07:58.002
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:10:37.383 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:10:48.821
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:10:48.821
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:10:48.821
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:10:48.821
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:11:35.503 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:11:47.095
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:11:47.095
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:11:47.095
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:11:47.095
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:14:13.593 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:14:25.063
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:14:25.063
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:14:25.063
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:14:25.063
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:16:59.653 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:17:11.116
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:17:11.116
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:17:11.116
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:17:11.116
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:17:14.757 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:17:25.851
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:17:25.851
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:17:25.851
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:17:25.851
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:19:02.592 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:19:14.065
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:19:14.065
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:19:14.065
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:19:14.065
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:19:17.709 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:19:28.694
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:19:28.694
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:19:28.694
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:19:28.694
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:21:24.124 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:21:35.707
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:21:35.708
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:21:35.708
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:21:35.708
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:22:10.325 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:22:21.804
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:22:21.804
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:22:21.804
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:22:21.804
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:23:10.872 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:23:22.362
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:23:22.362
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:23:22.362
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:23:22.362
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:29:00.075 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:29:11.454
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:29:11.454
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:29:11.454
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:29:11.454
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:32:10.491 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:32:21.967
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:32:21.967
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:32:21.967
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:32:21.967
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:34:52.664 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:35:04.098
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:35:04.098
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:35:04.098
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:35:04.099
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:38:53.668 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:39:05.045
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:39:05.045
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:39:05.045
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:39:05.045
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:43:59.534 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:44:10.935
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:44:10.935
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:44:10.935
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:44:10.935
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:48:25.899 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:48:37.229
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:48:37.229
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:48:37.229
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:48:37.229
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:52:20.830 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:52:32.119
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:52:32.119
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:52:32.119
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:52:32.119
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-12 10:52:35.732 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-12 10:52:41.584
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:52:41.585
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:52:41.585
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-12 10:52:41.585
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-18 17:27:00.485 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-18 17:27:11.893
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-18 17:27:11.893
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-18 17:27:11.893
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-18 17:27:11.893
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-18 17:42:20.589 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-18 17:42:32.174
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-18 17:42:32.174
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-18 17:42:32.174
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-18 17:42:32.174
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-18 17:50:21.494 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-18 17:50:32.904
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-18 17:50:32.904
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-18 17:50:32.904
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-18 17:50:32.904
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'
+!SESSION 2017-07-18 18:13:48.384 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 2 0 2017-07-18 18:13:59.705
+!MESSAGE Warnings while parsing the action sets from the 'org.eclipse.ui.actionSets' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-18 18:13:59.705
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.kpiAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-18 18:13:59.705
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowExitAction'
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-07-18 18:13:59.706
+!MESSAGE There was no class provided, and the action is not retargettable: plug-in='com.sailing.businessanalysis', id='ssas_businessanalysis.windowBackAction'

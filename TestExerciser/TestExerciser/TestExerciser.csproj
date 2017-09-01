@@ -1,0 +1,894 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD2A0891-5F26-4F6E-AFAD-336C456D047A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestExerciser</RootNamespace>
+    <AssemblyName>TestExerciser</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>E:\AutoTest\tools\TestExerciser\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>true</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://172.20.32.147:8080/</UpdateUrl>
+    <SupportUrl>http://172.20.32.147:8080/</SupportUrl>
+    <ErrorReportUrl>http://172.20.32.147:8080/</ErrorReportUrl>
+    <ProductName>TestExerciser</ProductName>
+    <PublisherName>张渊</PublisherName>
+    <SuiteName>TestExerciser</SuiteName>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>E:\School\Python</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9C910D4578AACCB32B6E444059E91B2A7F6EF882</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TestExerciser_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\TestExecute.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>TestExerciser.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin, Version=16.1.14.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\lenovo\Desktop\CSkin+16.1.14.2\CSkin 16.1.14.2\CSkin 4.0\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Hardcodet.Wpf.TaskbarNotification, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestExerciser.Diary\bin\Debug\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+    </Reference>
+    <Reference Include="MarkupConverter, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestExerciser.Diary\bin\Debug\MarkupConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestExerciser.Diary\bin\Debug\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestExerciser.Diary\bin\Debug\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity">
+      <HintPath>..\TestExerciser.Diary\bin\Debug\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.UnityExtensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestExerciser.Diary\bin\Debug\Microsoft.Practices.Prism.UnityExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SharpSvn">
+      <HintPath>..\..\SharpSvn-v1.800x-1.8009.3299.43\release\net40\x86\SharpSvn.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpSvn.UI">
+      <HintPath>..\..\SharpSvn-v1.800x-1.8009.3299.43\release\net40\x86\SharpSvn.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.86.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestExerciser.Diary\bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\TestExerciser.Diary\bin\Debug\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TestExerciser.Diary\bin\Debug\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TabStrip">
+      <HintPath>..\..\FastColoredTextBox\Tester\bin\Debug\TabStrip.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSetCasesForReview.cs">
+      <DependentUpon>DataSetCasesForReview.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetCasesForReview.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCasesForReview.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetExcelReader.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetExcelReader.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPackageManager.cs">
+      <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetPackageManager.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTeamMembers.cs">
+      <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetTeamMembers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\ColorRandom.cs" />
+    <Compile Include="Logic\FTPClient.cs" />
+    <Compile Include="Logic\ListItem.cs" />
+    <Compile Include="Logic\TextAndImageColumn.cs" />
+    <Compile Include="MainBugManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainBugManager.Designer.cs">
+      <DependentUpon>MainBugManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainCaseManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainCaseManager.Designer.cs">
+      <DependentUpon>MainCaseManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolCaseReviewDirect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolCaseReviewDirect.Designer.cs">
+      <DependentUpon>ToolCaseReviewDirect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolCaseReviewFromExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolCaseReviewFromExcel.Designer.cs">
+      <DependentUpon>ToolCaseReviewFromExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelDataReader.cs" />
+    <Compile Include="Logic\AutoComplete.cs" />
+    <Compile Include="Logic\TimeDelay.cs" />
+    <Compile Include="MainAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainAbout.Designer.cs">
+      <DependentUpon>MainAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainLogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainLogView.Designer.cs">
+      <DependentUpon>MainLogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPackageManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPackageManager.Designer.cs">
+      <DependentUpon>MainPackageManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainRecord.Designer.cs">
+      <DependentUpon>MainRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainRequirement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainRequirement.Designer.cs">
+      <DependentUpon>MainRequirement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainUpdateHis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUpdateHis.Designer.cs">
+      <DependentUpon>MainUpdateHis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainTeamMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainTeamMembers.Designer.cs">
+      <DependentUpon>MainTeamMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWorkFlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWorkFlow.Designer.cs">
+      <DependentUpon>MainWorkFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWorkingNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWorkingNotes.Designer.cs">
+      <DependentUpon>MainWorkingNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWorkProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWorkProgress.Designer.cs">
+      <DependentUpon>MainWorkProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Tools\BugManagement\ToolBugDefectInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\BugManagement\ToolBugDefectInfo.Designer.cs">
+      <DependentUpon>ToolBugDefectInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolCaseCommit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolCaseCommit.Designer.cs">
+      <DependentUpon>ToolCaseCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolCaseQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolCaseQuery.Designer.cs">
+      <DependentUpon>ToolCaseQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolSelectModeForCaseReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolSelectModeForCaseReview.Designer.cs">
+      <DependentUpon>ToolSelectModeForCaseReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Control\ControlSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\Control\ControlSearch.Designer.cs">
+      <DependentUpon>ControlSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Diary\ToolWorkingNotes.xaml.cs">
+      <DependentUpon>ToolWorkingNotes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\SVN\SVNManager.cs" />
+    <Compile Include="Tools\SVN\ToolSVN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\SVN\ToolSVN.Designer.cs">
+      <DependentUpon>ToolSVN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\SVN\ToolSVNCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\SVN\ToolSVNCheckOut.Designer.cs">
+      <DependentUpon>ToolSVNCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\LoginInfo.cs" />
+    <Compile Include="Tools\BugManagement\ToolBugCommit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\BugManagement\ToolBugCommit.Designer.cs">
+      <DependentUpon>ToolBugCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\BugManagement\ToolBugQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\BugManagement\ToolBugQuery.Designer.cs">
+      <DependentUpon>ToolBugQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ToolClean.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolClean.Designer.cs">
+      <DependentUpon>ToolClean.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ToolHotkeysEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolHotkeysEditor.Designer.cs">
+      <DependentUpon>ToolHotkeysEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ToolManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolManager.Designer.cs">
+      <DependentUpon>ToolManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ToolNewFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolNewFolder.Designer.cs">
+      <DependentUpon>ToolNewFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ToolNewSolution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ToolNewSolution.Designer.cs">
+      <DependentUpon>ToolNewSolution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserSelectDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserSelectDB.Designer.cs">
+      <DependentUpon>UserSelectDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserAuthentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserAuthentication.Designer.cs">
+      <DependentUpon>UserAuthentication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserChangePSD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserChangePSD.Designer.cs">
+      <DependentUpon>UserChangePSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserChangeUserEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserChangeUserEmail.Designer.cs">
+      <DependentUpon>UserChangeUserEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserChangeUserFullName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserChangeUserFullName.Designer.cs">
+      <DependentUpon>UserChangeUserFullName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserLogin.Designer.cs">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainExcelReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainExcelReader.Designer.cs">
+      <DependentUpon>MainExcelReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\ManageDB.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\UserRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserRegister.Designer.cs">
+      <DependentUpon>UserRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\SendMail.cs" />
+    <Compile Include="User\UserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserInfo.Designer.cs">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserResetPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserResetPwd.Designer.cs">
+      <DependentUpon>UserResetPwd.cs</DependentUpon>
+    </Compile>
+    <Content Include="Resources\ajax-loader.gif" />
+    <Content Include="Resources\breakpoints.PNG" />
+    <Content Include="Resources\close.PNG" />
+    <Content Include="Resources\collapse.PNG" />
+    <Content Include="Resources\debug.PNG" />
+    <Content Include="Resources\delete.PNG" />
+    <Content Include="Resources\down.PNG" />
+    <Content Include="Resources\ExpandAll.PNG" />
+    <Content Include="Resources\export.PNG" />
+    <Content Include="Resources\FNDJLFCN.gif" />
+    <Content Include="Resources\FNDJLFOK.gif" />
+    <Content Include="Resources\help.PNG" />
+    <Content Include="Resources\icon-run-white.d51728d.gif" />
+    <Content Include="Resources\ignored.PNG" />
+    <Content Include="Resources\import.PNG" />
+    <Content Include="Resources\muteBreakPoint.PNG" />
+    <Content Include="Resources\on-t.PNG" />
+    <Content Include="Resources\pin.PNG" />
+    <Content Include="Resources\rerunerr.PNG" />
+    <Content Include="Resources\restart.PNG" />
+    <Content Include="Resources\restore.PNG" />
+    <Content Include="Resources\scroll.PNG" />
+    <Content Include="Resources\setting.PNG" />
+    <Content Include="Resources\sortA.PNG" />
+    <Content Include="Resources\sortD.PNG" />
+    <Content Include="Resources\start.PNG" />
+    <Content Include="Resources\stop-f.PNG" />
+    <Content Include="Resources\stop-t.PNG" />
+    <Content Include="Resources\toggle.PNG" />
+    <Content Include="Resources\up.PNG" />
+    <Content Include="Resources\wait-f.PNG" />
+    <Content Include="Resources\warp.PNG" />
+    <Content Include="Tools\Sources\SnippingTool.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\Sources\spyxx.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\Sources\spyxxhk.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\Sources\spyxxhk_amd64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\Sources\spyxx_amd64.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="MainBugManager.resx">
+      <DependentUpon>MainBugManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainCaseManager.resx">
+      <DependentUpon>MainCaseManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\CaseManagement\ToolCaseReviewDirect.resx">
+      <DependentUpon>ToolCaseReviewDirect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\CaseManagement\ToolCaseReviewFromExcel.resx">
+      <DependentUpon>ToolCaseReviewFromExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainAbout.resx">
+      <DependentUpon>MainAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainAbout.zh-Hans.resx">
+      <DependentUpon>MainAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainLogView.resx">
+      <DependentUpon>MainLogView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPackageManager.resx">
+      <DependentUpon>MainPackageManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainRecord.resx">
+      <DependentUpon>MainRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainRequirement.resx">
+      <DependentUpon>MainRequirement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUpdateHis.resx">
+      <DependentUpon>MainUpdateHis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainTeamMembers.resx">
+      <DependentUpon>MainTeamMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWorkFlow.resx">
+      <DependentUpon>MainWorkFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWorkingNotes.resx">
+      <DependentUpon>MainWorkingNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWorkProgress.resx">
+      <DependentUpon>MainWorkProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Tools\BugManagement\ToolBugDefectInfo.resx">
+      <DependentUpon>ToolBugDefectInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\CaseManagement\ToolCaseCommit.resx">
+      <DependentUpon>ToolCaseCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\CaseManagement\ToolCaseQuery.resx">
+      <DependentUpon>ToolCaseQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\CaseManagement\ToolSelectModeForCaseReview.resx">
+      <DependentUpon>ToolSelectModeForCaseReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Control\ControlSearch.resx">
+      <DependentUpon>ControlSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\SVN\ToolSVN.resx">
+      <DependentUpon>ToolSVN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\SVN\ToolSVNCheckOut.resx">
+      <DependentUpon>ToolSVNCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\BugManagement\ToolBugCommit.resx">
+      <DependentUpon>ToolBugCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\BugManagement\ToolBugQuery.resx">
+      <DependentUpon>ToolBugQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolClean.resx">
+      <DependentUpon>ToolClean.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolHotkeysEditor.resx">
+      <DependentUpon>ToolHotkeysEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolManager.resx">
+      <DependentUpon>ToolManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolNewFolder.resx">
+      <DependentUpon>ToolNewFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolNewSolution.resx">
+      <DependentUpon>ToolNewSolution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserSelectDB.resx">
+      <DependentUpon>UserSelectDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserAuthentication.resx">
+      <DependentUpon>UserAuthentication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserChangePSD.resx">
+      <DependentUpon>UserChangePSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserChangeUserEmail.resx">
+      <DependentUpon>UserChangeUserEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserChangeUserFullName.resx">
+      <DependentUpon>UserChangeUserFullName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainExcelReader.resx">
+      <DependentUpon>MainExcelReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserRegister.resx">
+      <DependentUpon>UserRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserInfo.resx">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserResetPwd.resx">
+      <DependentUpon>UserResetPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\SharpPlink-Win32.svnExe" />
+    <None Include="DataSetCasesForReview.xsc">
+      <DependentUpon>DataSetCasesForReview.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetCasesForReview.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCasesForReview.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetCasesForReview.xss">
+      <DependentUpon>DataSetCasesForReview.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetExcelReader.xsc">
+      <DependentUpon>DataSetExcelReader.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetExcelReader.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetExcelReader.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetExcelReader.xss">
+      <DependentUpon>DataSetExcelReader.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPackageManager.xsc">
+      <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPackageManager.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPackageManager.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPackageManager.xss">
+      <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTeamMembers.xsc">
+      <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTeamMembers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTeamMembers.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTeamMembers.xss">
+      <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SharpPlink-Win32.svnExe" />
+    <None Include="TestExerciser_TemporaryKey.pfx" />
+    <Content Include="Tools\Sources\AutoIt.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Tools\Sources\spyxx.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Tools\Sources\spyxx_amd64.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Tools\Sources\zh-CN\SnippingTool.exe.mui">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".tc">
+      <Visible>False</Visible>
+      <Description>测试用例</Description>
+      <Progid>tc</Progid>
+      <DefaultIcon>Resources\tc.ico</DefaultIcon>
+    </FileAssociation>
+    <FileAssociation Include=".ts">
+      <Visible>False</Visible>
+      <Description>测试集</Description>
+      <Progid>ts</Progid>
+      <DefaultIcon>Resources\ts.ico</DefaultIcon>
+    </FileAssociation>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\0.png" />
+    <Content Include="Resources\au3.ico" />
+    <Content Include="Resources\auto3help.PNG" />
+    <Content Include="Resources\putty.PNG" />
+    <Content Include="Resources\rightArrow.png" />
+    <Content Include="Resources\1.png" />
+    <Content Include="Resources\2.png" />
+    <Content Include="Resources\3.png" />
+    <Content Include="Resources\4.png" />
+    <Content Include="Resources\5.png" />
+    <Content Include="Resources\6.png" />
+    <Content Include="Resources\7.png" />
+    <Content Include="Resources\8.png" />
+    <Content Include="Resources\9.png" />
+    <Content Include="Resources\cSharp.png" />
+    <Content Include="Resources\folder.png" />
+    <Content Include="Resources\folder_blue.png" />
+    <Content Include="Resources\folder_green.png" />
+    <Content Include="Resources\folder_yellow.png" />
+    <Content Include="Resources\icon.png" />
+    <Content Include="Resources\Icons.16x16.Assembly.png" />
+    <Content Include="Resources\library.png" />
+    <Content Include="Resources\LocationDisabled.png" />
+    <Content Include="Resources\LocationError.png" />
+    <Content Include="Resources\LocationOK.png" />
+    <Content Include="Resources\LocationRunning.png" />
+    <Content Include="Resources\LocationUnknown.png" />
+    <Content Include="Resources\LocationWarning.png" />
+    <Content Include="Resources\Machine.png" />
+    <Content Include="Resources\others.png" />
+    <Content Include="Resources\progress_cancel.png" />
+    <Content Include="Resources\progress_done.png" />
+    <Content Include="Resources\python.png" />
+    <Content Include="Resources\QMAntiFraud.png" />
+    <Content Include="Resources\Quads01.png" />
+    <Content Include="Resources\Quads02.png" />
+    <Content Include="Resources\Quads03.png" />
+    <Content Include="Resources\Quads04.png" />
+    <Content Include="Resources\Quads05.png" />
+    <Content Include="Resources\right.png" />
+    <Content Include="Resources\ruby.png" />
+    <Content Include="Resources\run.png" />
+    <Content Include="Resources\save.PNG" />
+    <Content Include="Resources\selected.png" />
+    <Content Include="Resources\solutionIcon.png" />
+    <Content Include="Resources\table_add.png" />
+    <Content Include="Resources\text.png" />
+    <Content Include="Resources\tortoiseSVN.PNG" />
+    <Content Include="Resources\tstbAddToProj.png" />
+    <Content Include="Resources\tstbCreateDB.png" />
+    <Content Include="Resources\tstbCreateScript.png" />
+    <Content Include="Resources\vb.png" />
+    <Content Include="Resources\WrongAnswer.png" />
+    <Content Include="Resources\Yellow.png" />
+    <Content Include="Tools\Sources\AutoIt.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\Sources\inspect_x32.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\Sources\inspect_x64.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\Sources\PUTTY.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\unsure.gif" />
+    <None Include="Resources\undo_16x16.png" />
+    <None Include="Resources\backward0_16x16.png" />
+    <None Include="Resources\bookmark--plus.png" />
+    <None Include="Resources\box.png" />
+    <None Include="Resources\bye.gif" />
+    <None Include="Resources\class_libraries.png" />
+    <None Include="Resources\edit-padding-top.png" />
+    <None Include="Resources\forward_16x16.png" />
+    <None Include="Resources\layer--minus.png" />
+    <None Include="Resources\layer--plus.png" />
+    <None Include="Resources\lightning.png" />
+    <None Include="Resources\lol.gif" />
+    <None Include="Resources\property.png" />
+    <None Include="Resources\redo_16x16.png" />
+    <None Include="Resources\rolleyes.gif" />
+    <None Include="Resources\sad_16x16.png" />
+    <None Include="Resources\smile_16x16.png" />
+    <None Include="Resources\DictSearch.png" />
+    <Content Include="Resources\Green.png" />
+    <Content Include="Resources\Grey.png" />
+    <Content Include="Resources\Red.png" />
+    <Content Include="Resources\tc.ico" />
+    <Content Include="Resources\TestExecute.ico" />
+    <Content Include="Resources\ts.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestExerciser.Diary.Common\TestExerciser.Diary.Common.csproj">
+      <Project>{c01aaab2-d083-4461-8ee3-69047c7f5875}</Project>
+      <Name>TestExerciser.Diary.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestExerciser.Diary.Logic\TestExerciser.Diary.Logic.csproj">
+      <Project>{189ff1b0-a860-4a3e-a5de-1a3b00bf3775}</Project>
+      <Name>TestExerciser.Diary.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestExerciser.Editor\TestExerciser.Editor.csproj">
+      <Project>{6dd14a85-ccfc-4774-bd26-0f5772512319}</Project>
+      <Name>TestExerciser.Editor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Tools\Diary\ToolWorkingNotes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
