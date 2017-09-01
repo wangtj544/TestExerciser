@@ -1,0 +1,10 @@
+F:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\bin\Debug\TestExerciser.Diary.Logic.dll
+F:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\bin\Debug\TestExerciser.Diary.Logic.pdb
+F:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\bin\Debug\System.Data.SQLite.xml
+F:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\obj\Debug\TestExerciser.Diary.Logic.csprojResolveAssemblyReference.cache
+F:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\obj\Debug\TestExerciser.Diary.Logic.dll
+F:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\obj\Debug\TestExerciser.Diary.Logic.pdb
+E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\bin\Debug\TestExerciser.Diary.Logic.dll
+E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\bin\Debug\TestExerciser.Diary.Logic.pdb
+E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\obj\Debug\TestExerciser.Diary.Logic.dll
+E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\obj\Debug\TestExerciser.Diary.Logic.pdb

@@ -1,0 +1,3179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EditorNS</name>
+    </assembly>
+    <members>
+        <member name="T:EditorNS.AutocompleteItem">
+            <summary>
+            Item of autocomplete menu
+            </summary>
+        </member>
+        <member name="M:EditorNS.AutocompleteItem.GetTextForReplace">
+            <summary>
+            Returns text for inserting into Textbox
+            </summary>
+        </member>
+        <member name="M:EditorNS.AutocompleteItem.Compare(System.String)">
+            <summary>
+            Compares fragment text with this item
+            </summary>
+        </member>
+        <member name="M:EditorNS.AutocompleteItem.ToString">
+            <summary>
+            Returns text for display into popup menu
+            </summary>
+        </member>
+        <member name="M:EditorNS.AutocompleteItem.OnSelected(EditorNS.AutocompleteMenu,EditorNS.SelectedEventArgs)">
+            <summary>
+            This method is called after item inserted into text
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutocompleteItem.ToolTipTitle">
+            <summary>
+            Title for tooltip.
+            </summary>
+            <remarks>Return null for disable tooltip for this item</remarks>
+        </member>
+        <member name="P:EditorNS.AutocompleteItem.ToolTipText">
+            <summary>
+            Tooltip text.
+            </summary>
+            <remarks>For display tooltip text, ToolTipTitle must be not null</remarks>
+        </member>
+        <member name="P:EditorNS.AutocompleteItem.MenuText">
+            <summary>
+            Menu text. This text is displayed in the drop-down menu.
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutocompleteItem.ForeColor">
+            <summary>
+            Fore color of text of item
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutocompleteItem.BackColor">
+            <summary>
+            Back color of item
+            </summary>
+        </member>
+        <member name="F:EditorNS.CompareResult.Hidden">
+            <summary>
+            Item do not appears
+            </summary>
+        </member>
+        <member name="F:EditorNS.CompareResult.Visible">
+            <summary>
+            Item appears
+            </summary>
+        </member>
+        <member name="F:EditorNS.CompareResult.VisibleAndSelected">
+            <summary>
+            Item appears and will selected
+            </summary>
+        </member>
+        <member name="T:EditorNS.SnippetAutocompleteItem">
+            <summary>
+            Autocomplete item for code snippets
+            </summary>
+            <remarks>Snippet can contain special char ^ for caret position.</remarks>
+        </member>
+        <member name="M:EditorNS.SnippetAutocompleteItem.Compare(System.String)">
+            <summary>
+            Compares fragment text with this item
+            </summary>
+        </member>
+        <member name="T:EditorNS.MethodAutocompleteItem">
+            <summary>
+            This autocomplete item appears after dot
+            </summary>
+        </member>
+        <member name="T:EditorNS.SuggestItem">
+            <summary>
+            This Item does not check correspondence to current text fragment.
+            SuggestItem is intended for dynamic menus.
+            </summary>
+        </member>
+        <member name="T:EditorNS.AutocompleteMenu">
+            <summary>
+            Popup menu for autocomplete
+            </summary>
+        </member>
+        <member name="M:EditorNS.AutocompleteMenu.Show(System.Boolean)">
+            <summary>
+            Shows popup menu immediately
+            </summary>
+            <param name="forced">If True - MinFragmentLength will be ignored</param>
+        </member>
+        <member name="P:EditorNS.AutocompleteMenu.SearchPattern">
+            <summary>
+            Regex pattern for serach fragment around caret
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutocompleteMenu.MinFragmentLength">
+            <summary>
+            Minimum fragment length for popup
+            </summary>
+        </member>
+        <member name="E:EditorNS.AutocompleteMenu.Selecting">
+            <summary>
+            User selects item
+            </summary>
+        </member>
+        <member name="E:EditorNS.AutocompleteMenu.Selected">
+            <summary>
+            It fires after item inserting
+            </summary>
+        </member>
+        <member name="E:EditorNS.AutocompleteMenu.Opening">
+            <summary>
+            Occurs when popup menu is opening
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutocompleteMenu.AllowTabKey">
+            <summary>
+            Allow TAB for select menu item
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutocompleteMenu.AppearInterval">
+            <summary>
+            Interval of menu appear (ms)
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutocompleteMenu.SelectedColor">
+            <summary>
+            Back color of selected item
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutocompleteMenu.HoveredColor">
+            <summary>
+            Border color of hovered item
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutocompleteMenu.MinimumSize">
+            <summary>
+            Minimal size of menu
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutocompleteMenu.ImageList">
+            <summary>
+            Image list of menu
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutocompleteMenu.ToolTipDuration">
+            <summary>
+            Tooltip duration (ms)
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutocompleteMenu.ToolTip">
+            <summary>
+            Tooltip
+            </summary>
+        </member>
+        <member name="T:EditorNS.BaseBookmarks">
+            <summary>
+            Base class for bookmark collection
+            </summary>
+        </member>
+        <member name="T:EditorNS.Bookmarks">
+            <summary>
+            Collection of bookmarks
+            </summary>
+        </member>
+        <member name="M:EditorNS.Bookmarks.Remove(System.Int32)">
+            <summary>
+            Removes bookmark by line index
+            </summary>
+        </member>
+        <member name="M:EditorNS.Bookmarks.GetBookmark(System.Int32)">
+            <summary>
+            Returns Bookmark by index.
+            </summary>
+        </member>
+        <member name="T:EditorNS.Bookmark">
+            <summary>
+            Bookmark of FastColoredTextbox
+            </summary>
+        </member>
+        <member name="M:EditorNS.Bookmark.DoVisible">
+            <summary>
+            Scroll textbox to the bookmark
+            </summary>
+        </member>
+        <member name="P:EditorNS.Bookmark.Name">
+            <summary>
+            Name of bookmark
+            </summary>
+        </member>
+        <member name="P:EditorNS.Bookmark.LineIndex">
+            <summary>
+            Line index
+            </summary>
+        </member>
+        <member name="P:EditorNS.Bookmark.Color">
+            <summary>
+            Color of bookmark sign
+            </summary>
+        </member>
+        <member name="T:EditorNS.Char">
+            <summary>
+            Char and style
+            </summary>
+        </member>
+        <member name="F:EditorNS.Char.c">
+            <summary>
+            Unicode character
+            </summary>
+        </member>
+        <member name="F:EditorNS.Char.style">
+            <summary>
+            Style bit mask
+            </summary>
+            <remarks>Bit 1 in position n means that this char will rendering by FastColoredTextBox.Styles[n]</remarks>
+        </member>
+        <member name="T:EditorNS.DocumentMap">
+            <summary>
+            Shows document map of FCTB
+            </summary>
+        </member>
+        <member name="P:EditorNS.DocumentMap.Scale">
+            <summary>
+            Scale
+            </summary>
+        </member>
+        <member name="P:EditorNS.DocumentMap.ScrollbarVisible">
+            <summary>
+            Scrollbar visibility
+            </summary>
+        </member>
+        <member name="T:EditorNS.ExportToHTML">
+            <summary>
+            Exports colored text as HTML
+            </summary>
+            <remarks>At this time only TextStyle renderer is supported. Other styles is not exported.</remarks>
+        </member>
+        <member name="P:EditorNS.ExportToHTML.UseNbsp">
+            <summary>
+            Use nbsp; instead space
+            </summary>
+        </member>
+        <member name="P:EditorNS.ExportToHTML.UseForwardNbsp">
+            <summary>
+            Use nbsp; instead space in beginning of line
+            </summary>
+        </member>
+        <member name="P:EditorNS.ExportToHTML.UseOriginalFont">
+            <summary>
+            Use original font
+            </summary>
+        </member>
+        <member name="P:EditorNS.ExportToHTML.UseStyleTag">
+            <summary>
+            Use style tag instead style attribute
+            </summary>
+        </member>
+        <member name="P:EditorNS.ExportToHTML.UseBr">
+            <summary>
+            Use 'br' tag instead of '\n'
+            </summary>
+        </member>
+        <member name="P:EditorNS.ExportToHTML.IncludeLineNumbers">
+            <summary>
+            Includes line numbers
+            </summary>
+        </member>
+        <member name="T:EditorNS.ExportToRTF">
+            <summary>
+            Exports colored text as RTF
+            </summary>
+            <remarks>At this time only TextStyle renderer is supported. Other styles is not exported.</remarks>
+        </member>
+        <member name="P:EditorNS.ExportToRTF.IncludeLineNumbers">
+            <summary>
+            Includes line numbers
+            </summary>
+        </member>
+        <member name="P:EditorNS.ExportToRTF.UseOriginalFont">
+            <summary>
+            Use original font
+            </summary>
+        </member>
+        <member name="F:EditorNS.GoToForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EditorNS.GoToForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EditorNS.GoToForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EditorNS.Hints">
+            <summary>
+            Collection of Hints.
+            This is temporary buffer for currently displayed hints.
+            </summary>
+        </member>
+        <member name="M:EditorNS.Hints.Clear">
+            <summary>
+            Clears all displayed hints
+            </summary>
+        </member>
+        <member name="M:EditorNS.Hints.Add(EditorNS.Hint)">
+            <summary>
+            Add and shows the hint
+            </summary>
+            <param name="hint"></param>
+        </member>
+        <member name="M:EditorNS.Hints.Contains(EditorNS.Hint)">
+            <summary>
+            Is collection contains the hint?
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hints.Count">
+            <summary>
+            Count of hints
+            </summary>
+        </member>
+        <member name="T:EditorNS.Hint">
+            <summary>
+            Hint of FastColoredTextbox
+            </summary>
+        </member>
+        <member name="M:EditorNS.Hint.DoVisible">
+            <summary>
+            Scroll textbox to the hint
+            </summary>
+        </member>
+        <member name="M:EditorNS.Hint.#ctor(EditorNS.Range,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Creates Hint
+            </summary>
+            <param name="range">Linked range</param>
+            <param name="text">Text for simple hint</param>
+            <param name="inline">Inlining. If True then hint will moves apart text</param>
+            <param name="dock">Docking. If True then hint will fill whole line</param>
+        </member>
+        <member name="M:EditorNS.Hint.#ctor(EditorNS.Range,System.String)">
+            <summary>
+            Creates Hint
+            </summary>
+            <param name="range">Linked range</param>
+            <param name="text">Text for simple hint</param>
+        </member>
+        <member name="M:EditorNS.Hint.#ctor(EditorNS.Range,System.Windows.Forms.Control,System.Boolean,System.Boolean)">
+            <summary>
+            Creates Hint
+            </summary>
+            <param name="range">Linked range</param>
+            <param name="innerControl">Inner control</param>
+            <param name="inline">Inlining. If True then hint will moves apart text</param>
+            <param name="dock">Docking. If True then hint will fill whole line</param>
+        </member>
+        <member name="M:EditorNS.Hint.#ctor(EditorNS.Range,System.Windows.Forms.Control)">
+            <summary>
+            Creates Hint
+            </summary>
+            <param name="range">Linked range</param>
+            <param name="innerControl">Inner control</param>
+        </member>
+        <member name="P:EditorNS.Hint.Text">
+            <summary>
+            Text of simple hint
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.Range">
+            <summary>
+            Linked range
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.BackColor">
+            <summary>
+            Backcolor
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.BackColor2">
+            <summary>
+            Second backcolor
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.BorderColor">
+            <summary>
+            Border color
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.ForeColor">
+            <summary>
+            Fore color
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.TextAlignment">
+            <summary>
+            Text alignment
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.Font">
+            <summary>
+            Font
+            </summary>
+        </member>
+        <member name="E:EditorNS.Hint.Click">
+            <summary>
+            Occurs when user click on simple hint
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.InnerControl">
+            <summary>
+            Inner control
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.Dock">
+            <summary>
+            Docking (allows None and Fill only)
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.Width">
+            <summary>
+            Width of hint (if Dock is None)
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.Height">
+            <summary>
+            Height of hint
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.HostPanel">
+            <summary>
+            Host panel
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.Tag">
+            <summary>
+            Tag
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.Cursor">
+            <summary>
+            Cursor
+            </summary>
+        </member>
+        <member name="P:EditorNS.Hint.Inline">
+            <summary>
+            Inlining. If True then hint will moves apart text.
+            </summary>
+        </member>
+        <member name="M:EditorNS.HotkeysEditorForm.GetHotkeys">
+            <summary>
+            Returns edited hotkey map
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:EditorNS.HotkeysEditorForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EditorNS.HotkeysEditorForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EditorNS.HotkeysEditorForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EditorNS.MacrosManager">
+            <summary>
+            This class records, stores and executes the macros.
+            </summary>
+        </member>
+        <member name="M:EditorNS.MacrosManager.ExecuteMacros">
+            <summary>
+            Executes recorded macro
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EditorNS.MacrosManager.AddCharToMacros(System.Char,System.Windows.Forms.Keys)">
+            <summary>
+            Adds the char to current macro
+            </summary>
+        </member>
+        <member name="M:EditorNS.MacrosManager.AddKeyToMacros(System.Windows.Forms.Keys)">
+            <summary>
+            Adds keyboard key to current macro
+            </summary>
+        </member>
+        <member name="M:EditorNS.MacrosManager.ClearMacros">
+            <summary>
+            Clears last recorded macro
+            </summary>
+        </member>
+        <member name="P:EditorNS.MacrosManager.AllowMacroRecordingByUser">
+            <summary>
+            Allows to user to record macros
+            </summary>
+        </member>
+        <member name="P:EditorNS.MacrosManager.IsRecording">
+            <summary>
+            Returns current recording state. Set to True/False to start/stop recording programmatically.
+            </summary>
+        </member>
+        <member name="P:EditorNS.MacrosManager.UnderlayingControl">
+            <summary>
+            FCTB
+            </summary>
+        </member>
+        <member name="P:EditorNS.MacrosManager.MacroIsEmpty">
+            <summary>
+            Returns True if last macro is empty
+            </summary>
+        </member>
+        <member name="P:EditorNS.MacrosManager.Macros">
+            <summary>
+            Macros as string.
+            </summary>
+        </member>
+        <member name="T:EditorNS.HotkeysMapping">
+            <summary>
+            Dictionary of shortcuts for FCTB
+            </summary>
+        </member>
+        <member name="T:EditorNS.FCTBAction">
+            <summary>
+            Actions for shortcuts
+            </summary>
+        </member>
+        <member name="T:EditorNS.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:EditorNS.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:EditorNS.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="F:EditorNS.Ruler.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EditorNS.Ruler.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EditorNS.Ruler.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:EditorNS.SyntaxHighlighter.HighlightSyntax(EditorNS.Language,EditorNS.Range)">
+            <summary>
+            Highlights syntax for given language
+            </summary>
+        </member>
+        <member name="M:EditorNS.SyntaxHighlighter.HighlightSyntax(System.String,EditorNS.Range)">
+            <summary>
+            Highlights syntax for given XML description file
+            </summary>
+        </member>
+        <member name="M:EditorNS.SyntaxHighlighter.CSharpSyntaxHighlight(EditorNS.Range)">
+            <summary>
+            Highlights C# code
+            </summary>
+            <param name="range"></param>
+        </member>
+        <member name="M:EditorNS.SyntaxHighlighter.VBSyntaxHighlight(EditorNS.Range)">
+            <summary>
+            Highlights VB code
+            </summary>
+            <param name="range"></param>
+        </member>
+        <member name="M:EditorNS.SyntaxHighlighter.HTMLSyntaxHighlight(EditorNS.Range)">
+            <summary>
+            Highlights HTML code
+            </summary>
+            <param name="range"></param>
+        </member>
+        <member name="M:EditorNS.SyntaxHighlighter.XMLSyntaxHighlight(EditorNS.Range)">
+            <summary>
+            Highlights XML code
+            </summary>
+            <param name="range"></param>
+        </member>
+        <member name="M:EditorNS.SyntaxHighlighter.SQLSyntaxHighlight(EditorNS.Range)">
+            <summary>
+            Highlights SQL code
+            </summary>
+            <param name="range"></param>
+        </member>
+        <member name="M:EditorNS.SyntaxHighlighter.PHPSyntaxHighlight(EditorNS.Range)">
+            <summary>
+            Highlights PHP code
+            </summary>
+            <param name="range"></param>
+        </member>
+        <member name="M:EditorNS.SyntaxHighlighter.JScriptSyntaxHighlight(EditorNS.Range)">
+            <summary>
+            Highlights JavaScript code
+            </summary>
+            <param name="range"></param>
+        </member>
+        <member name="M:EditorNS.SyntaxHighlighter.LuaSyntaxHighlight(EditorNS.Range)">
+            <summary>
+            Highlights Lua code
+            </summary>
+            <param name="range"></param>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.StringStyle">
+            <summary>
+            String style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.CommentStyle">
+            <summary>
+            Comment style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.NumberStyle">
+            <summary>
+            Number style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.AttributeStyle">
+            <summary>
+            C# attribute style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.ClassNameStyle">
+            <summary>
+            Class name style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.KeywordStyle">
+            <summary>
+            Keyword style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.CommentTagStyle">
+            <summary>
+            Style of tags in comments of C#
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.AttributeValueStyle">
+            <summary>
+            HTML attribute value style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.TagBracketStyle">
+            <summary>
+            HTML tag brackets style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.TagNameStyle">
+            <summary>
+            HTML tag name style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.HtmlEntityStyle">
+            <summary>
+            HTML Entity style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.XmlAttributeStyle">
+            <summary>
+            XML attribute style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.XmlAttributeValueStyle">
+            <summary>
+            XML attribute value style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.XmlTagBracketStyle">
+            <summary>
+            XML tag brackets style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.XmlTagNameStyle">
+            <summary>
+            XML tag name style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.XmlEntityStyle">
+            <summary>
+            XML Entity style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.XmlCDataStyle">
+            <summary>
+            XML CData style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.VariableStyle">
+            <summary>
+            Variable style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.KeywordStyle2">
+            <summary>
+            Specific PHP keyword style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.KeywordStyle3">
+            <summary>
+            Specific PHP keyword style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.StatementsStyle">
+            <summary>
+            SQL Statements style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.FunctionsStyle">
+            <summary>
+            SQL Functions style
+            </summary>
+        </member>
+        <member name="P:EditorNS.SyntaxHighlighter.TypesStyle">
+            <summary>
+            SQL Types style
+            </summary>
+        </member>
+        <member name="T:EditorNS.Language">
+            <summary>
+            Language
+            </summary>
+        </member>
+        <member name="F:EditorNS.ReplaceForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EditorNS.ReplaceForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EditorNS.ReplaceForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EditorNS.Editor">
+            <summary>
+            Fast colored textbox
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ClearHints">
+            <summary>
+            Removes all hints
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.AddHint(EditorNS.Range,System.Windows.Forms.Control,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Add and shows the hint
+            </summary>
+            <param name="range">Linked range</param>
+            <param name="innerControl">Inner control</param>
+            <param name="scrollToHint">Scrolls textbox to the hint</param>
+            <param name="inline">Inlining. If True then hint will moves apart text</param>
+            <param name="dock">Docking. If True then hint will fill whole line</param>
+        </member>
+        <member name="M:EditorNS.Editor.AddHint(EditorNS.Range,System.Windows.Forms.Control)">
+            <summary>
+            Add and shows the hint
+            </summary>
+            <param name="range">Linked range</param>
+            <param name="innerControl">Inner control</param>
+        </member>
+        <member name="M:EditorNS.Editor.AddHint(EditorNS.Range,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Add and shows simple text hint
+            </summary>
+            <param name="range">Linked range</param>
+            <param name="text">Text of simple hint</param>
+            <param name="scrollToHint">Scrolls textbox to the hint</param>
+            <param name="inline">Inlining. If True then hint will moves apart text</param>
+            <param name="dock">Docking. If True then hint will fill whole line</param>
+        </member>
+        <member name="M:EditorNS.Editor.AddHint(EditorNS.Range,System.String)">
+            <summary>
+            Add and shows simple text hint
+            </summary>
+            <param name="range">Linked range</param>
+            <param name="text">Text of simple hint</param>
+        </member>
+        <member name="M:EditorNS.Editor.OnHintClick(EditorNS.Hint)">
+            <summary>
+            Occurs when user click on the hint
+            </summary>
+            <param name="hint"></param>
+        </member>
+        <member name="M:EditorNS.Editor.OnVisibleRangeChanged">
+            <summary>
+            Occurs when VisibleRange is changed
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.Invalidate">
+            <summary>
+            Invalidates the entire surface of the control and causes the control to be redrawn.
+            This method is thread safe and does not require Invoke.
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.GetStylesOfChar(EditorNS.Place)">
+            <summary>
+            Returns list of styles of given place
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.NeedRecalc">
+            <summary>
+            Call this method if the recalc of the position of lines is needed.
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.NeedRecalc(System.Boolean)">
+            <summary>
+            Call this method if the recalc of the position of lines is needed.
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.NeedRecalc(System.Boolean,System.Boolean)">
+            <summary>
+            Call this method if the recalc of the position of lines is needed.
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.NavigateForward">
+            <summary>
+            Navigates forward (by Line.LastVisit property)
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.NavigateBackward">
+            <summary>
+            Navigates backward (by Line.LastVisit property)
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.Navigate(System.Int32)">
+            <summary>
+            Navigates to defined line, without Line.LastVisit reseting
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.AddStyle(EditorNS.Style)">
+            <summary>
+            Add new style
+            </summary>
+            <returns>Layer index of this style</returns>
+        </member>
+        <member name="M:EditorNS.Editor.ShowFindDialog">
+            <summary>
+            Shows find dialog
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ShowFindDialog(System.String)">
+            <summary>
+            Shows find dialog
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ShowReplaceDialog">
+            <summary>
+            Shows replace dialog
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ShowReplaceDialog(System.String)">
+            <summary>
+            Shows replace dialog
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.GetLineLength(System.Int32)">
+            <summary>
+            Gets length of given line
+            </summary>
+            <param name="iLine">Line index</param>
+            <returns>Length of line</returns>
+        </member>
+        <member name="M:EditorNS.Editor.GetLine(System.Int32)">
+            <summary>
+            Get range of line
+            </summary>
+            <param name="iLine">Line index</param>
+        </member>
+        <member name="M:EditorNS.Editor.Copy">
+            <summary>
+            Copy selected text into Clipboard
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.Cut">
+            <summary>
+            Cut selected text into Clipboard
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.Paste">
+            <summary>
+            Paste text from clipboard into selected position
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.SelectAll">
+            <summary>
+            Select all chars of text
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.GoEnd">
+            <summary>
+            Move caret to end of text
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.GoHome">
+            <summary>
+            Move caret to first position
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.Clear">
+            <summary>
+            Clear text, styles, history, caches
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ClearStylesBuffer">
+            <summary>
+            Clear buffer of styles
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ClearStyle(EditorNS.StyleIndex)">
+            <summary>
+            Clear style of all text
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ClearUndo">
+            <summary>
+            Clears undo and redo stacks
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.InsertText(System.String)">
+            <summary>
+            Insert text into current selected position
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.InsertText(System.String,System.Boolean)">
+            <summary>
+            Insert text into current selected position
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:EditorNS.Editor.InsertText(System.String,EditorNS.Style)">
+            <summary>
+            Insert text into current selection position (with predefined style)
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:EditorNS.Editor.InsertText(System.String,EditorNS.Style,System.Boolean)">
+            <summary>
+            Insert text into current selection position (with predefined style)
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.AppendText(System.String)">
+            <summary>
+            Append string to end of the Text
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.AppendText(System.String,EditorNS.Style)">
+            <summary>
+            Append string to end of the Text
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.GetStyleIndex(EditorNS.Style)">
+            <summary>
+            Returns index of the style in Styles
+            -1 otherwise
+            </summary>
+            <param name="style"></param>
+            <returns>Index of the style in Styles</returns>
+        </member>
+        <member name="M:EditorNS.Editor.GetStyleIndexMask(EditorNS.Style[])">
+            <summary>
+            Returns StyleIndex mask of given styles
+            </summary>
+            <param name="styles"></param>
+            <returns>StyleIndex mask of given styles</returns>
+        </member>
+        <member name="M:EditorNS.Editor.ClearSelected">
+            <summary>
+            Deletes selected chars
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ClearCurrentLine">
+            <summary>
+            Deletes current line(s)
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.CalcCutOffs(System.Collections.Generic.List{System.Int32},System.Int32,System.Int32,System.Boolean,System.Boolean,EditorNS.Line)">
+            <summary>
+            Calculates wordwrap cutoffs
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.DoVisibleRectangle(System.Drawing.Rectangle)">
+            <summary>
+            Scroll control for display defined rectangle
+            </summary>
+            <param name="rect"></param>
+        </member>
+        <member name="M:EditorNS.Editor.UpdateScrollbars">
+            <summary>
+            Updates scrollbar position after Value changed
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.DoCaretVisible">
+            <summary>
+            Scroll control for display caret
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ScrollLeft">
+            <summary>
+            Scroll control left
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.DoSelectionVisible">
+            <summary>
+            Scroll control for display selection area
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.DoRangeVisible(EditorNS.Range)">
+            <summary>
+            Scroll control for display given range
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.DoRangeVisible(EditorNS.Range,System.Boolean)">
+            <summary>
+            Scroll control for display given range
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ProcessKey(System.Windows.Forms.Keys)">
+            <summary>
+            Process control keys
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.GotoNextBookmark(System.Int32)">
+            <summary>
+            Scrolls to nearest bookmark or to first bookmark
+            </summary>
+            <param name="iLine">Current bookmark line index</param>
+        </member>
+        <member name="M:EditorNS.Editor.GotoPrevBookmark(System.Int32)">
+            <summary>
+            Scrolls to nearest previous bookmark or to last bookmark
+            </summary>
+            <param name="iLine">Current bookmark line index</param>
+        </member>
+        <member name="M:EditorNS.Editor.BookmarkLine(System.Int32)">
+            <summary>
+            Bookmarks line
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.UnbookmarkLine(System.Int32)">
+            <summary>
+            Unbookmarks current line
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.MoveSelectedLinesDown">
+            <summary>
+            Moves selected lines down
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.MoveSelectedLinesUp">
+            <summary>
+            Moves selected lines up
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.UpperCase">
+            <summary>
+            Convert selected text to upper case
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.LowerCase">
+            <summary>
+            Convert selected text to lower case
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.CommentSelected">
+            <summary>
+            Insert/remove comment prefix into selected lines
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.CommentSelected(System.String)">
+            <summary>
+            Insert/remove comment prefix into selected lines
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ProcessKey(System.Char,System.Windows.Forms.Keys)">
+            <summary>
+            Process "real" keys (no control)
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.DoAutoIndentChars(System.Int32)">
+            <summary>
+            Do AutoIndentChars
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.FindChar(System.Char)">
+            <summary>
+            Finds given char after current caret position, moves the caret to found pos.
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:EditorNS.Editor.DoAutoIndent(System.Int32)">
+            <summary>
+            Inserts autoindent's spaces in the line
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.CalcAutoIndent(System.Int32)">
+            <summary>
+            Returns needed start space count for the line
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.Undo">
+            <summary>
+            Undo last operation
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.Redo">
+            <summary>
+            Redo
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.DrawText(System.Drawing.Graphics,EditorNS.Place,System.Drawing.Size)">
+            <summary>
+            Draws text to given Graphics
+            </summary>
+            <param name="gr"></param>
+            <param name="start">Start place of drawing text</param>
+            <param name="size">Size of drawing</param>
+        </member>
+        <member name="M:EditorNS.Editor.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Draw control
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.GetControlPanelWheelScrollLinesValue">
+            <summary>
+            Gets the value for the system control panel mouse wheel scroll settings.
+            The value returns the number of lines that shall be scolled if the user turns the mouse wheet one step.
+            </summary>
+            <remarks>
+            This methods gets the "WheelScrollLines" value our from the registry key "HKEY_CURRENT_USER\Control Panel\Desktop".
+            If the value of this option is 0, the screen will not scroll when the mouse wheel is turned.
+            If the value of this option is -1 or is greater than the number of lines visible in the window,
+            the screen will scroll up or down by one page.
+            </remarks>
+            <returns>
+            Number of lines to scrol l when the mouse wheel is turned
+            </returns>
+        </member>
+        <member name="M:EditorNS.Editor.PointToPlace(System.Drawing.Point)">
+            <summary>
+            Gets nearest line and char position from coordinates
+            </summary>
+            <param name="point">Point</param>
+            <returns>Line and char position</returns>
+        </member>
+        <member name="M:EditorNS.Editor.PointToPosition(System.Drawing.Point)">
+            <summary>
+            Gets nearest absolute text position for given point
+            </summary>
+            <param name="point">Point</param>
+            <returns>Position</returns>
+        </member>
+        <member name="M:EditorNS.Editor.OnTextChanging(System.String@)">
+            <summary>
+            Fires TextChanging event
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.OnTextChanged">
+            <summary>
+            Fires TextChanged event
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.OnTextChanged(System.Int32,System.Int32)">
+            <summary>
+            Fires TextChanged event
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.OnTextChanged(EditorNS.Range)">
+            <summary>
+            Fires TextChanged event
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.BeginUpdate">
+            <summary>
+            Call this method before multiple text changing
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.EndUpdate">
+            <summary>
+            Call this method after multiple text changing
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.OnTextChanged(EditorNS.TextChangedEventArgs)">
+            <summary>
+            Fires TextChanged event
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ClearFoldingState(EditorNS.Range)">
+            <summary>
+            Clears folding state for range of text
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.OnSelectionChanged">
+            <summary>
+            Fires SelectionChanged event
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.PlaceToPosition(EditorNS.Place)">
+            <summary>
+            Gets absolute text position from line and char position
+            </summary>
+            <param name="point">Line and char position</param>
+            <returns>Point of char</returns>
+        </member>
+        <member name="M:EditorNS.Editor.PositionToPlace(System.Int32)">
+            <summary>
+            Gets line and char position from absolute text position
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.PositionToPoint(System.Int32)">
+            <summary>
+            Gets absolute char position from char position
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.PlaceToPoint(EditorNS.Place)">
+            <summary>
+            Gets point for given line and char position
+            </summary>
+            <param name="place">Line and char position</param>
+            <returns>Coordiantes</returns>
+        </member>
+        <member name="M:EditorNS.Editor.GetRange(System.Int32,System.Int32)">
+            <summary>
+            Get range of text
+            </summary>
+            <param name="fromPos">Absolute start position</param>
+            <param name="toPos">Absolute finish position</param>
+            <returns>Range</returns>
+        </member>
+        <member name="M:EditorNS.Editor.GetRange(EditorNS.Place,EditorNS.Place)">
+            <summary>
+            Get range of text
+            </summary>
+            <param name="fromPlace">Line and char position</param>
+            <param name="toPlace">Line and char position</param>
+            <returns>Range</returns>
+        </member>
+        <member name="M:EditorNS.Editor.GetRanges(System.String)">
+            <summary>
+            Finds ranges for given regex pattern
+            </summary>
+            <param name="regexPattern">Regex pattern</param>
+            <returns>Enumeration of ranges</returns>
+        </member>
+        <member name="M:EditorNS.Editor.GetRanges(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Finds ranges for given regex pattern
+            </summary>
+            <param name="regexPattern">Regex pattern</param>
+            <returns>Enumeration of ranges</returns>
+        </member>
+        <member name="M:EditorNS.Editor.GetLineText(System.Int32)">
+            <summary>
+            Get text of given line
+            </summary>
+            <param name="iLine">Line index</param>
+            <returns>Text</returns>
+        </member>
+        <member name="M:EditorNS.Editor.ExpandFoldedBlock(System.Int32)">
+            <summary>
+            Exapnds folded block
+            </summary>
+            <param name="iLine">Start line</param>
+        </member>
+        <member name="M:EditorNS.Editor.AdjustFolding">
+            <summary>
+            Collapse folding blocks using FoldedBlocks dictionary.
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ExpandBlock(System.Int32,System.Int32)">
+            <summary>
+            Expand collapsed block
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ExpandBlock(System.Int32)">
+            <summary>
+            Expand collapsed block
+            </summary>
+            <param name="iLine">Any line inside collapsed block</param>
+        </member>
+        <member name="M:EditorNS.Editor.CollapseAllFoldingBlocks">
+            <summary>
+            Collapses all folding blocks
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ExpandAllFoldingBlocks">
+            <summary>
+            Exapnds all folded blocks
+            </summary>
+            <param name="iLine"></param>
+        </member>
+        <member name="M:EditorNS.Editor.CollapseFoldingBlock(System.Int32)">
+            <summary>
+            Collapses folding block
+            </summary>
+            <param name="iLine">Start folding line</param>
+        </member>
+        <member name="M:EditorNS.Editor.GetLineFoldingStartMarker(System.Int32)">
+            <summary>
+            Start foilding marker for the line
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.GetLineFoldingEndMarker(System.Int32)">
+            <summary>
+            End foilding marker for the line
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.CollapseBlock(System.Int32,System.Int32)">
+            <summary>
+            Collapse text block
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.IncreaseIndent">
+            <summary>
+            Insert TAB into front of seletcted lines.
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.DecreaseIndent">
+            <summary>
+            Remove TAB from front of seletcted lines.
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.DecreaseIndentOfSingleLine">
+            <summary>
+            Remove TAB in front of the caret ot the selected line.
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.DoAutoIndent">
+            <summary>
+            Insert autoindents into selected lines
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.InsertLinePrefix(System.String)">
+            <summary>
+            Insert prefix into front of seletcted lines
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.RemoveLinePrefix(System.String)">
+            <summary>
+            Remove prefix from front of selected lines
+            This method ignores forward spaces of the line
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.BeginAutoUndo">
+            <summary>
+            Begins AutoUndo block.
+            All changes of text between BeginAutoUndo() and EndAutoUndo() will be canceled in one operation Undo.
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.EndAutoUndo">
+            <summary>
+            Ends AutoUndo block.
+            All changes of text between BeginAutoUndo() and EndAutoUndo() will be canceled in one operation Undo.
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.HighlightBrackets(System.Char,System.Char,EditorNS.Range@,EditorNS.Range@)">
+            <summary>
+            Highlights brackets around caret
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.SelectNext(System.String,System.Boolean,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Selectes next fragment for given regex.
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.Print(EditorNS.Range,EditorNS.PrintDialogSettings)">
+            <summary>
+            Prints range of text
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.Print(EditorNS.PrintDialogSettings)">
+            <summary>
+            Prints all text
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.Print">
+            <summary>
+            Prints all text, without any dialog windows
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.OpenFile(System.String,System.Text.Encoding)">
+            <summary>
+            Open text file
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.OpenFile(System.String)">
+            <summary>
+            Open text file (with automatic encoding detector)
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.OpenBindingFile(System.String,System.Text.Encoding)">
+            <summary>
+            Open file binding mode
+            </summary>
+            <param name="fileName"></param>
+            <param name="enc"></param>
+        </member>
+        <member name="M:EditorNS.Editor.CloseBindingFile">
+            <summary>
+            Close file binding mode
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.SaveToFile(System.String,System.Text.Encoding)">
+            <summary>
+            Save text to the file
+            </summary>
+            <param name="fileName"></param>
+            <param name="enc"></param>
+        </member>
+        <member name="M:EditorNS.Editor.SetVisibleState(System.Int32,EditorNS.VisibleState)">
+            <summary>
+            Set VisibleState of line
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.GetVisibleState(System.Int32)">
+            <summary>
+            Returns VisibleState of the line
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ShowGoToDialog">
+            <summary>
+            Shows Goto dialog form
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.OnUndoRedoStateChanged">
+            <summary>
+            Occurs when undo/redo stack is changed
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.FindLines(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Search lines by regex pattern
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.RemoveLines(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Removes given lines
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.ActivateMiddleClickScrollingMode(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Activates the scrolling mode (middle click button).
+            </summary>
+            <param name="e">MouseEventArgs</param>
+        </member>
+        <member name="M:EditorNS.Editor.DeactivateMiddleClickScrollingMode">
+            <summary>
+            Deactivates the scrolling mode (middle click button).
+            </summary>
+        </member>
+        <member name="M:EditorNS.Editor.RestoreScrollsAfterMiddleClickScrollingMode">
+            <summary>
+            Restore scrolls
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.AutoCompleteBrackets">
+            <summary>
+            AutoComplete brackets
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.FoldedBlocks">
+            <summary>
+            Contains UniqueId of start lines of folded blocks
+            </summary>
+            <remarks>This dictionary remembers folding state of blocks.
+            It is needed to restore child folding after user collapsed/expanded top-level folding block.</remarks>
+        </member>
+        <member name="P:EditorNS.Editor.BracketsHighlightStrategy">
+            <summary>
+            Strategy of search of brackets to highlighting
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.WordWrapAutoIndent">
+            <summary>
+            Automatically shifts secondary wordwrap lines on the shift amount of the first line
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.WordWrapIndent">
+            <summary>
+            Indent of secondary wordwrap lines (in chars)
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.MacrosManager">
+            <summary>
+            MacrosManager records, stores and executes the macroses
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.AllowDrop">
+            <summary>
+            Allows drag and drop
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Hints">
+            <summary>
+            Collection of Hints.
+            This is temporary buffer for currently displayed hints.
+            </summary>
+            <remarks>You can asynchronously add, remove and clear hints. Appropriate hints will be shown or hidden from the screen.</remarks>
+        </member>
+        <member name="P:EditorNS.Editor.ToolTipDelay">
+            <summary>
+            Delay (ms) of ToolTip
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.ToolTip">
+            <summary>
+            ToolTip component
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.BookmarkColor">
+            <summary>
+            Color of bookmarks
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Bookmarks">
+            <summary>
+            Bookmarks
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.VirtualSpace">
+            <summary>
+            Enables virtual spaces
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.FindEndOfFoldingBlockStrategy">
+            <summary>
+            Strategy of search of end of folding block
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.AcceptsTab">
+            <summary>
+            Indicates if tab characters are accepted as input
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.AcceptsReturn">
+            <summary>
+            Indicates if return characters are accepted as input
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.CaretVisible">
+            <summary>
+            Shows or hides the caret
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.CaretBlinking">
+            <summary>
+            Enables caret blinking
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.TextAreaBorderColor">
+            <summary>
+            Color of border of text area
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.TextAreaBorder">
+            <summary>
+            Type of border of text area
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.CurrentLineColor">
+            <summary>
+            Background color for current line
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.ChangedLineColor">
+            <summary>
+            Background color for highlighting of changed lines
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.ForeColor">
+            <summary>
+            Fore color (default style color)
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.CharHeight">
+            <summary>
+            Height of char in pixels (includes LineInterval)
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.LineInterval">
+            <summary>
+            Interval between lines (in pixels)
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.CharWidth">
+            <summary>
+            Width of char in pixels
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.TabLength">
+            <summary>
+            Spaces count for tab
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.IsChanged">
+            <summary>
+            Text was changed
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.TextVersion">
+            <summary>
+            Text version
+            </summary>
+            <remarks>This counter is incremented each time changes the text</remarks>
+        </member>
+        <member name="P:EditorNS.Editor.ReadOnly">
+            <summary>
+            Read only
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.ShowLineNumbers">
+            <summary>
+            Shows line numbers.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.ShowFoldingLines">
+            <summary>
+            Shows vertical lines between folding start line and folding end line.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.TextAreaRect">
+            <summary>
+            Rectangle where located text
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.LineNumberColor">
+            <summary>
+            Color of line numbers.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.LineNumberStartValue">
+            <summary>
+            Start value of first line number.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.IndentBackColor">
+            <summary>
+            Background color of indent area
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.PaddingBackColor">
+            <summary>
+            Background color of padding area
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.DisabledColor">
+            <summary>
+            Color of disabled component
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.CaretColor">
+            <summary>
+            Color of caret
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.WideCaret">
+            <summary>
+            Wide caret
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.ServiceLinesColor">
+            <summary>
+            Color of service lines (folding lines, borders of blocks etc.)
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Paddings">
+            <summary>
+            Padings of text area
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Padding">
+            <summary>
+            --Do not use this property--
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.FoldingIndicatorColor">
+            <summary>
+            Color of folding area indicator
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.HighlightFoldingIndicator">
+            <summary>
+            Enables folding indicator (left vertical line between folding bounds)
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.LeftIndent">
+            <summary>
+            Left distance to text beginning
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.LeftPadding">
+            <summary>
+            Left padding in pixels
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.PreferredLineWidth">
+            <summary>
+            This property draws vertical line after defined char position.
+            Set to 0 for disable drawing of vertical line.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Styles">
+            <summary>
+            Styles
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Hotkeys">
+            <summary>
+            Hotkeys. Do not use this property in your code, use HotkeysMapping property.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.HotkeysMapping">
+            <summary>
+            Hotkeys mapping
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.DefaultStyle">
+            <summary>
+            Default text style
+            This style is using when no one other TextStyle is not defined in Char.style
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.SelectionStyle">
+            <summary>
+            Style for rendering Selection area
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.FoldedBlockStyle">
+            <summary>
+            Style for folded block rendering
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.BracketsStyle">
+            <summary>
+            Style for brackets highlighting
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.BracketsStyle2">
+            <summary>
+            Style for alternative brackets highlighting
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.LeftBracket">
+            <summary>
+            Opening bracket for brackets highlighting.
+            Set to '\x0' for disable brackets highlighting.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.RightBracket">
+            <summary>
+            Closing bracket for brackets highlighting.
+            Set to '\x0' for disable brackets highlighting.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.LeftBracket2">
+            <summary>
+            Alternative opening bracket for brackets highlighting.
+            Set to '\x0' for disable brackets highlighting.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.RightBracket2">
+            <summary>
+            Alternative closing bracket for brackets highlighting.
+            Set to '\x0' for disable brackets highlighting.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.CommentPrefix">
+            <summary>
+            Comment line prefix.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.HighlightingRangeType">
+            <summary>
+            This property specifies which part of the text will be highlighted as you type (by built-in highlighter).
+            </summary>
+            <remarks>When a user enters text, a component refreshes highlighting (because the text was changed).
+            This property specifies exactly which section of the text will be re-highlighted.
+            This can be useful to highlight multi-line comments, for example.</remarks>
+        </member>
+        <member name="P:EditorNS.Editor.IsReplaceMode">
+            <summary>
+            Is keyboard in replace mode (wide caret) ?
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.AllowSeveralTextStyleDrawing">
+            <summary>
+            Allows text rendering several styles same time.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.AllowMacroRecording">
+            <summary>
+            Allows to record macros.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.AutoIndent">
+            <summary>
+            Allows AutoIndent. Inserts spaces before new line.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.AutoIndentExistingLines">
+            <summary>
+            Does autoindenting in existing lines. It works only if AutoIndent is True.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.DelayedEventsInterval">
+            <summary>
+            Minimal delay(ms) for delayed events (except TextChangedDelayed).
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.DelayedTextChangedInterval">
+            <summary>
+            Minimal delay(ms) for TextChangedDelayed event.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Language">
+            <summary>
+            Language for highlighting by built-in highlighter.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.SyntaxHighlighter">
+            <summary>
+            Syntax Highlighter
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.DescriptionFile">
+            <summary>
+            XML file with description of syntax highlighting.
+            This property works only with Language == Language.Custom.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.LeftBracketPosition">
+            <summary>
+            Position of left highlighted bracket.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.RightBracketPosition">
+            <summary>
+            Position of right highlighted bracket.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.LeftBracketPosition2">
+            <summary>
+            Position of left highlighted alternative bracket.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.RightBracketPosition2">
+            <summary>
+            Position of right highlighted alternative bracket.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.StartFoldingLine">
+            <summary>
+            Start line index of current highlighted folding area. Return -1 if start of area is not found.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.EndFoldingLine">
+            <summary>
+            End line index of current highlighted folding area. Return -1 if end of area is not found.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.TextSource">
+            <summary>
+            TextSource
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.SourceTextBox">
+            <summary>
+            The source of the text.
+            Allows to get text from other FastColoredTextBox.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.VisibleRange">
+            <summary>
+            Returns current visible range of text
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Selection">
+            <summary>
+            Current selection range
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.BackColor">
+            <summary>
+            Background color.
+            It is used if BackBrush is null.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.BackBrush">
+            <summary>
+            Background brush.
+            If Null then BackColor is used.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Multiline">
+            <summary>
+            Multiline
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.WordWrap">
+            <summary>
+            WordWrap.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.WordWrapMode">
+            <summary>
+            WordWrap mode.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.SelectionHighlightingForLineBreaksEnabled">
+            <summary>
+            If <c>true</c> then line breaks included into the selection will be selected too.
+            Then line breaks will be shown as selected blank character.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.AutoScroll">
+            <summary>
+            Do not change this property
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.LinesCount">
+            <summary>
+            Count of lines
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Item(EditorNS.Place)">
+            <summary>
+            Gets or sets char and styleId for given place
+            This property does not fire OnTextChanged event
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Item(System.Int32)">
+            <summary>
+            Gets Line
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Text">
+            <summary>
+            Text of control
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Lines">
+            <summary>
+            Text lines
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Html">
+            <summary>
+            Gets colored text as HTML
+            </summary>
+            <remarks>For more flexibility you can use ExportToHTML class also</remarks>
+        </member>
+        <member name="P:EditorNS.Editor.Rtf">
+            <summary>
+            Gets colored text as RTF
+            </summary>
+            <remarks>For more flexibility you can use ExportToRTF class also</remarks>
+        </member>
+        <member name="P:EditorNS.Editor.SelectedText">
+            <summary>
+            Text of current selection
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.SelectionStart">
+            <summary>
+            Start position of selection
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.SelectionLength">
+            <summary>
+            Length of selected text
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Font">
+            <summary>
+            Font
+            </summary>
+            <remarks>Use only monospaced font</remarks>
+        </member>
+        <member name="P:EditorNS.Editor.BaseFont">
+            <summary>
+            Font
+            </summary>
+            <remarks>Use only monospaced font</remarks>
+        </member>
+        <member name="P:EditorNS.Editor.ImeAllowed">
+            <summary>
+            Indicates that IME is allowed (for CJK language entering)
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.UndoEnabled">
+            <summary>
+            Is undo enabled?
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.RedoEnabled">
+            <summary>
+            Is redo enabled?
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Range">
+            <summary>
+            Range of all text
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.SelectionColor">
+            <summary>
+            Color of selected area
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.ReservedCountOfLineNumberChars">
+            <summary>
+            Reserved space for line number characters.
+            If smaller than needed (e. g. line count >= 10 and this value set to 1) this value will have no impact.
+            If you want to reserve space, e. g. for line numbers >= 10 or >= 100 than you can set this value to 2 or 3 or higher.
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.ToolTipNeeded">
+            <summary>
+            Occurs when mouse is moving over text and tooltip is needed
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.HintClick">
+            <summary>
+            HintClick event.
+            It occurs if user click on the hint.
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.TextChanged">
+            <summary>
+            TextChanged event.
+            It occurs after insert, delete, clear, undo and redo operations.
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.BindingTextChanged">
+            <summary>
+            Fake event for correct data binding
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.Pasting">
+            <summary>
+            Occurs when user paste text from clipboard
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.TextChanging">
+            <summary>
+            TextChanging event.
+            It occurs before insert, delete, clear, undo and redo operations.
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.SelectionChanged">
+            <summary>
+            SelectionChanged event.
+            It occurs after changing of selection.
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.VisibleRangeChanged">
+            <summary>
+            VisibleRangeChanged event.
+            It occurs after changing of visible range.
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.TextChangedDelayed">
+            <summary>
+            TextChangedDelayed event. 
+            It occurs after insert, delete, clear, undo and redo operations. 
+            This event occurs with a delay relative to TextChanged, and fires only once.
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.SelectionChangedDelayed">
+            <summary>
+            SelectionChangedDelayed event.
+            It occurs after changing of selection.
+            This event occurs with a delay relative to SelectionChanged, and fires only once.
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.VisibleRangeChangedDelayed">
+            <summary>
+            VisibleRangeChangedDelayed event.
+            It occurs after changing of visible range.
+            This event occurs with a delay relative to VisibleRangeChanged, and fires only once.
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.VisualMarkerClick">
+            <summary>
+            It occurs when user click on VisualMarker.
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.KeyPressing">
+            <summary>
+            It occurs when visible char is enetering (alphabetic, digit, punctuation, DEL, BACKSPACE)
+            </summary>
+            <remarks>Set Handle to True for cancel key</remarks>
+        </member>
+        <member name="E:EditorNS.Editor.KeyPressed">
+            <summary>
+            It occurs when visible char is enetered (alphabetic, digit, punctuation, DEL, BACKSPACE)
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.AutoIndentNeeded">
+            <summary>
+            It occurs when calculates AutoIndent for new line
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.PaintLine">
+            <summary>
+            It occurs when line background is painting
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.LineInserted">
+            <summary>
+            Occurs when line was inserted/added
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.LineRemoved">
+            <summary>
+            Occurs when line was removed
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.FoldingHighlightChanged">
+            <summary>
+            Occurs when current highlighted folding area is changed.
+            Current folding area see in StartFoldingLine and EndFoldingLine.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="E:EditorNS.Editor.UndoRedoStateChanged">
+            <summary>
+            Occurs when undo/redo stack is changed
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="E:EditorNS.Editor.ZoomChanged">
+            <summary>
+            Occurs when component was zoomed
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.CustomAction">
+            <summary>
+            Occurs when user pressed key, that specified as CustomAction
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.ScrollbarsUpdated">
+            <summary>
+            Occurs when scroolbars are updated
+            </summary>
+        </member>
+        <member name="E:EditorNS.Editor.WordWrapNeeded">
+            <summary>
+            Occurs when custom wordwrap is needed
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.AutoIndentChars">
+            <summary>
+            Enables AutoIndentChars mode
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.AutoIndentCharsPatterns">
+            <summary>
+            Regex patterns for AutoIndentChars (one regex per line)
+            </summary>
+        </member>
+        <member name="P:EditorNS.Editor.Zoom">
+            <summary>
+            Zooming (in percentages)
+            </summary>
+        </member>
+        <member name="P:EditorNS.LineInsertedEventArgs.Index">
+            <summary>
+            Inserted line index
+            </summary>
+        </member>
+        <member name="P:EditorNS.LineInsertedEventArgs.Count">
+            <summary>
+            Count of inserted lines
+            </summary>
+        </member>
+        <member name="P:EditorNS.LineRemovedEventArgs.Index">
+            <summary>
+            Removed line index
+            </summary>
+        </member>
+        <member name="P:EditorNS.LineRemovedEventArgs.Count">
+            <summary>
+            Count of removed lines
+            </summary>
+        </member>
+        <member name="P:EditorNS.LineRemovedEventArgs.RemovedLineUniqueIds">
+            <summary>
+            UniqueIds of removed lines
+            </summary>
+        </member>
+        <member name="T:EditorNS.TextChangedEventArgs">
+            <summary>
+            TextChanged event argument
+            </summary>
+        </member>
+        <member name="M:EditorNS.TextChangedEventArgs.#ctor(EditorNS.Range)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:EditorNS.TextChangedEventArgs.ChangedRange">
+            <summary>
+            This range contains changed area of text
+            </summary>
+        </member>
+        <member name="P:EditorNS.TextChangingEventArgs.Cancel">
+            <summary>
+            Set to true if you want to cancel text inserting
+            </summary>
+        </member>
+        <member name="F:EditorNS.WordWrapMode.WordWrapControlWidth">
+            <summary>
+            Word wrapping by control width
+            </summary>
+        </member>
+        <member name="F:EditorNS.WordWrapMode.WordWrapPreferredWidth">
+            <summary>
+            Word wrapping by preferred line width (PreferredLineWidth)
+            </summary>
+        </member>
+        <member name="F:EditorNS.WordWrapMode.CharWrapControlWidth">
+            <summary>
+            Char wrapping by control width
+            </summary>
+        </member>
+        <member name="F:EditorNS.WordWrapMode.CharWrapPreferredWidth">
+            <summary>
+            Char wrapping by preferred line width (PreferredLineWidth)
+            </summary>
+        </member>
+        <member name="F:EditorNS.WordWrapMode.Custom">
+            <summary>
+            Custom wrap (by event WordWrapNeeded)
+            </summary>
+        </member>
+        <member name="P:EditorNS.PrintDialogSettings.Title">
+            <summary>
+            Title of page. If you want to print Title on the page, insert code &amp;w in Footer or Header.
+            </summary>
+        </member>
+        <member name="P:EditorNS.PrintDialogSettings.Footer">
+            <summary>
+            Footer of page.
+            Here you can use special codes: &amp;w (Window title), &amp;D, &amp;d (Date), &amp;t(), &amp;4 (Time), &amp;p (Current page number), &amp;P (Total number of pages),  &amp;&amp; (A single ampersand), &amp;b (Right justify text, Center text. If &amp;b occurs once, then anything after the &amp;b is right justified. If &amp;b occurs twice, then anything between the two &amp;b is centered, and anything after the second &amp;b is right justified).
+            More detailed see <see cref="!:http://msdn.microsoft.com/en-us/library/aa969429(v=vs.85).aspx">here</see>
+            </summary>
+        </member>
+        <member name="P:EditorNS.PrintDialogSettings.Header">
+            <summary>
+            Header of page
+            Here you can use special codes: &amp;w (Window title), &amp;D, &amp;d (Date), &amp;t(), &amp;4 (Time), &amp;p (Current page number), &amp;P (Total number of pages),  &amp;&amp; (A single ampersand), &amp;b (Right justify text, Center text. If &amp;b occurs once, then anything after the &amp;b is right justified. If &amp;b occurs twice, then anything between the two &amp;b is centered, and anything after the second &amp;b is right justified).
+            More detailed see <see cref="!:http://msdn.microsoft.com/en-us/library/aa969429(v=vs.85).aspx">here</see>
+            </summary>
+        </member>
+        <member name="P:EditorNS.PrintDialogSettings.IncludeLineNumbers">
+            <summary>
+            Prints line numbers
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutoIndentEventArgs.Shift">
+            <summary>
+            Additional spaces count for this line, relative to previous line
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutoIndentEventArgs.ShiftNextLines">
+            <summary>
+            Additional spaces count for next line, relative to previous line
+            </summary>
+        </member>
+        <member name="P:EditorNS.AutoIndentEventArgs.AbsoluteIndentation">
+            <summary>
+            Absolute indentation of current line. You can change this property if you want to set absolute indentation.
+            </summary>
+        </member>
+        <member name="T:EditorNS.HighlightingRangeType">
+            <summary>
+            Type of highlighting
+            </summary>
+        </member>
+        <member name="F:EditorNS.HighlightingRangeType.ChangedRange">
+            <summary>
+            Highlight only changed range of text. Highest performance.
+            </summary>
+        </member>
+        <member name="F:EditorNS.HighlightingRangeType.VisibleRange">
+            <summary>
+            Highlight visible range of text. Middle performance.
+            </summary>
+        </member>
+        <member name="F:EditorNS.HighlightingRangeType.AllTextRange">
+            <summary>
+            Highlight all (visible and invisible) text. Lowest performance.
+            </summary>
+        </member>
+        <member name="T:EditorNS.FindEndOfFoldingBlockStrategy">
+            <summary>
+            Strategy of search of end of folding block
+            </summary>
+        </member>
+        <member name="T:EditorNS.BracketsHighlightStrategy">
+            <summary>
+            Strategy of search of brackets to highlighting
+            </summary>
+        </member>
+        <member name="T:EditorNS.ToolTipNeededEventArgs">
+            <summary>
+            ToolTipNeeded event args
+            </summary>
+        </member>
+        <member name="T:EditorNS.HintClickEventArgs">
+            <summary>
+            HintClick event args
+            </summary>
+        </member>
+        <member name="T:EditorNS.CustomActionEventArgs">
+            <summary>
+            CustomAction event args
+            </summary>
+        </member>
+        <member name="T:EditorNS.StyleIndex">
+            <summary>
+            Style index mask (16 styles)
+            </summary>
+        </member>
+        <member name="T:EditorNS.InsertCharCommand">
+            <summary>
+            Insert single char
+            </summary>
+            <remarks>This operation includes also insertion of new line and removing char by backspace</remarks>
+        </member>
+        <member name="M:EditorNS.InsertCharCommand.#ctor(EditorNS.TextSource,System.Char)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="tb">Underlaying textbox</param>
+            <param name="c">Inserting char</param>
+        </member>
+        <member name="M:EditorNS.InsertCharCommand.Undo">
+            <summary>
+            Undo operation
+            </summary>
+        </member>
+        <member name="M:EditorNS.InsertCharCommand.Execute">
+            <summary>
+            Execute operation
+            </summary>
+        </member>
+        <member name="M:EditorNS.InsertCharCommand.MergeLines(System.Int32,EditorNS.TextSource)">
+            <summary>
+            Merge lines i and i+1
+            </summary>
+        </member>
+        <member name="T:EditorNS.InsertTextCommand">
+            <summary>
+            Insert text
+            </summary>
+        </member>
+        <member name="M:EditorNS.InsertTextCommand.#ctor(EditorNS.TextSource,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="tb">Underlaying textbox</param>
+            <param name="insertedText">Text for inserting</param>
+        </member>
+        <member name="M:EditorNS.InsertTextCommand.Undo">
+            <summary>
+            Undo operation
+            </summary>
+        </member>
+        <member name="M:EditorNS.InsertTextCommand.Execute">
+            <summary>
+            Execute operation
+            </summary>
+        </member>
+        <member name="T:EditorNS.ReplaceTextCommand">
+            <summary>
+            Insert text into given ranges
+            </summary>
+        </member>
+        <member name="M:EditorNS.ReplaceTextCommand.#ctor(EditorNS.TextSource,System.Collections.Generic.List{EditorNS.Range},System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="tb">Underlaying textbox</param>
+            <param name="ranges">List of ranges for replace</param>
+            <param name="insertedText">Text for inserting</param>
+        </member>
+        <member name="M:EditorNS.ReplaceTextCommand.Undo">
+            <summary>
+            Undo operation
+            </summary>
+        </member>
+        <member name="M:EditorNS.ReplaceTextCommand.Execute">
+            <summary>
+            Execute operation
+            </summary>
+        </member>
+        <member name="T:EditorNS.ClearSelectedCommand">
+            <summary>
+            Clear selected text
+            </summary>
+        </member>
+        <member name="M:EditorNS.ClearSelectedCommand.#ctor(EditorNS.TextSource)">
+            <summary>
+            Construstor
+            </summary>
+            <param name="ts">Underlaying textbox</param>
+        </member>
+        <member name="M:EditorNS.ClearSelectedCommand.Undo">
+            <summary>
+            Undo operation
+            </summary>
+        </member>
+        <member name="M:EditorNS.ClearSelectedCommand.Execute">
+            <summary>
+            Execute operation
+            </summary>
+        </member>
+        <member name="T:EditorNS.ReplaceMultipleTextCommand">
+            <summary>
+            Replaces text
+            </summary>
+        </member>
+        <member name="M:EditorNS.ReplaceMultipleTextCommand.#ctor(EditorNS.TextSource,System.Collections.Generic.List{EditorNS.ReplaceMultipleTextCommand.ReplaceRange})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="ts">Underlaying textsource</param>
+            <param name="ranges">List of ranges for replace</param>
+        </member>
+        <member name="M:EditorNS.ReplaceMultipleTextCommand.Undo">
+            <summary>
+            Undo operation
+            </summary>
+        </member>
+        <member name="M:EditorNS.ReplaceMultipleTextCommand.Execute">
+            <summary>
+            Execute operation
+            </summary>
+        </member>
+        <member name="T:EditorNS.RemoveLinesCommand">
+            <summary>
+            Removes lines
+            </summary>
+        </member>
+        <member name="M:EditorNS.RemoveLinesCommand.#ctor(EditorNS.TextSource,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="tb">Underlaying textbox</param>
+            <param name="ranges">List of ranges for replace</param>
+            <param name="insertedText">Text for inserting</param>
+        </member>
+        <member name="M:EditorNS.RemoveLinesCommand.Undo">
+            <summary>
+            Undo operation
+            </summary>
+        </member>
+        <member name="M:EditorNS.RemoveLinesCommand.Execute">
+            <summary>
+            Execute operation
+            </summary>
+        </member>
+        <member name="T:EditorNS.MultiRangeCommand">
+            <summary>
+            Wrapper for multirange commands
+            </summary>
+        </member>
+        <member name="T:EditorNS.SelectCommand">
+            <summary>
+            Remembers current selection and restore it after Undo
+            </summary>
+        </member>
+        <member name="F:EditorNS.FindForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EditorNS.FindForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EditorNS.FindForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EditorNS.LimitedStack`1">
+            <summary>
+            Limited stack
+            </summary>
+        </member>
+        <member name="M:EditorNS.LimitedStack`1.#ctor(System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="maxItemCount">Maximum length of stack</param>
+        </member>
+        <member name="M:EditorNS.LimitedStack`1.Pop">
+            <summary>
+            Pop item
+            </summary>
+        </member>
+        <member name="M:EditorNS.LimitedStack`1.Peek">
+            <summary>
+            Peek item
+            </summary>
+        </member>
+        <member name="M:EditorNS.LimitedStack`1.Push(`0)">
+            <summary>
+            Push item
+            </summary>
+        </member>
+        <member name="M:EditorNS.LimitedStack`1.Clear">
+            <summary>
+            Clear stack
+            </summary>
+        </member>
+        <member name="P:EditorNS.LimitedStack`1.MaxItemCount">
+            <summary>
+            Max stack length
+            </summary>
+        </member>
+        <member name="P:EditorNS.LimitedStack`1.Count">
+            <summary>
+            Current length of stack
+            </summary>
+        </member>
+        <member name="T:EditorNS.Line">
+            <summary>
+            Line of text
+            </summary>
+        </member>
+        <member name="M:EditorNS.Line.ClearStyle(EditorNS.StyleIndex)">
+            <summary>
+            Clears style of chars, delete folding markers
+            </summary>
+        </member>
+        <member name="M:EditorNS.Line.ClearFoldingMarkers">
+            <summary>
+            Clears folding markers
+            </summary>
+        </member>
+        <member name="P:EditorNS.Line.IsChanged">
+            <summary>
+            Text of line was changed
+            </summary>
+        </member>
+        <member name="P:EditorNS.Line.LastVisit">
+            <summary>
+            Time of last visit of caret in this line
+            </summary>
+            <remarks>This property can be used for forward/backward navigating</remarks>
+        </member>
+        <member name="P:EditorNS.Line.BackgroundBrush">
+            <summary>
+            Background brush.
+            </summary>
+        </member>
+        <member name="P:EditorNS.Line.UniqueId">
+            <summary>
+            Unique ID
+            </summary>
+        </member>
+        <member name="P:EditorNS.Line.AutoIndentSpacesNeededCount">
+            <summary>
+            Count of needed start spaces for AutoIndent
+            </summary>
+        </member>
+        <member name="P:EditorNS.Line.Text">
+            <summary>
+            Text of the line
+            </summary>
+        </member>
+        <member name="P:EditorNS.Line.StartSpacesCount">
+            <summary>
+            Count of start spaces
+            </summary>
+        </member>
+        <member name="P:EditorNS.Line.Count">
+            <summary>
+            Chars count
+            </summary>
+        </member>
+        <member name="F:EditorNS.LineInfo.VisibleState">
+            <summary>
+            Visible state
+            </summary>
+        </member>
+        <member name="M:EditorNS.LineInfo.GetWordWrapStringIndex(System.Int32)">
+            <summary>
+            Gets index of wordwrap string for given char position
+            </summary>
+        </member>
+        <member name="P:EditorNS.LineInfo.CutOffPositions">
+            <summary>
+            Positions for wordwrap cutoffs
+            </summary>
+        </member>
+        <member name="P:EditorNS.LineInfo.WordWrapStringsCount">
+            <summary>
+            Count of wordwrap string count for this line
+            </summary>
+        </member>
+        <member name="T:EditorNS.Place">
+            <summary>
+            Line index and char index
+            </summary>
+        </member>
+        <member name="T:EditorNS.Range">
+            <summary>
+            Diapason of text chars
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.#ctor(EditorNS.Editor)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.#ctor(EditorNS.Editor,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.#ctor(EditorNS.Editor,EditorNS.Place,EditorNS.Place)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.#ctor(EditorNS.Editor,System.Int32)">
+            <summary>
+            Constructor. Creates range of the line
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.GetIntersectionWith(EditorNS.Range)">
+            <summary>
+            Returns intersection with other range,
+            empty range returned otherwise
+            </summary>
+            <param name="range"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EditorNS.Range.GetUnionWith(EditorNS.Range)">
+            <summary>
+            Returns union with other range.
+            </summary>
+            <param name="range"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EditorNS.Range.SelectAll">
+            <summary>
+            Select all chars of control
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.Clone">
+            <summary>
+            Clone range
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EditorNS.Range.GoRight">
+            <summary>
+            Move range right
+            </summary>
+            <remarks>This method jump over folded blocks</remarks>
+        </member>
+        <member name="M:EditorNS.Range.GoRightThroughFolded">
+            <summary>
+            Move range left
+            </summary>
+            <remarks>This method can to go inside folded blocks</remarks>
+        </member>
+        <member name="M:EditorNS.Range.GoLeft">
+            <summary>
+            Move range left
+            </summary>
+            <remarks>This method jump over folded blocks</remarks>
+        </member>
+        <member name="M:EditorNS.Range.GoLeftThroughFolded">
+            <summary>
+            Move range left
+            </summary>
+            <remarks>This method can to go inside folded blocks</remarks>
+        </member>
+        <member name="M:EditorNS.Range.SetStyle(EditorNS.Style)">
+            <summary>
+            Set style for range
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.SetStyle(EditorNS.Style,System.String)">
+            <summary>
+            Set style for given regex pattern
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.SetStyle(EditorNS.Style,System.Text.RegularExpressions.Regex)">
+            <summary>
+            Set style for given regex
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.SetStyle(EditorNS.Style,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Set style for given regex pattern
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.SetStyle(EditorNS.StyleIndex,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Set style for given regex pattern
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.SetStyle(EditorNS.StyleIndex,System.Text.RegularExpressions.Regex)">
+            <summary>
+            Set style for given regex pattern
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.SetStyle(EditorNS.StyleIndex)">
+            <summary>
+            Appends style to chars of range
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.SetFoldingMarkers(System.String,System.String)">
+            <summary>
+            Sets folding markers
+            </summary>
+            <param name="startFoldingPattern">Pattern for start folding line</param>
+            <param name="finishFoldingPattern">Pattern for finish folding line</param>
+        </member>
+        <member name="M:EditorNS.Range.SetFoldingMarkers(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Sets folding markers
+            </summary>
+            <param name="startFoldingPattern">Pattern for start folding line</param>
+            <param name="finishFoldingPattern">Pattern for finish folding line</param>
+        </member>
+        <member name="M:EditorNS.Range.SetFoldingMarkers(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Sets folding markers
+            </summary>
+            <param name="startEndFoldingPattern">Pattern for start and end folding line</param>
+        </member>
+        <member name="M:EditorNS.Range.GetRanges(System.String)">
+            <summary>
+            Finds ranges for given regex pattern
+            </summary>
+            <param name="regexPattern">Regex pattern</param>
+            <returns>Enumeration of ranges</returns>
+        </member>
+        <member name="M:EditorNS.Range.GetRanges(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Finds ranges for given regex pattern
+            </summary>
+            <param name="regexPattern">Regex pattern</param>
+            <returns>Enumeration of ranges</returns>
+        </member>
+        <member name="M:EditorNS.Range.GetRangesByLines(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Finds ranges for given regex pattern.
+            Search is separately in each line.
+            This method requires less memory than GetRanges().
+            </summary>
+            <param name="regexPattern">Regex pattern</param>
+            <returns>Enumeration of ranges</returns>
+        </member>
+        <member name="M:EditorNS.Range.GetRangesByLines(System.Text.RegularExpressions.Regex)">
+            <summary>
+            Finds ranges for given regex.
+            Search is separately in each line.
+            This method requires less memory than GetRanges().
+            </summary>
+            <param name="regex">Regex</param>
+            <returns>Enumeration of ranges</returns>
+        </member>
+        <member name="M:EditorNS.Range.GetRangesByLinesReversed(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Finds ranges for given regex pattern.
+            Search is separately in each line (order of lines is reversed).
+            This method requires less memory than GetRanges().
+            </summary>
+            <param name="regexPattern">Regex pattern</param>
+            <returns>Enumeration of ranges</returns>
+        </member>
+        <member name="M:EditorNS.Range.GetRanges(System.Text.RegularExpressions.Regex)">
+            <summary>
+            Finds ranges for given regex
+            </summary>
+            <returns>Enumeration of ranges</returns>
+        </member>
+        <member name="M:EditorNS.Range.ClearStyle(EditorNS.Style[])">
+            <summary>
+            Clear styles of range
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.ClearStyle(EditorNS.StyleIndex)">
+            <summary>
+            Clear styles of range
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.ClearFoldingMarkers">
+            <summary>
+            Clear folding markers of all lines of range
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.BeginUpdate">
+            <summary>
+            Starts selection position updating
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.EndUpdate">
+            <summary>
+            Ends selection position updating
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.Normalize">
+            <summary>
+            Exchanges Start and End if End appears before Start
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.Inverse">
+            <summary>
+            Exchanges Start and End
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.Expand">
+            <summary>
+            Expands range from first char of Start line to last char of End line
+            </summary>
+        </member>
+        <member name="M:EditorNS.Range.GetFragment(System.String)">
+            <summary>
+            Get fragment of text around Start place. Returns maximal matched to pattern fragment.
+            </summary>
+            <param name="allowedSymbolsPattern">Allowed chars pattern for fragment</param>
+            <returns>Range of found fragment</returns>
+        </member>
+        <member name="M:EditorNS.Range.GetFragment(EditorNS.Style,System.Boolean)">
+            <summary>
+            Get fragment of text around Start place. Returns maximal matched to given Style.
+            </summary>
+            <param name="style">Allowed style for fragment</param>
+            <returns>Range of found fragment</returns>
+        </member>
+        <member name="M:EditorNS.Range.GetFragment(System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Get fragment of text around Start place. Returns maximal mathed to pattern fragment.
+            </summary>
+            <param name="allowedSymbolsPattern">Allowed chars pattern for fragment</param>
+            <returns>Range of found fragment</returns>
+        </member>
+        <member name="M:EditorNS.Range.IsReadOnlyLeftChar">
+            <summary>
+            Is char before range readonly
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EditorNS.Range.IsReadOnlyRightChar">
+            <summary>
+            Is char after range readonly
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EditorNS.Range.IsEmpty">
+            <summary>
+            Return true if no selected text
+            </summary>
+        </member>
+        <member name="P:EditorNS.Range.ColumnSelectionMode">
+            <summary>
+            Column selection mode
+            </summary>
+        </member>
+        <member name="P:EditorNS.Range.Start">
+            <summary>
+            Start line and char position
+            </summary>
+        </member>
+        <member name="P:EditorNS.Range.End">
+            <summary>
+            Finish line and char position
+            </summary>
+        </member>
+        <member name="P:EditorNS.Range.Text">
+            <summary>
+            Text of range
+            </summary>
+            <remarks>This property has not 'set' accessor because undo/redo stack works only with 
+            FastColoredTextBox.Selection range. So, if you want to set text, you need to use FastColoredTextBox.Selection
+            and FastColoredTextBox.InsertText() mehtod.
+            </remarks>
+        </member>
+        <member name="P:EditorNS.Range.CharAfterStart">
+            <summary>
+            Returns first char after Start place
+            </summary>
+        </member>
+        <member name="P:EditorNS.Range.CharBeforeStart">
+            <summary>
+            Returns first char before Start place
+            </summary>
+        </member>
+        <member name="P:EditorNS.Range.FromX">
+            <summary>
+            Return minimum of end.X and start.X
+            </summary>
+        </member>
+        <member name="P:EditorNS.Range.ToX">
+            <summary>
+            Return maximum of end.X and start.X
+            </summary>
+        </member>
+        <member name="P:EditorNS.Range.Chars">
+            <summary>
+            Chars of range (exclude \n)
+            </summary>
+        </member>
+        <member name="P:EditorNS.Range.ReadOnly">
+            <summary>
+            Range is readonly?
+            This property return True if any char of the range contains ReadOnlyStyle.
+            Set this property to True/False to mark chars of the range as Readonly/Writable.
+            </summary>
+        </member>
+        <member name="T:EditorNS.Style">
+            <summary>
+            Style of chars
+            </summary>
+            <remarks>This is base class for all text and design renderers</remarks>
+        </member>
+        <member name="M:EditorNS.Style.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:EditorNS.Style.Draw(System.Drawing.Graphics,System.Drawing.Point,EditorNS.Range)">
+            <summary>
+            Renders given range of text
+            </summary>
+            <param name="gr">Graphics object</param>
+            <param name="position">Position of the range in absolute control coordinates</param>
+            <param name="range">Rendering range of text</param>
+        </member>
+        <member name="M:EditorNS.Style.OnVisualMarkerClick(EditorNS.Editor,EditorNS.VisualMarkerEventArgs)">
+            <summary>
+            Occurs when user click on StyleVisualMarker joined to this style 
+            </summary>
+        </member>
+        <member name="M:EditorNS.Style.AddVisualMarker(EditorNS.Editor,EditorNS.StyleVisualMarker)">
+            <summary>
+            Shows VisualMarker
+            Call this method in Draw method, when you need to show VisualMarker for your style
+            </summary>
+        </member>
+        <member name="M:EditorNS.Style.GetCSS">
+            <summary>
+            Returns CSS for export to HTML
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EditorNS.Style.GetRTF">
+            <summary>
+            Returns RTF descriptor for export to RTF
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EditorNS.Style.IsExportable">
+            <summary>
+            This style is exported to outer formats (HTML for example)
+            </summary>
+        </member>
+        <member name="E:EditorNS.Style.VisualMarkerClick">
+            <summary>
+            Occurs when user click on StyleVisualMarker joined to this style 
+            </summary>
+        </member>
+        <member name="T:EditorNS.TextStyle">
+            <summary>
+            Style for chars rendering
+            This renderer can draws chars, with defined fore and back colors
+            </summary>
+        </member>
+        <member name="T:EditorNS.FoldedBlockStyle">
+            <summary>
+            Renderer for folded block
+            </summary>
+        </member>
+        <member name="T:EditorNS.SelectionStyle">
+            <summary>
+            Renderer for selected area
+            </summary>
+        </member>
+        <member name="T:EditorNS.MarkerStyle">
+            <summary>
+            Marker style
+            Draws background color for text
+            </summary>
+        </member>
+        <member name="T:EditorNS.ShortcutStyle">
+            <summary>
+            Draws small rectangle for popup menu
+            </summary>
+        </member>
+        <member name="T:EditorNS.WavyLineStyle">
+            <summary>
+            This style draws a wavy line below a given text range.
+            </summary>
+            <remarks>Thanks for Yallie</remarks>
+        </member>
+        <member name="T:EditorNS.ReadOnlyStyle">
+            <summary>
+            This style is used to mark range of text as ReadOnly block
+            </summary>
+            <remarks>You can inherite this style to add visual effects of readonly text</remarks>
+        </member>
+        <member name="T:EditorNS.TextSource">
+            <summary>
+            This class contains the source text (chars and styles).
+            It stores a text lines, the manager of commands, undo/redo stack, styles.
+            </summary>
+        </member>
+        <member name="F:EditorNS.TextSource.Styles">
+            <summary>
+            Styles
+            </summary>
+        </member>
+        <member name="M:EditorNS.TextSource.GetLines">
+            <summary>
+            Text lines
+            </summary>
+        </member>
+        <member name="E:EditorNS.TextSource.LineInserted">
+            <summary>
+            Occurs when line was inserted/added
+            </summary>
+        </member>
+        <member name="E:EditorNS.TextSource.LineRemoved">
+            <summary>
+            Occurs when line was removed
+            </summary>
+        </member>
+        <member name="E:EditorNS.TextSource.TextChanged">
+            <summary>
+            Occurs when text was changed
+            </summary>
+        </member>
+        <member name="E:EditorNS.TextSource.RecalcNeeded">
+            <summary>
+            Occurs when recalc is needed
+            </summary>
+        </member>
+        <member name="E:EditorNS.TextSource.RecalcWordWrap">
+            <summary>
+            Occurs when recalc wordwrap is needed
+            </summary>
+        </member>
+        <member name="E:EditorNS.TextSource.TextChanging">
+            <summary>
+            Occurs before text changing
+            </summary>
+        </member>
+        <member name="E:EditorNS.TextSource.CurrentTBChanged">
+            <summary>
+            Occurs after CurrentTB was changed
+            </summary>
+        </member>
+        <member name="P:EditorNS.TextSource.CurrentTB">
+            <summary>
+            Current focused FastColoredTextBox
+            </summary>
+        </member>
+        <member name="P:EditorNS.TextSource.DefaultStyle">
+            <summary>
+            Default text style
+            This style is using when no one other TextStyle is not defined in Char.style
+            </summary>
+        </member>
+        <member name="P:EditorNS.TextSource.Count">
+            <summary>
+            Lines count
+            </summary>
+        </member>
+        <member name="T:EditorNS.FCTBDescriptionProvider">
+            
+             These classes are required for correct data binding to Text property of FastColoredTextbox
+             
+        </member>
+        <member name="T:EditorNS.FileTextSource">
+            <summary>
+            This class contains the source text (chars and styles).
+            It stores a text lines, the manager of commands, undo/redo stack, styles.
+            </summary>
+        </member>
+        <member name="E:EditorNS.FileTextSource.LineNeeded">
+            <summary>
+            Occurs when need to display line in the textbox
+            </summary>
+        </member>
+        <member name="E:EditorNS.FileTextSource.LinePushed">
+            <summary>
+            Occurs when need to save line in the file
+            </summary>
+        </member>
+        <member name="P:EditorNS.FileTextSource.SaveEOL">
+            <summary>
+            End Of Line characters used for saving
+            </summary>
+        </member>
+        <member name="P:EditorNS.LineNeededEventArgs.DisplayedLineText">
+            <summary>
+            This text will be displayed in textbox
+            </summary>
+        </member>
+        <member name="P:EditorNS.LinePushedEventArgs.DisplayedLineText">
+            <summary>
+            This property contains only changed text.
+            If text of line is not changed, this property contains null.
+            </summary>
+        </member>
+        <member name="P:EditorNS.LinePushedEventArgs.SavedText">
+            <summary>
+            This text will be saved in the file
+            </summary>
+        </member>
+    </members>
+</doc>
