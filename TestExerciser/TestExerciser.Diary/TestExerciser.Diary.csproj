@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Assets\Images\TestExerciser.Diary.Back.ico</ApplicationIcon>
+    <ApplicationIcon>TestExerciser.Diary.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Hardcodet.Wpf.TaskbarNotification">
@@ -70,8 +70,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\lenovo\Desktop\SmokeNote\Using\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="PresentationFramework" />
-    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="PresentationFramework">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SQLite">
@@ -81,16 +85,27 @@
       <HintPath>C:\Users\lenovo\Desktop\SmokeNote\Using\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="WindowsBase" />
-    <Reference Include="PresentationCore" />
+    <Reference Include="WindowsBase">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Xceed.Wpf.Toolkit, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\lenovo\Desktop\SmokeNote\SmokeNote.Client\bin\Debug\Xceed.Wpf.Toolkit.dll</HintPath>
@@ -290,7 +305,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <None Include="bin\Debug\TestExerciser.Diary.db" />
+    <None Include="TestExerciser.Diary.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -310,6 +327,7 @@
     <Resource Include="Assets\Images\Notebook_Local.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Debug\" />
     <Folder Include="TriggerActions\" />
   </ItemGroup>
   <ItemGroup>
@@ -397,7 +415,7 @@
     <Resource Include="Assets\Images\RadioButton\Normal.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Images\TestExerciser.Diary.Back.ico" />
+    <Resource Include="Assets\Images\TestExerciser.Diary.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TestExerciser.Diary.Common\TestExerciser.Diary.Common.csproj">
@@ -410,7 +428,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Images\TestExerciser.Diary.ico" />
+    <Resource Include="TestExerciser.Diary.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

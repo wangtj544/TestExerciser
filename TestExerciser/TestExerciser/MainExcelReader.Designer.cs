@@ -54,10 +54,10 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgvReadDB = new CCWin.SkinControl.SkinDataGridView();
             this.openExcelFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.selectWorkspaceBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.saveExcelModule = new System.Windows.Forms.SaveFileDialog();
-            this.dgvReadDB = new CCWin.SkinControl.SkinDataGridView();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -87,7 +87,7 @@
             this.toolStripSeparator4});
             this.toolStrip1.Location = new System.Drawing.Point(4, 32);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1722, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1432, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -188,7 +188,7 @@
             // 
             this.tstbTestCaseName.Name = "tstbTestCaseName";
             this.tstbTestCaseName.ReadOnly = true;
-            this.tstbTestCaseName.Size = new System.Drawing.Size(381, 25);
+            this.tstbTestCaseName.Size = new System.Drawing.Size(381, 23);
             // 
             // toolStripSeparator5
             // 
@@ -200,7 +200,7 @@
             this.tstbAddToProj.Image = ((System.Drawing.Image)(resources.GetObject("tstbAddToProj.Image")));
             this.tstbAddToProj.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tstbAddToProj.Name = "tstbAddToProj";
-            this.tstbAddToProj.Size = new System.Drawing.Size(88, 22);
+            this.tstbAddToProj.Size = new System.Drawing.Size(88, 21);
             this.tstbAddToProj.Text = "添加到工程";
             this.tstbAddToProj.Click += new System.EventHandler(this.tstbAddToProj_Click);
             // 
@@ -216,7 +216,7 @@
             this.tabControl1.Location = new System.Drawing.Point(4, 57);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1722, 764);
+            this.tabControl1.Size = new System.Drawing.Size(1432, 764);
             this.tabControl1.TabIndex = 8;
             // 
             // tabPage1
@@ -225,20 +225,10 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1714, 738);
+            this.tabPage1.Size = new System.Drawing.Size(1424, 738);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "生成自动化脚本对应用例如下：";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // openExcelFileDialog
-            // 
-            this.openExcelFileDialog.Filter = "Excel(*.xlsx)|*.xlsx|Excel(*.xls)|*.xls";
-            this.openExcelFileDialog.InitialDirectory = "Environment.GetFolderPath(Environment.SpecialFolder.Desktop";
-            // 
-            // saveExcelModule
-            // 
-            this.saveExcelModule.Filter = "Excel(*.xls)|*.xls";
-            this.saveExcelModule.InitialDirectory = "Environment.GetFolderPath(Environment.SpecialFolder.Desktop";
             // 
             // dgvReadDB
             // 
@@ -281,18 +271,28 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.dgvReadDB.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvReadDB.RowTemplate.Height = 23;
-            this.dgvReadDB.Size = new System.Drawing.Size(1708, 732);
+            this.dgvReadDB.Size = new System.Drawing.Size(1418, 732);
             this.dgvReadDB.TabIndex = 0;
             this.dgvReadDB.TitleBack = null;
             this.dgvReadDB.TitleBackColorBegin = System.Drawing.Color.White;
             this.dgvReadDB.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            // 
+            // openExcelFileDialog
+            // 
+            this.openExcelFileDialog.Filter = "Excel(*.xlsx)|*.xlsx|Excel(*.xls)|*.xls";
+            this.openExcelFileDialog.InitialDirectory = "Environment.GetFolderPath(Environment.SpecialFolder.Desktop";
+            // 
+            // saveExcelModule
+            // 
+            this.saveExcelModule.Filter = "Excel(*.xls)|*.xls";
+            this.saveExcelModule.InitialDirectory = "Environment.GetFolderPath(Environment.SpecialFolder.Desktop";
             // 
             // MainExcelReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(1730, 825);
+            this.ClientSize = new System.Drawing.Size(1440, 825);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

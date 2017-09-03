@@ -62,7 +62,7 @@
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tlpMain.Size = new System.Drawing.Size(1722, 753);
+            this.tlpMain.Size = new System.Drawing.Size(1432, 753);
             this.tlpMain.TabIndex = 0;
             // 
             // tlpRawFirst
@@ -78,7 +78,7 @@
             this.tlpRawFirst.RowCount = 1;
             this.tlpRawFirst.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpRawFirst.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tlpRawFirst.Size = new System.Drawing.Size(1716, 29);
+            this.tlpRawFirst.Size = new System.Drawing.Size(1426, 29);
             this.tlpRawFirst.TabIndex = 0;
             // 
             // labMode
@@ -102,7 +102,7 @@
             this.scbMode.FormattingEnabled = true;
             this.scbMode.Location = new System.Drawing.Point(79, 3);
             this.scbMode.Name = "scbMode";
-            this.scbMode.Size = new System.Drawing.Size(1634, 22);
+            this.scbMode.Size = new System.Drawing.Size(1344, 22);
             this.scbMode.TabIndex = 3;
             this.scbMode.WaterText = "";
             // 
@@ -124,7 +124,7 @@
             this.tlpRawLast.RowCount = 1;
             this.tlpRawLast.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpRawLast.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpRawLast.Size = new System.Drawing.Size(1716, 30);
+            this.tlpRawLast.Size = new System.Drawing.Size(1426, 30);
             this.tlpRawLast.TabIndex = 1;
             // 
             // sbtnOK
@@ -133,7 +133,7 @@
             this.sbtnOK.BackColor = System.Drawing.Color.Transparent;
             this.sbtnOK.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbtnOK.DownBack = null;
-            this.sbtnOK.Location = new System.Drawing.Point(1496, 3);
+            this.sbtnOK.Location = new System.Drawing.Point(1206, 3);
             this.sbtnOK.MouseBack = null;
             this.sbtnOK.Name = "sbtnOK";
             this.sbtnOK.NormlBack = null;
@@ -148,7 +148,7 @@
             this.sbtnClean.BackColor = System.Drawing.Color.Transparent;
             this.sbtnClean.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.sbtnClean.DownBack = null;
-            this.sbtnClean.Location = new System.Drawing.Point(1614, 3);
+            this.sbtnClean.Location = new System.Drawing.Point(1324, 3);
             this.sbtnClean.MouseBack = null;
             this.sbtnClean.Name = "sbtnClean";
             this.sbtnClean.NormlBack = null;
@@ -204,7 +204,7 @@
             this.skinTabControl1.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl1.PageNorml = null;
             this.skinTabControl1.SelectedIndex = 0;
-            this.skinTabControl1.Size = new System.Drawing.Size(1722, 789);
+            this.skinTabControl1.Size = new System.Drawing.Size(1432, 789);
             this.skinTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl1.TabIndex = 1;
             // 
@@ -215,7 +215,7 @@
             this.stpQuery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpQuery.Location = new System.Drawing.Point(0, 36);
             this.stpQuery.Name = "stpQuery";
-            this.stpQuery.Size = new System.Drawing.Size(1722, 753);
+            this.stpQuery.Size = new System.Drawing.Size(1432, 753);
             this.stpQuery.TabIndex = 0;
             this.stpQuery.TabItemImage = null;
             this.stpQuery.Text = "统计查询";
@@ -235,7 +235,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1730, 825);
+            this.ClientSize = new System.Drawing.Size(1440, 825);
             this.Controls.Add(this.skinTabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ToolBugDefectInfo";

@@ -2776,7 +2776,7 @@ namespace TestExerciser
             try
             {
                 Process p = new Process();
-                p.StartInfo.FileName = @"cmd.EXE";
+                p.StartInfo.FileName = @"\cmd.exe";
                 p.Start();
                 p.Close();
             }            
@@ -2794,8 +2794,17 @@ namespace TestExerciser
 
         private void 工作笔记ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MainWorkingNotes myMainWorkingNotes = new MainWorkingNotes();
-            myMainWorkingNotes.Show();
+            try
+            {
+                Process p = new Process();
+                p.StartInfo.FileName = Application.StartupPath + @"\TestExerciser.Diary.exe";
+                p.Start();
+                p.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void 工作进展ToolStripMenuItem_Click(object sender, EventArgs e)

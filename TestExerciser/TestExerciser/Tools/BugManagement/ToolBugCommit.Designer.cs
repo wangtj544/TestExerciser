@@ -110,7 +110,7 @@
             this.tlpMain.RowCount = 1;
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpMain.Size = new System.Drawing.Size(1722, 789);
+            this.tlpMain.Size = new System.Drawing.Size(1432, 789);
             this.tlpMain.TabIndex = 1;
             // 
             // tlpMainManager
@@ -125,7 +125,7 @@
             this.tlpMainManager.RowCount = 2;
             this.tlpMainManager.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpMainManager.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMainManager.Size = new System.Drawing.Size(1716, 783);
+            this.tlpMainManager.Size = new System.Drawing.Size(1426, 783);
             this.tlpMainManager.TabIndex = 1;
             // 
             // tlpMainEditor
@@ -148,7 +148,7 @@
             this.tlpMainEditor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMainEditor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tlpMainEditor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tlpMainEditor.Size = new System.Drawing.Size(1710, 747);
+            this.tlpMainEditor.Size = new System.Drawing.Size(1420, 747);
             this.tlpMainEditor.TabIndex = 2;
             // 
             // tlpReviewer
@@ -165,7 +165,7 @@
             this.tlpReviewer.Name = "tlpReviewer";
             this.tlpReviewer.RowCount = 1;
             this.tlpReviewer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpReviewer.Size = new System.Drawing.Size(1704, 26);
+            this.tlpReviewer.Size = new System.Drawing.Size(1414, 26);
             this.tlpReviewer.TabIndex = 11;
             // 
             // labAuditor
@@ -185,7 +185,7 @@
             // 
             this.btnAuditor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
             this.btnAuditor.Image = ((System.Drawing.Image)(resources.GetObject("btnAuditor.Image")));
-            this.btnAuditor.Location = new System.Drawing.Point(1677, 3);
+            this.btnAuditor.Location = new System.Drawing.Point(1387, 3);
             this.btnAuditor.Name = "btnAuditor";
             this.btnAuditor.Size = new System.Drawing.Size(24, 18);
             this.btnAuditor.TabIndex = 3;
@@ -198,7 +198,7 @@
             this.txtAuditor.Location = new System.Drawing.Point(83, 3);
             this.txtAuditor.Name = "txtAuditor";
             this.txtAuditor.ReadOnly = true;
-            this.txtAuditor.Size = new System.Drawing.Size(1588, 21);
+            this.txtAuditor.Size = new System.Drawing.Size(1298, 21);
             this.txtAuditor.TabIndex = 2;
             // 
             // tlpAttachment
@@ -215,7 +215,7 @@
             this.tlpAttachment.Name = "tlpAttachment";
             this.tlpAttachment.RowCount = 1;
             this.tlpAttachment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpAttachment.Size = new System.Drawing.Size(1704, 26);
+            this.tlpAttachment.Size = new System.Drawing.Size(1414, 26);
             this.tlpAttachment.TabIndex = 10;
             // 
             // labAttachement
@@ -235,7 +235,7 @@
             // 
             this.btnAttachment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
             this.btnAttachment.Image = ((System.Drawing.Image)(resources.GetObject("btnAttachment.Image")));
-            this.btnAttachment.Location = new System.Drawing.Point(1677, 3);
+            this.btnAttachment.Location = new System.Drawing.Point(1387, 3);
             this.btnAttachment.Name = "btnAttachment";
             this.btnAttachment.Size = new System.Drawing.Size(24, 18);
             this.btnAttachment.TabIndex = 3;
@@ -248,7 +248,7 @@
             this.txtAttachment.Location = new System.Drawing.Point(83, 3);
             this.txtAttachment.Name = "txtAttachment";
             this.txtAttachment.ReadOnly = true;
-            this.txtAttachment.Size = new System.Drawing.Size(1588, 21);
+            this.txtAttachment.Size = new System.Drawing.Size(1298, 21);
             this.txtAttachment.TabIndex = 2;
             // 
             // tlpTitle
@@ -263,7 +263,7 @@
             this.tlpTitle.Name = "tlpTitle";
             this.tlpTitle.RowCount = 1;
             this.tlpTitle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpTitle.Size = new System.Drawing.Size(1704, 26);
+            this.tlpTitle.Size = new System.Drawing.Size(1414, 26);
             this.tlpTitle.TabIndex = 4;
             // 
             // txtTitle
@@ -272,7 +272,7 @@
             this.txtTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTitle.Location = new System.Drawing.Point(83, 3);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(1618, 21);
+            this.txtTitle.Size = new System.Drawing.Size(1328, 21);
             this.txtTitle.TabIndex = 3;
             // 
             // labTitle
@@ -326,7 +326,7 @@
             this.tlpSort.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpSort.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpSort.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpSort.Size = new System.Drawing.Size(1704, 139);
+            this.tlpSort.Size = new System.Drawing.Size(1414, 139);
             this.tlpSort.TabIndex = 2;
             // 
             // dtpExceptDate
@@ -338,9 +338,9 @@
             this.dtpExceptDate.DropDownWidth = 120;
             this.dtpExceptDate.font = new System.Drawing.Font("微软雅黑", 9F);
             this.dtpExceptDate.Items = null;
-            this.dtpExceptDate.Location = new System.Drawing.Point(950, 84);
+            this.dtpExceptDate.Location = new System.Drawing.Point(805, 84);
             this.dtpExceptDate.Name = "dtpExceptDate";
-            this.dtpExceptDate.Size = new System.Drawing.Size(751, 21);
+            this.dtpExceptDate.Size = new System.Drawing.Size(606, 21);
             this.dtpExceptDate.TabIndex = 9;
             this.dtpExceptDate.text = "";
             // 
@@ -380,7 +380,7 @@
             "概率复现"});
             this.cbOccurrence.Location = new System.Drawing.Point(83, 30);
             this.cbOccurrence.Name = "cbOccurrence";
-            this.cbOccurrence.Size = new System.Drawing.Size(751, 22);
+            this.cbOccurrence.Size = new System.Drawing.Size(606, 22);
             this.cbOccurrence.TabIndex = 9;
             this.cbOccurrence.WaterText = "";
             // 
@@ -408,7 +408,7 @@
             "低"});
             this.cbPriority.Location = new System.Drawing.Point(83, 57);
             this.cbPriority.Name = "cbPriority";
-            this.cbPriority.Size = new System.Drawing.Size(751, 22);
+            this.cbPriority.Size = new System.Drawing.Size(606, 22);
             this.cbPriority.TabIndex = 11;
             this.cbPriority.WaterText = "";
             // 
@@ -419,7 +419,7 @@
             this.labHowFound.BackColor = System.Drawing.Color.White;
             this.labHowFound.BorderColor = System.Drawing.Color.White;
             this.labHowFound.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labHowFound.Location = new System.Drawing.Point(870, 5);
+            this.labHowFound.Location = new System.Drawing.Point(725, 5);
             this.labHowFound.Name = "labHowFound";
             this.labHowFound.Size = new System.Drawing.Size(56, 17);
             this.labHowFound.TabIndex = 14;
@@ -432,7 +432,7 @@
             this.labGravity.BackColor = System.Drawing.Color.White;
             this.labGravity.BorderColor = System.Drawing.Color.White;
             this.labGravity.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labGravity.Location = new System.Drawing.Point(870, 32);
+            this.labGravity.Location = new System.Drawing.Point(725, 32);
             this.labGravity.Name = "labGravity";
             this.labGravity.Size = new System.Drawing.Size(49, 17);
             this.labGravity.TabIndex = 15;
@@ -445,7 +445,7 @@
             this.labFoundVersion.BackColor = System.Drawing.Color.White;
             this.labFoundVersion.BorderColor = System.Drawing.Color.White;
             this.labFoundVersion.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labFoundVersion.Location = new System.Drawing.Point(870, 59);
+            this.labFoundVersion.Location = new System.Drawing.Point(725, 59);
             this.labFoundVersion.Name = "labFoundVersion";
             this.labFoundVersion.Size = new System.Drawing.Size(56, 17);
             this.labFoundVersion.TabIndex = 16;
@@ -458,7 +458,7 @@
             this.labExceptDate.BackColor = System.Drawing.Color.White;
             this.labExceptDate.BorderColor = System.Drawing.Color.White;
             this.labExceptDate.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labExceptDate.Location = new System.Drawing.Point(870, 86);
+            this.labExceptDate.Location = new System.Drawing.Point(725, 86);
             this.labExceptDate.Name = "labExceptDate";
             this.labExceptDate.Size = new System.Drawing.Size(56, 17);
             this.labExceptDate.TabIndex = 17;
@@ -471,7 +471,7 @@
             this.labFillDate.BackColor = System.Drawing.Color.White;
             this.labFillDate.BorderColor = System.Drawing.Color.White;
             this.labFillDate.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labFillDate.Location = new System.Drawing.Point(870, 115);
+            this.labFillDate.Location = new System.Drawing.Point(725, 115);
             this.labFillDate.Name = "labFillDate";
             this.labFillDate.Size = new System.Drawing.Size(56, 17);
             this.labFillDate.TabIndex = 18;
@@ -491,7 +491,7 @@
             "其他"});
             this.cbProductVersion.Location = new System.Drawing.Point(83, 84);
             this.cbProductVersion.Name = "cbProductVersion";
-            this.cbProductVersion.Size = new System.Drawing.Size(751, 22);
+            this.cbProductVersion.Size = new System.Drawing.Size(606, 22);
             this.cbProductVersion.TabIndex = 19;
             this.cbProductVersion.WaterText = "";
             // 
@@ -509,7 +509,7 @@
             "其他"});
             this.cbCategory.Location = new System.Drawing.Point(83, 3);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(751, 22);
+            this.cbCategory.Size = new System.Drawing.Size(606, 22);
             this.cbCategory.TabIndex = 8;
             this.cbCategory.WaterText = "";
             // 
@@ -528,9 +528,9 @@
             "集成测试",
             "代码检查",
             "客户反馈"});
-            this.cbHowFound.Location = new System.Drawing.Point(950, 3);
+            this.cbHowFound.Location = new System.Drawing.Point(805, 3);
             this.cbHowFound.Name = "cbHowFound";
-            this.cbHowFound.Size = new System.Drawing.Size(751, 22);
+            this.cbHowFound.Size = new System.Drawing.Size(606, 22);
             this.cbHowFound.TabIndex = 20;
             this.cbHowFound.WaterText = "";
             // 
@@ -544,9 +544,9 @@
             "严重",
             "一般",
             "提示"});
-            this.cbGravity.Location = new System.Drawing.Point(950, 30);
+            this.cbGravity.Location = new System.Drawing.Point(805, 30);
             this.cbGravity.Name = "cbGravity";
-            this.cbGravity.Size = new System.Drawing.Size(751, 22);
+            this.cbGravity.Size = new System.Drawing.Size(606, 22);
             this.cbGravity.TabIndex = 21;
             this.cbGravity.WaterText = "";
             // 
@@ -555,9 +555,9 @@
             this.cbFoundVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbFoundVersion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbFoundVersion.FormattingEnabled = true;
-            this.cbFoundVersion.Location = new System.Drawing.Point(950, 57);
+            this.cbFoundVersion.Location = new System.Drawing.Point(805, 57);
             this.cbFoundVersion.Name = "cbFoundVersion";
-            this.cbFoundVersion.Size = new System.Drawing.Size(751, 22);
+            this.cbFoundVersion.Size = new System.Drawing.Size(606, 22);
             this.cbFoundVersion.TabIndex = 22;
             this.cbFoundVersion.WaterText = "";
             // 
@@ -570,9 +570,9 @@
             this.dtpFillDate.DropDownWidth = 120;
             this.dtpFillDate.font = new System.Drawing.Font("微软雅黑", 9F);
             this.dtpFillDate.Items = null;
-            this.dtpFillDate.Location = new System.Drawing.Point(950, 111);
+            this.dtpFillDate.Location = new System.Drawing.Point(805, 111);
             this.dtpFillDate.Name = "dtpFillDate";
-            this.dtpFillDate.Size = new System.Drawing.Size(751, 25);
+            this.dtpFillDate.Size = new System.Drawing.Size(606, 25);
             this.dtpFillDate.TabIndex = 26;
             this.dtpFillDate.text = "";
             // 
@@ -582,14 +582,14 @@
             this.txtAuthor.Location = new System.Drawing.Point(83, 111);
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.ReadOnly = true;
-            this.txtAuthor.Size = new System.Drawing.Size(751, 21);
+            this.txtAuthor.Size = new System.Drawing.Size(606, 21);
             this.txtAuthor.TabIndex = 27;
             // 
             // btnAuthor
             // 
             this.btnAuthor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
             this.btnAuthor.Image = ((System.Drawing.Image)(resources.GetObject("btnAuthor.Image")));
-            this.btnAuthor.Location = new System.Drawing.Point(840, 111);
+            this.btnAuthor.Location = new System.Drawing.Point(695, 111);
             this.btnAuthor.Name = "btnAuthor";
             this.btnAuthor.Size = new System.Drawing.Size(24, 23);
             this.btnAuthor.TabIndex = 28;
@@ -635,7 +635,7 @@
             this.tlpProject.Name = "tlpProject";
             this.tlpProject.RowCount = 1;
             this.tlpProject.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpProject.Size = new System.Drawing.Size(1704, 26);
+            this.tlpProject.Size = new System.Drawing.Size(1414, 26);
             this.tlpProject.TabIndex = 3;
             // 
             // labAttribution
@@ -658,14 +658,14 @@
             this.txtAttribution.Location = new System.Drawing.Point(83, 3);
             this.txtAttribution.Name = "txtAttribution";
             this.txtAttribution.ReadOnly = true;
-            this.txtAttribution.Size = new System.Drawing.Size(1588, 21);
+            this.txtAttribution.Size = new System.Drawing.Size(1298, 21);
             this.txtAttribution.TabIndex = 2;
             // 
             // btnProject
             // 
             this.btnProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
             this.btnProject.Image = ((System.Drawing.Image)(resources.GetObject("btnProject.Image")));
-            this.btnProject.Location = new System.Drawing.Point(1677, 3);
+            this.btnProject.Location = new System.Drawing.Point(1387, 3);
             this.btnProject.Name = "btnProject";
             this.btnProject.Size = new System.Drawing.Size(24, 20);
             this.btnProject.TabIndex = 3;
@@ -683,7 +683,7 @@
             this.tlpEditor.Name = "tlpEditor";
             this.tlpEditor.RowCount = 1;
             this.tlpEditor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpEditor.Size = new System.Drawing.Size(1704, 468);
+            this.tlpEditor.Size = new System.Drawing.Size(1414, 468);
             this.tlpEditor.TabIndex = 5;
             // 
             // labDetails
@@ -711,7 +711,7 @@
             this.tlpStsEditor.RowCount = 2;
             this.tlpStsEditor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpStsEditor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpStsEditor.Size = new System.Drawing.Size(1618, 462);
+            this.tlpStsEditor.Size = new System.Drawing.Size(1328, 462);
             this.tlpStsEditor.TabIndex = 15;
             // 
             // stsEditor
@@ -759,7 +759,7 @@
             this.stsEditor.Location = new System.Drawing.Point(0, 0);
             this.stsEditor.Name = "stsEditor";
             this.stsEditor.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.stsEditor.Size = new System.Drawing.Size(1618, 25);
+            this.stsEditor.Size = new System.Drawing.Size(1328, 25);
             this.stsEditor.SkinAllColor = true;
             this.stsEditor.TabIndex = 2;
             this.stsEditor.Text = "skinToolStrip2";
@@ -817,7 +817,7 @@
             this.srtbDescription.SelectControl = null;
             this.srtbDescription.SelectControlIndex = 0;
             this.srtbDescription.SelectControlPoint = new System.Drawing.Point(0, 0);
-            this.srtbDescription.Size = new System.Drawing.Size(1612, 426);
+            this.srtbDescription.Size = new System.Drawing.Size(1322, 426);
             this.srtbDescription.TabIndex = 3;
             this.srtbDescription.Text = "";
             // 
@@ -866,7 +866,7 @@
             this.stsManager.Location = new System.Drawing.Point(0, 0);
             this.stsManager.Name = "stsManager";
             this.stsManager.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.stsManager.Size = new System.Drawing.Size(1716, 25);
+            this.stsManager.Size = new System.Drawing.Size(1426, 25);
             this.stsManager.SkinAllColor = true;
             this.stsManager.TabIndex = 3;
             this.stsManager.Text = "skinToolStrip1";
@@ -930,7 +930,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(1730, 825);
+            this.ClientSize = new System.Drawing.Size(1440, 825);
             this.Controls.Add(this.tlpMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ToolBugCommit";

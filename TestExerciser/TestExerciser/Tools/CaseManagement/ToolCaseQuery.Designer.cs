@@ -137,7 +137,7 @@
             this.tlpButton.Name = "tlpButton";
             this.tlpButton.RowCount = 1;
             this.tlpButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlpButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
             this.tlpButton.Size = new System.Drawing.Size(270, 81);
             this.tlpButton.TabIndex = 7;
             // 

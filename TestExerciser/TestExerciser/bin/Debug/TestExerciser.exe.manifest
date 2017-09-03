@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
   <asmv1:assemblyIdentity name="TestExerciser.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
-  <description asmv2:iconFile="Resources\TestExecute.ico" asmv2:publisher="张渊" co.v1:suiteName="TestExerciser" asmv2:product="TestExerciser" asmv2:supportUrl="http://172.20.32.147:8080/" co.v1:errorReportUrl="http://172.20.32.147:8080/" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <description asmv2:iconFile="TestExerciser.ico" asmv2:publisher="张渊" co.v1:suiteName="TestExerciser" asmv2:product="TestExerciser" asmv2:supportUrl="http://172.20.32.147:8080/" co.v1:errorReportUrl="http://172.20.32.147:8080/" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="TestExerciser" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
@@ -56,14 +56,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EditorTE.dll" size="336384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EditorTE.dll" size="326144">
       <assemblyIdentity name="EditorTE" version="2.16.1.0" publicKeyToken="FB8AA12B994EF61B" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>XPHyxQlji7gDCMTWo0T3Rga+GFQ=</dsig:DigestValue>
+        <dsig:DigestValue>j9QWdSYeg36tT1g9fhYfKI3Ddw8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hardcodet.Wpf.TaskbarNotification.dll" size="46080">
+      <assemblyIdentity name="Hardcodet.Wpf.TaskbarNotification" version="1.0.4.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>CJwqgQERielbMHD3NaL76GdKaCo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MarkupConverter.dll" size="72704">
+      <assemblyIdentity name="MarkupConverter" version="0.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>winQQ7Zs1ClX6o8UnbgbTm4ZlKs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -188,6 +212,54 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Practices.Prism.dll" size="153416">
+      <assemblyIdentity name="Microsoft.Practices.Prism" version="4.1.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>gkrRF05cL8XGiwTmjDnDXhv06BI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Practices.Prism.UnityExtensions.dll" size="24904">
+      <assemblyIdentity name="Microsoft.Practices.Prism.UnityExtensions" version="4.1.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>0iL8X9xfb6wjjahf8BTt7xrgP8I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Practices.ServiceLocation.dll" size="29760">
+      <assemblyIdentity name="Microsoft.Practices.ServiceLocation" version="1.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>oCY+xhQ10e5MGKkqBqw+osQutzA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Practices.Unity.dll" size="124216">
+      <assemblyIdentity name="Microsoft.Practices.Unity" version="2.1.505.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>OBagNSjgA/JXRsA6xWXt7Z6udOw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SharpSvn.dll" size="5258240">
       <assemblyIdentity name="SharpSvn" version="1.8009.3299.43" publicKeyToken="D729672594885A28" language="neutral" processorArchitecture="x86" />
       <hash>
@@ -208,6 +280,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
         <dsig:DigestValue>FfiRYo9XmgH3vep1vLWf3Nw1fn0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Data.SQLite.dll" size="1040384">
+      <assemblyIdentity name="System.Data.SQLite" version="1.0.86.0" publicKeyToken="DB937BC2D44FF139" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Nf3wIpps5DOuOWYttLMU8RdCG2g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -344,26 +428,74 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="2125824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1291224">
       <assemblyIdentity name="TestExerciser" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>zt6woIsLa1sobDYm1thQgDGzENE=</dsig:DigestValue>
+        <dsig:DigestValue>WyHcAF0di7sJPfiGvCZZTisaSP0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-Hans\TestExerciser.resources.dll" size="49152">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.Diary.exe" size="267264">
+      <assemblyIdentity name="TestExerciser.Diary" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>qSKJzjUw7OpZX34Z5+bkajKIsqY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.Diary.Common.dll" size="22016">
+      <assemblyIdentity name="TestExerciser.Diary.Common" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>hRqy8ujPFskhzhXPA2s6nodEy2E=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.Diary.Logic.dll" size="26624">
+      <assemblyIdentity name="TestExerciser.Diary.Logic" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Xiu1HvYMpRmSRcbex8MzGxMQ7ds=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-Hans\TestExerciser.resources.dll" size="26624">
       <assemblyIdentity name="TestExerciser.resources" version="1.0.0.0" language="zh-Hans" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>QKr/nbKHXEGi2/A0S3OYve35QAo=</dsig:DigestValue>
+        <dsig:DigestValue>LkBjngyvCJJwvhBqOqEvlJbcZIo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xceed.Wpf.Toolkit.dll" size="900608">
+      <assemblyIdentity name="Xceed.Wpf.Toolkit" version="2.0.0.0" publicKeyToken="3E4669D2F30244F4" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Fq8PQ9tH/uDJBn47ep8LdlQpbJ0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1069,15 +1201,6 @@
       <dsig:DigestValue>g+EMpJbfWd4YCh+cxpm4Dd/hbJQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\TestExecute.ico" size="32038">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>6aAwkhOqiBJNm4SJMR/9cKJXKdc=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="Resources\text.png" size="1298">
     <hash>
       <dsig:Transforms>
@@ -1202,6 +1325,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>6SlGVHd+w3ho/ZTeGo483FmNkU0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="TestExerciser.ico" size="9662">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>j/ifJ4ia6Xse/PDOLjd9mebyzOQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Tools\Sources\AutoIt.chm" size="6791791">

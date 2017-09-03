@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/images/testexerciser.diary.back.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("testexerciser.diary.ico")]
 
 

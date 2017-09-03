@@ -120,7 +120,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.dgvPackageManager.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPackageManager.RowTemplate.Height = 23;
-            this.dgvPackageManager.Size = new System.Drawing.Size(1722, 789);
+            this.dgvPackageManager.Size = new System.Drawing.Size(1432, 789);
             this.dgvPackageManager.TabIndex = 0;
             this.dgvPackageManager.TitleBack = null;
             this.dgvPackageManager.TitleBackColorBegin = System.Drawing.Color.White;
@@ -242,7 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
-            this.ClientSize = new System.Drawing.Size(1730, 825);
+            this.ClientSize = new System.Drawing.Size(1440, 825);
             this.Controls.Add(this.dgvPackageManager);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainPackageManager";

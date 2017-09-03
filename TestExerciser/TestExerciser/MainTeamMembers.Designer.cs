@@ -37,12 +37,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainTeamMembers));
             this.dgvTeamMembers = new CCWin.SkinControl.SkinDataGridView();
+            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.用户管理BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetTeamMembers = new TestExerciser.DataSetTeamMembers();
             this.用户管理BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.用户管理TableAdapter = new TestExerciser.DataSetTeamMembersTableAdapters.用户管理TableAdapter();
-            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeamMembers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.用户管理BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTeamMembers)).BeginInit();
@@ -102,6 +102,22 @@
             this.dgvTeamMembers.TitleBackColorBegin = System.Drawing.Color.White;
             this.dgvTeamMembers.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
             // 
+            // fullNameDataGridViewTextBoxColumn
+            // 
+            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "fullName";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.fullNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.fullNameDataGridViewTextBoxColumn.HeaderText = "姓名";
+            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
+            // 
+            // userNameDataGridViewTextBoxColumn
+            // 
+            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "userName";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.userNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.userNameDataGridViewTextBoxColumn.HeaderText = "用户名";
+            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            // 
             // 用户管理BindingSource1
             // 
             this.用户管理BindingSource1.DataMember = "用户管理";
@@ -120,22 +136,6 @@
             // 用户管理TableAdapter
             // 
             this.用户管理TableAdapter.ClearBeforeFill = true;
-            // 
-            // fullNameDataGridViewTextBoxColumn
-            // 
-            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "fullName";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.fullNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.fullNameDataGridViewTextBoxColumn.HeaderText = "姓名";
-            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
-            // 
-            // userNameDataGridViewTextBoxColumn
-            // 
-            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "userName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.userNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.userNameDataGridViewTextBoxColumn.HeaderText = "用户名";
-            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
             // 
             // MainTeamMembers
             // 

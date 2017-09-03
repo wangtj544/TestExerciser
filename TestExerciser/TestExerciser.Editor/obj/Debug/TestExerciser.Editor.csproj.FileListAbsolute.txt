@@ -26,3 +26,17 @@ E:\School\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\TestExercis
 E:\School\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.dll
 E:\School\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.pdb
 E:\School\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\TestExerciser.Editor.csprojResolveAssemblyReference.cache
+F:\TestExerciser\TestExerciser\TestExerciser.Editor\bin\Debug\EditorTE.xml
+F:\TestExerciser\TestExerciser\TestExerciser.Editor\bin\Debug\EditorTE.dll
+F:\TestExerciser\TestExerciser\TestExerciser.Editor\bin\Debug\EditorTE.pdb
+F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\TestExerciser.Editor.csprojResolveAssemblyReference.cache
+F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.AutocompleteMenu.resources
+F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.Editor.resources
+F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.FindForm.resources
+F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.GoToForm.resources
+F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.HotkeysEditorForm.resources
+F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.Properties.Resources.resources
+F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.ReplaceForm.resources
+F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\TestExerciser.Editor.csproj.GenerateResource.Cache
+F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.dll
+F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.pdb

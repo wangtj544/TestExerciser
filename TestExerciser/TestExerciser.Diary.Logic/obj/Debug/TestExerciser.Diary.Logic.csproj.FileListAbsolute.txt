@@ -8,3 +8,8 @@ E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\bin\Debug\TestEx
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\bin\Debug\TestExerciser.Diary.Logic.pdb
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\obj\Debug\TestExerciser.Diary.Logic.dll
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\obj\Debug\TestExerciser.Diary.Logic.pdb
+F:\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\bin\Debug\TestExerciser.Diary.Logic.dll
+F:\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\bin\Debug\TestExerciser.Diary.Logic.pdb
+F:\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\obj\Debug\TestExerciser.Diary.Logic.csprojResolveAssemblyReference.cache
+F:\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\obj\Debug\TestExerciser.Diary.Logic.dll
+F:\TestExerciser\TestExerciser\TestExerciser.Diary.Logic\obj\Debug\TestExerciser.Diary.Logic.pdb
