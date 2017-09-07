@@ -11,7 +11,7 @@
         xmlns:views="clr-namespace:TestExerciser.Diary.Views"
         xmlns:ViewModels="clr-namespace:TestExerciser.Diary.ViewModels" x:Class="TestExerciser.Diary.Shell"
         Name="window" ShowInTaskbar="True"
-        Title="工作笔记" FontFamily="宋体" DataContext="{DynamicResource ShellViewModel}" MinHeight="300" MinWidth="600" Style="{DynamicResource NormalWindowStyle}">
+        Title="工作笔记" FontFamily="宋体" DataContext="{DynamicResource ShellViewModel}" Style="{DynamicResource NormalWindowStyle}" MinHeight="300" MinWidth="600" >
     <i:Interaction.Behaviors>
         <behavior:AlwaysShowInTaskbarBehavior/>
     </i:Interaction.Behaviors>

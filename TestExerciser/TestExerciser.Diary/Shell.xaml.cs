@@ -64,8 +64,8 @@ namespace TestExerciser.Diary
             this.Container = container;
             this.NoteQueryCondition = condition;
             this.KeyDown += Shell_KeyDown;
-
             InitializeComponent();
+            this.Show();
         }
 
         /// <summary>

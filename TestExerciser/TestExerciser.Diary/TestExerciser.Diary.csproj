@@ -37,6 +37,9 @@
   <PropertyGroup>
     <ApplicationIcon>TestExerciser.Diary.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TestExerciser.Diary.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Hardcodet.Wpf.TaskbarNotification">
       <HintPath>C:\Users\lenovo\Desktop\SmokeNote\Using\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
