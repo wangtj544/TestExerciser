@@ -332,6 +332,12 @@
     <Compile Include="Tools\Control\ControlSearch.Designer.cs">
       <DependentUpon>ControlSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\ProjectManagement\ToolProjectDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ProjectManagement\ToolProjectDetails.Designer.cs">
+      <DependentUpon>ToolProjectDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\SVN\SVNManager.cs" />
     <Compile Include="Tools\SVN\ToolSVN.cs">
       <SubType>Form</SubType>
@@ -566,6 +572,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Control\ControlSearch.resx">
       <DependentUpon>ControlSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ProjectManagement\ToolProjectDetails.resx">
+      <DependentUpon>ToolProjectDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\SVN\ToolSVN.resx">
       <DependentUpon>ToolSVN.cs</DependentUpon>

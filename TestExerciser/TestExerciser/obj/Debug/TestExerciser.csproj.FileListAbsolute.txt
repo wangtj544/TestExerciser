@@ -765,3 +765,4 @@ E:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.Diar
 E:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Microsoft.Practices.Prism.Interactivity.dll
 E:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Microsoft.Windows.Shell.dll
 E:\School\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Newtonsoft.Json.dll
+E:\School\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ProjectManagement.ToolProjectDetails.resources
