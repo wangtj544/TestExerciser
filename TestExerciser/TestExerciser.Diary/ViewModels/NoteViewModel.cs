@@ -26,6 +26,7 @@ namespace TestExerciser.Diary.ViewModels
             this.From = note.From;
             this.Content = note.Content;
             this.Tags = note.Tags;
+            this.Number = note.Number;
 
             if (!IsInDesignMode)
             {
@@ -118,8 +119,27 @@ namespace TestExerciser.Diary.ViewModels
                 if (_content != value)
                 {
                     _content = value;
-                    this.RaisePropertyChanged("Content", "Summary", "IsModified");
+                    this.RaisePropertyChanged("Content", "Summary", "IsModified","Number");
                     this.ModifyDate = DateTime.Now;
+                }
+            }
+        }
+
+        private int _number;
+
+        /// <summary>
+        /// 字数
+        /// </summary>
+        public int Number
+        {
+            get { return _number; }
+            set
+            {
+                if (_number != value)
+                {
+                    _number = value;
+                    this.RaisePropertyChanged("Number");
+                    this.Number = this.Content.Length;
                 }
             }
         }

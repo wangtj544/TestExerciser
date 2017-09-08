@@ -82,6 +82,21 @@ namespace TestExerciser.Diary.Logic.Models
             }
         }
 
+        private int _number;
+
+        public int Number
+        {
+            get { return _number; }
+            set
+            {
+                if (_number != value)
+                {
+                    _number = value;
+                    this.RaisePropertyChanged("Number");
+                }
+            }
+        }
+
         private string _tags;
 
         public string Tags

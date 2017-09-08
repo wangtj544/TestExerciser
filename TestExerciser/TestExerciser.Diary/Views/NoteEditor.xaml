@@ -84,7 +84,7 @@
                 <Rectangle Grid.ColumnSpan="6" Style="{StaticResource HorizontalSeparator}"/>
 
                 <TextBlock Grid.Column="4" Text="字数:" Style="{StaticResource DisplayText}"/>
-                <TextBlock Grid.Column="5" VerticalAlignment="Center" Margin="10,0,0,0"  Text="1432"/>
+                <TextBlock Grid.Column="5" VerticalAlignment="Center" Margin="10,0,0,0"  Text="{Binding Number}"/>
 
                 <TextBlock Grid.Row="1" Text="作者:" Style="{StaticResource DisplayText}"/>
                 <xceed:WatermarkTextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="10,0,2,0" Text="{Binding Author}" Style="{StaticResource LikeLabelTextBox}" Watermark=""/>
@@ -105,7 +105,7 @@
 
             </Grid>
 
-            <controls:RichTextEditor Text="{Binding Content, Mode=TwoWay}" Grid.Row="2"/>
+            <controls:RichTextEditor x:Name="richTextEditor" Text="{Binding Content, Mode=TwoWay}" Grid.Row="2"/>
         </Grid>
     </Grid>
 

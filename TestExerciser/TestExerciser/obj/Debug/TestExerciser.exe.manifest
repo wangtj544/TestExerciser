@@ -471,19 +471,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>lsfJ8UVawsTxjlguhRG2lMg/kjc=</dsig:DigestValue>
+        <dsig:DigestValue>U7KV89leaatSa1B61mCN594Uk6c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.Diary.exe" size="268800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.Diary.exe" size="269312">
       <assemblyIdentity name="TestExerciser.Diary" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>B3rIS96ek1XCCTEhacfKVXJSo9A=</dsig:DigestValue>
+        <dsig:DigestValue>r7idCqm5JkVovxkZ9cL/V3aLZTI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -519,7 +519,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>lCVyw6UTV6PPKuf/g/BGi2h60uc=</dsig:DigestValue>
+        <dsig:DigestValue>q0Cpz8Ofy5D76Kykcbw9u6fOFZ8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

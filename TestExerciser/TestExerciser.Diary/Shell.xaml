@@ -9,9 +9,83 @@
         xmlns:taskbar="http://www.hardcodet.net/taskbar"
         xmlns:shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell"
         xmlns:views="clr-namespace:TestExerciser.Diary.Views"
-        xmlns:ViewModels="clr-namespace:TestExerciser.Diary.ViewModels" x:Class="TestExerciser.Diary.Shell"
-        Name="window" ShowInTaskbar="True"
-        Title="工作笔记" FontFamily="宋体" DataContext="{DynamicResource ShellViewModel}" Style="{DynamicResource NormalWindowStyle}" MinHeight="300" MinWidth="600" >
+        xmlns:ViewModels="clr-namespace:TestExerciser.Diary.ViewModels" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="TestExerciser.Diary.Shell"
+        x:Name="window" ShowInTaskbar="True"
+        Title="工作笔记" FontFamily="宋体" DataContext="{DynamicResource ShellViewModel}" Style="{DynamicResource NormalWindowStyle}" MinHeight="300" MinWidth="600" d:DesignWidth="1324.5" d:DesignHeight="670" >
+    <Window.Resources>
+        <ViewModels:ShellViewModel x:Key="ShellViewModel"/>
+
+        <ContextMenu x:Key="NoteBookItemContextMenu">
+            <MenuItem Header="新建笔记本" Command="{Binding AddNotebookCommand, Source={StaticResource ShellViewModel}}"/>
+            <MenuItem Header="删除" Command="{Binding NotebookListViewModel.DeleteNotebookCommand, Source={StaticResource ShellViewModel}}" CommandParameter="{Binding}" IsEnabled="{Binding IsDefault, Converter={StaticResource OppositeConverter}}"/>
+            <Separator Style="{StaticResource DefaultSeparatorStyle}"/>
+            <MenuItem IsEnabled="False" Header="分享链接"/>
+            <MenuItem IsEnabled="False" Header="分享笔记"/>
+            <Separator Style="{StaticResource DefaultSeparatorStyle}"/>
+            <MenuItem Header="属性" Command="{Binding NotebookListViewModel.EditNotebookCommand, Source={StaticResource ShellViewModel}}" CommandParameter="{Binding}"/>
+        </ContextMenu>
+
+        <ContextMenu x:Key="RecycleContextMenu">
+            <MenuItem Header="清空回收站" Command="{Binding NoteListViewModel.ClearRecycleCommand, Source={StaticResource ShellViewModel}}"/>
+        </ContextMenu>
+
+        <Style TargetType="{x:Type MenuItem}" x:Key="MoveToMenuItemContainerStyle" BasedOn="{StaticResource {x:Type MenuItem}}">
+            <Setter Property="Header" Value="{Binding Notebook.Name}"/>
+            <Setter Property="Command" Value="{Binding NoteListViewModel.MoveCommand, Source={StaticResource ShellViewModel}}"/>
+            <Setter Property="CommandParameter" Value="{Binding Notebook}"/>
+        </Style>
+
+        <ContextMenu x:Key="NormalNoteItemContextMenu">
+            <MenuItem Header="新建笔记" Command="{Binding NoteListViewModel.AddNoteCommand, Source={StaticResource ShellViewModel}}"/>
+            <Separator Style="{StaticResource DefaultSeparatorStyle}"/>
+            <MenuItem Header="打印"/>
+            <MenuItem Header="删除" Command="{Binding NoteListViewModel.DeleteNoteCommand, Source={StaticResource ShellViewModel}}"/>
+            <MenuItem Header="移动到" ItemsSource="{Binding NotebookListViewModel.NotebookList, Source={StaticResource ShellViewModel}}" ItemContainerStyle="{StaticResource MoveToMenuItemContainerStyle}"/>
+            <MenuItem Header="导出">
+                <MenuItem Header="记事本" Command="{Binding ExportCommand}" CommandParameter="0"/>
+                <MenuItem Header="Word" Command="{Binding ExportCommand}" CommandParameter="1"/>
+                <MenuItem Header="Html" Command="{Binding ExportCommand}" CommandParameter="2"/>
+            </MenuItem>
+            <Separator Style="{StaticResource DefaultSeparatorStyle}"/>
+            <MenuItem Header="分享链接"/>
+            <MenuItem Header="分享笔记"/>
+            <MenuItem Header="发送邮件"/>
+            <MenuItem Header="历史版本" Command="{Binding ShowNoteHistoryCommand}"/>
+        </ContextMenu>
+
+        <ContextMenu x:Key="RecycleNoteItemContextMenu">
+            <MenuItem Header="打印"/>
+            <MenuItem Header="删除" Command="{Binding NoteListViewModel.DeleteNoteCommand, Source={StaticResource ShellViewModel}}"/>
+            <MenuItem Header="恢复" Command="{Binding NoteListViewModel.RestoreNoteCommand, Source={StaticResource ShellViewModel}}"/>
+            <MenuItem Header="移动到" ItemsSource="{Binding NotebookListViewModel.NotebookList, Source={StaticResource ShellViewModel}}" ItemContainerStyle="{StaticResource MoveToMenuItemContainerStyle}"/>
+            <MenuItem Header="全部恢复" Command="{Binding NoteListViewModel.RestoreAllNoteCommand, Source={StaticResource ShellViewModel}}"/>
+            <MenuItem Header="清空回收站" Command="{Binding NoteListViewModel.ClearRecycleCommand, Source={StaticResource ShellViewModel}}"/>
+        </ContextMenu>
+
+        <DataTemplate x:Key="ArticleSummaryItemTemplate">
+            <Grid Margin="10" VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock FontSize="14" HorizontalAlignment="Left" Text="{Binding Title}"/>
+                <TextBlock LineHeight="20" Height="60" Margin="0,2,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" Grid.Row="1"><Run Text="{Binding Note.ModifyDate, StringFormat=yyyy/MM/dd}" Foreground="#FF264D66"/><Run Text=" "/><Run Text=" "/><Run Text=" "/><Run Text="{Binding Summary, Mode=OneWay}"/></TextBlock>
+                <controls:LoadingButton IsLoading="{Binding IsLoading}" Command="{Binding SaveCommand}" Style="{StaticResource SaveButton}" Grid.Row="1" Visibility="{Binding IsModified, Converter={StaticResource BooleanToVisibilityConverter}}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ArticleListItemTemplate">
+            <Grid Margin="10,5,10,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="{Binding Title}" VerticalAlignment="Center"/>
+                <TextBlock Margin="10,0,0,0" Grid.Column="1" Text="{Binding Note.ModifyDate, StringFormat=MM-dd}" Foreground="#FF264D66" VerticalAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+    </Window.Resources>
     <i:Interaction.Behaviors>
         <behavior:AlwaysShowInTaskbarBehavior/>
     </i:Interaction.Behaviors>
@@ -26,16 +100,16 @@
     <Window.Tag>
         <Menu Style="{DynamicResource WindowMenuStyle}">
             <MenuItem Header="菜单">
-                <MenuItem Header="设置" Name="miConfig" Click="miConfig_Click"/>
+                <MenuItem Header="设置" x:Name="miConfig" Click="miConfig_Click"/>
                 <Separator Style="{StaticResource DefaultSeparatorStyle}"/>
                 <MenuItem Header="帮助"/>
-                <MenuItem Header="退出" Name="miExit" Click="miExit_Click"/>
+                <MenuItem Header="退出" x:Name="miExit" Click="miExit_Click"/>
             </MenuItem>
             <MenuItem Header="视图">
                 <MenuItem Header="笔记显示方式">
-                    <MenuItem Header="摘要" IsCheckable="True" IsChecked="{Binding UISettings.ArticleDisplay, Converter={StaticResource ArticleDisplayToCheckConverter}, ConverterParameter=0}"/>
-                    <MenuItem Header="缩略图" IsCheckable="True" IsChecked="{Binding UISettings.ArticleDisplay, Converter={StaticResource ArticleDisplayToCheckConverter}, ConverterParameter=1}"/>
-                    <MenuItem Header="列表" IsCheckable="True" IsChecked="{Binding UISettings.ArticleDisplay, Converter={StaticResource ArticleDisplayToCheckConverter}, ConverterParameter=2}"/>
+                    <MenuItem Header="摘要" IsCheckable="True" IsChecked="{Binding UISettings.ArticleDisplay, ConverterParameter=0, Converter={StaticResource ArticleDisplayToCheckConverter}}"/>
+                    <MenuItem Header="缩略图" IsCheckable="True" IsChecked="{Binding UISettings.ArticleDisplay, ConverterParameter=1, Converter={StaticResource ArticleDisplayToCheckConverter}}"/>
+                    <MenuItem Header="列表" IsCheckable="True" IsChecked="{Binding UISettings.ArticleDisplay, ConverterParameter=2, Converter={StaticResource ArticleDisplayToCheckConverter}}"/>
                 </MenuItem>
                 <Separator Style="{StaticResource DefaultSeparatorStyle}"/>
                 <MenuItem Header="左侧面板" IsCheckable="True" IsChecked="{Binding UISettings.ShowLeftPanel}"/>
@@ -46,84 +120,6 @@
             </MenuItem>
         </Menu>
     </Window.Tag>
-    <Window.Resources>
-        <ViewModels:ShellViewModel x:Key="ShellViewModel"/>
-
-        <ContextMenu x:Key="NoteBookItemContextMenu">
-            <MenuItem Header="新建笔记本" Command="{Binding AddNotebookCommand, Source={StaticResource ShellViewModel}}"/>
-            <MenuItem Header="删除" Command="{Binding NotebookListViewModel.DeleteNotebookCommand, Source={StaticResource ShellViewModel}}" CommandParameter="{Binding}" IsEnabled="{Binding IsDefault, Converter={StaticResource OppositeConverter}}"/>
-            <Separator Style="{StaticResource DefaultSeparatorStyle}"/>
-            <MenuItem IsEnabled="False" Header="分享链接"/>
-            <MenuItem IsEnabled="False" Header="分享笔记"/>
-            <Separator Style="{StaticResource DefaultSeparatorStyle}"/>
-            <MenuItem Header="属性" Command="{Binding NotebookListViewModel.EditNotebookCommand, Source={StaticResource ShellViewModel}}" CommandParameter="{Binding}"/>
-        </ContextMenu>
-        
-        <ContextMenu x:Key="RecycleContextMenu">
-            <MenuItem Header="清空回收站" Command="{Binding NoteListViewModel.ClearRecycleCommand, Source={StaticResource ShellViewModel}}"/>
-        </ContextMenu>
-
-        <Style TargetType="MenuItem" x:Key="MoveToMenuItemContainerStyle" BasedOn="{StaticResource {x:Type MenuItem}}">
-            <Setter Property="Header" Value="{Binding Notebook.Name}"/>
-            <Setter Property="Command" Value="{Binding NoteListViewModel.MoveCommand, Source={StaticResource ShellViewModel}}"/>
-            <Setter Property="CommandParameter" Value="{Binding Notebook}"/>
-        </Style>
-        
-        <ContextMenu x:Key="NormalNoteItemContextMenu">
-            <MenuItem Header="新建笔记" Command="{Binding NoteListViewModel.AddNoteCommand, Source={StaticResource ShellViewModel}}"/>
-            <Separator Style="{StaticResource DefaultSeparatorStyle}"/>
-            <MenuItem Header="打印"/>
-            <MenuItem Header="删除" Command="{Binding NoteListViewModel.DeleteNoteCommand, Source={StaticResource ShellViewModel}}"/>
-            <MenuItem Header="移动到" ItemsSource="{Binding NotebookListViewModel.NotebookList, Source={StaticResource ShellViewModel}}" ItemContainerStyle="{StaticResource MoveToMenuItemContainerStyle}"></MenuItem>
-            <MenuItem Header="导出">
-                <MenuItem Header="记事本" Command="{Binding ExportCommand}" CommandParameter="0"/>
-                <MenuItem Header="Word" Command="{Binding ExportCommand}" CommandParameter="1"/>
-                <MenuItem Header="Html" Command="{Binding ExportCommand}" CommandParameter="2"/>
-            </MenuItem>
-            <Separator Style="{StaticResource DefaultSeparatorStyle}"/>
-            <MenuItem Header="分享链接"/>
-            <MenuItem Header="分享笔记"/>
-            <MenuItem Header="发送邮件"/>
-            <MenuItem Header="历史版本" Command="{Binding ShowNoteHistoryCommand}"/>
-        </ContextMenu>
-        
-        <ContextMenu x:Key="RecycleNoteItemContextMenu">
-            <MenuItem Header="打印"/>
-            <MenuItem Header="删除" Command="{Binding NoteListViewModel.DeleteNoteCommand, Source={StaticResource ShellViewModel}}"/>
-            <MenuItem Header="恢复" Command="{Binding NoteListViewModel.RestoreNoteCommand, Source={StaticResource ShellViewModel}}"/>
-            <MenuItem Header="移动到" ItemsSource="{Binding NotebookListViewModel.NotebookList, Source={StaticResource ShellViewModel}}" ItemContainerStyle="{StaticResource MoveToMenuItemContainerStyle}"></MenuItem>
-            <MenuItem Header="全部恢复" Command="{Binding NoteListViewModel.RestoreAllNoteCommand, Source={StaticResource ShellViewModel}}"/>
-            <MenuItem Header="清空回收站" Command="{Binding NoteListViewModel.ClearRecycleCommand, Source={StaticResource ShellViewModel}}"/>
-        </ContextMenu>
-
-        <DataTemplate x:Key="ArticleSummaryItemTemplate">
-            <Grid Margin="10" VerticalAlignment="Center">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <TextBlock FontSize="14" HorizontalAlignment="Left" Text="{Binding Title}"></TextBlock>
-                <TextBlock LineHeight="20" Height="60" Margin="0,2,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" Grid.Row="1">
-                    <Run Text="{Binding Note.ModifyDate, StringFormat=yyyy/MM/dd}" Foreground="#FF264D66"/>
-                    <Run Text=" "/>
-                    <Run Text="{Binding Summary, Mode=OneWay}"/>
-                </TextBlock>
-                <controls:LoadingButton IsLoading="{Binding IsLoading}" Command="{Binding SaveCommand}" Style="{StaticResource SaveButton}" Grid.Row="1" Visibility="{Binding IsModified, Converter={StaticResource BooleanToVisibilityConverter}}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,0"/>
-            </Grid>
-        </DataTemplate>
-
-        <DataTemplate x:Key="ArticleListItemTemplate">
-            <Grid Margin="10,5,10,5">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Text="{Binding Title}" VerticalAlignment="Center"></TextBlock>
-                <TextBlock Margin="10,0,0,0" Grid.Column="1" Text="{Binding Note.ModifyDate, StringFormat=MM-dd}" Foreground="#FF264D66" VerticalAlignment="Center"></TextBlock>
-            </Grid>
-        </DataTemplate>
-    </Window.Resources>
     <Grid Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -133,18 +129,18 @@
         <Border BorderBrush="{StaticResource DefaultBorderBrush}" BorderThickness="0,0,0,1" Background="#FFFCFCFC">
             <Menu Style="{StaticResource TopMenuStyle}">
                 <controls:TopMenuItem Header="新建笔记"
-                        IconHoverSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/New_Hover.png" IconDisabledSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/New_Disabled.png" IconPressedSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/New_Pressed.png" IconSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/New.png">
+					IconHoverSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/New_Hover.png" IconDisabledSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/New_Disabled.png" IconPressedSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/New_Pressed.png" IconSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/New.png">
                     <MenuItem Header="新建笔记" Command="{Binding NoteListViewModel.AddNoteCommand, Source={StaticResource ShellViewModel}}"/>
                     <MenuItem Header="新建笔记本" Command="{Binding AddNotebookCommand, Source={StaticResource ShellViewModel}}"/>
                 </controls:TopMenuItem>
                 <controls:TopMenuItem Header="全部保存" Command="{Binding NoteListViewModel.SaveAllCommand}"
-                        IconHoverSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Sync_Hover.png" IconDisabledSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Sync_Disabled.png" IconPressedSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Sync_Pressed.png" IconSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Sync.png"/>
+					IconHoverSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Sync_Hover.png" IconDisabledSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Sync_Disabled.png" IconPressedSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Sync_Pressed.png" IconSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Sync.png"/>
                 <controls:TopMenuItem Header="删除" Command="{Binding NoteListViewModel.DeleteNoteCommand, Source={StaticResource ShellViewModel}}"
-                        IconHoverSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Delete_Hover.png" IconDisabledSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Delete_Disabled.png" IconPressedSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Delete_Pressed.png" IconSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Delete.png"/>
+					IconHoverSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Delete_Hover.png" IconDisabledSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Delete_Disabled.png" IconPressedSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Delete_Pressed.png" IconSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Delete.png"/>
                 <controls:TopMenuItem Header="打印"
-                        IconHoverSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Print_Hover.png" IconDisabledSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Print_Disabled.png" IconPressedSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Print_Pressed.png" IconSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Print.png"/>
+					IconHoverSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Print_Hover.png" IconDisabledSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Print_Disabled.png" IconPressedSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Print_Pressed.png" IconSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Print.png"/>
                 <controls:TopMenuItem Header="分享"
-                        IconHoverSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Share_Hover.png" IconDisabledSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Share_Disabled.png" IconPressedSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Share_Pressed.png" IconSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Share.png">
+					IconHoverSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Share_Hover.png" IconDisabledSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Share_Disabled.png" IconPressedSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Share_Pressed.png" IconSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Share.png">
                     <MenuItem Header="分享笔记"/>
                     <MenuItem Header="分享链接"/>
                     <MenuItem Header="发送邮件"/>
@@ -155,7 +151,7 @@
                     </MenuItem>
                 </controls:TopMenuItem>
                 <controls:TopMenuItem Header="使用量" x:Name="miTotal" Click="miTotal_Click"
-                        IconHoverSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Count_Hover.png" IconDisabledSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Count_Disabled.png" IconPressedSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Count_Pressed.png" IconSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Count.png"/>
+					IconHoverSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Count_Hover.png" IconDisabledSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Count_Disabled.png" IconPressedSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Count_Pressed.png" IconSource="/TestExerciser.Diary;component/Assets/Images/Menu/TopMenu/Count.png"/>
             </Menu>
         </Border>
 
@@ -179,12 +175,12 @@
 
                 <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="2">
-                        <TreeView Name="tvNotebookList" SelectedItemChanged="tvNotebookList_SelectedItemChanged">
+                        <TreeView x:Name="tvNotebookList" SelectedItemChanged="tvNotebookList_SelectedItemChanged">
                             <TreeViewItem ItemsSource="{Binding NotebookListViewModel.NotebookList}" Style="{StaticResource NotebookTreeViewItemStyle}" IsExpanded="True" IsSelected="True" PreviewMouseRightButtonDown="TreeViewItem_PreviewMouseRightButtonDown">
                                 <TreeViewItem.Header>
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="我的笔记本"/>
-                                        <TextBlock Margin="5,0,0,0" Text="{Binding NotebookListViewModel.Notes, StringFormat=({0})}"/>
+                                        <TextBlock Margin="5,0,0,0" Text="{Binding NotebookListViewModel.Notes, StringFormat=(\{0\})}"/>
                                     </StackPanel>
                                 </TreeViewItem.Header>
                                 <TreeViewItem.ItemTemplate>
@@ -192,7 +188,7 @@
                                         <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
                                             <Image Source="/TestExerciser.Diary;component/Assets/Images/Notebook_Local.png"/>
                                             <TextBlock Text="{Binding Notebook.Name}" Margin="2,0,0,0"/>
-                                            <TextBlock Text="{Binding Notes, StringFormat=({0})}" Margin="2,0,0,0"/>
+                                            <TextBlock Text="{Binding Notes, StringFormat=(\{0\})}" Margin="2,0,0,0"/>
                                         </StackPanel>
                                     </DataTemplate>
                                 </TreeViewItem.ItemTemplate>
@@ -201,10 +197,10 @@
                                         <MenuItem Header="新建笔记本" Command="{Binding AddNotebookCommand, Source={StaticResource ShellViewModel}}"/>
                                     </ContextMenu>
                                 </TreeViewItem.ContextMenu>
-                                <TreeViewItem.ItemContainerStyle>                                    
-                                    <Style TargetType="TreeViewItem" BasedOn="{StaticResource NotebookTreeViewItemStyle}">
-                                        <EventSetter Event="PreviewMouseRightButtonDown" Handler="TreeViewItem_PreviewMouseRightButtonDown"/>
-                                        <Setter Property="ContextMenu" Value="{StaticResource NoteBookItemContextMenu}"></Setter>
+                                <TreeViewItem.ItemContainerStyle>
+                                    <Style TargetType="{x:Type TreeViewItem}" BasedOn="{StaticResource NotebookTreeViewItemStyle}">
+                                        <EventSetter Event="UIElement.PreviewMouseRightButtonDown" Handler="TreeViewItem_PreviewMouseRightButtonDown"/>
+                                        <Setter Property="ContextMenu" Value="{StaticResource NoteBookItemContextMenu}"/>
                                     </Style>
                                 </TreeViewItem.ItemContainerStyle>
                             </TreeViewItem>
@@ -216,11 +212,11 @@
                                     <TreeViewItem Header="本周"/>
                                     <TreeViewItem Header="本月"/>
                                     <TreeViewItem Header="本年"/>
-                                    <TreeViewItem Name="tviCustomCreateDate">
+                                    <TreeViewItem x:Name="tviCustomCreateDate">
                                         <TreeViewItem.Header>
                                             <StackPanel>
                                                 <TextBlock Text="自定义时间段"/>
-                                                <Button Content="哈哈" Visibility="{Binding IsSelected, ElementName=tviCustomCreateDate, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                                <Button Content="哈哈" Visibility="{Binding IsSelected, Converter={StaticResource BooleanToVisibilityConverter}, ElementName=tviCustomCreateDate}"/>
                                             </StackPanel>
                                         </TreeViewItem.Header>
                                     </TreeViewItem>
@@ -234,12 +230,12 @@
                                 </TreeViewItem>
                             </TreeViewItem>
                         </TreeView>
-                        <TreeView Name="tvRecycle" SelectedItemChanged="tvRecycle_SelectedItemChanged">
+                        <TreeView x:Name="tvRecycle" SelectedItemChanged="tvRecycle_SelectedItemChanged">
                             <TreeViewItem ContextMenu="{StaticResource RecycleContextMenu}" Style="{StaticResource NotebookTreeViewItemStyle}" PreviewMouseRightButtonDown="TreeViewItem_PreviewMouseRightButtonDown">
                                 <TreeViewItem.Header>
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="回收站"/>
-                                        <TextBlock Margin="5,0,0,0" Text="{Binding NotebookListViewModel.RecycleNotes, StringFormat=({0})}"/>
+                                        <TextBlock Margin="5,0,0,0" Text="{Binding NotebookListViewModel.RecycleNotes, StringFormat=(\{0\})}"/>
                                     </StackPanel>
                                 </TreeViewItem.Header>
                             </TreeViewItem>
@@ -254,8 +250,8 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>                
-                
+                </Grid.RowDefinitions>
+
                 <Grid Height="35">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -263,7 +259,7 @@
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBox Name="tbSearchKeywords" Style="{StaticResource SearchTextBox}" Grid.Column="1" Text="{Binding NoteListViewModel.QueryCondition.Keywords}">
+                    <TextBox x:Name="tbSearchKeywords" Style="{StaticResource SearchTextBox}" Grid.Column="1" Text="{Binding NoteListViewModel.QueryCondition.Keywords}">
                         <i:Interaction.Behaviors>
                             <behavior:TextBoxDelayBehavior/>
                         </i:Interaction.Behaviors>
@@ -278,17 +274,17 @@
                     <Button Style="{StaticResource SearchButton}" Grid.Column="2"/>
                     <Rectangle Fill="{StaticResource DefaultBorderBrush}" VerticalAlignment="Bottom" Height="1" Grid.ColumnSpan="3"/>
                 </Grid>
-                
+
                 <ListBox ItemTemplate="{Binding UISettings.ArticleDisplay, Converter={StaticResource ArticleDisplayToItemTemplateConverter}}" 
-                         x:Name="lbNote" Grid.Row="1" ItemsSource="{Binding NoteListViewModel.NoteList}"
-                         PreviewKeyDown="lbNote_PreviewKeyDown">
+					x:Name="lbNote" Grid.Row="1" ItemsSource="{Binding NoteListViewModel.NoteList}"
+					PreviewKeyDown="lbNote_PreviewKeyDown">
                     <ListBox.ItemContainerStyle>
-                        <Style TargetType="ListBoxItem" BasedOn="{StaticResource {x:Type ListBoxItem}}">
+                        <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource {x:Type ListBoxItem}}">
                             <Setter Property="ContextMenu">
                                 <Setter.Value>
                                     <MultiBinding Converter="{StaticResource NoteItemContextMenuConverter}">
                                         <Binding Path="Note.IsDelete"/>
-                                    </MultiBinding>                                    
+                                    </MultiBinding>
                                 </Setter.Value>
                             </Setter>
                         </Style>
@@ -328,11 +324,11 @@
 
         <controls:NotifyControl x:Name="notifyControl" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,20"/>
 
-        <taskbar:TaskbarIcon Name="taskbarIcon" IconSource="/TestExerciser.Diary;component/Assets/Images/TestExerciser.Diary.ico" TrayMouseDoubleClick="miShowWindow_Click">
+        <taskbar:TaskbarIcon x:Name="taskbarIcon" IconSource="/TestExerciser.Diary;component/Assets/Images/TestExerciser.Diary.ico" TrayMouseDoubleClick="miShowWindow_Click">
             <taskbar:TaskbarIcon.ContextMenu>
                 <ContextMenu Style="{x:Null}">
-                    <MenuItem Name="miShowWindow" Click="miShowWindow_Click" Header="显示窗口"/>
-                    <MenuItem Name="miTopMost" Header="总在最前" IsCheckable="True"/>
+                    <MenuItem x:Name="miShowWindow" Click="miShowWindow_Click" Header="显示窗口"/>
+                    <MenuItem x:Name="miTopMost" Header="总在最前" IsCheckable="True"/>
                     <MenuItem Header="设置" Click="miConfig_Click"/>
                     <Separator Style="{StaticResource DefaultSeparatorStyle}"/>
                     <MenuItem Header="锁定窗口"/>
