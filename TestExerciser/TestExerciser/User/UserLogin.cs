@@ -27,6 +27,8 @@ namespace TestExerciser.User
         //定义委托事件
         public event SetMainForm SetMainFormActivate;
         public event SetMainForm SetMainFormVisable;
+        public event SetMainForm SetMainFormEnableFlase;
+        public event SetMainForm SetMainFormEnableTrue;
         public event SetMainForm SetMainFormClosed;
 
         public UserLogin()
@@ -153,10 +155,14 @@ namespace TestExerciser.User
             myNotifyIcon_DoubleClick(sender, e);
         }
 
-        private void toolStripMenuItem_ScreenLock_Click(object sender, EventArgs e)
+        private void toolStripMenuItem_Lock_Click(object sender, EventArgs e)
         {
-            var myMainForm = sender as MainForm;
-            myMainForm.Enabled = false;
+            SetMainFormEnableFlase();            
+        }
+
+        private void toolStripMenuItem_UnLock_Click(object sender, EventArgs e)
+        {
+            SetMainFormEnableTrue();
         }
 
         private void toolStripMenuItem_ScreenShot_Click(object sender, EventArgs e)
@@ -211,6 +217,7 @@ namespace TestExerciser.User
             this.Visible = true;
         }
 
+
         private void d_ShowMainFrom()
         {
             MainForm myMainForm = new MainForm();
@@ -218,11 +225,14 @@ namespace TestExerciser.User
             MainForm.isMainFormClosed = false;
             this.myNotifyIcon.Visible = true;
             this.SetMainFormActivate += new SetMainForm(myMainForm.d_SetMainWindowActive);
-            this.SetMainFormVisable += new SetMainForm(myMainForm.d_SetMainWindowVisable);
+            this.SetMainFormVisable += new SetMainForm(myMainForm.d_SetMainWindowVisableFalse);
             this.SetMainFormClosed += new SetMainForm(myMainForm.d_SetMainWindowClosed);
-            myMainForm.SetUserLoginFormVisable += new SetUserLoginForm(this.d_SetUserLoginFormVisableTrue);
+            this.SetMainFormEnableTrue += new SetMainForm(myMainForm.d_SetMainWindowEnableTrue);
+            this.SetMainFormEnableFlase += new SetMainForm(myMainForm.d_SetMainWindowEnableFlase);
+            myMainForm.SetUserLoginFormVisableTrue += new SetUserLoginForm(this.d_SetUserLoginFormVisableTrue);
             myMainForm.ShowMainFormWhenClosed += new ShowMainForm(this.d_ShowMainFrom);
         }
-        
+
+              
     }
 }

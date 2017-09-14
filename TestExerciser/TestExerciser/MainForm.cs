@@ -37,8 +37,9 @@ namespace TestExerciser
         public static bool isMainFormClosed = false;
 
         //定义委托事件
-        public event SetUserLoginForm SetUserLoginFormVisable;
+        public event SetUserLoginForm SetUserLoginFormVisableTrue;
         public event ShowMainForm ShowMainFormWhenClosed;
+        public event ShowMainForm ShowMainFormEnableFalse;
         
         Style invisibleCharsStyle = new InvisibleCharsRenderer(Pens.Gray);
         Color currentLineColor = Color.FromArgb(100, 210, 210, 255);
@@ -3114,7 +3115,7 @@ namespace TestExerciser
             }
         }
 
-        public void d_SetMainWindowVisable()
+        public void d_SetMainWindowVisableFalse()
         {
             this.Visible = false;
         }
@@ -3123,6 +3124,16 @@ namespace TestExerciser
         {
             this.Visible = false;
             this.Close();
+        }
+
+        public void d_SetMainWindowEnableFlase()
+        {
+            this.Enabled = false;
+        }
+
+        public void d_SetMainWindowEnableTrue()
+        {
+            this.Enabled = true;
         }
     }
 }
