@@ -215,12 +215,6 @@
     <Compile Include="Logic\FTPClient.cs" />
     <Compile Include="Logic\ListItem.cs" />
     <Compile Include="Logic\TextAndImageColumn.cs" />
-    <Compile Include="MainBugManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainBugManager.Designer.cs">
-      <DependentUpon>MainBugManager.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainCaseManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,18 +254,6 @@
     <Compile Include="MainPackageManager.Designer.cs">
       <DependentUpon>MainPackageManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainRecord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainRecord.Designer.cs">
-      <DependentUpon>MainRecord.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainRequirement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainRequirement.Designer.cs">
-      <DependentUpon>MainRequirement.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainUpdateHis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,12 +284,6 @@
     <Compile Include="MainWorkProgress.Designer.cs">
       <DependentUpon>MainWorkProgress.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\BugManagement\ToolBugDefectInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tools\BugManagement\ToolBugDefectInfo.Designer.cs">
-      <DependentUpon>ToolBugDefectInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tools\CaseManagement\ToolCaseCommit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,12 +308,6 @@
     <Compile Include="Tools\Control\ControlSearch.Designer.cs">
       <DependentUpon>ControlSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\ProjectManagement\ToolProjectDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tools\ProjectManagement\ToolProjectDetails.Designer.cs">
-      <DependentUpon>ToolProjectDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tools\SVN\SVNManager.cs" />
     <Compile Include="Tools\SVN\ToolSVN.cs">
       <SubType>Form</SubType>
@@ -352,18 +322,6 @@
       <DependentUpon>ToolSVNCheckOut.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\LoginInfo.cs" />
-    <Compile Include="Tools\BugManagement\ToolBugCommit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tools\BugManagement\ToolBugCommit.Designer.cs">
-      <DependentUpon>ToolBugCommit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Tools\BugManagement\ToolBugQuery.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tools\BugManagement\ToolBugQuery.Designer.cs">
-      <DependentUpon>ToolBugQuery.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tools\ToolClean.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -512,9 +470,6 @@
     <Content Include="Tools\Sources\spyxx_amd64.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="MainBugManager.resx">
-      <DependentUpon>MainBugManager.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainCaseManager.resx">
       <DependentUpon>MainCaseManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -536,12 +491,6 @@
     <EmbeddedResource Include="MainPackageManager.resx">
       <DependentUpon>MainPackageManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainRecord.resx">
-      <DependentUpon>MainRecord.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainRequirement.resx">
-      <DependentUpon>MainRequirement.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainUpdateHis.resx">
       <DependentUpon>MainUpdateHis.cs</DependentUpon>
     </EmbeddedResource>
@@ -558,9 +507,6 @@
       <DependentUpon>MainWorkProgress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Tools\BugManagement\ToolBugDefectInfo.resx">
-      <DependentUpon>ToolBugDefectInfo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Tools\CaseManagement\ToolCaseCommit.resx">
       <DependentUpon>ToolCaseCommit.cs</DependentUpon>
     </EmbeddedResource>
@@ -573,20 +519,11 @@
     <EmbeddedResource Include="Tools\Control\ControlSearch.resx">
       <DependentUpon>ControlSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tools\ProjectManagement\ToolProjectDetails.resx">
-      <DependentUpon>ToolProjectDetails.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Tools\SVN\ToolSVN.resx">
       <DependentUpon>ToolSVN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\SVN\ToolSVNCheckOut.resx">
       <DependentUpon>ToolSVNCheckOut.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tools\BugManagement\ToolBugCommit.resx">
-      <DependentUpon>ToolBugCommit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tools\BugManagement\ToolBugQuery.resx">
-      <DependentUpon>ToolBugQuery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolClean.resx">
       <DependentUpon>ToolClean.cs</DependentUpon>
