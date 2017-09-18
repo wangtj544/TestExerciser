@@ -464,14 +464,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1142784">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1146368">
       <assemblyIdentity name="TestExerciser" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>pnEuD7V2XO1ylI0EWxckuc/xHNo=</dsig:DigestValue>
+        <dsig:DigestValue>D3yWhGPwPv24LAEcmmocgKT7MZE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -519,7 +519,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>gJs1TaV0GHSUfrRFT2izY71/nrg=</dsig:DigestValue>
+        <dsig:DigestValue>1Unj/TY7Wmzm1ozepj05RQCVU50=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -64,6 +64,8 @@ namespace TestExerciser.User
                         strcon = this.stbServerDBPath.Text.ToString();
                         this.txtStatus.ForeColor = Color.Green;
                         this.txtStatus.Text = "设置信息：设置成功，更改为远程服务器数据库连接！";
+                        this.Visible = false;
+                        this.Close();
                     }
                     else
                     {
@@ -82,6 +84,8 @@ namespace TestExerciser.User
                 strcon = strconLocal;
                 this.txtStatus.ForeColor = Color.Green;
                 this.txtStatus.Text = "设置信息：设置成功，更改为本地数据库连接！";
+                this.Visible = false;
+                this.Close();
             }
             if (strcon != null)
             {

@@ -246,11 +246,25 @@ namespace TestExerciser.Logic
             mycon.Dispose();
         }
 
+        /// <summary>
+        /// 修改1个数据
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="row"></param>
+        /// <param name="txtChangeTo"></param>
         public void UpdateDB(string table, string row, Control txtChangeTo)
         {
             UpdateDB("update " + table + " set " + row + "='" + txtChangeTo.Text + "'" + " where userName='" + UserLogin.pubUserName + "'");
         }
 
+        /// <summary>
+        /// 修改2个数据
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="row"></param>
+        /// <param name="changeTo"></param>
+        /// <param name="otherRow"></param>
+        /// <param name="otherChangeTo"></param>
         public void UpdateDB(string table, string row, string changeTo,string otherRow,string otherChangeTo)
         {
             UpdateDB("update " + table + " set " + row + "='" + changeTo + "'" + " where " + otherRow + "='" + otherChangeTo + "'");
@@ -461,6 +475,69 @@ namespace TestExerciser.Logic
             mycomm.Dispose();
             mycon.Close();
             mycon.Dispose();
+        }
+
+        public bool checkItem(string row1, string table,string row2, string dataItem)
+        {
+            bool falg = false;
+            string selectFullName = "select " + row1 + " from " + table + " where " + row2 + "=" + "'" + dataItem + "'";
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
+                    falg = true;
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+
+            }
+            return falg;
+        }
+
+        public bool checkItem(string row, string table, string dataItem)
+        {
+            bool falg = false;
+            string selectFullName = "select " + row + " from " + table;
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
+                    while (myReader.Read())
+                    {
+                        if (dataItem == Convert.ToString(myReader[0]))
+                        {
+                            falg = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+
+            }
+            return falg;
         }
     }
 }
