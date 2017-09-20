@@ -124,8 +124,8 @@ namespace TestExerciser.Tools
             {
                 this.btnSelectFile.Enabled = true;
             }           
-            myManageDB.selectItems(cbIfAuto);
-            myManageDB.selectItems(cbIfCover);
+            myManageDB.selectItems(cbIfAuto,"用户管理");
+            myManageDB.selectItems(cbIfCover,"用户管理");
             }
             catch (Exception exception)
             {
@@ -154,8 +154,8 @@ namespace TestExerciser.Tools
 
         private void MainCaseReview_FormClosing(object sender, FormClosingEventArgs e)
         {
-            myManageDB.clearList(cbIfAuto);
-            myManageDB.clearList(cbIfCover);
+            myManageDB.clearList(cbIfAuto,"用户管理");
+            myManageDB.clearList(cbIfCover,"用户管理");
         }
 
         private void cbIfAuto_Click(object sender, EventArgs e)
@@ -349,7 +349,7 @@ namespace TestExerciser.Tools
 
         private void btnLaunch_Click(object sender, EventArgs e)
         {
-            if (myManageDB.checkUserName("用例评审", "revFullName", ManageDB.userFullName, "revEmail", ManageDB.userEmailAddress))
+            if (myManageDB.checkItem("revFullName", "用例评审", ManageDB.userFullName, "revEmail", ManageDB.userEmailAddress))
             {
                 MessageBox.Show("您已经发起了评审流程！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

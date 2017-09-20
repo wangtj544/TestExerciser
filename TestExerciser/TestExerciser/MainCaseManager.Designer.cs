@@ -292,6 +292,7 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.dgvCaseManager.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCaseManager.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCaseManager.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvCaseManager.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvCaseManager.ColumnFont = null;
@@ -1077,7 +1078,6 @@
         private CCWin.SkinControl.SkinButton btnInfo;
         private CCWin.SkinControl.SkinButton btnQuery;
         private CCWin.SkinControl.SkinButton btnNew;
-        private CCWin.SkinControl.SkinDataGridView dgvCaseManager;
         private CCWin.SkinControl.SkinButton btnSwitch;
         private System.Windows.Forms.TableLayoutPanel tlpBugDetails;
         private CCWin.SkinControl.SkinLabel slabTitle;
@@ -1132,5 +1132,6 @@
         private CCWin.SkinControl.SkinTabPage stpChart;
         private CCWin.SkinControl.SkinTabPage stpRelevance;
         private CCWin.SkinControl.SkinButton btnReview;
+        private CCWin.SkinControl.SkinDataGridView dgvCaseManager;
     }
 }

@@ -29,10 +29,21 @@ namespace TestExerciser.Logic
 
 
 
-        public bool checkUserNameDuplicate(string userName)
+
+        /// <summary>
+        /// 获取数据表中的特定值
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="table"></param>
+        /// <param name="rowA"></param>
+        /// <param name="valueA"></param>
+        /// <param name="rowB"></param>
+        /// <param name="valueB"></param>
+        /// <returns></returns>
+        public string getDataFromCell(string row,string table,string rowA,string valueA,string rowB,string valueB)
         {
-            bool falg = false;
-            string selectFullName = "select ID from 用户管理 where userName=" + "'" + userName + "'";
+            string mycell = "";
+            string selectFullName = "select " + row + " from " + table + " where " + rowA + "=" + "'" + valueA + "'" + "AND" + ""+ rowB +"=" + "'" + valueB + "'";
             try
             {
                 mycon = new SqlConnection(strcon);
@@ -41,41 +52,9 @@ namespace TestExerciser.Logic
                 myReader = mycom.ExecuteReader();
                 if (myReader.HasRows == true)
                 {
-                    falg = true;
-                }
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                myReader.Close();
-                mycon.Close();
-
-            }
-            return falg;
-        }
-
-        public bool checkAutoReviewTo()
-        {
-            bool falg = false;
-            string selectFullName = "select email from 用户管理 where autoReviewTo='True'";
-            try
-            {
-                mycon = new SqlConnection(strcon);
-                mycon.Open();
-                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
-                myReader = mycom.ExecuteReader();
-                if (myReader.HasRows == true)
-                {                   
                     while (myReader.Read())
                     {
-                        if (userEmailAddress == Convert.ToString(myReader[0]))
-                        {
-                            falg = true;
-                            break;
-                        }
+                        mycell = Convert.ToString(myReader[0]);
                     }
                 }
             }
@@ -89,8 +68,50 @@ namespace TestExerciser.Logic
                 mycon.Close();
 
             }
-            return falg;
+            return mycell;
         }
+
+        /// <summary>
+        /// 获取数据表中的特定值
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="table"></param>
+        /// <param name="rowA"></param>
+        /// <param name="valueA"></param>
+        /// <returns></returns>
+        public string getDataFromCell(string row, string table, string rowA, string valueA)
+        {
+            string mycell = "";
+            string selectFullName = "select " + row + " from " + table + " where " + rowA + "=" + "'" + valueA + "'";
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
+                    while (myReader.Read())
+                    {
+                        mycell = Convert.ToString(myReader[0]);
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+
+            }
+            return mycell;
+        }
+
+
+
 
         public bool checkCoverReviewTo()
         {
@@ -226,6 +247,74 @@ namespace TestExerciser.Logic
             return falg;
         }
 
+        public bool checkUserNameDuplicate(string userName)
+        {
+            bool falg = false;
+            string selectFullName = "select ID from 用户管理 where userName=" + "'" + userName + "'";
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
+                    falg = true;
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+
+            }
+            return falg;
+        }
+
+        public bool checkAutoReviewTo()
+        {
+            bool falg = false;
+            string selectFullName = "select email from 用户管理 where autoReviewTo='True'";
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
+                    while (myReader.Read())
+                    {
+                        if (userEmailAddress == Convert.ToString(myReader[0]))
+                        {
+                            falg = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+
+            }
+            return falg;
+        }
+
+
+        /// <summary>
+        /// 更新数据
+        /// </summary>
+        /// <param name="sql"></param>
         public void UpdateDB(string sql)
         {
             mycon = new SqlConnection(strcon);
@@ -247,7 +336,7 @@ namespace TestExerciser.Logic
         }
 
         /// <summary>
-        /// 修改1个数据
+        /// 更新1个数据
         /// </summary>
         /// <param name="table"></param>
         /// <param name="row"></param>
@@ -258,7 +347,18 @@ namespace TestExerciser.Logic
         }
 
         /// <summary>
-        /// 修改2个数据
+        /// 更新1个数据
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="row"></param>
+        /// <param name="changeTo"></param>
+        public void UpdateDB(string table, string row, string changeTo)
+        {
+            UpdateDB("update " + table + " set " + row + "='" + changeTo + "'");
+        }
+
+        /// <summary>
+        /// 更新2个数据
         /// </summary>
         /// <param name="table"></param>
         /// <param name="row"></param>
@@ -270,11 +370,160 @@ namespace TestExerciser.Logic
             UpdateDB("update " + table + " set " + row + "='" + changeTo + "'" + " where " + otherRow + "='" + otherChangeTo + "'");
         }
 
-        public void UpdateDB(string table, string row, string changeTo)
+        /// <summary>
+        /// 用户判断值是否存在
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="table"></param>
+        /// <param name="dataItem"></param>
+        /// <returns></returns>
+        public bool checkItem(string row, string table, string dataItem)
         {
-            UpdateDB("update " + table + " set " + row + "='" + changeTo + "'");
+            bool falg = false;
+            string mySQL = "select " + row + " from " + table;
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
+                    while (myReader.Read())
+                    {
+                        if (dataItem == Convert.ToString(myReader[0]))
+                        {
+                            falg = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+
+            }
+            return falg;
         }
 
+        /// <summary>
+        /// 用以判断值是否存在
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="table"></param>
+        /// <param name="rowA"></param>
+        /// <param name="dataItem"></param>
+        /// <returns></returns>
+        public bool checkItem(string row, string table, string rowA, string dataItem)
+        {
+            bool falg = false;
+            string mySQL = "select " + row + " from " + table + " where " + rowA + "=" + "'" + dataItem + "'";
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
+                    falg = true;
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+
+            }
+            return falg;
+        }
+     
+        public bool checkItem(string table, string row, string valueA, string rowB, string valueB)
+        {
+            bool falg = false;
+            string mySQL = "select " + row + " from " + table + " where " + rowB + "=" + "'" + valueB + "'";
+
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
+                    while (myReader.Read())
+                    {
+                        if (valueA == Convert.ToString(myReader[0]))
+                        {
+                            falg = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (myReader != null)
+                {
+                    myReader.Close();
+                    mycon.Close();
+                }
+            }
+            return falg;
+        }
+
+
+
+        public int countNum(string row, string table)
+        {
+            int count = 0;
+            string mySQL = "select " + row + " from " + table;
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlDataAdapter myda = new SqlDataAdapter(mySQL, mycon);
+                DataTable mydt = new DataTable();
+                myda.Fill(mydt);
+                foreach (DataRow r in mydt.Rows)
+                {
+                    count = count + 1;
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+
+            }
+            return count;
+        }
+
+
+
+        /// <summary>
+        /// 检查用户名称是否存在
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
         public bool checkUserName(string userName)
         {
             bool falg = false;
@@ -306,43 +555,7 @@ namespace TestExerciser.Logic
             return falg;
         }
 
-        public bool checkUserName(string table,string row1,string value1,string row2,string value2 )
-        {
-            bool falg = false;
-            string mySQL = "select " + row1 + " from " + table + " where " + row2 + "=" + "'" + value2 + "'";
 
-            try
-            {
-                mycon = new SqlConnection(strcon);
-                mycon.Open();
-                SqlCommand mycom = new SqlCommand(mySQL, mycon);
-                myReader = mycom.ExecuteReader();
-                if (myReader.HasRows == true)
-                {
-                    while (myReader.Read())
-                    {
-                        if (value1 == Convert.ToString(myReader[0]))
-                        {
-                            falg = true;
-                            break;
-                        }
-                    }
-                }
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                if (myReader != null)
-                {
-                    myReader.Close();
-                    mycon.Close();
-                }
-            }
-            return falg;
-        }
 
         public bool userMailToResetPassword(string userName, string userEmail)
         {
@@ -399,7 +612,7 @@ namespace TestExerciser.Logic
             return falg;
         }
 
-        public bool selectItems(ComboBox comBox)
+        public bool selectItems(ComboBox comBox,string table)
         {
             bool falg = false;
             string mySQL = "select * from 用户管理";
@@ -430,7 +643,7 @@ namespace TestExerciser.Logic
             return falg;
         }
 
-        public bool clearList(ComboBox comBox)
+        public bool clearList(ComboBox comBox,string table)
         {
             bool falg = false;
             string mySQL = "select * from 用户管理";
@@ -477,67 +690,6 @@ namespace TestExerciser.Logic
             mycon.Dispose();
         }
 
-        public bool checkItem(string row1, string table,string row2, string dataItem)
-        {
-            bool falg = false;
-            string selectFullName = "select " + row1 + " from " + table + " where " + row2 + "=" + "'" + dataItem + "'";
-            try
-            {
-                mycon = new SqlConnection(strcon);
-                mycon.Open();
-                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
-                myReader = mycom.ExecuteReader();
-                if (myReader.HasRows == true)
-                {
-                    falg = true;
-                }
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                myReader.Close();
-                mycon.Close();
 
-            }
-            return falg;
-        }
-
-        public bool checkItem(string row, string table, string dataItem)
-        {
-            bool falg = false;
-            string selectFullName = "select " + row + " from " + table;
-            try
-            {
-                mycon = new SqlConnection(strcon);
-                mycon.Open();
-                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
-                myReader = mycom.ExecuteReader();
-                if (myReader.HasRows == true)
-                {
-                    while (myReader.Read())
-                    {
-                        if (dataItem == Convert.ToString(myReader[0]))
-                        {
-                            falg = true;
-                            break;
-                        }
-                    }
-                }
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                myReader.Close();
-                mycon.Close();
-
-            }
-            return falg;
-        }
     }
 }
