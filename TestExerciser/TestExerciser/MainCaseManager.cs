@@ -51,37 +51,44 @@ namespace TestExerciser
                     new DataColumn("作者"),
                     new DataColumn("执行结果"),
                     new DataColumn("创建日期"),
-                    new DataColumn("更新日期"),
-                    new DataColumn("隐藏信息列")
+                    new DataColumn("测试日期"),
+                    new DataColumn("用例名称")
                 });
-            for (int i = 0; i < myManageDB.countNum("ceCaseNO", "用例编写"); i++)
-            {
-                DataRow row = dt.NewRow();
-                row[0] = "名称" + (i + 1);
-                row[1] = i % 2 == 0 ? "超级管理员" : "管理员";
-                row[3] = DateTime.Now.ToString("yyyy/MM/dd");
-                row[4] = DateTime.Now.AddDays(i).ToString("yyyy/MM/dd");
-                row[5] = "客户已经同意与（某某" + (i + 1) + " " + (i + 1) + "小时前）";
-                dt.Rows.Add(row);
-            }
-            dgvCaseManager.ColumnCount = 5;
-            for (int i = 0; i < 5; i++)
-            {
-                dgvCaseManager.Columns[i].Name = dt.Columns[i].ColumnName;
-                dgvCaseManager.Columns[i].DataPropertyName = dt.Columns[i].ColumnName;
-                dgvCaseManager.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                if (i != 0)
-                    dgvCaseManager.Columns[i].Width = 120;
-                else
-                    dgvCaseManager.Columns[i].Width = 150;
-            }
-            dgvCaseManager.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvCaseManager.DataSource = dt;
 
-            //只需要把需要绘制的DataGridView传入DataGridViewRenderer即可，
-            //这里的隐藏列即为需要重新绘制的内容
-            DataGridViewRenderer render = new DataGridViewRenderer(dgvCaseManager,
-                dgvCaseManager.Columns[dgvCaseManager.ColumnCount - 1]);
+            string [] myRows = myManageDB.getDataFromCell("ceCaseNO", "用例编写");
+
+            if (myRows != null)
+            {
+                foreach (string myRow in myRows)
+                {
+                    DataRow row = dt.NewRow();
+                    row[0] = myRow;                   
+                    row[1] = myManageDB.getDataFromCell("ceAuthor", "用例编写", "ceCaseNO", myRow);
+                    row[2] = myManageDB.getDataFromCell("ceActually", "用例编写", "ceCaseNO", myRow);
+                    row[3] = myManageDB.getDataFromCell("ceEditDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
+                    row[4] = myManageDB.getDataFromCell("ceTestDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
+                    row[5] = myManageDB.getDataFromCell("ceCaseName", "用例编写", "ceCaseNO", myRow); ;
+                    dt.Rows.Add(row);
+                }
+                dgvCaseManager.ColumnCount = 5;
+                for (int i = 0; i < dgvCaseManager.ColumnCount; i++)
+                {
+                    dgvCaseManager.Columns[i].Name = dt.Columns[i].ColumnName;
+                    dgvCaseManager.Columns[i].DataPropertyName = dt.Columns[i].ColumnName;
+                    dgvCaseManager.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    if (i != 0)
+                        dgvCaseManager.Columns[i].Width = 120;
+                    else
+                        dgvCaseManager.Columns[i].Width = 150;
+                }
+                dgvCaseManager.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvCaseManager.DataSource = dt;
+
+                //只需要把需要绘制的DataGridView传入DataGridViewRenderer即可，
+                //这里的隐藏列即为需要重新绘制的内容
+                DataGridViewRenderer render = new DataGridViewRenderer(dgvCaseManager,
+                    dgvCaseManager.Columns[dgvCaseManager.ColumnCount - 1]);
+            }          
         }
 
         private class DataGridViewRenderer
@@ -89,16 +96,16 @@ namespace TestExerciser
             //行高
             private const int ROW_HEIGHT = 70;
             //目标DataGridView
-            private DataGridView dataGridView;
+            private CCWin.SkinControl.SkinDataGridView dataGridView;
             //需要自定义绘制的列
             private DataGridViewColumn hiddenColumn;
             //记录上一次选择的行，用于行索引改变时重绘该行而不是重绘整个控件画面
             private int preRowIndex = 0;
             //小图标
             private Bitmap icon1;
-            private Bitmap icon2;
+            //private Bitmap icon2;
 
-            public DataGridViewRenderer(DataGridView dataGridView, DataGridViewColumn hiddenColumn = null)
+            public DataGridViewRenderer(CCWin.SkinControl.SkinDataGridView dataGridView, DataGridViewColumn hiddenColumn = null)
             {
                 this.dataGridView = dataGridView;
                 this.hiddenColumn = hiddenColumn;
@@ -130,12 +137,13 @@ namespace TestExerciser
                 dataGridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
                 //单元格选择模式为全选
                 dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dataGridView.MultiSelect = false;
                 dataGridView.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
                 //设置字体样式
                 dataGridView.DefaultCellStyle.SelectionForeColor = Color.Black;
-                dataGridView.DefaultCellStyle.ForeColor = Color.DimGray;
+                dataGridView.DefaultCellStyle.ForeColor = Color.Black;
                 //设置选中行背景色，需要绘制自定义背景应该在RowPrePaint处理，并设置该属性为Color.Transparent;
-                dataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.Orange;
+                //dataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.LightSkyBlue;
                 //绑定一些事件实现自定义行绘制
                 dataGridView.ColumnWidthChanged += new
                     DataGridViewColumnEventHandler(dgvCaseManager_ColumnWidthChanged);
@@ -147,8 +155,8 @@ namespace TestExerciser
                     DataGridViewRowPostPaintEventHandler(dgvCaseManager_RowPostPaint);
 
                 //初始化小图标，这里在资源列表获取
-                icon1 = Properties.Resources._0;
-                icon2 = Properties.Resources._0;
+                icon1 = Properties.Resources._2;
+                //icon2 = Properties.Resources._0;
             }
 
             /// <summary>
@@ -218,17 +226,20 @@ namespace TestExerciser
                         Rectangle textBounds = rowBounds;
                         textBounds.X -= dataGridView.HorizontalScrollingOffset;
                         textBounds.Width += dataGridView.HorizontalScrollingOffset;
+                       
                         textBounds.Y += rowBounds.Height - e.InheritedRowStyle.Padding.Bottom;
                         textBounds.Height -= rowBounds.Height - e.InheritedRowStyle.Padding.Bottom;
                         textBounds.Height = (textBounds.Height / e.InheritedRowStyle.Font.Height) *
                             e.InheritedRowStyle.Font.Height;
 
+
+
                         RectangleF oldClip = e.Graphics.ClipBounds;
                         e.Graphics.SetClip(textBounds);
                         //画图标
                         e.Graphics.DrawImage(icon1, new Rectangle(textBounds.X + 5, textBounds.Y, icon1.Width, icon1.Height));
-                        e.Graphics.DrawImage(icon2, new Rectangle(textBounds.X + icon1.Width + 10, textBounds.Y, icon2.Width, icon2.Height));
-                        textBounds.X += icon1.Width * 2 + 15;
+                        //e.Graphics.DrawImage(icon2, new Rectangle(textBounds.X + icon1.Width + 10, textBounds.Y, icon2.Width, icon2.Height));
+                        textBounds.X += icon1.Width * 1 + 15;
                         textBounds.Y += 2;
                         //画文字
                         e.Graphics.DrawString(
@@ -242,6 +253,38 @@ namespace TestExerciser
                     brush.Dispose();
                 }
             }          
-        }     
+        }
+
+        private void showTestCaseDetails(string tcNO)
+        {
+            this.labTCNOValue.Text = myManageDB.getDataFromCell("ceCaseNO", "用例编写", "ceCaseNO", tcNO);
+            this.txtProject.Text = myManageDB.getDataFromCell("ceProject", "用例编写", "ceCaseNO", tcNO);
+            this.txtSuiteNO.Text = myManageDB.getDataFromCell("ceSuiteNO", "用例编写", "ceCaseNO", tcNO);
+            this.txtSuiteName.Text = myManageDB.getDataFromCell("ceSuiteName", "用例编写", "ceCaseNO", tcNO);
+            this.txtCaseNO.Text = myManageDB.getDataFromCell("ceCaseNO", "用例编写", "ceCaseNO", tcNO);
+            this.txtCaseName.Text = myManageDB.getDataFromCell("ceCaseName", "用例编写", "ceCaseNO", tcNO);
+            this.txtReqNO.Text = myManageDB.getDataFromCell("ceReqNO", "用例编写", "ceCaseNO", tcNO);
+            this.txtCaseLevel.Text = myManageDB.getDataFromCell("ceCaseLevel", "用例编写", "ceCaseNO", tcNO);
+            this.txtFatherModule.Text = myManageDB.getDataFromCell("ceParentModule", "用例编写", "ceCaseNO", tcNO);
+            this.txtSubModule.Text = myManageDB.getDataFromCell("ceSubModule", "用例编写", "ceCaseNO", tcNO);
+            this.txtAuthor.Text = myManageDB.getDataFromCell("ceAuthor", "用例编写", "ceCaseNO", tcNO);
+            this.txtEditTime.Text = myManageDB.getDataFromCell("ceEditDate", "用例编写", "ceCaseNO", tcNO).Split(' ')[0];
+            this.txtIfAuto.Text = myManageDB.getDataFromCell("ceIfAuto", "用例编写", "ceCaseNO", tcNO);
+            this.txtModifyTime.Text = myManageDB.getDataFromCell("ceModifyDate", "用例编写", "ceCaseNO", tcNO).Split(' ')[0];
+            this.txtTester.Text = myManageDB.getDataFromCell("ceTester", "用例编写", "ceCaseNO", tcNO);
+            this.txtTestTime.Text = myManageDB.getDataFromCell("ceTestDate", "用例编写", "ceCaseNO", tcNO).Split(' ')[0];
+            this.rtbPrecondition.Text = myManageDB.getDataFromCell("cePrecondition", "用例编写", "ceCaseNO", tcNO);
+            this.rtbSteps.Text = myManageDB.getDataFromCell("ceSteps", "用例编写", "ceCaseNO", tcNO);
+            this.rtbSample.Text = myManageDB.getDataFromCell("ceSamples", "用例编写", "ceCaseNO", tcNO);
+            this.rtbExpect.Text = myManageDB.getDataFromCell("ceExcept", "用例编写", "ceCaseNO", tcNO);
+            this.txtActually.Text = myManageDB.getDataFromCell("ceActually", "用例编写", "ceCaseNO", tcNO);
+        }
+
+        private void dgvCaseManager_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCell cell = (DataGridViewCell)dgvCaseManager.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            string tcNO = dgvCaseManager.Rows[cell.RowIndex].Cells[0].Value.ToString();
+            showTestCaseDetails(tcNO);
+        }
     }
 }

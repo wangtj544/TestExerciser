@@ -28,8 +28,6 @@ namespace TestExerciser.Logic
         public static  ListItem listItem;
 
 
-
-
         /// <summary>
         /// 获取数据表中的特定值
         /// </summary>
@@ -111,7 +109,40 @@ namespace TestExerciser.Logic
         }
 
 
+        public string[] getDataFromCell(string row, string table)
+        {
+            string [] myCells = null;
+            List<string> myCellsList = new List<string>(); 
+            string myCell = "";
+            string selectFullName = "select " + row + " from " + table;
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
+                    while (myReader.Read())
+                    {
+                        myCell = Convert.ToString(myReader[0]);
+                        myCellsList.Add(myCell);
+                        myCells = myCellsList.ToArray();
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
 
+            }
+            return myCells;
+        }
 
         public bool checkCoverReviewTo()
         {
@@ -486,7 +517,36 @@ namespace TestExerciser.Logic
             return falg;
         }
 
-
+        public bool selectItems(ComboBox comBox, string table)
+        {
+            bool falg = false;
+            string mySQL = "select * from 用户管理";
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlDataAdapter myda = new SqlDataAdapter(mySQL, mycon);
+                DataTable mydt = new DataTable();
+                myda.Fill(mydt);
+                foreach (DataRow row in mydt.Rows)
+                {
+                    listItem = new ListItem(row["email"].ToString(), row["fullName"].ToString() + "(" + row["email"].ToString() + ")");
+                    comBox.Items.Add(listItem);
+                }
+                comBox.DisplayMember = "Text";
+                comBox.ValueMember = "Value";
+                listItem = (ListItem)comBox.SelectedItem;
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                mycon.Close();
+            }
+            return falg;
+        }
 
         public int countNum(string row, string table)
         {
@@ -510,9 +570,7 @@ namespace TestExerciser.Logic
             }
             finally
             {
-                myReader.Close();
                 mycon.Close();
-
             }
             return count;
         }
@@ -554,8 +612,6 @@ namespace TestExerciser.Logic
             }
             return falg;
         }
-
-
 
         public bool userMailToResetPassword(string userName, string userEmail)
         {
@@ -610,38 +666,7 @@ namespace TestExerciser.Logic
                 mycon.Close();
             }
             return falg;
-        }
-
-        public bool selectItems(ComboBox comBox,string table)
-        {
-            bool falg = false;
-            string mySQL = "select * from 用户管理";
-            try
-            {
-                mycon = new SqlConnection(strcon);
-                mycon.Open();
-                SqlDataAdapter myda = new SqlDataAdapter(mySQL, mycon);
-                DataTable mydt = new DataTable();
-                myda.Fill(mydt);
-                foreach (DataRow row in mydt.Rows)
-                {
-                    listItem = new ListItem(row["email"].ToString(),row["fullName"].ToString()+"("+row["email"].ToString() +")");
-                    comBox.Items.Add(listItem);
-                }
-                comBox.DisplayMember = "Text";
-                comBox.ValueMember = "Value";
-                listItem = (ListItem)comBox.SelectedItem;
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                mycon.Close();
-            }
-            return falg;
-        }
+        }   
 
         public bool clearList(ComboBox comBox,string table)
         {
