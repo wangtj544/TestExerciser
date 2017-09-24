@@ -3118,5 +3118,11 @@ namespace TestExerciser
         {
             this.Enabled = true;
         }
+
+        private void 项目管理PToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainProjectManager myMainProjectManager = new MainProjectManager();
+            myMainProjectManager.Show();
+        }
     }
 }

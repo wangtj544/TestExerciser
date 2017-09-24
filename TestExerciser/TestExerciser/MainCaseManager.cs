@@ -15,17 +15,19 @@ namespace TestExerciser
 {
     public partial class MainCaseManager : Skin_Mac
     {
+        ManageDB myManageDB = new ManageDB();
+        public static string myCaseNo;
+
         public MainCaseManager()
         {
             InitializeComponent();
             fillToDataGridViewControl();
         }
 
-
-        ManageDB myManageDB = new ManageDB();
-
         private void btnNew_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
+            this.Close();
             ToolCaseCommit myToolCaseCommit = new ToolCaseCommit();
             myToolCaseCommit.Show();
         }
@@ -51,6 +53,7 @@ namespace TestExerciser
                     new DataColumn("作者"),
                     new DataColumn("执行结果"),
                     new DataColumn("创建日期"),
+                    new DataColumn("修改日期"),
                     new DataColumn("测试日期"),
                     new DataColumn("用例名称")
                 });
@@ -66,11 +69,12 @@ namespace TestExerciser
                     row[1] = myManageDB.getDataFromCell("ceAuthor", "用例编写", "ceCaseNO", myRow);
                     row[2] = myManageDB.getDataFromCell("ceActually", "用例编写", "ceCaseNO", myRow);
                     row[3] = myManageDB.getDataFromCell("ceEditDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
-                    row[4] = myManageDB.getDataFromCell("ceTestDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
-                    row[5] = myManageDB.getDataFromCell("ceCaseName", "用例编写", "ceCaseNO", myRow); ;
+                    row[4] = myManageDB.getDataFromCell("ceModifyDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
+                    row[5] = myManageDB.getDataFromCell("ceTestDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
+                    row[6] = myManageDB.getDataFromCell("ceCaseName", "用例编写", "ceCaseNO", myRow); ;
                     dt.Rows.Add(row);
                 }
-                dgvCaseManager.ColumnCount = 5;
+                dgvCaseManager.ColumnCount = 6;
                 for (int i = 0; i < dgvCaseManager.ColumnCount; i++)
                 {
                     dgvCaseManager.Columns[i].Name = dt.Columns[i].ColumnName;
@@ -130,7 +134,7 @@ namespace TestExerciser
                 //设置行高
                 dataGridView.RowTemplate.Height = ROW_HEIGHT;
                 //设置内边距大小
-                Padding newPadding = new Padding(0, 1, 0, ROW_HEIGHT - 30);
+                Padding newPadding = new Padding(0, 1, 0, ROW_HEIGHT - 35);
                 dataGridView.RowTemplate.DefaultCellStyle.Padding = newPadding;
                 dataGridView.AllowUserToAddRows = false;
                 //设置无单元格边框
@@ -257,34 +261,63 @@ namespace TestExerciser
 
         private void showTestCaseDetails(string tcNO)
         {
-            this.labTCNOValue.Text = myManageDB.getDataFromCell("ceCaseNO", "用例编写", "ceCaseNO", tcNO);
-            this.txtProject.Text = myManageDB.getDataFromCell("ceProject", "用例编写", "ceCaseNO", tcNO);
-            this.txtSuiteNO.Text = myManageDB.getDataFromCell("ceSuiteNO", "用例编写", "ceCaseNO", tcNO);
-            this.txtSuiteName.Text = myManageDB.getDataFromCell("ceSuiteName", "用例编写", "ceCaseNO", tcNO);
-            this.txtCaseNO.Text = myManageDB.getDataFromCell("ceCaseNO", "用例编写", "ceCaseNO", tcNO);
-            this.txtCaseName.Text = myManageDB.getDataFromCell("ceCaseName", "用例编写", "ceCaseNO", tcNO);
-            this.txtReqNO.Text = myManageDB.getDataFromCell("ceReqNO", "用例编写", "ceCaseNO", tcNO);
-            this.txtCaseLevel.Text = myManageDB.getDataFromCell("ceCaseLevel", "用例编写", "ceCaseNO", tcNO);
-            this.txtFatherModule.Text = myManageDB.getDataFromCell("ceParentModule", "用例编写", "ceCaseNO", tcNO);
-            this.txtSubModule.Text = myManageDB.getDataFromCell("ceSubModule", "用例编写", "ceCaseNO", tcNO);
-            this.txtAuthor.Text = myManageDB.getDataFromCell("ceAuthor", "用例编写", "ceCaseNO", tcNO);
-            this.txtEditTime.Text = myManageDB.getDataFromCell("ceEditDate", "用例编写", "ceCaseNO", tcNO).Split(' ')[0];
-            this.txtIfAuto.Text = myManageDB.getDataFromCell("ceIfAuto", "用例编写", "ceCaseNO", tcNO);
-            this.txtModifyTime.Text = myManageDB.getDataFromCell("ceModifyDate", "用例编写", "ceCaseNO", tcNO).Split(' ')[0];
-            this.txtTester.Text = myManageDB.getDataFromCell("ceTester", "用例编写", "ceCaseNO", tcNO);
-            this.txtTestTime.Text = myManageDB.getDataFromCell("ceTestDate", "用例编写", "ceCaseNO", tcNO).Split(' ')[0];
-            this.rtbPrecondition.Text = myManageDB.getDataFromCell("cePrecondition", "用例编写", "ceCaseNO", tcNO);
-            this.rtbSteps.Text = myManageDB.getDataFromCell("ceSteps", "用例编写", "ceCaseNO", tcNO);
-            this.rtbSample.Text = myManageDB.getDataFromCell("ceSamples", "用例编写", "ceCaseNO", tcNO);
-            this.rtbExpect.Text = myManageDB.getDataFromCell("ceExcept", "用例编写", "ceCaseNO", tcNO);
-            this.txtActually.Text = myManageDB.getDataFromCell("ceActually", "用例编写", "ceCaseNO", tcNO);
+            try
+            {
+                this.labTCNOValue.Text = myManageDB.getDataFromCell("ceCaseNO", "用例编写", "ceCaseNO", tcNO) + "  ";
+                this.txtProject.Text = myManageDB.getDataFromCell("ceProject", "用例编写", "ceCaseNO", tcNO);
+                this.txtIfAuto.Text = myManageDB.getDataFromCell("ceIfAuto", "用例编写", "ceCaseNO", tcNO);
+                this.txtSuiteNO.Text = myManageDB.getDataFromCell("ceSuiteNO", "用例编写", "ceCaseNO", tcNO);
+                this.txtSuiteName.Text = myManageDB.getDataFromCell("ceSuiteName", "用例编写", "ceCaseNO", tcNO);
+                this.txtCaseNO.Text = myManageDB.getDataFromCell("ceCaseNO", "用例编写", "ceCaseNO", tcNO);
+                this.txtCaseName.Text = myManageDB.getDataFromCell("ceCaseName", "用例编写", "ceCaseNO", tcNO);
+                this.txtReqNO.Text = myManageDB.getDataFromCell("ceReqNO", "用例编写", "ceCaseNO", tcNO);
+                this.txtCaseLevel.Text = myManageDB.getDataFromCell("ceCaseLevel", "用例编写", "ceCaseNO", tcNO);
+                this.txtFatherModule.Text = myManageDB.getDataFromCell("ceFatherModule", "用例编写", "ceCaseNO", tcNO);
+                this.txtSubModule.Text = myManageDB.getDataFromCell("ceSubModule", "用例编写", "ceCaseNO", tcNO);
+                this.txtAuthor.Text = myManageDB.getDataFromCell("ceAuthor", "用例编写", "ceCaseNO", tcNO);
+                this.txtEditTime.Text = myManageDB.getDataFromCell("ceEditDate", "用例编写", "ceCaseNO", tcNO).Split(' ')[0];
+                this.txtModifier.Text = myManageDB.getDataFromCell("ceModifier", "用例编写", "ceCaseNO", tcNO);
+                this.txtModifyTime.Text = myManageDB.getDataFromCell("ceModifyDate", "用例编写", "ceCaseNO", tcNO).Split(' ')[0];
+                this.txtTester.Text = myManageDB.getDataFromCell("ceTester", "用例编写", "ceCaseNO", tcNO);
+                this.txtTestTime.Text = myManageDB.getDataFromCell("ceTestDate", "用例编写", "ceCaseNO", tcNO).Split(' ')[0];
+                this.rtbPrecondition.Text = myManageDB.getDataFromCell("cePrecondition", "用例编写", "ceCaseNO", tcNO);
+                this.rtbSteps.Text = myManageDB.getDataFromCell("ceSteps", "用例编写", "ceCaseNO", tcNO);
+                this.rtbSamples.Text = myManageDB.getDataFromCell("ceSamples", "用例编写", "ceCaseNO", tcNO);
+                this.rtbExcept.Text = myManageDB.getDataFromCell("ceExcept", "用例编写", "ceCaseNO", tcNO);
+                this.txtActually.Text = myManageDB.getDataFromCell("ceActually", "用例编写", "ceCaseNO", tcNO);
+            }            
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
         }
 
         private void dgvCaseManager_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewCell cell = (DataGridViewCell)dgvCaseManager.Rows[e.RowIndex].Cells[e.ColumnIndex];
-            string tcNO = dgvCaseManager.Rows[cell.RowIndex].Cells[0].Value.ToString();
-            showTestCaseDetails(tcNO);
+            try
+            {
+                if (e.RowIndex > -1 && e.ColumnIndex > -1)
+                {
+                    DataGridViewCell cell = (DataGridViewCell)dgvCaseManager.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                    string tcNO = dgvCaseManager.Rows[cell.RowIndex].Cells[0].Value.ToString();
+                    showTestCaseDetails(tcNO);
+                }  
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }           
         }
+
+        private void linkModify_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            myCaseNo = this.txtCaseNO.Text;
+            this.Visible = false;
+            this.Close();
+            ToolCaseModify myToolCaseModify = new ToolCaseModify();
+            myToolCaseModify.Show();
+            
+        }
+
     }
 }

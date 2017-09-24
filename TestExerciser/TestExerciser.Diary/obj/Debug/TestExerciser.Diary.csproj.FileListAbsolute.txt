@@ -243,7 +243,6 @@ E:\School\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\TestExercise
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\TestExerciser.Diary.exe
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\TestExerciser.Diary.pdb
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\Microsoft.Expression.Interactions.dll
-E:\School\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\Newtonsoft.Json.dll
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\PresentationCore.dll
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\PresentationFramework.Aero.dll
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\PresentationFramework.dll

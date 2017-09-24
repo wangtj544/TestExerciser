@@ -181,7 +181,6 @@
   <ItemGroup>
     <Compile Include="DataSetCasesForReview.cs">
       <DependentUpon>DataSetCasesForReview.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSetCasesForReview.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -195,7 +194,6 @@
     </Compile>
     <Compile Include="DataSetPackageManager.cs">
       <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSetPackageManager.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -204,7 +202,6 @@
     </Compile>
     <Compile Include="DataSetTeamMembers.cs">
       <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSetTeamMembers.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -220,6 +217,18 @@
     </Compile>
     <Compile Include="MainCaseManager.Designer.cs">
       <DependentUpon>MainCaseManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainProjectManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainProjectManager.Designer.cs">
+      <DependentUpon>MainProjectManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolCaseModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolCaseModify.Designer.cs">
+      <DependentUpon>ToolCaseModify.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\CaseManagement\ToolCaseReviewDirect.cs">
       <SubType>Form</SubType>
@@ -307,6 +316,30 @@
     </Compile>
     <Compile Include="Tools\Control\ControlSearch.Designer.cs">
       <DependentUpon>ControlSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ProjectManagement\ToolProjectCommit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ProjectManagement\ToolProjectCommit.Designer.cs">
+      <DependentUpon>ToolProjectCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ProjectManagement\ToolProjectStruct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ProjectManagement\ToolProjectStruct.Designer.cs">
+      <DependentUpon>ToolProjectStruct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ProjectManagement\ToolProjectStructSubNodesEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ProjectManagement\ToolProjectStructSubNodesEditor.Designer.cs">
+      <DependentUpon>ToolProjectStructSubNodesEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ProjectManagement\ToolProjectStructTopNodesEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ProjectManagement\ToolProjectStructTopNodesEditor.Designer.cs">
+      <DependentUpon>ToolProjectStructTopNodesEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\SVN\SVNManager.cs" />
     <Compile Include="Tools\SVN\ToolSVN.cs">
@@ -473,6 +506,12 @@
     <EmbeddedResource Include="MainCaseManager.resx">
       <DependentUpon>MainCaseManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainProjectManager.resx">
+      <DependentUpon>MainProjectManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\CaseManagement\ToolCaseModify.resx">
+      <DependentUpon>ToolCaseModify.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tools\CaseManagement\ToolCaseReviewDirect.resx">
       <DependentUpon>ToolCaseReviewDirect.cs</DependentUpon>
     </EmbeddedResource>
@@ -518,6 +557,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Control\ControlSearch.resx">
       <DependentUpon>ControlSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ProjectManagement\ToolProjectCommit.resx">
+      <DependentUpon>ToolProjectCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ProjectManagement\ToolProjectStruct.resx">
+      <DependentUpon>ToolProjectStruct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ProjectManagement\ToolProjectStructSubNodesEditor.resx">
+      <DependentUpon>ToolProjectStructSubNodesEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ProjectManagement\ToolProjectStructTopNodesEditor.resx">
+      <DependentUpon>ToolProjectStructTopNodesEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\SVN\ToolSVN.resx">
       <DependentUpon>ToolSVN.cs</DependentUpon>

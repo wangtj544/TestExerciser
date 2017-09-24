@@ -23,16 +23,17 @@ namespace TestExerciser.Tools.CaseManagement
 
         private void ToolCaseCommit_Load(object sender, EventArgs e)
         {
-            this.dtpTestDate.text = DateTime.Today.ToShortDateString();
+            this.dtpEditDate.text = DateTime.Today.ToShortDateString();
             this.tb_Author.Text = ManageDB.userFullName;
         }
 
         private void tsbSave_Click(object sender, EventArgs e)
         {
-            
-            if (tb_CaseNO.Text!=null && tb_CaseNO.Text != "")
+            if (tb_CaseNO.Text != null && tb_CaseNO.Text != "")
             {
-                myManageDB.InsertInto("insert into 用例编写(ceProject,ceStruct,ceSuiteNO,ceSuiteName,ceCaseNO,ceCaseName,ceReqNO,ceCaseLevel,ceParentModule,ceSubModule,ceAuthor,ceIfAuto,ceTester,ceTestDate,cePrecondition,ceSteps,ceSamples,ceExcept,ceActually) values('" + this.tb_Project.Text + "','" + this.cb_Struct.Text + "','" + this.tb_SuiteNO.Text + "','" + this.tb_SuiteName.Text + "','" + this.tb_CaseNO.Text + "','" + this.tb_CaseName.Text + "','" + this.tb_ReqNO.Text + "','" + this.cb_CaseLevel.Text + "','" + this.tb_ParentModule.Text + "','" + this.tb_SubModule.Text + "','" + this.tb_Author.Text + "','" + this.cb_IfAuto.Text + "','" + this.cb_Tester.Text + "','" + this.dtpTestDate.Text + "','" + this.rtb_Precondition.Text + "','" + this.rtb_Steps.Text + "','" + this.rtb_Samples.Text + "','" + this.rtb_Except.Text + "','" + this.cb_Actually.Text + "')");
+                myManageDB.InsertInto("insert into 用例编写(ceProject,ceStruct,ceSuiteNO,ceSuiteName,ceCaseNO,ceCaseName,ceReqNO,ceCaseLevel,ceFatherModule,ceSubModule,ceAuthor,ceEditDate,ceIfAuto,cePrecondition,ceSteps,ceSamples,ceExcept,ceActually) values('" + this.tb_Project.Text + "','" + this.cb_Struct.Text + "','" + this.tb_SuiteNO.Text + "','" + this.tb_SuiteName.Text + "','" + this.tb_CaseNO.Text + "','" + this.tb_CaseName.Text + "','" + this.tb_ReqNO.Text + "','" + this.cb_CaseLevel.Text + "','" + this.tb_ParentModule.Text + "','" + this.tb_SubModule.Text + "','" + this.tb_Author.Text + "','" + this.dtpEditDate.Text + "','" + this.cb_IfAuto.Text + "','" + this.rtb_Precondition.Text + "','" + this.rtb_Steps.Text + "','" + this.rtb_Samples.Text + "','" + this.rtb_Except.Text + "','" + this.cb_Actually.Text + "')");
+                
+
                 this.Visible = false;
                 this.Close();
             }
@@ -44,38 +45,75 @@ namespace TestExerciser.Tools.CaseManagement
 
         private void tb_CaseNO_Leave(object sender, EventArgs e)
         {
-            if (myManageDB.checkItem("ceCaseNO", "用例编写", this.tb_CaseNO.Text))
+            if (this.tb_CaseNO.Text != "")
             {
-                MessageBox.Show("测试用例编号：" + this.tb_CaseNO.Text + "已存在，请尝试设置其他编号！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.tb_CaseNO.Text = "";
-            }
-        }
-
-        private void tb_SuiteNO_Leave(object sender, EventArgs e)
-        {
-            if (myManageDB.checkItem("ceSuiteNO", "用例编写", this.tb_SuiteNO.Text))
-            {
-                MessageBox.Show("测试套编号：" + this.tb_SuiteNO.Text + "已存在，请尝试设置其他编号！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.tb_SuiteNO.Text = "";
-            }
-        }
-
-        private void tb_SuiteName_Leave(object sender, EventArgs e)
-        {
-            if (myManageDB.checkItem("ceSuiteName", "用例编写", this.tb_SuiteName.Text))
-            {
-                MessageBox.Show("测试用例编号：" + this.tb_SuiteName.Text + "已存在，请尝试设置其他编号！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.tb_SuiteName.Text = "";
+                if (myManageDB.checkItem("ceCaseNO", "用例编写", this.tb_CaseNO.Text))
+                {
+                    MessageBox.Show("测试用例编号：" + this.tb_CaseNO.Text + "已存在，请尝试设置其他编号！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.tb_CaseNO.Text = "";
+                }
             }
         }
 
         private void tb_CaseName_Leave(object sender, EventArgs e)
         {
-            if (myManageDB.checkItem("ceCaseName", "用例编写", this.tb_CaseName.Text))
+            if (this.tb_CaseName.Text != "")
             {
-                MessageBox.Show("测试用例编号：" + this.tb_CaseName.Text + "已存在，请尝试设置其他编号！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.tb_CaseName.Text = "";
+                if (myManageDB.checkItem("ceCaseName", "用例编写", this.tb_CaseName.Text))
+                {
+                    MessageBox.Show("测试用例编号：" + this.tb_CaseName.Text + "已存在，请尝试设置其他编号！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.tb_CaseName.Text = "";
+                }
             }
+        }
+
+        private void tsbQuite_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            this.Close();
+        }
+
+        private void tsbSaveAndNew_Click(object sender, EventArgs e)
+        {
+            if (tb_CaseNO.Text != null && tb_CaseNO.Text != "")
+            {
+                if (myManageDB.checkItem("ceSuiteNO", "用例编写", this.tb_SuiteNO.Text))
+                {
+                    MessageBox.Show("测试套编号：" + this.tb_SuiteNO.Text + "已存在，请尝试设置其他编号！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.tb_SuiteNO.Text = "";
+                }
+                else
+                {
+                    myManageDB.InsertInto("insert into 用例编写(ceProject,ceStruct,ceSuiteNO,ceSuiteName,ceCaseNO,ceCaseName,ceReqNO,ceCaseLevel,ceFatherModule,ceSubModule,ceAuthor,ceEditDate,ceIfAuto,cePrecondition,ceSteps,ceSamples,ceExcept,ceActually) values('" + this.tb_Project.Text + "','" + this.cb_Struct.Text + "','" + this.tb_SuiteNO.Text + "','" + this.tb_SuiteName.Text + "','" + this.tb_CaseNO.Text + "','" + this.tb_CaseName.Text + "','" + this.tb_ReqNO.Text + "','" + this.cb_CaseLevel.Text + "','" + this.tb_ParentModule.Text + "','" + this.tb_SubModule.Text + "','" + this.tb_Author.Text + "','" + this.dtpEditDate.Text + "','" + this.cb_IfAuto.Text + "','" + this.rtb_Precondition.Text + "','" + this.rtb_Steps.Text + "','" + this.rtb_Samples.Text + "','" + this.rtb_Except.Text + "','" + this.cb_Actually.Text + "')");
+                    string[] suiteNO = this.tb_SuiteNO.Text.Split('_');
+                    string[] caseNo = this.tb_CaseNO.Text.Split('_');
+
+                    try
+                    {
+                        this.tb_SuiteNO.Text = (Convert.ToInt32(suiteNO[suiteNO.Length - 1]) + 1).ToString();
+                        this.tb_CaseNO.Text = (Convert.ToInt32(caseNo[caseNo.Length - 1]) + 1).ToString();
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    this.tb_SuiteName.Text = "";
+                    this.tb_CaseName.Text = "";
+                    this.rtb_Precondition.Text = "";
+                    this.rtb_Steps.Text = "";
+                    this.rtb_Samples.Text = "";
+                }              
+            }
+            else
+            {
+                MessageBox.Show("请将必填项填写完整！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }                                     
+        }
+
+        private void ToolCaseCommit_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainCaseManager myMainCaseManager = new MainCaseManager();
+            myMainCaseManager.Show();
         }
     }
 }

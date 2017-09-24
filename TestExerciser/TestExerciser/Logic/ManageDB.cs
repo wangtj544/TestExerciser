@@ -697,22 +697,29 @@ namespace TestExerciser.Logic
 
         public void InsertInto(string sql)
         {
-            mycon = new SqlConnection(strcon);
-            mycon.Open();
-            SqlCommand mycomm = new SqlCommand(sql, mycon);
-            mycomm.Connection = mycon;
-            mycomm.CommandText = sql;
-            if (mycomm.ExecuteNonQuery() > 0)
+            try
             {
-                updateDBStatus = "数据添加成功！";
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycomm = new SqlCommand(sql, mycon);
+                mycomm.Connection = mycon;
+                mycomm.CommandText = sql;
+                if (mycomm.ExecuteNonQuery() > 0)
+                {
+                    updateDBStatus = "数据添加成功！";
+                }
+                else
+                {
+                    updateDBStatus = "数据添加失败！";
+                }
+                mycomm.Dispose();
+                mycon.Close();
+                mycon.Dispose();
             }
-            else
+            catch (Exception exception)
             {
-                updateDBStatus = "数据添加失败！";
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            mycomm.Dispose();
-            mycon.Close();
-            mycon.Dispose();
         }
 
 
