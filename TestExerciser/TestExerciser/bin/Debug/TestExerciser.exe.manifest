@@ -464,26 +464,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1254872">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.exe" size="1276928">
       <assemblyIdentity name="TestExerciser" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>gtFFOR0NgA2U/NKda0E0iFrhU8o=</dsig:DigestValue>
+        <dsig:DigestValue>wd0OpASw9zhhGTph26nwgNmshCo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.Diary.exe" size="267776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.Diary.exe" size="269312">
       <assemblyIdentity name="TestExerciser.Diary" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>bLSOHXGIf+IZPPQhMSesC33Kkzc=</dsig:DigestValue>
+        <dsig:DigestValue>R3BL5WT1tlmGjz95/Qt1WkCQFKY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -519,7 +519,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>j6H/0WUTxeJbU+nx9xFVyHXldyY=</dsig:DigestValue>
+        <dsig:DigestValue>6flZkkpgzUKPtUb4/bkn9cCxYEo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

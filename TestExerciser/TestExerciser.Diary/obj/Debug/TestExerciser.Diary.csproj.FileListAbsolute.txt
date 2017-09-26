@@ -139,7 +139,6 @@ E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\obj\Debug\Views\NoteHistory.g.cs
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\obj\Debug\Views\Total.g.cs
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\obj\Debug\App.g.cs
-E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\obj\Debug\TestExerciser.Diary_Content.g.cs
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\obj\Debug\GeneratedInternalTypeHelper.g.cs
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\obj\Debug\TestExerciser.Diary_MarkupCompile.cache
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\obj\Debug\TestExerciser.Diary_MarkupCompile.lref
@@ -323,3 +322,12 @@ E:\School\TestExerciser\TestExerciser\TestExerciser.Diary\obj\Debug\TestExercise
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary\obj\Debug\TestExerciser.Diary.csproj.GenerateResource.Cache
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary\obj\Debug\TestExerciser.Diary.exe
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary\obj\Debug\TestExerciser.Diary.pdb
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\TestExerciser.Diary.db
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\PresentationCore.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\PresentationFramework.Aero.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\PresentationFramework.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\System.Data.DataSetExtensions.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\System.Xaml.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\System.Xml.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\System.Xml.Linq.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary\bin\Debug\WindowsBase.dll

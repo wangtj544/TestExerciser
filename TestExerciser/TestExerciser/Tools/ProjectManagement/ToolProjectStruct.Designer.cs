@@ -26,12 +26,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToolProjectStruct));
             this.ts_Top = new CCWin.SkinControl.SkinToolStrip();
             this.tb_AddRoot = new System.Windows.Forms.ToolStripButton();
             this.tb_AddSubNode = new System.Windows.Forms.ToolStripButton();
             this.tb_Save = new System.Windows.Forms.ToolStripButton();
             this.tv_Struct = new CCWin.SkinControl.SkinTreeView();
+            this.myPrStrImageList = new System.Windows.Forms.ImageList(this.components);
             this.ts_Top.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,6 +123,12 @@
             this.tv_Struct.Size = new System.Drawing.Size(1432, 764);
             this.tv_Struct.TabIndex = 1;
             // 
+            // myPrStrImageList
+            // 
+            this.myPrStrImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("myPrStrImageList.ImageStream")));
+            this.myPrStrImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.myPrStrImageList.Images.SetKeyName(0, "LocationWarning.png");
+            // 
             // ToolProjectStruct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -144,5 +152,6 @@
         private System.Windows.Forms.ToolStripButton tb_AddSubNode;
         private System.Windows.Forms.ToolStripButton tb_Save;
         private CCWin.SkinControl.SkinTreeView tv_Struct;
+        private System.Windows.Forms.ImageList myPrStrImageList;
     }
 }

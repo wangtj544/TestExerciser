@@ -22,12 +22,20 @@ namespace TestExerciser
             fillToDataGridViewControl();
         }
 
-        private void btnNew_Click(object sender, EventArgs e)
+        private void btnNewProject_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             this.Close();
             ToolProjectCommit myToolProjectCommit = new ToolProjectCommit();
             myToolProjectCommit.Show();
+        }
+
+        private void btnNewStruct_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            this.Close();
+            ToolProjectStruct myToolProjectStruct = new ToolProjectStruct();
+            myToolProjectStruct.Show();
         }
 
         private void fillToDataGridViewControl()
@@ -244,5 +252,7 @@ namespace TestExerciser
                 }
             }
         }
+
+       
     }
 }

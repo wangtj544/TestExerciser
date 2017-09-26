@@ -194,6 +194,7 @@
     </Compile>
     <Compile Include="DataSetPackageManager.cs">
       <DependentUpon>DataSetPackageManager.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSetPackageManager.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -328,18 +329,6 @@
     </Compile>
     <Compile Include="Tools\ProjectManagement\ToolProjectStruct.Designer.cs">
       <DependentUpon>ToolProjectStruct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Tools\ProjectManagement\ToolProjectStructSubNodesEditor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tools\ProjectManagement\ToolProjectStructSubNodesEditor.Designer.cs">
-      <DependentUpon>ToolProjectStructSubNodesEditor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Tools\ProjectManagement\ToolProjectStructTopNodesEditor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tools\ProjectManagement\ToolProjectStructTopNodesEditor.Designer.cs">
-      <DependentUpon>ToolProjectStructTopNodesEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\SVN\SVNManager.cs" />
     <Compile Include="Tools\SVN\ToolSVN.cs">
@@ -563,12 +552,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ProjectManagement\ToolProjectStruct.resx">
       <DependentUpon>ToolProjectStruct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tools\ProjectManagement\ToolProjectStructSubNodesEditor.resx">
-      <DependentUpon>ToolProjectStructSubNodesEditor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tools\ProjectManagement\ToolProjectStructTopNodesEditor.resx">
-      <DependentUpon>ToolProjectStructTopNodesEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\SVN\ToolSVN.resx">
       <DependentUpon>ToolSVN.cs</DependentUpon>
