@@ -1,6 +1,6 @@
 ﻿namespace TestExerciser.Tools.ProjectManagement
 {
-    partial class ToolProjectCommit
+    partial class ToolProjectModify
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToolProjectCommit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToolProjectModify));
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.tlpMainManager = new System.Windows.Forms.TableLayoutPanel();
             this.tlpMainEditor = new System.Windows.Forms.TableLayoutPanel();
@@ -70,7 +70,6 @@
             this.rtb_Describe = new CCWin.SkinControl.SkinChatRichTextBox();
             this.stsManager = new CCWin.SkinControl.SkinToolStrip();
             this.tsbSave = new System.Windows.Forms.ToolStripButton();
-            this.tsbSaveAndNew = new System.Windows.Forms.ToolStripButton();
             this.tsbQuite = new System.Windows.Forms.ToolStripButton();
             this.tlpMain.SuspendLayout();
             this.tlpMainManager.SuspendLayout();
@@ -92,7 +91,7 @@
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpMain.Size = new System.Drawing.Size(1432, 789);
-            this.tlpMain.TabIndex = 3;
+            this.tlpMain.TabIndex = 4;
             // 
             // tlpMainManager
             // 
@@ -991,7 +990,6 @@
             this.stsManager.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.stsManager.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbSave,
-            this.tsbSaveAndNew,
             this.tsbQuite});
             this.stsManager.Location = new System.Drawing.Point(0, 0);
             this.stsManager.Name = "stsManager";
@@ -1014,14 +1012,6 @@
             this.tsbSave.Text = "保存";
             this.tsbSave.Click += new System.EventHandler(this.tsbSave_Click);
             // 
-            // tsbSaveAndNew
-            // 
-            this.tsbSaveAndNew.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbSaveAndNew.Name = "tsbSaveAndNew";
-            this.tsbSaveAndNew.Size = new System.Drawing.Size(72, 22);
-            this.tsbSaveAndNew.Text = "保存并新建";
-            this.tsbSaveAndNew.Click += new System.EventHandler(this.tsbSaveAndNew_Click);
-            // 
             // tsbQuite
             // 
             this.tsbQuite.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -1030,18 +1020,18 @@
             this.tsbQuite.Text = "取消";
             this.tsbQuite.Click += new System.EventHandler(this.tsbQuite_Click);
             // 
-            // ToolProjectCommit
+            // ToolProjectModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 825);
             this.Controls.Add(this.tlpMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ToolProjectCommit";
-            this.Text = "新建项目";
+            this.Name = "ToolProjectModify";
+            this.Text = "项目修改";
             this.TitleCenter = false;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ToolProjectCommit_FormClosing);
-            this.Load += new System.EventHandler(this.ToolProjectCommit_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ToolProjectModify_FormClosing);
+            this.Load += new System.EventHandler(this.ToolProjectModify_Load);
             this.tlpMain.ResumeLayout(false);
             this.tlpMainManager.ResumeLayout(false);
             this.tlpMainManager.PerformLayout();
@@ -1066,6 +1056,7 @@
         private CCWin.SkinControl.SkinLabel labDepartment;
         private CCWin.SkinControl.SkinLabel labType;
         private CCWin.SkinControl.SkinLabel labPriority;
+        private CCWin.SkinControl.SkinTextBox tb_ProjectName;
         private CCWin.SkinControl.SkinLabel labShortName;
         private CCWin.SkinControl.SkinLabel labProjectNO;
         private CCWin.SkinControl.SkinTextBox tb_ShortName;
@@ -1081,25 +1072,23 @@
         private CCWin.SkinControl.SkinLabel labBuildTime;
         private CCWin.SkinControl.SkinLabel labModifier;
         private CCWin.SkinControl.SkinLabel labModifyTime;
-        private CCWin.SkinControl.SkinToolStrip stsManager;
-        private System.Windows.Forms.ToolStripButton tsbSave;
-        private System.Windows.Forms.ToolStripButton tsbSaveAndNew;
-        private System.Windows.Forms.ToolStripButton tsbQuite;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private CCWin.SkinControl.SkinLabel labDescribe;
         private CCWin.SkinControl.SkinTextBox tb_Manager;
         private CCWin.SkinControl.SkinTextBox tb_Assistant;
         private CCWin.SkinControl.SkinTextBox tb_Customer;
         private CCWin.SkinControl.SkinTextBox tb_DevelopmentSite;
         private CCWin.SkinControl.SkinTextBox tb_Author;
         private CCWin.SkinControl.SkinTextBox tb_Modifier;
-        private CCWin.SkinControl.SkinChatRichTextBox rtb_Describe;
-        private CCWin.SkinControl.SkinTextBox tb_ProjectName;
         private CCWin.SkinControl.SkinComboBox cb_Type;
         private CCWin.SkinControl.SkinComboBox cb_Priority;
         private CCWin.SkinControl.SkinDateTimePicker dtp_SetUpTime;
         private CCWin.SkinControl.SkinDateTimePicker dtp_ClosedTime;
         private CCWin.SkinControl.SkinDateTimePicker dtp_BuildTime;
         private CCWin.SkinControl.SkinDateTimePicker dtp_ModifyTime;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private CCWin.SkinControl.SkinLabel labDescribe;
+        private CCWin.SkinControl.SkinChatRichTextBox rtb_Describe;
+        private CCWin.SkinControl.SkinToolStrip stsManager;
+        private System.Windows.Forms.ToolStripButton tsbSave;
+        private System.Windows.Forms.ToolStripButton tsbQuite;
     }
 }

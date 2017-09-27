@@ -181,6 +181,7 @@
   <ItemGroup>
     <Compile Include="DataSetCasesForReview.cs">
       <DependentUpon>DataSetCasesForReview.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSetCasesForReview.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -203,6 +204,7 @@
     </Compile>
     <Compile Include="DataSetTeamMembers.cs">
       <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSetTeamMembers.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -323,6 +325,12 @@
     </Compile>
     <Compile Include="Tools\ProjectManagement\ToolProjectCommit.Designer.cs">
       <DependentUpon>ToolProjectCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ProjectManagement\ToolProjectModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ProjectManagement\ToolProjectModify.Designer.cs">
+      <DependentUpon>ToolProjectModify.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\ProjectManagement\ToolProjectStruct.cs">
       <SubType>Form</SubType>
@@ -549,6 +557,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ProjectManagement\ToolProjectCommit.resx">
       <DependentUpon>ToolProjectCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ProjectManagement\ToolProjectModify.resx">
+      <DependentUpon>ToolProjectModify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ProjectManagement\ToolProjectStruct.resx">
       <DependentUpon>ToolProjectStruct.cs</DependentUpon>

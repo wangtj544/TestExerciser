@@ -780,3 +780,4 @@ E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\bin\De
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.Diary.pdb
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.Diary.Common.pdb
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.Diary.Logic.pdb
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.ProjectManagement.ToolProjectModify.resources

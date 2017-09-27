@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tbcCaseDesign.PageArrowDown" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tbProjectDesign.PageArrowDown" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABUAAAAiCAYAAACwaJKDAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD9SURBVEhL1dO7CoJQGMDxtu73+1CBzY31Ck0NvkOb
@@ -129,7 +129,7 @@
         QmCC
 </value>
   </data>
-  <data name="tbcCaseDesign.PageArrowHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tbProjectDesign.PageArrowHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABUAAAAiCAYAAACwaJKDAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAEwSURBVEhLtdNNS4RAAMbxvkBtLxu9UFT0skUv1rZ7
@@ -140,7 +140,7 @@
         YEP0kg3RKzZEr9kQvWFDVGFDFPeYClFcPSpEh2wLiLbDDwVKnf7UO7t5AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="tbcCaseDesign.PageCloseHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tbProjectDesign.PageCloseHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABGdBTUEAALGPC/xhBQAAAH9JREFUKFNj
         +P//P0kYmcMKxXjFYIwzaBiXGFgDyIQzHB2n/4MwiA3DaGJgm1A0cHad+88//T6Q+/8MiAbxsWmAWw9S
@@ -148,7 +148,7 @@
         JO7ByqoT8QIAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="tbcCaseDesign.PageCloseNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tbProjectDesign.PageCloseNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABGdBTUEAALGPC/xhBQAAAItJREFUKFOd
         kbENgDAMBCNRIFExAAUtbYoMQc8A7EHBFKxrfJGxUERjkJ7E9r/fSZKIhMCvUwyK0cC+/8jBqwKCSZEV
@@ -156,7 +156,7 @@
         bEK3hFXoHQIvLekGBLunGoMvIJEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="tbcCaseDesign.PageDown" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tbProjectDesign.PageDown" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADsAAAAiCAYAAADh/KHgAAAABGdBTUEAALGPC/xhBQAAAOZJREFUaEPl
         2KsKQlEURdHrG996BYNgMBgMFoPBYrAYDBaDwWAwGARBEAT//bpXWHC+YXpghhVHPDuLVyqKokFPTmOb
@@ -166,7 +166,7 @@
         QmCC
 </value>
   </data>
-  <data name="tbcCaseDesign.PageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tbProjectDesign.PageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADsAAAAiCAYAAADh/KHgAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAEISURBVGhD3dirTkNRFEXRy7NAICGkaaAhvIpC4ZB1

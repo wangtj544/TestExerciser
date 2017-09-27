@@ -15,6 +15,8 @@ namespace TestExerciser
     public partial class MainProjectManager : Skin_Mac
     {
         ManageDB myManageDB = new ManageDB();
+        public static string myProNO;
+        public static string currentProNo;
         
         public MainProjectManager()
         {
@@ -44,15 +46,14 @@ namespace TestExerciser
             dt.Columns.AddRange(new DataColumn[]
                 {
                     new DataColumn("项目"),
-                    new DataColumn("作者"),
-                    new DataColumn("执行结果"),
-                    new DataColumn("创建日期"),
-                    new DataColumn("修改日期"),
-                    new DataColumn("测试日期"),
-                    new DataColumn("用例名称")
+                    new DataColumn("所属部门"),
+                    new DataColumn("项目经理"),
+                    new DataColumn("创建人"),
+                    new DataColumn("创建时间"),
+                    new DataColumn("项目名称")
                 });
 
-            string[] myRows = myManageDB.getDataFromCell("ceCaseNO", "用例编写");
+            string[] myRows = myManageDB.getDataFromCell("proNO", "项目管理");
 
             if (myRows != null)
             {
@@ -60,32 +61,31 @@ namespace TestExerciser
                 {
                     DataRow row = dt.NewRow();
                     row[0] = myRow;
-                    row[1] = myManageDB.getDataFromCell("ceAuthor", "用例编写", "ceCaseNO", myRow);
-                    row[2] = myManageDB.getDataFromCell("ceActually", "用例编写", "ceCaseNO", myRow);
-                    row[3] = myManageDB.getDataFromCell("ceEditDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
-                    row[4] = myManageDB.getDataFromCell("ceModifyDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
-                    row[5] = myManageDB.getDataFromCell("ceTestDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
-                    row[6] = myManageDB.getDataFromCell("ceCaseName", "用例编写", "ceCaseNO", myRow); ;
+                    row[1] = myManageDB.getDataFromCell("proDepartment", "项目管理", "proNO", myRow);
+                    row[2] = myManageDB.getDataFromCell("proManager", "项目管理", "proNO", myRow);
+                    row[3] = myManageDB.getDataFromCell("proAuthor", "项目管理", "proNO", myRow);
+                    row[4] = myManageDB.getDataFromCell("proBuildTime", "项目管理", "proNO", myRow).Split(' ')[0];
+                    row[5] = myManageDB.getDataFromCell("proName", "项目管理", "proNO", myRow);
                     dt.Rows.Add(row);
                 }
-                dgvCaseManager.ColumnCount = 6;
-                for (int i = 0; i < dgvCaseManager.ColumnCount; i++)
+                dgvProjectManager.ColumnCount = 5;
+                for (int i = 0; i < dgvProjectManager.ColumnCount; i++)
                 {
-                    dgvCaseManager.Columns[i].Name = dt.Columns[i].ColumnName;
-                    dgvCaseManager.Columns[i].DataPropertyName = dt.Columns[i].ColumnName;
-                    dgvCaseManager.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dgvProjectManager.Columns[i].Name = dt.Columns[i].ColumnName;
+                    dgvProjectManager.Columns[i].DataPropertyName = dt.Columns[i].ColumnName;
+                    dgvProjectManager.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     if (i != 0)
-                        dgvCaseManager.Columns[i].Width = 120;
+                        dgvProjectManager.Columns[i].Width = 120;
                     else
-                        dgvCaseManager.Columns[i].Width = 150;
+                        dgvProjectManager.Columns[i].Width = 150;
                 }
-                dgvCaseManager.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dgvCaseManager.DataSource = dt;
+                dgvProjectManager.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvProjectManager.DataSource = dt;
 
                 //只需要把需要绘制的DataGridView传入DataGridViewRenderer即可，
                 //这里的隐藏列即为需要重新绘制的内容
-                DataGridViewRenderer render = new DataGridViewRenderer(dgvCaseManager,
-                    dgvCaseManager.Columns[dgvCaseManager.ColumnCount - 1]);
+                DataGridViewRenderer render = new DataGridViewRenderer(dgvProjectManager,
+                    dgvProjectManager.Columns[dgvProjectManager.ColumnCount - 1]);
             }
         }
 
@@ -253,6 +253,72 @@ namespace TestExerciser
             }
         }
 
-       
+        private void showProjectDetails(string prNO)
+        {
+            try
+            {
+                this.labProNameValue.Text = myManageDB.getDataFromCell("proName", "项目管理", "proNO", prNO) + "  ";
+                this.txtProjectName.Text = myManageDB.getDataFromCell("proName", "项目管理", "proNO", prNO);
+                this.txtShortName.Text = myManageDB.getDataFromCell("proShortName", "项目管理", "proNO", prNO);
+                this.txtProNO.Text = myManageDB.getDataFromCell("proNO", "项目管理", "proNO", prNO);
+                this.txtType.Text = myManageDB.getDataFromCell("proType", "项目管理", "proNO", prNO);
+                this.txtPriority.Text = myManageDB.getDataFromCell("proPriority", "项目管理", "proNO", prNO);
+                this.txtDepartment.Text = myManageDB.getDataFromCell("proDepartment", "项目管理", "proNO", prNO);
+                this.txtManager.Text = myManageDB.getDataFromCell("proManager", "项目管理", "proNO", prNO);
+                this.txtAssistant.Text = myManageDB.getDataFromCell("proAssistant", "项目管理", "proNO", prNO);
+                this.txtSetUpTime.Text = myManageDB.getDataFromCell("proSetUpTime", "项目管理", "proNO", prNO).Split(' ')[0];
+                this.txtClosedTime.Text = myManageDB.getDataFromCell("proClosedTime", "项目管理", "proNO", prNO).Split(' ')[0];
+                this.txtCustomer.Text = myManageDB.getDataFromCell("proCustomer", "项目管理", "proNO", prNO);
+                this.txtDevelopmentSite.Text = myManageDB.getDataFromCell("proDevelopmentSite", "项目管理", "proNO", prNO);
+                this.txtAuthor.Text = myManageDB.getDataFromCell("proAuthor", "项目管理", "proNO", prNO);
+                this.txtBuildTime.Text = myManageDB.getDataFromCell("proBuildTime", "项目管理", "proNO", prNO).Split(' ')[0];
+                this.txtModifier.Text = myManageDB.getDataFromCell("proModifier", "项目管理", "proNO", prNO);
+                this.txtModifyTime.Text = myManageDB.getDataFromCell("proModifyTime", "项目管理", "proNO", prNO).Split(' ')[0];
+                this.rtbDescribe.Text = myManageDB.getDataFromCell("proDescribe", "项目管理", "proNO", prNO);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
+        }
+
+        private void dgvProjectManager_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex > -1 && e.ColumnIndex > -1)
+                {
+                    DataGridViewCell cell = (DataGridViewCell)dgvProjectManager.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                    string proNO = dgvProjectManager.Rows[cell.RowIndex].Cells[0].Value.ToString();
+                    showProjectDetails(proNO);
+                    this.btnNewStruct.Enabled = true;
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }    
+        }
+
+        private void linkModify_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            myProNO = this.txtProNO.Text;
+            this.Visible = false;
+            this.Close();
+            ToolProjectModify myToolProjectModify = new ToolProjectModify();
+             myToolProjectModify.Show();
+        }
+
+        private void tbProjectDesign_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.tbProjectDesign.SelectedIndex == 1)
+            { 
+            }
+        }
+
+        private void MainProjectManager_Load(object sender, EventArgs e)
+        {
+            this.btnNewStruct.Enabled = false;
+        }
     }
 }

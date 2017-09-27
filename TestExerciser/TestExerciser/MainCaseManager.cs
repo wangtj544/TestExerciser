@@ -71,7 +71,7 @@ namespace TestExerciser
                     row[3] = myManageDB.getDataFromCell("ceEditDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
                     row[4] = myManageDB.getDataFromCell("ceModifyDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
                     row[5] = myManageDB.getDataFromCell("ceTestDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
-                    row[6] = myManageDB.getDataFromCell("ceCaseName", "用例编写", "ceCaseNO", myRow); ;
+                    row[6] = myManageDB.getDataFromCell("ceCaseName", "用例编写", "ceCaseNO", myRow);
                     dt.Rows.Add(row);
                 }
                 dgvCaseManager.ColumnCount = 6;

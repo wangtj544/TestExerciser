@@ -29,7 +29,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToolProjectStruct));
             this.ts_Top = new CCWin.SkinControl.SkinToolStrip();
-            this.tb_AddRoot = new System.Windows.Forms.ToolStripButton();
             this.tb_AddSubNode = new System.Windows.Forms.ToolStripButton();
             this.tb_Save = new System.Windows.Forms.ToolStripButton();
             this.tv_Struct = new CCWin.SkinControl.SkinTreeView();
@@ -74,7 +73,6 @@
             this.ts_Top.ItemRadius = 4;
             this.ts_Top.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.ts_Top.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tb_AddRoot,
             this.tb_AddSubNode,
             this.tb_Save});
             this.ts_Top.Location = new System.Drawing.Point(4, 32);
@@ -88,22 +86,13 @@
             this.ts_Top.TitleRadius = 4;
             this.ts_Top.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             // 
-            // tb_AddRoot
-            // 
-            this.tb_AddRoot.Image = ((System.Drawing.Image)(resources.GetObject("tb_AddRoot.Image")));
-            this.tb_AddRoot.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tb_AddRoot.Name = "tb_AddRoot";
-            this.tb_AddRoot.Size = new System.Drawing.Size(64, 22);
-            this.tb_AddRoot.Text = "添加根";
-            this.tb_AddRoot.Click += new System.EventHandler(this.tb_AddRoot_Click);
-            // 
             // tb_AddSubNode
             // 
             this.tb_AddSubNode.Image = ((System.Drawing.Image)(resources.GetObject("tb_AddSubNode.Image")));
             this.tb_AddSubNode.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tb_AddSubNode.Name = "tb_AddSubNode";
-            this.tb_AddSubNode.Size = new System.Drawing.Size(76, 22);
-            this.tb_AddSubNode.Text = "添加子级";
+            this.tb_AddSubNode.Size = new System.Drawing.Size(100, 22);
+            this.tb_AddSubNode.Text = "添加子级节点";
             this.tb_AddSubNode.Click += new System.EventHandler(this.tb_AddSubNode_Click);
             // 
             // tb_Save
@@ -118,8 +107,12 @@
             // tv_Struct
             // 
             this.tv_Struct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tv_Struct.ImageIndex = 0;
+            this.tv_Struct.ImageList = this.myPrStrImageList;
+            this.tv_Struct.LabelEdit = true;
             this.tv_Struct.Location = new System.Drawing.Point(4, 57);
             this.tv_Struct.Name = "tv_Struct";
+            this.tv_Struct.SelectedImageIndex = 0;
             this.tv_Struct.Size = new System.Drawing.Size(1432, 764);
             this.tv_Struct.TabIndex = 1;
             // 
@@ -127,7 +120,8 @@
             // 
             this.myPrStrImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("myPrStrImageList.ImageStream")));
             this.myPrStrImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.myPrStrImageList.Images.SetKeyName(0, "LocationWarning.png");
+            this.myPrStrImageList.Images.SetKeyName(0, "afchgorg.gif");
+            this.myPrStrImageList.Images.SetKeyName(1, "3.png");
             // 
             // ToolProjectStruct
             // 
@@ -140,6 +134,7 @@
             this.Name = "ToolProjectStruct";
             this.Text = "项目结构";
             this.TitleCenter = false;
+            this.Load += new System.EventHandler(this.ToolProjectStruct_Load);
             this.ts_Top.ResumeLayout(false);
             this.ts_Top.PerformLayout();
             this.ResumeLayout(false);
@@ -148,7 +143,6 @@
         }
 
         private CCWin.SkinControl.SkinToolStrip ts_Top;
-        private System.Windows.Forms.ToolStripButton tb_AddRoot;
         private System.Windows.Forms.ToolStripButton tb_AddSubNode;
         private System.Windows.Forms.ToolStripButton tb_Save;
         private CCWin.SkinControl.SkinTreeView tv_Struct;
