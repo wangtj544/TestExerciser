@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainCaseManager));
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
@@ -95,7 +95,7 @@
             this.rtbSamples = new System.Windows.Forms.RichTextBox();
             this.rtbExcept = new System.Windows.Forms.RichTextBox();
             this.txtActually = new System.Windows.Forms.TextBox();
-            this.stpHighInfo = new CCWin.SkinControl.SkinTabPage();
+            this.stpCommitInfo = new CCWin.SkinControl.SkinTabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.labTCNO = new CCWin.SkinControl.SkinLabel();
             this.labTCNOValue = new CCWin.SkinControl.SkinLabel();
@@ -290,32 +290,32 @@
             // 
             // dgvCaseManager
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.dgvCaseManager.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvCaseManager.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCaseManager.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCaseManager.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvCaseManager.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvCaseManager.ColumnFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgvCaseManager.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCaseManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCaseManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvCaseManager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCaseManager.ColumnSelectBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
             this.dgvCaseManager.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCaseManager.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCaseManager.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvCaseManager.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCaseManager.EnableHeadersVisualStyles = false;
             this.dgvCaseManager.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -325,21 +325,21 @@
             this.dgvCaseManager.Location = new System.Drawing.Point(3, 38);
             this.dgvCaseManager.Name = "dgvCaseManager";
             this.dgvCaseManager.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCaseManager.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCaseManager.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvCaseManager.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvCaseManager.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvCaseManager.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.tableLayoutPanel8.SetRowSpan(this.dgvCaseManager, 3);
             this.dgvCaseManager.RowTemplate.Height = 23;
             this.dgvCaseManager.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -370,7 +370,7 @@
             this.tbcCaseDesign.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
             this.tbcCaseDesign.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
             this.tbcCaseDesign.Controls.Add(this.stpBaseInfo);
-            this.tbcCaseDesign.Controls.Add(this.stpHighInfo);
+            this.tbcCaseDesign.Controls.Add(this.stpCommitInfo);
             this.tbcCaseDesign.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbcCaseDesign.HeadBack = null;
             this.tbcCaseDesign.ImgTxtOffset = new System.Drawing.Point(0, 0);
@@ -1000,18 +1000,18 @@
             this.txtActually.Size = new System.Drawing.Size(678, 21);
             this.txtActually.TabIndex = 9;
             // 
-            // stpHighInfo
+            // stpCommitInfo
             // 
-            this.stpHighInfo.BackColor = System.Drawing.Color.White;
-            this.stpHighInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.stpHighInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stpHighInfo.Location = new System.Drawing.Point(0, 36);
-            this.stpHighInfo.Name = "stpHighInfo";
-            this.stpHighInfo.Size = new System.Drawing.Size(786, 717);
-            this.stpHighInfo.TabIndex = 1;
-            this.stpHighInfo.TabItemImage = null;
-            this.stpHighInfo.Text = "评审信息";
-            this.stpHighInfo.ToolTipText = "评审信息";
+            this.stpCommitInfo.BackColor = System.Drawing.Color.White;
+            this.stpCommitInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.stpCommitInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stpCommitInfo.Location = new System.Drawing.Point(0, 36);
+            this.stpCommitInfo.Name = "stpCommitInfo";
+            this.stpCommitInfo.Size = new System.Drawing.Size(786, 717);
+            this.stpCommitInfo.TabIndex = 1;
+            this.stpCommitInfo.TabItemImage = null;
+            this.stpCommitInfo.Text = "评审信息";
+            this.stpCommitInfo.ToolTipText = "评审信息";
             // 
             // tableLayoutPanel5
             // 
@@ -1087,6 +1087,7 @@
             this.Name = "MainCaseManager";
             this.Text = "用例管理";
             this.TitleCenter = false;
+            this.Load += new System.EventHandler(this.MainCaseManager_Load);
             this.splitContainerMain.Panel1.ResumeLayout(false);
             this.splitContainerMain.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).EndInit();
@@ -1143,7 +1144,7 @@
         private System.Windows.Forms.TextBox txtEditTime;
         private System.Windows.Forms.TextBox txtModifyTime;
         private System.Windows.Forms.TextBox txtTestTime;
-        private CCWin.SkinControl.SkinTabPage stpHighInfo;
+        private CCWin.SkinControl.SkinTabPage stpCommitInfo;
         private CCWin.SkinControl.SkinButton btnReview;
         private CCWin.SkinControl.SkinDataGridView dgvCaseManager;
         private CCWin.SkinControl.SkinLabel labModifyTime;

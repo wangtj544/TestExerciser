@@ -58,7 +58,7 @@ namespace TestExerciser
                     new DataColumn("用例名称")
                 });
 
-            string [] myRows = myManageDB.getDataFromCell("ceCaseNO", "用例编写");
+            string [] myRows = myManageDB.getDataFromCell("ceCaseNO", "TestCaseEditor");
 
             if (myRows != null)
             {
@@ -66,12 +66,12 @@ namespace TestExerciser
                 {
                     DataRow row = dt.NewRow();
                     row[0] = myRow;                   
-                    row[1] = myManageDB.getDataFromCell("ceAuthor", "用例编写", "ceCaseNO", myRow);
-                    row[2] = myManageDB.getDataFromCell("ceActually", "用例编写", "ceCaseNO", myRow);
-                    row[3] = myManageDB.getDataFromCell("ceEditDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
-                    row[4] = myManageDB.getDataFromCell("ceModifyDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
-                    row[5] = myManageDB.getDataFromCell("ceTestDate", "用例编写", "ceCaseNO", myRow).Split(' ')[0];
-                    row[6] = myManageDB.getDataFromCell("ceCaseName", "用例编写", "ceCaseNO", myRow);
+                    row[1] = myManageDB.getDataFromCell("ceAuthor", "TestCaseEditor", "ceCaseNO", myRow);
+                    row[2] = myManageDB.getDataFromCell("ceActually", "TestCaseEditor", "ceCaseNO", myRow);
+                    row[3] = myManageDB.getDataFromCell("ceEditDate", "TestCaseEditor", "ceCaseNO", myRow).Split(' ')[0];
+                    row[4] = myManageDB.getDataFromCell("ceModifyDate", "TestCaseEditor", "ceCaseNO", myRow).Split(' ')[0];
+                    row[5] = myManageDB.getDataFromCell("ceTestDate", "TestCaseEditor", "ceCaseNO", myRow).Split(' ')[0];
+                    row[6] = myManageDB.getDataFromCell("ceCaseName", "TestCaseEditor", "ceCaseNO", myRow);
                     dt.Rows.Add(row);
                 }
                 dgvCaseManager.ColumnCount = 6;
@@ -263,28 +263,28 @@ namespace TestExerciser
         {
             try
             {
-                this.labTCNOValue.Text = myManageDB.getDataFromCell("ceCaseNO", "用例编写", "ceCaseNO", tcNO) + "  ";
-                this.txtProject.Text = myManageDB.getDataFromCell("ceProject", "用例编写", "ceCaseNO", tcNO);
-                this.txtIfAuto.Text = myManageDB.getDataFromCell("ceIfAuto", "用例编写", "ceCaseNO", tcNO);
-                this.txtSuiteNO.Text = myManageDB.getDataFromCell("ceSuiteNO", "用例编写", "ceCaseNO", tcNO);
-                this.txtSuiteName.Text = myManageDB.getDataFromCell("ceSuiteName", "用例编写", "ceCaseNO", tcNO);
-                this.txtCaseNO.Text = myManageDB.getDataFromCell("ceCaseNO", "用例编写", "ceCaseNO", tcNO);
-                this.txtCaseName.Text = myManageDB.getDataFromCell("ceCaseName", "用例编写", "ceCaseNO", tcNO);
-                this.txtReqNO.Text = myManageDB.getDataFromCell("ceReqNO", "用例编写", "ceCaseNO", tcNO);
-                this.txtCaseLevel.Text = myManageDB.getDataFromCell("ceCaseLevel", "用例编写", "ceCaseNO", tcNO);
-                this.txtFatherModule.Text = myManageDB.getDataFromCell("ceFatherModule", "用例编写", "ceCaseNO", tcNO);
-                this.txtSubModule.Text = myManageDB.getDataFromCell("ceSubModule", "用例编写", "ceCaseNO", tcNO);
-                this.txtAuthor.Text = myManageDB.getDataFromCell("ceAuthor", "用例编写", "ceCaseNO", tcNO);
-                this.txtEditTime.Text = myManageDB.getDataFromCell("ceEditDate", "用例编写", "ceCaseNO", tcNO).Split(' ')[0];
-                this.txtModifier.Text = myManageDB.getDataFromCell("ceModifier", "用例编写", "ceCaseNO", tcNO);
-                this.txtModifyTime.Text = myManageDB.getDataFromCell("ceModifyDate", "用例编写", "ceCaseNO", tcNO).Split(' ')[0];
-                this.txtTester.Text = myManageDB.getDataFromCell("ceTester", "用例编写", "ceCaseNO", tcNO);
-                this.txtTestTime.Text = myManageDB.getDataFromCell("ceTestDate", "用例编写", "ceCaseNO", tcNO).Split(' ')[0];
-                this.rtbPrecondition.Text = myManageDB.getDataFromCell("cePrecondition", "用例编写", "ceCaseNO", tcNO);
-                this.rtbSteps.Text = myManageDB.getDataFromCell("ceSteps", "用例编写", "ceCaseNO", tcNO);
-                this.rtbSamples.Text = myManageDB.getDataFromCell("ceSamples", "用例编写", "ceCaseNO", tcNO);
-                this.rtbExcept.Text = myManageDB.getDataFromCell("ceExcept", "用例编写", "ceCaseNO", tcNO);
-                this.txtActually.Text = myManageDB.getDataFromCell("ceActually", "用例编写", "ceCaseNO", tcNO);
+                this.labTCNOValue.Text = myManageDB.getDataFromCell("ceCaseNO", "TestCaseEditor", "ceCaseNO", tcNO) + "  ";
+                this.txtProject.Text = myManageDB.getDataFromCell("ceProject", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.txtIfAuto.Text = myManageDB.getDataFromCell("ceIfAuto", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.txtSuiteNO.Text = myManageDB.getDataFromCell("ceSuiteNO", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.txtSuiteName.Text = myManageDB.getDataFromCell("ceSuiteName", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.txtCaseNO.Text = myManageDB.getDataFromCell("ceCaseNO", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.txtCaseName.Text = myManageDB.getDataFromCell("ceCaseName", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.txtReqNO.Text = myManageDB.getDataFromCell("ceReqNO", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.txtCaseLevel.Text = myManageDB.getDataFromCell("ceCaseLevel", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.txtFatherModule.Text = myManageDB.getDataFromCell("ceFatherModule", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.txtSubModule.Text = myManageDB.getDataFromCell("ceSubModule", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.txtAuthor.Text = myManageDB.getDataFromCell("ceAuthor", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.txtEditTime.Text = myManageDB.getDataFromCell("ceEditDate", "TestCaseEditor", "ceCaseNO", tcNO).Split(' ')[0];
+                this.txtModifier.Text = myManageDB.getDataFromCell("ceModifier", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.txtModifyTime.Text = myManageDB.getDataFromCell("ceModifyDate", "TestCaseEditor", "ceCaseNO", tcNO).Split(' ')[0];
+                this.txtTester.Text = myManageDB.getDataFromCell("ceTester", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.txtTestTime.Text = myManageDB.getDataFromCell("ceTestDate", "TestCaseEditor", "ceCaseNO", tcNO).Split(' ')[0];
+                this.rtbPrecondition.Text = myManageDB.getDataFromCell("cePrecondition", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.rtbSteps.Text = myManageDB.getDataFromCell("ceSteps", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.rtbSamples.Text = myManageDB.getDataFromCell("ceSamples", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.rtbExcept.Text = myManageDB.getDataFromCell("ceExcept", "TestCaseEditor", "ceCaseNO", tcNO);
+                this.txtActually.Text = myManageDB.getDataFromCell("ceActually", "TestCaseEditor", "ceCaseNO", tcNO);
             }            
             catch (Exception exception)
             {
@@ -319,5 +319,9 @@ namespace TestExerciser
             
         }
 
+        private void MainCaseManager_Load(object sender, EventArgs e)
+        {
+            this.tbcCaseDesign.SelectedIndex = 0;
+        }
     }
 }

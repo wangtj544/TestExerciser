@@ -31,7 +31,7 @@ namespace TestExerciser.Tools.CaseManagement
         {
             if (tb_CaseNO.Text != null && tb_CaseNO.Text != "")
             {
-                myManageDB.InsertInto("insert into 用例编写(ceProject,ceStruct,ceSuiteNO,ceSuiteName,ceCaseNO,ceCaseName,ceReqNO,ceCaseLevel,ceFatherModule,ceSubModule,ceAuthor,ceEditDate,ceIfAuto,cePrecondition,ceSteps,ceSamples,ceExcept,ceActually) values('" + this.tb_Project.Text + "','" + this.cb_Struct.Text + "','" + this.tb_SuiteNO.Text + "','" + this.tb_SuiteName.Text + "','" + this.tb_CaseNO.Text + "','" + this.tb_CaseName.Text + "','" + this.tb_ReqNO.Text + "','" + this.cb_CaseLevel.Text + "','" + this.tb_ParentModule.Text + "','" + this.tb_SubModule.Text + "','" + this.tb_Author.Text + "','" + this.dtpEditDate.Text + "','" + this.cb_IfAuto.Text + "','" + this.rtb_Precondition.Text + "','" + this.rtb_Steps.Text + "','" + this.rtb_Samples.Text + "','" + this.rtb_Except.Text + "','" + this.cb_Actually.Text + "')");
+                myManageDB.InsertInto("insert into TestCaseEditor(ceProject,ceStruct,ceSuiteNO,ceSuiteName,ceCaseNO,ceCaseName,ceReqNO,ceCaseLevel,ceFatherModule,ceSubModule,ceAuthor,ceEditDate,ceIfAuto,cePrecondition,ceSteps,ceSamples,ceExcept,ceActually) values('" + this.tb_Project.Text + "','" + this.cb_Struct.Text + "','" + this.tb_SuiteNO.Text + "','" + this.tb_SuiteName.Text + "','" + this.tb_CaseNO.Text + "','" + this.tb_CaseName.Text + "','" + this.tb_ReqNO.Text + "','" + this.cb_CaseLevel.Text + "','" + this.tb_ParentModule.Text + "','" + this.tb_SubModule.Text + "','" + this.tb_Author.Text + "','" + this.dtpEditDate.Text + "','" + this.cb_IfAuto.Text + "','" + this.rtb_Precondition.Text + "','" + this.rtb_Steps.Text + "','" + this.rtb_Samples.Text + "','" + this.rtb_Except.Text + "','" + this.cb_Actually.Text + "')");
                 
 
                 this.Visible = false;
@@ -47,7 +47,7 @@ namespace TestExerciser.Tools.CaseManagement
         {
             if (this.tb_CaseNO.Text != "")
             {
-                if (myManageDB.checkItem("ceCaseNO", "用例编写", this.tb_CaseNO.Text))
+                if (myManageDB.checkItem("ceCaseNO", "TestCaseEditor", this.tb_CaseNO.Text))
                 {
                     MessageBox.Show("测试用例编号：" + this.tb_CaseNO.Text + "已存在，请尝试设置其他编号！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.tb_CaseNO.Text = "";
@@ -59,7 +59,7 @@ namespace TestExerciser.Tools.CaseManagement
         {
             if (this.tb_CaseName.Text != "")
             {
-                if (myManageDB.checkItem("ceCaseName", "用例编写", this.tb_CaseName.Text))
+                if (myManageDB.checkItem("ceCaseName", "TestCaseEditor", this.tb_CaseName.Text))
                 {
                     MessageBox.Show("测试用例编号：" + this.tb_CaseName.Text + "已存在，请尝试设置其他编号！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.tb_CaseName.Text = "";
@@ -77,14 +77,14 @@ namespace TestExerciser.Tools.CaseManagement
         {
             if (tb_CaseNO.Text != null && tb_CaseNO.Text != "")
             {
-                if (myManageDB.checkItem("ceSuiteNO", "用例编写", this.tb_SuiteNO.Text))
+                if (myManageDB.checkItem("ceSuiteNO", "TestCaseEditor", this.tb_SuiteNO.Text))
                 {
                     MessageBox.Show("测试套编号：" + this.tb_SuiteNO.Text + "已存在，请尝试设置其他编号！", "消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.tb_SuiteNO.Text = "";
                 }
                 else
                 {
-                    myManageDB.InsertInto("insert into 用例编写(ceProject,ceStruct,ceSuiteNO,ceSuiteName,ceCaseNO,ceCaseName,ceReqNO,ceCaseLevel,ceFatherModule,ceSubModule,ceAuthor,ceEditDate,ceIfAuto,cePrecondition,ceSteps,ceSamples,ceExcept,ceActually) values('" + this.tb_Project.Text + "','" + this.cb_Struct.Text + "','" + this.tb_SuiteNO.Text + "','" + this.tb_SuiteName.Text + "','" + this.tb_CaseNO.Text + "','" + this.tb_CaseName.Text + "','" + this.tb_ReqNO.Text + "','" + this.cb_CaseLevel.Text + "','" + this.tb_ParentModule.Text + "','" + this.tb_SubModule.Text + "','" + this.tb_Author.Text + "','" + this.dtpEditDate.Text + "','" + this.cb_IfAuto.Text + "','" + this.rtb_Precondition.Text + "','" + this.rtb_Steps.Text + "','" + this.rtb_Samples.Text + "','" + this.rtb_Except.Text + "','" + this.cb_Actually.Text + "')");
+                    myManageDB.InsertInto("insert into TestCaseEditor(ceProject,ceStruct,ceSuiteNO,ceSuiteName,ceCaseNO,ceCaseName,ceReqNO,ceCaseLevel,ceFatherModule,ceSubModule,ceAuthor,ceEditDate,ceIfAuto,cePrecondition,ceSteps,ceSamples,ceExcept,ceActually) values('" + this.tb_Project.Text + "','" + this.cb_Struct.Text + "','" + this.tb_SuiteNO.Text + "','" + this.tb_SuiteName.Text + "','" + this.tb_CaseNO.Text + "','" + this.tb_CaseName.Text + "','" + this.tb_ReqNO.Text + "','" + this.cb_CaseLevel.Text + "','" + this.tb_ParentModule.Text + "','" + this.tb_SubModule.Text + "','" + this.tb_Author.Text + "','" + this.dtpEditDate.Text + "','" + this.cb_IfAuto.Text + "','" + this.rtb_Precondition.Text + "','" + this.rtb_Steps.Text + "','" + this.rtb_Samples.Text + "','" + this.rtb_Except.Text + "','" + this.cb_Actually.Text + "')");
                     string[] suiteNO = this.tb_SuiteNO.Text.Split('_');
                     string[] caseNo = this.tb_CaseNO.Text.Split('_');
 

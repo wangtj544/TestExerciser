@@ -815,12 +815,25 @@ namespace TestExerciser.Tools
             string serverTestCaseReviewExcelPool = "";
             if (Properties.Settings.Default.ServerIP == "")
             {
-                serverTestCaseReviewExcelPool = @"C:\DATA\TestCaseReviewExcelPool\";
+                serverTestCaseReviewExcelPool = @"C:\DATA\TestCaseReviewExcelPool\";              
             }
             else
             {
                 serverTestCaseReviewExcelPool = @"\\" + Properties.Settings.Default.ServerIP + @"\DATA\TestCaseReviewExcelPool\";
             }
+
+            try
+            {
+                if (!Directory.Exists(serverTestCaseReviewExcelPool))
+                {
+                    Directory.CreateDirectory(serverTestCaseReviewExcelPool);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("读取Excel数据失败！ 失败原因：" + ex.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             return serverTestCaseReviewExcelPool;
         }
 

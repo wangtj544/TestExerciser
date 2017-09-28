@@ -9,14 +9,14 @@ using System.Windows.Forms;
 using CCWin;
 using TestExerciser.Logic;
 using TestExerciser.Tools.ProjectManagement;
+using System.Xml;
 
 namespace TestExerciser
 {
     public partial class MainProjectManager : Skin_Mac
     {
         ManageDB myManageDB = new ManageDB();
-        public static string myProNO;
-        public static string currentProNo;
+        public static string myCurrentProNo;
         
         public MainProjectManager()
         {
@@ -53,7 +53,7 @@ namespace TestExerciser
                     new DataColumn("项目名称")
                 });
 
-            string[] myRows = myManageDB.getDataFromCell("proNO", "项目管理");
+            string[] myRows = myManageDB.getDataFromCell("proNO", "ProjectManager");
 
             if (myRows != null)
             {
@@ -61,11 +61,11 @@ namespace TestExerciser
                 {
                     DataRow row = dt.NewRow();
                     row[0] = myRow;
-                    row[1] = myManageDB.getDataFromCell("proDepartment", "项目管理", "proNO", myRow);
-                    row[2] = myManageDB.getDataFromCell("proManager", "项目管理", "proNO", myRow);
-                    row[3] = myManageDB.getDataFromCell("proAuthor", "项目管理", "proNO", myRow);
-                    row[4] = myManageDB.getDataFromCell("proBuildTime", "项目管理", "proNO", myRow).Split(' ')[0];
-                    row[5] = myManageDB.getDataFromCell("proName", "项目管理", "proNO", myRow);
+                    row[1] = myManageDB.getDataFromCell("proDepartment", "ProjectManager", "proNO", myRow);
+                    row[2] = myManageDB.getDataFromCell("proManager", "ProjectManager", "proNO", myRow);
+                    row[3] = myManageDB.getDataFromCell("proAuthor", "ProjectManager", "proNO", myRow);
+                    row[4] = myManageDB.getDataFromCell("proBuildTime", "ProjectManager", "proNO", myRow).Split(' ')[0];
+                    row[5] = myManageDB.getDataFromCell("proName", "ProjectManager", "proNO", myRow);
                     dt.Rows.Add(row);
                 }
                 dgvProjectManager.ColumnCount = 5;
@@ -257,24 +257,24 @@ namespace TestExerciser
         {
             try
             {
-                this.labProNameValue.Text = myManageDB.getDataFromCell("proName", "项目管理", "proNO", prNO) + "  ";
-                this.txtProjectName.Text = myManageDB.getDataFromCell("proName", "项目管理", "proNO", prNO);
-                this.txtShortName.Text = myManageDB.getDataFromCell("proShortName", "项目管理", "proNO", prNO);
-                this.txtProNO.Text = myManageDB.getDataFromCell("proNO", "项目管理", "proNO", prNO);
-                this.txtType.Text = myManageDB.getDataFromCell("proType", "项目管理", "proNO", prNO);
-                this.txtPriority.Text = myManageDB.getDataFromCell("proPriority", "项目管理", "proNO", prNO);
-                this.txtDepartment.Text = myManageDB.getDataFromCell("proDepartment", "项目管理", "proNO", prNO);
-                this.txtManager.Text = myManageDB.getDataFromCell("proManager", "项目管理", "proNO", prNO);
-                this.txtAssistant.Text = myManageDB.getDataFromCell("proAssistant", "项目管理", "proNO", prNO);
-                this.txtSetUpTime.Text = myManageDB.getDataFromCell("proSetUpTime", "项目管理", "proNO", prNO).Split(' ')[0];
-                this.txtClosedTime.Text = myManageDB.getDataFromCell("proClosedTime", "项目管理", "proNO", prNO).Split(' ')[0];
-                this.txtCustomer.Text = myManageDB.getDataFromCell("proCustomer", "项目管理", "proNO", prNO);
-                this.txtDevelopmentSite.Text = myManageDB.getDataFromCell("proDevelopmentSite", "项目管理", "proNO", prNO);
-                this.txtAuthor.Text = myManageDB.getDataFromCell("proAuthor", "项目管理", "proNO", prNO);
-                this.txtBuildTime.Text = myManageDB.getDataFromCell("proBuildTime", "项目管理", "proNO", prNO).Split(' ')[0];
-                this.txtModifier.Text = myManageDB.getDataFromCell("proModifier", "项目管理", "proNO", prNO);
-                this.txtModifyTime.Text = myManageDB.getDataFromCell("proModifyTime", "项目管理", "proNO", prNO).Split(' ')[0];
-                this.rtbDescribe.Text = myManageDB.getDataFromCell("proDescribe", "项目管理", "proNO", prNO);
+                this.labProNameValue.Text = myManageDB.getDataFromCell("proName", "ProjectManager", "proNO", prNO) + "  ";
+                this.txtProjectName.Text = myManageDB.getDataFromCell("proName", "ProjectManager", "proNO", prNO);
+                this.txtShortName.Text = myManageDB.getDataFromCell("proShortName", "ProjectManager", "proNO", prNO);
+                this.txtProNO.Text = myManageDB.getDataFromCell("proNO", "ProjectManager", "proNO", prNO);
+                this.txtType.Text = myManageDB.getDataFromCell("proType", "ProjectManager", "proNO", prNO);
+                this.txtPriority.Text = myManageDB.getDataFromCell("proPriority", "ProjectManager", "proNO", prNO);
+                this.txtDepartment.Text = myManageDB.getDataFromCell("proDepartment", "ProjectManager", "proNO", prNO);
+                this.txtManager.Text = myManageDB.getDataFromCell("proManager", "ProjectManager", "proNO", prNO);
+                this.txtAssistant.Text = myManageDB.getDataFromCell("proAssistant", "ProjectManager", "proNO", prNO);
+                this.txtSetUpTime.Text = myManageDB.getDataFromCell("proSetUpTime", "ProjectManager", "proNO", prNO).Split(' ')[0];
+                this.txtClosedTime.Text = myManageDB.getDataFromCell("proClosedTime", "ProjectManager", "proNO", prNO).Split(' ')[0];
+                this.txtCustomer.Text = myManageDB.getDataFromCell("proCustomer", "ProjectManager", "proNO", prNO);
+                this.txtDevelopmentSite.Text = myManageDB.getDataFromCell("proDevelopmentSite", "ProjectManager", "proNO", prNO);
+                this.txtAuthor.Text = myManageDB.getDataFromCell("proAuthor", "ProjectManager", "proNO", prNO);
+                this.txtBuildTime.Text = myManageDB.getDataFromCell("proBuildTime", "ProjectManager", "proNO", prNO).Split(' ')[0];
+                this.txtModifier.Text = myManageDB.getDataFromCell("proModifier", "ProjectManager", "proNO", prNO);
+                this.txtModifyTime.Text = myManageDB.getDataFromCell("proModifyTime", "ProjectManager", "proNO", prNO).Split(' ')[0];
+                this.rtbDescribe.Text = myManageDB.getDataFromCell("proDescribe", "ProjectManager", "proNO", prNO);
             }
             catch (Exception exception)
             {
@@ -289,8 +289,8 @@ namespace TestExerciser
                 if (e.RowIndex > -1 && e.ColumnIndex > -1)
                 {
                     DataGridViewCell cell = (DataGridViewCell)dgvProjectManager.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                    string proNO = dgvProjectManager.Rows[cell.RowIndex].Cells[0].Value.ToString();
-                    showProjectDetails(proNO);
+                    myCurrentProNo = dgvProjectManager.Rows[cell.RowIndex].Cells[0].Value.ToString();
+                    showProjectDetails(myCurrentProNo);
                     this.btnNewStruct.Enabled = true;
                 }
             }
@@ -302,23 +302,65 @@ namespace TestExerciser
 
         private void linkModify_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            myProNO = this.txtProNO.Text;
             this.Visible = false;
             this.Close();
             ToolProjectModify myToolProjectModify = new ToolProjectModify();
-             myToolProjectModify.Show();
+            myToolProjectModify.Show();
         }
 
         private void tbProjectDesign_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (this.tbProjectDesign.SelectedIndex == 1)
-            { 
+            {
+                loadXMLToTreeViewControl();
+                this.tv_Struct.ExpandAll();
             }
         }
 
         private void MainProjectManager_Load(object sender, EventArgs e)
         {
             this.btnNewStruct.Enabled = false;
+            this.tbProjectDesign.SelectedIndex = 0;
+            if (myManageDB.checkItems("proStructs", "ProjectManager", "proNO",myCurrentProNo)== "")
+            {
+
+            }
+            else
+            { 
+            
+            }
+
         }
+
+        private void loadXMLToTreeViewControl()
+        {
+            if (loadXmlPath() != null && loadXmlPath()!="")
+            {
+                XmlDocument document = new XmlDocument();
+                document.Load(loadXmlPath());
+                populateTreeControl(document.DocumentElement, this.tv_Struct.Nodes); 
+            }          
+        }
+
+        private void populateTreeControl( XmlNode document,TreeNodeCollection nodes)
+        {
+            foreach (System.Xml.XmlNode node in document.ChildNodes)
+            {
+                string text = (node.Value != null ? node.Value :
+                (node.Attributes != null &&
+                node.Attributes.Count > 0) ?
+                node.Attributes[0].Value : node.Name);
+                TreeNode new_child = new TreeNode(text);
+
+                nodes.Add(new_child);
+                populateTreeControl(node, new_child.Nodes);
+            }
+        }
+
+        private string loadXmlPath()
+        {
+            return myManageDB.getDataFromCell("proStructs", "ProjectManager", "proNO",myCurrentProNo);
+        }
+
     }
 }

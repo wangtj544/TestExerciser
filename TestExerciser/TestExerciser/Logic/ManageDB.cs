@@ -451,9 +451,9 @@ namespace TestExerciser.Logic
         /// <param name="rowA"></param>
         /// <param name="dataItem"></param>
         /// <returns></returns>
-        public bool checkItem(string row, string table, string rowA, string dataItem)
+        public string checkItems(string row, string table, string rowA, string dataItem)
         {
-            bool falg = false;
+            string item = "";
             string mySQL = "select " + row + " from " + table + " where " + rowA + "=" + "'" + dataItem + "'";
             try
             {
@@ -463,7 +463,10 @@ namespace TestExerciser.Logic
                 myReader = mycom.ExecuteReader();
                 if (myReader.HasRows == true)
                 {
-                    falg = true;
+                    while (myReader.Read())
+                    {
+                        item = Convert.ToString(myReader[0]);
+                    }
                 }
             }
             catch (Exception exception)
@@ -476,10 +479,38 @@ namespace TestExerciser.Logic
                 mycon.Close();
 
             }
-            return falg;
+            return item;
         }
-     
-        public bool checkItem(string table, string row, string valueA, string rowB, string valueB)
+
+        public bool checkItem(string row, string table, string rowA, string dataItem)
+        {
+            bool flag = false;
+            string mySQL = "select " + row + " from " + table + " where " + rowA + "=" + "'" + dataItem + "'";
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
+                    flag = true;
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+
+            }
+            return flag;
+        }
+
+        public bool checkItem(string row, string table, string valueA, string rowB, string valueB)
         {
             bool falg = false;
             string mySQL = "select " + row + " from " + table + " where " + rowB + "=" + "'" + valueB + "'";
