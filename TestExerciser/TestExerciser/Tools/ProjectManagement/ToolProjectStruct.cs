@@ -26,7 +26,7 @@ namespace TestExerciser.Tools.ProjectManagement
 
         private void tb_Save_Click(object sender, EventArgs e)
         {
-            SaveToXml(MainProjectManager.myCurrentProNo);
+            //SaveToXml(MainProjectManager.myCurrentProNo);            
         }
 
         private void ToolProjectStruct_Load(object sender, EventArgs e)
@@ -108,6 +108,29 @@ namespace TestExerciser.Tools.ProjectManagement
                 new XAttribute("Name", node.Name),
                 new XAttribute("Text", node.Text)
                 );
+        }
+
+        private void showStructNode(TreeNodeCollection tnc,int fuid)
+        {
+            try
+            {
+                DataSet myDataSet = new DataSet();
+                string sql = "select id,fuid,the from ProjectStruct where fuid='" + fuid + "'";
+                myDataSet = myManageDB.getDataSet(sql);
+
+                foreach (DataRow dr in myDataSet.Tables[0].Rows)
+                {
+                    int id = Convert.ToInt16(dr["id"]);
+                    int Fuid = Convert.ToInt16(dr["fuid"]);
+                    string the = dr["the"].ToString();
+
+
+                }
+            }
+            catch (Exception ex)
+            { 
+            
+            }
         }
 
     }
