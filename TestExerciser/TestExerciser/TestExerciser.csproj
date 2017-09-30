@@ -214,6 +214,7 @@
     <Compile Include="Logic\ColorRandom.cs" />
     <Compile Include="Logic\FTPClient.cs" />
     <Compile Include="Logic\ListItem.cs" />
+    <Compile Include="Logic\ProjectStruct.cs" />
     <Compile Include="Logic\TextAndImageColumn.cs" />
     <Compile Include="MainCaseManager.cs">
       <SubType>Form</SubType>
@@ -351,7 +352,7 @@
     <Compile Include="Tools\SVN\ToolSVNCheckOut.Designer.cs">
       <DependentUpon>ToolSVNCheckOut.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logic\LoginInfo.cs" />
+    <Compile Include="Logic\RegexInfo.cs" />
     <Compile Include="Tools\ToolClean.cs">
       <SubType>Form</SubType>
     </Compile>

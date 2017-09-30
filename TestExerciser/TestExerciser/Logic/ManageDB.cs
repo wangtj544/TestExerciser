@@ -794,5 +794,26 @@ namespace TestExerciser.Logic
             }
             return myReader;
         }
+
+
+        public void saveXML(string sql)
+        {
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(sql, mycon);
+                myReader = mycom.ExecuteReader();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+            }
+        }
     }
 }

@@ -10,6 +10,8 @@ using CCWin;
 using TestExerciser.Logic;
 using TestExerciser.Tools.ProjectManagement;
 using System.Xml;
+using System.Xml.Linq;
+using System.IO;
 
 namespace TestExerciser
 {
@@ -17,6 +19,7 @@ namespace TestExerciser
     {
         ManageDB myManageDB = new ManageDB();
         public static string myCurrentProNo;
+        public static bool isModify = false;
         
         public MainProjectManager()
         {
@@ -292,6 +295,9 @@ namespace TestExerciser
                     myCurrentProNo = dgvProjectManager.Rows[cell.RowIndex].Cells[0].Value.ToString();
                     showProjectDetails(myCurrentProNo);
                     this.btnNewStruct.Enabled = true;
+                    this.tv_Struct.Nodes.Clear();
+                    loadXMLToTreeViewControl();
+                    this.tv_Struct.ExpandAll(); 
                 }
             }
             catch (Exception exception)
@@ -308,59 +314,30 @@ namespace TestExerciser
             myToolProjectModify.Show();
         }
 
-        private void tbProjectDesign_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (this.tbProjectDesign.SelectedIndex == 1)
-            {
-                loadXMLToTreeViewControl();
-                this.tv_Struct.ExpandAll();
-            }
-        }
-
         private void MainProjectManager_Load(object sender, EventArgs e)
         {
             this.btnNewStruct.Enabled = false;
             this.tbProjectDesign.SelectedIndex = 0;
-            if (myManageDB.checkItems("proStructs", "ProjectManager", "proNO",myCurrentProNo)== "")
-            {
-
-            }
-            else
-            { 
-            
-            }
-
         }
 
         private void loadXMLToTreeViewControl()
         {
-            if (loadXmlPath() != null && loadXmlPath()!="")
+            string str = myManageDB.getDataFromCell("proStructs", "ProjectManager", "proNO", myCurrentProNo);
+            if (str != null && str != "")
             {
-                XmlDocument document = new XmlDocument();
-                document.Load(loadXmlPath());
-                populateTreeControl(document.DocumentElement, this.tv_Struct.Nodes); 
-            }          
-        }
-
-        private void populateTreeControl( XmlNode document,TreeNodeCollection nodes)
-        {
-            foreach (System.Xml.XmlNode node in document.ChildNodes)
+                this.btnNewStruct.Text = "修改架构";
+                isModify = true;
+                StringReader myReader = new StringReader(str);
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(myReader);
+                ProjectStruct myProjectStruct = new ProjectStruct();
+                myProjectStruct.loadXml(xmlDoc.DocumentElement, this.tv_Struct.Nodes);
+            }
+            else
             {
-                string text = (node.Value != null ? node.Value :
-                (node.Attributes != null &&
-                node.Attributes.Count > 0) ?
-                node.Attributes[0].Value : node.Name);
-                TreeNode new_child = new TreeNode(text);
-
-                nodes.Add(new_child);
-                populateTreeControl(node, new_child.Nodes);
+                this.btnNewStruct.Text = "新建架构";
+                isModify = false;
             }
         }
-
-        private string loadXmlPath()
-        {
-            return myManageDB.getDataFromCell("proStructs", "ProjectManager", "proNO",myCurrentProNo);
-        }
-
     }
 }

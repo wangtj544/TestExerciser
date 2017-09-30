@@ -30,7 +30,7 @@ namespace TestExerciser.Tools
         {
             if (this.stbFolderName.Text != "")
             {
-                LoginInfo myLoginInfo = new LoginInfo();
+                RegexInfo myLoginInfo = new RegexInfo();
                 if (myLoginInfo.isProjectName(this.stbFolderName.Text))
                 {
                     if (MainForm.selectedNodePath != "")

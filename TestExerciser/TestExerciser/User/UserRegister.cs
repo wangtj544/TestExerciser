@@ -53,7 +53,7 @@ namespace TestExerciser.User
         private void myRegisterFunc()
         {
             ManageDB myManageDB = new ManageDB();
-            LoginInfo myLoginInfo = new LoginInfo();
+            RegexInfo myLoginInfo = new RegexInfo();
             this.txtStatus.ForeColor = Color.Blue;
             this.txtStatus.Text = "注册信息：注册中...";
             Application.DoEvents();         

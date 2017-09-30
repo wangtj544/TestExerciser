@@ -24,7 +24,7 @@ namespace TestExerciser.Tools.ProjectManagement
         {
             if (this.tb_ProjectNO.Text != null && this.tb_ProjectNO.Text != "")
             {
-                myManageDB.InsertInto("insert into ProjectManager(proName,proShortName,proNO,proType,proPriority,proDepartment,proManager,proAssistant,proSetUpTime,proClosedTime,proCustomer,proDevelopmentSite,proAuthor,proBuildTime,proModifier,proModifyTime,proDescribe) values('" + this.tb_ProjectName.Text + "','" + this.tb_ShortName.Text + "','" + this.tb_ProjectNO.Text + "','" + this.cb_Type.Text + "','" + this.cb_Priority.Text + "','" + this.tb_Department.Text + "','" + this.tb_Manager.Text + "','" + this.tb_Assistant.Text + "','" + this.dtp_SetUpTime.Text + "','" + this.dtp_ClosedTime.Text + "','" + this.tb_Customer.Text + "','" + this.tb_DevelopmentSite.Text + "','" + this.tb_Author.Text + "','" + this.dtp_BuildTime.Text + "','" + this.tb_Modifier.Text + "','" + this.dtp_ModifyTime.Text + "','" + this.rtb_Describe.Text + "')");
+                myManageDB.InsertInto("insert into ProjectManager(proName,proShortName,proNO,proType,proPriority,proDepartment,proManager,proAssistant,proSetUpTime,proClosedTime,proCustomer,proDevelopmentSite,proAuthor,proBuildTime,proDescribe) values('" + this.tb_ProjectName.Text + "','" + this.tb_ShortName.Text + "','" + this.tb_ProjectNO.Text + "','" + this.cb_Type.Text + "','" + this.cb_Priority.Text + "','" + this.tb_Department.Text + "','" + this.tb_Manager.Text + "','" + this.tb_Assistant.Text + "','" + this.dtp_SetUpTime.Text + "','" + this.dtp_ClosedTime.Text + "','" + this.tb_Customer.Text + "','" + this.tb_DevelopmentSite.Text + "','" + this.tb_Author.Text + "','" + this.dtp_BuildTime.Text + "','" + this.rtb_Describe.Text + "')");
                 this.Visible = false;
                 this.Close();
                 MainProjectManager myMainProjectManager = new MainProjectManager();
@@ -47,11 +47,10 @@ namespace TestExerciser.Tools.ProjectManagement
                 }
                 else
                 {
-                    myManageDB.InsertInto("insert into ProjectManager(proName,proShortName,proNO,proType,proPriority,proDepartment,proManager,proAssistant,proSetUpTime,proClosedTime,proCustomer,proDevelopmentSite,proAuthor,proBuildTime,proModifier,proModifyTime,proDescribe) values('" + this.tb_ProjectName.Text + "','" + this.tb_ShortName.Text + "','" + this.tb_ProjectNO.Text + "','" + this.cb_Type.Text + "','" + this.cb_Priority.Text + "','" + this.tb_Department.Text + "','" + this.tb_Manager.Text + "','" + this.tb_Assistant.Text + "','" + this.dtp_SetUpTime.Text + "','" + this.dtp_ClosedTime.Text + "','" + this.tb_Customer.Text + "','" + this.tb_DevelopmentSite.Text + "','" + this.tb_Author.Text + "','" + this.dtp_BuildTime.Text + "','" + this.tb_Modifier.Text + "','" + this.dtp_ModifyTime.Text + "','" + this.rtb_Describe.Text + "')");
+                    myManageDB.InsertInto("insert into ProjectManager(proName,proShortName,proNO,proType,proPriority,proDepartment,proManager,proAssistant,proSetUpTime,proClosedTime,proCustomer,proDevelopmentSite,proAuthor,proBuildTime,proDescribe) values('" + this.tb_ProjectName.Text + "','" + this.tb_ShortName.Text + "','" + this.tb_ProjectNO.Text + "','" + this.cb_Type.Text + "','" + this.cb_Priority.Text + "','" + this.tb_Department.Text + "','" + this.tb_Manager.Text + "','" + this.tb_Assistant.Text + "','" + this.dtp_SetUpTime.Text + "','" + this.dtp_ClosedTime.Text + "','" + this.tb_Customer.Text + "','" + this.tb_DevelopmentSite.Text + "','" + this.tb_Author.Text + "','" + this.dtp_BuildTime.Text + "','" + this.rtb_Describe.Text + "')");
                  
                     this.tb_ProjectName.Text = "";
                     this.tb_ShortName.Text = "";
-                    this.tb_Modifier.Text = "";
                     this.tb_Manager.Text = "";
                     this.tb_Customer.Text = "";
                     this.tb_Department.Text = "";
@@ -68,6 +67,9 @@ namespace TestExerciser.Tools.ProjectManagement
         {
             this.tb_Author.Text = ManageDB.userFullName;
             this.dtp_BuildTime.text = DateTime.Today.ToShortDateString();
+            this.dtp_BuildTime.Enabled = false;
+            this.cb_Type.Text = "软件研发瀑布模型";
+            this.cb_Priority.Text = "中";
         }
 
         private void tsbQuite_Click(object sender, EventArgs e)
@@ -80,6 +82,11 @@ namespace TestExerciser.Tools.ProjectManagement
         {
             MainProjectManager myMainProjectManager = new MainProjectManager();
             myMainProjectManager.Show();
+        }
+
+        private void tb_ProjectNO_Leave(object sender, EventArgs e)
+        {
+            myManageDB.checkItem("proNO", "ProjectManager",this.tb_ProjectNO.Text);
         }
     }
 }

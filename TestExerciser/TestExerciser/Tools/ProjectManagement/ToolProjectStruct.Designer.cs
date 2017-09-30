@@ -115,6 +115,7 @@
             this.tv_Struct.SelectedImageIndex = 0;
             this.tv_Struct.Size = new System.Drawing.Size(1432, 764);
             this.tv_Struct.TabIndex = 1;
+            this.tv_Struct.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tv_Struct_NodeMouseDoubleClick);
             // 
             // myPrStrImageList
             // 
@@ -134,6 +135,7 @@
             this.Name = "ToolProjectStruct";
             this.Text = "项目结构";
             this.TitleCenter = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ToolProjectStruct_FormClosing);
             this.Load += new System.EventHandler(this.ToolProjectStruct_Load);
             this.ts_Top.ResumeLayout(false);
             this.ts_Top.PerformLayout();

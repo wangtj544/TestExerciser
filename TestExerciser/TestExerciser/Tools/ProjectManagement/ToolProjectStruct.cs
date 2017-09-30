@@ -26,16 +26,24 @@ namespace TestExerciser.Tools.ProjectManagement
 
         private void tb_Save_Click(object sender, EventArgs e)
         {
-            //SaveToXml(MainProjectManager.myCurrentProNo);            
+            SaveToXml(MainProjectManager.myCurrentProNo);            
         }
 
         private void ToolProjectStruct_Load(object sender, EventArgs e)
         {
-            TreeNode myRoot = new TreeNode();
-            myRoot.Text = "根节点";
-            myRoot.ImageIndex = 1;
-            myRoot.SelectedImageIndex =1;
-            this.tv_Struct.Nodes.Add(myRoot);
+            if (MainProjectManager.isModify)
+            {
+                loadXMLToTreeViewControl();
+                this.tv_Struct.ExpandAll();
+            }
+            else
+            {
+                TreeNode myRoot = new TreeNode();
+                myRoot.Text = "根节点";
+                myRoot.ImageIndex = 1;
+                myRoot.SelectedImageIndex = 1;
+                this.tv_Struct.Nodes.Add(myRoot);
+            }
         }
 
         private void tb_AddSubNode_Click(object sender, EventArgs e)
@@ -63,31 +71,9 @@ namespace TestExerciser.Tools.ProjectManagement
                 root.Add(e);
             }
             xml.Add(root);
-            string projectStructPool = "";
-            if (Properties.Settings.Default.ServerIP == "")
-            {
-                projectStructPool = @"C:\DATA\ProjectStructPool\";
-            }
-            else
-            {
-                projectStructPool = @"\\" + Properties.Settings.Default.ServerIP + @"\DATA\ProjectStructPool\";
-            }
-            try
-            {
-                if (!Directory.Exists(projectStructPool))
-                {
-                    Directory.CreateDirectory(projectStructPool);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("读取Excel数据失败！ 失败原因：" + ex.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            string savePath = projectStructPool + xmlFileName + ".xml";
-            xml.Save(savePath);
-            string xmlContent = xml.Declaration.ToString() + "r\n" + xml.ToString();
-            myManageDB.UpdateDB("ProjectManager", "proStructs", savePath, "proNO", MainProjectManager.myCurrentProNo);
+            string xmlContent = xml.ToString();
+            string sql = "declare @xmlDoc xml;set @xmlDoc ='" + xml + "'update ProjectManager set proStructs = @xmlDoc where proNO ='" + MainProjectManager.myCurrentProNo + "'";
+            myManageDB.saveXML(sql);
         }
 
         private XElement CreateElements(TreeNode node)
@@ -110,28 +96,28 @@ namespace TestExerciser.Tools.ProjectManagement
                 );
         }
 
-        private void showStructNode(TreeNodeCollection tnc,int fuid)
+        private void loadXMLToTreeViewControl()
         {
-            try
+            string str = myManageDB.getDataFromCell("proStructs", "ProjectManager", "proNO", MainProjectManager.myCurrentProNo);
+            if (str != null && str != "")
             {
-                DataSet myDataSet = new DataSet();
-                string sql = "select id,fuid,the from ProjectStruct where fuid='" + fuid + "'";
-                myDataSet = myManageDB.getDataSet(sql);
-
-                foreach (DataRow dr in myDataSet.Tables[0].Rows)
-                {
-                    int id = Convert.ToInt16(dr["id"]);
-                    int Fuid = Convert.ToInt16(dr["fuid"]);
-                    string the = dr["the"].ToString();
-
-
-                }
-            }
-            catch (Exception ex)
-            { 
-            
+                StringReader myReader = new StringReader(str);
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(myReader);
+                ProjectStruct myProjectStruct = new ProjectStruct();
+                myProjectStruct.loadXml(xmlDoc.DocumentElement, this.tv_Struct.Nodes);
             }
         }
 
+        private void ToolProjectStruct_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainProjectManager myMainProjectManager = new MainProjectManager();
+            myMainProjectManager.Show();
+        }
+
+        private void tv_Struct_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            this.tv_Struct.SelectedNode.BeginEdit();
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace TestExerciser.User
 
         private void myLoginFunc()
         {
-            LoginInfo myLoginInfo = new LoginInfo();
+            RegexInfo myLoginInfo = new RegexInfo();
             ManageDB myManageDB = new ManageDB();
             this.txtStatus.ForeColor = Color.Blue;
             this.txtStatus.Text = "重置信息：重置中...";

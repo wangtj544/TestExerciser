@@ -1028,7 +1028,7 @@
             this.Controls.Add(this.tlpMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ToolProjectModify";
-            this.Text = "项目修改";
+            this.Text = "修改项目";
             this.TitleCenter = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ToolProjectModify_FormClosing);
             this.Load += new System.EventHandler(this.ToolProjectModify_Load);

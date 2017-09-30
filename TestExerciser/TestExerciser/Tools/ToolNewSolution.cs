@@ -40,7 +40,7 @@ namespace TestExerciser.Tools
         {
             if (this.stbProName.Text != "")
             {
-                LoginInfo myLoginInfo = new LoginInfo();
+                RegexInfo myLoginInfo = new RegexInfo();
                 if (myLoginInfo.isProjectName(this.stbProName.Text))
                 {
                     if (myLoginInfo.isProjectLocation(this.stbLocation.Text))
