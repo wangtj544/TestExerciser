@@ -481,6 +481,7 @@ namespace TestExerciser
         private void MainForm_Load(object sender, EventArgs e)
         {
             InitializeControl();
+            timerNow_Tick(sender, e);
             this.登录ToolStripMenuItem.ForeColor = Color.Green;          
             this.登录ToolStripMenuItem.Text = ManageDB.userFullName;
             打开支持库DToolStripMenuItem_Click(sender, e);
