@@ -167,11 +167,11 @@ namespace TestExerciser.Tools
                     this.stbServerDBPath.SkinTxt.Size = new System.Drawing.Size(311, 138);
                     this.stbServerDBPath.SkinTxt.TabIndex = 0;
                     this.stbServerDBPath.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-                    this.stbServerDBPath.SkinTxt.WaterText = "Data Source=172.20.32.147";
+                    this.stbServerDBPath.SkinTxt.WaterText = "172.20.32.147";
                     this.stbServerDBPath.TabIndex = 20;
                     this.stbServerDBPath.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
                     this.stbServerDBPath.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-                    this.stbServerDBPath.WaterText = "Data Source=172.20.32.147";
+                    this.stbServerDBPath.WaterText = "172.20.32.147";
                     this.stbServerDBPath.WordWrap = true;
                 }
                 else if (this.tvItems.SelectedNode.Name == "tnHotKey")

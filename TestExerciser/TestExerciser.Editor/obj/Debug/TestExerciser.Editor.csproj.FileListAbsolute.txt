@@ -40,3 +40,17 @@ F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.ReplaceFo
 F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\TestExerciser.Editor.csproj.GenerateResource.Cache
 F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.dll
 F:\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.pdb
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Editor\bin\Debug\EditorTE.xml
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Editor\bin\Debug\EditorTE.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Editor\bin\Debug\EditorTE.pdb
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\TestExerciser.Editor.csprojResolveAssemblyReference.cache
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.AutocompleteMenu.resources
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.Editor.resources
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.FindForm.resources
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.GoToForm.resources
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.HotkeysEditorForm.resources
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.Properties.Resources.resources
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.ReplaceForm.resources
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\TestExerciser.Editor.csproj.GenerateResource.Cache
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Editor\obj\Debug\EditorTE.pdb

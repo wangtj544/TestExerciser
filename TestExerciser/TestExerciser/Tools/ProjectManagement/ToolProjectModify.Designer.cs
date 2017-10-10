@@ -740,6 +740,7 @@
             this.tb_Author.BackColor = System.Drawing.Color.Transparent;
             this.tb_Author.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Author.DownBack = null;
+            this.tb_Author.Enabled = false;
             this.tb_Author.Icon = null;
             this.tb_Author.IconIsButton = false;
             this.tb_Author.IconMouseState = CCWin.SkinClass.ControlState.Normal;
@@ -756,7 +757,7 @@
             this.tb_Author.Name = "tb_Author";
             this.tb_Author.NormlBack = null;
             this.tb_Author.Padding = new System.Windows.Forms.Padding(5);
-            this.tb_Author.ReadOnly = true;
+            this.tb_Author.ReadOnly = false;
             this.tb_Author.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tb_Author.Size = new System.Drawing.Size(1310, 30);
             // 
@@ -768,7 +769,6 @@
             this.tb_Author.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.tb_Author.SkinTxt.Multiline = true;
             this.tb_Author.SkinTxt.Name = "BaseText";
-            this.tb_Author.SkinTxt.ReadOnly = true;
             this.tb_Author.SkinTxt.Size = new System.Drawing.Size(1300, 20);
             this.tb_Author.SkinTxt.TabIndex = 0;
             this.tb_Author.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
@@ -784,6 +784,7 @@
             this.tb_Modifier.BackColor = System.Drawing.Color.Transparent;
             this.tb_Modifier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Modifier.DownBack = null;
+            this.tb_Modifier.Enabled = false;
             this.tb_Modifier.Icon = null;
             this.tb_Modifier.IconIsButton = false;
             this.tb_Modifier.IconMouseState = CCWin.SkinClass.ControlState.Normal;
@@ -889,6 +890,7 @@
             this.dtp_BuildTime.DropDownHeight = 180;
             this.dtp_BuildTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.dtp_BuildTime.DropDownWidth = 120;
+            this.dtp_BuildTime.Enabled = false;
             this.dtp_BuildTime.font = new System.Drawing.Font("微软雅黑", 9F);
             this.dtp_BuildTime.Items = null;
             this.dtp_BuildTime.Location = new System.Drawing.Point(107, 393);
@@ -904,6 +906,7 @@
             this.dtp_ModifyTime.DropDownHeight = 180;
             this.dtp_ModifyTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.dtp_ModifyTime.DropDownWidth = 120;
+            this.dtp_ModifyTime.Enabled = false;
             this.dtp_ModifyTime.font = new System.Drawing.Font("微软雅黑", 9F);
             this.dtp_ModifyTime.Items = null;
             this.dtp_ModifyTime.Location = new System.Drawing.Point(107, 454);

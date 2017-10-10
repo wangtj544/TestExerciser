@@ -204,6 +204,9 @@ namespace TestExerciser.User
         private void toolStripMenuItem_LoginOut_Click(object sender, EventArgs e)
         {
             SetMainFormClosed();
+            this.txtStatus.ForeColor = Color.Red;
+            this.txtStatus.Text = "登录信息：已退出，请重新登录！";
+            this.txtPasswd.Text = "";
             this.Visible = true;
         }
 

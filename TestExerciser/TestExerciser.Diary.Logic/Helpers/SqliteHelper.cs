@@ -23,6 +23,7 @@ namespace TestExerciser.Diary.Logic.Helpers
         {
             //数据库文件路径
             var filePath = System.Environment.CurrentDirectory + @"\TestExerciser.Diary.db";
+            //var filePath = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase + "TestExerciser.Diary.db";
             var connStr = string.Format("Data Source={0};Pooling=true;FailIfMissing=false", filePath);
             ConnectionString = connStr;
         }

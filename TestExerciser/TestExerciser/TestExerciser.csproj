@@ -825,6 +825,14 @@
     <Content Include="Resources\ts.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TestExerciser.Diary.Common\TestExerciser.Diary.Common.csproj">
+      <Project>{c01aaab2-d083-4461-8ee3-69047c7f5875}</Project>
+      <Name>TestExerciser.Diary.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestExerciser.Diary.Logic\TestExerciser.Diary.Logic.csproj">
+      <Project>{189ff1b0-a860-4a3e-a5de-1a3b00bf3775}</Project>
+      <Name>TestExerciser.Diary.Logic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TestExerciser.Diary\TestExerciser.Diary.csproj">
       <Project>{771bb6c4-9e85-448d-b038-56567e087a3a}</Project>
       <Name>TestExerciser.Diary</Name>

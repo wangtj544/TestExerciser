@@ -700,6 +700,7 @@
             this.tb_Author.BackColor = System.Drawing.Color.Transparent;
             this.tb_Author.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Author.DownBack = null;
+            this.tb_Author.Enabled = false;
             this.tb_Author.Icon = null;
             this.tb_Author.IconIsButton = false;
             this.tb_Author.IconMouseState = CCWin.SkinClass.ControlState.Normal;
@@ -805,6 +806,7 @@
             this.dtp_BuildTime.DropDownHeight = 180;
             this.dtp_BuildTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.dtp_BuildTime.DropDownWidth = 120;
+            this.dtp_BuildTime.Enabled = false;
             this.dtp_BuildTime.font = new System.Drawing.Font("微软雅黑", 9F);
             this.dtp_BuildTime.Items = null;
             this.dtp_BuildTime.Location = new System.Drawing.Point(107, 367);

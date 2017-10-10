@@ -45,3 +45,13 @@ E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\zh-Ha
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Common\obj\Debug\TestExerciser.Diary.Common.dll
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Common\obj\Debug\TestExerciser.Diary.Common.pdb
 E:\School\TestExerciser\TestExerciser\TestExerciser.Diary.Common\obj\Debug\TestExerciser.Diary.Common.csprojResolveAssemblyReference.cache
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\TestExerciser.Diary.Common.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\TestExerciser.Diary.Common.pdb
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\Microsoft.Practices.Prism.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\Microsoft.Practices.Prism.UnityExtensions.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\Microsoft.Practices.Unity.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary.Common\bin\Debug\System.Windows.Interactivity.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary.Common\obj\Debug\TestExerciser.Diary.Common.csprojResolveAssemblyReference.cache
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary.Common\obj\Debug\TestExerciser.Diary.Common.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser.Diary.Common\obj\Debug\TestExerciser.Diary.Common.pdb
