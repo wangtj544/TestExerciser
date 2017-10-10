@@ -2697,6 +2697,7 @@
             // dtpTimeNow
             // 
             this.dtpTimeNow.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dtpTimeNow.Enabled = false;
             this.dtpTimeNow.Location = new System.Drawing.Point(1227, 3);
             this.dtpTimeNow.Name = "dtpTimeNow";
             this.dtpTimeNow.Size = new System.Drawing.Size(116, 21);
