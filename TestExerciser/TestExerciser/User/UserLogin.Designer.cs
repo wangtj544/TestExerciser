@@ -235,6 +235,7 @@
             this.linkSelectDB.TabIndex = 10;
             this.linkSelectDB.TabStop = true;
             this.linkSelectDB.Text = "选择服务器？";
+            this.linkSelectDB.Visible = false;
             this.linkSelectDB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSelectDB_LinkClicked);
             // 
             // notifyContextMenu

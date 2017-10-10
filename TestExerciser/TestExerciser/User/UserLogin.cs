@@ -21,6 +21,8 @@ namespace TestExerciser.User
 
     public partial class UserLogin : Skin_Mac
     {
+        public static string strDataSource = "Data Source=";
+
         public static string pubUserName = null;
         public static string pubPasswd = null;
 
@@ -236,6 +238,11 @@ namespace TestExerciser.User
             myMainForm.ShowMainFormWhenClosed += new ShowMainForm(this.d_ShowMainFrom);
         }
 
-              
+        private void InitDataBase()
+        {
+            Properties.Settings.Default.dataSource = strDataSource + Properties.Settings.Default.ServerIP;
+            Properties.Settings.Default.ConnectionString = Properties.Settings.Default.dataSource + Properties.Settings.Default.ConnectionParas;
+            Properties.Settings.Default.Save();
+        }
     }
 }

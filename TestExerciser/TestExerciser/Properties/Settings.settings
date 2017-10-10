@@ -26,7 +26,7 @@
       <Value Profile="(Default)">;Initial Catalog=TestExerciser;User ID=sa;Password=admin@123</Value>
     </Setting>
     <Setting Name="ServerIP" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">172.20.32.147</Value>
     </Setting>
   </Settings>
 </SettingsFile>

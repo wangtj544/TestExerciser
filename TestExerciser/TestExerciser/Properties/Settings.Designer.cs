@@ -94,7 +94,7 @@ namespace TestExerciser.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("172.20.32.147")]
         public string ServerIP {
             get {
                 return ((string)(this["ServerIP"]));
