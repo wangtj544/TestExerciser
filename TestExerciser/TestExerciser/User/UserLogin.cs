@@ -36,6 +36,7 @@ namespace TestExerciser.User
         public UserLogin()
         {
             InitializeComponent();
+            InitDataBase();
             this.myNotifyIcon.Visible = false;
         }    
 
@@ -72,7 +73,7 @@ namespace TestExerciser.User
             if (Properties.Settings.Default.ConnectionString == null || Properties.Settings.Default.ConnectionString == "")
             {
                 this.txtStatus.ForeColor = Color.Red;
-                this.txtStatus.Text = "登录信息：登录失败，请先选择服务器！";
+                this.txtStatus.Text = "登录信息：登录失败，无法连接到服务器！";
             }
             else
             {

@@ -39,7 +39,6 @@
             this.txtStatus = new System.Windows.Forms.Label();
             this.linkRegister = new System.Windows.Forms.LinkLabel();
             this.linkForgetPwd = new System.Windows.Forms.LinkLabel();
-            this.linkSelectDB = new System.Windows.Forms.LinkLabel();
             this.notifyContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem_ShowMainWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Lock = new System.Windows.Forms.ToolStripMenuItem();
@@ -226,18 +225,6 @@
             this.linkForgetPwd.Text = "忘记密码？";
             this.linkForgetPwd.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkForgetPwd_LinkClicked);
             // 
-            // linkSelectDB
-            // 
-            this.linkSelectDB.AutoSize = true;
-            this.linkSelectDB.Location = new System.Drawing.Point(219, 153);
-            this.linkSelectDB.Name = "linkSelectDB";
-            this.linkSelectDB.Size = new System.Drawing.Size(77, 12);
-            this.linkSelectDB.TabIndex = 10;
-            this.linkSelectDB.TabStop = true;
-            this.linkSelectDB.Text = "选择服务器？";
-            this.linkSelectDB.Visible = false;
-            this.linkSelectDB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSelectDB_LinkClicked);
-            // 
             // notifyContextMenu
             // 
             this.notifyContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -341,7 +328,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
             this.ClientSize = new System.Drawing.Size(374, 254);
-            this.Controls.Add(this.linkSelectDB);
             this.Controls.Add(this.linkForgetPwd);
             this.Controls.Add(this.linkRegister);
             this.Controls.Add(this.txtStatus);
@@ -377,7 +363,6 @@
         private CCWin.SkinControl.SkinTextBox txtUserName;
         private System.Windows.Forms.LinkLabel linkRegister;
         private System.Windows.Forms.LinkLabel linkForgetPwd;
-        private System.Windows.Forms.LinkLabel linkSelectDB;
         private System.Windows.Forms.ContextMenuStrip notifyContextMenu;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ShowMainWindow;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Lock;
