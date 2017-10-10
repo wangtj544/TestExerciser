@@ -61,14 +61,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EditorTE.dll" size="326144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EditorTE.dll" size="336896">
       <assemblyIdentity name="EditorTE" version="2.16.1.0" publicKeyToken="FB8AA12B994EF61B" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>j9QWdSYeg36tT1g9fhYfKI3Ddw8=</dsig:DigestValue>
+        <dsig:DigestValue>JGrg+TFp8g34Xdr5lxE4MskmZKs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -248,19 +248,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>8Vk/lHcPxGycgvChfk85J2xJPGU=</dsig:DigestValue>
+        <dsig:DigestValue>mZZnFmDlllQsRmQ4wAodl4M2mUI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestExerciser.Diary.exe" size="268800">
-      <assemblyIdentity name="TestExerciser.Diary" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="TestExerciser.Diary" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Egv6OvbTtYd21siH+L/9Jpp1iv8=</dsig:DigestValue>
+        <dsig:DigestValue>RtP+pmLQweGk0UIoE4ZE+ei8Dok=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -272,7 +272,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>KQZFIhXQgz7I4gLxzIQmI44tBwI=</dsig:DigestValue>
+        <dsig:DigestValue>mErygF3h1HZ7CClvjYMifly2o2E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -284,7 +284,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ry6zqD8IWV6ZxIDTbfd+2JU67OE=</dsig:DigestValue>
+        <dsig:DigestValue>hfy1pOfY8qQY6yty+G50HndHvWk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -296,7 +296,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>9yEQ+6aJ5YwdPMneA75zjeWB05w=</dsig:DigestValue>
+        <dsig:DigestValue>jYtHFeGBehEEQOmMf0XHI5PQBBE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

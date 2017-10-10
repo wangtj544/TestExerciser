@@ -760,5 +760,3 @@ E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\bin\De
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.Diary.exe
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\bin\Debug\Xceed.Wpf.Toolkit.dll
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.Diary.pdb
-E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\bin\Debug\System.Data.SQLite.dll
-E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\bin\Debug\System.Data.SQLite.pdb

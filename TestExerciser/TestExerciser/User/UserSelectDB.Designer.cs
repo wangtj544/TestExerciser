@@ -72,11 +72,11 @@
             this.stbServerDBPath.SkinTxt.Size = new System.Drawing.Size(241, 18);
             this.stbServerDBPath.SkinTxt.TabIndex = 0;
             this.stbServerDBPath.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.stbServerDBPath.SkinTxt.WaterText = "";
+            this.stbServerDBPath.SkinTxt.WaterText = "172.20.32.147";
             this.stbServerDBPath.TabIndex = 1;
             this.stbServerDBPath.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.stbServerDBPath.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.stbServerDBPath.WaterText = "";
+            this.stbServerDBPath.WaterText = "172.20.32.147";
             this.stbServerDBPath.WordWrap = true;
             // 
             // rdbLocal
