@@ -701,6 +701,7 @@
             this.tb_Author.BackColor = System.Drawing.Color.Transparent;
             this.tb_Author.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Author.DownBack = null;
+            this.tb_Author.Enabled = false;
             this.tb_Author.Icon = null;
             this.tb_Author.IconIsButton = false;
             this.tb_Author.IconMouseState = CCWin.SkinClass.ControlState.Normal;
@@ -717,7 +718,7 @@
             this.tb_Author.Name = "tb_Author";
             this.tb_Author.NormlBack = null;
             this.tb_Author.Padding = new System.Windows.Forms.Padding(5);
-            this.tb_Author.ReadOnly = true;
+            this.tb_Author.ReadOnly = false;
             this.tb_Author.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tb_Author.Size = new System.Drawing.Size(602, 28);
             // 
@@ -728,7 +729,6 @@
             this.tb_Author.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
             this.tb_Author.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.tb_Author.SkinTxt.Name = "BaseText";
-            this.tb_Author.SkinTxt.ReadOnly = true;
             this.tb_Author.SkinTxt.Size = new System.Drawing.Size(592, 18);
             this.tb_Author.SkinTxt.TabIndex = 0;
             this.tb_Author.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
@@ -798,7 +798,6 @@
             // 
             this.cb_Tester.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cb_Tester.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_Tester.Enabled = false;
             this.cb_Tester.FormattingEnabled = true;
             this.cb_Tester.Location = new System.Drawing.Point(98, 199);
             this.cb_Tester.Name = "cb_Tester";
@@ -922,6 +921,7 @@
             this.tb_EditDate.BackColor = System.Drawing.Color.Transparent;
             this.tb_EditDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_EditDate.DownBack = null;
+            this.tb_EditDate.Enabled = false;
             this.tb_EditDate.Icon = null;
             this.tb_EditDate.IconIsButton = false;
             this.tb_EditDate.IconMouseState = CCWin.SkinClass.ControlState.Normal;
@@ -938,7 +938,7 @@
             this.tb_EditDate.Name = "tb_EditDate";
             this.tb_EditDate.NormlBack = null;
             this.tb_EditDate.Padding = new System.Windows.Forms.Padding(5);
-            this.tb_EditDate.ReadOnly = true;
+            this.tb_EditDate.ReadOnly = false;
             this.tb_EditDate.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tb_EditDate.Size = new System.Drawing.Size(603, 28);
             // 
@@ -949,7 +949,6 @@
             this.tb_EditDate.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
             this.tb_EditDate.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.tb_EditDate.SkinTxt.Name = "BaseText";
-            this.tb_EditDate.SkinTxt.ReadOnly = true;
             this.tb_EditDate.SkinTxt.Size = new System.Drawing.Size(593, 18);
             this.tb_EditDate.SkinTxt.TabIndex = 0;
             this.tb_EditDate.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
