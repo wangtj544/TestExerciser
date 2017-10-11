@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainCaseManager));
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tapButton = new System.Windows.Forms.TableLayoutPanel();
             this.btnOut = new CCWin.SkinControl.SkinButton();
             this.btnInto = new CCWin.SkinControl.SkinButton();
-            this.btnInfo = new CCWin.SkinControl.SkinButton();
+            this.btnMine = new CCWin.SkinControl.SkinButton();
             this.btnQuery = new CCWin.SkinControl.SkinButton();
             this.btnNew = new CCWin.SkinControl.SkinButton();
             this.btnSwitch = new CCWin.SkinControl.SkinButton();
@@ -101,6 +101,7 @@
             this.labTCNOValue = new CCWin.SkinControl.SkinLabel();
             this.linkModify = new System.Windows.Forms.LinkLabel();
             this.txtTitle = new System.Windows.Forms.TextBox();
+            this.btnAll = new CCWin.SkinControl.SkinButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
@@ -165,13 +166,14 @@
             this.tapButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tapButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tapButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tapButton.Controls.Add(this.btnOut, 4, 0);
-            this.tapButton.Controls.Add(this.btnInto, 3, 0);
-            this.tapButton.Controls.Add(this.btnInfo, 2, 0);
-            this.tapButton.Controls.Add(this.btnQuery, 1, 0);
-            this.tapButton.Controls.Add(this.btnNew, 0, 0);
-            this.tapButton.Controls.Add(this.btnSwitch, 6, 0);
-            this.tapButton.Controls.Add(this.btnReview, 5, 0);
+            this.tapButton.Controls.Add(this.btnAll, 0, 0);
+            this.tapButton.Controls.Add(this.btnSwitch, 7, 0);
+            this.tapButton.Controls.Add(this.btnReview, 6, 0);
+            this.tapButton.Controls.Add(this.btnOut, 5, 0);
+            this.tapButton.Controls.Add(this.btnInto, 4, 0);
+            this.tapButton.Controls.Add(this.btnQuery, 3, 0);
+            this.tapButton.Controls.Add(this.btnMine, 1, 0);
+            this.tapButton.Controls.Add(this.btnNew, 2, 0);
             this.tapButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tapButton.Location = new System.Drawing.Point(3, 3);
             this.tapButton.Name = "tapButton";
@@ -186,7 +188,7 @@
             this.btnOut.BackColor = System.Drawing.Color.Transparent;
             this.btnOut.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnOut.DownBack = null;
-            this.btnOut.Location = new System.Drawing.Point(332, 4);
+            this.btnOut.Location = new System.Drawing.Point(412, 4);
             this.btnOut.MouseBack = null;
             this.btnOut.Name = "btnOut";
             this.btnOut.NormlBack = null;
@@ -194,6 +196,7 @@
             this.btnOut.TabIndex = 4;
             this.btnOut.Text = "导出";
             this.btnOut.UseVisualStyleBackColor = false;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
             // btnInto
             // 
@@ -201,7 +204,7 @@
             this.btnInto.BackColor = System.Drawing.Color.Transparent;
             this.btnInto.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnInto.DownBack = null;
-            this.btnInto.Location = new System.Drawing.Point(252, 4);
+            this.btnInto.Location = new System.Drawing.Point(332, 4);
             this.btnInto.MouseBack = null;
             this.btnInto.Name = "btnInto";
             this.btnInto.NormlBack = null;
@@ -209,22 +212,23 @@
             this.btnInto.TabIndex = 3;
             this.btnInto.Text = "导入";
             this.btnInto.UseVisualStyleBackColor = false;
+            this.btnInto.Click += new System.EventHandler(this.btnInto_Click);
             // 
-            // btnInfo
+            // btnMine
             // 
-            this.btnInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnInfo.BackColor = System.Drawing.Color.Transparent;
-            this.btnInfo.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnInfo.DownBack = null;
-            this.btnInfo.Location = new System.Drawing.Point(172, 4);
-            this.btnInfo.MouseBack = null;
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.NormlBack = null;
-            this.btnInfo.Size = new System.Drawing.Size(55, 20);
-            this.btnInfo.TabIndex = 2;
-            this.btnInfo.Text = "统计";
-            this.btnInfo.UseVisualStyleBackColor = false;
-            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            this.btnMine.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnMine.BackColor = System.Drawing.Color.Transparent;
+            this.btnMine.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnMine.DownBack = null;
+            this.btnMine.Location = new System.Drawing.Point(92, 4);
+            this.btnMine.MouseBack = null;
+            this.btnMine.Name = "btnMine";
+            this.btnMine.NormlBack = null;
+            this.btnMine.Size = new System.Drawing.Size(55, 20);
+            this.btnMine.TabIndex = 2;
+            this.btnMine.Text = "我的";
+            this.btnMine.UseVisualStyleBackColor = false;
+            this.btnMine.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // btnQuery
             // 
@@ -232,7 +236,7 @@
             this.btnQuery.BackColor = System.Drawing.Color.Transparent;
             this.btnQuery.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnQuery.DownBack = null;
-            this.btnQuery.Location = new System.Drawing.Point(92, 4);
+            this.btnQuery.Location = new System.Drawing.Point(252, 4);
             this.btnQuery.MouseBack = null;
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.NormlBack = null;
@@ -248,7 +252,7 @@
             this.btnNew.BackColor = System.Drawing.Color.Transparent;
             this.btnNew.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnNew.DownBack = null;
-            this.btnNew.Location = new System.Drawing.Point(12, 4);
+            this.btnNew.Location = new System.Drawing.Point(172, 4);
             this.btnNew.MouseBack = null;
             this.btnNew.Name = "btnNew";
             this.btnNew.NormlBack = null;
@@ -264,7 +268,7 @@
             this.btnSwitch.BackColor = System.Drawing.Color.Transparent;
             this.btnSwitch.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnSwitch.DownBack = null;
-            this.btnSwitch.Location = new System.Drawing.Point(492, 4);
+            this.btnSwitch.Location = new System.Drawing.Point(567, 4);
             this.btnSwitch.MouseBack = null;
             this.btnSwitch.Name = "btnSwitch";
             this.btnSwitch.NormlBack = null;
@@ -272,6 +276,7 @@
             this.btnSwitch.TabIndex = 5;
             this.btnSwitch.Text = "转缺陷";
             this.btnSwitch.UseVisualStyleBackColor = false;
+            this.btnSwitch.Click += new System.EventHandler(this.btnSwitch_Click);
             // 
             // btnReview
             // 
@@ -279,7 +284,7 @@
             this.btnReview.BackColor = System.Drawing.Color.Transparent;
             this.btnReview.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnReview.DownBack = null;
-            this.btnReview.Location = new System.Drawing.Point(412, 4);
+            this.btnReview.Location = new System.Drawing.Point(492, 4);
             this.btnReview.MouseBack = null;
             this.btnReview.Name = "btnReview";
             this.btnReview.NormlBack = null;
@@ -291,32 +296,32 @@
             // 
             // dgvCaseManager
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.dgvCaseManager.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvCaseManager.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvCaseManager.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCaseManager.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvCaseManager.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvCaseManager.ColumnFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgvCaseManager.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCaseManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCaseManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvCaseManager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCaseManager.ColumnSelectBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
             this.dgvCaseManager.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCaseManager.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCaseManager.DefaultCellStyle = dataGridViewCellStyle23;
             this.dgvCaseManager.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCaseManager.EnableHeadersVisualStyles = false;
             this.dgvCaseManager.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -326,21 +331,21 @@
             this.dgvCaseManager.Location = new System.Drawing.Point(3, 38);
             this.dgvCaseManager.Name = "dgvCaseManager";
             this.dgvCaseManager.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCaseManager.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCaseManager.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dgvCaseManager.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvCaseManager.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvCaseManager.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.tableLayoutPanel8.SetRowSpan(this.dgvCaseManager, 3);
             this.dgvCaseManager.RowTemplate.Height = 23;
             this.dgvCaseManager.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1077,6 +1082,22 @@
             this.txtTitle.Size = new System.Drawing.Size(423, 21);
             this.txtTitle.TabIndex = 3;
             // 
+            // btnAll
+            // 
+            this.btnAll.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAll.BackColor = System.Drawing.Color.Transparent;
+            this.btnAll.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnAll.DownBack = null;
+            this.btnAll.Location = new System.Drawing.Point(12, 4);
+            this.btnAll.MouseBack = null;
+            this.btnAll.Name = "btnAll";
+            this.btnAll.NormlBack = null;
+            this.btnAll.Size = new System.Drawing.Size(55, 20);
+            this.btnAll.TabIndex = 7;
+            this.btnAll.Text = "全部";
+            this.btnAll.UseVisualStyleBackColor = false;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
+            // 
             // MainCaseManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1117,7 +1138,7 @@
         private System.Windows.Forms.TableLayoutPanel tapButton;
         private CCWin.SkinControl.SkinButton btnOut;
         private CCWin.SkinControl.SkinButton btnInto;
-        private CCWin.SkinControl.SkinButton btnInfo;
+        private CCWin.SkinControl.SkinButton btnMine;
         private CCWin.SkinControl.SkinButton btnQuery;
         private CCWin.SkinControl.SkinButton btnNew;
         private CCWin.SkinControl.SkinButton btnSwitch;
@@ -1178,5 +1199,6 @@
         private System.Windows.Forms.TextBox txtIfAuto;
         private System.Windows.Forms.TextBox txtModifier;
         private CCWin.SkinControl.SkinLabel labModifier;
+        private CCWin.SkinControl.SkinButton btnAll;
     }
 }

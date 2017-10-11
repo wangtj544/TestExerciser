@@ -358,5 +358,25 @@ namespace TestExerciser
             this.dgvCaseManager.CurrentCell = this.dgvCaseManager.Rows[queryItemRowIndex()].Cells[0];
         }
 
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSwitch_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
