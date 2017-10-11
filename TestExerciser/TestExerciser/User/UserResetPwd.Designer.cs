@@ -189,7 +189,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
             this.ClientSize = new System.Drawing.Size(374, 249);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.labUserName);

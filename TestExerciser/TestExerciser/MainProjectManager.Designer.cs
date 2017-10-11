@@ -81,12 +81,12 @@
             this.rtbDescribe = new CCWin.SkinControl.SkinChatRichTextBox();
             this.stpStruct = new CCWin.SkinControl.SkinTabPage();
             this.tv_Struct = new CCWin.SkinControl.SkinTreeView();
+            this.myPrStrImageList = new System.Windows.Forms.ImageList(this.components);
             this.stpTestCase = new CCWin.SkinControl.SkinTabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.labProName = new CCWin.SkinControl.SkinLabel();
             this.labProNameValue = new CCWin.SkinControl.SkinLabel();
             this.linkModify = new System.Windows.Forms.LinkLabel();
-            this.myPrStrImageList = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
@@ -1316,6 +1316,13 @@
             this.tv_Struct.Size = new System.Drawing.Size(782, 713);
             this.tv_Struct.TabIndex = 0;
             // 
+            // myPrStrImageList
+            // 
+            this.myPrStrImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("myPrStrImageList.ImageStream")));
+            this.myPrStrImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.myPrStrImageList.Images.SetKeyName(0, "afchgorg.gif");
+            this.myPrStrImageList.Images.SetKeyName(1, "3.png");
+            // 
             // stpTestCase
             // 
             this.stpTestCase.BackColor = System.Drawing.Color.White;
@@ -1382,18 +1389,10 @@
             this.linkModify.Text = "修改";
             this.linkModify.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkModify_LinkClicked);
             // 
-            // myPrStrImageList
-            // 
-            this.myPrStrImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("myPrStrImageList.ImageStream")));
-            this.myPrStrImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.myPrStrImageList.Images.SetKeyName(0, "afchgorg.gif");
-            this.myPrStrImageList.Images.SetKeyName(1, "3.png");
-            // 
             // MainProjectManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
             this.ClientSize = new System.Drawing.Size(1440, 825);
             this.Controls.Add(this.splitContainerMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

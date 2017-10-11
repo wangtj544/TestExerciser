@@ -44,7 +44,7 @@
             this.btnCancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.btnCancel.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnCancel.DownBack = null;
-            this.btnCancel.Location = new System.Drawing.Point(289, 153);
+            this.btnCancel.Location = new System.Drawing.Point(278, 153);
             this.btnCancel.MouseBack = null;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.NormlBack = null;
@@ -61,11 +61,11 @@
             this.btnOK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.btnOK.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnOK.DownBack = null;
-            this.btnOK.Location = new System.Drawing.Point(140, 153);
+            this.btnOK.Location = new System.Drawing.Point(129, 153);
             this.btnOK.MouseBack = null;
             this.btnOK.Name = "btnOK";
             this.btnOK.NormlBack = null;
-            this.btnOK.Size = new System.Drawing.Size(98, 23);
+            this.btnOK.Size = new System.Drawing.Size(111, 23);
             this.btnOK.TabIndex = 47;
             this.btnOK.Text = "确定新建";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -90,7 +90,7 @@
             this.stbFolderName.IsPasswordChat = '\0';
             this.stbFolderName.IsSystemPasswordChar = false;
             this.stbFolderName.Lines = new string[0];
-            this.stbFolderName.Location = new System.Drawing.Point(162, 71);
+            this.stbFolderName.Location = new System.Drawing.Point(150, 71);
             this.stbFolderName.Margin = new System.Windows.Forms.Padding(0);
             this.stbFolderName.MaxLength = 32767;
             this.stbFolderName.MinimumSize = new System.Drawing.Size(24, 24);
@@ -124,7 +124,7 @@
             // labFolderName
             // 
             this.labFolderName.AutoSize = true;
-            this.labFolderName.Location = new System.Drawing.Point(58, 76);
+            this.labFolderName.Location = new System.Drawing.Point(46, 76);
             this.labFolderName.Name = "labFolderName";
             this.labFolderName.Size = new System.Drawing.Size(95, 12);
             this.labFolderName.TabIndex = 41;
@@ -134,8 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackPalace = global::TestExerciser.Properties.Resources.undo_16x163;
-            this.ClientSize = new System.Drawing.Size(545, 210);
+            this.ClientSize = new System.Drawing.Size(513, 201);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtStatus);

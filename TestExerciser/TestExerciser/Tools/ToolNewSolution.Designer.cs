@@ -187,7 +187,7 @@
             this.btnOK.MouseBack = null;
             this.btnOK.Name = "btnOK";
             this.btnOK.NormlBack = null;
-            this.btnOK.Size = new System.Drawing.Size(98, 23);
+            this.btnOK.Size = new System.Drawing.Size(111, 23);
             this.btnOK.TabIndex = 39;
             this.btnOK.Text = "确定新建";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -198,7 +198,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackPalace = ((System.Drawing.Image)(resources.GetObject("$this.BackPalace")));
             this.ClientSize = new System.Drawing.Size(545, 243);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);

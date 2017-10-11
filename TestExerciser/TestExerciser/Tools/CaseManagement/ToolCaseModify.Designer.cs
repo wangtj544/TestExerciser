@@ -717,7 +717,7 @@
             this.tb_Author.Name = "tb_Author";
             this.tb_Author.NormlBack = null;
             this.tb_Author.Padding = new System.Windows.Forms.Padding(5);
-            this.tb_Author.ReadOnly = false;
+            this.tb_Author.ReadOnly = true;
             this.tb_Author.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tb_Author.Size = new System.Drawing.Size(602, 28);
             // 
@@ -938,7 +938,7 @@
             this.tb_EditDate.Name = "tb_EditDate";
             this.tb_EditDate.NormlBack = null;
             this.tb_EditDate.Padding = new System.Windows.Forms.Padding(5);
-            this.tb_EditDate.ReadOnly = false;
+            this.tb_EditDate.ReadOnly = true;
             this.tb_EditDate.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.tb_EditDate.Size = new System.Drawing.Size(603, 28);
             // 
