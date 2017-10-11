@@ -37,9 +37,7 @@ namespace TestExerciser
         public static bool isMainFormClosed = false;
 
         //定义委托事件
-        public event SetUserLoginForm SetUserLoginFormVisableTrue;
         public event ShowMainForm ShowMainFormWhenClosed;
-        public event ShowMainForm ShowMainFormEnableFalse;
         
         Style invisibleCharsStyle = new InvisibleCharsRenderer(Pens.Gray);
         Color currentLineColor = Color.FromArgb(100, 210, 210, 255);
@@ -3083,7 +3081,7 @@ namespace TestExerciser
             {
                 if (isMainFormClosed == true)
                 {
-                    //SetUserLoginFormVisable(true);
+                    //this.SetUserLoginFormVisableTrue(true);
                     ShowMainFormWhenClosed();
                 }             
             }

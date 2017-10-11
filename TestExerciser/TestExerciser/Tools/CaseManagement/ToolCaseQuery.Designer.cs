@@ -30,63 +30,63 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToolCaseQuery));
-            this.labTitle = new System.Windows.Forms.Label();
-            this.skinTextBox1 = new CCWin.SkinControl.SkinTextBox();
+            this.labQuery = new System.Windows.Forms.Label();
+            this.tb_QueryItems = new CCWin.SkinControl.SkinTextBox();
             this.btnCancel = new CCWin.SkinControl.SkinButton();
             this.btnOK = new CCWin.SkinControl.SkinButton();
             this.txtStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // labTitle
+            // labQuery
             // 
-            this.labTitle.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labTitle.AutoSize = true;
-            this.labTitle.Location = new System.Drawing.Point(45, 82);
-            this.labTitle.Name = "labTitle";
-            this.labTitle.Size = new System.Drawing.Size(119, 12);
-            this.labTitle.TabIndex = 0;
-            this.labTitle.Text = "用例标题/用例编号：";
+            this.labQuery.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labQuery.AutoSize = true;
+            this.labQuery.Location = new System.Drawing.Point(45, 82);
+            this.labQuery.Name = "labQuery";
+            this.labQuery.Size = new System.Drawing.Size(119, 12);
+            this.labQuery.TabIndex = 0;
+            this.labQuery.Text = "用例标题/用例编号：";
             // 
-            // skinTextBox1
+            // tb_QueryItems
             // 
-            this.skinTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox1.DownBack = null;
-            this.skinTextBox1.Icon = null;
-            this.skinTextBox1.IconIsButton = false;
-            this.skinTextBox1.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox1.IsPasswordChat = '\0';
-            this.skinTextBox1.IsSystemPasswordChar = false;
-            this.skinTextBox1.Lines = new string[0];
-            this.skinTextBox1.Location = new System.Drawing.Point(165, 75);
-            this.skinTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox1.MaxLength = 32767;
-            this.skinTextBox1.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox1.MouseBack = null;
-            this.skinTextBox1.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox1.Multiline = false;
-            this.skinTextBox1.Name = "skinTextBox1";
-            this.skinTextBox1.NormlBack = null;
-            this.skinTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox1.ReadOnly = false;
-            this.skinTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox1.Size = new System.Drawing.Size(286, 28);
+            this.tb_QueryItems.BackColor = System.Drawing.Color.Transparent;
+            this.tb_QueryItems.DownBack = null;
+            this.tb_QueryItems.Icon = null;
+            this.tb_QueryItems.IconIsButton = false;
+            this.tb_QueryItems.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.tb_QueryItems.IsPasswordChat = '\0';
+            this.tb_QueryItems.IsSystemPasswordChar = false;
+            this.tb_QueryItems.Lines = new string[0];
+            this.tb_QueryItems.Location = new System.Drawing.Point(165, 75);
+            this.tb_QueryItems.Margin = new System.Windows.Forms.Padding(0);
+            this.tb_QueryItems.MaxLength = 32767;
+            this.tb_QueryItems.MinimumSize = new System.Drawing.Size(28, 28);
+            this.tb_QueryItems.MouseBack = null;
+            this.tb_QueryItems.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.tb_QueryItems.Multiline = false;
+            this.tb_QueryItems.Name = "tb_QueryItems";
+            this.tb_QueryItems.NormlBack = null;
+            this.tb_QueryItems.Padding = new System.Windows.Forms.Padding(5);
+            this.tb_QueryItems.ReadOnly = false;
+            this.tb_QueryItems.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_QueryItems.Size = new System.Drawing.Size(286, 28);
             // 
             // 
             // 
-            this.skinTextBox1.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox1.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox1.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox1.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox1.SkinTxt.Name = "BaseText";
-            this.skinTextBox1.SkinTxt.Size = new System.Drawing.Size(276, 18);
-            this.skinTextBox1.SkinTxt.TabIndex = 0;
-            this.skinTextBox1.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox1.SkinTxt.WaterText = "用例标题\\用例名称";
-            this.skinTextBox1.TabIndex = 2;
-            this.skinTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox1.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox1.WaterText = "用例标题\\用例名称";
-            this.skinTextBox1.WordWrap = true;
+            this.tb_QueryItems.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_QueryItems.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tb_QueryItems.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.tb_QueryItems.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.tb_QueryItems.SkinTxt.Name = "BaseText";
+            this.tb_QueryItems.SkinTxt.Size = new System.Drawing.Size(276, 18);
+            this.tb_QueryItems.SkinTxt.TabIndex = 0;
+            this.tb_QueryItems.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.tb_QueryItems.SkinTxt.WaterText = "用例标题\\用例名称";
+            this.tb_QueryItems.TabIndex = 2;
+            this.tb_QueryItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tb_QueryItems.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.tb_QueryItems.WaterText = "用例标题\\用例名称";
+            this.tb_QueryItems.WordWrap = true;
             // 
             // btnCancel
             // 
@@ -101,8 +101,9 @@
             this.btnCancel.NormlBack = null;
             this.btnCancel.Size = new System.Drawing.Size(111, 23);
             this.btnCancel.TabIndex = 51;
-            this.btnCancel.Text = "取消新建";
+            this.btnCancel.Text = "取消查询";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOK
             // 
@@ -117,8 +118,9 @@
             this.btnOK.NormlBack = null;
             this.btnOK.Size = new System.Drawing.Size(111, 23);
             this.btnOK.TabIndex = 50;
-            this.btnOK.Text = "确定新建";
+            this.btnOK.Text = "确定查询";
             this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // txtStatus
             // 
@@ -136,8 +138,8 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtStatus);
-            this.Controls.Add(this.skinTextBox1);
-            this.Controls.Add(this.labTitle);
+            this.Controls.Add(this.tb_QueryItems);
+            this.Controls.Add(this.labQuery);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ToolCaseQuery";
@@ -150,8 +152,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labTitle;
-        private CCWin.SkinControl.SkinTextBox skinTextBox1;
+        private System.Windows.Forms.Label labQuery;
+        private CCWin.SkinControl.SkinTextBox tb_QueryItems;
         private CCWin.SkinControl.SkinButton btnCancel;
         private CCWin.SkinControl.SkinButton btnOK;
         public System.Windows.Forms.Label txtStatus;

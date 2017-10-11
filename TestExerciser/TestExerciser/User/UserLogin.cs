@@ -218,13 +218,13 @@ namespace TestExerciser.User
             Application.Exit();
         }
 
-        private void d_SetUserLoginFormVisableTrue(bool vis)
+        public void d_SetUserLoginFormVisableTrue(bool vis)
         {
             this.Visible = true;
         }
 
 
-        private void d_ShowMainFrom()
+        public void d_ShowMainFrom()
         {
             MainForm myMainForm = new MainForm();
             myMainForm.Show();
@@ -235,7 +235,6 @@ namespace TestExerciser.User
             this.SetMainFormClosed += new SetMainForm(myMainForm.d_SetMainWindowClosed);
             this.SetMainFormEnableTrue += new SetMainForm(myMainForm.d_SetMainWindowEnableTrue);
             this.SetMainFormEnableFlase += new SetMainForm(myMainForm.d_SetMainWindowEnableFlase);
-            myMainForm.SetUserLoginFormVisableTrue += new SetUserLoginForm(this.d_SetUserLoginFormVisableTrue);
             myMainForm.ShowMainFormWhenClosed += new ShowMainForm(this.d_ShowMainFrom);
         }
 

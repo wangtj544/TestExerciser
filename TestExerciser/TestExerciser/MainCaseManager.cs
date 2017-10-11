@@ -15,6 +15,7 @@ namespace TestExerciser
 {
     public partial class MainCaseManager : Skin_Mac
     {
+        
         ManageDB myManageDB = new ManageDB();
         public static string myCaseNo;
 
@@ -323,5 +324,18 @@ namespace TestExerciser
         {
             this.tbcCaseDesign.SelectedIndex = 0;
         }
+
+        public void d_SetdgvCaseManagerSelectedItem()
+        {
+            for (int i = 0; i < this.dgvCaseManager.Rows.Count; i++)
+            {
+                if (this.dgvCaseManager.Rows[i].Cells[0].Value.ToString() == ToolCaseQuery.mySelectedItem)
+                {
+                    this.dgvCaseManager.CurrentCell = this.dgvCaseManager.Rows[i].Cells[0];
+                    break;
+                }
+            }
+        }
+
     }
 }
