@@ -325,11 +325,11 @@
     <Compile Include="Tools\CaseManagement\ToolSelectModeForCaseReview.Designer.cs">
       <DependentUpon>ToolSelectModeForCaseReview.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\Control\ControlSearch.cs">
+    <Compile Include="Tools\ToolSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Tools\Control\ControlSearch.Designer.cs">
-      <DependentUpon>ControlSearch.cs</DependentUpon>
+    <Compile Include="Tools\ToolSearch.Designer.cs">
+      <DependentUpon>ToolSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\ProjectManagement\ToolProjectCommit.cs">
       <SubType>Form</SubType>
@@ -563,8 +563,8 @@
     <EmbeddedResource Include="Tools\CaseManagement\ToolSelectModeForCaseReview.resx">
       <DependentUpon>ToolSelectModeForCaseReview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tools\Control\ControlSearch.resx">
-      <DependentUpon>ControlSearch.cs</DependentUpon>
+    <EmbeddedResource Include="Tools\ToolSearch.resx">
+      <DependentUpon>ToolSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ProjectManagement\ToolProjectCommit.resx">
       <DependentUpon>ToolProjectCommit.cs</DependentUpon>
