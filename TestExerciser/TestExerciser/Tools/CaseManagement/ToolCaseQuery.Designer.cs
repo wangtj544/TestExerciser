@@ -41,11 +41,11 @@
             // 
             this.labQuery.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labQuery.AutoSize = true;
-            this.labQuery.Location = new System.Drawing.Point(45, 82);
+            this.labQuery.Location = new System.Drawing.Point(68, 82);
             this.labQuery.Name = "labQuery";
-            this.labQuery.Size = new System.Drawing.Size(119, 12);
+            this.labQuery.Size = new System.Drawing.Size(65, 12);
             this.labQuery.TabIndex = 0;
-            this.labQuery.Text = "用例标题/用例编号：";
+            this.labQuery.Text = "用例编号：";
             // 
             // tb_QueryItems
             // 
@@ -57,7 +57,7 @@
             this.tb_QueryItems.IsPasswordChat = '\0';
             this.tb_QueryItems.IsSystemPasswordChar = false;
             this.tb_QueryItems.Lines = new string[0];
-            this.tb_QueryItems.Location = new System.Drawing.Point(165, 75);
+            this.tb_QueryItems.Location = new System.Drawing.Point(131, 75);
             this.tb_QueryItems.Margin = new System.Windows.Forms.Padding(0);
             this.tb_QueryItems.MaxLength = 32767;
             this.tb_QueryItems.MinimumSize = new System.Drawing.Size(28, 28);
@@ -69,7 +69,7 @@
             this.tb_QueryItems.Padding = new System.Windows.Forms.Padding(5);
             this.tb_QueryItems.ReadOnly = false;
             this.tb_QueryItems.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_QueryItems.Size = new System.Drawing.Size(286, 28);
+            this.tb_QueryItems.Size = new System.Drawing.Size(320, 28);
             // 
             // 
             // 
@@ -78,14 +78,14 @@
             this.tb_QueryItems.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
             this.tb_QueryItems.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.tb_QueryItems.SkinTxt.Name = "BaseText";
-            this.tb_QueryItems.SkinTxt.Size = new System.Drawing.Size(276, 18);
+            this.tb_QueryItems.SkinTxt.Size = new System.Drawing.Size(310, 18);
             this.tb_QueryItems.SkinTxt.TabIndex = 0;
             this.tb_QueryItems.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.tb_QueryItems.SkinTxt.WaterText = "用例标题\\用例名称";
+            this.tb_QueryItems.SkinTxt.WaterText = "请输入用例编号...";
             this.tb_QueryItems.TabIndex = 2;
             this.tb_QueryItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tb_QueryItems.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.tb_QueryItems.WaterText = "用例标题\\用例名称";
+            this.tb_QueryItems.WaterText = "请输入用例编号...";
             this.tb_QueryItems.WordWrap = true;
             // 
             // btnCancel
@@ -141,10 +141,12 @@
             this.Controls.Add(this.tb_QueryItems);
             this.Controls.Add(this.labQuery);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "ToolCaseQuery";
             this.Text = "查询用例";
             this.TitleCenter = false;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ToolCaseQuery_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

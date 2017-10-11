@@ -57,5 +57,13 @@ namespace TestExerciser.Tools.CaseManagement
                 this.txtStatus.Text = "查询结果：未能查询到此用例！";
             }
         }
+
+        private void ToolCaseQuery_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.searchQueryItems();
+            }
+        }
     }
 }
