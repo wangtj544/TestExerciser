@@ -224,6 +224,7 @@
             this.btnInfo.TabIndex = 2;
             this.btnInfo.Text = "统计";
             this.btnInfo.UseVisualStyleBackColor = false;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // btnQuery
             // 

@@ -12,12 +12,13 @@ using TestExerciser.Tools.CaseManagement;
 using TestExerciser.Logic;
 
 namespace TestExerciser
-{
+{ 
+
     public partial class MainCaseManager : Skin_Mac
     {
         
         ManageDB myManageDB = new ManageDB();
-        public static string myCaseNo;
+        public static string myCaseNo;        
 
         public MainCaseManager()
         {
@@ -37,6 +38,9 @@ namespace TestExerciser
         {
             ToolCaseQuery myToolCaseQuery = new ToolCaseQuery();
             myToolCaseQuery.Show();
+            myToolCaseQuery.UpdateAfterQuery += new SetMainCaseManager(this.d_UpdateAfterQuery);
+            myToolCaseQuery.DataGridViewSeletedItem += new SetMainCaseManager(this.d_DataGridViewSeletedItem);
+
         }
 
         private void btnReview_Click(object sender, EventArgs e)
@@ -322,19 +326,36 @@ namespace TestExerciser
 
         private void MainCaseManager_Load(object sender, EventArgs e)
         {
-            this.tbcCaseDesign.SelectedIndex = 0;
+            this.tbcCaseDesign.SelectedIndex = 0;        
         }
 
-        public void d_SetdgvCaseManagerSelectedItem()
+        private int queryItemRowIndex()
         {
-            for (int i = 0; i < this.dgvCaseManager.Rows.Count; i++)
+            int index = 0;
+            for (int i=0; i < this.dgvCaseManager.Rows.Count; i++)
             {
                 if (this.dgvCaseManager.Rows[i].Cells[0].Value.ToString() == ToolCaseQuery.mySelectedItem)
                 {
-                    this.dgvCaseManager.CurrentCell = this.dgvCaseManager.Rows[i].Cells[0];
+                    index = i;
                     break;
                 }
             }
+            return index;
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void d_UpdateAfterQuery()
+        {
+            this.dgvCaseManager_CellClick(this.dgvCaseManager, new DataGridViewCellEventArgs(0, queryItemRowIndex()));
+        }
+
+        public void d_DataGridViewSeletedItem()
+        {
+            this.dgvCaseManager.CurrentCell = this.dgvCaseManager.Rows[queryItemRowIndex()].Cells[0];
         }
 
     }

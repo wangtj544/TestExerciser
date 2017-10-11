@@ -13,21 +13,19 @@ using TestExerciser.Logic;
 
 namespace TestExerciser.Tools.CaseManagement
 {
-    public delegate void SetToolCaseQuery();
+    public delegate void SetMainCaseManager();
 
     public partial class ToolCaseQuery : Skin_Mac
     {
         public static string mySelectedItem;
         ManageDB myManageDB = new ManageDB();
-        MainCaseManager myMainCaseManager = new MainCaseManager();
 
-        //定义委托事件
-        public event SetToolCaseQuery SetToolCaseQuerySelected;
+        public event SetMainCaseManager UpdateAfterQuery;
+        public event SetMainCaseManager DataGridViewSeletedItem;
 
         public ToolCaseQuery()
         {
             InitializeComponent();
-            this.SetToolCaseQuerySelected += new SetToolCaseQuery(myMainCaseManager.d_SetdgvCaseManagerSelectedItem);
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -44,11 +42,14 @@ namespace TestExerciser.Tools.CaseManagement
         private void searchQueryItems()
         {
             if (myManageDB.checkItem("ceCaseNO", "TestCaseEditor", this.tb_QueryItems.Text))
-            {
+            {               
                 this.txtStatus.ForeColor = Color.Green;
                 this.txtStatus.Text = "查询结果：查询成功！";
                 mySelectedItem = this.tb_QueryItems.Text;
-                this.SetToolCaseQuerySelected();
+                this.Visible = false;
+                this.Close();
+                this.UpdateAfterQuery();
+                this.DataGridViewSeletedItem();
             }
             else
             {
