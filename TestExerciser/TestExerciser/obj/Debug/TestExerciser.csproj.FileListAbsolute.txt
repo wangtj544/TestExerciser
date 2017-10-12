@@ -764,3 +764,4 @@ E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\bin\De
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.exe
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\bin\Debug\TestExerciser.pdb
 E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\bin\Debug\zh-Hans\TestExerciser.resources.dll
+E:\自动化测试工具\Master\TestExerciser\TestExerciser\TestExerciser\obj\Debug\TestExerciser.Tools.CaseManagement.ToolCaseSelectProject.resources

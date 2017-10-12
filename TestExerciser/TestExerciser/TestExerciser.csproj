@@ -320,6 +320,12 @@
     <Compile Include="Tools\CaseManagement\ToolCaseQuery.Designer.cs">
       <DependentUpon>ToolCaseQuery.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\CaseManagement\ToolCaseSelectProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CaseManagement\ToolCaseSelectProject.Designer.cs">
+      <DependentUpon>ToolCaseSelectProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\CaseManagement\ToolSelectModeForCaseReview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -560,6 +566,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\CaseManagement\ToolCaseQuery.resx">
       <DependentUpon>ToolCaseQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\CaseManagement\ToolCaseSelectProject.resx">
+      <DependentUpon>ToolCaseSelectProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\CaseManagement\ToolSelectModeForCaseReview.resx">
       <DependentUpon>ToolSelectModeForCaseReview.cs</DependentUpon>

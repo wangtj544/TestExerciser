@@ -120,5 +120,11 @@ namespace TestExerciser.Tools.CaseManagement
             MainCaseManager myMainCaseManager = new MainCaseManager();
             myMainCaseManager.Show();
         }
+
+        private void btnSelectProject_Click(object sender, EventArgs e)
+        {
+            ToolCaseSelectProject myToolCaseSelectProject = new ToolCaseSelectProject();
+            myToolCaseSelectProject.Show();
+        }
     }
 }

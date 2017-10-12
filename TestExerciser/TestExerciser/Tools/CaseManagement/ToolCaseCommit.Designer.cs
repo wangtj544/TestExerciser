@@ -47,7 +47,7 @@
             this.tb_SuiteName = new CCWin.SkinControl.SkinTextBox();
             this.tb_CaseNO = new CCWin.SkinControl.SkinTextBox();
             this.tb_ParentModule = new CCWin.SkinControl.SkinTextBox();
-            this.btnAuthor = new System.Windows.Forms.Button();
+            this.btnSelectProject = new System.Windows.Forms.Button();
             this.labCaseName = new CCWin.SkinControl.SkinLabel();
             this.tb_CaseName = new CCWin.SkinControl.SkinTextBox();
             this.labStruct = new CCWin.SkinControl.SkinLabel();
@@ -149,7 +149,7 @@
             this.tlpSort.Controls.Add(this.tb_SuiteName, 4, 1);
             this.tlpSort.Controls.Add(this.tb_CaseNO, 1, 2);
             this.tlpSort.Controls.Add(this.tb_ParentModule, 1, 4);
-            this.tlpSort.Controls.Add(this.btnAuthor, 2, 0);
+            this.tlpSort.Controls.Add(this.btnSelectProject, 2, 0);
             this.tlpSort.Controls.Add(this.labCaseName, 3, 2);
             this.tlpSort.Controls.Add(this.tb_CaseName, 4, 2);
             this.tlpSort.Controls.Add(this.labStruct, 3, 0);
@@ -535,15 +535,16 @@
             this.tb_ParentModule.WaterText = "必填...";
             this.tb_ParentModule.WordWrap = true;
             // 
-            // btnAuthor
+            // btnSelectProject
             // 
-            this.btnAuthor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
-            this.btnAuthor.Image = ((System.Drawing.Image)(resources.GetObject("btnAuthor.Image")));
-            this.btnAuthor.Location = new System.Drawing.Point(697, 3);
-            this.btnAuthor.Name = "btnAuthor";
-            this.btnAuthor.Size = new System.Drawing.Size(24, 21);
-            this.btnAuthor.TabIndex = 28;
-            this.btnAuthor.UseVisualStyleBackColor = false;
+            this.btnSelectProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(195)))), ((int)(((byte)(245)))));
+            this.btnSelectProject.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectProject.Image")));
+            this.btnSelectProject.Location = new System.Drawing.Point(697, 3);
+            this.btnSelectProject.Name = "btnSelectProject";
+            this.btnSelectProject.Size = new System.Drawing.Size(24, 21);
+            this.btnSelectProject.TabIndex = 28;
+            this.btnSelectProject.UseVisualStyleBackColor = false;
+            this.btnSelectProject.Click += new System.EventHandler(this.btnSelectProject_Click);
             // 
             // labCaseName
             // 
@@ -1073,7 +1074,7 @@
         private CCWin.SkinControl.SkinLabel labStruct;
         private CCWin.SkinControl.SkinLabel labSubModule;
         private CCWin.SkinControl.SkinComboBox cb_Struct;
-        private System.Windows.Forms.Button btnAuthor;
+        private System.Windows.Forms.Button btnSelectProject;
         private CCWin.SkinControl.SkinLabel labReqNO;
         private CCWin.SkinControl.SkinLabel labParentModule;
         private CCWin.SkinControl.SkinTextBox tb_Project;
