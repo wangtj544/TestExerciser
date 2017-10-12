@@ -159,6 +159,7 @@ namespace TestExerciser.User
 
         private void toolStripMenuItem_Paint_Click(object sender, EventArgs e)
         {
+            this.SetMainFormVisable();
             runCmd("mspaint");
         }
 

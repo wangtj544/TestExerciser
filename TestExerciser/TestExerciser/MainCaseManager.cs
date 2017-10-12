@@ -19,7 +19,7 @@ namespace TestExerciser
         
         ManageDB myManageDB = new ManageDB();
         public static string myCaseNo;
-        DataTable myDT = new DataTable();
+        DataTable myDTCase = new DataTable();
 
         public MainCaseManager()
         {
@@ -54,7 +54,7 @@ namespace TestExerciser
 
         private void setDataGridViewColumnHeaders()
         {           
-            myDT.Columns.AddRange(new DataColumn[]
+            myDTCase.Columns.AddRange(new DataColumn[]
                 {
                     new DataColumn("用例"),
                     new DataColumn("作者"),
@@ -67,8 +67,8 @@ namespace TestExerciser
             dgvCaseManager.ColumnCount = 6;
             for (int i = 0; i < dgvCaseManager.ColumnCount; i++)
             {
-                dgvCaseManager.Columns[i].Name = myDT.Columns[i].ColumnName;
-                dgvCaseManager.Columns[i].DataPropertyName = myDT.Columns[i].ColumnName;
+                dgvCaseManager.Columns[i].Name = myDTCase.Columns[i].ColumnName;
+                dgvCaseManager.Columns[i].DataPropertyName = myDTCase.Columns[i].ColumnName;
                 dgvCaseManager.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 if (i != 0)
                     dgvCaseManager.Columns[i].Width = 120;
@@ -83,7 +83,7 @@ namespace TestExerciser
             {
                 foreach (string myRow in myRows)
                 {
-                    DataRow row = myDT.NewRow();
+                    DataRow row = myDTCase.NewRow();
                     row[0] = myRow;                   
                     row[1] = myManageDB.getDataFromCell("ceAuthor", "CaseManager", "ceCaseNO", myRow);
                     row[2] = myManageDB.getDataFromCell("ceActually", "CaseManager", "ceCaseNO", myRow);
@@ -91,7 +91,7 @@ namespace TestExerciser
                     row[4] = myManageDB.getDataFromCell("ceModifyDate", "CaseManager", "ceCaseNO", myRow).Split(' ')[0];
                     row[5] = myManageDB.getDataFromCell("ceTestDate", "CaseManager", "ceCaseNO", myRow).Split(' ')[0];
                     row[6] = myManageDB.getDataFromCell("ceCaseName", "CaseManager", "ceCaseNO", myRow);
-                    myDT.Rows.Add(row);
+                    myDTCase.Rows.Add(row);
                 }
                 
                 //用户不能调整列标题高度
@@ -120,7 +120,7 @@ namespace TestExerciser
                 //dataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.LightSkyBlue;
 
                 dgvCaseManager.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dgvCaseManager.DataSource = myDT;
+                dgvCaseManager.DataSource = myDTCase;
 
                 //只需要把需要绘制的DataGridView传入DataGridViewRenderer即可，
                 //这里的隐藏列即为需要重新绘制的内容
@@ -226,7 +226,7 @@ namespace TestExerciser
             {
                 this.dgvCaseManager.DataSource = null;
             }
-            myDT.Rows.Clear();
+            myDTCase.Rows.Clear();
             MainCaseManager_Load(sender,e);
         }
 
@@ -236,7 +236,7 @@ namespace TestExerciser
             {
                 this.dgvCaseManager.DataSource = null;
             }
-            myDT.Rows.Clear();
+            myDTCase.Rows.Clear();
             string[] myRows = myManageDB.getDataFromCells("ceCaseNO", "CaseManager", "ceAuthor", ManageDB.userFullName);
             setDataGridViewControl(myRows);
         }
