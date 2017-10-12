@@ -41,12 +41,12 @@ namespace TestExerciser.Logic
         public string getDataFromCell(string row,string table,string rowA,string valueA,string rowB,string valueB)
         {
             string mycell = "";
-            string selectFullName = "select " + row + " from " + table + " where " + rowA + "=" + "'" + valueA + "'" + "AND" + ""+ rowB +"=" + "'" + valueB + "'";
+            string mySQL = "select " + row + " from " + table + " where " + rowA + "=" + "'" + valueA + "'" + "AND" + "" + rowB + "=" + "'" + valueB + "'";
             try
             {
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
-                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
                 if (myReader.HasRows == true)
                 {
@@ -80,12 +80,12 @@ namespace TestExerciser.Logic
         public string getDataFromCell(string row, string table, string rowA, string valueA)
         {
             string mycell = "";
-            string selectFullName = "select " + row + " from " + table + " where " + rowA + "=" + "'" + valueA + "'";
+            string mySQL = "select " + row + " from " + table + " where " + rowA + "=" + "'" + valueA + "'";
             try
             {
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
-                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
                 if (myReader.HasRows == true)
                 {
@@ -109,17 +109,52 @@ namespace TestExerciser.Logic
         }
 
 
-        public string[] getDataFromCell(string row, string table)
+        public string[] getDataFromCells(string row, string table)
         {
             string [] myCells = null;
             List<string> myCellsList = new List<string>(); 
             string myCell = "";
-            string selectFullName = "select " + row + " from " + table;
+            string mySQL = "select " + row + " from " + table;
             try
             {
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
-                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
+                myReader = mycom.ExecuteReader();
+                if (myReader.HasRows == true)
+                {
+                    while (myReader.Read())
+                    {
+                        myCell = Convert.ToString(myReader[0]);
+                        myCellsList.Add(myCell);
+                        myCells = myCellsList.ToArray();
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                myReader.Close();
+                mycon.Close();
+
+            }
+            return myCells;
+        }
+
+        public string[] getDataFromCells(string row, string table, string rowA, string valueA)
+        {
+            string[] myCells = null;
+            List<string> myCellsList = new List<string>();
+            string myCell = "";
+            string mySQL = "select " + row + " from " + table + " where " + rowA + "=" + "'" + valueA + "'";
+            try
+            {
+                mycon = new SqlConnection(strcon);
+                mycon.Open();
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
                 if (myReader.HasRows == true)
                 {
@@ -182,12 +217,12 @@ namespace TestExerciser.Logic
         public bool checkReviewFrom()
         {
             bool falg = false;
-            string selectFullName = "select email from 用户管理 where reviewFrom='True'";
+            string mySQL = "select email from 用户管理 where reviewFrom='True'";
             try
             {
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
-                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
                 if (myReader.HasRows == true)
                 {
@@ -217,12 +252,12 @@ namespace TestExerciser.Logic
         public bool queryUserFullName(string userName,string passwd)
         {
             bool falg = false;
-            string selectFullName = "select fullName from 用户管理 where userName=" + "'" + userName + "'" + "AND" + "[passWord]=" + "'" + passwd + "'";
+            string mySQL = "select fullName from 用户管理 where userName=" + "'" + userName + "'" + "AND" + "[passWord]=" + "'" + passwd + "'";
             try
             {
                 mycon = new SqlConnection(strcon);
                 mycon.Open();
-                SqlCommand mycom = new SqlCommand(selectFullName, mycon);
+                SqlCommand mycom = new SqlCommand(mySQL, mycon);
                 myReader = mycom.ExecuteReader();
                 if (myReader.HasRows == true)
                 {

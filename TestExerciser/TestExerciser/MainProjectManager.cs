@@ -56,7 +56,7 @@ namespace TestExerciser
                     new DataColumn("项目名称")
                 });
 
-            string[] myRows = myManageDB.getDataFromCell("proNO", "ProjectManager");
+            string[] myRows = myManageDB.getDataFromCells("proNO", "ProjectManager");
 
             if (myRows != null)
             {

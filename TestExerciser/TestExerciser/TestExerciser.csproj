@@ -222,6 +222,7 @@
       <DependentUpon>DataSetTeamMembers.xsd</DependentUpon>
     </Compile>
     <Compile Include="Logic\ColorRandom.cs" />
+    <Compile Include="Logic\DataGridViewRender.cs" />
     <Compile Include="Logic\FTPClient.cs" />
     <Compile Include="Logic\ListItem.cs" />
     <Compile Include="Logic\ProjectStruct.cs" />

@@ -41,7 +41,7 @@ namespace TestExerciser.Tools.CaseManagement
 
         private void searchQueryItems()
         {
-            if (myManageDB.checkItem("ceCaseNO", "TestCaseEditor", this.tb_QueryItems.Text))
+            if (myManageDB.checkItem("ceCaseNO", "CaseManager", this.tb_QueryItems.Text))
             {               
                 this.txtStatus.ForeColor = Color.Green;
                 this.txtStatus.Text = "查询结果：查询成功！";
