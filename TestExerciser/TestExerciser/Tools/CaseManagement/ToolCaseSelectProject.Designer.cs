@@ -43,9 +43,10 @@
             this.labProjectName = new CCWin.SkinControl.SkinLabel();
             this.labProjectNO = new CCWin.SkinControl.SkinLabel();
             this.btnSearch = new CCWin.SkinControl.SkinButton();
-            this.dgvSelectProject = new CCWin.SkinControl.SkinDataGridView();
             this.txtProjectName = new System.Windows.Forms.TextBox();
             this.txtProjectNO = new System.Windows.Forms.TextBox();
+            this.dgvSelectProject = new CCWin.SkinControl.SkinDataGridView();
+            this.txtStatus = new System.Windows.Forms.Label();
             this.tlp_Main.SuspendLayout();
             this.tlp_Button.SuspendLayout();
             this.tlp_Select.SuspendLayout();
@@ -66,7 +67,7 @@
             this.tlp_Main.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
             this.tlp_Main.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlp_Main.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tlp_Main.Size = new System.Drawing.Size(602, 459);
+            this.tlp_Main.Size = new System.Drawing.Size(602, 448);
             this.tlp_Main.TabIndex = 0;
             // 
             // tlp_Button
@@ -81,7 +82,7 @@
             this.tlp_Button.Controls.Add(this.btnCancel, 3, 0);
             this.tlp_Button.Controls.Add(this.btnFlush, 2, 0);
             this.tlp_Button.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp_Button.Location = new System.Drawing.Point(3, 426);
+            this.tlp_Button.Location = new System.Drawing.Point(3, 415);
             this.tlp_Button.Name = "tlp_Button";
             this.tlp_Button.RowCount = 1;
             this.tlp_Button.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -141,7 +142,7 @@
             this.tlp_Select.ColumnCount = 3;
             this.tlp_Select.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.93159F));
             this.tlp_Select.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.06841F));
-            this.tlp_Select.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138F));
+            this.tlp_Select.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
             this.tlp_Select.Controls.Add(this.labProjectName, 0, 0);
             this.tlp_Select.Controls.Add(this.labProjectNO, 0, 1);
             this.tlp_Select.Controls.Add(this.btnSearch, 2, 1);
@@ -188,7 +189,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
             this.btnSearch.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnSearch.DownBack = null;
-            this.btnSearch.Location = new System.Drawing.Point(482, 30);
+            this.btnSearch.Location = new System.Drawing.Point(481, 30);
             this.btnSearch.MouseBack = null;
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.NormlBack = null;
@@ -197,6 +198,24 @@
             this.btnSearch.Text = "搜索...";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtProjectName
+            // 
+            this.txtProjectName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtProjectName.Location = new System.Drawing.Point(103, 3);
+            this.txtProjectName.Name = "txtProjectName";
+            this.txtProjectName.Size = new System.Drawing.Size(349, 21);
+            this.txtProjectName.TabIndex = 5;
+            this.txtProjectName.TextChanged += new System.EventHandler(this.txtProjectName_TextChanged);
+            // 
+            // txtProjectNO
+            // 
+            this.txtProjectNO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtProjectNO.Location = new System.Drawing.Point(103, 30);
+            this.txtProjectNO.Name = "txtProjectNO";
+            this.txtProjectNO.Size = new System.Drawing.Size(349, 21);
+            this.txtProjectNO.TabIndex = 6;
+            this.txtProjectNO.TextChanged += new System.EventHandler(this.txtProjectNO_TextChanged);
             // 
             // dgvSelectProject
             // 
@@ -241,35 +260,27 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.dgvSelectProject.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSelectProject.RowTemplate.Height = 23;
-            this.dgvSelectProject.Size = new System.Drawing.Size(596, 356);
+            this.dgvSelectProject.Size = new System.Drawing.Size(596, 345);
             this.dgvSelectProject.TabIndex = 2;
             this.dgvSelectProject.TitleBack = null;
             this.dgvSelectProject.TitleBackColorBegin = System.Drawing.Color.White;
             this.dgvSelectProject.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.dgvSelectProject.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSelectProject_CellClick);
             // 
-            // txtProjectName
+            // txtStatus
             // 
-            this.txtProjectName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtProjectName.Location = new System.Drawing.Point(103, 3);
-            this.txtProjectName.Name = "txtProjectName";
-            this.txtProjectName.Size = new System.Drawing.Size(351, 21);
-            this.txtProjectName.TabIndex = 5;
-            this.txtProjectName.TextChanged += new System.EventHandler(this.txtProjectName_TextChanged);
-            // 
-            // txtProjectNO
-            // 
-            this.txtProjectNO.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtProjectNO.Location = new System.Drawing.Point(103, 30);
-            this.txtProjectNO.Name = "txtProjectNO";
-            this.txtProjectNO.Size = new System.Drawing.Size(351, 21);
-            this.txtProjectNO.TabIndex = 6;
-            this.txtProjectNO.TextChanged += new System.EventHandler(this.txtProjectNO_TextChanged);
+            this.txtStatus.AutoSize = true;
+            this.txtStatus.Location = new System.Drawing.Point(29, 494);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(0, 12);
+            this.txtStatus.TabIndex = 9;
             // 
             // ToolCaseSelectProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 520);
+            this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.tlp_Main);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -283,6 +294,7 @@
             this.tlp_Select.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectProject)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -300,5 +312,6 @@
         private CCWin.SkinControl.SkinDataGridView dgvSelectProject;
         private System.Windows.Forms.TextBox txtProjectName;
         private System.Windows.Forms.TextBox txtProjectNO;
+        private System.Windows.Forms.Label txtStatus;
     }
 }

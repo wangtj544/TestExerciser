@@ -12,10 +12,17 @@ using TestExerciser.Logic;
 
 namespace TestExerciser.Tools.CaseManagement
 {
+    public delegate void SetToolCaseCommit();
+
     public partial class ToolCaseSelectProject : Skin_Mac
     {
         DataTable myDTSelectProject = new DataTable();
         ManageDB myManageDB = new ManageDB();
+        public static string seletedProjectNO = "";
+        public static string seletedProjectName = "";
+
+        public event SetToolCaseCommit SetToolCaseCommitProjectName;
+        public event SetToolCaseCommit SetToolCaseCommitProjectStruct;
 
         public ToolCaseSelectProject()
         {
@@ -47,7 +54,17 @@ namespace TestExerciser.Tools.CaseManagement
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-
+            if (seletedProjectName != "")
+            {
+                this.SetToolCaseCommitProjectName();
+                this.SetToolCaseCommitProjectStruct();
+                this.btnCancel_Click(sender, e);
+            }
+            else
+            {
+                this.txtStatus.ForeColor = Color.Red;
+                this.txtStatus.Text = "选择信息：选择失败，请使用鼠标点击并选中工程！";
+            }
         }
 
         private void btnFlush_Click(object sender, EventArgs e)
@@ -155,5 +172,26 @@ namespace TestExerciser.Tools.CaseManagement
             }
         }
 
+        private void dgvSelectProject_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex > -1 && e.ColumnIndex > -1)
+                {
+                    DataGridViewCell cell = (DataGridViewCell)dgvSelectProject.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                    seletedProjectNO = dgvSelectProject.Rows[cell.RowIndex].Cells[0].Value.ToString();
+                    seletedProjectName = dgvSelectProject.Rows[cell.RowIndex].Cells[1].Value.ToString();
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }      
+        }
+
+        private void setToolCaseCommitStructFromXML()
+        { 
+        
+        }   
     }
 }

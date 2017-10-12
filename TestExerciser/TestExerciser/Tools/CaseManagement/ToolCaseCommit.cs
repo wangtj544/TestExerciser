@@ -125,6 +125,18 @@ namespace TestExerciser.Tools.CaseManagement
         {
             ToolCaseSelectProject myToolCaseSelectProject = new ToolCaseSelectProject();
             myToolCaseSelectProject.Show();
+            myToolCaseSelectProject.SetToolCaseCommitProjectName += new  SetToolCaseCommit(this.d_SetProjectName);
+            myToolCaseSelectProject.SetToolCaseCommitProjectStruct += new SetToolCaseCommit(this.d_SetProjectStruct);
+        }
+
+        private void d_SetProjectName()
+        {
+            this.tb_Project.Text = ToolCaseSelectProject.seletedProjectName;
+        }
+
+        private void d_SetProjectStruct()
+        { 
+        
         }
     }
 }
