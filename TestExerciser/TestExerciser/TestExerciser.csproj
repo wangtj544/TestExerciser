@@ -257,7 +257,7 @@
     <Compile Include="Tools\CaseManagement\ToolCaseReviewFromExcel.Designer.cs">
       <DependentUpon>ToolCaseReviewFromExcel.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcelDataReader.cs" />
+    <Compile Include="Logic\ExcelDataReader.cs" />
     <Compile Include="Logic\AutoComplete.cs" />
     <Compile Include="Logic\TimeDelay.cs" />
     <Compile Include="MainAbout.cs">
