@@ -3108,16 +3108,6 @@ namespace TestExerciser
             this.Close();
         }
 
-        public void d_SetMainWindowEnableFlase()
-        {
-            this.Enabled = false;
-        }
-
-        public void d_SetMainWindowEnableTrue()
-        {
-            this.Enabled = true;
-        }
-
         private void 项目管理PToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MainProjectManager myMainProjectManager = new MainProjectManager();

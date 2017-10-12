@@ -87,6 +87,8 @@
             this.labProName = new CCWin.SkinControl.SkinLabel();
             this.labProNameValue = new CCWin.SkinControl.SkinLabel();
             this.linkModify = new System.Windows.Forms.LinkLabel();
+            this.btnAll = new CCWin.SkinControl.SkinButton();
+            this.btnMine = new CCWin.SkinControl.SkinButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
@@ -146,8 +148,10 @@
             this.tapButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
             this.tapButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
             this.tapButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tapButton.Controls.Add(this.btnNewStruct, 0, 0);
-            this.tapButton.Controls.Add(this.btnNewProject, 0, 0);
+            this.tapButton.Controls.Add(this.btnMine, 0, 0);
+            this.tapButton.Controls.Add(this.btnAll, 0, 0);
+            this.tapButton.Controls.Add(this.btnNewStruct, 3, 0);
+            this.tapButton.Controls.Add(this.btnNewProject, 2, 0);
             this.tapButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tapButton.Location = new System.Drawing.Point(3, 3);
             this.tapButton.Name = "tapButton";
@@ -162,7 +166,7 @@
             this.btnNewStruct.BackColor = System.Drawing.Color.Transparent;
             this.btnNewStruct.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnNewStruct.DownBack = null;
-            this.btnNewStruct.Location = new System.Drawing.Point(93, 4);
+            this.btnNewStruct.Location = new System.Drawing.Point(259, 4);
             this.btnNewStruct.MouseBack = null;
             this.btnNewStruct.Name = "btnNewStruct";
             this.btnNewStruct.NormlBack = null;
@@ -178,7 +182,7 @@
             this.btnNewProject.BackColor = System.Drawing.Color.Transparent;
             this.btnNewProject.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnNewProject.DownBack = null;
-            this.btnNewProject.Location = new System.Drawing.Point(10, 4);
+            this.btnNewProject.Location = new System.Drawing.Point(176, 4);
             this.btnNewProject.MouseBack = null;
             this.btnNewProject.Name = "btnNewProject";
             this.btnNewProject.NormlBack = null;
@@ -1389,6 +1393,36 @@
             this.linkModify.Text = "修改";
             this.linkModify.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkModify_LinkClicked);
             // 
+            // btnAll
+            // 
+            this.btnAll.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAll.BackColor = System.Drawing.Color.Transparent;
+            this.btnAll.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnAll.DownBack = null;
+            this.btnAll.Location = new System.Drawing.Point(10, 4);
+            this.btnAll.MouseBack = null;
+            this.btnAll.Name = "btnAll";
+            this.btnAll.NormlBack = null;
+            this.btnAll.Size = new System.Drawing.Size(63, 20);
+            this.btnAll.TabIndex = 2;
+            this.btnAll.Text = "全部项目";
+            this.btnAll.UseVisualStyleBackColor = false;
+            // 
+            // btnMine
+            // 
+            this.btnMine.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnMine.BackColor = System.Drawing.Color.Transparent;
+            this.btnMine.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnMine.DownBack = null;
+            this.btnMine.Location = new System.Drawing.Point(93, 4);
+            this.btnMine.MouseBack = null;
+            this.btnMine.Name = "btnMine";
+            this.btnMine.NormlBack = null;
+            this.btnMine.Size = new System.Drawing.Size(63, 20);
+            this.btnMine.TabIndex = 3;
+            this.btnMine.Text = "我的项目";
+            this.btnMine.UseVisualStyleBackColor = false;
+            // 
             // MainProjectManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1473,6 +1507,8 @@
         private CCWin.SkinControl.SkinChatRichTextBox rtbDescribe;
         private CCWin.SkinControl.SkinTreeView tv_Struct;
         private System.Windows.Forms.ImageList myPrStrImageList;
+        private CCWin.SkinControl.SkinButton btnMine;
+        private CCWin.SkinControl.SkinButton btnAll;
 
     }
 }

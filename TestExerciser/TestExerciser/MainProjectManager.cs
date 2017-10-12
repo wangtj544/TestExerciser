@@ -43,6 +43,11 @@ namespace TestExerciser
             myToolProjectStruct.Show();
         }
 
+        private void setDataGridViewColumnHeaders()
+        { 
+        
+        }
+
         private void fillToDataGridViewControl()
         {
             DataTable dt = new DataTable();
