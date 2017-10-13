@@ -142,7 +142,7 @@
             this.tlp_Select.ColumnCount = 3;
             this.tlp_Select.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.93159F));
             this.tlp_Select.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.06841F));
-            this.tlp_Select.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tlp_Select.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
             this.tlp_Select.Controls.Add(this.labProjectName, 0, 0);
             this.tlp_Select.Controls.Add(this.labProjectNO, 0, 1);
             this.tlp_Select.Controls.Add(this.btnSearch, 2, 1);
@@ -164,7 +164,7 @@
             this.labProjectName.BackColor = System.Drawing.Color.White;
             this.labProjectName.BorderColor = System.Drawing.Color.White;
             this.labProjectName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labProjectName.Location = new System.Drawing.Point(16, 5);
+            this.labProjectName.Location = new System.Drawing.Point(15, 5);
             this.labProjectName.Name = "labProjectName";
             this.labProjectName.Size = new System.Drawing.Size(68, 17);
             this.labProjectName.TabIndex = 0;
@@ -177,7 +177,7 @@
             this.labProjectNO.BackColor = System.Drawing.Color.White;
             this.labProjectNO.BorderColor = System.Drawing.Color.White;
             this.labProjectNO.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labProjectNO.Location = new System.Drawing.Point(16, 32);
+            this.labProjectNO.Location = new System.Drawing.Point(15, 32);
             this.labProjectNO.Name = "labProjectNO";
             this.labProjectNO.Size = new System.Drawing.Size(68, 17);
             this.labProjectNO.TabIndex = 1;
@@ -189,7 +189,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
             this.btnSearch.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnSearch.DownBack = null;
-            this.btnSearch.Location = new System.Drawing.Point(481, 30);
+            this.btnSearch.Location = new System.Drawing.Point(480, 30);
             this.btnSearch.MouseBack = null;
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.NormlBack = null;
@@ -202,7 +202,7 @@
             // txtProjectName
             // 
             this.txtProjectName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtProjectName.Location = new System.Drawing.Point(103, 3);
+            this.txtProjectName.Location = new System.Drawing.Point(102, 3);
             this.txtProjectName.Name = "txtProjectName";
             this.txtProjectName.Size = new System.Drawing.Size(349, 21);
             this.txtProjectName.TabIndex = 5;
@@ -211,7 +211,7 @@
             // txtProjectNO
             // 
             this.txtProjectNO.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtProjectNO.Location = new System.Drawing.Point(103, 30);
+            this.txtProjectNO.Location = new System.Drawing.Point(102, 30);
             this.txtProjectNO.Name = "txtProjectNO";
             this.txtProjectNO.Size = new System.Drawing.Size(349, 21);
             this.txtProjectNO.TabIndex = 6;

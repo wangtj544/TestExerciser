@@ -187,11 +187,6 @@ namespace TestExerciser.Tools.CaseManagement
             {
                 MessageBox.Show(exception.Message, "异常消息提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }      
-        }
-
-        private void setToolCaseCommitStructFromXML()
-        { 
-        
-        }   
+        } 
     }
 }
